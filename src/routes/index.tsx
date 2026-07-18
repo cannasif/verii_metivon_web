@@ -96,6 +96,7 @@ const WarehouseManagementPage = lazyImport(() => import('@/features/warehouse-ma
 const StorageLocationManagementPage = lazyImport(() => import('@/features/storage-location-management'), 'StorageLocationManagementPage');
 const InventoryBalanceManagementPage = lazyImport(() => import('@/features/inventory-balance-management'), 'InventoryBalanceManagementPage');
 const InventoryTransactionManagementPage = lazyImport(() => import('@/features/inventory-transaction-management'), 'InventoryTransactionManagementPage');
+const InventoryDashboardPage = lazyImport(() => import('@/features/inventory-dashboard'), 'InventoryDashboardPage');
 const PurchaseOrderManagementPage = lazyImport(() => import('@/features/purchase-order-management'), 'PurchaseOrderManagementPage');
 const GoodsReceiptManagementPage = lazyImport(() => import('@/features/goods-receipt-management'), 'GoodsReceiptManagementPage');
 const TransferOrderManagementPage = lazyImport(() => import('@/features/transfer-order-management'), 'TransferOrderManagementPage');
@@ -279,6 +280,7 @@ export function createAppRouter() {
         { path: 'products/definitions/package-types', element: <PackageTypeManagementPage /> },
         { path: 'warehouses', element: <WarehouseManagementPage /> },
         { path: 'warehouses/locations', element: <StorageLocationManagementPage /> },
+        { path: 'inventory', element: <InventoryDashboardPage /> },
         { path: 'inventory/balances', element: <InventoryBalanceManagementPage /> },
         { path: 'inventory/transactions', element: <InventoryTransactionManagementPage /> },
         { path: 'purchase-orders', element: <PurchaseOrderManagementPage /> },

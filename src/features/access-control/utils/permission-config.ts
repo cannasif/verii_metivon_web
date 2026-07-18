@@ -224,6 +224,7 @@ export const PATH_TO_PERMISSION_PATTERNS: Array<{ pattern: RegExp; permission: s
   { pattern: /^\/inventory\/balances(\/|$)/, permission: 'inventory.balances.view' },
   { pattern: /^\/inventory\/transactions(\/|$)/, permission: 'inventory.transactions.view' },
   { pattern: /^\/inventory\/tracking-parameters(\/|$)/, permission: 'inventory.tracking-parameters.view' },
+  { pattern: /^\/inventory\/?$/, permission: 'inventory.balances.view' },
   { pattern: /^\/purchase-orders\/number-series\/new(\/|$)/, permission: 'procurement.number-series.create' },
   { pattern: /^\/purchase-orders\/number-series(\/|$)/, permission: 'procurement.number-series.view' },
   { pattern: /^\/purchase-orders\/new(\/|$)/, permission: 'procurement.purchase-orders.create' },
