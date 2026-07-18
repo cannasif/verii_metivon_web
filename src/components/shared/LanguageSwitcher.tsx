@@ -1,4 +1,5 @@
 import { type ReactElement, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import {
   Select,
@@ -19,7 +20,7 @@ interface LanguageSwitcherProps {
 }
 
 export function LanguageSwitcher({ variant = 'default' }: LanguageSwitcherProps): ReactElement {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('common');
   const [isChanging, setIsChanging] = useState(false);
   const normalizedLang = i18n.language?.toLowerCase() === 'sa' ? 'ar' : i18n.language?.toLowerCase() ?? 'tr';
   const baseLang = normalizedLang.split('-')[0];
@@ -29,17 +30,23 @@ export function LanguageSwitcher({ variant = 'default' }: LanguageSwitcherProps)
     const target = value.toLowerCase() === 'sa' ? 'ar' : value.toLowerCase();
     if (target === baseLang) return;
     setIsChanging(true);
+    const transitionStartedAt = Date.now();
     try {
       await loadLanguage(target);
       await i18n.changeLanguage(target);
       if (typeof window !== 'undefined') window.localStorage.setItem('i18nextLng', target);
     } finally {
+      const remainingDuration = Math.max(0, 350 - (Date.now() - transitionStartedAt));
+      if (remainingDuration > 0) {
+        await new Promise((resolve) => window.setTimeout(resolve, remainingDuration));
+      }
       setIsChanging(false);
     }
   };
 
   return (
-    <Select value={currentLanguage.code} onValueChange={handleLanguageChange} disabled={isChanging}>
+    <>
+      <Select value={currentLanguage.code} onValueChange={handleLanguageChange} disabled={isChanging}>
       
       <SelectTrigger 
         className={
@@ -92,6 +99,23 @@ export function LanguageSwitcher({ variant = 'default' }: LanguageSwitcherProps)
           </SelectItem>
         ))}
       </SelectContent>
-    </Select>
+      </Select>
+      {isChanging && typeof document !== 'undefined'
+        ? createPortal(
+            <div
+              className="fixed inset-0 z-[10000] grid place-items-center bg-background/70 backdrop-blur-sm"
+              role="status"
+              aria-live="polite"
+              aria-busy="true"
+            >
+              <div className="metivon-panel flex items-center gap-3 rounded-2xl border px-5 py-4 shadow-2xl">
+                <span className="h-5 w-5 animate-spin rounded-full border-2 border-primary/25 border-t-primary" aria-hidden />
+                <span className="text-sm font-semibold text-foreground">{t('common.loading')}</span>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
+    </>
   );
 }

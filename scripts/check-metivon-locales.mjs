@@ -55,12 +55,21 @@ const erpConfigFiles = [
   path.join(root, 'src', 'features', 'erp-form-management', 'configs.ts'),
   path.join(root, 'src', 'features', 'erp-operation-management', 'configs.ts'),
 ];
+const metivonLayoutFile = path.join(root, 'src', 'layouts', 'MetivonLayout.tsx');
+const metivonLayoutSource = fs.readFileSync(metivonLayoutFile, 'utf8');
+const sidebarErpKeys = new Set(
+  [...metivonLayoutSource.matchAll(/\bte\(\s*["']([^"']+)["']/g)].map((match) => match[1]),
+);
+
+const readNestedValue = (value, dottedKey) =>
+  dottedKey.split('.').reduce((current, part) => current?.[part], value);
 const dynamicFieldKeys = new Set();
 for (const configFile of erpConfigFiles) {
   const source = fs.readFileSync(configFile, 'utf8');
   for (const match of source.matchAll(/\bkey:\s*["']([^"']+)["']/g)) dynamicFieldKeys.add(match[1]);
 }
 const requiredStatusKeys = ['Asset','Liability','Equity','Revenue','Expense','Amount','Quantity','Weight','Volume','Manual'];
+const requiredErpNavigationKeys = ['foreignTrade', 'tradeDossiers', 'importDossiers', 'landedCostTypes'];
 for (const language of languages) {
   const erpFile = path.join(sharedRoot, language, 'erp.json');
   const erp = JSON.parse(fs.readFileSync(erpFile, 'utf8'));
@@ -69,6 +78,14 @@ for (const language of languages) {
   }
   for (const key of requiredStatusKeys) {
     if (String(erp.statuses?.[key] ?? '').trim() === '') errors.push(`shared/erp.json/${language}: missing statuses.${key}`);
+  }
+  for (const key of requiredErpNavigationKeys) {
+    if (String(erp.nav?.[key] ?? '').trim() === '') errors.push(`shared/erp.json/${language}: missing nav.${key}`);
+  }
+  for (const key of sidebarErpKeys) {
+    if (String(readNestedValue(erp, key) ?? '').trim() === '') {
+      errors.push(`shared/erp.json/${language}: sidebar key ${key} is missing`);
+    }
   }
   if (String(erp.fields?.id ?? '').trim() === '') errors.push(`shared/erp.json/${language}: fields.id is required`);
 }

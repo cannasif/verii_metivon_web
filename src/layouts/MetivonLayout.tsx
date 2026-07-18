@@ -259,10 +259,10 @@ export function MetivonLayout(): ReactElement {
                   close={() => setIsMobileSidebarOpen(false)}
                 />
               </MenuSection>
-              <MenuSection title={te("nav.foreignTrade",{defaultValue:"Dış Ticaret"})} open={isTradeOpen} toggle={()=>setIsTradeOpen(v=>!v)}>
-                <SmallSidebarLink title={te("nav.tradeDossiers",{defaultValue:"İthalat / İhracat Dosyaları"})} href="/trade-dossiers" close={()=>setIsMobileSidebarOpen(false)}/>
-                <SmallSidebarLink title={te("nav.importDossiers",{defaultValue:"İthalat Maliyetlendirme"})} href="/import-dossiers" close={()=>setIsMobileSidebarOpen(false)}/>
-                <SmallSidebarLink title={te("nav.landedCostTypes",{defaultValue:"İthalat Masraf Tanımları"})} href="/import-dossiers/definitions/cost-types" close={()=>setIsMobileSidebarOpen(false)}/>
+              <MenuSection title={te("nav.foreignTrade")} open={isTradeOpen} toggle={()=>setIsTradeOpen(v=>!v)}>
+                <SmallSidebarLink title={te("nav.tradeDossiers")} href="/trade-dossiers" close={()=>setIsMobileSidebarOpen(false)}/>
+                <SmallSidebarLink title={te("nav.importDossiers")} href="/import-dossiers" close={()=>setIsMobileSidebarOpen(false)}/>
+                <SmallSidebarLink title={te("nav.landedCostTypes")} href="/import-dossiers/definitions/cost-types" close={()=>setIsMobileSidebarOpen(false)}/>
               </MenuSection>
               <MenuSection
                 title={te("nav.purchasing")}
