@@ -418,11 +418,6 @@ export function MetivonLayout(): ReactElement {
               close={() => setIsMobileSidebarOpen(false)}
             />
             <SmallSidebarLink
-              title={te("nav.userPermissions")}
-              href="/access-control/user-group-assignments"
-              close={() => setIsMobileSidebarOpen(false)}
-            />
-            <SmallSidebarLink
               title={te("nav.visibilityPolicies")}
               href="/access-control/visibility-policies"
               close={() => setIsMobileSidebarOpen(false)}

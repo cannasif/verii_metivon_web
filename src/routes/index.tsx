@@ -160,7 +160,6 @@ const PowerbiReportSyncPage = lazyImport(() => import('@/features/powerbi-sync')
 const PowerbiRlsPage = lazyImport(() => import('@/features/powerbi-rls'), 'PowerbiRlsPage');
 const AccessControlGuidePage = lazyImport(() => import('@/features/access-control'), 'AccessControlGuidePage');
 const PermissionGroupsPage = lazyImport(() => import('@/features/access-control'), 'PermissionGroupsPage');
-const UserGroupAssignmentsPage = lazyImport(() => import('@/features/access-control'), 'UserGroupAssignmentsPage');
 const VisibilityPoliciesPage = lazyImport(() => import('@/features/access-control'), 'VisibilityPoliciesPage');
 const UserVisibilityAssignmentsPage = lazyImport(() => import('@/features/access-control'), 'UserVisibilityAssignmentsPage');
 const VisibilitySimulatorPage = lazyImport(() => import('@/features/access-control'), 'VisibilitySimulatorPage');
@@ -358,7 +357,7 @@ export function createAppRouter() {
         { path: 'access-control/guide', element: <AccessControlGuidePage /> },
         { path: 'access-control/permission-groups', element: <PermissionGroupsPage /> },
         { path: 'access-control/permission-definitions', element: <Navigate to="/access-control/permission-groups" replace /> },
-        { path: 'access-control/user-group-assignments', element: <UserGroupAssignmentsPage /> },
+        { path: 'access-control/user-group-assignments', element: <Navigate to="/user-management" replace /> },
         { path: 'access-control/visibility-policies', element: <VisibilityPoliciesPage /> },
         { path: 'access-control/user-visibility-assignments', element: <UserVisibilityAssignmentsPage /> },
         { path: 'access-control/visibility-simulator', element: <VisibilitySimulatorPage /> },
