@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "Standaardfiliaal",
     "yes": "Ja",
     "no": "Nee",
     "select": "Selecteren",

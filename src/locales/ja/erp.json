@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "既定の支店",
     "yes": "はい",
     "no": "いいえ",
     "select": "選択",

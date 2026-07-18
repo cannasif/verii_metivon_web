@@ -45,6 +45,10 @@ export function MetivonLayout(): ReactElement {
   );
   const displayName = user?.name || user?.email || tc("common.user", { defaultValue: "Kullanıcı" });
   const displayInitials = user?.name?.[0]?.toUpperCase() || user?.email?.[0]?.toUpperCase() || "U";
+  const branchDisplayName =
+    !branch?.name || branch.name.trim().toLocaleLowerCase() === "default branch"
+      ? te("common.defaultBranch", { defaultValue: "Varsayılan Şube" })
+      : branch.name;
   const definitionLinks = [
     { title: te("nav.partnerTypes"), type: "partner-types" },
     { title: te("nav.partnerGroups"), type: "customer-groups" },
@@ -442,7 +446,7 @@ export function MetivonLayout(): ReactElement {
       </nav>
 
       <div className="mt-auto rounded-xl border border-slate-200 p-3 text-xs text-slate-500 dark:border-white/10 dark:text-slate-400">
-        {branch?.name ?? "Default Branch"}
+        {branchDisplayName}
       </div>
     </>
   );
@@ -484,7 +488,7 @@ export function MetivonLayout(): ReactElement {
                 V3RII Metivon
               </div>
               <div className="truncate text-xs text-slate-500 dark:text-slate-400">
-                {branch?.name ?? "Default Branch"}
+                {branchDisplayName}
               </div>
             </div>
           </div>
@@ -503,7 +507,7 @@ export function MetivonLayout(): ReactElement {
               </span>
               <span className="hidden min-w-0 sm:block">
                 <span className="block max-w-40 truncate text-sm font-semibold">{displayName}</span>
-                <span className="block max-w-40 truncate text-[11px] text-slate-500 dark:text-slate-400">{branch?.name ?? te("common.defaultBranch", { defaultValue: "Default Branch" })}</span>
+                <span className="block max-w-40 truncate text-[11px] text-slate-500 dark:text-slate-400">{branchDisplayName}</span>
               </span>
             </button>
           </div>

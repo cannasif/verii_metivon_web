@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "Standardfiliale",
     "yes": "Ja",
     "no": "Nein",
     "select": "Auswählen",

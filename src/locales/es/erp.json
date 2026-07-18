@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "Sucursal predeterminada",
     "yes": "Sí",
     "no": "No",
     "select": "Seleccionar",

@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "Filial predefinida",
     "yes": "Sim",
     "no": "Não",
     "select": "Selecionar",

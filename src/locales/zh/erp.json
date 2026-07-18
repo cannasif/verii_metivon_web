@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "默认分支",
     "yes": "是",
     "no": "否",
     "select": "请选择",

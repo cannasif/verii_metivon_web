@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "Domyślny oddział",
     "yes": "Tak",
     "no": "Nie",
     "select": "Wybierz",

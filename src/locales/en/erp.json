@@ -1,5 +1,6 @@
 {
   "common": {
+    "defaultBranch": "Default Branch",
     "yes": "Yes",
     "no": "No",
     "select": "Select",

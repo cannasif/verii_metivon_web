@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && npm run check:i18n && vite build",
     "typecheck": "tsc -b",
-    "check:i18n": "node scripts/check-i18n-explicit-namespaces.mjs && node scripts/check-i18n-hook-keys.mjs && node scripts/check-metivon-locales.mjs && node scripts/check-route-namespace-coverage.mjs",
+    "check:i18n": "node scripts/check-i18n-explicit-namespaces.mjs && node scripts/check-i18n-hook-keys.mjs && node scripts/check-metivon-locales.mjs && node scripts/check-route-namespace-coverage.mjs && node scripts/check-erp-ui-labels.mjs",
     "check:runtime-contracts": "node scripts/check-runtime-contracts.mjs",
     "smoke:ui": "node scripts/smoke-ui.mjs",
     "check:frontend-standards": "node scripts/check-frontend-standards.mjs",
