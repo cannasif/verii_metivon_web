@@ -288,7 +288,11 @@ export function UserForm({
 
         <div className="flex-1 overflow-y-auto p-6">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit, handleInvalidSubmit)} className="space-y-6">
+            <form
+              onSubmit={form.handleSubmit(handleSubmit, handleInvalidSubmit)}
+              className="space-y-6"
+              autoComplete="off"
+            >
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <FormField
                   control={form.control}
@@ -304,6 +308,7 @@ export function UserForm({
                       <FormControl>
                         <Input
                           {...field}
+                          autoComplete="off"
                           placeholder={t('form.usernamePlaceholder')}
                           maxLength={50}
                           disabled={isEditMode}
@@ -346,14 +351,18 @@ export function UserForm({
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className={LABEL_STYLE}>
+                      <FormLabel
+                        className={LABEL_STYLE}
+                        required={isZodFieldRequired(activeSchema, 'password')}
+                      >
                         <FormLabelIcon icon={Lock} /> {t('form.password')}
                       </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           type="password"
-                          placeholder={t('form.passwordPlaceholder')}
+                          autoComplete="new-password"
+                          placeholder={t('form.passwordMinLength')}
                           className={INPUT_FIELD_CLASSNAME}
                         />
                       </FormControl>

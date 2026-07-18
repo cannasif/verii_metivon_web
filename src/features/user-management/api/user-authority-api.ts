@@ -9,8 +9,8 @@ function toPagedData<T>(raw: { items?: T[]; data?: T[] } & PagedResponse<T>): Pa
 
 export const userAuthorityApi = {
   getList: async (params: PagedParams): Promise<PagedResponse<UserAuthorityDto>> => {
-    const response = await api.post<ApiResponse<PagedResponse<UserAuthorityDto>>>(
-      '/api/UserAuthority/query',
+    const response = await api.post<ApiResponse<PagedResponse<{ id: number; name: string; isActive: boolean }>>>(
+      '/api/permission-groups/query',
       {
         pageNumber: params.pageNumber ?? 1,
         pageSize: params.pageSize ?? 10,
@@ -22,7 +22,8 @@ export const userAuthorityApi = {
       }
     );
     if (response.success && response.data) {
-      return toPagedData(response.data as { items?: UserAuthorityDto[] } & PagedResponse<UserAuthorityDto>);
+      const groups = toPagedData(response.data);
+      return { ...groups, data: groups.data.filter((group) => group.isActive).map((group) => ({ id: group.id, title: group.name })) };
     }
     throw new Error(response.message ?? 'Role list could not be loaded');
   },

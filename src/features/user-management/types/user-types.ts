@@ -73,13 +73,10 @@ export const userFormSchema = z.object({
     .string()
     .email('form.emailInvalid')
     .min(1, 'form.emailRequired'),
-  password: z.union([
-    z.literal(''),
-    z
-      .string()
-      .min(8, 'form.passwordMinLength')
-      .max(100, 'form.passwordMaxLength'),
-  ]),
+  password: z
+    .string()
+    .min(8, 'form.passwordMinLength')
+    .max(100, 'form.passwordMaxLength'),
   firstName: z.string().max(50, 'form.firstNameMaxLength').optional(),
   lastName: z.string().max(50, 'form.lastNameMaxLength').optional(),
   phoneNumber: z.string().max(20, 'form.phoneNumberMaxLength').optional(),

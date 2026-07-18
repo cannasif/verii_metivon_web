@@ -291,6 +291,7 @@ export function createAppRouter() {
         { path: 'transfer-orders/parameters', element: <TransferParametersPage /> },
         { path: 'sales-orders', element: <SalesOrderManagementPage /> },
         { path: 'sales-orders/parameters', element: <SalesOrderParametersPage /> },
+        { path: 'pricing', element: <Navigate to="/pricing/price-lists" replace /> },
         { path: 'pricing/price-lists', element: <PriceListManagementPage /> },
         { path: 'pricing/parameters', element: <PricingParametersPage /> },
         { path: 'shipments', element: <ShipmentManagementPage /> },

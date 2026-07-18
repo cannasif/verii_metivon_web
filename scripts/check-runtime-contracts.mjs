@@ -47,6 +47,23 @@ function walk(dir) {
 }
 
 const files = walk(src);
+
+const forbiddenApiContracts = [
+  {
+    pattern: /['"`]\/api\/UserAuthority(?:\/|['"`])/,
+    message: 'Legacy /api/UserAuthority endpoint is not part of the Metivon API; use /api/permission-groups/query.',
+  },
+];
+
+for (const file of files) {
+  const source = fs.readFileSync(file, 'utf8');
+  for (const contract of forbiddenApiContracts) {
+    if (contract.pattern.test(source)) {
+      violations.push(`${path.relative(root, file)}: ${contract.message}`);
+    }
+  }
+}
+
 for (const contract of contracts) {
   const usedBy = files.filter((file) => contract.usage.test(fs.readFileSync(file, 'utf8')));
   if (!usedBy.length) continue;
