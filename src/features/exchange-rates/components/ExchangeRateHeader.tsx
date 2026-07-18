@@ -1,5 +1,5 @@
 import { useMemo, useState, type ReactElement } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { CircleDollarSign, RefreshCw, Search, TriangleAlert } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
@@ -31,8 +31,12 @@ interface ExchangeRateSnapshot {
 const HEADER_CURRENCIES = ["USD", "EUR", "GBP"] as const;
 const FIFTEEN_MINUTES = 15 * 60 * 1000;
 
-async function getLatestExchangeRates(): Promise<ExchangeRateSnapshot> {
-  const response = await api.get<ApiResponse<ExchangeRateSnapshot>>("/api/exchange-rates/latest");
+const EXCHANGE_RATE_QUERY_KEY = ["exchange-rates", "latest"] as const;
+
+async function getLatestExchangeRates(forceRefresh = false): Promise<ExchangeRateSnapshot> {
+  const response = await api.get<ApiResponse<ExchangeRateSnapshot>>("/api/exchange-rates/latest", {
+    params: forceRefresh ? { forceRefresh: true } : undefined,
+  });
   if (!response.success || !response.data) {
     throw new Error(response.message || "Exchange rates could not be loaded.");
   }
@@ -41,6 +45,7 @@ async function getLatestExchangeRates(): Promise<ExchangeRateSnapshot> {
 
 export function ExchangeRateHeader(): ReactElement {
   const { t, i18n } = useTranslation(["exchange-rates", "common"]);
+  const queryClient = useQueryClient();
   const [search, setSearch] = useState("");
   const localizedCurrencyNames = useMemo(() => {
     try {
@@ -50,14 +55,21 @@ export function ExchangeRateHeader(): ReactElement {
     }
   }, [i18n.language, i18n.resolvedLanguage]);
   const query = useQuery({
-    queryKey: ["exchange-rates", "latest"],
-    queryFn: getLatestExchangeRates,
+    queryKey: EXCHANGE_RATE_QUERY_KEY,
+    queryFn: () => getLatestExchangeRates(),
     staleTime: 10 * 60 * 1000,
     refetchInterval: FIFTEEN_MINUTES,
     refetchIntervalInBackground: false,
     refetchOnWindowFocus: true,
     retry: 2,
   });
+  const manualRefresh = useMutation({
+    mutationFn: () => getLatestExchangeRates(true),
+    onSuccess: (snapshot) => {
+      queryClient.setQueryData(EXCHANGE_RATE_QUERY_KEY, snapshot);
+    },
+  });
+  const isRefreshing = query.isFetching || manualRefresh.isPending;
 
   const visibleRates = useMemo(() => {
     const values = query.data?.rates ?? [];
@@ -124,14 +136,20 @@ export function ExchangeRateHeader(): ReactElement {
           <button
             type="button"
             className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition hover:bg-muted disabled:opacity-50"
-            onClick={() => void query.refetch()}
-            disabled={query.isFetching}
+            onClick={() => manualRefresh.mutate()}
+            disabled={isRefreshing}
             aria-label={t("refresh")}
             title={t("refresh")}
           >
-            <RefreshCw className={`h-3.5 w-3.5 ${query.isFetching ? "animate-spin" : ""}`} />
+            <RefreshCw className={`h-3.5 w-3.5 ${isRefreshing ? "animate-spin" : ""}`} />
           </button>
         </div>
+
+        {manualRefresh.isError ? (
+          <div className="border-b bg-rose-50 px-4 py-2 text-xs text-rose-700 dark:bg-rose-950/30 dark:text-rose-300">
+            {t("unavailable")}
+          </div>
+        ) : null}
 
         {!unavailable ? (
           <div className="border-b p-3">
