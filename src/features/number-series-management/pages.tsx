@@ -1,11 +1,13 @@
 import {
   useMemo,
+  useEffect,
   useState,
   type FormEvent,
   type ReactElement,
   type ReactNode,
 } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { api } from "@/lib/axios";
@@ -65,7 +67,7 @@ const definitions: Record<string, Definition> = {
     titleKey: "nav.eDocumentNumberSeries",
   },
 };
-const basePath = (path: string) => path.replace(/\/(new|usages)$/, " ").trim();
+const basePath = (path: string) => path.replace(/\/(?:new|usages|\d+\/edit)$/, "");
 const resolve = (path: string) =>
   definitions[basePath(path)] ?? definitions["/goods-receipts/number-series"];
 const c = (
@@ -95,6 +97,21 @@ export function NumberSeriesManagementPage(): ReactElement {
       createLabel: t("numberSeries.new"),
       createPath: `${base}/new`,
       accent: "cyan",
+      actions: [
+        {
+          label: t("common.edit"),
+          kind: "update",
+          navigateTo: (row) => `${base}/${row.id}/edit`,
+        },
+        {
+          label: t("common.delete"),
+          kind: "delete",
+          method: "delete",
+          endpoint: (row) => `/api/number-series/${row.id}/delete`,
+          confirm: t("numberSeries.deleteConfirm"),
+          variant: "destructive",
+        },
+      ],
       columns: [
         {
           key: "id",
@@ -233,6 +250,8 @@ export function NumberSeriesCreatePage(): ReactElement {
     { t } = useTranslation("erp");
   const d = resolve(location.pathname),
     back = basePath(location.pathname);
+  const params = useParams<{ id?: string }>();
+  const editId = Number(params.id) || null;
   const activeBranch = useAuthStore((state) => state.branch);
   const [saving, setSaving] = useState(false);
   const [form, setForm] = useState({
@@ -257,6 +276,28 @@ export function NumberSeriesCreatePage(): ReactElement {
     channel: "",
     scenario: "",
   });
+  const detailQuery = useQuery({
+    queryKey: ["number-series-detail", editId],
+    queryFn: () => api.get<{ data: {
+      id:number;code:string;name:string;reference:string;scopeType:number;branchId:number|null;warehouseId:number|null;
+      format:string;resetPeriod:number;startingNumber:number;incrementBy:number;maximumNumber:number;isGibCompliant:boolean;
+      allowManual:boolean;isContinuous:boolean;reservationTimeoutMinutes:number;isDefault:boolean;priority:number;isActive:boolean;
+      assignments:Array<{channel?:string|null;scenario?:string|null}>;
+    } }>(`/api/number-series/${editId}`),
+    enabled: editId !== null,
+  });
+  useEffect(() => {
+    const item = detailQuery.data?.data;
+    if (!item) return;
+    const assignment = item.assignments?.[0];
+    setForm({
+      code:item.code,name:item.name,reference:item.reference,scopeType:item.scopeType,branchId:item.branchId ? String(item.branchId) : "",
+      warehouseId:item.warehouseId ? String(item.warehouseId) : "",format:item.format,resetPeriod:item.resetPeriod,startingNumber:item.startingNumber,
+      incrementBy:item.incrementBy,maximumNumber:item.maximumNumber,isGibCompliant:item.isGibCompliant,allowManual:item.allowManual,
+      isContinuous:item.isContinuous,reservationTimeoutMinutes:item.reservationTimeoutMinutes,isDefault:item.isDefault,
+      priority:item.priority,isActive:item.isActive,channel:assignment?.channel ?? "",scenario:assignment?.scenario ?? "",
+    });
+  }, [detailQuery.data]);
   const set = (key: string, value: unknown) =>
     setForm((x) => ({ ...x, [key]: value }));
   const setScopeType = (scopeType: number): void =>
@@ -284,7 +325,7 @@ export function NumberSeriesCreatePage(): ReactElement {
     e.preventDefault();
     try {
       setSaving(true);
-      await api.post("/api/number-series", {
+      await api.post(editId ? `/api/number-series/${editId}/update` : "/api/number-series", {
         ...form,
         module: d.module,
         branchId: Number(form.branchId) || null,
@@ -324,7 +365,7 @@ export function NumberSeriesCreatePage(): ReactElement {
     <div className="mx-auto max-w-5xl space-y-5">
       <section className="metivon-hero rounded-3xl p-6">
         <h1 className="text-3xl font-semibold">
-          {t(d.titleKey, { defaultValue: d.title })}
+          {editId ? t("numberSeries.editTitle") : t(d.titleKey, { defaultValue: d.title })}
         </h1>
         <p className="mt-2 text-white/75">
           {t("numberSeries.formDescription")}
@@ -510,7 +551,7 @@ export function NumberSeriesCreatePage(): ReactElement {
             {t("common.cancel")}
           </Button>
           <Button disabled={saving}>
-            {saving ? t("common.saving") : t("numberSeries.save")}
+            {saving ? t("common.saving") : editId ? t("numberSeries.update") : t("numberSeries.save")}
           </Button>
         </div>
       </form>

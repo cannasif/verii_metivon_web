@@ -22,7 +22,12 @@
     "cancel": "キャンセル",
     "saving": "保存中...",
     "actions": "操作",
-    "menuSearch": "メニューを検索..."
+    "menuSearch": "メニューを検索...",
+    "edit": "編集",
+    "delete": "削除",
+    "deleteConfirmTitle": "削除の確認",
+    "deleteConfirmDescription": "このレコードを削除しますか？この操作は元に戻せません。",
+    "deleting": "削除中..."
   },
   "nav": {
     "accountOperations": "取引先業務",
@@ -92,7 +97,8 @@
     "accountingParameters": "会計・原価計算パラメータ",
     "accountingDefinitions": "会計定義",
     "fiscalPeriods": "会計期間",
-    "inventoryPostingProfiles": "在庫転記プロファイル"
+    "inventoryPostingProfiles": "在庫転記プロファイル",
+    "branches": "支店"
   },
   "statuses": {
     "Draft": "草案",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "番号シリーズを編集",
+    "update": "番号シリーズを更新",
+    "deleteConfirm": "この番号シリーズを削除しますか？"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "通貨を選択",
     "searchCurrency": "通貨を検索..."
+  },
+  "branchManagement": {
+    "title": "支店管理",
+    "eyebrow": "組織",
+    "description": "支店、既定のワークスペース、有効状態を管理します。",
+    "new": "新しい支店",
+    "editTitle": "支店を編集",
+    "createTitle": "新しい支店",
+    "formDescription": "支店情報とシステム内での利用状態を設定します。",
+    "save": "支店を保存",
+    "saved": "支店を保存しました。",
+    "deleteConfirm": "この支店を削除しますか？既定の支店は削除できません。",
+    "fields": {
+      "code": "支店コード",
+      "name": "支店名",
+      "isDefault": "既定の支店",
+      "isActive": "有効",
+      "createdAt": "作成日時",
+      "updatedAt": "更新日時"
+    },
+    "defaultHint": "ログイン時と既定処理で優先的に選択されます。",
+    "activeHint": "無効な支店は新しい処理で選択できません。",
+    "validation": {
+      "codeRequired": "支店コードは必須です。",
+      "nameRequired": "支店名は必須です。"
+    }
   }
 }

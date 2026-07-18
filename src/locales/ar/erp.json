@@ -22,7 +22,12 @@
     "cancel": "إلغاء",
     "saving": "جارٍ الحفظ...",
     "actions": "الإجراءات",
-    "menuSearch": "البحث في القائمة..."
+    "menuSearch": "البحث في القائمة...",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "deleteConfirmTitle": "تأكيد الحذف",
+    "deleteConfirmDescription": "هل أنت متأكد من حذف هذا السجل؟ لا يمكن التراجع عن هذا الإجراء.",
+    "deleting": "جارٍ الحذف..."
   },
   "nav": {
     "accountOperations": "عمليات الحسابات",
@@ -92,7 +97,8 @@
     "accountingParameters": "معلمات المحاسبة واحتساب التكلفة",
     "accountingDefinitions": "تعريفات المحاسبة",
     "fiscalPeriods": "الفترات المالية",
-    "inventoryPostingProfiles": "ملفات ترحيل المخزون"
+    "inventoryPostingProfiles": "ملفات ترحيل المخزون",
+    "branches": "الفروع"
   },
   "statuses": {
     "Draft": "مسودة",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "تعديل سلسلة الأرقام",
+    "update": "تحديث سلسلة الأرقام",
+    "deleteConfirm": "هل تريد حذف سلسلة الأرقام هذه؟"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "اختر العملة",
     "searchCurrency": "البحث في العملات..."
+  },
+  "branchManagement": {
+    "title": "إدارة الفروع",
+    "eyebrow": "المؤسسة",
+    "description": "إدارة الفروع ومساحة العمل الافتراضية وحالة النشاط.",
+    "new": "فرع جديد",
+    "editTitle": "تعديل الفرع",
+    "createTitle": "فرع جديد",
+    "formDescription": "حدد معلومات الفرع واستخدامه في النظام.",
+    "save": "حفظ الفرع",
+    "saved": "تم حفظ الفرع.",
+    "deleteConfirm": "هل تريد حذف هذا الفرع؟ لا يمكن حذف الفرع الافتراضي.",
+    "fields": {
+      "code": "رمز الفرع",
+      "name": "اسم الفرع",
+      "isDefault": "الفرع الافتراضي",
+      "isActive": "نشط",
+      "createdAt": "تاريخ الإنشاء",
+      "updatedAt": "تاريخ التحديث"
+    },
+    "defaultHint": "يتم اختياره أولاً عند تسجيل الدخول والعمليات الافتراضية.",
+    "activeHint": "لا يمكن اختيار الفروع غير النشطة في العمليات الجديدة.",
+    "validation": {
+      "codeRequired": "رمز الفرع مطلوب.",
+      "nameRequired": "اسم الفرع مطلوب."
+    }
   }
 }

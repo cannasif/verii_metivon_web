@@ -22,7 +22,12 @@
     "cancel": "Отмена",
     "saving": "Сохранение...",
     "actions": "Действия",
-    "menuSearch": "Поиск в меню..."
+    "menuSearch": "Поиск в меню...",
+    "edit": "Изменить",
+    "delete": "Удалить",
+    "deleteConfirmTitle": "Подтвердите удаление",
+    "deleteConfirmDescription": "Удалить эту запись? Это действие нельзя отменить.",
+    "deleting": "Удаление..."
   },
   "nav": {
     "accountOperations": "Операции по счетам",
@@ -92,7 +97,8 @@
     "accountingParameters": "Параметры бухгалтерии и расчёта себестоимости",
     "accountingDefinitions": "Бухгалтерские определения",
     "fiscalPeriods": "Финансовые периоды",
-    "inventoryPostingProfiles": "Профили проводок запасов"
+    "inventoryPostingProfiles": "Профили проводок запасов",
+    "branches": "Филиалы"
   },
   "statuses": {
     "Draft": "Черновик",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "Изменить серию номеров",
+    "update": "Обновить серию номеров",
+    "deleteConfirm": "Удалить эту серию номеров?"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "Выберите валюту",
     "searchCurrency": "Поиск валют..."
+  },
+  "branchManagement": {
+    "title": "Управление филиалами",
+    "eyebrow": "Организация",
+    "description": "Управляйте филиалами, рабочей областью по умолчанию и активностью.",
+    "new": "Новый филиал",
+    "editTitle": "Изменить филиал",
+    "createTitle": "Новый филиал",
+    "formDescription": "Укажите данные филиала и его использование в системе.",
+    "save": "Сохранить филиал",
+    "saved": "Филиал сохранён.",
+    "deleteConfirm": "Удалить этот филиал? Филиал по умолчанию удалить нельзя.",
+    "fields": {
+      "code": "Код филиала",
+      "name": "Название филиала",
+      "isDefault": "Филиал по умолчанию",
+      "isActive": "Активен",
+      "createdAt": "Создан",
+      "updatedAt": "Обновлён"
+    },
+    "defaultHint": "Выбирается первым при входе и стандартных операциях.",
+    "activeHint": "Неактивные филиалы недоступны для новых операций.",
+    "validation": {
+      "codeRequired": "Код филиала обязателен.",
+      "nameRequired": "Название филиала обязательно."
+    }
   }
 }

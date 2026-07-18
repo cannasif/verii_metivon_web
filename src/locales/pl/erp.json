@@ -22,7 +22,12 @@
     "cancel": "Anuluj",
     "saving": "Zapisywanie...",
     "actions": "Operacje",
-    "menuSearch": "Przeszukaj menu..."
+    "menuSearch": "Przeszukaj menu...",
+    "edit": "Edytuj",
+    "delete": "Usuń",
+    "deleteConfirmTitle": "Potwierdź usunięcie",
+    "deleteConfirmDescription": "Czy na pewno usunąć ten rekord? Tej operacji nie można cofnąć.",
+    "deleting": "Usuwanie..."
   },
   "nav": {
     "accountOperations": "Operacje kont",
@@ -92,7 +97,8 @@
     "accountingParameters": "Parametry księgowości i kalkulacji kosztów",
     "accountingDefinitions": "Definicje księgowe",
     "fiscalPeriods": "Okresy obrachunkowe",
-    "inventoryPostingProfiles": "Profile księgowania zapasów"
+    "inventoryPostingProfiles": "Profile księgowania zapasów",
+    "branches": "Oddziały"
   },
   "statuses": {
     "Draft": "Wersja robocza",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "Edytuj serię numeracji",
+    "update": "Aktualizuj serię numeracji",
+    "deleteConfirm": "Usunąć tę serię numeracji?"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "Wybierz walutę",
     "searchCurrency": "Szukaj walut..."
+  },
+  "branchManagement": {
+    "title": "Zarządzanie oddziałami",
+    "eyebrow": "Organizacja",
+    "description": "Zarządzaj oddziałami, domyślnym obszarem i aktywnością.",
+    "new": "Nowy oddział",
+    "editTitle": "Edytuj oddział",
+    "createTitle": "Nowy oddział",
+    "formDescription": "Określ dane oddziału i jego użycie w systemie.",
+    "save": "Zapisz oddział",
+    "saved": "Oddział zapisany.",
+    "deleteConfirm": "Usunąć ten oddział? Oddziału domyślnego nie można usunąć.",
+    "fields": {
+      "code": "Kod oddziału",
+      "name": "Nazwa oddziału",
+      "isDefault": "Oddział domyślny",
+      "isActive": "Aktywny",
+      "createdAt": "Utworzono",
+      "updatedAt": "Zaktualizowano"
+    },
+    "defaultHint": "Wybierany jako pierwszy przy logowaniu i operacjach domyślnych.",
+    "activeHint": "Nieaktywne oddziały nie są dostępne w nowych operacjach.",
+    "validation": {
+      "codeRequired": "Kod oddziału jest wymagany.",
+      "nameRequired": "Nazwa oddziału jest wymagana."
+    }
   }
 }

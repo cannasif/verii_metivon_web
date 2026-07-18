@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { api } from "@/lib/axios";
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent,
+  AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { DataTableGrid, type DataTableGridColumn } from "@/components/shared";
 import {
   loadColumnPreferences,
@@ -25,6 +29,7 @@ import {
   type FilterColumnConfig,
   type FilterRow,
 } from "@/lib/advanced-filter-types";
+import { useCrudPermissions } from "@/features/access-control/hooks/useCrudPermissions";
 type Row = Record<string, unknown> & { id: number };
 export function ErpPagedManagementPage({
   config,
@@ -35,6 +40,7 @@ export function ErpPagedManagementPage({
   const { t, i18n } = useTranslation("erp");
   const userId = useAuthStore((s) => s.user?.id);
   const defaultPageSize = useSystemSettingsStore((s) => s.settings.defaultPageSize ?? 20);
+  const { canCreate, canUpdate, canDelete } = useCrudPermissions();
   const keys = useMemo(
     () => config.columns.map((x) => x.key),
     [config.columns],
@@ -52,6 +58,7 @@ export function ErpPagedManagementPage({
   const [appliedFilterRows, setAppliedFilterRows] = useState<FilterRow[]>([]);
   const [filterLogic, setFilterLogic] = useState<"and" | "or">("and");
   const [pendingAction, setPendingAction] = useState<string | null>(null);
+  const [confirmation, setConfirmation] = useState<{ row: Row; index: number } | null>(null);
   const [sortBy, setSortBy] = useState(
     config.columns.find((x) => x.sortable !== false && x.key !== "id")?.key ??
       "id",
@@ -76,9 +83,8 @@ export function ErpPagedManagementPage({
       JSON.stringify(appliedFilters),
       filterLogic,
     ],
-    queryFn: () =>
-      api.get<ApiEnvelope<PagedResult<Row>>>(config.endpoint, {
-        params: {
+    queryFn: () => {
+      const queryPayload = {
           pageNumber,
           pageSize,
           search,
@@ -86,8 +92,11 @@ export function ErpPagedManagementPage({
           sortDirection,
           filters: appliedFilters,
           filterLogic,
-        },
-      }),
+      };
+      return config.queryMethod === "post"
+        ? api.post<ApiEnvelope<PagedResult<Row>>>(config.endpoint, queryPayload)
+        : api.get<ApiEnvelope<PagedResult<Row>>>(config.endpoint, { params: queryPayload });
+    },
     placeholderData: (p) => p,
   });
   const page = query.data?.data;
@@ -178,11 +187,14 @@ export function ErpPagedManagementPage({
     key,
     label: columns.find((c) => c.key === key)?.label ?? key,
   }));
-  const runAction = async (row: Row, index: number): Promise<void> => {
+  const isActionAllowed = (action: NonNullable<ErpPageConfig["actions"]>[number]): boolean => {
+    const kind = action.kind ?? (action.method === "delete" ? "delete" : action.navigateTo ? "update" : "custom");
+    return kind === "delete" ? canDelete : kind === "update" ? canUpdate : true;
+  };
+  const executeAction = async (row: Row, index: number): Promise<void> => {
     const action = config.actions?.[index];
-    if (!action) return;
+    if (!action || !isActionAllowed(action)) return;
     if (action.navigateTo) { navigate(action.navigateTo(row)); return; }
-    if (action.confirm && !window.confirm(t(`pages.${config.pageKey}.actions.${index}.confirm`, { defaultValue: action.confirm }))) return;
     const key = `${row.id}:${index}`;
     setPendingAction(key);
     try {
@@ -196,6 +208,17 @@ export function ErpPagedManagementPage({
       setPendingAction(null);
     }
   };
+  const runAction = (row: Row, index: number): void => {
+    const action = config.actions?.[index];
+    if (!action || !isActionAllowed(action)) return;
+    if (action.method === "delete" || action.kind === "delete" || action.confirm) {
+      setConfirmation({ row, index });
+      return;
+    }
+    void executeAction(row, index);
+  };
+  const visibleActions = config.actions?.filter(isActionAllowed) ?? [];
+  const confirmationAction = confirmation ? config.actions?.[confirmation.index] : undefined;
   return (
     <div className="space-y-5">
       <section
@@ -211,7 +234,7 @@ export function ErpPagedManagementPage({
               {t(`pages.${config.pageKey}.description`, { defaultValue: config.description })}
             </p>
           </div>
-          {config.createLabel ? (
+          {config.createLabel && canCreate ? (
             <Button
               className="bg-[var(--crm-brand-on-primary)] text-[var(--crm-brand-primary)] hover:bg-white/90"
               onClick={() => config.createPath && navigate(config.createPath)}
@@ -273,12 +296,12 @@ export function ErpPagedManagementPage({
         rows={rows}
         rowKey={(r) => r.id}
         renderCell={render}
-        showActionsColumn={Boolean(config.actions?.length)}
+        showActionsColumn={visibleActions.length > 0}
         actionsHeaderLabel={t("common.actions")}
         renderActionsCell={(row) => (
           <div className="flex justify-end gap-2">
-            {config.actions?.map((action, index) => action.visible?.(row) === false ? null : (
-              <Button key={`${row.id}:${index}`} size="sm" variant={action.variant ?? "outline"} disabled={pendingAction !== null} onClick={() => void runAction(row, index)}>
+            {config.actions?.map((action, index) => !isActionAllowed(action) || action.visible?.(row) === false ? null : (
+              <Button key={`${row.id}:${index}`} size="sm" variant={action.variant ?? "outline"} disabled={pendingAction !== null} onClick={() => runAction(row, index)}>
                 {t(`pages.${config.pageKey}.actions.${index}.label`, { defaultValue: action.label })}
               </Button>
             ))}
@@ -313,6 +336,35 @@ export function ErpPagedManagementPage({
         enableColumnResize
         onColumnOrderChange={persistO}
       />
+      <AlertDialog open={confirmation !== null} onOpenChange={(open) => !open && setConfirmation(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t("common.deleteConfirmTitle")}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {confirmation
+                ? t(`pages.${config.pageKey}.actions.${confirmation.index}.confirm`, {
+                    defaultValue: confirmationAction?.confirm ?? t("common.deleteConfirmDescription"),
+                  })
+                : ""}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={pendingAction !== null}>{t("common.cancel")}</AlertDialogCancel>
+            <AlertDialogAction
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+              disabled={pendingAction !== null}
+              onClick={(event) => {
+                event.preventDefault();
+                if (!confirmation) return;
+                const current = confirmation;
+                void executeAction(current.row, current.index).then(() => setConfirmation(null));
+              }}
+            >
+              {pendingAction !== null ? t("common.deleting") : t("common.delete")}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

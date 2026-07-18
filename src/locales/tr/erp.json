@@ -22,7 +22,12 @@
     "cancel": "Vazgeç",
     "saving": "Kaydediliyor...",
     "actions": "İşlemler",
-    "menuSearch": "Menüde ara..."
+    "menuSearch": "Menüde ara...",
+    "edit": "Düzenle",
+    "delete": "Sil",
+    "deleteConfirmTitle": "Silme Onayı",
+    "deleteConfirmDescription": "Bu kaydı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+    "deleting": "Siliniyor..."
   },
   "nav": {
     "accountOperations": "Cari İşlemleri",
@@ -92,7 +97,8 @@
     "accountingParameters": "Muhasebe ve Maliyetlendirme Parametreleri",
     "accountingDefinitions": "Muhasebe Tanımları",
     "fiscalPeriods": "Mali Dönemler",
-    "inventoryPostingProfiles": "Stok Muhasebe Profilleri"
+    "inventoryPostingProfiles": "Stok Muhasebe Profilleri",
+    "branches": "Şubeler"
   },
   "statuses": {
     "Draft": "Taslak",
@@ -666,7 +672,10 @@
       "Yearly": "Yıllık",
       "Monthly": "Aylık",
       "Daily": "Günlük"
-    }
+    },
+    "editTitle": "Numara Serisini Düzenle",
+    "update": "Numara Serisini Güncelle",
+    "deleteConfirm": "Bu numara serisini silmek istediğinizden emin misiniz?"
   },
   "accountingDefinitions": {
     "saved": "Tanım kaydedildi.",
@@ -756,5 +765,31 @@
     },
     "selectCurrency": "Para birimi seçin",
     "searchCurrency": "Para birimlerinde ara..."
+  },
+  "branchManagement": {
+    "title": "Şube Yönetimi",
+    "eyebrow": "Organizasyon",
+    "description": "Şubeleri, varsayılan çalışma alanını ve aktiflik durumlarını yönetin.",
+    "new": "Yeni Şube",
+    "editTitle": "Şubeyi Düzenle",
+    "createTitle": "Yeni Şube",
+    "formDescription": "Şube bilgilerini ve sistem genelindeki kullanım durumunu tanımlayın.",
+    "save": "Şubeyi Kaydet",
+    "saved": "Şube kaydedildi.",
+    "deleteConfirm": "Varsayılan şubeyi silemezsiniz. Bu şubeyi silmek istediğinizden emin misiniz?",
+    "fields": {
+      "code": "Şube kodu",
+      "name": "Şube adı",
+      "isDefault": "Varsayılan şube",
+      "isActive": "Aktif",
+      "createdAt": "Oluşturulma",
+      "updatedAt": "Güncellenme"
+    },
+    "defaultHint": "Girişte ve varsayılan işlemlerde öncelikli seçilir.",
+    "activeHint": "Pasif şubeler yeni işlemlerde seçilemez.",
+    "validation": {
+      "codeRequired": "Şube kodu zorunludur.",
+      "nameRequired": "Şube adı zorunludur."
+    }
   }
 }

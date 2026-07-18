@@ -22,7 +22,12 @@
     "cancel": "取消",
     "saving": "正在保存...",
     "actions": "操作",
-    "menuSearch": "搜索菜单..."
+    "menuSearch": "搜索菜单...",
+    "edit": "编辑",
+    "delete": "删除",
+    "deleteConfirmTitle": "确认删除",
+    "deleteConfirmDescription": "确定要删除此记录吗？此操作无法撤销。",
+    "deleting": "正在删除..."
   },
   "nav": {
     "accountOperations": "往来业务",
@@ -92,7 +97,8 @@
     "accountingParameters": "会计与成本核算参数",
     "accountingDefinitions": "会计定义",
     "fiscalPeriods": "会计期间",
-    "inventoryPostingProfiles": "库存过账配置文件"
+    "inventoryPostingProfiles": "库存过账配置文件",
+    "branches": "分支机构"
   },
   "statuses": {
     "Draft": "吃水",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "编辑编号序列",
+    "update": "更新编号序列",
+    "deleteConfirm": "确定删除此编号序列吗？"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "选择货币",
     "searchCurrency": "搜索货币..."
+  },
+  "branchManagement": {
+    "title": "分支机构管理",
+    "eyebrow": "组织",
+    "description": "管理分支机构、默认工作区和启用状态。",
+    "new": "新建分支机构",
+    "editTitle": "编辑分支机构",
+    "createTitle": "新建分支机构",
+    "formDescription": "定义分支信息及其在系统中的使用状态。",
+    "save": "保存分支机构",
+    "saved": "分支机构已保存。",
+    "deleteConfirm": "确定删除此分支机构吗？默认分支机构不能删除。",
+    "fields": {
+      "code": "分支代码",
+      "name": "分支名称",
+      "isDefault": "默认分支机构",
+      "isActive": "启用",
+      "createdAt": "创建时间",
+      "updatedAt": "更新时间"
+    },
+    "defaultHint": "登录和默认操作时优先选择。",
+    "activeHint": "停用的分支机构不能用于新操作。",
+    "validation": {
+      "codeRequired": "分支代码为必填项。",
+      "nameRequired": "分支名称为必填项。"
+    }
   }
 }

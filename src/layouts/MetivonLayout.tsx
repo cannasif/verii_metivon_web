@@ -403,6 +403,11 @@ export function MetivonLayout(): ReactElement {
               close={() => setIsMobileSidebarOpen(false)}
             />
             <SmallSidebarLink
+              title={te("nav.branches")}
+              href="/settings/branches"
+              close={() => setIsMobileSidebarOpen(false)}
+            />
+            <SmallSidebarLink
               title={te("nav.smtp")}
               href="/users/mail-settings"
               close={() => setIsMobileSidebarOpen(false)}

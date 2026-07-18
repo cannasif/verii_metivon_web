@@ -22,7 +22,12 @@
     "cancel": "Annulla",
     "saving": "Salvataggio...",
     "actions": "Azioni",
-    "menuSearch": "Cerca nel menu..."
+    "menuSearch": "Cerca nel menu...",
+    "edit": "Modifica",
+    "delete": "Elimina",
+    "deleteConfirmTitle": "Conferma eliminazione",
+    "deleteConfirmDescription": "Eliminare questo record? Questa azione non può essere annullata.",
+    "deleting": "Eliminazione..."
   },
   "nav": {
     "accountOperations": "Operazioni conti",
@@ -92,7 +97,8 @@
     "accountingParameters": "Parametri di contabilità e costificazione",
     "accountingDefinitions": "Definizioni contabili",
     "fiscalPeriods": "Periodi fiscali",
-    "inventoryPostingProfiles": "Profili di contabilizzazione del magazzino"
+    "inventoryPostingProfiles": "Profili di contabilizzazione del magazzino",
+    "branches": "Filiali"
   },
   "statuses": {
     "Draft": "Bozza",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "Modifica serie numerica",
+    "update": "Aggiorna serie numerica",
+    "deleteConfirm": "Eliminare questa serie numerica?"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "Seleziona valuta",
     "searchCurrency": "Cerca valute..."
+  },
+  "branchManagement": {
+    "title": "Gestione filiali",
+    "eyebrow": "Organizzazione",
+    "description": "Gestisci filiali, area predefinita e stato attivo.",
+    "new": "Nuova filiale",
+    "editTitle": "Modifica filiale",
+    "createTitle": "Nuova filiale",
+    "formDescription": "Definisci informazioni e utilizzo della filiale nel sistema.",
+    "save": "Salva filiale",
+    "saved": "Filiale salvata.",
+    "deleteConfirm": "Eliminare questa filiale? La filiale predefinita non può essere eliminata.",
+    "fields": {
+      "code": "Codice filiale",
+      "name": "Nome filiale",
+      "isDefault": "Filiale predefinita",
+      "isActive": "Attiva",
+      "createdAt": "Creata il",
+      "updatedAt": "Aggiornata il"
+    },
+    "defaultHint": "Viene selezionata per prima all’accesso e nelle operazioni predefinite.",
+    "activeHint": "Le filiali inattive non sono selezionabili nelle nuove operazioni.",
+    "validation": {
+      "codeRequired": "Il codice filiale è obbligatorio.",
+      "nameRequired": "Il nome filiale è obbligatorio."
+    }
   }
 }

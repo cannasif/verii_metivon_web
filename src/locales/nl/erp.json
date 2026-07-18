@@ -22,7 +22,12 @@
     "cancel": "Annuleren",
     "saving": "Opslaan...",
     "actions": "Acties",
-    "menuSearch": "Menu doorzoeken..."
+    "menuSearch": "Menu doorzoeken...",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "deleteConfirmTitle": "Verwijderen bevestigen",
+    "deleteConfirmDescription": "Weet u zeker dat u dit record wilt verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "deleting": "Verwijderen..."
   },
   "nav": {
     "accountOperations": "Rekeningbewerkingen",
@@ -92,7 +97,8 @@
     "accountingParameters": "Parameters voor boekhouding en kostprijs",
     "accountingDefinitions": "Boekhoudkundige definities",
     "fiscalPeriods": "Boekperioden",
-    "inventoryPostingProfiles": "Voorraadboekingsprofielen"
+    "inventoryPostingProfiles": "Voorraadboekingsprofielen",
+    "branches": "Vestigingen"
   },
   "statuses": {
     "Draft": "Diepgang",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "Nummerreeks bewerken",
+    "update": "Nummerreeks bijwerken",
+    "deleteConfirm": "Deze nummerreeks verwijderen?"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "Valuta selecteren",
     "searchCurrency": "Valuta zoeken..."
+  },
+  "branchManagement": {
+    "title": "Vestigingsbeheer",
+    "eyebrow": "Organisatie",
+    "description": "Beheer vestigingen, standaardwerkruimte en actieve status.",
+    "new": "Nieuwe vestiging",
+    "editTitle": "Vestiging bewerken",
+    "createTitle": "Nieuwe vestiging",
+    "formDescription": "Definieer vestigingsgegevens en systeembreed gebruik.",
+    "save": "Vestiging opslaan",
+    "saved": "Vestiging opgeslagen.",
+    "deleteConfirm": "Deze vestiging verwijderen? De standaardvestiging kan niet worden verwijderd.",
+    "fields": {
+      "code": "Vestigingscode",
+      "name": "Vestigingsnaam",
+      "isDefault": "Standaardvestiging",
+      "isActive": "Actief",
+      "createdAt": "Aangemaakt op",
+      "updatedAt": "Bijgewerkt op"
+    },
+    "defaultHint": "Wordt eerst gekozen bij aanmelden en standaardbewerkingen.",
+    "activeHint": "Inactieve vestigingen zijn niet beschikbaar voor nieuwe bewerkingen.",
+    "validation": {
+      "codeRequired": "Vestigingscode is verplicht.",
+      "nameRequired": "Vestigingsnaam is verplicht."
+    }
   }
 }

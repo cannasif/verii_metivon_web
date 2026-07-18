@@ -22,7 +22,12 @@
     "cancel": "Cancelar",
     "saving": "Guardando...",
     "actions": "Acciones",
-    "menuSearch": "Buscar en el menú..."
+    "menuSearch": "Buscar en el menú...",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "deleteConfirmTitle": "Confirmar eliminación",
+    "deleteConfirmDescription": "¿Está seguro de que desea eliminar este registro? Esta acción no se puede deshacer.",
+    "deleting": "Eliminando..."
   },
   "nav": {
     "accountOperations": "Operaciones de cuentas",
@@ -92,7 +97,8 @@
     "accountingParameters": "Parámetros de contabilidad y costes",
     "accountingDefinitions": "Definiciones contables",
     "fiscalPeriods": "Períodos fiscales",
-    "inventoryPostingProfiles": "Perfiles de contabilización de inventario"
+    "inventoryPostingProfiles": "Perfiles de contabilización de inventario",
+    "branches": "Sucursales"
   },
   "statuses": {
     "Draft": "Borrador",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "Editar serie numérica",
+    "update": "Actualizar serie numérica",
+    "deleteConfirm": "¿Eliminar esta serie numérica?"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "Seleccionar moneda",
     "searchCurrency": "Buscar monedas..."
+  },
+  "branchManagement": {
+    "title": "Gestión de sucursales",
+    "eyebrow": "Organización",
+    "description": "Gestione sucursales, espacio predeterminado y estado activo.",
+    "new": "Nueva sucursal",
+    "editTitle": "Editar sucursal",
+    "createTitle": "Nueva sucursal",
+    "formDescription": "Defina la información y el uso de la sucursal en el sistema.",
+    "save": "Guardar sucursal",
+    "saved": "Sucursal guardada.",
+    "deleteConfirm": "¿Eliminar esta sucursal? La sucursal predeterminada no se puede eliminar.",
+    "fields": {
+      "code": "Código de sucursal",
+      "name": "Nombre de sucursal",
+      "isDefault": "Sucursal predeterminada",
+      "isActive": "Activa",
+      "createdAt": "Creada el",
+      "updatedAt": "Actualizada el"
+    },
+    "defaultHint": "Se selecciona primero al iniciar sesión y en operaciones predeterminadas.",
+    "activeHint": "Las sucursales inactivas no se pueden seleccionar en nuevas operaciones.",
+    "validation": {
+      "codeRequired": "El código de sucursal es obligatorio.",
+      "nameRequired": "El nombre de sucursal es obligatorio."
+    }
   }
 }

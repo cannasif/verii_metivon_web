@@ -49,8 +49,6 @@ import { toast } from 'sonner';
 import { getImageUrl } from '../utils/image-url';
 import { useChangePassword } from '@/features/auth/hooks/useChangePassword';
 import { changePasswordSchema, type ChangePasswordRequest } from '@/features/auth/types/auth';
-import { useSalesmenOverviewQuery } from '@/features/salesman-360/hooks/useSalesmen360';
-import { useSalesRepMatchList } from '@/features/sales-rep-match-management/hooks/useSalesRepMatchList';
 import {
   User,
   Camera,
@@ -67,62 +65,14 @@ import {
   Ruler,
   Weight,
   FileText,
-  TrendingUp,
-  Heart,
-  UserMinus,
-  Activity,
-  Zap,
-  BarChart3,
-  DollarSign,
-  MessageSquare,
   CheckCircle,
+  ShieldCheck,
+  CalendarClock,
   Settings,
   X,
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import { ProfilePictureEditor } from './ProfilePictureEditor';
-
-interface StatCardProps {
-  title: string;
-  value: string | number;
-  icon: React.ElementType;
-  description?: string;
-  colorClass?: string;
-  progress?: number;
-}
-
-function StatCard({ title, value, icon: Icon, description, colorClass, progress }: StatCardProps) {
-  return (
-    <div className="relative group overflow-hidden rounded-3xl border border-slate-300 dark:border-white/25 bg-white/60 dark:bg-[#1D1726] p-6 transition-all backdrop-blur-xl">
-      <div className="flex items-start justify-between">
-        <div>
-          <p className="text-xs font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1">{title}</p>
-          <h3 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">{value}</h3>
-          {description && <p className="mt-1 text-xs text-muted-foreground dark:text-slate-400 font-bold">{description}</p>}
-        </div>
-        <div className={cn("p-3 rounded-2xl bg-white/50 dark:bg-black/40 shadow-sm transition-colors", colorClass)}>
-          <Icon size={22} className="opacity-100" />
-        </div>
-      </div>
-      {progress !== undefined && (
-        <div className="mt-4 h-2.5 w-full rounded-full bg-slate-200 dark:bg-white/5 overflow-hidden border border-slate-300/30 dark:border-transparent">
-          <div
-            className={cn("h-full transition-all duration-1000 ease-out shadow-[0_0_12px_rgba(var(--progress-color),0.4)]",
-              colorClass?.replace('text-emerald-600', 'bg-emerald-500')
-                .replace('text-blue-200', 'bg-blue-600')
-                .replace('text-primary', 'bg-primary')
-                .replace('text-indigo-200 ', 'bg-indigo-600')
-            )}
-            style={{
-              width: `${progress}%`,
-              '--progress-color': colorClass?.includes('emerald') ? '16,185,129' : colorClass?.includes('blue') ? '37,99,235' : colorClass?.includes('indigo') ? '79,70,229' : '225,29,72'
-            } as React.CSSProperties}
-          />
-        </div>
-      )}
-    </div>
-  );
-}
+import { formatSystemDateTime } from '@/lib/system-settings';
 
 export function ProfilePage(): ReactElement {
   const { t } = useTranslation();
@@ -137,13 +87,6 @@ export function ProfilePage(): ReactElement {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const { data: userDetail, isLoading: isLoadingDetail, refetch: refetchUserDetail } = useUserDetailByUserId(userId);
-  const { data: overview, isLoading: isLoadingOverview } = useSalesmenOverviewQuery(userId);
-  const { data: matchData } = useSalesRepMatchList({
-    pageSize: 1,
-    filters: [{ column: 'userId', value: String(userId), operator: 'eq' }]
-  });
-
-  const erpMatch = matchData?.data?.[0];
 
   const createUserDetail = useCreateUserDetail();
   const updateUserDetail = useUpdateUserDetail();
@@ -258,16 +201,13 @@ export function ProfilePage(): ReactElement {
   const isChangingPassword = changePassword.isPending;
   const displayName = user?.name || user?.email || t('userDetailManagement.defaultUser');
 
-  if (isLoadingDetail || isLoadingOverview) {
+  if (isLoadingDetail) {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <Loader2 className="h-10 w-10 animate-spin text-primary opacity-20" />
       </div>
     );
   }
-
-  const kpis = overview?.kpis;
-  const revenueQuality = overview?.revenueQuality;
 
   return (
     <div className="w-full space-y-6 pb-20 px-4 sm:px-8">
@@ -313,18 +253,16 @@ export function ProfilePage(): ReactElement {
                   <h1 className="text-3xl sm:text-4xl font-black tracking-tighter text-slate-800 dark:text-white">
                     {displayName}
                   </h1>
-                  {erpMatch && (
-                    <Badge variant="outline" className="w-fit mx-auto md:mx-0 border-primary/30 bg-primary/5 text-primary font-bold px-3 py-1 rounded-lg">
-                      #{erpMatch.salesRepCode}
-                    </Badge>
-                  )}
+                  <Badge variant="outline" className="w-fit mx-auto md:mx-0 border-primary/30 bg-primary/5 text-primary font-bold px-3 py-1 rounded-lg">
+                    {user?.role || t('userDetailManagement.userRole')}
+                  </Badge>
                 </div>
                 <p className="text-slate-500 dark:text-slate-400 font-medium flex flex-wrap items-center justify-center md:justify-start gap-x-4 gap-y-2">
                   <span className="flex items-center gap-1.5"><Mail size={16} className="opacity-60" /> {user?.email}</span>
                   <span className="hidden sm:inline opacity-20">|</span>
                   <span className="flex items-center gap-1.5"><Building2 size={16} className="opacity-60" /> {branch?.name || '-'}</span>
                   <span className="hidden sm:inline opacity-20">|</span>
-                  <span className="flex items-center gap-1.5"><Briefcase size={16} className="opacity-60" /> {t('roles.admin')}</span>
+                  <span className="flex items-center gap-1.5"><Briefcase size={16} className="opacity-60" /> {user?.role || '-'}</span>
                 </p>
               </div>
 
@@ -646,137 +584,28 @@ export function ProfilePage(): ReactElement {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <StatCard
-          title={t('userDetailManagement.healthScore')}
-          value={`${revenueQuality?.healthScore || 0}%`}
-          icon={Heart}
-          progress={revenueQuality?.healthScore || 0}
-          colorClass="text-emerald-200 dark:text-emerald-100 bg-emerald-600 dark:bg-emerald-900"
-          description={t('userDetailManagement.healthScoreDesc')}
-        />
-        <StatCard
-          title={t('userDetailManagement.retention')}
-          value={`${Math.round(revenueQuality?.retentionRate || 0)}%`}
-          icon={TrendingUp}
-          progress={Math.round(revenueQuality?.retentionRate || 0)}
-          colorClass="text-blue-200 dark:text-blue-100 bg-blue-600 dark:bg-blue-900"
-          description={t('userDetailManagement.retentionDesc')}
-        />
-        <StatCard
-          title={t('userDetailManagement.churnRisk')}
-          value={`${revenueQuality?.churnRiskScore || 0}%`}
-          icon={UserMinus}
-          progress={revenueQuality?.churnRiskScore || 0}
-          colorClass="text-primary dark:text-red-100 bg-primary dark:bg-primary/20"
-          description={t('userDetailManagement.churnRiskDesc')}
-        />
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-
-        <Card className="rounded-3xl border border-slate-300 dark:border-white/25 bg-white/40 dark:bg-[#1D1726] backdrop-blur-xl shadow-lg">
-          <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <div className="space-y-1">
-              <CardTitle className="text-lg font-black flex items-center gap-2">
-                <BarChart3 size={20} className="text-primary" />
-                {t('userDetailManagement.financeAndSales')}
-              </CardTitle>
-              <CardDescription>{t('userDetailManagement.financeAndSalesDesc')}</CardDescription>
-            </div>
-          </CardHeader>
-          <CardContent className="space-y-6 pt-2">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="flex items-center justify-between p-5 rounded-2xl bg-white/80 dark:bg-white/5 border border-slate-300 dark:border-white/15 shadow-md">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-accent dark:bg-primary/10 text-primary">
-                    <MessageSquare size={20} />
-                  </div>
-                  <div className="text-sm font-black text-muted-foreground uppercase tracking-tight">{t('userDetailManagement.demands')}</div>
-                </div>
-                <div className="text-3xl font-black text-slate-900 dark:text-white">{kpis?.totalDemands || 0}</div>
-              </div>
-
-              <div className="flex items-center justify-between p-5 rounded-2xl bg-white/80 dark:bg-white/5 border border-slate-300 dark:border-white/15 shadow-md">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-blue-100 dark:bg-blue-500/10 text-blue-600">
-                    <FileText size={20} />
-                  </div>
-                  <div className="text-sm font-black text-muted-foreground uppercase tracking-tight">{t('userDetailManagement.quotations')}</div>
-                </div>
-                <div className="text-3xl font-black text-slate-900 dark:text-white">{kpis?.totalQuotations || 0}</div>
-              </div>
-
-              <div className="flex items-center justify-between p-5 rounded-2xl bg-white/80 dark:bg-white/5 border border-slate-300 dark:border-white/15 shadow-md">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 text-emerald-600">
-                    <CheckCircle size={20} />
-                  </div>
-                  <div className="text-sm font-black text-muted-foreground uppercase tracking-tight">{t('userDetailManagement.orders')}</div>
-                </div>
-                <div className="text-3xl font-black text-slate-900 dark:text-white">{kpis?.totalOrders || 0}</div>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="text-xs font-black uppercase tracking-widest text-muted-foreground flex items-center gap-2">
-                <DollarSign size={12} className="text-primary" />
-                {t('userDetailManagement.currencyRevenues')}
-              </h4>
-              <div className="space-y-3">
-                {kpis?.totalsByCurrency?.map((cur) => (
-                  <div key={cur.currency} className="space-y-1.5">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-black text-slate-800 dark:text-slate-200">{cur.currency}</span>
-                      <span className="font-bold">{cur.orderAmount.toLocaleString()} / {cur.quotationAmount.toLocaleString()}</span>
-                    </div>
-                    <div className="h-2.5 w-full rounded-full bg-slate-200 dark:bg-white/5 overflow-hidden flex border border-slate-300/20 dark:border-transparent">
-                      <div
-                        className="h-full bg-linear-to-r from-primary to-primary rounded-full shadow-[0_0_10px_rgba(225,29,72,0.4)]"
-                        style={{ width: `${Math.min(100, (cur.orderAmount / (cur.quotationAmount || 1)) * 100)}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      <div className="grid gap-6 lg:grid-cols-3">
+        <Card className="metivon-panel rounded-3xl border lg:col-span-2">
+          <CardHeader><CardTitle className="flex items-center gap-2"><Building2 className="text-primary"/>{t('userDetailManagement.erpWorkspace')}</CardTitle><CardDescription>{t('userDetailManagement.erpWorkspaceDescription')}</CardDescription></CardHeader>
+          <CardContent className="grid gap-4 sm:grid-cols-2">
+            <ProfileInfo label={t('userDetailManagement.username')} value={user?.username || '-'} icon={User}/>
+            <ProfileInfo label={t('userDetailManagement.branch')} value={branch?.name || '-'} icon={Building2}/>
+            <ProfileInfo label={t('userDetailManagement.role')} value={user?.role || '-'} icon={Briefcase}/>
+            <ProfileInfo label={t('userDetailManagement.email')} value={user?.email || '-'} icon={Mail}/>
           </CardContent>
         </Card>
-
-        <Card className="rounded-3xl border border-slate-300 dark:border-white/25 bg-white/40 dark:bg-[#1D1726] backdrop-blur-xl shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-lg font-black flex items-center gap-2">
-              <Activity size={20} className="text-orange-500" />
-              {t('userDetailManagement.fieldAndActivity')}
-            </CardTitle>
-            <CardDescription className="text-xs">{t('userDetailManagement.fieldAndActivityDesc')}</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-8 pt-4">
-            <div className="flex items-center justify-center py-6">
-              <div className="relative w-40 h-40 flex items-center justify-center">
-                <div className="absolute inset-0 rounded-full border-8 border-slate-300/30 dark:border-white/5" />
-                <div className="absolute inset-0 rounded-full border-8 border-orange-500 border-t-transparent -rotate-45 shadow-[0_0_15px_rgba(249,115,22,0.3)]" />
-                <div className="text-center">
-                  <div className="text-4xl font-black text-slate-800 dark:text-white">{kpis?.totalActivities || 0}</div>
-                  <div className="text-xs font-black uppercase text-muted-foreground tracking-tighter">{t('userDetailManagement.totalActivity')}</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4">
-              <div className="flex items-center justify-between p-4 rounded-2xl bg-orange-500/5 border border-orange-500/30 group hover:bg-orange-500/10 transition-colors">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-2xl bg-orange-500 text-white shadow-lg shadow-orange-500/20">
-                    <Zap size={20} />
-                  </div>
-                  <div>
-                    <div className="text-sm font-black text-slate-800 dark:text-white">{t('userDetailManagement.pendingActions')}</div>
-                    <div className="text-xs font-medium text-muted-foreground">{t('userDetailManagement.pendingActionsDesc')}</div>
-                  </div>
-                </div>
-                <div className="text-3xl font-black text-orange-600">{overview?.recommendedActions?.length || 0}</div>
-              </div>
-            </div>
+        <Card className="metivon-panel rounded-3xl border">
+          <CardHeader><CardTitle className="flex items-center gap-2"><ShieldCheck className="text-emerald-500"/>{t('userDetailManagement.accountSecurity')}</CardTitle><CardDescription>{t('userDetailManagement.accountSecurityDescription')}</CardDescription></CardHeader>
+          <CardContent className="space-y-3">
+            <StatusRow label={t('userDetailManagement.accountActive')} active={user!==null}/>
+            <StatusRow label={t('userDetailManagement.profileRecord')} active={Boolean(userDetail)}/>
+          </CardContent>
+        </Card>
+        <Card className="metivon-panel rounded-3xl border lg:col-span-3">
+          <CardHeader><CardTitle className="flex items-center gap-2"><CalendarClock className="text-primary"/>{t('userDetailManagement.accountTimeline')}</CardTitle></CardHeader>
+          <CardContent className="grid gap-4 sm:grid-cols-2">
+            <ProfileInfo label={t('userDetailManagement.createdAt')} value={userDetail?.createdDate?formatSystemDateTime(userDetail.createdDate):'-'} icon={FileText}/>
+            <ProfileInfo label={t('userDetailManagement.profileRecord')} value={userDetail?`#${userDetail.id}`:t('userDetailManagement.notCreated')} icon={CheckCircle}/>
           </CardContent>
         </Card>
       </div>
@@ -793,4 +622,11 @@ export function ProfilePage(): ReactElement {
       />
     </div>
   );
+}
+
+function ProfileInfo({label,value,icon:Icon}:{label:string;value:string;icon:React.ElementType}){
+  return <div className="rounded-2xl border bg-background/60 p-4"><div className="flex items-center gap-3"><span className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary"><Icon size={18}/></span><div className="min-w-0"><p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</p><p className="truncate font-semibold">{value}</p></div></div></div>;
+}
+function StatusRow({label,active}:{label:string;active:boolean}){
+  return <div className="flex items-center justify-between rounded-xl border p-3"><span className="text-sm font-medium">{label}</span><Badge className={active?'bg-emerald-500/15 text-emerald-700 hover:bg-emerald-500/15':'bg-amber-500/15 text-amber-700 hover:bg-amber-500/15'}>{active?'✓':'!'}</Badge></div>;
 }

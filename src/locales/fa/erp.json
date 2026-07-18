@@ -22,7 +22,12 @@
     "cancel": "انصراف",
     "saving": "در حال ذخیره...",
     "actions": "عملیات",
-    "menuSearch": "جستجو در منو..."
+    "menuSearch": "جستجو در منو...",
+    "edit": "ویرایش",
+    "delete": "حذف",
+    "deleteConfirmTitle": "تأیید حذف",
+    "deleteConfirmDescription": "آیا از حذف این رکورد مطمئن هستید؟ این عملیات قابل بازگشت نیست.",
+    "deleting": "در حال حذف..."
   },
   "nav": {
     "accountOperations": "عملیات حساب‌ها",
@@ -92,7 +97,8 @@
     "accountingParameters": "پارامترهای حسابداری و بهای تمام‌شده",
     "accountingDefinitions": "تعاریف حسابداری",
     "fiscalPeriods": "دوره‌های مالی",
-    "inventoryPostingProfiles": "پروفایل‌های ثبت حسابداری موجودی"
+    "inventoryPostingProfiles": "پروفایل‌های ثبت حسابداری موجودی",
+    "branches": "شعب"
   },
   "statuses": {
     "Draft": "پیش نویس",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "ویرایش سری شماره",
+    "update": "به‌روزرسانی سری شماره",
+    "deleteConfirm": "این سری شماره حذف شود؟"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "انتخاب ارز",
     "searchCurrency": "جستجوی ارزها..."
+  },
+  "branchManagement": {
+    "title": "مدیریت شعب",
+    "eyebrow": "سازمان",
+    "description": "شعب، فضای کاری پیش‌فرض و وضعیت فعالیت را مدیریت کنید.",
+    "new": "شعبه جدید",
+    "editTitle": "ویرایش شعبه",
+    "createTitle": "شعبه جدید",
+    "formDescription": "اطلاعات شعبه و نحوه استفاده آن در سیستم را تعیین کنید.",
+    "save": "ذخیره شعبه",
+    "saved": "شعبه ذخیره شد.",
+    "deleteConfirm": "این شعبه حذف شود؟ شعبه پیش‌فرض قابل حذف نیست.",
+    "fields": {
+      "code": "کد شعبه",
+      "name": "نام شعبه",
+      "isDefault": "شعبه پیش‌فرض",
+      "isActive": "فعال",
+      "createdAt": "تاریخ ایجاد",
+      "updatedAt": "تاریخ به‌روزرسانی"
+    },
+    "defaultHint": "در ورود و عملیات پیش‌فرض ابتدا انتخاب می‌شود.",
+    "activeHint": "شعب غیرفعال در عملیات جدید قابل انتخاب نیستند.",
+    "validation": {
+      "codeRequired": "کد شعبه الزامی است.",
+      "nameRequired": "نام شعبه الزامی است."
+    }
   }
 }

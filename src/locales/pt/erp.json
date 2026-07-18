@@ -22,7 +22,12 @@
     "cancel": "Cancelar",
     "saving": "A guardar...",
     "actions": "Ações",
-    "menuSearch": "Pesquisar no menu..."
+    "menuSearch": "Pesquisar no menu...",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "deleteConfirmTitle": "Confirmar exclusão",
+    "deleteConfirmDescription": "Tem certeza de que deseja excluir este registro? Esta ação não pode ser desfeita.",
+    "deleting": "Excluindo..."
   },
   "nav": {
     "accountOperations": "Operações de contas",
@@ -92,7 +97,8 @@
     "accountingParameters": "Parâmetros de contabilidade e custeio",
     "accountingDefinitions": "Definições contabilísticas",
     "fiscalPeriods": "Períodos fiscais",
-    "inventoryPostingProfiles": "Perfis de contabilização de inventário"
+    "inventoryPostingProfiles": "Perfis de contabilização de inventário",
+    "branches": "Filiais"
   },
   "statuses": {
     "Draft": "Rascunho",
@@ -707,7 +713,10 @@
       "Yearly": "Yearly",
       "Monthly": "Monthly",
       "Daily": "Daily"
-    }
+    },
+    "editTitle": "Editar série numérica",
+    "update": "Atualizar série numérica",
+    "deleteConfirm": "Excluir esta série numérica?"
   },
   "accountingDefinitions": {
     "saved": "Definition saved.",
@@ -797,5 +806,31 @@
     },
     "selectCurrency": "Selecionar moeda",
     "searchCurrency": "Pesquisar moedas..."
+  },
+  "branchManagement": {
+    "title": "Gestão de filiais",
+    "eyebrow": "Organização",
+    "description": "Gerencie filiais, área padrão e status ativo.",
+    "new": "Nova filial",
+    "editTitle": "Editar filial",
+    "createTitle": "Nova filial",
+    "formDescription": "Defina as informações e o uso da filial no sistema.",
+    "save": "Salvar filial",
+    "saved": "Filial salva.",
+    "deleteConfirm": "Excluir esta filial? A filial padrão não pode ser excluída.",
+    "fields": {
+      "code": "Código da filial",
+      "name": "Nome da filial",
+      "isDefault": "Filial padrão",
+      "isActive": "Ativa",
+      "createdAt": "Criada em",
+      "updatedAt": "Atualizada em"
+    },
+    "defaultHint": "Selecionada primeiro no login e nas operações padrão.",
+    "activeHint": "Filiais inativas não podem ser selecionadas em novas operações.",
+    "validation": {
+      "codeRequired": "O código da filial é obrigatório.",
+      "nameRequired": "O nome da filial é obrigatório."
+    }
   }
 }

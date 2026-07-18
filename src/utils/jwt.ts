@@ -26,7 +26,7 @@ export const decodeJwt = (token: string): JwtPayload | null => {
   }
 };
 
-export const getUserFromToken = (token: string): { id: number; email: string; name: string } | null => {
+export const getUserFromToken = (token: string): { id: number; email: string; name: string; username: string; role: string } | null => {
   const payload = decodeJwt(token);
   if (!payload) return null;
 
@@ -34,6 +34,8 @@ export const getUserFromToken = (token: string): { id: number; email: string; na
     id: parseInt(payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'], 10),
     email: payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'],
     name: `${payload.firstName} ${payload.lastName}`.trim() || payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'],
+    username: payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'],
+    role: payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'],
   };
 };
 

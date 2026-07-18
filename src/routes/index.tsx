@@ -166,6 +166,8 @@ const VisibilitySimulatorPage = lazyImport(() => import('@/features/access-contr
 const AuditLogsPage = lazyImport(() => import('@/features/access-control'), 'AuditLogsPage');
 const HangfireMonitoringPage = lazyImport(() => import('@/features/hangfire-monitoring'), 'HangfireMonitoringPage');
 const ProfilePage = lazyImport(() => import('@/features/user-detail-management'), 'ProfilePage');
+const BranchManagementPage = lazyImport(() => import('@/features/organization-management'), 'BranchManagementPage');
+const BranchFormPage = lazyImport(() => import('@/features/organization-management'), 'BranchFormPage');
 const GoogleConnectionPage = lazyImport(() => import('@/features/google-integration'), 'GoogleConnectionPage');
 const GoogleSyncPage = lazyImport(() => import('@/features/google-integration'), 'GoogleSyncPage');
 const GoogleLogsPage = lazyImport(() => import('@/features/google-integration'), 'GoogleLogsPage');
@@ -241,6 +243,9 @@ export function createAppRouter() {
         { path: 'user-discount-limit-management', element: <UserDiscountLimitManagementPage /> },
         { path: 'users/mail-settings', element: <MailSettingsPage /> },
         { path: 'settings/system-settings', element: <SystemSettingsPage /> },
+        { path: 'settings/branches', element: <BranchManagementPage /> },
+        { path: 'settings/branches/new', element: <BranchFormPage /> },
+        { path: 'settings/branches/:id/edit', element: <BranchFormPage /> },
         { path: 'product-pricing-group-by-management', element: <ProductPricingGroupByManagementPage /> },
         { path: 'product-pricing-management', element: <ProductPricingManagementPage /> },
         { path: 'activity-management', element: <ActivityManagementPage /> },
@@ -297,21 +302,27 @@ export function createAppRouter() {
         { path: 'shipments/parameters', element: <ShippingParametersPage /> },
         { path: 'purchase-orders/number-series', element: <NumberSeriesManagementPage /> },
         { path: 'purchase-orders/number-series/new', element: <NumberSeriesCreatePage /> },
+        { path: 'purchase-orders/number-series/:id/edit', element: <NumberSeriesCreatePage /> },
         { path: 'purchase-orders/number-series/usages', element: <NumberSeriesUsagePage /> },
         { path: 'goods-receipts/number-series', element: <NumberSeriesManagementPage /> },
         { path: 'goods-receipts/number-series/new', element: <NumberSeriesCreatePage /> },
+        { path: 'goods-receipts/number-series/:id/edit', element: <NumberSeriesCreatePage /> },
         { path: 'goods-receipts/number-series/usages', element: <NumberSeriesUsagePage /> },
         { path: 'transfer-orders/number-series', element: <NumberSeriesManagementPage /> },
         { path: 'transfer-orders/number-series/new', element: <NumberSeriesCreatePage /> },
+        { path: 'transfer-orders/number-series/:id/edit', element: <NumberSeriesCreatePage /> },
         { path: 'transfer-orders/number-series/usages', element: <NumberSeriesUsagePage /> },
         { path: 'sales-orders/number-series', element: <NumberSeriesManagementPage /> },
         { path: 'sales-orders/number-series/new', element: <NumberSeriesCreatePage /> },
+        { path: 'sales-orders/number-series/:id/edit', element: <NumberSeriesCreatePage /> },
         { path: 'sales-orders/number-series/usages', element: <NumberSeriesUsagePage /> },
         { path: 'shipments/number-series', element: <NumberSeriesManagementPage /> },
         { path: 'shipments/number-series/new', element: <NumberSeriesCreatePage /> },
+        { path: 'shipments/number-series/:id/edit', element: <NumberSeriesCreatePage /> },
         { path: 'shipments/number-series/usages', element: <NumberSeriesUsagePage /> },
         { path: 'e-documents/number-series', element: <NumberSeriesManagementPage /> },
         { path: 'e-documents/number-series/new', element: <NumberSeriesCreatePage /> },
+        { path: 'e-documents/number-series/:id/edit', element: <NumberSeriesCreatePage /> },
         { path: 'e-documents/number-series/usages', element: <NumberSeriesUsagePage /> },
         { path: 'inventory-counts', element: <InventoryCountManagementPage /> },
         { path: 'inventory-counts/parameters', element: <InventoryCountParametersPage /> },
