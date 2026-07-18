@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'Node24'
+    }
+
+    environment {
+        DEPLOY_PATH = 'C:\\inetpub\\wwwroot\\metivon-ui'
+    }
+
+    stages {
+        stage('Kodu Al') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/cannasif/verii_metivon_web.git'
+            }
+        }
+
+        stage('Paketleri Kur') {
+            steps {
+                bat 'npm ci'
+            }
+        }
+
+        stage('Build Al (Vite)') {
+            steps {
+                bat 'npm run build'
+            }
+        }
+
+        stage('IIS Deploy') {
+            steps {
+                bat '''
+                if not exist dist/index.html (
+                    echo Build ciktisi bulunamadi: dist/index.html
+                    exit /b 1
+                )
+
+                if exist "%DEPLOY_PATH%" (
+                    rmdir /S /Q "%DEPLOY_PATH%"
+                )
+
+                mkdir "%DEPLOY_PATH%"
+                xcopy dist "%DEPLOY_PATH%" /E /I /Y /Q
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Metivon UI basariyla build edilip IIS uzerine yayinlandi.'
+        }
+        failure {
+            echo 'Metivon UI pipeline basarisiz oldu. Jenkins loglarini kontrol edin.'
+        }
+    }
+}

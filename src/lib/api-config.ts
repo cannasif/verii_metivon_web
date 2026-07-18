@@ -1,4 +1,4 @@
-export const DEFAULT_API_BASE_URL = 'https://crmapi.v3rii.com';
+export const DEFAULT_API_BASE_URL = 'https://metivonapi.v3rii.com';
 const RUNTIME_CONFIG_FILE_NAME = 'runtime-settings.json';
 const RUNTIME_CONFIG_CACHE_KEY = 'runtime-config-cache';
 
