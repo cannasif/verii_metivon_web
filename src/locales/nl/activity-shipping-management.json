@@ -1,0 +1,82 @@
+{
+  "menu": "Verzendbeheer",
+  "description": "Beheer en bewerk verzenddefinities",
+  "addButton": "Nieuwe verzending toevoegen",
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "actions": "Acties",
+  "edit": "Bewerken",
+  "deleteButton": "Verwijderen",
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opslaan...",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "advancedFilter": {
+    "columnName": "Verzendnaam",
+    "columnDescription": "Beschrijving",
+    "columnCreatedBy": "Gemaakt door"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Nieuwe verzending toevoegen",
+      "editTitle": "Verzending bewerken",
+      "addDescription": "Voer nieuwe verzendgegevens in",
+      "editDescription": "Verzendgegevens bewerken",
+      "name": "Verzendnaam",
+      "namePlaceholder": "Voer de verzendnaam in",
+      "nameRequired": "Verzendnaam is vereist",
+      "nameMaxLength": "De verzendnaam mag maximaal 100 tekens lang zijn",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Beschrijving invoeren (optioneel)",
+      "descriptionMaxLength": "De beschrijving mag maximaal 500 tekens bevatten"
+    },
+    "table": {
+      "title": "Verzendlijst",
+      "id": "Identiteitskaart",
+      "name": "Verzendnaam",
+      "description": "Beschrijving",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+      "page": "Pagina {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Totale verzendgegevens",
+      "activeActivityTypes": "Actieve verzendgegevens",
+      "newThisMonth": "Nieuw deze maand"
+    },
+    "messages": {
+      "createSuccess": "Verzending is succesvol aangemaakt",
+      "createError": "Kan verzending niet aanmaken",
+      "updateSuccess": "Verzending succesvol bijgewerkt",
+      "updateError": "Kan de verzending niet updaten",
+      "deleteSuccess": "Verzending succesvol verwijderd",
+      "deleteError": "Kan de verzending niet verwijderen"
+    },
+    "error": "Er is een fout opgetreden",
+    "create": "Nieuwe verzending toevoegen",
+    "loading": "Laden...",
+    "noData": "Geen gegevens gevonden",
+    "actions": "Acties",
+    "cancel": "Annuleer",
+    "save": "Opslaan",
+    "saving": "Opslaan..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Verzending verwijderen",
+    "confirmMessage": "Weet u zeker dat u {{name}} wilt verwijderen?"
+  },
+  "messages": {
+    "deleteSuccess": "Verzending succesvol verwijderd",
+    "deleteError": "Kan de verzending niet verwijderen"
+  },
+  "table": {
+    "title": "Verzendlijst",
+    "id": "Identiteitskaart",
+    "name": "Verzendnaam",
+    "description": "Beschrijving",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door"
+  }
+}

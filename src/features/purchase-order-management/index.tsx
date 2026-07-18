@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{purchaseConfig}from'@/features/erp-operation-management/configs';export function PurchaseOrderManagementPage(){return <ErpPagedManagementPage config={purchaseConfig}/>}

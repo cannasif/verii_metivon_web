@@ -1,0 +1,44 @@
+{
+  "menu": "Gerenciamento de correspondência de representante de vendas",
+  "description": "Visualize, adicione e exclua códigos de representantes de vendas e correspondências de usuários.",
+  "addButton": "Nova partida",
+  "searchPlaceholder": "Pesquise o código, usuário ou e-mail do representante de vendas",
+  "empty": "Nenhuma correspondência de representante de vendas encontrada.",
+  "error": "Não foi possível carregar as correspondências do representante de vendas.",
+  "deleteConfirmMessage": "Excluir o emparelhamento {{salesRep}} e {{user}}?",
+  "table": {
+    "title": "Lista de correspondência do representante de vendas",
+    "salesRepCode": "Código do representante de vendas",
+    "salesRepName": "Nome do representante de vendas",
+    "userFullName": "Usuário",
+    "username": "Nome de usuário",
+    "userEmail": "E-mail",
+    "createdDate": "Data de criação"
+  },
+  "form": {
+    "addTitle": "Nova correspondência de representante de vendas",
+    "addDescription": "Combine um registro de representante de vendas com o usuário.",
+    "salesRep": "Representante de vendas",
+    "salesRepPlaceholder": "Selecione o representante de vendas",
+    "salesRepSearchPlaceholder": "Procure um representante de vendas",
+    "user": "Usuário",
+    "userPlaceholder": "Selecione o usuário",
+    "userSearchPlaceholder": "Pesquisar usuários",
+    "validation": {
+      "salesRepRequired": "A seleção do representante de vendas é obrigatória.",
+      "userRequired": "A seleção do usuário é obrigatória."
+    }
+  },
+  "messages": {
+    "createSuccess": "Correspondência de representante de vendas criada.",
+    "createError": "Não foi possível criar correspondência de representante de vendas.",
+    "deleteSuccess": "A correspondência do representante de vendas foi excluída.",
+    "deleteError": "A correspondência do representante de vendas não pôde ser excluída."
+  },
+  "advancedFilter": {
+    "columnSalesRepCode": "Código do representante de vendas",
+    "columnSalesRepName": "Nome do representante de vendas",
+    "columnUsername": "Nome de usuário",
+    "columnEmail": "E-mail"
+  }
+}

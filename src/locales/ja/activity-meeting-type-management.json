@@ -1,0 +1,82 @@
+{
+  "menu": "会議の管理",
+  "description": "会議定義の管理と編集",
+  "addButton": "新しい会議を追加",
+  "loading": "読み込み中...",
+  "noData": "データなし",
+  "actions": "アクション",
+  "edit": "編集",
+  "deleteButton": "削除",
+  "cancel": "キャンセル",
+  "save": "保存",
+  "saving": "保存中...",
+  "previous": "前へ",
+  "next": "次へ",
+  "advancedFilter": {
+    "columnName": "会議名",
+    "columnDescription": "説明",
+    "columnCreatedBy": "作成者"
+  },
+  "activityType": {
+    "create": "新しい会議を追加",
+    "loading": "読み込み中...",
+    "noData": "データなし",
+    "actions": "アクション",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "saving": "保存中...",
+    "error": "エラーが発生しました",
+    "form": {
+      "addTitle": "新しい会議を追加",
+      "editTitle": "会議の編集",
+      "addDescription": "新しい会議情報を入力します",
+      "editDescription": "会議情報を編集する",
+      "name": "会議名",
+      "namePlaceholder": "会議名を入力してください",
+      "nameRequired": "会議名は必須です",
+      "nameMaxLength": "会議名は最大 100 文字まで入力できます",
+      "description": "説明",
+      "descriptionPlaceholder": "説明を入力します (オプション)",
+      "descriptionMaxLength": "説明は最大 500 文字まで可能です"
+    },
+    "table": {
+      "title": "ミーティングリスト",
+      "id": "ID",
+      "name": "会議名",
+      "description": "説明",
+      "createdDate": "作成日",
+      "createdBy": "作成者",
+      "showing": "{{from}}-{{to}} / {{total}} を表示中",
+      "page": "ページ {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "会議の合計数",
+      "activeActivityTypes": "アクティブな会議",
+      "newThisMonth": "今月の新商品"
+    },
+    "messages": {
+      "createSuccess": "会議が正常に作成されました",
+      "createError": "会議の作成に失敗しました",
+      "updateSuccess": "会議が正常に更新されました",
+      "updateError": "会議を更新できませんでした",
+      "deleteSuccess": "会議は正常に削除されました",
+      "deleteError": "会議の削除に失敗しました"
+    }
+  },
+  "deleteConfirm": {
+    "confirmTitle": "会議の削除",
+    "confirmMessage": "{{name}} を削除してもよろしいですか?"
+  },
+  "messages": {
+    "deleteSuccess": "会議は正常に削除されました",
+    "deleteError": "会議の削除に失敗しました"
+  },
+  "table": {
+    "title": "ミーティングリスト",
+    "id": "ID",
+    "name": "会議名",
+    "description": "説明",
+    "createdDate": "作成日",
+    "createdBy": "作成者"
+  }
+}

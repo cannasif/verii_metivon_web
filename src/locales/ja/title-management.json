@@ -1,0 +1,65 @@
+{
+  "loading": "読み込み中...",
+  "noData": "データが見つかりませんでした",
+  "error": "エラーが発生しました",
+  "search": "検索...",
+  "refresh": "リフレッシュ",
+  "previous": "前へ",
+  "next": "次へ",
+  "advancedFilter": {
+    "columnTitleName": "タイトル名",
+    "columnCode": "コード"
+  },
+  "cancel": "キャンセル",
+  "save": "保存",
+  "saving": "録音中...",
+  "delete": {
+    "confirmTitle": "タイトルの削除",
+    "confirmMessage": "タイトル {{titleName}} を削除してもよろしいですか?",
+    "button": "削除"
+  },
+  "deleting": "削除中...",
+  "actions": "取引",
+  "edit": "編集",
+  "header": {
+    "title": "タイトル管理",
+    "description": "ここでタイトル定義を管理できます。"
+  },
+  "table": {
+    "title": "タイトル一覧",
+    "id": "ID",
+    "name": "タイトル名",
+    "code": "コード",
+    "createdDate": "作成日",
+    "createdBy": "ユーザーによって作成されました",
+    "showing": "{{from}}-{{to}} / {{total}} を表示中",
+    "page": "ページ {{current}} / {{total}}"
+  },
+  "form": {
+    "addTitle": "新しいタイトルを追加",
+    "editTitle": "タイトルの編集",
+    "addDescription": "新しいタイトル情報を入力してください",
+    "editDescription": "タイトル情報の編集",
+    "titleName": "タイトル名",
+    "titleNamePlaceholder": "タイトル名を入力してください",
+    "titleCode": "タイトルコード",
+    "codePlaceholder": "コードを入力してください (オプション)",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "saving": "録音中..."
+  },
+  "menu": "タイトル管理",
+  "stats": {
+    "totalTitles": "総タイトル",
+    "activeTitles": "アクティブなタイトル",
+    "newThisMonth": "今月の新商品"
+  },
+  "description": "タイトルの管理と編集",
+  "addButton": "新しいタイトルを追加",
+  "showStats": "統計を表示する",
+  "hideStats": "統計を非表示にする",
+  "messages": {
+    "deleteSuccess": "タイトルが正常に削除されました",
+    "deleteError": "タイトルを削除できませんでした"
+  }
+}

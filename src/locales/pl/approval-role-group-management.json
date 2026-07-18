@@ -1,0 +1,62 @@
+{
+  "menu": "Zarządzanie grupą ról zatwierdzających",
+  "description": "Zarządzaj i organizuj grupy ról zatwierdzających",
+  "addButton": "Dodaj nową grupę",
+  "refresh": "Odśwież",
+  "searchPlaceholder": "Szukaj...",
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "noDataDescription": "Nie znaleziono żadnych rekordów spełniających kryteria wyszukiwania lub nie dodano jeszcze żadnych rekordów.",
+  "table": {
+    "id": "Identyfikator",
+    "name": "Nazwa grupy",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez",
+    "actions": "Działania",
+    "showing": "Wyświetlanie rekordów {{from}}-{{to}} z {{total}}"
+  },
+  "delete": {
+    "confirmTitle": "Usuń potwierdzenie",
+    "confirmMessage": "Tej akcji nie można cofnąć. Czy chcesz kontynuować?"
+  },
+  "advancedFilter": {
+    "columnName": "Nazwa grupy",
+    "columnCreatedBy": "Stworzony przez"
+  },
+  "approvalRoleGroup": {
+    "menu": "Zarządzanie grupą ról zatwierdzających",
+    "description": "Zarządzaj i organizuj grupy ról zatwierdzających",
+    "addButton": "Dodaj nową grupę",
+    "searchPlaceholder": "Szukaj...",
+    "noData": "Nie znaleziono danych",
+    "table": {
+      "title": "Lista grup",
+      "id": "Identyfikator",
+      "name": "Nazwa grupy",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "actions": "Działania",
+      "showing": "Wyświetlanie rekordów {{from}}-{{to}} z {{total}}"
+    },
+    "delete": {
+      "title": "Usuń potwierdzenie",
+      "confirmMessage": "Czy na pewno chcesz usunąć {{name}}?",
+      "success": "Grupa została pomyślnie usunięta",
+      "error": "Błąd podczas usuwania grupy"
+    }
+  },
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Zapisywanie...",
+  "deleteButton": "Usuń",
+  "form": {
+    "editTitle": "Edytuj grupę ról zatwierdzania",
+    "addTitle": "Dodaj nową grupę ról zatwierdzania",
+    "editDescription": "Edytuj informacje o grupie ról zatwierdzania",
+    "addDescription": "Wprowadź nowe informacje o grupie ról zatwierdzania",
+    "name": "Nazwa grupy",
+    "namePlaceholder": "Wprowadź nazwę grupy",
+    "nameRequired": "Nazwa grupy jest wymagana",
+    "nameMaxLength": "Nazwa grupy może mieć maksymalnie 100 znaków"
+  }
+}

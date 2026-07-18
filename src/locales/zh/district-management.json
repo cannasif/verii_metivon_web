@@ -1,0 +1,138 @@
+{
+  "menu": "区行政",
+  "description": "管理和组织地区",
+  "addButton": "添加新区",
+  "showStats": "显示统计数据",
+  "hideStats": "隐藏统计数据",
+  "listTitle": "地区列表",
+  "listDescription": "您可以在这里管理系统中所有已注册的地区。",
+  "loading": "加载中...",
+  "noData": "没有找到数据",
+  "actions": "交易",
+  "previous": "上一页",
+  "next": "下一步",
+  "cancel": "取消",
+  "delete": {
+    "confirmTitle": "删除区",
+    "confirmMessage": "您确定要删除分区 {{name}} 吗？",
+    "success": "分区成功删除",
+    "error": "分区无法删除",
+    "deleting": "正在删除...",
+    "action": "删除"
+  },
+  "save": "保存",
+  "saving": "录音...",
+  "countryManagement": {
+    "error": "发生错误"
+  },
+  "table": {
+    "id": "身份证号",
+    "name": "地区名称",
+    "erpCode": "ERP代码",
+    "postalCode": "邮政编码",
+    "city": "城市",
+    "cityName": "城市名称",
+    "status": "状态",
+    "title": "地区列表",
+    "createdDate": "创建日期",
+    "createdBy": "创建者：",
+    "showing": "显示 {{from}}-{{to}} / {{total}}",
+    "page": "页 {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "编辑区",
+    "addDistrict": "添加新区",
+    "editDescription": "编辑地区信息",
+    "addDescription": "输入新区信息",
+    "name": "地区名称",
+    "namePlaceholder": "输入地区名称",
+    "city": "城市",
+    "selectCity": "选择城市",
+    "searchCity": "搜索城市...",
+    "erpCode": "ERP代码",
+    "erpCodePlaceholder": "输入 ERP 代码（可选）",
+    "postalCode": "邮政编码",
+    "postalCodePlaceholder": "输入邮政编码（可选）",
+    "nameRequired": "地区名称为必填项",
+    "nameMaxLength": "地区名称最多可包含 100 个字符",
+    "erpCodeMaxLength": "ERP 代码最多可为 10 个字符",
+    "postalCodeMaxLength": "邮政编码最多可包含 20 个字符",
+    "cityRequired": "城市选择是强制性的"
+  },
+  "stats": {
+    "totalDistricts": "总区数",
+    "activeDistricts": "活跃区",
+    "newThisMonth": "本月新品"
+  },
+  "status": {
+    "inactive": "被动",
+    "active": "活跃的"
+  },
+  "messages": {
+    "createSuccess": "区创建成功",
+    "createError": "无法创建区",
+    "updateSuccess": "区更新成功",
+    "updateError": "地区无法更新",
+    "deleteSuccess": "分区成功删除",
+    "deleteError": "分区无法删除"
+  },
+  "districtManagement": {
+    "menu": "区行政",
+    "description": "管理和组织地区",
+    "addButton": "添加新区",
+    "loading": "加载中...",
+    "noData": "没有找到数据",
+    "table": {
+      "id": "身份证号",
+      "name": "地区名称",
+      "erpCode": "ERP代码",
+      "postalCode": "邮政编码",
+      "city": "城市",
+      "cityName": "城市名称",
+      "status": "状态",
+      "title": "地区列表"
+    },
+    "delete": {
+      "confirmTitle": "删除区",
+      "confirmMessage": "您确定要删除分区 {{name}} 吗？",
+      "success": "分区成功删除",
+      "error": "删除地区时出错"
+    },
+    "messages": {
+      "createSuccess": "区创建成功",
+      "createError": "无法创建区",
+      "updateSuccess": "区更新成功",
+      "updateError": "地区无法更新"
+    },
+    "stats": {
+      "totalDistricts": "总区数",
+      "activeDistricts": "活跃区",
+      "newThisMonth": "本月新品"
+    },
+    "status": {
+      "inactive": "被动",
+      "active": "活跃的"
+    },
+    "error": "发生错误",
+    "form": {
+      "editDistrict": "编辑区",
+      "addDistrict": "添加新区",
+      "editDescription": "编辑地区信息",
+      "addDescription": "输入新区信息",
+      "name": "地区名称",
+      "namePlaceholder": "输入地区名称",
+      "city": "城市",
+      "selectCity": "选择城市",
+      "searchCity": "搜索城市...",
+      "erpCode": "ERP代码",
+      "erpCodePlaceholder": "输入 ERP 代码（可选）",
+      "postalCode": "邮政编码",
+      "postalCodePlaceholder": "输入邮政编码（可选）",
+      "nameRequired": "地区名称为必填项",
+      "nameMaxLength": "地区名称最多可包含 100 个字符",
+      "erpCodeMaxLength": "ERP 代码最多可为 10 个字符",
+      "postalCodeMaxLength": "邮政编码最多可包含 20 个字符",
+      "cityRequired": "城市选择是强制性的"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "menu": "地区行政",
+  "description": "地区の管理と組織",
+  "addButton": "新しい地区を追加",
+  "showStats": "統計を表示する",
+  "hideStats": "統計を非表示にする",
+  "listTitle": "地区リスト",
+  "listDescription": "ここで、システム内のすべての登録地区を管理できます。",
+  "loading": "読み込み中...",
+  "noData": "データが見つかりませんでした",
+  "actions": "取引",
+  "previous": "前へ",
+  "next": "次へ",
+  "cancel": "キャンセル",
+  "delete": {
+    "confirmTitle": "地区の削除",
+    "confirmMessage": "地区 {{name}} を削除してもよろしいですか?",
+    "success": "地区が正常に削除されました",
+    "error": "地区を削除できませんでした",
+    "deleting": "削除中...",
+    "action": "削除"
+  },
+  "save": "保存",
+  "saving": "録音中...",
+  "countryManagement": {
+    "error": "エラーが発生しました"
+  },
+  "table": {
+    "id": "ID",
+    "name": "地区名",
+    "erpCode": "ERPコード",
+    "postalCode": "郵便番号",
+    "city": "市",
+    "cityName": "都市名",
+    "status": "ステータス",
+    "title": "地区リスト",
+    "createdDate": "作成日",
+    "createdBy": "作成者",
+    "showing": "{{from}}-{{to}} / {{total}} を表示中",
+    "page": "ページ {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "地区を編集する",
+    "addDistrict": "新しい地区を追加",
+    "editDescription": "地区情報を編集する",
+    "addDescription": "新しい地区情報を入力してください",
+    "name": "地区名",
+    "namePlaceholder": "地区名を入力してください",
+    "city": "市",
+    "selectCity": "都市を選択してください",
+    "searchCity": "都市を検索...",
+    "erpCode": "ERPコード",
+    "erpCodePlaceholder": "ERPコードを入力してください(オプション)",
+    "postalCode": "郵便番号",
+    "postalCodePlaceholder": "郵便番号を入力してください (オプション)",
+    "nameRequired": "地区名は必須です",
+    "nameMaxLength": "地区名は最大 100 文字まで入力できます",
+    "erpCodeMaxLength": "ERP コードは最大 10 文字です。",
+    "postalCodeMaxLength": "郵便番号は最大 20 文字まで入力できます",
+    "cityRequired": "都市の選択は必須です"
+  },
+  "stats": {
+    "totalDistricts": "総地区",
+    "activeDistricts": "アクティブな地区",
+    "newThisMonth": "今月の新商品"
+  },
+  "status": {
+    "inactive": "受動的な",
+    "active": "アクティブな"
+  },
+  "messages": {
+    "createSuccess": "地区が正常に作成されました",
+    "createError": "地区を作成できませんでした",
+    "updateSuccess": "地区が正常に更新されました",
+    "updateError": "地区を更新できませんでした",
+    "deleteSuccess": "地区が正常に削除されました",
+    "deleteError": "地区を削除できませんでした"
+  },
+  "districtManagement": {
+    "menu": "地区行政",
+    "description": "地区の管理と組織",
+    "addButton": "新しい地区を追加",
+    "loading": "読み込み中...",
+    "noData": "データが見つかりませんでした",
+    "table": {
+      "id": "ID",
+      "name": "地区名",
+      "erpCode": "ERPコード",
+      "postalCode": "郵便番号",
+      "city": "市",
+      "cityName": "都市名",
+      "status": "ステータス",
+      "title": "地区リスト"
+    },
+    "delete": {
+      "confirmTitle": "地区の削除",
+      "confirmMessage": "地区 {{name}} を削除してもよろしいですか?",
+      "success": "地区が正常に削除されました",
+      "error": "地区の削除中にエラーが発生しました"
+    },
+    "messages": {
+      "createSuccess": "地区が正常に作成されました",
+      "createError": "地区を作成できませんでした",
+      "updateSuccess": "地区が正常に更新されました",
+      "updateError": "地区を更新できませんでした"
+    },
+    "stats": {
+      "totalDistricts": "総地区",
+      "activeDistricts": "アクティブな地区",
+      "newThisMonth": "今月の新商品"
+    },
+    "status": {
+      "inactive": "受動的な",
+      "active": "アクティブな"
+    },
+    "error": "エラーが発生しました",
+    "form": {
+      "editDistrict": "地区を編集する",
+      "addDistrict": "新しい地区を追加",
+      "editDescription": "地区情報を編集する",
+      "addDescription": "新しい地区情報を入力してください",
+      "name": "地区名",
+      "namePlaceholder": "地区名を入力してください",
+      "city": "市",
+      "selectCity": "都市を選択してください",
+      "searchCity": "都市を検索...",
+      "erpCode": "ERPコード",
+      "erpCodePlaceholder": "ERPコードを入力してください(オプション)",
+      "postalCode": "郵便番号",
+      "postalCodePlaceholder": "郵便番号を入力してください (オプション)",
+      "nameRequired": "地区名は必須です",
+      "nameMaxLength": "地区名は最大 100 文字まで入力できます",
+      "erpCodeMaxLength": "ERP コードは最大 10 文字です。",
+      "postalCodeMaxLength": "郵便番号は最大 20 文字まで入力できます",
+      "cityRequired": "都市の選択は必須です"
+    }
+  }
+}

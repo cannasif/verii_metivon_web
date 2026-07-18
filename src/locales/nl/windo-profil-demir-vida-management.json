@@ -1,0 +1,75 @@
+{
+  "page": {
+    "title": "Windoform-definities",
+    "description": "Beheer profiel-, ijzer-, schroef- en drukrecords in een tabelstructuur met pagina's die compatibel is met projectbrede beheerpagina's.",
+    "documentTitle": "Windoform-definities"
+  },
+  "sections": {
+    "profil": {
+      "title": "Profiel definiëren",
+      "description": "Beheer de te selecteren profieldefinities op rijbasis."
+    },
+    "demir": {
+      "title": "Identificeer ijzer",
+      "description": "Beheer de te selecteren ijzerdefinities op rijbasis."
+    },
+    "vida": {
+      "title": "Identificeer de schroef",
+      "description": "Beheer de te selecteren schroefdefinities op rijbasis."
+    },
+    "baski": {
+      "title": "Definieer afdrukken",
+      "description": "Beheer afdrukdefinities die op rijbasis moeten worden geselecteerd."
+    },
+    "koliBaski": {
+      "title": "Definieer het afdrukken van dozen",
+      "description": "Beheer de definities voor het afdrukken van dozen die in de aanbiedingskop worden geselecteerd en naar het veld Netsis-koptekstbeschrijving worden verzonden."
+    }
+  },
+  "table": {
+    "id": "Identiteitskaart",
+    "name": "Naam",
+    "profilName": "Profiel",
+    "createdDate": "Creatie",
+    "updatedDate": "Bijgewerkt",
+    "newRecord": "Nieuwe registratie",
+    "searchPlaceholder": "Zoek naar definitie...",
+    "refresh": "Vernieuwen",
+    "loading": "Definities worden geladen...",
+    "empty": "Geen record gevonden.",
+    "actions": "transactie",
+    "previous": "Vorige",
+    "next": "Volgende",
+    "pagination": "Totaal {{total}} uit record met {{from}}-{{to}}",
+    "filterName": "Naam",
+    "dateDash": "-"
+  },
+  "dialog": {
+    "addNewProfile": "Nieuw profiel toevoegen",
+    "addNewRebar": "Voeg nieuw ijzer toe",
+    "addNewScrew": "nieuwe schroef toevoegen",
+    "addNewPrint": "Nieuwe editie toevoegen",
+    "addNewKoliBaski": "Voeg nieuwe doosbedrukking toe",
+    "editTitle": "Update {{section}}",
+    "addTitle": "Voeg {{section}} toe",
+    "nameLabel": "Naam",
+    "profilLabel": "Verbonden profiel",
+    "profilPlaceholder": "Selecteer profiel",
+    "profilSearchPlaceholder": "Zoek profiel",
+    "cancel": "Annuleer",
+    "save": "Opslaan",
+    "demirNameLabel": "ijzeren naam",
+    "demirNamePlaceholder": "Gebonden ijzeren naam",
+    "vidaNameLabel": "schroef naam",
+    "vidaNamePlaceholder": "Naam van verbonden schroef"
+  },
+  "validation": {
+    "nameRequired": "Naamveld is verplicht",
+    "profilRequired": "Profielselectie is verplicht"
+  },
+  "toasts": {
+    "created": "Record {{section}} gemaakt",
+    "updated": "Bijgewerkt record {{section}}",
+    "deleted": "{{section}}-record verwijderd"
+  }
+}

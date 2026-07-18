@@ -1,0 +1,16 @@
+{
+  "invalidId": "گزارش نامعتبر",
+  "backToList": "بازگشت به فهرست",
+  "loadError": "گزارش بارگیری نشد",
+  "loadingReport": "گزارش در حال بارگیری...",
+  "listTitle": "گزارش های PowerBI",
+  "listDescription": "با کلیک کردن می توانید گزارش ها را مشاهده کنید",
+  "name": "نام",
+  "description": "توضیحات",
+  "isActive": "وضعیت",
+  "view": "مشاهده کنید",
+  "status": {
+    "active": "فعال",
+    "inactive": "منفعل"
+  }
+}

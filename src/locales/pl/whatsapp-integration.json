@@ -1,0 +1,148 @@
+{
+  "page": {
+    "connectionTitle": "Integracja z WhatsApp",
+    "connectionDescription": "Meta Zarządzaj ustawieniami WhatsApp Cloud API, sprawdzaj połączenie webhooka i wysyłaj wiadomość testową."
+  },
+  "settings": {
+    "title": "Ustawienia połączenia",
+    "configured": "Gotowy",
+    "notConfigured": "brak",
+    "enabled": "Korzystaj aktywnie z integracji",
+    "enabledDescription": "Gdy są aktywne, webhook i przesłane testy korzystają z tych ustawień.",
+    "displayName": "Nazwa wyświetlana",
+    "graphApiVersion": "Wersja API wykresu",
+    "phoneNumberId": "Identyfikator numeru telefonu",
+    "businessAccountId": "Identyfikator konta firmowego",
+    "verifyToken": "Webhook zweryfikuj token",
+    "accessToken": "Token dostępu",
+    "appSecret": "Sekret aplikacji",
+    "keepCurrent": "Aktualna wartość zostanie utrzymana",
+    "save": "Zapisz ustawienia",
+    "saveSuccess": "Ustawienia WhatsApp zostały zapisane.",
+    "saveError": "Nie można zapisać ustawień WhatsApp."
+  },
+  "webhook": {
+    "title": "webhook",
+    "url": "Adres URL meta webhooka",
+    "lastInbound": "najnowszy webhook",
+    "lastOutbound": "Ostatnia wiadomość wychodząca"
+  },
+  "test": {
+    "title": "Wiadomość testowa",
+    "phone": "telefon",
+    "message": "Wiadomość",
+    "defaultMessage": "Wiadomość testowa WhatsApp V3RII CRM.",
+    "send": "Prześlij test",
+    "sendSuccess": "Wiadomość testowa WhatsApp została wysłana.",
+    "sendError": "Nie można wysłać wiadomości testowej WhatsApp."
+  },
+  "logs": {
+    "title": "Dzienniki WhatsAppa",
+    "description": "Monitoruj webhook, wiadomość testową i nagrania przepływu przyszłych ofert.",
+    "tableTitle": "Zapisy transakcji",
+    "searchPlaceholder": "Telefon, wiadomość lub rozmowa transakcyjna...",
+    "errorsOnly": "Tylko błędy",
+    "directionAll": "Wszystkie kierunki",
+    "inbound": "przychodzące",
+    "outbound": "wychodzący",
+    "success": "udany",
+    "error": "Błąd",
+    "empty": "Nie znaleziono rekordu.",
+    "total": "Rejestr {{count}}",
+    "columns": {
+      "date": "data",
+      "direction": "Kierunek",
+      "operation": "transakcja",
+      "phone": "telefon",
+      "message": "Wiadomość",
+      "status": "Stan"
+    }
+  },
+  "drafts": {
+    "title": "Wersje robocze ofert WhatsApp",
+    "description": "Monitoruj wózki utworzone przez klienta za pośrednictwem WhatsApp w celu kontroli agenta.",
+    "tableTitle": "Kolejka kontroli agentów",
+    "searchPlaceholder": "Zadzwoń, klient lub wiadomość...",
+    "empty": "Nie znaleziono wersji roboczej.",
+    "total": "Wersja robocza {{count}}",
+    "customerMessage": "Wiadomość klienta",
+    "mainLine": "Główny produkt",
+    "relatedLine": "produkt powiązany",
+    "status": {
+      "WaitingRepresentativeReview": "Pod kontrolą agenta"
+    },
+    "columns": {
+      "createdDate": "data",
+      "phone": "telefon",
+      "customer": "klient",
+      "status": "Stan",
+      "lineCount": "ołówek",
+      "grandTotal": "Wielka suma"
+    },
+    "lineColumns": {
+      "code": "Kod",
+      "name": "Zapas",
+      "quantity": "Ilość",
+      "unitPrice": "Cena jednostkowa",
+      "total": "Razem",
+      "type": "Wpisz"
+    },
+    "actions": {
+      "title": "Reprezentatywny proces przetargowy",
+      "description": "Przekształć wersję roboczą w propozycję CRM i w razie potrzeby wyślij ją do klienta za pośrednictwem WhatsApp jako plik PDF.",
+      "representativeId": "Identyfikator przedstawiciela",
+      "customer": "klient",
+      "selectCustomer": "wybierz klienta",
+      "paymentType": "Rodzaj płatności",
+      "selectPaymentType": "Wybierz rodzaj płatności",
+      "documentSerial": "Typ seryjny dokumentu",
+      "selectDocumentSerial": "Wybierz typ serii dokumentów",
+      "offerType": "Typ oferty",
+      "domestic": "domowe",
+      "foreign": "za granicą",
+      "currency": "waluta",
+      "offerDate": "Data oferty",
+      "deliveryDate": "data dostawy",
+      "descriptionField": "opis wewnętrzny",
+      "customerMessageField": "Wiadomość do klienta",
+      "sendAfterConvert": "Wyślij WhatsApp po wybraniu numeru",
+      "attachPdf": "dodaj PDF",
+      "convertAndSend": "Konwertuj na ofertę i wyślij",
+      "sendAgain": "Wyślij ponownie do WhatsApp",
+      "createdQuotation": "Oferta #{{id}}",
+      "loading": "Ładowanie...",
+      "convertSuccess": "Wersja robocza WhatsApp została uwzględniona w przepływie propozycji.",
+      "convertError": "Projektu WhatsApp nie można przekształcić w propozycję.",
+      "sendSuccess": "Oferta została wysłana za pośrednictwem WhatsApp.",
+      "sendError": "Nie udało się wysłać oferty poprzez WhatsApp."
+    }
+  },
+  "quotationSend": {
+    "sendSuccess": "Oferta została wysłana poprzez WhatsApp w formacie PDF.",
+    "sendError": "Nie udało się wysłać oferty poprzez WhatsApp."
+  },
+  "flow": {
+    "title": "Przepływ ofert WhatsApp",
+    "description": "Bezpieczny plan modułu do wdrożenia, aby klient mógł utworzyć zapytanie ofertowe przez telefon.",
+    "steps": {
+      "inbound": {
+        "title": "1. Odbiór wiadomości",
+        "text": "Wiadomość od klienta jest odbierana za pomocą webhooka, sprawdzany jest podpis i rejestrowany jest surowy rekord."
+      },
+      "intent": {
+        "title": "2. Wybór zamiarów i zapasów",
+        "text": "Klient kierowany jest z katalogu lub zestawienia stanów magazynowych; dowolny tekst nie jest bezpośrednio przekładany na porządek."
+      },
+      "quote": {
+        "title": "3. Projekt propozycji",
+        "text": "Wybory są otwierane jako wersja robocza propozycji po stronie CRM, a ostateczny dokument nie jest tworzony bez sprawdzenia go przez przedstawiciela."
+      },
+      "handoff": {
+        "title": "4. Zatwierdzenie przedstawiciela",
+        "text": "Po dokonaniu sprawdzenia ceny, rabatu, dostawy i bieżącego, oferta zostaje wysłana do Klienta."
+      }
+    },
+    "nextPhaseTitle": "Następna faza",
+    "nextPhaseText": "Ta faza otwiera infrastrukturę. Przebieg rozmów, wybór katalogu, wersja robocza propozycji i przesłanie szablonu WhatsApp zostaną dodane w osobnej kontrolowanej fazie."
+  }
+}

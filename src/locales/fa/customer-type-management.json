@@ -1,0 +1,67 @@
+{
+  "menu": "مدیریت نوع مشتری",
+  "description": "انواع مشتری را مدیریت و ویرایش کنید",
+  "showStats": "نمایش آمار",
+  "hideStats": "مخفی کردن آمار",
+  "addButton": "نوع مشتری جدید را اضافه کنید",
+  "loading": "در حال بارگیری...",
+  "error": "خطایی رخ داد",
+  "noData": "داده ای یافت نشد",
+  "actions": "معاملات",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "advancedFilter": {
+    "columnName": "نام نوع مشتری",
+    "columnDescription": "توضیحات"
+  },
+  "stats": {
+    "totalCustomerTypes": "کل نوع مشتری",
+    "activeCustomerTypes": "نوع مشتری فعال",
+    "newThisMonth": "جدید این ماه"
+  },
+  "table": {
+    "title": "لیست نوع مشتری",
+    "id": "شناسه",
+    "name": "نام نوع مشتری",
+    "description": "توضیحات",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط",
+    "updatedDate": "تاریخ به روز رسانی",
+    "updatedBy": "به روز شده توسط",
+    "showing": "نمایش {{from}}-{{to}} / {{total}}",
+    "page": "صفحه {{current}} / {{total}}"
+  },
+  "form": {
+    "addCustomerType": "نوع مشتری جدید را اضافه کنید",
+    "editCustomerType": "ویرایش نوع مشتری",
+    "addDescription": "اطلاعات نوع مشتری جدید را وارد کنید",
+    "editDescription": "اطلاعات نوع مشتری را ویرایش کنید",
+    "name": "نام نوع مشتری",
+    "namePlaceholder": "نام نوع مشتری را وارد کنید",
+    "nameRequired": "نام نوع مشتری الزامی است",
+    "nameMaxLength": "نام نوع مشتری می تواند حداکثر 100 کاراکتر باشد",
+    "description": "توضیحات",
+    "descriptionPlaceholder": "توضیحات را وارد کنید (اختیاری)",
+    "descriptionMaxLength": "توضیحات می تواند حداکثر 500 کاراکتر باشد",
+    "cancel": "لغو کنید",
+    "save": "ذخیره کنید",
+    "saving": "در حال ضبط ..."
+  },
+  "delete": {
+    "action": "حذف کنید",
+    "confirmTitle": "حذف نوع مشتری",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید نوع مشتری {{name}} را حذف کنید؟",
+    "confirmButton": "حذف کنید",
+    "success": "نوع مشتری با موفقیت حذف شد",
+    "error": "نوع مشتری حذف نشد",
+    "deleting": "در حال حذف..."
+  },
+  "messages": {
+    "createSuccess": "نوع مشتری با موفقیت ایجاد شد",
+    "createError": "نوع مشتری ایجاد نشد",
+    "updateSuccess": "نوع مشتری با موفقیت به روز شد",
+    "updateError": "نوع مشتری به‌روزرسانی نشد",
+    "deleteSuccess": "نوع مشتری با موفقیت حذف شد",
+    "deleteError": "نوع مشتری حذف نشد"
+  }
+}

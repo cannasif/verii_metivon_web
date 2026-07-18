@@ -1,0 +1,75 @@
+{
+  "page": {
+    "title": "窗口定义",
+    "description": "在与项目范围管理页面兼容的分页表结构中管理轮廓、铁、螺钉和压力记录。",
+    "documentTitle": "窗口定义"
+  },
+  "sections": {
+    "profil": {
+      "title": "定义配置文件",
+      "description": "管理要按行选择的配置文件定义。"
+    },
+    "demir": {
+      "title": "识别铁",
+      "description": "管理要按行选择的铁定义。"
+    },
+    "vida": {
+      "title": "识别螺丝",
+      "description": "管理按行选择的螺钉定义。"
+    },
+    "baski": {
+      "title": "定义打印",
+      "description": "管理要按行选择的打印定义。"
+    },
+    "koliBaski": {
+      "title": "定义盒子印刷",
+      "description": "管理将在报价标头中选择并发送到 Netsis 标头描述字段的包装盒打印定义。"
+    }
+  },
+  "table": {
+    "id": "身份证号",
+    "name": "名称",
+    "profilName": "公司简介",
+    "createdDate": "创造",
+    "updatedDate": "已更新",
+    "newRecord": "新注册",
+    "searchPlaceholder": "搜索定义...",
+    "refresh": "刷新",
+    "loading": "定义正在加载...",
+    "empty": "没有找到记录。",
+    "actions": "交易",
+    "previous": "上一页",
+    "next": "下一步",
+    "pagination": "显示 {{from}}-{{to}} 的记录中的总计 {{total}}",
+    "filterName": "名称",
+    "dateDash": "-"
+  },
+  "dialog": {
+    "addNewProfile": "添加新的个人资料",
+    "addNewRebar": "添加新熨斗",
+    "addNewScrew": "添加新螺丝",
+    "addNewPrint": "添加新版本",
+    "addNewKoliBaski": "添加新的盒子打印",
+    "editTitle": "更新{{section}}",
+    "addTitle": "添加 {{section}}",
+    "nameLabel": "名称",
+    "profilLabel": "连接的配置文件",
+    "profilPlaceholder": "选择个人资料",
+    "profilSearchPlaceholder": "搜索个人资料",
+    "cancel": "取消",
+    "save": "保存",
+    "demirNameLabel": "铁名",
+    "demirNamePlaceholder": "绑定铁名称",
+    "vidaNameLabel": "螺丝名称",
+    "vidaNamePlaceholder": "连接螺钉名称"
+  },
+  "validation": {
+    "nameRequired": "姓名字段为必填项",
+    "profilRequired": "配置文件选择是强制性的"
+  },
+  "toasts": {
+    "created": "已创建记录 {{section}}",
+    "updated": "更新记录 {{section}}",
+    "deleted": "{{section}} 记录已删除"
+  }
+}

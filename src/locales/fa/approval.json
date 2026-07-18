@@ -1,0 +1,88 @@
+{
+  "list": {
+    "title": "تاییدیه های معلق",
+    "description": "نقل قول هایی که به شما اختصاص داده شده را مشاهده و تأیید یا رد کنید",
+    "empty": "هیچ تاییدیه معلقی وجود ندارد",
+    "error": "هنگام بارگیری تأییدیه ها خطایی روی داد"
+  },
+  "yes": "بله",
+  "no": "خیر",
+  "processing": "در حال پردازش...",
+  "detail": {
+    "title": "جزئیات نقل قول",
+    "subtitle": "مشاهده جزئیات نقل قول و انجام اقدامات",
+    "tabs": {
+      "detail": "جزئیات",
+      "history": "تاریخچه",
+      "action": "اقدام"
+    },
+    "notFound": "نقل قول پیدا نشد",
+    "quotationInfo": "اطلاعات نقل قول",
+    "offerNo": "پیشنهاد شماره",
+    "customer": "مشتری",
+    "representative": "نماینده",
+    "currency": "ارز",
+    "offerDate": "تاریخ پیشنهاد",
+    "deliveryDate": "تاریخ تحویل",
+    "total": "مجموع",
+    "grandTotal": "کل بزرگ",
+    "description": "توضیحات",
+    "lines": "خطوط نقل قول",
+    "productCode": "کد محصول",
+    "productName": "نام محصول",
+    "quantity": "مقدار",
+    "unitPrice": "قیمت واحد",
+    "lineTotal": "خط مجموع",
+    "lineGrandTotal": "خط گرند توتال",
+    "exchangeRates": "نرخ ارز",
+    "exchangeRate": "امتیاز دهید",
+    "exchangeRateDate": "تاریخ امتیاز",
+    "isOfficial": "نرخ رسمی"
+  },
+  "actions": {
+    "view": "مشاهده کنید",
+    "approve": "تایید کنید",
+    "reject": "رد کردن"
+  },
+  "status": {
+    "notRequired": "پیش نویس",
+    "waiting": "در انتظار تایید",
+    "approved": "تصویب شد",
+    "rejected": "رد شد",
+    "closed": "بسته شد",
+    "customerCancelled": "توسط مشتری لغو شد",
+    "salespersonClosedForRevision": "رکورد ERP توسط فروشنده برای بازبینی بسته شد",
+    "supersededByApprovedRevision": "بسته شد زیرا بازبینی دیگری تأیید شد"
+  },
+  "closedReason": "این رکورد بسته شد زیرا رکورد دیگری با همان شماره پیشنهاد تایید شد.",
+  "statusFilterLabel": "وضعیت تایید",
+  "level": {
+    "salesManager": "مدیر فروش",
+    "regionalManager": "مدیر منطقه",
+    "finance": "امور مالی",
+    "generalManager": "مدیر کل",
+    "unknown": "ناشناس"
+  },
+  "note": {
+    "label": "توجه داشته باشید",
+    "placeholder": "می‌توانید یک یادداشت تأیید/رد اضافه کنید (اختیاری)",
+    "maxLength": "یادداشت می تواند حداکثر 500 کاراکتر باشد"
+  },
+  "approve": {
+    "success": "تصویب شد",
+    "successMessage": "نقل قول با موفقیت تأیید شد",
+    "error": "خطای تایید",
+    "errorMessage": "هنگام تأیید نقل قول خطایی روی داد"
+  },
+  "reject": {
+    "success": "رد شد",
+    "successMessage": "نقل قول رد شد",
+    "error": "خطای رد کردن",
+    "errorMessage": "هنگام رد نقل قول خطایی روی داد"
+  },
+  "history": {
+    "empty": "بدون سابقه تایید",
+    "approvedBy": "تایید شده توسط"
+  },
+  "assignedTo": "کاربر اختصاص داده شده"
+}

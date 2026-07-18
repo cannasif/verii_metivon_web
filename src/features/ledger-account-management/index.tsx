@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{accountConfig}from'@/features/erp-operation-management/configs';export function LedgerAccountManagementPage(){return <ErpPagedManagementPage config={accountConfig}/>}

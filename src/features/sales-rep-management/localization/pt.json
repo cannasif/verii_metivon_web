@@ -1,0 +1,52 @@
+{
+  "menu": "Gerenciamento de código de representante de vendas",
+  "description": "Visualize, adicione e exclua códigos de representantes de vendas do ERP.",
+  "addButton": "Novo representante de vendas",
+  "searchPlaceholder": "Pesquise o código, descrição ou nome do representante de vendas",
+  "empty": "Nenhum registro de representante de vendas encontrado.",
+  "error": "Os registros do representante de vendas não puderam ser carregados.",
+  "deleteConfirmMessage": "Excluir o registro do representante de vendas com o código {{code}}?",
+  "table": {
+    "title": "Lista de representantes de vendas",
+    "branchCode": "Código da filial",
+    "salesRepCode": "Código do representante de vendas",
+    "salesRepDescription": "Descrição",
+    "name": "nome",
+    "createdDate": "Data de criação"
+  },
+  "form": {
+    "addTitle": "Adicionar novo representante de vendas",
+    "addDescription": "Adicione o registro do código do representante de vendas manualmente.",
+    "editTitle": "Edição de representante de vendas",
+    "editDescription": "Atualize o registro do código do representante de vendas.",
+    "branchCode": "Código da filial",
+    "branchCodePlaceholder": "Insira o código da filial",
+    "salesRepCode": "Código do representante de vendas",
+    "salesRepCodePlaceholder": "insira o código",
+    "salesRepDescription": "Descrição",
+    "salesRepDescriptionPlaceholder": "Insira a descrição",
+    "name": "nome",
+    "namePlaceholder": "Digite o nome",
+    "validation": {
+      "branchCodeRequired": "O código da filial é obrigatório.",
+      "codeRequired": "O código do representante de vendas é obrigatório.",
+      "codeMaxLength": "O código do representante de vendas pode ter no máximo 8 caracteres.",
+      "descriptionMaxLength": "A descrição pode ter até 30 caracteres.",
+      "nameMaxLength": "O nome pode ter até 35 caracteres."
+    }
+  },
+  "messages": {
+    "createSuccess": "Um registro de representante de vendas foi criado.",
+    "createError": "Não foi possível criar o registro do representante de vendas.",
+    "updateSuccess": "Registro do representante de vendas atualizado.",
+    "updateError": "O registro do representante de vendas não pôde ser atualizado.",
+    "deleteSuccess": "O registro do representante de vendas foi excluído.",
+    "deleteError": "O registro do representante de vendas não pôde ser excluído."
+  },
+  "advancedFilter": {
+    "columnBranchCode": "Código da filial",
+    "columnSalesRepCode": "Código do representante de vendas",
+    "columnDescription": "Descrição",
+    "columnName": "nome"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "برنامه‌ریزی منابع سازمانی مبتنی بر هوش مصنوعی",
+      "slogan": "کسب‌وکار خود را با Metivon مدیریت کنید، نه با حدس.",
+      "branchPlaceholder": "شعبه را انتخاب کنید",
+      "emailPlaceholder": "ایمیل شرکتی",
+      "passwordPlaceholder": "رمز عبور",
+      "rememberMe": "مرا به خاطر بسپار",
+      "forgotPassword": "رمز عبور من را فراموش کرده اید؟",
+      "submitButton": "وارد شوید",
+      "processing": "در حال پردازش...",
+      "sessionExpired": "جلسه شما تمام شده است. لطفا دوباره وارد شوید.",
+      "comingSoon": "به زودی",
+      "loginError": "هنگام ورود به سیستم خطایی رخ داد.",
+      "capsLockOn": "Caps lock روشن است",
+      "animationOn": "انیمیشن را باز کنید",
+      "animationOff": "بستن انیمیشن",
+      "eyebrow": "ERP مبتنی بر هوش مصنوعی",
+      "heroTitle": "تمام جریان‌های کسب‌وکار در یک",
+      "heroDescription": "حساب‌ها، موجودی، انبار، دریافت، ارسال و امور مالی را در یک هسته عملیاتی مدیریت کنید.",
+      "welcomeEyebrow": "فضای کاری امن",
+      "welcomeTitle": "ورود به Metivon",
+      "welcomeDescription": "شعبه را انتخاب کرده و با امنیت وارد فضای سازمانی شوید.",
+      "modules": {
+        "accounts": "مدیریت حساب‌ها",
+        "inventory": "مدیریت موجودی",
+        "warehouse": "انبار و موقعیت‌ها",
+        "shipping": "ارسال"
+      },
+      "live": "زنده",
+      "secureWorkspace": "همه عملیات در یک جریان داده امن",
+      "defaultBranch": "پیش‌فرض",
+      "showPassword": "نمایش رمز عبور",
+      "hidePassword": "پنهان کردن رمز عبور",
+      "secureLogin": "نشست رمزگذاری‌شده و امن"
+    },
+    "forgotPassword": {
+      "title": "رمز عبورم را فراموش کردم",
+      "description": "آدرس ایمیل خود را برای بازنشانی رمز عبور وارد کنید. ما پیوند بازنشانی رمز عبور را برای شما ارسال خواهیم کرد.",
+      "emailPlaceholder": "آدرس ایمیل",
+      "submitButton": "ارسال درخواست بازنشانی رمز عبور",
+      "backToLogin": "بازگشت به صفحه اصلی",
+      "processing": "در حال پردازش...",
+      "logoAlt": "لوگوی برنامه"
+    },
+    "resetPassword": {
+      "title": "بازنشانی رمز عبور",
+      "newPasswordPlaceholder": "رمز عبور جدید",
+      "confirmPasswordPlaceholder": "تکرار رمز عبور",
+      "submitButton": "بازنشانی رمز عبور",
+      "processing": "در حال پردازش...",
+      "invalidToken": "رمز نامعتبر یا گم شده است. لطفاً دوباره پیوند بازنشانی رمز عبور را بررسی کنید.",
+      "tokenNotFound": "رمز پیدا نشد",
+      "successRedirect": "رمز عبور شما با موفقیت بازنشانی شد. شما به صفحه ورود هدایت می شوید ...",
+      "failed": "بازنشانی رمز عبور انجام نشد.",
+      "error": "در طی فرآیند بازنشانی رمز عبور خطایی رخ داد."
+    },
+    "changePassword": {
+      "success": "رمز عبور با موفقیت تغییر کرده است.",
+      "error": "رمز عبور قابل تغییر نیست."
+    },
+    "validation": {
+      "emailRequired": "ایمیل مورد نیاز است",
+      "emailInvalid": "یک آدرس ایمیل معتبر وارد کنید",
+      "passwordRequired": "رمز عبور لازم است",
+      "branchRequired": "انتخاب شعبه الزامی است",
+      "passwordMinLength": "رمز عبور باید حداقل 8 کاراکتر باشد",
+      "tokenRequired": "توکن اجباری است",
+      "newPasswordMinLength": "رمز عبور باید حداقل 6 کاراکتر باشد",
+      "confirmPasswordRequired": "تکرار رمز عبور الزامی است",
+      "passwordsMismatch": "گذرواژه ها مطابقت ندارند",
+      "currentPasswordRequired": "رمز عبور فعلی مورد نیاز است",
+      "newPasswordMaxLength": "رمز عبور جدید حداکثر می تواند 100 کاراکتر باشد",
+      "newPasswordSameAsCurrent": "رمز عبور جدید نمی تواند با رمز عبور موجود یکسان باشد",
+      "requiredFieldsNotFilled": "فیلدهای اجباری پر نشد."
+    }
+  }
+}

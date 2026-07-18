@@ -1,0 +1,138 @@
+{
+  "menu": "Administração Distrital",
+  "description": "Gerenciar e organizar distritos",
+  "addButton": "Adicionar novo distrito",
+  "showStats": "Mostrar estatísticas",
+  "hideStats": "Ocultar estatísticas",
+  "listTitle": "Lista Distrital",
+  "listDescription": "Você pode gerenciar todos os distritos cadastrados no sistema aqui.",
+  "loading": "Carregando...",
+  "noData": "Nenhum dado encontrado",
+  "actions": "Transações",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "cancel": "Cancelar",
+  "delete": {
+    "confirmTitle": "Excluir distrito",
+    "confirmMessage": "Tem certeza de que deseja excluir o distrito {{name}}?",
+    "success": "Distrito excluído com sucesso",
+    "error": "Não foi possível excluir o distrito",
+    "deleting": "Excluindo...",
+    "action": "Excluir"
+  },
+  "save": "Salvar",
+  "saving": "Gravando...",
+  "countryManagement": {
+    "error": "Ocorreu um erro"
+  },
+  "table": {
+    "id": "ID",
+    "name": "Nome do Distrito",
+    "erpCode": "Código ERP",
+    "postalCode": "Código Postal",
+    "city": "cidade",
+    "cityName": "Nome da cidade",
+    "status": "Estado",
+    "title": "Lista Distrital",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por",
+    "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+    "page": "Página {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "Editar distrito",
+    "addDistrict": "Adicionar novo distrito",
+    "editDescription": "Editar informações do distrito",
+    "addDescription": "Insira as informações do novo distrito",
+    "name": "Nome do Distrito",
+    "namePlaceholder": "Insira o nome do distrito",
+    "city": "cidade",
+    "selectCity": "Selecione a cidade",
+    "searchCity": "Pesquisar cidade...",
+    "erpCode": "Código ERP",
+    "erpCodePlaceholder": "Insira o código ERP (opcional)",
+    "postalCode": "Código Postal",
+    "postalCodePlaceholder": "Digite o código postal (opcional)",
+    "nameRequired": "O nome do distrito é obrigatório",
+    "nameMaxLength": "O nome do distrito pode ter no máximo 100 caracteres",
+    "erpCodeMaxLength": "O código ERP pode ter no máximo 10 caracteres",
+    "postalCodeMaxLength": "O código postal pode ter até 20 caracteres",
+    "cityRequired": "A seleção da cidade é obrigatória"
+  },
+  "stats": {
+    "totalDistricts": "Distrito total",
+    "activeDistricts": "Distrito Ativo",
+    "newThisMonth": "Novidade este mês"
+  },
+  "status": {
+    "inactive": "passivo",
+    "active": "ativo"
+  },
+  "messages": {
+    "createSuccess": "Distrito criado com sucesso",
+    "createError": "Não foi possível criar o distrito",
+    "updateSuccess": "Distrito atualizado com sucesso",
+    "updateError": "Não foi possível atualizar o distrito",
+    "deleteSuccess": "Distrito excluído com sucesso",
+    "deleteError": "Não foi possível excluir o distrito"
+  },
+  "districtManagement": {
+    "menu": "Administração Distrital",
+    "description": "Gerenciar e organizar distritos",
+    "addButton": "Adicionar novo distrito",
+    "loading": "Carregando...",
+    "noData": "Nenhum dado encontrado",
+    "table": {
+      "id": "ID",
+      "name": "Nome do Distrito",
+      "erpCode": "Código ERP",
+      "postalCode": "Código Postal",
+      "city": "cidade",
+      "cityName": "Nome da cidade",
+      "status": "Estado",
+      "title": "Lista Distrital"
+    },
+    "delete": {
+      "confirmTitle": "Excluir distrito",
+      "confirmMessage": "Tem certeza de que deseja excluir o distrito {{name}}?",
+      "success": "Distrito excluído com sucesso",
+      "error": "Ocorreu um erro ao excluir o distrito"
+    },
+    "messages": {
+      "createSuccess": "Distrito criado com sucesso",
+      "createError": "Não foi possível criar o distrito",
+      "updateSuccess": "Distrito atualizado com sucesso",
+      "updateError": "Não foi possível atualizar o distrito"
+    },
+    "stats": {
+      "totalDistricts": "Distrito total",
+      "activeDistricts": "Distrito Ativo",
+      "newThisMonth": "Novidade este mês"
+    },
+    "status": {
+      "inactive": "passivo",
+      "active": "ativo"
+    },
+    "error": "Ocorreu um erro",
+    "form": {
+      "editDistrict": "Editar distrito",
+      "addDistrict": "Adicionar novo distrito",
+      "editDescription": "Editar informações do distrito",
+      "addDescription": "Insira as informações do novo distrito",
+      "name": "Nome do Distrito",
+      "namePlaceholder": "Insira o nome do distrito",
+      "city": "cidade",
+      "selectCity": "Selecione a cidade",
+      "searchCity": "Pesquisar cidade...",
+      "erpCode": "Código ERP",
+      "erpCodePlaceholder": "Insira o código ERP (opcional)",
+      "postalCode": "Código Postal",
+      "postalCodePlaceholder": "Digite o código postal (opcional)",
+      "nameRequired": "O nome do distrito é obrigatório",
+      "nameMaxLength": "O nome do distrito pode ter no máximo 100 caracteres",
+      "erpCodeMaxLength": "O código ERP pode ter no máximo 10 caracteres",
+      "postalCodeMaxLength": "O código postal pode ter até 20 caracteres",
+      "cityRequired": "A seleção da cidade é obrigatória"
+    }
+  }
+}

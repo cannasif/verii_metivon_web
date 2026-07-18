@@ -1,0 +1,23 @@
+{
+  "PageTitle": "E-mailinstellingen",
+  "PageDescription": "Configureer de SMTP-serverinstellingen",
+  "Save": "Opslaan",
+  "SavedSuccessfully": "E-mailinstellingen zijn succesvol opgeslagen",
+  "SaveFailed": "Kan e-mailinstellingen niet opslaan",
+  "Fields": {
+    "Host": "Servernaam",
+    "Port": "Verbindingspoort",
+    "EnableSsl": "Schakel SSL in",
+    "Username": "Gebruikersnaam",
+    "Password": "Wachtwoord",
+    "PasswordPlaceholder": "Voer een nieuw wachtwoord in om te wijzigen",
+    "FromEmail": "Van e-mail",
+    "FromName": "Van Naam",
+    "Timeout": "Time-out (sec)"
+  },
+  "TestMail": {
+    "Send": "Test-e-mail verzenden",
+    "Sending": "Test wordt verzonden...",
+    "Success": "Test-e-mail verzonden"
+  }
+}

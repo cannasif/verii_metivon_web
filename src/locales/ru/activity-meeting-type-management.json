@@ -1,0 +1,82 @@
+{
+  "menu": "Управление встречами",
+  "description": "Управление и редактирование определений собраний",
+  "addButton": "Добавить новую встречу",
+  "loading": "Загрузка...",
+  "noData": "Нет данных",
+  "actions": "Действия",
+  "edit": "Редактировать",
+  "deleteButton": "Удалить",
+  "cancel": "Отмена",
+  "save": "Сохранить",
+  "saving": "Сохранение...",
+  "previous": "Предыдущий",
+  "next": "Далее",
+  "advancedFilter": {
+    "columnName": "Название встречи",
+    "columnDescription": "Описание",
+    "columnCreatedBy": "Создано"
+  },
+  "activityType": {
+    "create": "Добавить новую встречу",
+    "loading": "Загрузка...",
+    "noData": "Нет данных",
+    "actions": "Действия",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "saving": "Сохранение...",
+    "error": "Произошла ошибка",
+    "form": {
+      "addTitle": "Добавить новую встречу",
+      "editTitle": "Редактировать встречу",
+      "addDescription": "Введите новую информацию о встрече",
+      "editDescription": "Изменить информацию о встрече",
+      "name": "Название встречи",
+      "namePlaceholder": "Введите название встречи",
+      "nameRequired": "Укажите название встречи.",
+      "nameMaxLength": "Название встречи может содержать не более 100 символов.",
+      "description": "Описание",
+      "descriptionPlaceholder": "Введите описание (необязательно)",
+      "descriptionMaxLength": "Описание может содержать не более 500 символов."
+    },
+    "table": {
+      "title": "Список встреч",
+      "id": "идентификатор",
+      "name": "Название встречи",
+      "description": "Описание",
+      "createdDate": "Дата создания",
+      "createdBy": "Создано",
+      "showing": "Показаны {{from}}-{{to}} / {{total}}",
+      "page": "Страница {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Всего встреч",
+      "activeActivityTypes": "Активные встречи",
+      "newThisMonth": "Новое в этом месяце"
+    },
+    "messages": {
+      "createSuccess": "Встреча успешно создана",
+      "createError": "Не удалось создать встречу.",
+      "updateSuccess": "Встреча успешно обновлена",
+      "updateError": "Не удалось обновить собрание.",
+      "deleteSuccess": "Встреча успешно удалена",
+      "deleteError": "Не удалось удалить встречу."
+    }
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Удалить встречу",
+    "confirmMessage": "Вы уверены, что хотите удалить {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Встреча успешно удалена",
+    "deleteError": "Не удалось удалить встречу."
+  },
+  "table": {
+    "title": "Список встреч",
+    "id": "идентификатор",
+    "name": "Название встречи",
+    "description": "Описание",
+    "createdDate": "Дата создания",
+    "createdBy": "Создано"
+  }
+}

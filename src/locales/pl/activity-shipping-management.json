@@ -1,0 +1,82 @@
+{
+  "menu": "Zarządzanie wysyłką",
+  "description": "Zarządzaj i edytuj definicje wysyłek",
+  "addButton": "Dodaj nową wysyłkę",
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "actions": "Działania",
+  "edit": "Edytuj",
+  "deleteButton": "Usuń",
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Zapisywanie...",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "advancedFilter": {
+    "columnName": "Nazwa wysyłki",
+    "columnDescription": "Opis",
+    "columnCreatedBy": "Stworzony przez"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Dodaj nową wysyłkę",
+      "editTitle": "Edytuj wysyłkę",
+      "addDescription": "Wprowadź nowe informacje o wysyłce",
+      "editDescription": "Edytuj informacje o wysyłce",
+      "name": "Nazwa wysyłki",
+      "namePlaceholder": "Wprowadź nazwę wysyłkową",
+      "nameRequired": "Nazwa wysyłkowa jest wymagana",
+      "nameMaxLength": "Nazwa przesyłki może mieć maksymalnie 100 znaków",
+      "description": "Opis",
+      "descriptionPlaceholder": "Wprowadź opis (opcjonalnie)",
+      "descriptionMaxLength": "Opis może mieć maksymalnie 500 znaków"
+    },
+    "table": {
+      "title": "Lista wysyłkowa",
+      "id": "Identyfikator",
+      "name": "Nazwa wysyłki",
+      "description": "Opis",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+      "page": "Strona {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Całkowita ewidencja wysyłek",
+      "activeActivityTypes": "Aktywne rejestry wysyłek",
+      "newThisMonth": "Nowość w tym miesiącu"
+    },
+    "messages": {
+      "createSuccess": "Wysyłka została utworzona pomyślnie",
+      "createError": "Nie udało się utworzyć wysyłki",
+      "updateSuccess": "Wysyłka została pomyślnie zaktualizowana",
+      "updateError": "Nie udało się zaktualizować wysyłki",
+      "deleteSuccess": "Wysyłka została pomyślnie usunięta",
+      "deleteError": "Nie udało się usunąć wysyłki"
+    },
+    "error": "Wystąpił błąd",
+    "create": "Dodaj nową wysyłkę",
+    "loading": "Ładowanie...",
+    "noData": "Nie znaleziono danych",
+    "actions": "Działania",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "saving": "Zapisywanie..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Usuń wysyłkę",
+    "confirmMessage": "Czy na pewno chcesz usunąć {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Wysyłka została pomyślnie usunięta",
+    "deleteError": "Nie udało się usunąć wysyłki"
+  },
+  "table": {
+    "title": "Lista wysyłkowa",
+    "id": "Identyfikator",
+    "name": "Nazwa wysyłki",
+    "description": "Opis",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez"
+  }
+}

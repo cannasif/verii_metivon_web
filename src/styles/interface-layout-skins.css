@@ -1,0 +1,195 @@
+/*
+ * Interface skins are intentionally broader than colour themes. They style the
+ * application shell and every shared Radix/shadcn surface, including portals.
+ * This keeps dialogs, dropdowns, tables and forms in the selected visual world.
+ */
+
+html[data-interface-layout] {
+  --ui-surface: var(--crm-app-panel);
+  --ui-surface-muted: var(--crm-app-panel-muted);
+  --ui-surface-strong: var(--crm-app-panel-strong);
+  --ui-line: var(--crm-app-border);
+  --ui-accent: var(--crm-brand-primary);
+  --ui-accent-2: var(--crm-brand-secondary);
+  --ui-glow: var(--crm-brand-shadow);
+  --ui-control-radius: var(--radius);
+  --ui-panel-radius: calc(var(--radius) + .25rem);
+  --ui-line-width: 1px;
+  --ui-shadow: 0 16px 42px -30px var(--ui-glow);
+}
+
+html[data-interface-layout] :is(
+  [data-slot='dialog-content'], [data-slot='alert-dialog-content'],
+  [data-slot='sheet-content'], [data-slot='popover-content'],
+  [data-slot='dropdown-menu-content'], [data-slot='context-menu-content'],
+  [data-slot='select-content'], [data-slot='command'], [data-slot='card']
+) {
+  background: var(--ui-surface) !important;
+  border: var(--ui-line-width) solid var(--ui-line) !important;
+  border-radius: var(--ui-panel-radius) !important;
+  box-shadow: var(--ui-shadow) !important;
+}
+
+html[data-interface-layout] :is(
+  [data-slot='button'], [data-slot='input'], [data-slot='textarea'],
+  [data-slot='select-trigger'], [data-slot='combobox-trigger'],
+  [data-slot='checkbox'], [data-slot='switch'], [role='tab']
+) {
+  border-radius: var(--ui-control-radius) !important;
+}
+
+html[data-interface-layout] :is([data-slot='input'], [data-slot='textarea'], [data-slot='select-trigger']) {
+  border-width: var(--ui-line-width) !important;
+  border-color: var(--ui-line) !important;
+  background: var(--ui-surface-muted) !important;
+}
+
+html[data-interface-layout] [data-slot='table-container'] {
+  border: var(--ui-line-width) solid var(--ui-line);
+  border-radius: var(--ui-panel-radius);
+  background: var(--ui-surface);
+  box-shadow: var(--ui-shadow);
+}
+
+html[data-interface-layout] [data-slot='table-header'] {
+  background: var(--ui-surface-strong);
+}
+
+html[data-interface-layout] [data-slot='table-row'] {
+  border-color: var(--ui-line);
+}
+
+html[data-interface-layout] [data-slot='dialog-overlay'] {
+  background: rgb(2 6 23 / 68%);
+  backdrop-filter: blur(3px);
+}
+
+/* Compact: dense utility console, compact controls and restrained shadows. */
+html[data-interface-layout='compact'] {
+  --ui-control-radius: .3rem;
+  --ui-panel-radius: .45rem;
+  --ui-shadow: 0 5px 16px -12px var(--ui-glow);
+}
+html[data-interface-layout='compact'] :is([data-slot='card'], [data-slot='dialog-content']) { gap: .75rem; padding: 1rem; }
+html[data-interface-layout='compact'] :is([data-slot='input'], [data-slot='select-trigger'], [data-slot='button']) { min-height: 2rem; height: 2rem; }
+html[data-interface-layout='compact'] [data-slot='table-head'] { height: 2.1rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
+html[data-interface-layout='compact'] [data-slot='table-cell'] { padding-block: .35rem; }
+
+/* Classic ERP: desktop application chrome with flat panels and title bars. */
+html[data-interface-layout='classic'] {
+  --ui-control-radius: 0;
+  --ui-panel-radius: 0;
+  --ui-line-width: 1px;
+  --ui-shadow: 3px 3px 0 color-mix(in srgb, var(--foreground) 12%, transparent);
+}
+html[data-interface-layout='classic'] .metivon-app-shell { background-image: linear-gradient(180deg, var(--crm-app-panel-muted), var(--crm-app-background)); }
+html[data-interface-layout='classic'] :is([data-slot='dialog-header'], [data-slot='card-header']) {
+  margin: -1.5rem -1.5rem 1rem;
+  padding: .8rem 1.1rem;
+  border-bottom: 1px solid var(--ui-line);
+  background: var(--ui-surface-strong);
+}
+html[data-interface-layout='classic'] [data-slot='table-header'] { box-shadow: inset 0 -2px 0 var(--ui-line); }
+html[data-interface-layout='classic'] [data-slot='button'] { box-shadow: inset 0 1px 0 rgb(255 255 255 / 22%); }
+
+/* Retro: a complete neon terminal skin, not a spacing preset. */
+html[data-interface-layout='retro'] {
+  --ui-surface: var(--crm-app-panel);
+  --ui-surface-muted: var(--crm-app-panel-muted);
+  --ui-surface-strong: var(--crm-app-panel-strong);
+  --ui-line: var(--crm-brand-primary);
+  --ui-control-radius: 0;
+  --ui-panel-radius: 0;
+  --ui-line-width: 2px;
+  --ui-shadow: 5px 5px 0 color-mix(in srgb, var(--crm-brand-primary) 55%, var(--crm-app-border));
+}
+html[data-interface-layout='retro'] body,
+html[data-interface-layout='retro'] .metivon-app-shell {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--crm-brand-primary) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--crm-brand-primary) 8%, transparent) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+html[data-interface-layout='retro'] :is([data-slot='dialog-content'], [data-slot='sheet-content'], [data-slot='popover-content'], [data-slot='dropdown-menu-content']) {
+  outline: 1px solid var(--crm-brand-secondary);
+  outline-offset: -8px;
+}
+html[data-interface-layout='retro'] :is([data-slot='dialog-header'], [data-slot='card-header']) { border-bottom: 2px solid var(--crm-brand-primary); padding-bottom: 1rem; }
+html[data-interface-layout='retro'] [data-slot='button'] { border: 2px solid currentColor; text-transform: uppercase; letter-spacing: .07em; box-shadow: 3px 3px 0 color-mix(in srgb, var(--crm-brand-primary) 55%, var(--crm-app-border)); }
+html[data-interface-layout='retro'] [data-slot='button']:active { translate: 2px 2px; box-shadow: 1px 1px 0 color-mix(in srgb, var(--crm-brand-primary) 55%, var(--crm-app-border)); }
+html[data-interface-layout='retro'] [data-slot='table-header'] { color: var(--crm-brand-text); text-transform: uppercase; letter-spacing: .08em; }
+html[data-interface-layout='retro'] [data-slot='table-row']:hover { background: var(--crm-brand-soft); }
+html[data-interface-layout='retro'] [data-slot='dialog-overlay'] { backdrop-filter: none; }
+
+/* Space: cyan HUD panels, clipped corners and luminous controls everywhere. */
+html[data-interface-layout='space'] {
+  --ui-surface: var(--crm-app-panel);
+  --ui-surface-muted: var(--crm-app-panel-muted);
+  --ui-surface-strong: var(--crm-app-panel-strong);
+  --ui-line: color-mix(in srgb, var(--crm-brand-primary) 72%, var(--crm-app-border));
+  --ui-control-radius: .8rem;
+  --ui-panel-radius: .9rem;
+  --ui-shadow: 0 0 0 1px color-mix(in srgb, var(--crm-brand-primary) 8%, transparent), 0 18px 55px -28px var(--crm-brand-shadow);
+}
+html[data-interface-layout='space'] body,
+html[data-interface-layout='space'] .metivon-app-shell { background-image: radial-gradient(circle at 15% 10%, var(--crm-brand-soft), transparent 28%), radial-gradient(circle at 80% 30%, color-mix(in srgb, var(--crm-brand-secondary) 8%, transparent), transparent 34%); }
+html[data-interface-layout='space'] :is([data-slot='dialog-content'], [data-slot='sheet-content'], [data-slot='card'], [data-slot='table-container']) {
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+html[data-interface-layout='space'] :is([data-slot='dialog-content'], [data-slot='sheet-content']) { box-shadow: 0 0 45px color-mix(in srgb, var(--crm-brand-primary) 18%, transparent) !important; }
+html[data-interface-layout='space'] [data-slot='button'] { border: 1px solid color-mix(in srgb, var(--crm-brand-primary) 55%, transparent); box-shadow: inset 0 0 14px color-mix(in srgb, var(--crm-brand-primary) 8%, transparent); }
+html[data-interface-layout='space'] [data-slot='table-header'] { color: var(--crm-brand-text); letter-spacing: .06em; text-transform: uppercase; }
+html[data-interface-layout='space'] [data-slot='dialog-overlay'] { backdrop-filter: blur(8px); }
+
+/* Glass: floating translucent surfaces, including every portal. */
+html[data-interface-layout='glass'] {
+  --ui-surface: color-mix(in srgb, var(--crm-app-panel) 72%, transparent);
+  --ui-surface-muted: color-mix(in srgb, var(--crm-app-panel-muted) 68%, transparent);
+  --ui-line: color-mix(in srgb, var(--crm-brand-primary) 28%, white 12%);
+  --ui-panel-radius: 1.45rem;
+  --ui-control-radius: .9rem;
+  --ui-shadow: 0 25px 70px -38px var(--ui-glow), inset 0 1px 0 rgb(255 255 255 / 16%);
+}
+html[data-interface-layout='glass'] body { background-image: var(--crm-brand-gradient-soft); background-attachment: fixed; }
+html[data-interface-layout='glass'] :is([data-slot='dialog-content'], [data-slot='sheet-content'], [data-slot='popover-content'], [data-slot='dropdown-menu-content'], [data-slot='card'], [data-slot='table-container']) { backdrop-filter: blur(24px) saturate(135%); }
+html[data-interface-layout='glass'] [data-slot='dialog-overlay'] { background: rgb(15 23 42 / 35%); backdrop-filter: blur(15px); }
+
+/* Terminal: phosphor display language with dashed separators and prompt-like fields. */
+html[data-interface-layout='terminal'] {
+  --ui-surface: var(--crm-app-panel); --ui-surface-muted: var(--crm-app-panel-muted); --ui-surface-strong: var(--crm-app-panel-strong); --ui-line: var(--crm-app-border);
+  --ui-control-radius: 0; --ui-panel-radius: 0; --ui-shadow: 0 0 22px color-mix(in srgb, var(--crm-brand-primary) 8%, transparent);
+}
+html[data-interface-layout='terminal'] body { background-image: repeating-linear-gradient(0deg, transparent 0 3px, color-mix(in srgb, var(--crm-brand-primary) 2.5%, transparent) 3px 4px); }
+html[data-interface-layout='terminal'] :is([data-slot='dialog-content'], [data-slot='card'], [data-slot='table-container']) { border-style: dashed !important; }
+html[data-interface-layout='terminal'] [data-slot='input'] { border-inline-start-width: 4px !important; }
+html[data-interface-layout='terminal'] [data-slot='button'] { border: 1px solid var(--crm-brand-primary); text-transform: uppercase; }
+html[data-interface-layout='terminal'] [data-slot='dialog-overlay'] { backdrop-filter: none; }
+
+/* Executive: quiet premium surfaces and editorial hierarchy. */
+html[data-interface-layout='executive'] { --ui-panel-radius: 1rem; --ui-control-radius: .6rem; --ui-line: color-mix(in srgb, var(--crm-app-border) 75%, transparent); --ui-shadow: 0 28px 70px -48px rgb(15 23 42 / 60%); }
+html[data-interface-layout='executive'] :is([data-slot='dialog-title'], [data-slot='card-title']) { font-family: Georgia, 'Times New Roman', serif; letter-spacing: -.02em; }
+html[data-interface-layout='executive'] [data-slot='card'] { border-top: 3px solid var(--ui-accent) !important; }
+html[data-interface-layout='executive'] [data-slot='table-header'] { text-transform: uppercase; letter-spacing: .08em; font-size: .7rem; }
+html[data-interface-layout='executive'] [data-slot='dialog-content'] { padding: 2rem; }
+
+/* Dock: touch-first controls and rounded floating portal surfaces. */
+html[data-interface-layout='dock'] { --ui-panel-radius: 1.35rem; --ui-control-radius: 999px; --ui-shadow: 0 22px 55px -32px var(--ui-glow); }
+html[data-interface-layout='dock'] :is([data-slot='dialog-content'], [data-slot='sheet-content']) { border-bottom-width: 4px !important; }
+html[data-interface-layout='dock'] [data-slot='table-container'] { border-radius: 1.1rem; overflow: hidden; }
+html[data-interface-layout='dock'] [data-slot='table-row'] { border-bottom-style: dashed; }
+
+/* Zen: almost-paper surfaces, minimal chrome and content-led dialogs. */
+html[data-interface-layout='zen'] { --ui-surface: var(--crm-app-background); --ui-surface-muted: transparent; --ui-line: color-mix(in srgb, var(--foreground) 12%, transparent); --ui-panel-radius: .25rem; --ui-control-radius: .2rem; --ui-shadow: none; }
+html[data-interface-layout='zen'] :is([data-slot='card'], [data-slot='table-container']) { border-inline: 0 !important; }
+html[data-interface-layout='zen'] [data-slot='dialog-content'] { border-width: 0 !important; border-top: 4px solid var(--ui-accent) !important; }
+html[data-interface-layout='zen'] [data-slot='button'] { box-shadow: none; }
+html[data-interface-layout='zen'] [data-slot='table-header'] { background: transparent; border-bottom: 2px solid var(--ui-line); }
+
+@media (max-width: 1023px) {
+  html[data-interface-layout] .metivon-app-shell { padding: 0; gap: 0; }
+  html[data-interface-layout] .metivon-app-header { margin: 0; border-radius: 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html[data-interface-layout] :is([data-slot='dialog-content'], [data-slot='popover-content'], [data-slot='dropdown-menu-content']) { transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease; }
+}

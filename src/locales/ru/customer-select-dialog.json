@@ -1,0 +1,28 @@
+{
+  "title": "Выберите клиента",
+  "description": "Вы можете различать всех клиентов по их ERP и потенциальным тегам; просто используйте другую вкладку для списка потенциальных клиентов.",
+  "badgeKindErp": "ERP-система",
+  "badgeKindPotential": "потенциал",
+  "erpCustomers": "ERP-система",
+  "crmCustomers": "Клиенты CRM",
+  "potentialCustomers": "потенциал",
+  "allCustomers": "Все",
+  "erp": "ERP-система",
+  "crm": "CRM",
+  "noErpCustomers": "Клиент ERP не найден",
+  "noCrmCustomers": "Клиент CRM не найден",
+  "noPotentialCustomers": "Потенциальные клиенты не найдены",
+  "noCustomers": "Клиент не найден",
+  "noResults": "Результаты поиска не найдены",
+  "searchPlaceholder": "Поиск по имени или коду...",
+  "voiceSearch": "голосовой поиск",
+  "loading": "загрузка",
+  "table": {
+    "type": "Тип",
+    "customerCode": "Код клиента",
+    "customerName": "Имя клиента",
+    "phone": "телефон",
+    "city": "город",
+    "email": "электронная почта"
+  }
+}

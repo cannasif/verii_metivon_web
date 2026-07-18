@@ -1,0 +1,44 @@
+{
+  "menu": "Zarządzanie dopasowaniem przedstawicieli handlowych",
+  "description": "Przeglądaj, dodawaj i usuwaj kody przedstawicieli handlowych i dopasowania użytkowników.",
+  "addButton": "Nowy mecz",
+  "searchPlaceholder": "Wyszukaj kod przedstawiciela handlowego, użytkownika lub adres e-mail",
+  "empty": "Nie znaleziono pasujących przedstawicieli handlowych.",
+  "error": "Nie można wczytać dopasowań przedstawiciela handlowego.",
+  "deleteConfirmMessage": "Usunąć parowanie {{salesRep}} i {{user}}?",
+  "table": {
+    "title": "Lista dopasowań przedstawicieli handlowych",
+    "salesRepCode": "Kodeks przedstawiciela handlowego",
+    "salesRepName": "Imię i nazwisko przedstawiciela handlowego",
+    "userFullName": "Użytkownik",
+    "username": "Nazwa użytkownika",
+    "userEmail": "E-mail",
+    "createdDate": "Data utworzenia"
+  },
+  "form": {
+    "addTitle": "Nowy mecz przedstawiciela handlowego",
+    "addDescription": "Dopasuj rekord przedstawiciela handlowego do użytkownika.",
+    "salesRep": "Przedstawiciel handlowy",
+    "salesRepPlaceholder": "Wybierz przedstawiciela handlowego",
+    "salesRepSearchPlaceholder": "Wyszukaj przedstawiciela handlowego",
+    "user": "Użytkownik",
+    "userPlaceholder": "Wybierz użytkownika",
+    "userSearchPlaceholder": "Wyszukaj użytkowników",
+    "validation": {
+      "salesRepRequired": "Wybór przedstawiciela handlowego jest obowiązkowy.",
+      "userRequired": "Wybór użytkownika jest obowiązkowy."
+    }
+  },
+  "messages": {
+    "createSuccess": "Utworzono dopasowanie przedstawiciela handlowego.",
+    "createError": "Nie można utworzyć dopasowania przedstawiciela handlowego.",
+    "deleteSuccess": "Dopasowanie przedstawiciela handlowego zostało usunięte.",
+    "deleteError": "Nie można usunąć dopasowania przedstawiciela handlowego."
+  },
+  "advancedFilter": {
+    "columnSalesRepCode": "Kodeks przedstawiciela handlowego",
+    "columnSalesRepName": "Imię i nazwisko przedstawiciela handlowego",
+    "columnUsername": "Nazwa użytkownika",
+    "columnEmail": "E-mail"
+  }
+}

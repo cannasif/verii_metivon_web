@@ -1,0 +1,103 @@
+{
+  "approvalFlow": {
+    "menu": "审批流程管理",
+    "description": "管理和组织审批流程",
+    "addButton": "添加新的审批流程",
+    "table": {
+      "id": "身份证号",
+      "documentType": "文件类型",
+      "description": "描述",
+      "isActive": "活跃",
+      "createdDate": "创建日期",
+      "createdBy": "创建者",
+      "actions": "行动",
+      "showing": "显示 {{from}}-{{to}} / {{total}}",
+      "page": "页 {{current}} / {{total}}",
+      "title": "审批流程"
+    },
+    "form": {
+      "addTitle": "添加新的审批流程",
+      "editTitle": "编辑审批流程",
+      "addDescription": "输入新的审批流程信息",
+      "editDescription": "编辑审批流程信息",
+      "documentType": "文件类型",
+      "selectDocumentType": "选择文档类型",
+      "noDocumentTypeSelected": "未选择文档类型",
+      "documentTypeRequired": "需要选择文档类型",
+      "description": "描述",
+      "descriptionPlaceholder": "输入描述（可选）",
+      "descriptionMaxLength": "描述最多 200 个字符",
+      "isActive": "活跃",
+      "isActiveDescription": "审批流程的活动状态",
+      "cancel": "取消",
+      "save": "保存",
+      "saving": "正在保存..."
+    },
+    "loading": "加载中...",
+    "noData": "无数据",
+    "active": "活跃",
+    "inactive": "不活跃",
+    "previous": "上一页",
+    "next": "下一步",
+    "delete": {
+      "action": "删除",
+      "cancel": "取消",
+      "confirmTitle": "删除审批流程",
+      "confirmMessage": "您确定要删除此审批流程吗？",
+      "title": "删除审批流程",
+      "confirm": "您确定要删除此审批流程吗？"
+    },
+    "documentType": {
+      "offer": "优惠",
+      "request": "请求",
+      "order": "订单",
+      "demand": "需求",
+      "quotation": "报价",
+      "purchaseRequest": "购买请求",
+      "purchaseRfq": "询价 (RFQ)",
+      "supplierQuotation": "供应商报价",
+      "purchaseOrder": "采购订单"
+    },
+    "advancedFilter": {
+      "columnDocumentType": "文件类型",
+      "columnDescription": "描述",
+      "columnIsActive": "活跃",
+      "columnCreatedBy": "创建者"
+    },
+    "messages": {
+      "deleteSuccess": "审批流程删除成功",
+      "deleteError": "删除审批流程时出错"
+    },
+    "steps": "流程步骤",
+    "error": "发生错误"
+  },
+  "approvalFlowStep": {
+    "title": "流程步骤",
+    "addButton": "添加步骤",
+    "empty": "尚未添加步骤",
+    "unknownRoleGroup": "无角色组",
+    "stepDescription": "批准令：{{order}}",
+    "deleteDialog": {
+      "title": "删除步骤",
+      "description": "您确定要删除此步骤吗？",
+      "confirm": "删除",
+      "cancel": "取消"
+    },
+    "form": {
+      "addTitle": "添加新步骤",
+      "editTitle": "编辑步骤",
+      "addDescription": "添加新的流程步骤",
+      "editDescription": "编辑流程步骤信息",
+      "approvalRoleGroup": "角色组",
+      "selectRoleGroup": "选择角色组",
+      "noRoleGroupSelected": "未选择角色组",
+      "approvalRoleGroupIdRequired": "需要选择角色组",
+      "cancel": "取消",
+      "save": "保存",
+      "saving": "正在保存..."
+    },
+    "messages": {
+      "deleteConfirm": "您确定要删除此步骤吗？"
+    }
+  }
+}

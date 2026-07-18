@@ -1,0 +1,83 @@
+{
+  "menu": "مدیریت شهری",
+  "description": "مدیریت و سازماندهی شهرها",
+  "addButton": "اضافه کردن شهر جدید",
+  "searchPlaceholder": "جستجو...",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای یافت نشد",
+  "stats": {
+    "totalCities": "کل شهرها",
+    "activeCities": "شهرهای فعال",
+    "newThisMonth": "جدید این ماه"
+  },
+  "table": {
+    "title": "لیست شهر",
+    "id": "شناسه",
+    "name": "نام شهر",
+    "erpCode": "کد ERP",
+    "countryName": "نام کشور",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط",
+    "showing": "نمایش {{from}}-{{to}} / {{total}}",
+    "page": "صفحه {{current}} / {{total}}"
+  },
+  "cityManagement": {
+    "table": {
+      "title": "لیست شهر",
+      "id": "شناسه",
+      "name": "نام شهر",
+      "erpCode": "کد ERP",
+      "countryName": "نام کشور",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط"
+    },
+    "error": "خطایی رخ داد",
+    "form": {
+      "tabs": {
+        "header": "اطلاعات عمومی"
+      }
+    },
+    "menu": "مدیریت شهری",
+    "description": "مدیریت و سازماندهی شهرها",
+    "addButton": "اضافه کردن شهر جدید",
+    "searchPlaceholder": "جستجوی سریع...",
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای یافت نشد",
+    "actions": "اقدامات",
+    "delete": {
+      "success": "شهر با موفقیت حذف شد",
+      "error": "هنگام حذف شهر خطایی روی داد",
+      "confirmTitle": "شهر را حذف کنید",
+      "confirmMessage": "آیا مطمئن هستید که می خواهید {{name}} را حذف کنید؟"
+    }
+  },
+  "form": {
+    "editCity": "شهر را ویرایش کنید",
+    "addCity": "اضافه کردن شهر جدید",
+    "editDescription": "ویرایش جزئیات شهر",
+    "addDescription": "جزئیات شهر جدید را وارد کنید",
+    "name": "نام شهر",
+    "namePlaceholder": "نام شهر را وارد کنید",
+    "country": "کشور",
+    "selectCountry": "کشور را انتخاب کنید",
+    "erpCode": "کد ERP",
+    "erpCodePlaceholder": "کد ERP را وارد کنید (اختیاری)",
+    "cancel": "لغو کنید",
+    "save": "ذخیره کنید",
+    "saving": "در حال ذخیره...",
+    "nameRequired": "نام شهر الزامی است",
+    "nameMaxLength": "نام شهر حداکثر می تواند 100 کاراکتر باشد",
+    "erpCodeMaxLength": "کد ERP حداکثر می تواند 10 کاراکتر باشد",
+    "countryRequired": "انتخاب کشور الزامی است"
+  },
+  "actions": "اقدامات",
+  "delete": {
+    "button": "حذف کنید",
+    "success": "شهر با موفقیت حذف شد",
+    "error": "هنگام حذف شهر خطایی روی داد",
+    "confirmTitle": "شهر را حذف کنید",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید {{name}} را حذف کنید؟"
+  },
+  "previous": "قبلی",
+  "next": "بعدی"
+}

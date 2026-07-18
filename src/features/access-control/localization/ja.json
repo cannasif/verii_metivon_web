@@ -1,0 +1,600 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "ルートおよびページ ガードによって使用される一意のキー。安定したsnake_caseまたはドット表記を推奨します。",
+      "name": "権限を管理するときに管理者に表示される表示名。",
+      "description": "この権限の内部説明 (オプション)。",
+      "isActive": "ユーザーアクセスが評価されるとき、非アクティブな権限は無視されます。",
+      "save": "変更は、役割とグループの承認フローに影響します。"
+    },
+    "permissionGroup": {
+      "name": "ユーザーに割り当てる際の識別に使用するグループ名。",
+      "isSystemAdmin": "このグループのメンバーは、個別の権限チェックを行わずに、すべてのページとアクションにアクセスできます。",
+      "isActive": "非アクティブなグループを新しいアクセス決定に割り当てるべきではありません。",
+      "permissions": "選択した権限により、このグループのメンバーがアクセスできる内容が定義されます。",
+      "save": "このグループに割り当てられているすべてのユーザーの実効アクセス権を更新します。"
+    },
+    "userAssignment": {
+      "user": "アクセス範囲を管理するユーザーを選択します。",
+      "groups": "ユーザーは、選択したすべてのグループから結合された権限を受け取ります。",
+      "save": "割り当ては、次回の承認チェックですぐに有効になります。ユーザーはセッションを更新する必要がある場合があります。",
+      "systemAdminNote": "ユーザーがシステム管理者グループに属している場合、詳細な権限はスキップされます。"
+    },
+    "visibilityPolicy": {
+      "code": "割り当ておよび監査フローでポリシーを認識できるように、一意のコードを使用します。",
+      "name": "管理者がポリシーを管理するときに表示される表示名。",
+      "includeSelf": "有効にすると、ユーザー自身のレコードがこのスコープ内で表示されたままになります。",
+      "isActive": "非アクティブなポリシーは、新しい割り当てやアクセス決定から除外されます。"
+    },
+    "userVisibilityAssignment": {
+      "user": "エンティティの可視性を管理するユーザーを選択します。",
+      "policy": "エンティティごとにアクティブな可視性ポリシーを 1 つ選択するか、空のままにします。",
+      "save": "ドロップダウンの変更は保存するまで適用されません。保存して適用すると、選択したすべてのカードがまとめて送信されます。"
+    }
+  },
+  "permissionDefinitions": {
+    "title": "権限の定義",
+    "description": "システム全体で使用される許可コードを管理する",
+    "add": "定義の追加",
+    "form": {
+      "editTitle": "権限定義の編集",
+      "addTitle": "権限定義の追加",
+      "editDescription": "権限定義の詳細を更新する",
+      "addDescription": "新しい権限定義を作成する",
+      "code": "コード",
+      "codePlaceholder": "コードを選択してください",
+      "affectedRoutes": "影響を受けるページ",
+      "affectedRoutesNone": "このコードに一致するルートが見つかりませんでした",
+      "name": "名前",
+      "namePlaceholder": "表示名",
+      "availableOnWeb": "ウェブ上で利用可能",
+      "availableOnWebHint": "この権限は、Web アプリのメニュー、ページ、アクションに使用できます。",
+      "availableOnMobile": "モバイルで利用可能",
+      "availableOnMobileHint": "この権限は、モバイル アプリのメニュー、画面、アクションに使用できます。",
+      "description": "説明",
+      "descriptionPlaceholder": "オプションの説明",
+      "isActive": "アクティブ",
+      "codeSearchPlaceholder": "検索...",
+      "codeEmpty": "結果が見つかりませんでした"
+    },
+    "table": {
+      "title": "権限の定義",
+      "code": "コード",
+      "name": "名前",
+      "platform": "プラットフォーム",
+      "isActive": "アクティブ",
+      "updatedDate": "更新されました",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "platform": {
+      "web": "ウェブ",
+      "mobile": "モバイル",
+      "both": "ウェブ + モバイル"
+    },
+    "delete": {
+      "confirmTitle": "権限定義の削除",
+      "confirmMessage": "「{{name}}」を削除してもよろしいですか?この操作は元に戻すことができません。"
+    },
+    "syncFromRoutes": "ルートから同期する"
+  },
+  "permissionGroups": {
+    "title": "権限グループ",
+    "description": "権限グループと割り当てを管理する",
+    "systemAdminLocked": "システム管理者グループは変更できません",
+    "add": "グループを追加",
+    "selectAll": "すべて選択",
+    "noDefinitions": "使用可能な権限定義がありません",
+    "form": {
+      "editTitle": "権限グループの編集",
+      "addTitle": "権限グループの追加",
+      "editDescription": "権限グループの詳細を更新する",
+      "addDescription": "新しい権限グループを作成する",
+      "name": "名前",
+      "namePlaceholder": "グループ名",
+      "description": "説明",
+      "descriptionPlaceholder": "オプションの説明",
+      "isSystemAdmin": "システム管理者",
+      "isActive": "アクティブ",
+      "permissions": "権限"
+    },
+    "table": {
+      "title": "権限グループ",
+      "name": "名前",
+      "isSystemAdmin": "システム管理者",
+      "isActive": "アクティブ",
+      "permissionCount": "権限",
+      "showing": "{{from}}-{{to}} / {{total}}",
+      "id": "レコードID"
+    },
+    "managePermissions": "権限の管理",
+    "permissionsPanel": {
+      "title": "グループ権限の編集",
+      "description": "このグループの権限を選択してください",
+      "currentCodes": "現在の許可コード",
+      "screen": "画面・許可エリア",
+      "groupedRows": "許可エリア",
+      "actionsMapped": "権限",
+      "actions": {
+        "create": "作成",
+        "read": "読む",
+        "update": "アップデート",
+        "delete": "削除",
+        "other": "その他"
+      },
+      "previewTitle": "グループ権限をプレビュー",
+      "previewDescription": "このグループに割り当てられた権限をすばやく確認します。"
+    },
+    "delete": {
+      "confirmTitle": "権限グループの削除",
+      "confirmMessage": "「{{name}}」を削除してもよろしいですか?この操作は元に戻すことができません。"
+    },
+    "search": "検索...",
+    "builtInLocked": "組み込みグループは変更できません。カスタムグループを作成してください。",
+    "presets": {
+      "systemAdministrators": {
+        "name": "システム管理者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "masterDataSpecialist": {
+        "name": "マスターデータ担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "purchasingSpecialist": {
+        "name": "購買担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "goodsReceiptOperator": {
+        "name": "入荷担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "warehouseOperator": {
+        "name": "倉庫担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "shippingOperator": {
+        "name": "出荷担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "salesSpecialist": {
+        "name": "販売担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "importCostSpecialist": {
+        "name": "輸入・原価担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "accountingSpecialist": {
+        "name": "会計担当者",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      },
+      "erpAuditor": {
+        "name": "ERP監査担当者（読み取り専用）",
+        "description": "最小権限で定義済みの ERP 業務プロファイルです。"
+      }
+    },
+    "previewPermissions": "割り当て済み権限をプレビュー",
+    "restoreDefaults": {
+      "button": "既定の権限グループを作成",
+      "title": "既定の権限グループを復元",
+      "description": "システム管理者、入荷、倉庫、出荷などの組み込み業務グループを安全な既定権限で復元します。カスタムグループには影響しません。",
+      "confirm": "復元",
+      "success": "{{count}} 件の既定権限グループを復元しました。"
+    }
+  },
+  "userGroupAssignments": {
+    "title": "ユーザーグループの割り当て",
+    "description": "ユーザーに権限グループを割り当てる",
+    "selectUser": "ユーザーの選択",
+    "selectUserPlaceholder": "ユーザーを検索して選択します...",
+    "selectUserHint": "権限グループの割り当てを管理するユーザーを選択してください",
+    "assignedGroups": "割り当てられた権限グループ",
+    "noUsers": "ユーザーが見つかりませんでした",
+    "noGroups": "使用可能な権限グループがありません",
+    "selectAll": "すべて選択"
+  },
+  "visibilityPolicies": {
+    "title": "可視性ポリシー",
+    "description": "誰がどのレコードを参照できるかを定義するポリシー セットを管理する",
+    "add": "ポリシーの追加",
+    "search": "検索ポリシー...",
+    "table": {
+      "title": "可視性ポリシーのリスト",
+      "code": "コード",
+      "name": "名前",
+      "entityType": "エンティティ",
+      "scopeType": "範囲",
+      "includeSelf": "自分自身を含める",
+      "isActive": "アクティブ",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "stats": {
+      "total": "総保険数",
+      "active": "アクティブなポリシー",
+      "entities": "エンティティの種類"
+    },
+    "form": {
+      "addTitle": "可視性ポリシーを追加する",
+      "editTitle": "可視性ポリシーの編集",
+      "addDescription": "新しい可視性ポリシー定義を作成する",
+      "editDescription": "選択した可視性ポリシー設定を更新します",
+      "code": "コード",
+      "codePlaceholder": "ERP_GOODS_RECEIPT_BRANCH",
+      "name": "名前",
+      "namePlaceholder": "入荷 — 同一支店",
+      "entityType": "エンティティ",
+      "entityTypePlaceholder": "エンティティの選択",
+      "scopeType": "範囲",
+      "scopeTypePlaceholder": "スコープの選択",
+      "description": "説明",
+      "descriptionPlaceholder": "オプションの簡単な説明",
+      "includeSelf": "ユーザー自身の記録を含める",
+      "isActive": "アクティブ",
+      "summaryTitle": "ポリシーの概要",
+      "summary": "{{scope}} スコープは {{entity}} レコードに適用されます。"
+    },
+    "scope": {
+      "self": "自分自身のみ",
+      "managerHierarchy": "マネージャーの階層",
+      "permissionGroup": "権限グループ",
+      "company": "全社",
+      "branch": "同一支店",
+      "warehouse": "倉庫範囲"
+    },
+    "entity": {
+      "businessPartner": "取引先",
+      "product": "在庫 / 製品",
+      "warehouse": "倉庫とロケーション",
+      "inventory": "在庫移動",
+      "goodsReceipt": "入荷",
+      "transferOrder": "倉庫間移動",
+      "shipment": "出荷と納品書",
+      "purchaseOrder": "購買発注",
+      "salesOrder": "販売受注",
+      "importDossier": "輸入案件",
+      "electronicDocument": "電子文書",
+      "accounting": "会計"
+    }
+  },
+  "userVisibilityAssignments": {
+    "title": "ユーザー可視性の割り当て",
+    "description": "ユーザーごとのエンティティ可視性ポリシーの割り当てを管理する",
+    "selectUser": "ユーザーの選択",
+    "selectedUser": "選択されたユーザー",
+    "selectUserPlaceholder": "ユーザーを検索して選択します...",
+    "selectUserHint": "可視性の割り当てを管理するユーザーを選択してください",
+    "assignedPolicies": "割り当てられたポリシー",
+    "status": "ステータス",
+    "ready": "最新の状態",
+    "unsavedChanges": "未保存",
+    "unsavedChangesCount": "{{count}} モジュールは保存を待機しています",
+    "upToDate": "最新の状態",
+    "pendingChange": "保存保留中",
+    "unsavedCardHint": "選択内容はまだ保存されていません。保存を押して適用します。",
+    "saveEntity": "保存",
+    "revert": "キャンセル",
+    "moduleSectionTitle": "モジュールの可視性",
+    "moduleSectionDescription": "各モジュールのポリシーを選択し、カードから保存します。",
+    "unassigned": "未割り当て",
+    "cardDescription": "このユーザーの {{entity}} レコードに適用される可視性ポリシーを選択します。",
+    "selectPolicyPlaceholder": "ポリシーの選択",
+    "noPolicy": "ポリシーなし",
+    "noPolicyCompanyHint": "[ポリシーなし] が選択されている場合、ユーザーはこのモジュール内のすべての会社/工場のレコードを表示できます。"
+  },
+  "visibilitySimulator": {
+    "title": "可視性シミュレータ",
+    "description": "選択したエンティティ タイプについて、選択したユーザーにどのユーザーのレコードとアクティブな承認オーバーライド レコードが表示されるかをテストします。",
+    "selectUser": "ユーザー",
+    "helpUser": "可視性をシミュレートするユーザーを選択します。",
+    "selectUserPlaceholder": "ユーザーを選択してください...",
+    "selectEntity": "エンティティ",
+    "helpEntity": "レコードの可視性をシミュレートするモジュールを選択します。",
+    "selectEntityPlaceholder": "エンティティの選択",
+    "recordId": "レコードID",
+    "recordIdPlaceholder": "例: 125",
+    "helpRecordId": "特定のレコード ID を入力して、表示、更新、削除、承認のアクションが許可されるかどうかをシミュレートします。",
+    "selectedUser": "選択されたユーザー",
+    "entity": "エンティティ",
+    "visibleUsers": "可視ユーザー",
+    "approvalOverrides": "承認オーバーライドレコード",
+    "visibleUsersTitle": "範囲内のユーザー",
+    "policyDefined": "ポリシーの定義",
+    "noPolicy": "ポリシーなし",
+    "companyWide": "全社的なアクセス",
+    "policyActive": "アクティブな可視性ポリシーが適用されます",
+    "includeSelf": "自分自身を含む",
+    "awaitingSelection": "最初にユーザーとエンティティを選択します",
+    "overrideTitle": "アクティブな承認オーバーライド レコード",
+    "noOverrides": "アクティブな承認オーバーライド レコードが見つかりません",
+    "overrideRecord": "レコード #{{id}}",
+    "auditTitle": "承認オーバーライド監査",
+    "noAudit": "アクティブな承認オーバーライド監査エントリが見つかりません",
+    "auditActionId": "承認アクション",
+    "auditRequestId": "承認リクエスト",
+    "auditFlow": "流れ",
+    "auditApprover": "承認者",
+    "auditStepValue": "ステップ {{step}} / 現在の {{currentStep}}",
+    "actionPanelTitle": "レコードレベルのアクションシミュレーション",
+    "noRecordSimulation": "レコードIDを入力すると、閲覧・更新・削除・承認の結果がここに表示されます。",
+    "actionAllowed": "許可される",
+    "actionDenied": "拒否されました",
+    "action": {
+      "view": "見る",
+      "update": "アップデート",
+      "delete": "削除",
+      "approve": "承認する"
+    },
+    "visibleUsersShowing": "{{from}} ～ {{to}} / {{total}} ユーザー",
+    "visibleUsersPage": "ページ {{page}} / {{totalPages}}",
+    "noVisibleUsers": "スコープ内にユーザーがいません"
+  },
+  "auditLogs": {
+    "title": "監査ログ",
+    "description": "重要なアクションを実行した人、その追跡、およびその終了方法を追跡します。",
+    "search": "監査ログを検索します...",
+    "results": {
+      "success": "成功",
+      "succeeded": "成功しました",
+      "warning": "警告",
+      "partial": "部分的",
+      "error": "エラー",
+      "failed": "失敗しました"
+    },
+    "filters": {
+      "result": "結果",
+      "actionType": "アクション",
+      "entityType": "エンティティ",
+      "entityId": "レコードID",
+      "performedByUserEmail": "出演者",
+      "source": "ソース",
+      "branchCode": "支店",
+      "requestPath": "リクエストパス",
+      "requestMethod": "方法",
+      "createdDate": "日付"
+    },
+    "clearTraceFilter": "トレースフィルターをクリア",
+    "viewDetail": "詳細",
+    "filterTrace": "フィルタートレース",
+    "loadError": "監査ログをロードできませんでした",
+    "stats": {
+      "total": "合計レコード",
+      "errors": "失敗した結果",
+      "traces": "アクティブなトレース"
+    },
+    "table": {
+      "title": "監査ログ一覧",
+      "createdDate": "日付",
+      "traceId": "トレースID",
+      "actionType": "アクション",
+      "entityType": "エンティティ",
+      "entityId": "レコードID",
+      "result": "結果",
+      "source": "ソース",
+      "performedBy": "出演者",
+      "branchCode": "支店",
+      "requestPath": "リクエストパス",
+      "requestMethod": "方法",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "detail": {
+      "title": "監査ログの詳細",
+      "description": "リクエストのコンテキストを検査し、選択したレコードの概要を変更します。",
+      "contextTitle": "アクションコンテキスト",
+      "requestTitle": "リクエストの概要",
+      "reason": "理由",
+      "failureReason": "障害の詳細",
+      "changedFieldsTitle": "変更されたフィールド",
+      "noChangedFields": "このレコードにはフィールド差分がありません。",
+      "oldValuesTitle": "古い価値観",
+      "newValuesTitle": "新しい価値観"
+    },
+    "traceDrillDown": {
+      "traceId": "選択されたトレース",
+      "startedAt": "に開始",
+      "completedAt": "完了時刻",
+      "entities": "タッチされたエンティティ",
+      "timelineTitle": "トレースフローの概要",
+      "openTrace": "このトレースを開く"
+    }
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "saving": "保存中...",
+    "save": "保存して適用する",
+    "loading": "読み込み中...",
+    "search": "検索...",
+    "noData": "データなし",
+    "actions": "アクション",
+    "yes": "はい",
+    "no": "いいえ",
+    "edit": "編集",
+    "delete": "削除",
+    "previous": "前へ",
+    "next": "次へ",
+    "processing": "処理中..."
+  },
+  "sidebar": {
+    "accessControl": "アクセス制御",
+    "permissionDefinitions": "権限の定義",
+    "permissionGroups": "権限グループ",
+    "userGroupAssignments": "ユーザーグループの割り当て",
+    "visibilityPolicies": "可視性ポリシー",
+    "userVisibilityAssignments": "ユーザー可視性の割り当て",
+    "auditLogs": "監査ログ",
+    "visibilitySimulator": "可視性シミュレータ",
+    "accessControlGuide": "アクセス制御ガイド"
+  },
+  "guide": {
+    "title": "アクセス制御ガイド",
+    "description": "このガイドでは、各アクセス制御画面の機能と各設定の変更内容について説明します。初めてモデルを見る人でも理解できるシステムを目指しています。",
+    "hero": {
+      "coreLogicLabel": "コアロジック",
+      "coreLogicValue": "権限は許可しますが、可視性は制限されます。",
+      "finalCheckLabel": "最終チェック",
+      "finalCheckValue": "シミュレータで検証します。"
+    },
+    "quickRulesTitle": "5 つの基本ルール",
+    "screensTitle": "各画面は何をするのでしょうか?",
+    "scenariosTitle": "シナリオベースの例",
+    "expectedResultLabel": "期待される結果",
+    "mistakesTitle": "よくある間違い",
+    "checklistTitle": "推奨されるセットアップ順序",
+    "faqTitle": "よくある質問",
+    "footer": {
+      "title": "短期決定ルール",
+      "body": "ユーザーがアクションを実行できない場合は、権限グループから始めます。ユーザーに表示されるレコードが多すぎる、または少なすぎる場合は、可視性から始めます。最終的な決定は常に可視性シミュレーターで確認してください。"
+    },
+    "quickRules": [
+      "ページの権限は別の問題であり、レコードの可視性も別の問題です。ユーザーはページに入っても、すべてのレコードを表示できない場合があります。",
+      "権限グループ画面は、ユーザーが開くことができるページと実行できるアクションを決定します。",
+      "可視性ポリシー画面により、そのページでユーザーにどのレコードが表示されるかが決まります。",
+      "ユーザーグループの割り当てでは、グループを割り当てます。ユーザー可視性の割り当ては、ユーザーベースの可視性の例外を定義します。",
+      "可視性シミュレータの結果を読まずにクリーチャーにルールを与えるのは危険です。必ずシミュレーターで結果をご確認ください。"
+    ],
+    "pageCards": [
+      {
+        "id": "許可グループ",
+        "title": "権限グループ",
+        "summary": "この画面は、ユーザーが表示できるモジュールと実行できるアクションを決定します。",
+        "bullets": [
+          "見積画面を開きたい場合は、`receiving.goods-receipts.view` のように表示権限を与える必要があります。",
+          "新しい見積を作成するには、同じグループに「receiving.goods-receipts.create」権限が必要です。",
+          "更新したい場合は `receiving.goods-receipts.update` が必要で、削除したい場合は `receiving.goods-receipts.delete` が必要です。",
+          "ここでの権限により、ページとアクションのドアが開きます。どのレコードを表示するかを決定するのはそれだけではありません。"
+        ]
+      },
+      {
+        "id": "ユーザーグループの割り当て",
+        "title": "ユーザーグループの割り当て",
+        "summary": "この画面は、1 つ以上の権限グループをユーザーにバインドするために使用されます。",
+        "bullets": [
+          "ユーザーが選択され、次にそのユーザーが持つグループが選択されます。",
+          "ユーザーが複数のグループに属している場合、権限は結合されます。言い換えれば、一方のグループの権限は他方のグループもサポートします。",
+          "ユーザーに間違ったグループを与えると、定義したことのないページにアクセスできるようになる可能性があります。",
+          "この画面は、営業担当者、管理者、運用、システム管理者などの役割の割り当てに最もよく使用されます。"
+        ]
+      },
+      {
+        "id": "可視性ポリシー",
+        "title": "可視性ポリシー",
+        "summary": "この画面では、オファー、アクティビティ、リクエスト、注文などのレコードを誰が参照するかをルールに基づいて定義します。",
+        "bullets": [
+          "ユーザーがページに入ったとしても、関連するエンティティのルールがない場合は、ポリシー ロジックで許可されている数のレコードのみが表示されます。",
+          "ここでのスコープの選択により、システムの動作が変更されます。変更されるのは、システム自身のレコードのみ、所属チーム、会社全体などです。",
+          "同じ画面で、オファーやアクティビティなどのさまざまな資産に対してさまざまな可視性モデルを定義できます。",
+          "ポリシーがアクティブであっても、間違ったエンティティに対して定義されている場合、期待した効果は決して発生しません。"
+        ]
+      },
+      {
+        "id": "ユーザー可視性割り当て",
+        "title": "ユーザー可視性の割り当て",
+        "summary": "この画面は、ユーザーベースの可視性の例外を許可するために使用されます。",
+        "bullets": [
+          "標準ルールでは不十分な場合は、別のエンティティベースの可視性ポリシーを特定のユーザーにバインドできます。",
+          "この構造は、一般的なルールを破ることなく、単一の管理者または特別なユーザーに異なる表示を与えるのに理想的です。",
+          "会社全体に影響するルールではなく例外を定義したい場合は、ここで作業する必要があります。",
+          "この画面ではグループ権限は付​​与されません。レコードの可視性が変更されるだけです。"
+        ]
+      },
+      {
+        "id": "可視性シミュレータ",
+        "title": "可視性シミュレータ",
+        "summary": "この画面では、ユーザー、エンティティ、レコードが選択されたときにシステムが実際に何を表示するかをテストします。",
+        "bullets": [
+          "ルールを作成したが結果がわからない場合は、ここでユーザーとエンティティ タイプを選択し、表示されているユーザーを読み取ることができます。",
+          "特定のレコードの ID 値を入力すると、そのレコードの結果が計算されます。",
+          "承認の上書きや監査記録がある場合、シミュレーターにはそれも表示されます。",
+          "この画面は、公開前に結果が正しいかどうかという質問に対する最も安全な答えです。"
+        ]
+      },
+      {
+        "id": "許可の定義",
+        "title": "権限の定義",
+        "summary": "この画面は操作上の必要性を目的としたものではなく、システム カタログのロジックを理解するための参考として使用されます。",
+        "bullets": [
+          "許可コードは自動同期ロジックで管理されるようになりました。",
+          "結局のところ、管理者の主なワークスペースは権限グループと割り当て画面です。",
+          "新しいルートまたは新しい許可カタログが到着すると、システムは自動的にカタログを作成するように設定されます。"
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "s1",
+        "title": "シナリオ 1: 営業担当者は自分の見積書のみを参照する",
+        "target": "彼にオファー画面に入り、新しいオファーを開かせますが、他の人のオファーは表示しないようにします。",
+        "steps": [
+          "権限グループ画面で、必要に応じて使用するグループに「receiving.goods-receipts.view」と「receiving.goods-receipts.create」を追加します。",
+          "ユーザーグループ割り当て画面から、このグループを該当する営業担当者に割り当てます。",
+          "[可視性ポリシー] 画面で、見積エンティティが独自のレコードのみを表示するポリシーを定義します。",
+          "必要に応じて、ユーザー可視性の割り当て画面からこのポリシーをユーザーにリンクします。"
+        ],
+        "result": "ユーザーはオファー ページを開いて新しいオファーを作成できますが、リストには自分の権限の範囲内にあるオファーのみが表示されます。"
+      },
+      {
+        "id": "s2",
+        "title": "シナリオ 2: 営業マネージャーにチームの活動を見てもらう",
+        "target": "マネージャーはチームの活動を追跡しますが、会社のデータをすべて確認できるわけではありません。",
+        "steps": [
+          "権限グループ画面で、該当する管理者グループに「warehouses.warehouse-management.view」権限を追加します。",
+          "アクティビティを更新する場合は、「warehouses.warehouse-management.update」権限も追加します。",
+          "[可視性ポリシー] 画面で、アクティビティ エンティティのチーム バインド スコープを定義するポリシーを有効にします。",
+          "このポリシーを管理者ユーザーまたは適切な管理者グループのユーザーに直接リンクします。"
+        ],
+        "result": "マネージャーはアクティビティ画面に入り、自分のチームに関連するアクティビティのみを表示します。無関係なユーザーのアクティビティはリストされません。"
+      },
+      {
+        "id": "s3",
+        "title": "シナリオ 3: ユーザーは注文を追跡することのみができ、注文を作成することはできません",
+        "target": "注文画面に入るはずですが、新しい注文を開くことができません。",
+        "steps": [
+          "権限グループ画面で「sales.orders.view」権限を付与します。",
+          "同じグループに「sales.orders.create」権限を付与しないでください。",
+          "ユーザーグループ割り当て画面からこのグループをユーザーに割り当てます。"
+        ],
+        "result": "ユーザーは注文リストを開くことができます。ただし、権限がないため新規注文ボタンやフロー作成は使用できません。"
+      },
+      {
+        "id": "s4",
+        "title": "シナリオ 4: 承認プロセス内のオファーが監査目的で表示される",
+        "target": "通常の可視範囲外のレコードが承認効果とともに表示される理由を説明できるはずです。",
+        "steps": [
+          "まず、可視性シミュレーター画面で、ユーザー、エンティティとして GoodsReceipt、および対応するレコード ID を選択します。",
+          "監査結果をプレビューして確認します。",
+          "承認の上書きがある場合は、監査領域に表示されます。"
+        ],
+        "result": "したがって、なぜレコードが表示されるのかという質問に対する答えは、推測ではなく、システムの監査データによって読み取られます。"
+      }
+    ],
+    "mistakes": [
+      "表示ルールのみを定義し、ページ権限を付与しません。結果: ユーザーはページにまったく入ることができません。",
+      "ページに権限を付与するだけで、可視性ルールについては考慮しません。結果: 予想よりも多くのレコードが表示される可能性があります。",
+      "ユーザーに複数のグループを割り当て、結合された権限の効果を考慮していない。",
+      "シミュレータでテストせずにライブ データのポリシーを公開します。",
+      "見積、活動、要求、および注文エンティティ タイプの混合。"
+    ],
+    "checklist": [
+      "まず、ユーザーがどのページに入るべきかを明確にします。",
+      "次に、そのページで実行する必要があるアクションを選択します。",
+      "次に、そのエンティティに対して表示されるレコードの可視性を制限します。",
+      "必要に応じて、ユーザー可視性の割り当てを使用してユーザーベースの例外を許可します。",
+      "最新の可視性シミュレーターを使用して結果をテストします。"
+    ],
+    "faqs": [
+      {
+        "id": "よくある質問1",
+        "question": "ユーザーはオファー ページに入ることができますが、レコードは表示されません。どこから？",
+        "answer": "ページ権限はありますが、可視性ルールによりレコードが制限されます。クリアランスは適切である可能性がありますが、視界が欠けているか、狭すぎる可能性があります。"
+      },
+      {
+        "id": "よくある質問2",
+        "question": "ユーザーはオファーを追加できません。どこから？",
+        "answer": "通常、「receiving.goods-receipts.create」権限がありません。閲覧許可画面を開きます。作成権限は、新しいレコードを開く権限を与えます。"
+      },
+      {
+        "id": "よくある質問3",
+        "question": "ユーザーが参照するレコードが多すぎます。どこから始めればよいでしょうか?",
+        "answer": "まず、接続している権限グループを確認します。次に、エンティティ固有の可視性ポリシーとユーザー可視性割り当てレコードを確認します。最後に、同じユーザーをシミュレーターでテストします。"
+      }
+    ]
+  }
+}

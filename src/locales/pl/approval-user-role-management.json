@@ -1,0 +1,53 @@
+{
+  "approvalUserRole": {
+    "menu": "Zarządzanie rolami użytkowników zatwierdzających",
+    "description": "Zarządzaj i organizuj role użytkowników zatwierdzających",
+    "addButton": "Dodaj nową rolę",
+    "searchPlaceholder": "Szukaj...",
+    "refresh": "Odśwież",
+    "loading": "Ładowanie...",
+    "noData": "Brak danych",
+    "table": {
+      "id": "Identyfikator",
+      "userFullName": "Użytkownik",
+      "approvalRoleName": "Rola zatwierdzająca",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "actions": "Działania",
+      "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+      "page": "Strona {{current}} / {{total}}",
+      "previous": "Poprzedni",
+      "next": "Następny",
+      "title": "Zatwierdzanie ról użytkowników"
+    },
+    "delete": {
+      "title": "Usuń rolę",
+      "confirmMessage": "Czy na pewno chcesz usunąć tę rolę użytkownika?",
+      "confirmButton": "Usuń",
+      "cancelButton": "Anuluj"
+    },
+    "form": {
+      "editTitle": "Edytuj rolę użytkownika zatwierdzającego",
+      "addTitle": "Dodaj nową rolę użytkownika zatwierdzającego",
+      "editDescription": "Edytuj informacje o roli użytkownika zatwierdzającego",
+      "addDescription": "Wprowadź nowe informacje o roli użytkownika zatwierdzającego",
+      "userId": "Użytkownik",
+      "selectUser": "Wybierz opcję Użytkownik",
+      "noUserSelected": "Nie wybrano użytkownika",
+      "approvalRoleId": "Rola zatwierdzająca",
+      "selectApprovalRole": "Wybierz rolę zatwierdzania",
+      "noApprovalRoleSelected": "Nie wybrano roli zatwierdzającej",
+      "userIdRequired": "Wymagany jest wybór użytkownika",
+      "approvalRoleIdRequired": "Wymagany jest wybór roli zatwierdzającej",
+      "save": "Zapisz",
+      "saving": "Zapisywanie...",
+      "cancel": "Anuluj"
+    },
+    "advancedFilter": {
+      "columnUserFullName": "Użytkownik",
+      "columnApprovalRoleName": "Rola zatwierdzająca",
+      "columnCreatedBy": "Stworzony przez"
+    },
+    "error": "Wystąpił błąd"
+  }
+}

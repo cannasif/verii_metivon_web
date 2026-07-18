@@ -1,0 +1,120 @@
+{
+  "countryManagement": {
+    "menu": "国の管理",
+    "description": "国の管理と規制",
+    "addButton": "新しい国を追加",
+    "searchPlaceholder": "検索...",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "table": {
+      "id": "ID",
+      "name": "国名",
+      "code": "コード",
+      "erpCode": "ERPコード",
+      "createdDate": "作成日",
+      "createdBy": "作成者",
+      "noData": "データが見つかりませんでした",
+      "title": "国リスト"
+    },
+    "delete": {
+      "confirmTitle": "国の削除",
+      "confirmMessage": "{{name}} 国を削除してもよろしいですか?"
+    },
+    "messages": {
+      "deleteSuccess": "国は正常に削除されました",
+      "deleteError": "国を削除できませんでした",
+      "createSuccess": "国が正常に作成されました",
+      "createError": "国を作成できませんでした",
+      "updateSuccess": "国が正常に更新されました",
+      "updateError": "国を更新できませんでした"
+    },
+    "form": {
+      "addCountry": "新しい国を追加",
+      "editCountry": "国の編集",
+      "addDescription": "新しい国の情報を入力してください",
+      "editDescription": "国情報を編集する",
+      "name": "国名",
+      "namePlaceholder": "国名を入力してください",
+      "code": "国コード",
+      "codePlaceholder": "国コードを入力してください (例: TR、US)",
+      "erpCode": "ERPコード",
+      "erpCodePlaceholder": "ERPコードを入力してください(オプション)",
+      "nameRequired": "国名は必須です",
+      "nameMaxLength": "国名は最大 100 文字まで入力できます",
+      "codeMinLength": "国コードは少なくとも 2 文字である必要があります",
+      "codeMaxLength": "国コードは最大 5 文字です",
+      "erpCodeMaxLength": "ERP コードは最大 10 文字です。",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "tabs": {
+        "header": "一般情報"
+      }
+    },
+    "stats": {
+      "totalCountries": "国全体",
+      "activeCountries": "活動している国",
+      "newThisMonth": "今月の新商品"
+    }
+  },
+  "menu": "国の管理",
+  "description": "国の管理と規制",
+  "addButton": "新しい国を追加",
+  "search": "検索...",
+  "loading": "読み込み中...",
+  "noData": "データが見つかりませんでした",
+  "actions": "取引",
+  "previous": "前へ",
+  "next": "次へ",
+  "deleteConfirmTitle": "削除の確認",
+  "cancel": "キャンセル",
+  "deleting": "削除中...",
+  "delete": {
+    "confirmTitle": "国の削除",
+    "confirmMessage": "{{name}} 国を削除してもよろしいですか?"
+  },
+  "saving": "録音中...",
+  "save": "保存",
+  "stats": {
+    "totalCountries": "国全体",
+    "activeCountries": "活動している国",
+    "newThisMonth": "今月の新商品"
+  },
+  "table": {
+    "id": "ID",
+    "name": "国名",
+    "code": "コード",
+    "erpCode": "ERPコード",
+    "createdDate": "作成日",
+    "createdBy": "作成者",
+    "showing": "{{from}}-{{to}} / {{total}} を表示中",
+    "page": "ページ {{current}} / {{total}}",
+    "noData": "データが見つかりませんでした",
+    "title": "国リスト"
+  },
+  "advancedFilter": {
+    "columnName": "国名",
+    "columnCode": "国コード",
+    "columnErpCode": "ERPコード"
+  },
+  "form": {
+    "addCountry": "新しい国を追加",
+    "editCountry": "国の編集",
+    "addDescription": "新しい国の情報を入力してください",
+    "editDescription": "国情報を編集する",
+    "name": "国名",
+    "namePlaceholder": "国名を入力してください",
+    "code": "国コード",
+    "codePlaceholder": "国コードを入力してください (例: TR、US)",
+    "erpCode": "ERPコード",
+    "erpCodePlaceholder": "ERPコードを入力してください(オプション)",
+    "nameRequired": "国名は必須です",
+    "nameMaxLength": "国名は最大 100 文字まで入力できます",
+    "codeMinLength": "国コードは少なくとも 2 文字である必要があります",
+    "codeMaxLength": "国コードは最大 5 文字です",
+    "erpCodeMaxLength": "ERP コードは最大 10 文字です。"
+  },
+  "deleteConfirm": {
+    "confirmMessage": "{{name}} 国を削除してもよろしいですか?"
+  },
+  "searchPlaceholder": "検索..."
+}

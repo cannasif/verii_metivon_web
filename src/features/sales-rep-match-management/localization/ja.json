@@ -1,0 +1,44 @@
+{
+  "menu": "営業担当者のマッチング管理",
+  "description": "営業担当者コードとユーザーの一致を表示、追加、削除します。",
+  "addButton": "新しいマッチ",
+  "searchPlaceholder": "営業担当者コード、ユーザー、または電子メールを検索します",
+  "empty": "一致する営業担当者は見つかりませんでした。",
+  "error": "営業担当者の一致をロードできませんでした。",
+  "deleteConfirmMessage": "{{salesRep}} と {{user}} のペアを削除しますか?",
+  "table": {
+    "title": "営業担当者の一致リスト",
+    "salesRepCode": "営業担当者コード",
+    "salesRepName": "営業担当者名",
+    "userFullName": "ユーザー",
+    "username": "ユーザー名",
+    "userEmail": "電子メール",
+    "createdDate": "作成日"
+  },
+  "form": {
+    "addTitle": "新規営業担当者マッチ",
+    "addDescription": "営業担当者のレコードとユーザーを照合します。",
+    "salesRep": "営業担当者",
+    "salesRepPlaceholder": "営業担当者の選択",
+    "salesRepSearchPlaceholder": "営業担当者を探す",
+    "user": "ユーザー",
+    "userPlaceholder": "ユーザーの選択",
+    "userSearchPlaceholder": "ユーザーを検索する",
+    "validation": {
+      "salesRepRequired": "営業担当者の選択は必須です。",
+      "userRequired": "ユーザーの選択は必須です。"
+    }
+  },
+  "messages": {
+    "createSuccess": "営業担当者の一致が作成されました。",
+    "createError": "営業担当者の一致を作成できませんでした。",
+    "deleteSuccess": "営業担当者の一致は削除されました。",
+    "deleteError": "営業担当者の一致を削除できませんでした。"
+  },
+  "advancedFilter": {
+    "columnSalesRepCode": "営業担当者コード",
+    "columnSalesRepName": "営業担当者名",
+    "columnUsername": "ユーザー名",
+    "columnEmail": "電子メール"
+  }
+}

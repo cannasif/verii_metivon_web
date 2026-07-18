@@ -1,0 +1,35 @@
+{
+  "menu": "Gerenciamento de tipos de vendas",
+  "description": "Gerenciar e editar tipos de vendas",
+  "addButton": "Adicionar novo tipo de vendas",
+  "searchPlaceholder": "Pesquisar tipo de venda...",
+  "advancedFilter": {
+    "columnName": "Nome",
+    "columnCode": "Código",
+    "columnSalesType": "Tipo de oferta"
+  },
+  "table": {
+    "title": "Lista de tipos de vendas",
+    "salesType": "Tipo de oferta",
+    "name": "Nome",
+    "code": "Código",
+    "createdDate": "Data de criação"
+  },
+  "form": {
+    "addTitle": "Adicionar novo tipo de vendas",
+    "editTitle": "Editar tipo de venda",
+    "addDescription": "Crie uma nova definição de tipo de vendas.",
+    "editDescription": "Atualize a definição de tipo de vendas existente.",
+    "salesType": "Tipo de oferta",
+    "name": "Nome",
+    "namePlaceholder": "Insira o nome do tipo de venda",
+    "code": "Código",
+    "codePlaceholder": "Ex. 1 ou FOB",
+    "codeHelp": "É opcional. Quando o pedido é transferido para a Netsis, ele é enviado como código de tipo de exportação/entrega, se houver; Se estiver vazio, o padrão FOB será usado para o exterior.",
+    "validation": {
+      "required": "O nome é obrigatório",
+      "whitespace": "O nome não pode estar vazio ou apenas espaços",
+      "codeMaxLength": "O código pode ter até 50 caracteres"
+    }
+  }
+}

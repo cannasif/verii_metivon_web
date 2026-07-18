@@ -1,0 +1,120 @@
+{
+  "countryManagement": {
+    "menu": "Zarządzanie krajem",
+    "description": "Zarządzaj i reguluj kraje",
+    "addButton": "Dodaj nowy kraj",
+    "searchPlaceholder": "Szukaj...",
+    "loading": "Ładowanie...",
+    "error": "Wystąpił błąd",
+    "table": {
+      "id": "Identyfikator",
+      "name": "Nazwa kraju",
+      "code": "Kod",
+      "erpCode": "Kod ERP",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "noData": "Nie znaleziono danych",
+      "title": "Lista krajów"
+    },
+    "delete": {
+      "confirmTitle": "Usuń kraj",
+      "confirmMessage": "Czy na pewno chcesz usunąć kraj {{name}}?"
+    },
+    "messages": {
+      "deleteSuccess": "Kraj został pomyślnie usunięty",
+      "deleteError": "Nie można usunąć kraju",
+      "createSuccess": "Kraj został utworzony pomyślnie",
+      "createError": "Nie można utworzyć kraju",
+      "updateSuccess": "Kraj został pomyślnie zaktualizowany",
+      "updateError": "Nie można zaktualizować kraju"
+    },
+    "form": {
+      "addCountry": "Dodaj nowy kraj",
+      "editCountry": "Edytuj kraj",
+      "addDescription": "Wprowadź nowe informacje o kraju",
+      "editDescription": "Edytuj informacje o kraju",
+      "name": "Nazwa kraju",
+      "namePlaceholder": "Wpisz nazwę kraju",
+      "code": "Kod kraju",
+      "codePlaceholder": "Wprowadź kod kraju (np. TR, US)",
+      "erpCode": "Kod ERP",
+      "erpCodePlaceholder": "Wpisz kod ERP (opcjonalnie)",
+      "nameRequired": "Nazwa kraju jest wymagana",
+      "nameMaxLength": "Nazwa kraju może mieć maksymalnie 100 znaków",
+      "codeMinLength": "Kod kraju musi składać się z co najmniej 2 znaków",
+      "codeMaxLength": "Kod kraju może mieć maksymalnie 5 znaków",
+      "erpCodeMaxLength": "Kod ERP może składać się maksymalnie z 10 znaków",
+      "cancel": "Anuluj",
+      "save": "Zapisz",
+      "tabs": {
+        "header": "Informacje ogólne"
+      }
+    },
+    "stats": {
+      "totalCountries": "Razem kraj",
+      "activeCountries": "Aktywny kraj",
+      "newThisMonth": "Nowość w tym miesiącu"
+    }
+  },
+  "menu": "Zarządzanie krajem",
+  "description": "Zarządzaj i reguluj kraje",
+  "addButton": "Dodaj nowy kraj",
+  "search": "Szukaj...",
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "actions": "Transakcje",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "deleteConfirmTitle": "Potwierdzenie usunięcia",
+  "cancel": "Anuluj",
+  "deleting": "Usuwanie...",
+  "delete": {
+    "confirmTitle": "Usuń kraj",
+    "confirmMessage": "Czy na pewno chcesz usunąć kraj {{name}}?"
+  },
+  "saving": "Nagrywanie...",
+  "save": "Zapisz",
+  "stats": {
+    "totalCountries": "Razem kraj",
+    "activeCountries": "Aktywny kraj",
+    "newThisMonth": "Nowość w tym miesiącu"
+  },
+  "table": {
+    "id": "Identyfikator",
+    "name": "Nazwa kraju",
+    "code": "Kod",
+    "erpCode": "Kod ERP",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez",
+    "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+    "page": "Strona {{current}} / {{total}}",
+    "noData": "Nie znaleziono danych",
+    "title": "Lista krajów"
+  },
+  "advancedFilter": {
+    "columnName": "Nazwa kraju",
+    "columnCode": "Kod kraju",
+    "columnErpCode": "Kod ERP"
+  },
+  "form": {
+    "addCountry": "Dodaj nowy kraj",
+    "editCountry": "Edytuj kraj",
+    "addDescription": "Wprowadź nowe informacje o kraju",
+    "editDescription": "Edytuj informacje o kraju",
+    "name": "Nazwa kraju",
+    "namePlaceholder": "Wpisz nazwę kraju",
+    "code": "Kod kraju",
+    "codePlaceholder": "Wprowadź kod kraju (np. TR, US)",
+    "erpCode": "Kod ERP",
+    "erpCodePlaceholder": "Wpisz kod ERP (opcjonalnie)",
+    "nameRequired": "Nazwa kraju jest wymagana",
+    "nameMaxLength": "Nazwa kraju może mieć maksymalnie 100 znaków",
+    "codeMinLength": "Kod kraju musi składać się z co najmniej 2 znaków",
+    "codeMaxLength": "Kod kraju może mieć maksymalnie 5 znaków",
+    "erpCodeMaxLength": "Kod ERP może składać się maksymalnie z 10 znaków"
+  },
+  "deleteConfirm": {
+    "confirmMessage": "Czy na pewno chcesz usunąć kraj {{name}}?"
+  },
+  "searchPlaceholder": "Szukaj..."
+}

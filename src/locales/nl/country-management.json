@@ -1,0 +1,120 @@
+{
+  "countryManagement": {
+    "menu": "Landenbeheer",
+    "description": "Landen beheren en reguleren",
+    "addButton": "Nieuw land toevoegen",
+    "searchPlaceholder": "Zoeken...",
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden",
+    "table": {
+      "id": "Identiteitskaart",
+      "name": "Landnaam",
+      "code": "Codeer",
+      "erpCode": "ERP-code",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "noData": "Geen gegevens gevonden",
+      "title": "Landenlijst"
+    },
+    "delete": {
+      "confirmTitle": "Land verwijderen",
+      "confirmMessage": "Weet u zeker dat u land {{name}} wilt verwijderen?"
+    },
+    "messages": {
+      "deleteSuccess": "Land succesvol verwijderd",
+      "deleteError": "Land kan niet worden verwijderd",
+      "createSuccess": "Land is succesvol aangemaakt",
+      "createError": "Land kan niet worden gemaakt",
+      "updateSuccess": "Land is succesvol bijgewerkt",
+      "updateError": "Land kan niet worden bijgewerkt"
+    },
+    "form": {
+      "addCountry": "Nieuw land toevoegen",
+      "editCountry": "Land bewerken",
+      "addDescription": "Voer nieuwe landinformatie in",
+      "editDescription": "Landinformatie bewerken",
+      "name": "Landnaam",
+      "namePlaceholder": "Voer de landnaam in",
+      "code": "Landcode",
+      "codePlaceholder": "Voer de landcode in (bijvoorbeeld: TR, US)",
+      "erpCode": "ERP-code",
+      "erpCodePlaceholder": "ERP-code invoeren (optioneel)",
+      "nameRequired": "Landnaam is vereist",
+      "nameMaxLength": "De landnaam mag maximaal 100 tekens lang zijn",
+      "codeMinLength": "De landcode moet minimaal 2 tekens lang zijn",
+      "codeMaxLength": "De landcode kan maximaal 5 tekens lang zijn",
+      "erpCodeMaxLength": "ERP-code mag maximaal 10 tekens lang zijn",
+      "cancel": "Annuleer",
+      "save": "Opslaan",
+      "tabs": {
+        "header": "Algemene informatie"
+      }
+    },
+    "stats": {
+      "totalCountries": "Totaal land",
+      "activeCountries": "Actief land",
+      "newThisMonth": "Nieuw deze maand"
+    }
+  },
+  "menu": "Landenbeheer",
+  "description": "Landen beheren en reguleren",
+  "addButton": "Nieuw land toevoegen",
+  "search": "Zoeken...",
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "actions": "Transacties",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "deleteConfirmTitle": "Bevestiging van verwijdering",
+  "cancel": "Annuleer",
+  "deleting": "Verwijderen...",
+  "delete": {
+    "confirmTitle": "Land verwijderen",
+    "confirmMessage": "Weet u zeker dat u land {{name}} wilt verwijderen?"
+  },
+  "saving": "Opnemen...",
+  "save": "Opslaan",
+  "stats": {
+    "totalCountries": "Totaal land",
+    "activeCountries": "Actief land",
+    "newThisMonth": "Nieuw deze maand"
+  },
+  "table": {
+    "id": "Identiteitskaart",
+    "name": "Landnaam",
+    "code": "Codeer",
+    "erpCode": "ERP-code",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door",
+    "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+    "page": "Pagina {{current}} / {{total}}",
+    "noData": "Geen gegevens gevonden",
+    "title": "Landenlijst"
+  },
+  "advancedFilter": {
+    "columnName": "Landnaam",
+    "columnCode": "Landcode",
+    "columnErpCode": "ERP-code"
+  },
+  "form": {
+    "addCountry": "Nieuw land toevoegen",
+    "editCountry": "Land bewerken",
+    "addDescription": "Voer nieuwe landinformatie in",
+    "editDescription": "Landinformatie bewerken",
+    "name": "Landnaam",
+    "namePlaceholder": "Voer de landnaam in",
+    "code": "Landcode",
+    "codePlaceholder": "Voer de landcode in (bijvoorbeeld: TR, US)",
+    "erpCode": "ERP-code",
+    "erpCodePlaceholder": "ERP-code invoeren (optioneel)",
+    "nameRequired": "Landnaam is vereist",
+    "nameMaxLength": "De landnaam mag maximaal 100 tekens lang zijn",
+    "codeMinLength": "De landcode moet minimaal 2 tekens lang zijn",
+    "codeMaxLength": "De landcode kan maximaal 5 tekens lang zijn",
+    "erpCodeMaxLength": "ERP-code mag maximaal 10 tekens lang zijn"
+  },
+  "deleteConfirm": {
+    "confirmMessage": "Weet u zeker dat u land {{name}} wilt verwijderen?"
+  },
+  "searchPlaceholder": "Zoeken..."
+}

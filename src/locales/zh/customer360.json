@@ -1,0 +1,268 @@
+{
+  "title": "客户360",
+  "notFound": "未找到客户",
+  "error": "发生错误",
+  "retry": "再试一次",
+  "quickActivity": "快速活动",
+  "currencyFilter": {
+    "label": "货币",
+    "all": "全部"
+  },
+  "balanceDialog": {
+    "openButton": "当前余额汇总",
+    "title": "当前余额摘要",
+    "error": "无法加载 ERP 余额摘要。"
+  },
+  "tabs": {
+    "quotations": "优惠",
+    "orders": "订单",
+    "activities": "活动",
+    "overview": "总结",
+    "analytics": "分析",
+    "quickQuotations": "快速报价",
+    "erpMovements": "ERP运动",
+    "erpOrders": "ERP订单",
+    "mailLogs": "电子邮件历史记录",
+    "images": "图片",
+    "imagesDefaultDescription": "名片图片"
+  },
+  "quickQuotations": {
+    "empty": "没有找到这位妃子的快速报价",
+    "error": "快速报价加载失败",
+    "draft": "草案",
+    "converted": "返回报价",
+    "sentToApproval": "送交批准",
+    "notSentToApproval": "没有去审批",
+    "currency": "货币",
+    "total": "合计",
+    "quotationStatus": "报价状态",
+    "approvalStep": "确认步骤",
+    "stepValue": "步骤 {{step}}",
+    "convertedAt": "转换：{{date}}",
+    "notConvertedYet": "还没有变成offer",
+    "openQuotation": "公开发售"
+  },
+  "erpMovements": {
+    "title": "ERP运动",
+    "tableTitle": "当前动向",
+    "error": "加载 ERP 交易数据失败",
+    "columns": {
+      "date": "日期",
+      "dueDate": "到期日",
+      "documentNo": "文件编号",
+      "description": "描述",
+      "currency": "货币",
+      "debit": "债务",
+      "credit": "应收账款",
+      "tlBalanceByDate": "订购日期 TL 余额",
+      "tlBalanceByDueDate": "到期顺序 TL 平衡",
+      "fxDebit": "外汇债务",
+      "fxCredit": "应收外币",
+      "fxBalanceByDate": "订购日期 货币余额",
+      "fxBalanceByDueDate": "到期顺序 外汇余额",
+      "actions": "交易"
+    },
+    "detail": {
+      "button": "详情",
+      "title": "文件笔细节",
+      "description": "Netsis 库存商品的文档编号为 {{documentNo}}。",
+      "error": "无法加载文档项目。",
+      "empty": "未找到此文档的库存项目。",
+      "columns": {
+        "stockCode": "股票代码",
+        "stockName": "股票名称",
+        "quantity": "数量",
+        "grossPrice": "总价",
+        "netPrice": "净价",
+        "grossAmount": "销售总额",
+        "discountAmount": "折扣金额",
+        "vatAmount": "增值税金额",
+        "total": "金额",
+        "fxPrice": "外币价格",
+        "fxAmount": "外币金额"
+      }
+    },
+    "summary": {
+      "totalDebit": "总债务",
+      "totalCredit": "应收账款总额",
+      "balance": "平衡",
+      "closed": "关闭"
+    }
+  },
+  "erpOrders": {
+    "title": "网络订单",
+    "noCariCode": "没有为此客户定义 ERP 当前代码。 Netsis订单无法查看。",
+    "forbidden": "您无权查看 ERP 订单。",
+    "error": "无法加载 ERP 订单。",
+    "empty": "未找到此往来账户的 Netsis 订单。",
+    "scopeHint": "该列表仅限于登录用户的 Netsis 范围内的订单。",
+    "columns": {
+      "branch": "分行",
+      "orderNo": "订单号",
+      "date": "日期",
+      "deliveryDate": "发货",
+      "gross": "毛重",
+      "vat": "增值税",
+      "total": "合计",
+      "salesRep": "推销员"
+    }
+  },
+  "mail": {
+    "providers": {
+      "google": "谷歌",
+      "outlook": "展望"
+    },
+    "columns": {
+      "date": "日期",
+      "sender": "发表者",
+      "to": "买家",
+      "subject": "主题",
+      "status": "状态",
+      "template": "模板",
+      "errorCode": "错误代码",
+      "body": "留言"
+    }
+  },
+  "kpi": {
+    "totalDemands": "总报价",
+    "totalQuotations": "总报价",
+    "totalOrders": "总订单",
+    "openQuotations": "公开发售",
+    "openOrders": "待处理订单"
+  },
+  "sections": {
+    "contacts": "通讯",
+    "shippingAddresses": "送货地址",
+    "recentDemands": "最新请求",
+    "recentQuotations": "最新优惠",
+    "recentOrders": "最新订单",
+    "recentActivities": "最新活动",
+    "timeline": "时间轴"
+  },
+  "analytics": {
+    "error": "无法加载分析数据",
+    "last12MonthsOrderAmount": "过去 12 个月订单金额",
+    "openQuotationAmount": "公开投标金额",
+    "openOrderAmount": "未结订单金额",
+    "activityCount": "活动数量",
+    "lastActivityDate": "最后活动日期"
+  },
+  "analyticsCharts": {
+    "demand": "优惠",
+    "quotation": "优惠",
+    "order": "订单",
+    "last12MonthsOrderAmount": "过去 12 个月的订单",
+    "openQuotationAmount": "公开发售",
+    "openOrderAmount": "开放订单",
+    "distributionTitle": "分布",
+    "monthlyTrendTitle": "每月趋势",
+    "amountComparisonTitle": "金额比较"
+  },
+  "currencyTotals": {
+    "currency": "货币",
+    "demandAmount": "投标金额",
+    "quotationAmount": "投标金额",
+    "orderAmount": "订单金额"
+  },
+  "revenueQuality": {
+    "title": "收入质量",
+    "churnRisk": "损失风险",
+    "upsell": "追加销售趋势",
+    "payment": "支付行为",
+    "segment": "RFM分组",
+    "ltv": "终身价值"
+  },
+  "cohort": {
+    "title": "保持一个队列",
+    "empty": "没有队列数据",
+    "cohortKey": "队列"
+  },
+  "actions": {
+    "title": "建议采取的行动",
+    "empty": "没有建议的操作",
+    "execute": "申请"
+  },
+  "explain": {
+    "revenueQualityTitle": "收入质量总结了客户的销售潜力和风险状况。",
+    "churnRisk": "损失风险表示客户不会重新订购的概率。",
+    "upsellPropensity": "追加销售趋势表明客户有购买更多产品或购买更多产品的潜力。",
+    "paymentBehavior": "付款行为概括了客户的收款和付款模式。",
+    "rfmSegment": "RFM分组；根据邻近度、频率和金额数据显示客户的组。",
+    "modelNote": "这些字段是分析模型输出，显示用于决策支持目的。",
+    "cohortRetentionTitle": "群组保留显示了在一段时间内相似时期内获得的客户的连续性。",
+    "noCohortData": "找不到该客户的足够队列数据。",
+    "recommendedActionsTitle": "该区域列出了系统建议的操作。",
+    "executeAction": "采取行动"
+  },
+  "hero": {
+    "statusActive": "活跃的",
+    "statusCrm": "客户关系管理注册",
+    "since": "自 {{year}}",
+    "whatsapp": "WhatsApp",
+    "call": "搜索",
+    "email": "电子邮件",
+    "quickQuote": "快速报价",
+    "editCustomer": "编辑客户",
+    "none": "无",
+    "emailLabel": "电子邮件",
+    "phoneLabel": "电话",
+    "websiteLabel": "网站",
+    "addressLabel": "地址",
+    "infoTitle": "信息",
+    "taxNumber": "税号",
+    "customerType": "客户类型",
+    "salesRep": "销售代表",
+    "creditLimit": "信用额度"
+  },
+  "related": {
+    "newQuotation": "新优惠",
+    "newOrder": "新订单",
+    "newActivity": "新活动",
+    "error": "加载列表失败",
+    "emptyQuotations": "找不到该客户的报价",
+    "emptyOrders": "没有找到该客户的订单",
+    "emptyActivities": "没有找到该客户的活动",
+    "columns": {
+      "offerNo": "不。",
+      "date": "日期",
+      "representative": "代表",
+      "total": "金额",
+      "subject": "主题",
+      "type": "类型",
+      "assignee": "负责",
+      "status": "状态"
+    },
+    "activityStatus": {
+      "scheduled": "计划中的",
+      "completed": "已完成",
+      "cancelled": "取消"
+    }
+  },
+  "images": {
+    "upload": "上传图片",
+    "delete": "删除",
+    "emptyHint": "单击或拖动以添加图像",
+    "deleteConfirmTitle": "删除图像",
+    "deleteConfirmDescription": "您确定要删除该图片吗？此操作无法撤消。"
+  },
+  "button": "客户360",
+  "status": {
+    "havenotstarted": "没有开始",
+    "notstarted": "没有开始",
+    "inprogress": "审批过程中",
+    "pending": "待定",
+    "waiting": "等待",
+    "approved": "已批准",
+    "rejected": "被拒绝",
+    "completed": "已完成",
+    "cancelled": "取消",
+    "canceled": "取消",
+    "draft": "草案",
+    "converted": "返回报价",
+    "sent": "已发送",
+    "active": "活跃的",
+    "passive": "被动",
+    "closed": "关闭",
+    "open": "打开"
+  }
+}

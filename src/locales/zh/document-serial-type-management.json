@@ -1,0 +1,88 @@
+{
+  "menu": "文件类型管理",
+  "description": "管理和组织文件类型",
+  "search": "搜索...",
+  "refresh": "刷新",
+  "addButton": "添加新文件类型",
+  "loading": "加载中...",
+  "noData": "无数据",
+  "actions": "交易",
+  "cancel": "取消",
+  "save": "保存",
+  "saving": "录音...",
+  "delete": "删除",
+  "deleting": "正在删除...",
+  "deleteConfirmTitle": "删除确认",
+  "deleteConfirmDescription": "您确定要删除此记录吗？此操作无法撤消。",
+  "table": {
+    "title": "文件类型列表",
+    "id": "身份证号",
+    "ruleType": "规则类型",
+    "customerType": "客户类型",
+    "salesRep": "销售代表",
+    "serialPrefix": "序列号前缀",
+    "serialLength": "系列长度",
+    "createdDate": "创建日期"
+  },
+  "form": {
+    "addTitle": "添加新文件类型",
+    "editTitle": "编辑文件类型",
+    "addDescription": "输入新文件类型信息",
+    "editDescription": "编辑文件类型信息",
+    "ruleType": {
+      "required": "必须选择规则类型"
+    },
+    "selectRuleType": "选择规则类型",
+    "customerType": "客户类型",
+    "selectCustomerType": "选择客户类型（可选）",
+    "searchCustomerType": "搜索客户类型...",
+    "noCustomerTypeSelected": "未选择客户类型",
+    "salesRep": "销售代表",
+    "selectSalesRep": "选择销售代表（可选）",
+    "searchSalesRep": "寻找销售代表...",
+    "noSalesRepSelected": "未选择销售代表",
+    "serialPrefix": {
+      "required": "需要序列号前缀",
+      "maxLength": "序列号前缀最多可包含 50 个字符"
+    },
+    "serialPrefixPlaceholder": "输入序列前缀",
+    "serialLength": {
+      "min": "系列长度必须至少为 1",
+      "max": "系列长度可达 100"
+    },
+    "serialLengthPlaceholder": "输入系列长度",
+    "serialStart": {
+      "min": "串行启动必须至少为 0"
+    },
+    "serialStartPlaceholder": "输入系列起始值",
+    "serialCurrent": {
+      "min": "串联电流必须至少为 0"
+    },
+    "serialCurrentPlaceholder": "输入当前序列值",
+    "serialIncrement": {
+      "min": "串行增量必须至少为 1"
+    },
+    "serialIncrementPlaceholder": "输入连续增量值"
+  },
+  "totalRecords": "{{count}} 记录总数",
+  "advancedFilter": {
+    "columnSerialPrefix": "序列号前缀",
+    "columnCustomerTypeName": "客户类型",
+    "columnSalesRepFullName": "销售代表",
+    "columnRuleType": "规则类型"
+  },
+  "messages": {
+    "createSuccess": "文件类型创建成功",
+    "createError": "创建文件类型时出错",
+    "updateSuccess": "文件类型更新成功",
+    "updateError": "更新文件类型时出错",
+    "deleteSuccess": "文件类型删除成功",
+    "deleteError": "删除文件类型时出错"
+  },
+  "common": {
+    "delete": "删除"
+  },
+  "error": "无法保存活动",
+  "previous": "上一页",
+  "next": "下一步"
+}

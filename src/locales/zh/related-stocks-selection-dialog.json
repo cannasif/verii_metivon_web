@@ -1,0 +1,13 @@
+{
+  "title": "选择关联股票",
+  "description": "选择要与主库存一起添加的辅助库存。自动选择强制股票。",
+  "mandatoryStocks": "强制股票",
+  "optionalStocks": "可选股票",
+  "unknownStock": "未知库存",
+  "quantity": "数量",
+  "mandatory": "强制性的",
+  "noRelatedStocks": "未找到链接股票",
+  "cancel": "取消",
+  "add": "添加",
+  "calculating": "正在计算..."
+}

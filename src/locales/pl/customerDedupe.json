@@ -1,0 +1,34 @@
+{
+  "title": "Skrzynka odbiorcza konfliktu",
+  "tableTitle": "Zduplikowane leady klientów",
+  "subtitle": "Przejrzyj i scal zduplikowane kontakty do potencjalnych klientów",
+  "refresh": "Odśwież",
+  "searchPlaceholder": "Szukaj według głównej lub zduplikowanej nazwy klienta",
+  "matchType": "Typ dopasowania",
+  "minScore": "Minimalny wynik",
+  "all": "Wszystko",
+  "masterCustomer": "główny klient",
+  "duplicateCustomer": "powtórny klient",
+  "score": "Wynik",
+  "actions": "Transakcje",
+  "previewMerge": "Podgląd scalania",
+  "merge": "połączyć",
+  "preferMasterValues": "Użyj głównych wartości",
+  "confirmMergeTitle": "Potwierdź połączenie",
+  "confirmMergeDescription": "Zduplikowana rejestracja zostanie połączona z głównym klientem. Tej akcji nie można cofnąć.",
+  "mergeSuccess": "Scalanie zakończyło się pomyślnie.",
+  "mergeError": "Scalanie nie powiodło się. Spróbuj ponownie.",
+  "emptyTitle": "żadnego konfliktu",
+  "emptyDescription": "Nie ma zduplikowanych potencjalnych klientów do przeglądu.",
+  "loadErrorTitle": "Instalacja nie powiodła się",
+  "loadErrorDescription": "Nie można załadować zduplikowanych kandydatów. Spróbuj ponownie.",
+  "retry": "spróbuj ponownie",
+  "TaxNumber": "numer podatkowy",
+  "TcknNumber": "Numer identyfikacyjny TR",
+  "CustomerCode": "Kod klienta",
+  "common": {
+    "table": {
+      "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}"
+    }
+  }
+}

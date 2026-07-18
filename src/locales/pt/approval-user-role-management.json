@@ -1,0 +1,53 @@
+{
+  "approvalUserRole": {
+    "menu": "Gerenciamento de função de usuário de aprovação",
+    "description": "Gerenciar e organizar funções de usuário de aprovação",
+    "addButton": "Adicionar nova função",
+    "searchPlaceholder": "Pesquisar...",
+    "refresh": "Atualizar",
+    "loading": "Carregando...",
+    "noData": "Sem dados",
+    "table": {
+      "id": "ID",
+      "userFullName": "Usuário",
+      "approvalRoleName": "Função de aprovação",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por",
+      "actions": "Ações",
+      "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+      "page": "Página {{current}} / {{total}}",
+      "previous": "Anterior",
+      "next": "Próximo",
+      "title": "Aprovação de funções de usuário"
+    },
+    "delete": {
+      "title": "Excluir função",
+      "confirmMessage": "Tem certeza de que deseja excluir esta função de usuário?",
+      "confirmButton": "Excluir",
+      "cancelButton": "Cancelar"
+    },
+    "form": {
+      "editTitle": "Editar função de usuário de aprovação",
+      "addTitle": "Adicionar nova função de usuário de aprovação",
+      "editDescription": "Editar informações de função de usuário de aprovação",
+      "addDescription": "Insira novas informações de função de usuário de aprovação",
+      "userId": "Usuário",
+      "selectUser": "Selecione o usuário",
+      "noUserSelected": "Nenhum usuário selecionado",
+      "approvalRoleId": "Função de aprovação",
+      "selectApprovalRole": "Selecione a função de aprovação",
+      "noApprovalRoleSelected": "Nenhuma função de aprovação selecionada",
+      "userIdRequired": "A seleção do usuário é obrigatória",
+      "approvalRoleIdRequired": "A seleção da função de aprovação é obrigatória",
+      "save": "Salvar",
+      "saving": "Salvando...",
+      "cancel": "Cancelar"
+    },
+    "advancedFilter": {
+      "columnUserFullName": "Usuário",
+      "columnApprovalRoleName": "Função de aprovação",
+      "columnCreatedBy": "Criado por"
+    },
+    "error": "Ocorreu um erro"
+  }
+}

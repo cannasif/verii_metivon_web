@@ -1,0 +1,88 @@
+{
+  "menu": "Bestandstypebeheer",
+  "description": "Beheer en organiseer bestandstypen",
+  "search": "Zoeken...",
+  "refresh": "Vernieuwen",
+  "addButton": "Nieuw bestandstype toevoegen",
+  "loading": "Laden...",
+  "noData": "Geen gegevens",
+  "actions": "Transacties",
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opnemen...",
+  "delete": "Verwijderen",
+  "deleting": "Verwijderen...",
+  "deleteConfirmTitle": "Bevestiging van verwijdering",
+  "deleteConfirmDescription": "Weet u zeker dat u deze record wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+  "table": {
+    "title": "Lijst met bestandstypen",
+    "id": "Identiteitskaart",
+    "ruleType": "Regeltype",
+    "customerType": "Klanttype",
+    "salesRep": "Verkoopvertegenwoordiger",
+    "serialPrefix": "Serieel voorvoegsel",
+    "serialLength": "Serie lengte",
+    "createdDate": "Aanmaakdatum"
+  },
+  "form": {
+    "addTitle": "Nieuw bestandstype toevoegen",
+    "editTitle": "Bestandstype bewerken",
+    "addDescription": "Voer nieuwe bestandstype-informatie in",
+    "editDescription": "Bewerk bestandstype-informatie",
+    "ruleType": {
+      "required": "Regeltype moet worden geselecteerd"
+    },
+    "selectRuleType": "Selecteer regeltype",
+    "customerType": "Klanttype",
+    "selectCustomerType": "Selecteer klanttype (optioneel)",
+    "searchCustomerType": "Zoek op klanttype...",
+    "noCustomerTypeSelected": "Klanttype niet geselecteerd",
+    "salesRep": "Verkoopvertegenwoordiger",
+    "selectSalesRep": "Selecteer een vertegenwoordiger (optioneel)",
+    "searchSalesRep": "Op zoek naar een vertegenwoordiger...",
+    "noSalesRepSelected": "Er is geen vertegenwoordiger geselecteerd",
+    "serialPrefix": {
+      "required": "Serieel voorvoegsel is vereist",
+      "maxLength": "Het seriële voorvoegsel mag maximaal 50 tekens lang zijn"
+    },
+    "serialPrefixPlaceholder": "Voer het serienummer in",
+    "serialLength": {
+      "min": "De serielengte moet minimaal 1 zijn",
+      "max": "De serielengte kan maximaal 100 zijn"
+    },
+    "serialLengthPlaceholder": "Voer de serielengte in",
+    "serialStart": {
+      "min": "Seriële start moet minimaal 0 zijn"
+    },
+    "serialStartPlaceholder": "Voer de startwaarde van de serie in",
+    "serialCurrent": {
+      "min": "De seriestroom moet minimaal 0 zijn"
+    },
+    "serialCurrentPlaceholder": "Voer de huidige seriële waarde in",
+    "serialIncrement": {
+      "min": "De seriële verhoging moet minimaal 1 zijn"
+    },
+    "serialIncrementPlaceholder": "Voer de seriële verhogingswaarde in"
+  },
+  "totalRecords": "Totaal {{count}}-records",
+  "advancedFilter": {
+    "columnSerialPrefix": "Serieel voorvoegsel",
+    "columnCustomerTypeName": "Klanttype",
+    "columnSalesRepFullName": "Verkoopvertegenwoordiger",
+    "columnRuleType": "Regeltype"
+  },
+  "messages": {
+    "createSuccess": "Bestandstype is succesvol aangemaakt",
+    "createError": "Er is een fout opgetreden bij het maken van het bestandstype",
+    "updateSuccess": "Bestandstype is succesvol bijgewerkt",
+    "updateError": "Er is een fout opgetreden bij het bijwerken van het bestandstype",
+    "deleteSuccess": "Bestandstype is succesvol verwijderd",
+    "deleteError": "Er is een fout opgetreden bij het verwijderen van het bestandstype"
+  },
+  "common": {
+    "delete": "Verwijderen"
+  },
+  "error": "Activiteit kan niet worden opgeslagen",
+  "previous": "Vorige",
+  "next": "Volgende"
+}

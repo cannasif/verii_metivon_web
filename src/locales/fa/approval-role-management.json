@@ -1,0 +1,60 @@
+{
+  "approvalRole": {
+    "menu": "مدیریت نقش تایید",
+    "description": "نقش های تایید را مدیریت و سازماندهی کنید",
+    "addButton": "نقش تأیید جدید را اضافه کنید",
+    "searchPlaceholder": "جستجو...",
+    "refresh": "تازه کردن",
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای وجود ندارد",
+    "table": {
+      "id": "شناسه",
+      "approvalRoleGroupName": "گروه نقش",
+      "name": "نام نقش",
+      "maxAmount": "حداکثر مقدار",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط",
+      "actions": "اقدامات",
+      "totalRecords": "کل رکوردهای {{count}}.",
+      "page": "صفحه {{current}} / {{total}}",
+      "previous": "قبلی",
+      "next": "بعدی",
+      "title": "نقش های تایید"
+    },
+    "delete": {
+      "confirmTitle": "حذف تاییدیه",
+      "confirmMessage": "آیا مطمئن هستید که می خواهید این رکورد را حذف کنید؟ این عمل قابل لغو نیست.",
+      "cancelButton": "لغو کنید",
+      "confirmButton": "حذف کنید",
+      "deleting": "در حال حذف..."
+    },
+    "form": {
+      "editTitle": "ویرایش نقش تأیید",
+      "addTitle": "نقش تأیید جدید را اضافه کنید",
+      "editDescription": "جزئیات نقش تأیید را ویرایش کنید",
+      "addDescription": "جزئیات نقش تأیید جدید را وارد کنید",
+      "approvalRoleGroupId": "گروه نقش تایید",
+      "selectApprovalRoleGroup": "گروه نقش تأیید را انتخاب کنید",
+      "noApprovalRoleGroupSelected": "هیچ گروه نقش تأییدی انتخاب نشد",
+      "name": "نام نقش",
+      "namePlaceholder": "نام نقش را وارد کنید",
+      "maxAmount": "حداکثر مقدار",
+      "maxAmountPlaceholder": "حداکثر مقدار را وارد کنید",
+      "approvalRoleGroupIdRequired": "انتخاب گروه نقش تایید الزامی است",
+      "nameRequired": "نام نقش الزامی است",
+      "nameMaxLength": "نام نقش می تواند حداکثر 100 کاراکتر باشد",
+      "maxAmountMin": "حداکثر مقدار نمی تواند کمتر از 0 باشد",
+      "cancel": "لغو کنید",
+      "save": "ذخیره کنید",
+      "saving": "در حال ذخیره..."
+    },
+    "advancedFilter": {
+      "columnName": "نام نقش",
+      "columnApprovalRoleGroupName": "گروه نقش",
+      "columnMaxAmount": "حداکثر مقدار"
+    },
+    "messages": {
+      "error": "خطایی رخ داد"
+    }
+  }
+}

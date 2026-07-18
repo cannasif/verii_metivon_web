@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "AI驱动的企业资源规划",
+      "slogan": "使用 Metivon 管理业务，而不是依靠猜测。",
+      "branchPlaceholder": "选择分行",
+      "emailPlaceholder": "企业邮箱",
+      "passwordPlaceholder": "密码",
+      "rememberMe": "记住我",
+      "forgotPassword": "忘记密码了？",
+      "submitButton": "登录",
+      "processing": "处理中...",
+      "sessionExpired": "您的会话已过期。请重新登录。",
+      "comingSoon": "很快",
+      "loginError": "登录时发生错误。",
+      "capsLockOn": "大写锁定已打开",
+      "animationOn": "打开动画",
+      "animationOff": "关闭动画",
+      "eyebrow": "AI驱动的ERP",
+      "heroTitle": "将企业的所有流程汇聚于一个",
+      "heroDescription": "在统一运营核心中管理往来单位、库存、仓库、收货、发运和财务。",
+      "welcomeEyebrow": "安全工作区",
+      "welcomeTitle": "登录 Metivon",
+      "welcomeDescription": "选择分支并安全访问企业工作区。",
+      "modules": {
+        "accounts": "往来单位管理",
+        "inventory": "库存管理",
+        "warehouse": "仓库与库位",
+        "shipping": "发运"
+      },
+      "live": "实时",
+      "secureWorkspace": "所有业务统一在安全的数据流中",
+      "defaultBranch": "默认",
+      "showPassword": "显示密码",
+      "hidePassword": "隐藏密码",
+      "secureLogin": "加密安全会话"
+    },
+    "forgotPassword": {
+      "title": "我忘记了密码",
+      "description": "输入您的电子邮件地址以重置密码。我们将向您发送密码重置链接。",
+      "emailPlaceholder": "电子邮件地址",
+      "submitButton": "提交密码重置请求",
+      "backToLogin": "返回首页",
+      "processing": "处理中...",
+      "logoAlt": "应用标志"
+    },
+    "resetPassword": {
+      "title": "密码重置",
+      "newPasswordPlaceholder": "新密码",
+      "confirmPasswordPlaceholder": "密码重复",
+      "submitButton": "重置密码",
+      "processing": "处理中...",
+      "invalidToken": "令牌无效或丢失。请再次检查密码重置链接。",
+      "tokenNotFound": "未找到令牌",
+      "successRedirect": "您的密码已成功重置。您将被引导至登录屏幕...",
+      "failed": "密码重置失败。",
+      "error": "密码重置过程中发生错误。"
+    },
+    "changePassword": {
+      "success": "密码已更改成功。",
+      "error": "密码无法更改。"
+    },
+    "validation": {
+      "emailRequired": "电子邮件为必填项",
+      "emailInvalid": "输入有效的电子邮件地址",
+      "passwordRequired": "需要密码",
+      "branchRequired": "分支机构选择是强制性的",
+      "passwordMinLength": "密码必须至少为 8 个字符",
+      "tokenRequired": "令牌是强制性的",
+      "newPasswordMinLength": "密码必须至少为 6 个字符",
+      "confirmPasswordRequired": "需要重复密码",
+      "passwordsMismatch": "密码不匹配",
+      "currentPasswordRequired": "需要当前密码",
+      "newPasswordMaxLength": "新密码最多可包含 100 个字符",
+      "newPasswordSameAsCurrent": "新密码不能与现有密码相同",
+      "requiredFieldsNotFilled": "必填字段未填写。"
+    }
+  }
+}

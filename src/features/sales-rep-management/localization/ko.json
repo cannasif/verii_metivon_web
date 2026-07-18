@@ -1,0 +1,52 @@
+{
+  "menu": "영업대표 코드 관리",
+  "description": "ERP에서 영업 담당자 코드를 확인, 추가 및 삭제합니다.",
+  "addButton": "새로운 영업 담당자",
+  "searchPlaceholder": "영업 담당자 코드, 설명 또는 이름을 검색하세요.",
+  "empty": "영업 담당자 기록을 찾을 수 없습니다.",
+  "error": "영업 담당자 레코드를 로드할 수 없습니다.",
+  "deleteConfirmMessage": "{{code}} 코드가 포함된 영업 담당자 기록을 삭제하시겠습니까?",
+  "table": {
+    "title": "영업 담당자 목록",
+    "branchCode": "지점 코드",
+    "salesRepCode": "영업대표 코드",
+    "salesRepDescription": "설명",
+    "name": "이름",
+    "createdDate": "생성 날짜"
+  },
+  "form": {
+    "addTitle": "새 영업 담당자 추가",
+    "addDescription": "영업 담당자 코드 레코드를 수동으로 추가합니다.",
+    "editTitle": "영업 담당자 편집",
+    "editDescription": "영업 담당자 코드 레코드를 업데이트합니다.",
+    "branchCode": "지점 코드",
+    "branchCodePlaceholder": "지점 코드를 입력하세요",
+    "salesRepCode": "영업대표 코드",
+    "salesRepCodePlaceholder": "코드를 입력하세요",
+    "salesRepDescription": "설명",
+    "salesRepDescriptionPlaceholder": "설명 입력",
+    "name": "이름",
+    "namePlaceholder": "이름을 입력하세요",
+    "validation": {
+      "branchCodeRequired": "지점 코드가 필요합니다.",
+      "codeRequired": "영업사원 코드가 필요합니다.",
+      "codeMaxLength": "영업 담당자 코드는 최대 8자까지 가능합니다.",
+      "descriptionMaxLength": "설명은 최대 30자까지 가능합니다.",
+      "nameMaxLength": "이름은 최대 35자까지 가능합니다."
+    }
+  },
+  "messages": {
+    "createSuccess": "영업 담당자 레코드가 생성되었습니다.",
+    "createError": "영업 담당자 레코드를 생성할 수 없습니다.",
+    "updateSuccess": "영업 담당자 기록이 업데이트되었습니다.",
+    "updateError": "영업 담당자 기록을 업데이트할 수 없습니다.",
+    "deleteSuccess": "영업 담당자 기록이 삭제되었습니다.",
+    "deleteError": "영업 담당자 기록을 삭제할 수 없습니다."
+  },
+  "advancedFilter": {
+    "columnBranchCode": "지점 코드",
+    "columnSalesRepCode": "영업대표 코드",
+    "columnDescription": "설명",
+    "columnName": "이름"
+  }
+}

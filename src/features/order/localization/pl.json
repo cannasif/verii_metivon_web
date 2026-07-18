@@ -1,0 +1,78 @@
+{
+  "lines": {
+    "doubleClickToEdit": "Kliknij dwukrotnie, aby edytować",
+    "unit": "jednostka",
+    "descriptionFieldsTitle": "Pola opisu",
+    "descriptionTooltipText": "Jest to opis produkcji oparty na wierszach. Dopasowanie Netsis po zaimportowaniu do ERP: Opis 1 -> Dodatkowe pole 1, Opis 2 -> Dodatkowe pole 2, Opis 3 -> Adnotacja wiersza 7.",
+    "descriptionTooltipPrefix": "Jest to opis produkcji oparty na wierszach. Dopasowanie Netsis po przeniesieniu do ERP:",
+    "erpTargetExtraField1": "Pole dodatkowe 1",
+    "erpTargetExtraField2": "Dodatkowy obszar 2",
+    "erpTargetLineExtraDesc7": "Adnotacja wiersza 7",
+    "profileErpTooltip": "Ten wybór profilu jest zapisywany w polu Netsis Line Adnotation 2 podczas wysyłania do ERP.",
+    "rebarErpTooltip": "Ten wybór żelaza jest zapisywany jako wartość adnotacji wiersza Netsis 3 podczas wysyłania do ERP.",
+    "screwErpTooltip": "Ten wybór śrub jest zapisywany jako wartość adnotacji liniowej Netsis 4 podczas wysyłania do ERP.",
+    "printErpTooltip": "Ten wybór wydruku jest zapisywany jako wartość adnotacji liniowej Netsis 8 podczas wysyłania do ERP. Komentarz do wydruku trafia także do pól Komentarz 9 linii Netsis i Adnotacja linii 9.",
+    "lineItemDescriptionPlaceholder": "Opis elementu oparty na linii"
+  },
+  "notes": {
+    "title": "Uwagi do zamówienia",
+    "description": "Dodawaj i aktualizuj notatki wewnętrzne do zamówienia.",
+    "placeholder": "Wprowadź notatkę zamówienia",
+    "noteLabel": "Uwaga dotycząca zamówienia",
+    "notesTooltipText": "Są to uwagi do wysyłki/faktury, które dotyczą całego zamówienia. Kolejność Netsis zapisana jest sekwencyjnie w górnych polach Adnotacji 1-5; Uwaga 2 dotyczy adnotacji Netsis 2.",
+    "addLineTooltip": "Dodaj linię komentarza",
+    "linesHint": "Każda linia pojawia się osobno w plikach PDF i notatkach do dokumentów.",
+    "removeLine": "usuń wiersz",
+    "pageLabel": "Strona {{current}} / {{total}}",
+    "saving": "Zapisywanie notatek...",
+    "maxLengthError": "Pole notatki może zawierać maksymalnie 100 znaków."
+  },
+  "erpOrder": {
+    "title": "Lista zamówień ERP",
+    "description": "Monitoruj nadrzędne rekordy zamówienia i pozycje, które pojawiają się w zakresie użytkownika zalogowanego na Netsis.",
+    "currentUserScope": "Na podstawie zalogowanego użytkownika",
+    "searchPlaceholder": "Szukaj numeru zamówienia, aktualnego, sprzedawcy lub daty...",
+    "loading": "Trwa ładowanie zamówień ERP...",
+    "loadError": "Nie można załadować zamówień ERP.",
+    "noData": "Nie znaleziono zamówienia ERP.",
+    "detailAction": "Szczegół",
+    "detailTitle": "Szczegóły zamówienia {{orderNo}}",
+    "unknownCustomer": "Brak aktualnej nazwy",
+    "lineCount": "Pióro {{count}}",
+    "linesLoading": "Trwa ładowanie elementów zamówienia...",
+    "lineLoadError": "Nie można załadować elementów zamówienia.",
+    "noLines": "Nie znaleziono żadnych elementów dla tego zamówienia.",
+    "table": {
+      "title": "Nagłówki zamówień",
+      "branchCode": "oddział",
+      "orderNo": "Nr zamówienia",
+      "customerCode": "Aktualny kod",
+      "customerName": "Obecna nazwa",
+      "date": "data",
+      "deliveryDate": "Data dostawy",
+      "grossTotal": "Kwota brutto",
+      "vat": "VAT",
+      "grandTotal": "Wielka suma",
+      "salesRepCode": "sprzedawca"
+    },
+    "lines": {
+      "rowNo": "sekwencja",
+      "stockCode": "Kod magazynowy",
+      "stockName": "Nazwa akcji",
+      "quantity": "Ilość",
+      "unit": "jednostka",
+      "netPrice": "Cena netto",
+      "vatRate": "Stawka VAT",
+      "warehouseCode": "Magazyn"
+    }
+  },
+  "header": {
+    "notes": "Notatki",
+    "descriptionErpTooltip": "Jest to ogólny opis, który ma być widoczny dla produkcji dla całego zamówienia. Po wysłaniu do ERP zamówienie Netsis jest rejestrowane w górnym polu Opis (FatUst.Description).",
+    "ozelKod1": "Kod specjalny 1",
+    "ozelKod1Placeholder": "Wybierz kod specjalny 1",
+    "ozelKod2": "Kod specjalny 2",
+    "ozelKod2Placeholder": "Wybierz kod specjalny 2",
+    "specialCodeSearchPlaceholder": "Wyszukaj specjalny kod..."
+  }
+}

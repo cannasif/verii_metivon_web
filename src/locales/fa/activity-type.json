@@ -1,0 +1,62 @@
+{
+  "menu": "مدیریت نوع فعالیت",
+  "description": "انواع فعالیت ها را مدیریت و ویرایش کنید",
+  "addButton": "افزودن نوع فعالیت جدید",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای یافت نشد",
+  "actions": "اقدامات",
+  "edit": "ویرایش کنید",
+  "deleteButton": "حذف کنید",
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "saving": "در حال ذخیره...",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "advancedFilter": {
+    "columnName": "نام نوع فعالیت",
+    "columnDescription": "توضیحات",
+    "columnCreatedBy": "ایجاد شده توسط"
+  },
+  "form": {
+    "addTitle": "افزودن نوع فعالیت جدید",
+    "editTitle": "ویرایش نوع فعالیت",
+    "addDescription": "اطلاعات نوع فعالیت جدید را وارد کنید",
+    "editDescription": "اطلاعات نوع فعالیت را ویرایش کنید",
+    "name": "نام نوع فعالیت",
+    "namePlaceholder": "نام نوع فعالیت را وارد کنید",
+    "nameRequired": "نام نوع فعالیت مورد نیاز است",
+    "nameMaxLength": "نام نوع فعالیت می تواند حداکثر 100 کاراکتر باشد",
+    "description": "توضیحات",
+    "descriptionPlaceholder": "توضیحات را وارد کنید (اختیاری)",
+    "descriptionMaxLength": "توضیحات حداکثر می تواند 500 کاراکتر باشد"
+  },
+  "table": {
+    "id": "شناسه",
+    "name": "نام نوع فعالیت",
+    "description": "توضیحات",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط",
+    "showing": "نمایش {{from}}-{{to}} / {{total}}",
+    "page": "صفحه {{current}} / {{total}}",
+    "title": "لیست نوع فعالیت"
+  },
+  "stats": {
+    "totalActivityTypes": "مجموع انواع فعالیت",
+    "activeActivityTypes": "انواع فعالیت های فعال",
+    "newThisMonth": "جدید این ماه"
+  },
+  "messages": {
+    "createSuccess": "نوع فعالیت با موفقیت ایجاد شد",
+    "createError": "نوع فعالیت ایجاد نشد",
+    "updateSuccess": "نوع فعالیت با موفقیت به روز شد",
+    "updateError": "نوع فعالیت به‌روزرسانی نشد",
+    "deleteSuccess": "نوع فعالیت با موفقیت حذف شد",
+    "deleteError": "نوع فعالیت حذف نشد"
+  },
+  "deleteConfirm": {
+    "confirmTitle": "حذف نوع فعالیت",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید نوع فعالیت {{name}} را حذف کنید؟"
+  },
+  "create": "نوع فعالیت جدید",
+  "error": "خطایی رخ داد"
+}

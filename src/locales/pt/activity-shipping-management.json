@@ -1,0 +1,82 @@
+{
+  "menu": "Gestão de Remessas",
+  "description": "Gerenciar e editar definições de envio",
+  "addButton": "Adicionar novo frete",
+  "loading": "Carregando...",
+  "noData": "Nenhum dado encontrado",
+  "actions": "Ações",
+  "edit": "Editar",
+  "deleteButton": "Excluir",
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Salvando...",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "advancedFilter": {
+    "columnName": "Nome de envio",
+    "columnDescription": "Descrição",
+    "columnCreatedBy": "Criado por"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Adicionar novo frete",
+      "editTitle": "Editar frete",
+      "addDescription": "Insira novas informações de envio",
+      "editDescription": "Editar informações de envio",
+      "name": "Nome de envio",
+      "namePlaceholder": "Insira o nome de envio",
+      "nameRequired": "O nome de envio é obrigatório",
+      "nameMaxLength": "O nome de envio pode ter no máximo 100 caracteres",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Insira a descrição (opcional)",
+      "descriptionMaxLength": "A descrição pode ter no máximo 500 caracteres"
+    },
+    "table": {
+      "title": "Lista de envio",
+      "id": "ID",
+      "name": "Nome de envio",
+      "description": "Descrição",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por",
+      "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+      "page": "Página {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Registros totais de remessa",
+      "activeActivityTypes": "Registros de remessa ativos",
+      "newThisMonth": "Novidade este mês"
+    },
+    "messages": {
+      "createSuccess": "Envio criado com sucesso",
+      "createError": "Falha ao criar frete",
+      "updateSuccess": "Envio atualizado com sucesso",
+      "updateError": "Falha ao atualizar o frete",
+      "deleteSuccess": "Envio excluído com sucesso",
+      "deleteError": "Falha ao excluir frete"
+    },
+    "error": "Ocorreu um erro",
+    "create": "Adicionar novo frete",
+    "loading": "Carregando...",
+    "noData": "Nenhum dado encontrado",
+    "actions": "Ações",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "saving": "Salvando..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Excluir frete",
+    "confirmMessage": "Tem certeza de que deseja excluir {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Envio excluído com sucesso",
+    "deleteError": "Falha ao excluir frete"
+  },
+  "table": {
+    "title": "Lista de envio",
+    "id": "ID",
+    "name": "Nome de envio",
+    "description": "Descrição",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por"
+  }
+}

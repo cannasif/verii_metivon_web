@@ -1,0 +1,88 @@
+{
+  "list": {
+    "title": "承認待ち",
+    "description": "自分に割り当てられた見積を表示し、承認または拒否する",
+    "empty": "保留中の承認はありません",
+    "error": "承認の読み込み中にエラーが発生しました"
+  },
+  "yes": "はい",
+  "no": "いいえ",
+  "processing": "処理中...",
+  "detail": {
+    "title": "見積詳細",
+    "subtitle": "見積詳細の表示とアクションの実行",
+    "tabs": {
+      "detail": "詳細",
+      "history": "歴史",
+      "action": "アクション"
+    },
+    "notFound": "引用が見つかりません",
+    "quotationInfo": "見積情報",
+    "offerNo": "オファー番号",
+    "customer": "お客様",
+    "representative": "代表者",
+    "currency": "通貨",
+    "offerDate": "オファー日",
+    "deliveryDate": "納期",
+    "total": "合計",
+    "grandTotal": "総計",
+    "description": "説明",
+    "lines": "引用文",
+    "productCode": "製品コード",
+    "productName": "製品名",
+    "quantity": "数量",
+    "unitPrice": "単価",
+    "lineTotal": "行合計",
+    "lineGrandTotal": "明細行の総計",
+    "exchangeRates": "為替レート",
+    "exchangeRate": "料金",
+    "exchangeRateDate": "レート日",
+    "isOfficial": "公定料金"
+  },
+  "actions": {
+    "view": "見る",
+    "approve": "承認する",
+    "reject": "拒否する"
+  },
+  "status": {
+    "notRequired": "草案",
+    "waiting": "承認待ち",
+    "approved": "承認済み",
+    "rejected": "拒否されました",
+    "closed": "閉店",
+    "customerCancelled": "お客様によるキャンセル",
+    "salespersonClosedForRevision": "ERP レコードは改訂のために営業担当者によって閉じられました",
+    "supersededByApprovedRevision": "別の改訂が承認されたため終了しました"
+  },
+  "closedReason": "同じオファー番号を持つ別のレコードが承認されたため、このレコードは閉じられました。",
+  "statusFilterLabel": "承認状況",
+  "level": {
+    "salesManager": "営業マネージャー",
+    "regionalManager": "地域マネージャー",
+    "finance": "金融",
+    "generalManager": "ゼネラルマネージャー",
+    "unknown": "不明"
+  },
+  "note": {
+    "label": "注記",
+    "placeholder": "承認/拒否メモを追加できます（オプション）",
+    "maxLength": "注記は最大 500 文字まで可能です"
+  },
+  "approve": {
+    "success": "承認済み",
+    "successMessage": "見積は正常に承認されました",
+    "error": "承認エラー",
+    "errorMessage": "見積の承認中にエラーが発生しました"
+  },
+  "reject": {
+    "success": "拒否されました",
+    "successMessage": "引用は拒否されました",
+    "error": "拒否エラー",
+    "errorMessage": "見積の拒否中にエラーが発生しました"
+  },
+  "history": {
+    "empty": "承認履歴なし",
+    "approvedBy": "承認者"
+  },
+  "assignedTo": "割り当てられたユーザー"
+}

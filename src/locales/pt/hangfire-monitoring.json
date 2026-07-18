@@ -1,0 +1,74 @@
+{
+  "menu": "Monitoramento de Hangfire",
+  "title": "Monitoramento de Hangfire",
+  "description": "Monitore a integridade do trabalho, trabalhos com falha e filas não entregues.",
+  "summary": {
+    "title": "Resumo do sistema",
+    "description": "Veja rapidamente a integridade recorrente do trabalho e o comportamento da fila.",
+    "totalJobs": "Total de trabalhos recorrentes",
+    "withQueue": "filas ativas",
+    "withErrors": "trabalho errado",
+    "help": "As estatísticas são um instantâneo do seu servidor Hangfire; Atualize as listas atualizando-as."
+  },
+  "refresh": "Atualizar",
+  "stats": {
+    "enqueued": "na fila",
+    "processing": "Processamento",
+    "succeeded": "bem sucedido",
+    "failed": "falhar"
+  },
+  "table": {
+    "jobId": "ID da empresa",
+    "jobName": "negócio",
+    "state": "Estado",
+    "time": "hora",
+    "reason": "Por que",
+    "queue": "cauda",
+    "duration": "Duração",
+    "retryCount": "de novo",
+    "recurringJobId": "Trabalho agendado"
+  },
+  "succeeded": {
+    "title": "Trabalhos de sucesso",
+    "empty": "Nenhum trabalho bem-sucedido encontrado.",
+    "description": "Lista de trabalhos Hangfire concluídos recentemente."
+  },
+  "failed": {
+    "title": "Trabalhos com falha",
+    "empty": "Nenhum trabalho com falha foi encontrado.",
+    "total": "Total",
+    "description": "Trabalhos que resultaram em erros ou aguardando para tentar novamente."
+  },
+  "deadLetter": {
+    "title": "Fila não entregue",
+    "empty": "A fila de não entrega está vazia.",
+    "enqueued": "na fila",
+    "description": "Mensagens que não podem ser entregues ao consumidor e requerem revisão manual."
+  },
+  "recurring": {
+    "title": "Trabalhos agendados",
+    "description": "A partir daqui você pode visualizar seus trabalhos Hangfire salvos e acionar o trabalho selecionado imediatamente.",
+    "selectLabel": "Trabalho a ser executado",
+    "selectPlaceholder": "Escolha um trabalho",
+    "triggerButton": "corra agora",
+    "triggerSuccess": "A tarefa {{jobName}} foi acionada.",
+    "triggerError": "Ocorreu um erro ao acionar o trabalho.",
+    "empty": "Nenhuma vaga recorrente registrada encontrada ainda.",
+    "tableTitle": "trabalhos agendados",
+    "tableDescription": "Todos os trabalhos recorrentes do Hangfire e informações de agendamento.",
+    "labels": {
+      "schedule": "tempo",
+      "method": "método",
+      "error": "Há um erro",
+      "healthy": "saudável"
+    },
+    "table": {
+      "id": "ID do trabalho",
+      "job": "negócio",
+      "cron": "tempo",
+      "nextExecution": "Próximo trabalho",
+      "lastExecution": "último trabalho",
+      "queue": "cauda"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "buttons": {
+    "back": "뒤로",
+    "next": "다음",
+    "complete": "저장하고 승인을 위해 보내기"
+  },
+  "validation": {
+    "error": "검증 오류"
+  },
+  "step": {
+    "unknown": "알 수 없는 단계"
+  }
+}

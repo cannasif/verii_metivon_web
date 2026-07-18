@@ -1,0 +1,85 @@
+{
+  "menu": "ERP客户",
+  "description": "ERP系统中的客户名单",
+  "loading": "加载中...",
+  "noData": "未找到客户",
+  "table": {
+    "title": "客户名单",
+    "branchCode": "分行代码",
+    "businessUnitCode": "业务单位代码",
+    "customerCode": "客户代码",
+    "customerName": "客户名称",
+    "phone": "电话",
+    "city": "城市",
+    "district": "区",
+    "address": "地址",
+    "countryCode": "国家/地区代码",
+    "email": "电子邮件",
+    "website": "网站",
+    "taxNumber": "税号",
+    "taxOffice": "税务局",
+    "tcknNumber": "TR ID 号",
+    "visibleColumns": "可见列",
+    "editColumns": "编辑列"
+  },
+  "filterLabels": {
+    "branchCode": "分行代码",
+    "customerCode": "客户代码",
+    "customerName": "客户名称",
+    "city": "城市",
+    "district": "区",
+    "taxNumber": "税号"
+  },
+  "placeholders": {
+    "quickSearch": "快速搜索...",
+    "all": "全部",
+    "codeExample": "例如：120...",
+    "nameExample": "客户姓名...",
+    "cityExample": "省...",
+    "districtExample": "区...",
+    "taxExample": "税号/TR ID 号..."
+  },
+  "actions": {
+    "detailedFilter": "详细过滤器",
+    "clear": "清晰",
+    "filter": "过滤器",
+    "all": "全部",
+    "active": "活跃",
+    "passive": "被动",
+    "apply": "列出结果"
+  },
+  "details": {
+    "title": "客户详情",
+    "addressInfo": "地址信息"
+  },
+  "common": {
+    "close": "关闭",
+    "selectAll": "选择全部",
+    "ok": "好的",
+    "totalRecords": "总注册数"
+  },
+  "advancedFilter": {
+    "title": "高级过滤器",
+    "add": "添加过滤器",
+    "column": "专栏",
+    "operator": "操作员",
+    "value": "价值",
+    "search": "搜索",
+    "clear": "清晰",
+    "remove": "删除",
+    "columnCustomerCode": "客户代码",
+    "columnCustomerName": "客户名称",
+    "columnBranchCode": "分行代码",
+    "columnCity": "城市",
+    "columnDistrict": "区",
+    "columnTaxNumber": "税号",
+    "operatorContains": "包含",
+    "operatorStartsWith": "它开始于",
+    "operatorEndsWith": "结束于",
+    "operatorEquals": "等于",
+    "operator>": ">",
+    "operator>=": ">=",
+    "operator<": "<",
+    "operator<=": "<="
+  }
+}

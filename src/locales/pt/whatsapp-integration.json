@@ -1,0 +1,148 @@
+{
+  "page": {
+    "connectionTitle": "Integração com WhatsApp",
+    "connectionDescription": "Meta Gerencie as configurações da API do WhatsApp Cloud, verifique a conexão do webhook e envie mensagem de teste."
+  },
+  "settings": {
+    "title": "Configurações de conexão",
+    "configured": "Pronto",
+    "notConfigured": "faltando",
+    "enabled": "Use a integração ativamente",
+    "enabledDescription": "Quando ativos, o webhook e os envios de teste usam essas configurações.",
+    "displayName": "Nome de exibição",
+    "graphApiVersion": "Versão da API gráfica",
+    "phoneNumberId": "ID do número de telefone",
+    "businessAccountId": "ID da conta comercial",
+    "verifyToken": "Token de verificação do webhook",
+    "accessToken": "Token de acesso",
+    "appSecret": "Segredo do aplicativo",
+    "keepCurrent": "O valor atual será mantido",
+    "save": "Salvar configurações",
+    "saveSuccess": "As configurações do WhatsApp foram salvas.",
+    "saveError": "As configurações do WhatsApp não puderam ser salvas."
+  },
+  "webhook": {
+    "title": "webhook",
+    "url": "URL do metawebhook",
+    "lastInbound": "webhook mais recente",
+    "lastOutbound": "Última mensagem enviada"
+  },
+  "test": {
+    "title": "Mensagem de teste",
+    "phone": "telefone",
+    "message": "Mensagem",
+    "defaultMessage": "Mensagem de teste do V3RII CRM WhatsApp.",
+    "send": "Enviar teste",
+    "sendSuccess": "Mensagem de teste do WhatsApp enviada.",
+    "sendError": "Não foi possível enviar a mensagem de teste do WhatsApp."
+  },
+  "logs": {
+    "title": "Registros do WhatsApp",
+    "description": "Monitore webhook, mensagens de teste e gravações de fluxo de ofertas futuras.",
+    "tableTitle": "Registros de transações",
+    "searchPlaceholder": "Telefone, mensagem ou chamada de transação...",
+    "errorsOnly": "Apenas erros",
+    "directionAll": "Todas as direções",
+    "inbound": "entrada",
+    "outbound": "de saída",
+    "success": "bem sucedido",
+    "error": "Erro",
+    "empty": "Nenhum registro encontrado.",
+    "total": "Registro {{count}}",
+    "columns": {
+      "date": "data",
+      "direction": "Direção",
+      "operation": "transação",
+      "phone": "telefone",
+      "message": "Mensagem",
+      "status": "Estado"
+    }
+  },
+  "drafts": {
+    "title": "Rascunhos de ofertas do WhatsApp",
+    "description": "Monitore os carrinhos criados pelo cliente via WhatsApp para controle do agente.",
+    "tableTitle": "Fila de controle do agente",
+    "searchPlaceholder": "Ligue, cliente ou mande mensagem...",
+    "empty": "Rascunho não encontrado.",
+    "total": "Rascunho {{count}}",
+    "customerMessage": "Mensagem do cliente",
+    "mainLine": "Produto principal",
+    "relatedLine": "produto afiliado",
+    "status": {
+      "WaitingRepresentativeReview": "Sob controle do agente"
+    },
+    "columns": {
+      "createdDate": "data",
+      "phone": "telefone",
+      "customer": "cliente",
+      "status": "Estado",
+      "lineCount": "lápis",
+      "grandTotal": "Total geral"
+    },
+    "lineColumns": {
+      "code": "Código",
+      "name": "Estoque",
+      "quantity": "Quantidade",
+      "unitPrice": "Preço unitário",
+      "total": "Total",
+      "type": "Tipo"
+    },
+    "actions": {
+      "title": "Processo de licitação representativa",
+      "description": "Converta o rascunho em uma proposta de CRM e envie ao cliente via WhatsApp em formato PDF, se desejar.",
+      "representativeId": "ID do representante",
+      "customer": "cliente",
+      "selectCustomer": "selecione o cliente",
+      "paymentType": "Tipo de pagamento",
+      "selectPaymentType": "Escolha o tipo de pagamento",
+      "documentSerial": "Tipo de série do documento",
+      "selectDocumentSerial": "Selecione o tipo de série do documento",
+      "offerType": "Tipo de oferta",
+      "domestic": "doméstico",
+      "foreign": "no exterior",
+      "currency": "moeda",
+      "offerDate": "Data da oferta",
+      "deliveryDate": "data de entrega",
+      "descriptionField": "descrição interna",
+      "customerMessageField": "Mensagem para o cliente",
+      "sendAfterConvert": "Enviar WhatsApp quando discado",
+      "attachPdf": "adicionar PDF",
+      "convertAndSend": "Converter para oferecer e enviar",
+      "sendAgain": "Reenviar para WhatsApp",
+      "createdQuotation": "Oferta #{{id}}",
+      "loading": "Carregando...",
+      "convertSuccess": "A minuta do WhatsApp foi incluída no fluxo de propostas.",
+      "convertError": "O rascunho do WhatsApp não poderia ser transformado em proposta.",
+      "sendSuccess": "A oferta foi enviada via WhatsApp.",
+      "sendError": "A oferta não pôde ser enviada via WhatsApp."
+    }
+  },
+  "quotationSend": {
+    "sendSuccess": "A oferta foi enviada via WhatsApp via PDF.",
+    "sendError": "A oferta não pôde ser enviada via WhatsApp."
+  },
+  "flow": {
+    "title": "Fluxo de ofertas do WhatsApp",
+    "description": "Plano de módulo seguro a ser implementado para o cliente criar uma solicitação de orçamento por telefone.",
+    "steps": {
+      "inbound": {
+        "title": "1. Recepção de mensagens",
+        "text": "A mensagem do cliente é recebida via webhook, a assinatura é verificada e o registro bruto é registrado."
+      },
+      "intent": {
+        "title": "2. Intenção e seleção de ações",
+        "text": "O cliente é direcionado a partir do catálogo ou detalhamento de estoque; o texto livre não é traduzido diretamente em ordem."
+      },
+      "quote": {
+        "title": "3. Projeto de Proposta",
+        "text": "As seleções são abertas como minuta de proposta no lado do CRM, e o documento final não é criado sem que o representante o verifique."
+      },
+      "handoff": {
+        "title": "4. Aprovação representativa",
+        "text": "Após feitas as verificações de preço, desconto, entrega e atualidade, a oferta é enviada ao cliente."
+      }
+    },
+    "nextPhaseTitle": "Próxima Fase",
+    "nextPhaseText": "Esta fase abre a infraestrutura. Fluxo de conversa, seleções de catálogo, rascunho de proposta e envio de modelos de WhatsApp serão adicionados em uma fase controlada separada."
+  }
+}

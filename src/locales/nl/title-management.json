@@ -1,0 +1,65 @@
+{
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "error": "Er is een fout opgetreden",
+  "search": "Zoeken...",
+  "refresh": "Vernieuwen",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "advancedFilter": {
+    "columnTitleName": "Titel Naam",
+    "columnCode": "Codeer"
+  },
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opnemen...",
+  "delete": {
+    "confirmTitle": "Titel verwijderen",
+    "confirmMessage": "Weet u zeker dat u de titel {{titleName}} wilt verwijderen?",
+    "button": "Verwijderen"
+  },
+  "deleting": "Verwijderen...",
+  "actions": "Transacties",
+  "edit": "Bewerken",
+  "header": {
+    "title": "Titelbeheer",
+    "description": "Hier kunt u titeldefinities beheren."
+  },
+  "table": {
+    "title": "Titellijst",
+    "id": "Identiteitskaart",
+    "name": "Titel Naam",
+    "code": "Codeer",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door gebruiker",
+    "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+    "page": "Pagina {{current}} / {{total}}"
+  },
+  "form": {
+    "addTitle": "Nieuwe titel toevoegen",
+    "editTitle": "Titel bewerken",
+    "addDescription": "Voer nieuwe titelinformatie in",
+    "editDescription": "Titelinformatie bewerken",
+    "titleName": "Titel Naam",
+    "titleNamePlaceholder": "Titelnaam invoeren",
+    "titleCode": "Titelcode",
+    "codePlaceholder": "Voer code in (optioneel)",
+    "cancel": "Annuleer",
+    "save": "Opslaan",
+    "saving": "Opnemen..."
+  },
+  "menu": "Titelbeheer",
+  "stats": {
+    "totalTitles": "Totale titel",
+    "activeTitles": "Actieve titel",
+    "newThisMonth": "Nieuw deze maand"
+  },
+  "description": "Titels beheren en bewerken",
+  "addButton": "Nieuwe titel toevoegen",
+  "showStats": "Statistieken weergeven",
+  "hideStats": "Statistieken verbergen",
+  "messages": {
+    "deleteSuccess": "Titel succesvol verwijderd",
+    "deleteError": "Titel kon niet worden verwijderd"
+  }
+}

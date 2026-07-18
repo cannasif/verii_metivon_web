@@ -1,0 +1,103 @@
+{
+  "approvalFlow": {
+    "menu": "Zarządzanie przepływem zatwierdzeń",
+    "description": "Zarządzaj i organizuj przepływy zatwierdzeń",
+    "addButton": "Dodaj nowy proces zatwierdzania",
+    "table": {
+      "id": "Identyfikator",
+      "documentType": "Typ dokumentu",
+      "description": "Opis",
+      "isActive": "Aktywny",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "actions": "Działania",
+      "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+      "page": "Strona {{current}} / {{total}}",
+      "title": "Przepływy zatwierdzania"
+    },
+    "form": {
+      "addTitle": "Dodaj nowy proces zatwierdzania",
+      "editTitle": "Edytuj proces zatwierdzania",
+      "addDescription": "Wprowadź nowe informacje o procesie zatwierdzania",
+      "editDescription": "Edytuj informacje o procesie zatwierdzania",
+      "documentType": "Typ dokumentu",
+      "selectDocumentType": "Wybierz typ dokumentu",
+      "noDocumentTypeSelected": "Nie wybrano typu dokumentu",
+      "documentTypeRequired": "Wymagany jest wybór typu dokumentu",
+      "description": "Opis",
+      "descriptionPlaceholder": "Wprowadź opis (opcjonalnie)",
+      "descriptionMaxLength": "Opis może mieć maksymalnie 200 znaków",
+      "isActive": "Aktywny",
+      "isActiveDescription": "Aktywny status przepływu zatwierdzania",
+      "cancel": "Anuluj",
+      "save": "Zapisz",
+      "saving": "Zapisywanie..."
+    },
+    "loading": "Ładowanie...",
+    "noData": "Brak danych",
+    "active": "Aktywny",
+    "inactive": "Nieaktywny",
+    "previous": "Poprzedni",
+    "next": "Następny",
+    "delete": {
+      "action": "Usuń",
+      "cancel": "Anuluj",
+      "confirmTitle": "Usuń przepływ zatwierdzania",
+      "confirmMessage": "Czy na pewno chcesz usunąć ten proces zatwierdzania?",
+      "title": "Usuń przepływ zatwierdzania",
+      "confirm": "Czy na pewno chcesz usunąć ten proces zatwierdzania?"
+    },
+    "documentType": {
+      "offer": "Oferta",
+      "request": "Żądanie",
+      "order": "Zamów",
+      "demand": "Popyt",
+      "quotation": "Cytat",
+      "purchaseRequest": "Zapytanie o zakup",
+      "purchaseRfq": "Zapytanie ofertowe (RFQ)",
+      "supplierQuotation": "Oferta dostawcy",
+      "purchaseOrder": "Zamówienie zakupu"
+    },
+    "advancedFilter": {
+      "columnDocumentType": "Typ dokumentu",
+      "columnDescription": "Opis",
+      "columnIsActive": "Aktywny",
+      "columnCreatedBy": "Stworzony przez"
+    },
+    "messages": {
+      "deleteSuccess": "Pomyślnie usunięto proces zatwierdzania",
+      "deleteError": "Wystąpił błąd podczas usuwania przepływu zatwierdzania"
+    },
+    "steps": "Kroki przepływu",
+    "error": "Wystąpił błąd"
+  },
+  "approvalFlowStep": {
+    "title": "Kroki przepływu",
+    "addButton": "Dodaj krok",
+    "empty": "Nie dodano jeszcze żadnych kroków",
+    "unknownRoleGroup": "Brak grupy ról",
+    "stepDescription": "Kolejność zatwierdzenia: {{order}}",
+    "deleteDialog": {
+      "title": "Usuń krok",
+      "description": "Czy na pewno chcesz usunąć ten krok?",
+      "confirm": "Usuń",
+      "cancel": "Anuluj"
+    },
+    "form": {
+      "addTitle": "Dodaj nowy krok",
+      "editTitle": "Edytuj krok",
+      "addDescription": "Dodaj nowy krok przepływu",
+      "editDescription": "Edytuj informacje o kroku przepływu",
+      "approvalRoleGroup": "Grupa ról",
+      "selectRoleGroup": "Wybierz grupę ról",
+      "noRoleGroupSelected": "Nie wybrano grupy ról",
+      "approvalRoleGroupIdRequired": "Wymagany jest wybór grupy ról",
+      "cancel": "Anuluj",
+      "save": "Zapisz",
+      "saving": "Zapisywanie..."
+    },
+    "messages": {
+      "deleteConfirm": "Czy na pewno chcesz usunąć ten krok?"
+    }
+  }
+}

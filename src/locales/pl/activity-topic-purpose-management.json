@@ -1,0 +1,82 @@
+{
+  "menu": "Zarządzanie zainteresowanymi tematami",
+  "description": "Zarządzaj i edytuj zainteresowane tematy",
+  "addButton": "Dodaj nowy temat",
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "actions": "Działania",
+  "edit": "Edytuj",
+  "deleteButton": "Usuń",
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Zapisywanie...",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "advancedFilter": {
+    "columnName": "Nazwa tematu",
+    "columnDescription": "Opis",
+    "columnCreatedBy": "Stworzony przez"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Dodaj nowy temat",
+      "editTitle": "Edytuj temat",
+      "addDescription": "Wprowadź informacje o nowym temacie",
+      "editDescription": "Edytuj informacje o temacie",
+      "name": "Nazwa tematu",
+      "namePlaceholder": "Wpisz nazwę tematu",
+      "nameRequired": "Nazwa tematu jest wymagana",
+      "nameMaxLength": "Nazwa tematu może mieć maksymalnie 100 znaków",
+      "description": "Opis",
+      "descriptionPlaceholder": "Wprowadź opis (opcjonalnie)",
+      "descriptionMaxLength": "Opis może mieć maksymalnie 500 znaków"
+    },
+    "table": {
+      "title": "Lista zainteresowanych tematów",
+      "id": "Identyfikator",
+      "name": "Nazwa tematu",
+      "description": "Opis",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+      "page": "Strona {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Wszystkich tematów",
+      "activeActivityTypes": "Aktywne tematy",
+      "newThisMonth": "Nowość w tym miesiącu"
+    },
+    "messages": {
+      "createSuccess": "Temat utworzony pomyślnie",
+      "createError": "Nie udało się utworzyć tematu",
+      "updateSuccess": "Temat został pomyślnie zaktualizowany",
+      "updateError": "Nie udało się zaktualizować tematu",
+      "deleteSuccess": "Temat usunięty pomyślnie",
+      "deleteError": "Nie udało się usunąć tematu"
+    },
+    "error": "Wystąpił błąd",
+    "create": "Dodaj nowy temat",
+    "loading": "Ładowanie...",
+    "noData": "Brak danych",
+    "actions": "Działania",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "saving": "Zapisywanie..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Usuń temat",
+    "confirmMessage": "Czy na pewno chcesz usunąć {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Temat usunięty pomyślnie",
+    "deleteError": "Nie udało się usunąć tematu"
+  },
+  "table": {
+    "title": "Lista zainteresowanych tematów",
+    "id": "Identyfikator",
+    "name": "Nazwa tematu",
+    "description": "Opis",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez"
+  }
+}

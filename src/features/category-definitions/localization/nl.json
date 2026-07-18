@@ -1,0 +1,511 @@
+{
+  "categoryDefinitions": {
+    "title": "Categoriedefinities",
+    "description": "Vanaf hier kunt u beginnen met het beheren van de categorieboom en categoriegerelateerde voorraden voor B2B- en B2C-catalogi.",
+    "guidedTitle": "Beheer de categoriestructuur in 3 stappen",
+    "hierarchyBlueprintTitle": "Aanbevolen instelling voor bedrijfscategorieën",
+    "hierarchyBlueprintDescription": "Als u de categorieboom met een vaste logica opbouwt, wordt deze begrijpelijker voor de gebruiker en verloopt het matchen van producten soepeler.",
+    "hierarchyExampleLabel": "monsterstroom",
+    "hierarchyExampleValue": "Telefoons > Telefoons met drukknop > iPhone > 17-serie > Productlijst",
+    "easyModeTitle": "Je hoeft hier niet na te denken over wat je moet doen",
+    "summaryGuideTitle": "Ik laat je de juiste volgende stap zien",
+    "createCatalogTitle": "Nieuwe catalogus maken",
+    "createCatalogDescription": "Voeg een nieuwe catalogusdefinitie toe voor B2B-, B2C- of aangepaste stromen.",
+    "editCatalogTitle": "Catalogus bewerken",
+    "editCatalogDescription": "Update de naam, het type en de sortering van de geselecteerde catalogus.",
+    "createCategoryTitle": "Categorie toevoegen",
+    "createCategoryDescription": "Maak een nieuwe categorie onder {{target}}.",
+    "editCategoryTitle": "Categorie bewerken",
+    "editCategoryDescription": "Update categorie-informatie voor {{target}}.",
+    "createCategoryTarget": "Niveau om aan te sluiten",
+    "deleteCatalogConfirm": "Weet u zeker dat u catalogus {{name}} wilt verwijderen?",
+    "deleteCategoryConfirm": "Weet u zeker dat u categorie {{name}} wilt verwijderen?",
+    "deleteStockConfirm": "Weet u zeker dat u deze aandelenlink wilt verwijderen?",
+    "createRuleTitle": "Regel toevoegen",
+    "createRuleDescription": "Maak een automatische koppelingsregel voor categorie {{category}}.",
+    "editRuleTitle": "Regel bewerken",
+    "editRuleDescription": "Update regelinformatie voor categorie {{category}}.",
+    "deleteRuleConfirm": "Weet u zeker dat u regel {{name}} wilt verwijderen?",
+    "noRules": "Er zijn nog geen regels gedefinieerd voor deze categorie.",
+    "rulePriority": "Prioriteit {{priority}}",
+    "catalogsTitle": "Catalogi",
+    "catalogsDescription": "Selecteer eerst de catalogus waarmee u wilt werken.",
+    "catalogDescriptionFallback": "Er is nog geen beschrijving ingevoerd voor deze catalogus.",
+    "catalogHelperText": "Kortom: selecteer links catalogus, ga in het midden naar categorie, beheer voorraad en regels rechts.",
+    "treeTitle": "Categorieboom",
+    "treeDescription": "Ga van categorie naar subcategorie, vergelijkbaar met Trendyol en Hepsiburada.",
+    "treeReorderHint": "U kunt sorteren door categorieën op hetzelfde niveau te slepen en neer te zetten.",
+    "chooseCatalogFirst": "Selecteer eerst een catalogus aan de linkerkant. Categoriebeheer begint niet zonder een catalogus te selecteren.",
+    "stocksTitle": "Categorie aandelen",
+    "stocksDescription": "Wanneer u een bladcategorie selecteert, worden daar de gekoppelde aandelen vermeld.",
+    "stocksDescriptionSelected": "Aandelen gerelateerd aan de categorie {{category}}",
+    "stocksGuideTitle": "Wat doet dit veld?",
+    "stocksGuideDescription": "Hier bepaalt u welke producten in de door u gekozen categorie vallen. Als u wilt, kunt u de aandelen één voor één koppelen.",
+    "stocksHelperText": "Eenvoudige logica: selecteer eerst de categorie, druk vervolgens op de knop 'Koppel voorraad' en selecteer het product uit de vervolgkeuzelijst.",
+    "favoritesGuideTitle": "Wat doen favorieten?",
+    "favoritesGuideDescription": "Het toont de aandelen die u leuk vindt in de geselecteerde categorie in een op gebruikers gebaseerde snelle toegangslijst. Aandelenfavoriet gaat niet samen met categoriefavoriet.",
+    "favoritesHelperText": "{{count}} is uw favoriete aandeel in deze categorie. Je kunt het uit de favoriet verwijderen door nogmaals op het hartpictogram te drukken.",
+    "rulesGuideTitle": "Wat doet het regelscherm?",
+    "rulesGuideDescription": "Als u niet hetzelfde type producten één voor één wilt koppelen, kunt u hier de regel definiëren. Als Code1 = CAM bijvoorbeeld, kunt u zeggen dat deze in deze categorie moet vallen.",
+    "rulesHelperText": "Voeg eerst de regel toe. Kijk dan wat er gebeurt met 'Voorbeeldregels'. Indien waar, automatisch linken met 'Regels toepassen'.",
+    "selectionTitle": "verkiezingsstatus",
+    "selectionDescription": "Vanuit het rechterpaneel ziet u in één oogopslag de geselecteerde catalogus, categorie en gekoppelde aandelen.",
+    "selectionCatalog": "catalogus",
+    "selectionCategory": "Geselecteerde categorie",
+    "selectionCurrentLevel": "Je huidige niveau",
+    "selectionPath": "weg",
+    "selectionTotalStocks": "gebonden voorraad",
+    "selectionValueEmpty": "Nog niet geselecteerd",
+    "nextStepTitle": "Aanbevolen volgende stap",
+    "nextStepChooseCatalog": "Selecteer eerst een catalogus in het linkerpaneel.",
+    "nextStepBrowseTree": "Begin met de hoofdcategorie in het middelste paneel en ga naar de subcategorieën.",
+    "nextStepSelectLeaf": "Selecteer een extreme categorie om de aandelenlijst te bekijken.",
+    "nextStepReviewStocks": "Controleer de aandelen die aan de door u gekozen categorie zijn gekoppeld en verifieer de juiste match.",
+    "stepCatalogTitle": "Catalogus selecteren",
+    "stepCatalogDescription": "Bepaal of je in B2B, B2C of speciale catalogi gaat werken.",
+    "stepTreeTitle": "Ga de boom in",
+    "stepTreeDescription": "Klik door de hoofdcategorie, subcategorie en subspecificaties.",
+    "stepStocksTitle": "Controleer de voorraden",
+    "stepStocksDescription": "Wanneer de eindcategorie is geselecteerd, ziet u in het rechterpaneel de aangesloten voorraden en ERP-code-uitsplitsingen.",
+    "ready": "Klaar",
+    "pending": "wachten",
+    "openBranchAction": "Subcategorieën openen",
+    "selectLeafAction": "Selecteer deze categorie",
+    "root": "wortel",
+    "leaf": "vlieg",
+    "branch": "tak",
+    "treeLevelLabel": "Niveau {{level}}",
+    "noCatalogs": "Er is nog geen gedefinieerde catalogus.",
+    "noCategories": "Er zijn geen categorieën op dit niveau.",
+    "noStocks": "Er is geen aandeel gekoppeld aan deze categorie.",
+    "noFavorites": "Er zijn nog geen favoriete aandelen in deze categorie.",
+    "selectLeafHint": "Selecteer een extreme categorie om aandelen te bekijken.",
+    "stockSearchPlaceholder": "Zoek op voorraadcode of voorraadnaam...",
+    "favoriteSearchPlaceholder": "Zoek in favorieten op voorraadcode of naam...",
+    "primaryBadge": "Hoofdcategorie",
+    "tabs": {
+      "summary": "Hulp",
+      "stocks": "Voorraad toevoegen",
+      "favorites": "favorieten",
+      "rules": "Regel toevoegen",
+      "tips": "Gebruik"
+    },
+    "catalogTypes": {
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "dealer": "Dealer",
+      "custom": "privé"
+    },
+    "tips": {
+      "catalogTitle": "1. Kies eerst de juiste catalogus",
+      "catalogDescription": "Zelfs als er dezelfde categorienamen zijn aan de B2B- en B2C-kant, kunnen er in verschillende catalogi verschillende weergaven worden gemaakt.",
+      "branchTitle": "2. Branch is voor het navigeren door categorieën",
+      "branchDescription": "Branchecategorieën vormen niet het uiteindelijke selectiepunt, maar worden gebruikt om de gebruiker naar de juiste subspecificatie te verplaatsen.",
+      "leafTitle": "3. Controleer de voorraad in extreme categorieën",
+      "leafDescription": "De aandelenlijst is het meest logisch in de extreme categorie; het wordt daarom aanbevolen om de uiteindelijke selectie in de extreme categorie te maken.",
+      "exampleTitle": "4. Houd de bedrijfshiërarchie stabiel",
+      "exampleDescription": "Aanbevolen structuur: Hoofdcategorie > Subcategorie > Merk > Serie > Producten. Zo gebruikt het team dezelfde taal bij het openen van nieuwe records en zijn de zoekresultaten voorspelbaarder."
+    },
+    "hierarchyStages": {
+      "root": {
+        "title": "Hoofdcategorie",
+        "description": "Het vertegenwoordigt het zakengebied op het hoogste niveau. Voorbeeld: telefoons"
+      },
+      "subcategory": {
+        "title": "Subcategorie",
+        "description": "Het scheidt de productgroep. Voorbeeld: telefoons met drukknoppen"
+      },
+      "brand": {
+        "title": "Merk",
+        "description": "Het wordt gebruikt voor het uitsplitsen van merken of fabrikanten. Voorbeeld: iPhone"
+      },
+      "series": {
+        "title": "serie",
+        "description": "Hier wordt onderscheid gemaakt op basis van modelfamilies of series. Voorbeeld: 17-serie"
+      },
+      "products": {
+        "title": "Producten",
+        "description": "Het laatste niveau zou de bladcategorie moeten zijn; Stockbinding moet hier worden gedaan."
+      }
+    },
+    "actions": {
+      "newCatalog": "Nieuwe catalogus",
+      "createCatalog": "Catalogus maken",
+      "addRootCategory": "Hoofdcategorie toevoegen",
+      "addSubCategory": "Subcategorie toevoegen",
+      "createCategory": "Categorie maken",
+      "uploadCategoryImage": "Afbeelding uploaden",
+      "uploadingCategoryImage": "Afbeelding laden",
+      "removeCategoryImage": "Afbeelding verwijderen",
+      "addStock": "Link voorraad",
+      "removeStock": "Koppeling verwijderen",
+      "addFavorite": "toevoegen aan favoriet",
+      "removeFavorite": "Verwijderen uit favoriet",
+      "addRule": "Regel toevoegen",
+      "createRule": "Regel maken",
+      "previewRules": "Voorbeeldregels",
+      "previewingRules": "Voorbeeld voorbereiden",
+      "applyRules": "Regels toepassen",
+      "applyingRules": "Regels zijn van toepassing",
+      "importFromRiiStock": "Maken van RII_STOK",
+      "previewingStockHierarchy": "Uitsplitsing lezen",
+      "refreshStockHierarchyPreview": "Voorbeeld vernieuwen",
+      "applyStockHierarchy": "Catalogusboom maken",
+      "applyingStockHierarchy": "Een catalogusboom maken",
+      "addCategoryFavorite": "Categorie toevoegen aan favorieten",
+      "removeCategoryFavorite": "Verwijder categorie uit favorieten"
+    },
+    "messages": {
+      "catalogCreateSuccess": "De catalogus is succesvol aangemaakt.",
+      "catalogCreateError": "De catalogus kan niet worden gemaakt.",
+      "catalogUpdateSuccess": "De catalogus is succesvol bijgewerkt.",
+      "catalogUpdateError": "De catalogus kan niet worden bijgewerkt.",
+      "catalogDeleteSuccess": "De catalogus is succesvol verwijderd.",
+      "catalogDeleteError": "De catalogus kan niet worden verwijderd.",
+      "rootCategoryCreateSuccess": "De hoofdcategorie is succesvol aangemaakt.",
+      "subCategoryCreateSuccess": "Subcategorie is succesvol aangemaakt.",
+      "categoryCreateError": "De categorie kan niet worden gemaakt.",
+      "categoryUpdateSuccess": "De categorie is succesvol bijgewerkt.",
+      "categoryUpdateError": "De categorie kan niet worden bijgewerkt.",
+      "categoryReorderSuccess": "Categorievolgorde bijgewerkt.",
+      "categoryReorderError": "De categorievolgorde kan niet worden bijgewerkt.",
+      "categoryDeleteSuccess": "De categorie is succesvol verwijderd.",
+      "categoryDeleteError": "De categorie kan niet worden verwijderd.",
+      "stockAssignSuccess": "Het aandeel is succesvol aan de categorie gekoppeld.",
+      "stockAssignError": "Het aandeel kon niet aan de categorie worden gekoppeld.",
+      "stockUnassignSuccess": "Stocklink verwijderd.",
+      "stockUnassignError": "Kan de aandelenlink niet verwijderen.",
+      "favoriteAddSuccess": "Voorraad toegevoegd aan favorieten.",
+      "favoriteRemoveSuccess": "Voorraad verwijderd uit favorieten.",
+      "favoriteToggleError": "Favorietstatus kan niet worden bijgewerkt.",
+      "ruleCreateSuccess": "De regel is succesvol aangemaakt.",
+      "ruleCreateError": "De regel kan niet worden gemaakt.",
+      "ruleUpdateSuccess": "De regel is succesvol bijgewerkt.",
+      "ruleUpdateError": "De regel kan niet worden bijgewerkt.",
+      "ruleDeleteSuccess": "De regel is succesvol verwijderd.",
+      "ruleDeleteError": "De regel kan niet worden verwijderd.",
+      "rulePreviewError": "Kan regelvoorbeeld niet ophalen.",
+      "ruleApplySuccess": "De regels zijn succesvol geïmplementeerd.",
+      "ruleApplyError": "De regels konden niet worden toegepast.",
+      "stockHierarchyPreviewError": "Kan geen voorbeeld van voorraadoverzicht krijgen.",
+      "stockHierarchyApplySuccess": "Op basis van de uitsplitsing van RII_STOK is een catalogusboom gemaakt.",
+      "stockHierarchyApplyError": "Kan geen catalogusstructuur maken op basis van de RII_STOK-specificatie.",
+      "categoryFavoriteAddSuccess": "Categorie toegevoegd aan favorieten.",
+      "categoryFavoriteRemoveSuccess": "Categorie verwijderd uit favorieten."
+    },
+    "stockHierarchyImport": {
+      "title": "Catalogus maken op basis van RII_STOK-specificatie",
+      "description": "Het converteert de reeks Groepscode > Code1 > Code2 > Code3 naar een catalogusboom. Net als bij de Trendyol/Sahibinden-logica gaat de gebruiker bij elke klik naar een lagere uitsplitsing en ziet hij de aandelen op het laatste niveau.",
+      "options": {
+        "includeCode1": {
+          "title": "Voeg code1-niveau toe",
+          "description": "Opent de eerste uitsplitsing onder Groepscode. Bijvoorbeeld: benzine/diesel."
+        },
+        "includeCode2": {
+          "title": "Inclusief Code2-niveau",
+          "description": "Het opent de tweede uitsplitsing onder Code1. Bijvoorbeeld: handmatig / automatisch."
+        },
+        "includeCode3": {
+          "title": "Inclusief Code3-niveau",
+          "description": "Het opent de derde uitsplitsing onder Code2. Bij lege voorraden is het diepste bezette niveau de extreme categorie."
+        },
+        "assignStocks": {
+          "title": "Koppel aandelen aan het laatste niveau",
+          "description": "Bij het maken van de categorieboom worden de aandelen automatisch aan de diepste uitsplitsing gekoppeld."
+        }
+      },
+      "preview": {
+        "sourceStock": "Lees voorraad",
+        "category": "Totaal categorie",
+        "newCategory": "nieuwe categorie",
+        "newStockAssignment": "Nieuwe voorraadlink",
+        "group": "Groep: {{count}}",
+        "code1": "Code1: {{count}}",
+        "code2": "Code2: {{count}}",
+        "code3": "Code3: {{count}}",
+        "samples": "Manieren om voorbeelden te geven",
+        "noSamples": "Er is geen monsteruitsplitsing gevonden."
+      }
+    },
+    "rulePreviewSummaryTitle": "Voorbeeldoverzicht van regels",
+    "rulePreviewSummary": {
+      "matched": "Bijpassende voorraad: {{count}}",
+      "created": "De nieuwe link wordt: {{count}}",
+      "updated": "Link naar update: {{count}}",
+      "skipped": "Handmatig beveiligd register: {{count}}"
+    },
+    "rulePreviewListTitle": "Voorbeeldvoorbeelden",
+    "rulePreviewListEmpty": "Er zijn geen voorbeeldovereenkomsten gevonden voor voorbeeld.",
+    "rulePreviewMatchedRule": "Overeenkomende regel: {{rule}} Prioriteit {{priority}}",
+    "rulePreviewActions": {
+      "create": "Nieuwe koppeling",
+      "update": "Link wordt bijgewerkt",
+      "skip": "Met de hand bewaard"
+    },
+    "ruleApplySummaryTitle": "Samenvatting van de regelhandhaving",
+    "ruleApplySummary": {
+      "matched": "Bijpassende voorraad: {{count}}",
+      "created": "Nieuwe link: {{count}}",
+      "updated": "Bijgewerkte link: {{count}}",
+      "skipped": "Handmatig beveiligd register: {{count}}"
+    },
+    "form": {
+      "catalogName": "Catalogusnaam",
+      "catalogNamePlaceholder": "Bijvoorbeeld: B2B-hoofdcatalogus",
+      "catalogCode": "cataloguscode",
+      "catalogCodePlaceholder": "Bijvoorbeeld: B2B_MAIN",
+      "catalogType": "Catalogustype",
+      "branchCode": "Filiaalcode",
+      "branchCodePlaceholder": "optioneel",
+      "sortOrder": "Sorteer op",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Leg deze definitie kort uit, zodat andere managers deze kunnen begrijpen.",
+      "categoryName": "Categorienaam",
+      "categoryNamePlaceholder": "Bijvoorbeeld: glassystemen",
+      "categoryCode": "Categoriecode",
+      "categoryCodePlaceholder": "Bijvoorbeeld: CAM_SISTEMLERI",
+      "nodeType": "Categorietype",
+      "nodeTypeBranchHelp": "De vertakking is bedoeld voor categorienavigatie en het openen van subonderbrekingen. Sluit producten niet rechtstreeks op dit niveau aan.",
+      "nodeTypeLeafHelp": "De extreme categorie is het uiteindelijke keuzepunt. Het voorraadoverzicht en de productlijst moeten op dit niveau worden bijgehouden.",
+      "visualPreset": "Visueel thema",
+      "visualPresetPlaceholder": "Selecteer het thema door te zoeken",
+      "visualPresetSearchPlaceholder": "Zoek naar thema's...",
+      "visualPresetEmpty": "Geen geschikt thema gevonden.",
+      "visualPresetHelp": "Je uploadt geen afbeeldingen van buitenaf. Op basis van deze selectie produceert het systeem een ​​eigen categorieweergave.",
+      "categoryImage": "Categorie afbeelding",
+      "categoryImageHelp": "Als u wilt, kunt u een speciale afbeelding naar het systeem uploaden. Als u deze uploadt, wordt deze afbeelding gebruikt in plaats van het vooraf ingestelde pictogram op de categoriekaart.",
+      "ruleName": "Regelnaam",
+      "ruleCode": "regelcode",
+      "stockAttribute": "voorraad gebied",
+      "operator": "exploitant",
+      "ruleValue": "Regelwaarde",
+      "ruleValuePlaceholder": "Bijv.: GLAS of PROFIEL, ACCESSOIRE",
+      "ruleValueDropdownPlaceholder": "Kies uit voorraadvoorinstellingen",
+      "ruleValueSearchPlaceholder": "Zoeken naar ERP-specificatie...",
+      "ruleValueLoading": "Waarden laden...",
+      "ruleValueEmpty": "Er is geen geschikte waarde gevonden voor dit veld.",
+      "ruleValueDropdownHelp": "Het systeem toont de werkelijke ERP-waarden in het door u geselecteerde voorraadgebied. Het is veiliger om het hier te selecteren in plaats van het te typen.",
+      "ruleValueInListHelp": "U kunt meer dan één waarde selecteren in de var-operator in de lijst. Selecteer hierboven om toe te voegen, klik op de tag om te verwijderen.",
+      "ruleValueInListEmpty": "Nog geen toegevoegde waarde.",
+      "ruleValueManualHelp": "Deze operator werkt met vrije tekst. Typ hier de start-, include- of end-regel.",
+      "ruleValueTopMatchesTitle": "Meest voorkomende waarden in het systeem",
+      "ruleValueTopMatchesSubtitle": "U kunt klikken en snel selecteren",
+      "ruleValueTopMatchesEmpty": "Er zijn geen openstaande waarden gevonden voor dit veld.",
+      "priority": "prioriteit"
+    },
+    "visualPreviewTitle": "Categorieweergave",
+    "visualPreviewFallback": "Categorievoorbeeld",
+    "visualPresets": {
+      "general": {
+        "label": "Algemeen"
+      },
+      "glass": {
+        "label": "glas"
+      },
+      "profile": {
+        "label": "Profiel"
+      },
+      "accessory": {
+        "label": "accessoire"
+      },
+      "service": {
+        "label": "dienst"
+      },
+      "logistics": {
+        "label": "logistiek"
+      },
+      "machinery": {
+        "label": "machine"
+      },
+      "electronics": {
+        "label": "elektronica"
+      },
+      "security": {
+        "label": "Beveiliging"
+      },
+      "lighting": {
+        "label": "verlichting"
+      },
+      "construction": {
+        "label": "constructie"
+      },
+      "furniture": {
+        "label": "meubilair"
+      },
+      "hardware": {
+        "label": "hardware"
+      },
+      "automation": {
+        "label": "automatisering"
+      },
+      "energy": {
+        "label": "Energie"
+      },
+      "office": {
+        "label": "kantoor"
+      },
+      "textile": {
+        "label": "textiel"
+      },
+      "chemical": {
+        "label": "chemisch"
+      },
+      "outdoor": {
+        "label": "Buiten"
+      },
+      "cooling": {
+        "label": "koeling"
+      },
+      "heating": {
+        "label": "verwarming"
+      },
+      "plumbing": {
+        "label": "loodgieterswerk"
+      },
+      "decoration": {
+        "label": "decoratie"
+      },
+      "packaging": {
+        "label": "verpakking"
+      },
+      "automotive": {
+        "label": "automobiel"
+      },
+      "agriculture": {
+        "label": "landbouw"
+      },
+      "medical": {
+        "label": "medisch"
+      },
+      "pharmacy": {
+        "label": "apotheek"
+      },
+      "cosmetics": {
+        "label": "cosmetica"
+      },
+      "food": {
+        "label": "eten"
+      },
+      "beverage": {
+        "label": "drank"
+      },
+      "cleaning": {
+        "label": "schoonmaken"
+      },
+      "education": {
+        "label": "Onderwijs"
+      },
+      "finance": {
+        "label": "Financiën"
+      },
+      "insurance": {
+        "label": "Verzekering"
+      },
+      "real-estate": {
+        "label": "onroerend goed"
+      },
+      "tourism": {
+        "label": "toerisme"
+      },
+      "hospitality": {
+        "label": "accommodatie"
+      },
+      "restaurant": {
+        "label": "restaurant"
+      },
+      "ecommerce": {
+        "label": "E-commerce"
+      },
+      "retail": {
+        "label": "Detailhandel"
+      },
+      "wholesale": {
+        "label": "groothandel"
+      },
+      "manufacturing": {
+        "label": "Productie"
+      },
+      "mining": {
+        "label": "mijnbouw"
+      },
+      "marine": {
+        "label": "maritiem"
+      },
+      "aviation": {
+        "label": "luchtvaart"
+      },
+      "telecom": {
+        "label": "telecommunicatie"
+      },
+      "software": {
+        "label": "software"
+      },
+      "data-center": {
+        "label": "Datacentrum"
+      },
+      "media": {
+        "label": "Media"
+      },
+      "printing": {
+        "label": "drukkerij"
+      },
+      "sports": {
+        "label": "sporten"
+      },
+      "baby-kids": {
+        "label": "Baby & Kind"
+      },
+      "pet": {
+        "label": "huisdier"
+      },
+      "jewelry": {
+        "label": "sieraden"
+      },
+      "luxury": {
+        "label": "luxe"
+      },
+      "stationery": {
+        "label": "briefpapier"
+      },
+      "laboratory": {
+        "label": "laboratorium"
+      },
+      "recycling": {
+        "label": "Recycling"
+      },
+      "defense": {
+        "label": "verdediging"
+      }
+    },
+    "ruleAttributes": {
+      "groupCode": "Groepscode",
+      "groupName": "Groepsnaam",
+      "code1": "Code1",
+      "code1Name": "Code 1 Naam",
+      "code2": "Code2",
+      "code2Name": "Code 2 Naam",
+      "code3": "Codeer 3",
+      "code3Name": "Code 3 Naam",
+      "code4": "Codering 4",
+      "code4Name": "Code 4 Naam",
+      "code5": "Codeer 5",
+      "code5Name": "Code 5 Naam",
+      "manufacturerCode": "Fabrikantcode",
+      "erpStockCode": "ERP-voorraadcode",
+      "stockName": "Voorraadnaam"
+    },
+    "ruleOperators": {
+      "equals": "gelijk aan",
+      "contains": "Bevat",
+      "startsWith": "Het begint met",
+      "endsWith": "eindigt met",
+      "inList": "Het staat op de lijst"
+    },
+    "meta": {
+      "group": "groep",
+      "code1": "Code1",
+      "code2": "Code2",
+      "code3": "Codeer 3"
+    }
+  }
+}

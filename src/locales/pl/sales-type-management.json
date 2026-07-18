@@ -1,0 +1,35 @@
+{
+  "menu": "Zarządzanie typami sprzedaży",
+  "description": "Zarządzaj i edytuj typy sprzedaży",
+  "addButton": "Dodaj nowy typ sprzedaży",
+  "searchPlaceholder": "Wyszukaj typ sprzedaży...",
+  "advancedFilter": {
+    "columnName": "Imię",
+    "columnCode": "Kod",
+    "columnSalesType": "Typ oferty"
+  },
+  "table": {
+    "title": "Lista typów sprzedaży",
+    "salesType": "Typ oferty",
+    "name": "Imię",
+    "code": "Kod",
+    "createdDate": "Data utworzenia"
+  },
+  "form": {
+    "addTitle": "Dodaj nowy typ sprzedaży",
+    "editTitle": "Edytuj typ sprzedaży",
+    "addDescription": "Utwórz nową definicję typu sprzedaży.",
+    "editDescription": "Zaktualizuj istniejącą definicję typu sprzedaży.",
+    "salesType": "Typ oferty",
+    "name": "Imię",
+    "namePlaceholder": "Wprowadź nazwę typu sprzedaży",
+    "code": "Kod",
+    "codePlaceholder": "Np. 1 lub FOB",
+    "codeHelp": "Jest to opcjonalne. Kiedy zamówienie jest przekazywane do Netsis, jest ono wysyłane jako kod rodzaju eksportu/dostawy, jeśli taki istnieje; Jeśli jest pusty, w przypadku zagranicy używany jest domyślny FOB.",
+    "validation": {
+      "required": "Imię i nazwisko jest wymagane",
+      "whitespace": "Nazwa nie może być pusta ani zawierać tylko spacji",
+      "codeMaxLength": "Kod może mieć maksymalnie 50 znaków"
+    }
+  }
+}

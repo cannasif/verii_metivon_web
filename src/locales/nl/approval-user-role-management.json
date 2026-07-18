@@ -1,0 +1,53 @@
+{
+  "approvalUserRole": {
+    "menu": "Goedkeuring gebruikersrollenbeheer",
+    "description": "Beheer en organiseer goedkeuringsgebruikersrollen",
+    "addButton": "Nieuwe rol toevoegen",
+    "searchPlaceholder": "Zoeken...",
+    "refresh": "Vernieuwen",
+    "loading": "Laden...",
+    "noData": "Geen gegevens",
+    "table": {
+      "id": "Identiteitskaart",
+      "userFullName": "Gebruiker",
+      "approvalRoleName": "Goedkeuringsrol",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "actions": "Acties",
+      "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+      "page": "Pagina {{current}} / {{total}}",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "title": "Goedkeuring gebruikersrollen"
+    },
+    "delete": {
+      "title": "Rol verwijderen",
+      "confirmMessage": "Weet u zeker dat u deze gebruikersrol wilt verwijderen?",
+      "confirmButton": "Verwijderen",
+      "cancelButton": "Annuleer"
+    },
+    "form": {
+      "editTitle": "Goedkeuringsgebruikersrol bewerken",
+      "addTitle": "Nieuwe goedkeuringsgebruikersrol toevoegen",
+      "editDescription": "Bewerk informatie over de goedkeuringsgebruikersrol",
+      "addDescription": "Voer nieuwe goedkeuringsgebruikersrolinformatie in",
+      "userId": "Gebruiker",
+      "selectUser": "Selecteer Gebruiker",
+      "noUserSelected": "Geen gebruiker geselecteerd",
+      "approvalRoleId": "Goedkeuringsrol",
+      "selectApprovalRole": "Selecteer Goedkeuringsrol",
+      "noApprovalRoleSelected": "Er is geen goedkeuringsrol geselecteerd",
+      "userIdRequired": "Gebruikersselectie is vereist",
+      "approvalRoleIdRequired": "Goedkeuringsrolselectie is vereist",
+      "save": "Opslaan",
+      "saving": "Opslaan...",
+      "cancel": "Annuleer"
+    },
+    "advancedFilter": {
+      "columnUserFullName": "Gebruiker",
+      "columnApprovalRoleName": "Goedkeuringsrol",
+      "columnCreatedBy": "Gemaakt door"
+    },
+    "error": "Er is een fout opgetreden"
+  }
+}

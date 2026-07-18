@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "AI 기반 전사적 자원 관리",
+      "slogan": "추측이 아닌 Metivon으로 비즈니스를 관리하세요.",
+      "branchPlaceholder": "지점 선택",
+      "emailPlaceholder": "기업 이메일",
+      "passwordPlaceholder": "비밀번호",
+      "rememberMe": "나를 기억해",
+      "forgotPassword": "내 비밀번호를 잊으셨나요?",
+      "submitButton": "로그인",
+      "processing": "처리 중...",
+      "sessionExpired": "세션이 만료되었습니다. 다시 로그인해주세요.",
+      "comingSoon": "곧",
+      "loginError": "로그인하는 동안 오류가 발생했습니다.",
+      "capsLockOn": "Caps Lock이 켜져 있습니다.",
+      "animationOn": "애니메이션 열기",
+      "animationOff": "애니메이션 닫기",
+      "eyebrow": "AI 기반 ERP",
+      "heroTitle": "비즈니스의 모든 흐름을 하나의",
+      "heroDescription": "거래처, 재고, 창고, 입고, 출하 및 재무를 하나의 운영 코어에서 관리하세요.",
+      "welcomeEyebrow": "안전한 작업 공간",
+      "welcomeTitle": "Metivon 로그인",
+      "welcomeDescription": "지점을 선택하고 기업 작업 공간에 안전하게 접속하세요.",
+      "modules": {
+        "accounts": "거래처 관리",
+        "inventory": "재고 관리",
+        "warehouse": "창고 및 위치",
+        "shipping": "출하"
+      },
+      "live": "실시간",
+      "secureWorkspace": "모든 작업을 하나의 안전한 데이터 흐름으로",
+      "defaultBranch": "기본",
+      "showPassword": "비밀번호 표시",
+      "hidePassword": "비밀번호 숨기기",
+      "secureLogin": "암호화된 안전한 세션"
+    },
+    "forgotPassword": {
+      "title": "비밀번호를 잊어버렸어요",
+      "description": "비밀번호를 재설정하려면 이메일 주소를 입력하세요. 비밀번호 재설정 링크를 보내드리겠습니다.",
+      "emailPlaceholder": "이메일 주소",
+      "submitButton": "비밀번호 재설정 요청 제출",
+      "backToLogin": "홈 페이지로 돌아가기",
+      "processing": "처리 중...",
+      "logoAlt": "애플리케이션 로고"
+    },
+    "resetPassword": {
+      "title": "비밀번호 재설정",
+      "newPasswordPlaceholder": "새 비밀번호",
+      "confirmPasswordPlaceholder": "비밀번호 반복",
+      "submitButton": "비밀번호 재설정",
+      "processing": "처리 중...",
+      "invalidToken": "토큰이 잘못되었거나 누락되었습니다. 비밀번호 재설정 링크를 다시 확인해 주세요.",
+      "tokenNotFound": "토큰을 찾을 수 없습니다",
+      "successRedirect": "귀하의 비밀번호가 성공적으로 재설정되었습니다. 로그인 화면으로 이동됩니다..",
+      "failed": "비밀번호 재설정에 실패했습니다.",
+      "error": "비밀번호 재설정 과정에서 오류가 발생했습니다."
+    },
+    "changePassword": {
+      "success": "비밀번호가 성공적으로 변경되었습니다.",
+      "error": "비밀번호를 변경할 수 없습니다."
+    },
+    "validation": {
+      "emailRequired": "이메일은 필수입니다",
+      "emailInvalid": "유효한 이메일 주소를 입력하세요.",
+      "passwordRequired": "비밀번호가 필요합니다",
+      "branchRequired": "지점 선택은 필수입니다",
+      "passwordMinLength": "비밀번호는 8자 이상이어야 합니다.",
+      "tokenRequired": "토큰은 필수입니다",
+      "newPasswordMinLength": "비밀번호는 6자 이상이어야 합니다.",
+      "confirmPasswordRequired": "비밀번호를 반복해야 합니다.",
+      "passwordsMismatch": "비밀번호가 일치하지 않습니다.",
+      "currentPasswordRequired": "현재 비밀번호가 필요합니다",
+      "newPasswordMaxLength": "새 비밀번호는 최대 100자까지 가능합니다.",
+      "newPasswordSameAsCurrent": "새 비밀번호는 기존 비밀번호와 동일할 수 없습니다.",
+      "requiredFieldsNotFilled": "필수 필드가 채워지지 않았습니다."
+    }
+  }
+}

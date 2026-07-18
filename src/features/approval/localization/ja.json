@@ -1,0 +1,85 @@
+{
+  "list": {
+    "title": "承認待ち",
+    "description": "自分に割り当てられたオファーを表示し、承認または拒否できます",
+    "empty": "保留中の承認はありません",
+    "error": "確認の読み込み中にエラーが発生しました"
+  },
+  "yes": "はい",
+  "no": "いいえ",
+  "processing": "処理中...",
+  "detail": {
+    "title": "オファーの詳細",
+    "subtitle": "オファーの詳細を確認してアクションを実行する",
+    "tabs": {
+      "detail": "詳細",
+      "history": "過去",
+      "action": "トランザクション"
+    },
+    "notFound": "オファーが見つかりませんでした",
+    "quotationInfo": "オファー情報",
+    "offerNo": "オファー番号",
+    "customer": "顧客",
+    "representative": "代表者",
+    "currency": "通貨",
+    "offerDate": "オファー日",
+    "deliveryDate": "納期",
+    "total": "合計",
+    "grandTotal": "総計",
+    "description": "説明",
+    "lines": "引用文",
+    "productCode": "製品コード",
+    "productName": "製品名",
+    "quantity": "数量",
+    "unitPrice": "単価",
+    "lineTotal": "行合計",
+    "lineGrandTotal": "行の総計",
+    "exchangeRates": "為替レート",
+    "exchangeRate": "インストール",
+    "exchangeRateDate": "為替レートの日付",
+    "isOfficial": "公式をインストールする"
+  },
+  "actions": {
+    "view": "見る",
+    "approve": "確認する",
+    "reject": "拒否する"
+  },
+  "status": {
+    "notRequired": "ドラフト",
+    "waiting": "待っています",
+    "approved": "承認済み",
+    "rejected": "拒否されました",
+    "closed": "閉店"
+  },
+  "closedReason": "同じオファー番号を持つ別のレコードが承認されたため、このレコードは閉じられました。",
+  "statusFilterLabel": "承認状況",
+  "level": {
+    "salesManager": "営業マネージャー",
+    "regionalManager": "地域マネージャー",
+    "finance": "金融",
+    "generalManager": "ゼネラルマネージャー",
+    "unknown": "不明"
+  },
+  "note": {
+    "label": "メモ",
+    "placeholder": "承認/拒否メモを追加できます（オプション）",
+    "maxLength": "メモは最大 500 文字まで入力できます"
+  },
+  "approve": {
+    "success": "承認済み",
+    "successMessage": "オファーは正常に承認されました",
+    "error": "アサーションエラー",
+    "errorMessage": "オファーの承認中にエラーが発生しました"
+  },
+  "reject": {
+    "success": "拒否されました",
+    "successMessage": "オファーが拒否されました",
+    "error": "拒否エラー",
+    "errorMessage": "オファーの拒否中にエラーが発生しました"
+  },
+  "history": {
+    "empty": "承認履歴はありません",
+    "approvedBy": "承認者"
+  },
+  "assignedTo": "割り当てられたユーザー"
+}

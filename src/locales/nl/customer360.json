@@ -1,0 +1,268 @@
+{
+  "title": "Klant 360",
+  "notFound": "Klant niet gevonden",
+  "error": "Er is een fout opgetreden",
+  "retry": "Probeer het opnieuw",
+  "quickActivity": "Snelle activiteit",
+  "currencyFilter": {
+    "label": "valuta",
+    "all": "Allemaal"
+  },
+  "balanceDialog": {
+    "openButton": "Huidig saldooverzicht",
+    "title": "Huidig saldooverzicht",
+    "error": "ERP-saldooverzicht kan niet worden geladen."
+  },
+  "tabs": {
+    "quotations": "Aanbiedingen",
+    "orders": "Bestellingen",
+    "activities": "Activiteiten",
+    "overview": "Samenvatting",
+    "analytics": "Analyse",
+    "quickQuotations": "Snelle citaten",
+    "erpMovements": "ERP-beweging",
+    "erpOrders": "ERP-bestelling",
+    "mailLogs": "E-mailgeschiedenis",
+    "images": "Afbeeldingen",
+    "imagesDefaultDescription": "Visitekaartje afbeelding"
+  },
+  "quickQuotations": {
+    "empty": "Er is geen snel bod gevonden voor deze concubine",
+    "error": "Snelle offertes kunnen niet worden geladen",
+    "draft": "ontwerp",
+    "converted": "Terug naar aanbieding",
+    "sentToApproval": "Verzonden voor goedkeuring",
+    "notSentToApproval": "Niet naar goedkeuring gegaan",
+    "currency": "Valuta",
+    "total": "Totaal",
+    "quotationStatus": "Aanbiedingsstatus",
+    "approvalStep": "Bevestigingsstap",
+    "stepValue": "Stap {{step}}",
+    "convertedAt": "Conversie: {{date}}",
+    "notConvertedYet": "Het is nog geen aanbieding geworden",
+    "openQuotation": "Open aanbieding"
+  },
+  "erpMovements": {
+    "title": "ERP-beweging",
+    "tableTitle": "Huidige bewegingen",
+    "error": "Kan ERP-transactiegegevens niet laden",
+    "columns": {
+      "date": "datum",
+      "dueDate": "Vervaldatum",
+      "documentNo": "Documentnummer",
+      "description": "Beschrijving",
+      "currency": "Valuta",
+      "debit": "schulden",
+      "credit": "vordering",
+      "tlBalanceByDate": "Besteldatum TL-saldo",
+      "tlBalanceByDueDate": "Looptijdvolgorde TL-saldo",
+      "fxDebit": "Deviezenschuld",
+      "fxCredit": "Te ontvangen vreemde valuta",
+      "fxBalanceByDate": "Datum van bestelling Valutasaldo",
+      "fxBalanceByDueDate": "Looptijdvolgorde Deviezensaldo",
+      "actions": "Transacties"
+    },
+    "detail": {
+      "button": "Details",
+      "title": "Documentpendetail",
+      "description": "Netsis voorraadartikelen behorend bij documentnummer {{documentNo}}.",
+      "error": "Documentitems konden niet worden geladen.",
+      "empty": "Er zijn geen inventarisitems gevonden voor dit document.",
+      "columns": {
+        "stockCode": "Voorraadcode",
+        "stockName": "Voorraadnaam",
+        "quantity": "Hoeveelheid",
+        "grossPrice": "Bruto prijs",
+        "netPrice": "Netto prijs",
+        "grossAmount": "Bruto verkoopbedrag",
+        "discountAmount": "Kortingsbedrag",
+        "vatAmount": "BTW-bedrag",
+        "total": "Bedrag",
+        "fxPrice": "Prijs in vreemde valuta",
+        "fxAmount": "Bedrag in vreemde valuta"
+      }
+    },
+    "summary": {
+      "totalDebit": "Totale schuld",
+      "totalCredit": "Totaal vordering",
+      "balance": "balans",
+      "closed": "Gesloten"
+    }
+  },
+  "erpOrders": {
+    "title": "Netsis-bestellingen",
+    "noCariCode": "De huidige ERP-code is niet gedefinieerd voor deze klant. Netsis-bestellingen kunnen niet worden bekeken.",
+    "forbidden": "U bent niet bevoegd om ERP-orders in te zien.",
+    "error": "ERP-bestellingen konden niet worden geladen.",
+    "empty": "Er is geen Netsis-bestelling gevonden voor deze betaalrekening.",
+    "scopeHint": "De lijst is beperkt tot bestellingen binnen het Netsis-bereik van de ingelogde gebruiker.",
+    "columns": {
+      "branch": "tak",
+      "orderNo": "Bestelnr.",
+      "date": "datum",
+      "deliveryDate": "Levering",
+      "gross": "bruto",
+      "vat": "BTW",
+      "total": "Totaal",
+      "salesRep": "verkoper"
+    }
+  },
+  "mail": {
+    "providers": {
+      "google": "Googlen",
+      "outlook": "Vooruitzichten"
+    },
+    "columns": {
+      "date": "datum",
+      "sender": "Geplaatst door",
+      "to": "Koper",
+      "subject": "Onderwerp",
+      "status": "Status",
+      "template": "sjabloon",
+      "errorCode": "Foutcode",
+      "body": "Bericht"
+    }
+  },
+  "kpi": {
+    "totalDemands": "Totaal aanbod",
+    "totalQuotations": "Totaal aanbod",
+    "totalOrders": "Totale bestelling",
+    "openQuotations": "Open aanbieding",
+    "openOrders": "Bestelling in behandeling"
+  },
+  "sections": {
+    "contacts": "Communicatie",
+    "shippingAddresses": "Verzendadressen",
+    "recentDemands": "Laatste verzoeken",
+    "recentQuotations": "Laatste aanbiedingen",
+    "recentOrders": "Laatste bestellingen",
+    "recentActivities": "Laatste activiteiten",
+    "timeline": "Tijdlijn"
+  },
+  "analytics": {
+    "error": "Kan analysegegevens niet laden",
+    "last12MonthsOrderAmount": "Bestelbedrag van de afgelopen 12 maanden",
+    "openQuotationAmount": "Open bodbedrag",
+    "openOrderAmount": "Open orderbedrag",
+    "activityCount": "Aantal activiteiten",
+    "lastActivityDate": "Laatste activiteitsdatum"
+  },
+  "analyticsCharts": {
+    "demand": "Aanbieding",
+    "quotation": "Aanbieding",
+    "order": "Bestel",
+    "last12MonthsOrderAmount": "Bestelling van de afgelopen 12 maanden",
+    "openQuotationAmount": "Open aanbieding",
+    "openOrderAmount": "Open bestelling",
+    "distributionTitle": "distributie",
+    "monthlyTrendTitle": "Maandelijkse trend",
+    "amountComparisonTitle": "Vergelijking van bedragen"
+  },
+  "currencyTotals": {
+    "currency": "Valuta",
+    "demandAmount": "Biedbedrag",
+    "quotationAmount": "Biedbedrag",
+    "orderAmount": "Bestelbedrag"
+  },
+  "revenueQuality": {
+    "title": "Inkomstenkwaliteit",
+    "churnRisk": "Risico op verlies",
+    "upsell": "Upselling-trend",
+    "payment": "Betalingsgedrag",
+    "segment": "RFM-groepering",
+    "ltv": "Levenslange waarde"
+  },
+  "cohort": {
+    "title": "Een cohort behouden",
+    "empty": "Geen cohortgegevens",
+    "cohortKey": "cohort"
+  },
+  "actions": {
+    "title": "Aanbevolen acties",
+    "empty": "Geen aanbevolen actie",
+    "execute": "Toepassen"
+  },
+  "explain": {
+    "revenueQualityTitle": "De omzetkwaliteit vat het verkooppotentieel en het risicoprofiel van de klant samen.",
+    "churnRisk": "Risico op verlies geeft de waarschijnlijkheid aan dat de klant niet opnieuw zal bestellen.",
+    "upsellPropensity": "Een upsellingtrend geeft het potentieel van de klant aan om hogere volumes of aanvullende producten te kopen.",
+    "paymentBehavior": "Het betaalgedrag vat het incasso- en betaalpatroon van de klant samen.",
+    "rfmSegment": "RFM-groepering; Toont de groep van de klant op basis van nabijheids-, frequentie- en hoeveelheidsgegevens.",
+    "modelNote": "Deze velden zijn analytische modeluitvoer en worden weergegeven ter ondersteuning van de besluitvorming.",
+    "cohortRetentionTitle": "Cohortretentie toont de continuïteit van klanten die over een vergelijkbare periode zijn verworven.",
+    "noCohortData": "Voor deze cliënt konden onvoldoende cohortgegevens worden gevonden.",
+    "recommendedActionsTitle": "In dit gebied worden de door het systeem aanbevolen acties vermeld.",
+    "executeAction": "Actie toepassen"
+  },
+  "hero": {
+    "statusActive": "actief",
+    "statusCrm": "CRM-registratie",
+    "since": "sinds {{year}}",
+    "whatsapp": "WhatsAppen",
+    "call": "Zoeken",
+    "email": "E-mail",
+    "quickQuote": "Snel citaat",
+    "editCustomer": "Klant bewerken",
+    "none": "Geen",
+    "emailLabel": "E-mail",
+    "phoneLabel": "telefoon",
+    "websiteLabel": "Website",
+    "addressLabel": "Adres",
+    "infoTitle": "Informatie",
+    "taxNumber": "Belastingnummer",
+    "customerType": "Klanttype",
+    "salesRep": "Verkoopvertegenwoordiger",
+    "creditLimit": "Kredietlimiet"
+  },
+  "related": {
+    "newQuotation": "Nieuwe aanbieding",
+    "newOrder": "Nieuwe bestelling",
+    "newActivity": "Nieuwe activiteit",
+    "error": "Kan de lijst niet laden",
+    "emptyQuotations": "Geen aanbieding gevonden voor deze klant",
+    "emptyOrders": "Geen bestelling gevonden voor deze klant",
+    "emptyActivities": "Geen activiteit gevonden voor deze klant",
+    "columns": {
+      "offerNo": "Nee.",
+      "date": "datum",
+      "representative": "vertegenwoordiger",
+      "total": "Bedrag",
+      "subject": "Onderwerp",
+      "type": "Typ",
+      "assignee": "Verantwoordelijk",
+      "status": "Status"
+    },
+    "activityStatus": {
+      "scheduled": "gepland",
+      "completed": "voltooid",
+      "cancelled": "Annuleer"
+    }
+  },
+  "images": {
+    "upload": "Afbeelding uploaden",
+    "delete": "Verwijderen",
+    "emptyHint": "Klik of sleep om een afbeelding toe te voegen",
+    "deleteConfirmTitle": "afbeelding verwijderen",
+    "deleteConfirmDescription": "Weet u zeker dat u deze afbeelding wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt."
+  },
+  "button": "Klant 360",
+  "status": {
+    "havenotstarted": "Niet begonnen",
+    "notstarted": "Niet begonnen",
+    "inprogress": "In het goedkeuringsproces",
+    "pending": "In behandeling",
+    "waiting": "wachten",
+    "approved": "Goedgekeurd",
+    "rejected": "afgewezen",
+    "completed": "voltooid",
+    "cancelled": "Geannuleerd",
+    "canceled": "Geannuleerd",
+    "draft": "ontwerp",
+    "converted": "Terug naar aanbieding",
+    "sent": "verzonden",
+    "active": "actief",
+    "passive": "passief",
+    "closed": "Gesloten",
+    "open": "geopend"
+  }
+}

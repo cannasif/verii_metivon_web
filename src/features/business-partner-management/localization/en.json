@@ -1,0 +1,27 @@
+{
+  "title": "Business Partners",
+  "description": "Manage customer, supplier and lead master records.",
+  "searchPlaceholder": "Search code, name, tax ID, email or phone...",
+  "loading": "Loading business partners...",
+  "loadError": "Business partners could not be loaded.",
+  "empty": "No business partner records yet.",
+  "active": "Active",
+  "passive": "Inactive",
+  "unlimited": "Unlimited",
+  "pagination": {
+    "summary": "{{total}} records · Page {{page}} / {{pages}}",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "columns": {
+    "code": "Code",
+    "name": "Name",
+    "type": "Type",
+    "payment": "Payment Term",
+    "currency": "Currency",
+    "customerGroup": "Customer Group",
+    "taxGroup": "Tax Group",
+    "creditLimit": "Credit Limit",
+    "status": "Status"
+  }
+}

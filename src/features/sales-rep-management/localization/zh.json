@@ -1,0 +1,52 @@
+{
+  "menu": "销售代表代码管理",
+  "description": "从 ERP 中查看、添加和删除销售代表代码。",
+  "addButton": "新销售代表",
+  "searchPlaceholder": "搜索销售代表代码、描述或姓名",
+  "empty": "未找到销售代表记录。",
+  "error": "无法加载销售代表记录。",
+  "deleteConfirmMessage": "删除代码为 {{code}} 的销售代表记录吗？",
+  "table": {
+    "title": "销售代表名单",
+    "branchCode": "分行代码",
+    "salesRepCode": "销售代表代码",
+    "salesRepDescription": "描述",
+    "name": "姓名",
+    "createdDate": "创建日期"
+  },
+  "form": {
+    "addTitle": "添加新的销售代表",
+    "addDescription": "手动添加销售代表代码记录。",
+    "editTitle": "销售代表编辑",
+    "editDescription": "更新销售代表代码记录。",
+    "branchCode": "分行代码",
+    "branchCodePlaceholder": "输入分行代码",
+    "salesRepCode": "销售代表代码",
+    "salesRepCodePlaceholder": "输入代码",
+    "salesRepDescription": "描述",
+    "salesRepDescriptionPlaceholder": "输入描述",
+    "name": "姓名",
+    "namePlaceholder": "输入姓名",
+    "validation": {
+      "branchCodeRequired": "需要分行代码。",
+      "codeRequired": "需要销售代表代码。",
+      "codeMaxLength": "销售代表代码最多可为 8 个字符。",
+      "descriptionMaxLength": "描述最多可包含 30 个字符。",
+      "nameMaxLength": "该名称最多可包含 35 个字符。"
+    }
+  },
+  "messages": {
+    "createSuccess": "已创建销售代表记录。",
+    "createError": "无法创建销售代表记录。",
+    "updateSuccess": "销售代表记录已更新。",
+    "updateError": "无法更新销售代表记录。",
+    "deleteSuccess": "销售代表记录已被删除。",
+    "deleteError": "无法删除销售代表记录。"
+  },
+  "advancedFilter": {
+    "columnBranchCode": "分行代码",
+    "columnSalesRepCode": "销售代表代码",
+    "columnDescription": "描述",
+    "columnName": "姓名"
+  }
+}

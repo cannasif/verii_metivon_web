@@ -1,0 +1,67 @@
+{
+  "menu": "Beheer van klanttypes",
+  "description": "Klanttypen beheren en bewerken",
+  "showStats": "Statistieken weergeven",
+  "hideStats": "Statistieken verbergen",
+  "addButton": "Nieuw klanttype toevoegen",
+  "loading": "Laden...",
+  "error": "Er is een fout opgetreden",
+  "noData": "Geen gegevens gevonden",
+  "actions": "Transacties",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "advancedFilter": {
+    "columnName": "Klanttypenaam",
+    "columnDescription": "Beschrijving"
+  },
+  "stats": {
+    "totalCustomerTypes": "Totaal klanttype",
+    "activeCustomerTypes": "Actief klanttype",
+    "newThisMonth": "Nieuw deze maand"
+  },
+  "table": {
+    "title": "Lijst met klanttypen",
+    "id": "Identiteitskaart",
+    "name": "Klanttypenaam",
+    "description": "Beschrijving",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door",
+    "updatedDate": "Bijgewerkte datum",
+    "updatedBy": "Bijgewerkt door",
+    "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+    "page": "Pagina {{current}} / {{total}}"
+  },
+  "form": {
+    "addCustomerType": "Nieuw klanttype toevoegen",
+    "editCustomerType": "Klanttype bewerken",
+    "addDescription": "Voer nieuwe klanttypegegevens in",
+    "editDescription": "Klanttype-informatie bewerken",
+    "name": "Klanttypenaam",
+    "namePlaceholder": "Voer de naam van het klanttype in",
+    "nameRequired": "Typenaam van de klant is vereist",
+    "nameMaxLength": "De klanttypenaam mag maximaal 100 tekens lang zijn",
+    "description": "Beschrijving",
+    "descriptionPlaceholder": "Voer een beschrijving in (optioneel)",
+    "descriptionMaxLength": "De beschrijving mag maximaal 500 tekens bevatten",
+    "cancel": "Annuleer",
+    "save": "Opslaan",
+    "saving": "Opnemen..."
+  },
+  "delete": {
+    "action": "Verwijderen",
+    "confirmTitle": "Klanttype verwijderen",
+    "confirmMessage": "Weet u zeker dat u het klanttype {{name}} wilt verwijderen?",
+    "confirmButton": "Verwijderen",
+    "success": "Klanttype succesvol verwijderd",
+    "error": "Kan klanttype niet verwijderen",
+    "deleting": "Verwijderen..."
+  },
+  "messages": {
+    "createSuccess": "Klanttype succesvol aangemaakt",
+    "createError": "Kan klanttype niet aanmaken",
+    "updateSuccess": "Klanttype succesvol bijgewerkt",
+    "updateError": "Kan klanttype niet updaten",
+    "deleteSuccess": "Klanttype succesvol verwijderd",
+    "deleteError": "Kan klanttype niet verwijderen"
+  }
+}

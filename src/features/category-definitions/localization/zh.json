@@ -1,0 +1,511 @@
+{
+  "categoryDefinitions": {
+    "title": "类别定义",
+    "description": "您可以从这里开始管理 B2B 和 B2C 目录的类别树和类别相关库存。",
+    "guidedTitle": "只需 3 个步骤即可管理类别结构",
+    "hierarchyBlueprintTitle": "推荐企业类别设置",
+    "hierarchyBlueprintDescription": "如果用固定的逻辑构建品类树，用户会更容易理解，产品匹配也会更顺利。",
+    "hierarchyExampleLabel": "样品流量",
+    "hierarchyExampleValue": "手机 > 按钮手机 > iPhone > 17 系列 > 产品列表",
+    "easyModeTitle": "你不必考虑在这里做什么",
+    "summaryGuideTitle": "我正在向您展示正确的下一步",
+    "createCatalogTitle": "创建新目录",
+    "createCatalogDescription": "为 B2B、B2C 或自定义流程添加新的目录定义。",
+    "editCatalogTitle": "编辑目录",
+    "editCatalogDescription": "更新所选目录的名称、类型和排序。",
+    "createCategoryTitle": "添加类别",
+    "createCategoryDescription": "在 {{target}} 下创建新类别。",
+    "editCategoryTitle": "编辑类别",
+    "editCategoryDescription": "更新 {{target}} 的类别信息。",
+    "createCategoryTarget": "连接级别",
+    "deleteCatalogConfirm": "您确定要删除目录 {{name}} 吗？",
+    "deleteCategoryConfirm": "您确定要删除类别 {{name}} 吗？",
+    "deleteStockConfirm": "您确定要删除此库存链接吗？",
+    "createRuleTitle": "添加规则",
+    "createRuleDescription": "为类别 {{category}} 创建自动链接规则。",
+    "editRuleTitle": "编辑规则",
+    "editRuleDescription": "更新类别 {{category}} 的规则信息。",
+    "deleteRuleConfirm": "您确定要删除规则 {{name}} 吗？",
+    "noRules": "目前还没有为此类别定义规则。",
+    "rulePriority": "优先级 {{priority}}",
+    "catalogsTitle": "目录",
+    "catalogsDescription": "首先选择您要使用的目录。",
+    "catalogDescriptionFallback": "尚未为此目录输入任何描述。",
+    "catalogHelperText": "简而言之：在左侧选择目录，进入中间的类别，在右侧管理库存和规则。",
+    "treeTitle": "类别树",
+    "treeDescription": "从类别进入子类别，类似于 Trendyol 和 Hepsiburada。",
+    "treeReorderHint": "您可以通过拖放同一级别的类别来排序。",
+    "chooseCatalogFirst": "首先，从左侧选择一个目录。如果不选择目录，则不会启动类别管理。",
+    "stocksTitle": "类别股票",
+    "stocksDescription": "当您选择叶类别时，链接的股票将列在那里。",
+    "stocksDescriptionSelected": "与 {{category}} 类别相关的股票",
+    "stocksGuideTitle": "这个字段有什么作用？",
+    "stocksGuideDescription": "您可以在此处确定哪些产品属于您选择的类别。如果需要，您可以将股票一一链接。",
+    "stocksHelperText": "简单的逻辑：首先选择类别，然后按“链接库存”按钮，从下拉列表中选择产品。",
+    "favoritesGuideTitle": "收藏夹有什么作用？",
+    "favoritesGuideDescription": "它在基于用户的快速访问列表中显示您在所选类别中喜欢的股票。库存收藏夹不会与类别收藏夹混合。",
+    "favoritesHelperText": "{{count}} 是该类别中您最喜欢的股票。您可以再次按心形图标将其从收藏夹中删除。",
+    "rulesGuideTitle": "规则屏幕有什么作用？",
+    "rulesGuideDescription": "如果您不想一一链接同类型的产品，可以在这里定义规则。例如，如果Code1 = CAM，您可以说它应该属于这一类。",
+    "rulesHelperText": "先添加规则。然后看看“预览规则”会发生什么。如果为真，则自动链接“应用规则”。",
+    "selectionTitle": "选举状况",
+    "selectionDescription": "您可以从右侧面板一目了然地看到所选的目录、类别和链接的股票。",
+    "selectionCatalog": "目录",
+    "selectionCategory": "所选类别",
+    "selectionCurrentLevel": "您目前的等级",
+    "selectionPath": "路",
+    "selectionTotalStocks": "捆绑库存",
+    "selectionValueEmpty": "尚未选定",
+    "nextStepTitle": "建议下一步",
+    "nextStepChooseCatalog": "首先，从左侧面板中选择一个目录。",
+    "nextStepBrowseTree": "从中间面板中的主要类别开始，然后转向子细分。",
+    "nextStepSelectLeaf": "选择一个极端类别即可查看库存列表。",
+    "nextStepReviewStocks": "检查与您选择的类别链接的股票并验证正确的匹配。",
+    "stepCatalogTitle": "选择目录",
+    "stepCatalogDescription": "确定您是从事 B2B、B2C 还是特殊目录工作。",
+    "stepTreeTitle": "往树上移动",
+    "stepTreeDescription": "单击主类别、子类别和子细目。",
+    "stepStocksTitle": "查看库存",
+    "stepStocksDescription": "选择最终类别后，请在右侧面板中查看连接的库存和 ERP 代码细分。",
+    "ready": "准备好",
+    "pending": "等待",
+    "openBranchAction": "打开子类别",
+    "selectLeafAction": "选择该类别",
+    "root": "根",
+    "leaf": "飞",
+    "branch": "分行",
+    "treeLevelLabel": "级别 {{level}}",
+    "noCatalogs": "目前还没有定义的目录。",
+    "noCategories": "此级别没有类别。",
+    "noStocks": "没有与此类别相关的库存。",
+    "noFavorites": "此类别中还没有最喜欢的股票。",
+    "selectLeafHint": "选择一个极端类别来查看股票。",
+    "stockSearchPlaceholder": "按股票代码或股票名称搜索...",
+    "favoriteSearchPlaceholder": "按股票代码或名称搜索收藏夹...",
+    "primaryBadge": "主要类别",
+    "tabs": {
+      "summary": "帮助",
+      "stocks": "添加库存",
+      "favorites": "收藏夹",
+      "rules": "添加规则",
+      "tips": "用途"
+    },
+    "catalogTypes": {
+      "b2b": "企业对企业",
+      "b2c": "企业对消费者",
+      "dealer": "经销商",
+      "custom": "私人的"
+    },
+    "tips": {
+      "catalogTitle": "1.先选择合适的目录",
+      "catalogDescription": "即使B2B和B2C端有相同的类别名称，也可以在不同的目录中创建不同的视图。",
+      "branchTitle": "2. 分支用于导航类别",
+      "branchDescription": "分支类别不是最终的选择点，而是用于将用户移动到正确的子细分。",
+      "leafTitle": "3.查看极端品类的库存",
+      "leafDescription": "库存清单在极端类别中最有意义；所以建议最终选择在极限类别。",
+      "exampleTitle": "4.保持公司层级稳定",
+      "exampleDescription": "推荐结构：主类别>子类别>品牌>系列>产品。这样，团队在打开新记录时使用相同的语言，并且搜索结果更加可预测。"
+    },
+    "hierarchyStages": {
+      "root": {
+        "title": "主要类别",
+        "description": "它代表了最高级别的业务领域。示例：电话"
+      },
+      "subcategory": {
+        "title": "子类别",
+        "description": "它将产品组分开。示例：按钮电话"
+      },
+      "brand": {
+        "title": "品牌",
+        "description": "它用于品牌或制造商细分。示例：iPhone"
+      },
+      "series": {
+        "title": "系列",
+        "description": "此处保留基于型号系列或系列的区别。示例：17 系列"
+      },
+      "products": {
+        "title": "产品展示",
+        "description": "最后一层应该是叶子类别；库存装订应在此处完成。"
+      }
+    },
+    "actions": {
+      "newCatalog": "新目录",
+      "createCatalog": "创建目录",
+      "addRootCategory": "添加根类别",
+      "addSubCategory": "添加子类别",
+      "createCategory": "创建类别",
+      "uploadCategoryImage": "上传图片",
+      "uploadingCategoryImage": "图片加载",
+      "removeCategoryImage": "删除图像",
+      "addStock": "链接库存",
+      "removeStock": "删除链接",
+      "addFavorite": "添加到收藏夹",
+      "removeFavorite": "从收藏夹中删除",
+      "addRule": "添加规则",
+      "createRule": "创建规则",
+      "previewRules": "预览规则",
+      "previewingRules": "准备预览",
+      "applyRules": "应用规则",
+      "applyingRules": "规则适用",
+      "importFromRiiStock": "从 RII_STOK 创建",
+      "previewingStockHierarchy": "阅读细目",
+      "refreshStockHierarchyPreview": "刷新预览",
+      "applyStockHierarchy": "创建目录树",
+      "applyingStockHierarchy": "创建目录树",
+      "addCategoryFavorite": "将类别添加到收藏夹",
+      "removeCategoryFavorite": "从收藏夹中删除类别"
+    },
+    "messages": {
+      "catalogCreateSuccess": "目录已成功创建。",
+      "catalogCreateError": "无法创建目录。",
+      "catalogUpdateSuccess": "目录已成功更新。",
+      "catalogUpdateError": "无法更新目录。",
+      "catalogDeleteSuccess": "目录已成功删除。",
+      "catalogDeleteError": "无法删除该目录。",
+      "rootCategoryCreateSuccess": "根类别已成功创建。",
+      "subCategoryCreateSuccess": "子类别创建成功。",
+      "categoryCreateError": "无法创建该类别。",
+      "categoryUpdateSuccess": "该类别已成功更新。",
+      "categoryUpdateError": "无法更新该类别。",
+      "categoryReorderSuccess": "类别顺序已更新。",
+      "categoryReorderError": "类别顺序无法更新。",
+      "categoryDeleteSuccess": "该类别已成功删除。",
+      "categoryDeleteError": "无法删除该类别。",
+      "stockAssignSuccess": "该库存已成功链接到该类别。",
+      "stockAssignError": "该库存无法链接到该类别。",
+      "stockUnassignSuccess": "库存链接已删除。",
+      "stockUnassignError": "无法删除库存链接。",
+      "favoriteAddSuccess": "库存已添加至收藏夹。",
+      "favoriteRemoveSuccess": "库存已从收藏夹中删除。",
+      "favoriteToggleError": "无法更新收藏夹状态。",
+      "ruleCreateSuccess": "规则已成功创建。",
+      "ruleCreateError": "无法创建规则。",
+      "ruleUpdateSuccess": "规则已成功更新。",
+      "ruleUpdateError": "无法更新该规则。",
+      "ruleDeleteSuccess": "该规则已成功删除。",
+      "ruleDeleteError": "无法删除该规则。",
+      "rulePreviewError": "无法获取规则预览。",
+      "ruleApplySuccess": "该规则已成功实施。",
+      "ruleApplyError": "规则无法应用。",
+      "stockHierarchyPreviewError": "无法获取库存明细预览。",
+      "stockHierarchyApplySuccess": "目录树是根据 RII_STOK 细分创建的。",
+      "stockHierarchyApplyError": "无法从 RII_STOK 细分创建目录树。",
+      "categoryFavoriteAddSuccess": "类别已添加到收藏夹。",
+      "categoryFavoriteRemoveSuccess": "类别已从收藏夹中删除。"
+    },
+    "stockHierarchyImport": {
+      "title": "从 RII_STOK 细分创建目录",
+      "description": "它将序列 Group Code > Code1 > Code2 > Code3 转换为目录树。与 Trendyol/Sahibinden 逻辑一样，用户每次点击都会下降到较低的细分，并看到最后一级的股票。",
+      "options": {
+        "includeCode1": {
+          "title": "包含代码1级别",
+          "description": "打开组代码下的第一个细分。例如：汽油/柴油。"
+        },
+        "includeCode2": {
+          "title": "包括Code2级别",
+          "description": "它打开 Code1 下的第二个细分。例如：手动/自动。"
+        },
+        "includeCode3": {
+          "title": "包括Code3级别",
+          "description": "它打开 Code2 下的第三个细分。在空库存中，占据最深的层次是极端类别。"
+        },
+        "assignStocks": {
+          "title": "将股票链接至最新水平",
+          "description": "创建类别树时，它会自动将股票链接到其最深层的细分。"
+        }
+      },
+      "preview": {
+        "sourceStock": "阅读库存",
+        "category": "总类别",
+        "newCategory": "新类别",
+        "newStockAssignment": "新货链接",
+        "group": "组：{{count}}",
+        "code1": "代码1：{{count}}",
+        "code2": "代码2：{{count}}",
+        "code3": "代码3：{{count}}",
+        "samples": "树立榜样的方法",
+        "noSamples": "未发现样本故障。"
+      }
+    },
+    "rulePreviewSummaryTitle": "规则预览摘要",
+    "rulePreviewSummary": {
+      "matched": "匹配库存：{{count}}",
+      "created": "新链接将为：{{count}}",
+      "updated": "更新链接：{{count}}",
+      "skipped": "手动保护寄存器：{{count}}"
+    },
+    "rulePreviewListTitle": "预览样品",
+    "rulePreviewListEmpty": "找不到用于预览的示例匹配项。",
+    "rulePreviewMatchedRule": "匹配规则：{{rule}} 优先级 {{priority}}",
+    "rulePreviewActions": {
+      "create": "新链接",
+      "update": "链接将会更新",
+      "skip": "护手"
+    },
+    "ruleApplySummaryTitle": "规则执行摘要",
+    "ruleApplySummary": {
+      "matched": "配套库存：{{count}}",
+      "created": "新链接：{{count}}",
+      "updated": "更新链接：{{count}}",
+      "skipped": "手动保护寄存器：{{count}}"
+    },
+    "form": {
+      "catalogName": "目录名称",
+      "catalogNamePlaceholder": "例如：B2B 主目录",
+      "catalogCode": "目录代码",
+      "catalogCodePlaceholder": "例如：B2B_MAIN",
+      "catalogType": "目录类型",
+      "branchCode": "分行代码",
+      "branchCodePlaceholder": "可选的",
+      "sortOrder": "排序依据",
+      "description": "描述",
+      "descriptionPlaceholder": "简要解释这个定义，以便其他管理者能够理解。",
+      "categoryName": "类别名称",
+      "categoryNamePlaceholder": "例如：玻璃系统",
+      "categoryCode": "类别代码",
+      "categoryCodePlaceholder": "例如：CAM_SISTEMLERI",
+      "nodeType": "品类类型",
+      "nodeTypeBranchHelp": "该分支用于类别导航和打开子分支。请勿在此级别直接连接产品。",
+      "nodeTypeLeafHelp": "极端类别是最终的选择点。库存映射和产品列表应保存在这一级别。",
+      "visualPreset": "视觉主题",
+      "visualPresetPlaceholder": "通过搜索选择主题",
+      "visualPresetSearchPlaceholder": "搜索主题...",
+      "visualPresetEmpty": "没有找到合适的主题。",
+      "visualPresetHelp": "您不从外部上传图像。系统根据此选择生成自己的类别视图。",
+      "categoryImage": "类别图片",
+      "categoryImageHelp": "如果需要，您可以将特殊图像上传到系统。如果上传，将使用该图像而不是类别卡中的预设图标。",
+      "ruleName": "规则名称",
+      "ruleCode": "规则代码",
+      "stockAttribute": "库存区",
+      "operator": "操作员",
+      "ruleValue": "规则值",
+      "ruleValuePlaceholder": "例如：玻璃或型材、配件",
+      "ruleValueDropdownPlaceholder": "从库存预设中选择",
+      "ruleValueSearchPlaceholder": "搜索 ERP 故障...",
+      "ruleValueLoading": "正在加载值...",
+      "ruleValueEmpty": "没有找到该字段的合适值。",
+      "ruleValueDropdownHelp": "系统列出您选择的库存区域中的实际 ERP 值。在这里选择它而不是键入它更安全。",
+      "ruleValueInListHelp": "您可以在列表中的 var 运算符中选择多个值。选择上面的标签进行添加，点击标签进行删除。",
+      "ruleValueInListEmpty": "还没有增加任何价值。",
+      "ruleValueManualHelp": "该运算符适用于自由文本。在此处键入开始、包含或结束规则。",
+      "ruleValueTopMatchesTitle": "系统中最常出现的值",
+      "ruleValueTopMatchesSubtitle": "您可以点击并快速选择",
+      "ruleValueTopMatchesEmpty": "没有发现该字段的突出值。",
+      "priority": "优先权"
+    },
+    "visualPreviewTitle": "分类查看",
+    "visualPreviewFallback": "类别预览",
+    "visualPresets": {
+      "general": {
+        "label": "一般"
+      },
+      "glass": {
+        "label": "玻璃"
+      },
+      "profile": {
+        "label": "公司简介"
+      },
+      "accessory": {
+        "label": "配件"
+      },
+      "service": {
+        "label": "服务"
+      },
+      "logistics": {
+        "label": "物流"
+      },
+      "machinery": {
+        "label": "机器"
+      },
+      "electronics": {
+        "label": "电子产品"
+      },
+      "security": {
+        "label": "安全性"
+      },
+      "lighting": {
+        "label": "照明"
+      },
+      "construction": {
+        "label": "建筑"
+      },
+      "furniture": {
+        "label": "家具"
+      },
+      "hardware": {
+        "label": "硬件"
+      },
+      "automation": {
+        "label": "自动化"
+      },
+      "energy": {
+        "label": "能源"
+      },
+      "office": {
+        "label": "办公室"
+      },
+      "textile": {
+        "label": "纺织"
+      },
+      "chemical": {
+        "label": "化学"
+      },
+      "outdoor": {
+        "label": "户外"
+      },
+      "cooling": {
+        "label": "冷却"
+      },
+      "heating": {
+        "label": "供暖"
+      },
+      "plumbing": {
+        "label": "管道"
+      },
+      "decoration": {
+        "label": "装饰"
+      },
+      "packaging": {
+        "label": "包装"
+      },
+      "automotive": {
+        "label": "汽车"
+      },
+      "agriculture": {
+        "label": "农业"
+      },
+      "medical": {
+        "label": "医疗"
+      },
+      "pharmacy": {
+        "label": "药房"
+      },
+      "cosmetics": {
+        "label": "化妆品"
+      },
+      "food": {
+        "label": "食物"
+      },
+      "beverage": {
+        "label": "饮料"
+      },
+      "cleaning": {
+        "label": "清洁"
+      },
+      "education": {
+        "label": "教育"
+      },
+      "finance": {
+        "label": "金融"
+      },
+      "insurance": {
+        "label": "保险"
+      },
+      "real-estate": {
+        "label": "房地产"
+      },
+      "tourism": {
+        "label": "旅游"
+      },
+      "hospitality": {
+        "label": "住宿"
+      },
+      "restaurant": {
+        "label": "餐厅"
+      },
+      "ecommerce": {
+        "label": "电子商务"
+      },
+      "retail": {
+        "label": "零售"
+      },
+      "wholesale": {
+        "label": "批发"
+      },
+      "manufacturing": {
+        "label": "生产"
+      },
+      "mining": {
+        "label": "采矿"
+      },
+      "marine": {
+        "label": "海事的"
+      },
+      "aviation": {
+        "label": "航空"
+      },
+      "telecom": {
+        "label": "电信"
+      },
+      "software": {
+        "label": "软件"
+      },
+      "data-center": {
+        "label": "数据中心"
+      },
+      "media": {
+        "label": "媒体"
+      },
+      "printing": {
+        "label": "印刷厂"
+      },
+      "sports": {
+        "label": "体育"
+      },
+      "baby-kids": {
+        "label": "婴儿及儿童"
+      },
+      "pet": {
+        "label": "宠物"
+      },
+      "jewelry": {
+        "label": "珠宝首饰"
+      },
+      "luxury": {
+        "label": "奢华"
+      },
+      "stationery": {
+        "label": "文具"
+      },
+      "laboratory": {
+        "label": "实验室"
+      },
+      "recycling": {
+        "label": "回收"
+      },
+      "defense": {
+        "label": "防御"
+      }
+    },
+    "ruleAttributes": {
+      "groupCode": "集团代码",
+      "groupName": "群组名称",
+      "code1": "代码1",
+      "code1Name": "代码 1 名称",
+      "code2": "代码2",
+      "code2Name": "代码 2 名称",
+      "code3": "代码3",
+      "code3Name": "代码 3 名称",
+      "code4": "代码4",
+      "code4Name": "代码 4 名称",
+      "code5": "代码5",
+      "code5Name": "代码 5 名称",
+      "manufacturerCode": "制造商代码",
+      "erpStockCode": "ERP 股票代码",
+      "stockName": "股票名称"
+    },
+    "ruleOperators": {
+      "equals": "等于",
+      "contains": "包含",
+      "startsWith": "它开始于",
+      "endsWith": "结束于",
+      "inList": "它在名单上"
+    },
+    "meta": {
+      "group": "组",
+      "code1": "代码1",
+      "code2": "代码2",
+      "code3": "代码3"
+    }
+  }
+}

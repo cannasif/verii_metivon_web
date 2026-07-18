@@ -1,0 +1,600 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "Unieke sleutel gebruikt door route- en paginabewakers. Geef de voorkeur aan stabiele snake_case- of puntnotatie.",
+      "name": "Weergavenaam die aan beheerders wordt getoond bij het beheren van machtigingen.",
+      "description": "Optionele interne beschrijving voor deze toestemming.",
+      "isActive": "Inactieve machtigingen worden genegeerd wanneer gebruikerstoegang wordt geëvalueerd.",
+      "save": "Wijzigingen zijn van invloed op de autorisatiestromen voor rollen en groepen."
+    },
+    "permissionGroup": {
+      "name": "Groepsnaam gebruikt voor identificatie bij het toewijzen aan gebruikers.",
+      "isSystemAdmin": "Leden van deze groep hebben toegang tot alle pagina's en acties zonder individuele toestemmingscontroles.",
+      "isActive": "Inactieve groepen mogen niet worden toegewezen voor nieuwe toegangsbeslissingen.",
+      "permissions": "Geselecteerde machtigingen bepalen waartoe leden van deze groep toegang hebben.",
+      "save": "Werkt de effectieve toegang bij voor elke gebruiker die aan deze groep is toegewezen."
+    },
+    "userAssignment": {
+      "user": "Selecteer de gebruiker wiens toegangsniveau u wilt beheren.",
+      "groups": "De gebruiker ontvangt de gecombineerde rechten van alle geselecteerde groepen.",
+      "save": "Toewijzingen worden onmiddellijk van kracht voor de volgende autorisatiecontroles. Gebruikers moeten mogelijk hun sessie vernieuwen.",
+      "systemAdminNote": "Als de gebruiker tot een systeembeheerdersgroep behoort, worden gedetailleerde machtigingen overgeslagen."
+    },
+    "visibilityPolicy": {
+      "code": "Gebruik een unieke code zodat het beleid kan worden herkend in toewijzings- en auditstromen.",
+      "name": "Weergavenaam die beheerders zien tijdens het beheren van het beleid.",
+      "includeSelf": "Indien ingeschakeld blijven de eigen records van de gebruiker binnen dit bereik zichtbaar.",
+      "isActive": "Inactief beleid blijft buiten nieuwe toewijzingen en toegangsbeslissingen."
+    },
+    "userVisibilityAssignment": {
+      "user": "Selecteer de gebruiker wiens entiteitszichtbaarheid u wilt beheren.",
+      "policy": "Kies één actief zichtbaarheidsbeleid per entiteit of laat het leeg.",
+      "save": "Wijzigingen in de vervolgkeuzelijst worden pas toegepast nadat u opslaat. Opslaan en toepassen verzendt alle kaartselecties samen."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "Toestemmingsdefinities",
+    "description": "Beheer toestemmingscodes die in het hele systeem worden gebruikt",
+    "add": "Definitie toevoegen",
+    "form": {
+      "editTitle": "Toestemmingsdefinitie bewerken",
+      "addTitle": "Toestemmingsdefinitie toevoegen",
+      "editDescription": "Details van de machtigingsdefinitie bijwerken",
+      "addDescription": "Maak een nieuwe machtigingsdefinitie",
+      "code": "Codeer",
+      "codePlaceholder": "Selecteer een code",
+      "affectedRoutes": "Betrokken pagina's",
+      "affectedRoutesNone": "Er is geen overeenkomende route gevonden voor deze code",
+      "name": "Naam",
+      "namePlaceholder": "Weergavenaam",
+      "availableOnWeb": "Beschikbaar op internet",
+      "availableOnWebHint": "Deze toestemming kan worden gebruikt voor menu's, pagina's en acties in de webapp.",
+      "availableOnMobile": "Beschikbaar op mobiel",
+      "availableOnMobileHint": "Deze toestemming kan worden gebruikt voor menu's, schermen en acties in de mobiele app.",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Optionele beschrijving",
+      "isActive": "Actief",
+      "codeSearchPlaceholder": "Zoeken...",
+      "codeEmpty": "Geen resultaten gevonden"
+    },
+    "table": {
+      "title": "Toestemmingsdefinities",
+      "code": "Codeer",
+      "name": "Naam",
+      "platform": "Platform",
+      "isActive": "Actief",
+      "updatedDate": "Bijgewerkt",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "platform": {
+      "web": "Web",
+      "mobile": "Mobiel",
+      "both": "Web + mobiel"
+    },
+    "delete": {
+      "confirmTitle": "Permissiedefinitie verwijderen",
+      "confirmMessage": "Weet u zeker dat u \"{{name}}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt."
+    },
+    "syncFromRoutes": "Synchroniseer van routes"
+  },
+  "permissionGroups": {
+    "title": "Toestemmingsgroepen",
+    "description": "Beheer machtigingsgroepen en toewijzingen",
+    "systemAdminLocked": "De systeembeheerdersgroep kan niet worden gewijzigd",
+    "add": "Groep toevoegen",
+    "selectAll": "Selecteer alles",
+    "noDefinitions": "Er zijn geen machtigingsdefinities beschikbaar",
+    "form": {
+      "editTitle": "Machtigingsgroep bewerken",
+      "addTitle": "Machtigingsgroep toevoegen",
+      "editDescription": "Update de details van de machtigingsgroep",
+      "addDescription": "Maak een nieuwe machtigingsgroep",
+      "name": "Naam",
+      "namePlaceholder": "Groepsnaam",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Optionele beschrijving",
+      "isSystemAdmin": "Systeembeheerder",
+      "isActive": "Actief",
+      "permissions": "Machtigingen"
+    },
+    "table": {
+      "title": "Toestemmingsgroepen",
+      "name": "Naam",
+      "isSystemAdmin": "Systeembeheerder",
+      "isActive": "Actief",
+      "permissionCount": "Machtigingen",
+      "showing": "{{from}}-{{to}} / {{total}}",
+      "id": "Record-ID"
+    },
+    "managePermissions": "Beheer machtigingen",
+    "permissionsPanel": {
+      "title": "Groepsrechten bewerken",
+      "description": "Selecteer machtigingen voor deze groep",
+      "currentCodes": "Huidige toestemmingscodes",
+      "screen": "Scherm / Toestemmingsgebied",
+      "groupedRows": "toestemmingsgebieden",
+      "actionsMapped": "machtigingen",
+      "actions": {
+        "create": "Creëer",
+        "read": "Lees",
+        "update": "Bijwerken",
+        "delete": "Verwijderen",
+        "other": "Anders"
+      },
+      "previewTitle": "Groepsrechten bekijken",
+      "previewDescription": "Bekijk snel de rechten die aan deze groep zijn toegewezen."
+    },
+    "delete": {
+      "confirmTitle": "Machtigingsgroep verwijderen",
+      "confirmMessage": "Weet u zeker dat u \"{{name}}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt."
+    },
+    "search": "Zoeken...",
+    "builtInLocked": "Ingebouwde systeemgroepen kunnen niet worden gewijzigd; maak een aangepaste groep.",
+    "presets": {
+      "systemAdministrators": {
+        "name": "Systeembeheerders",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "masterDataSpecialist": {
+        "name": "Stamgegevensspecialist",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "purchasingSpecialist": {
+        "name": "Inkoopspecialist",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "goodsReceiptOperator": {
+        "name": "Goederenontvangstmedewerker",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "warehouseOperator": {
+        "name": "Magazijnmedewerker",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "shippingOperator": {
+        "name": "Verzendmedewerker",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "salesSpecialist": {
+        "name": "Verkoopspecialist",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "importCostSpecialist": {
+        "name": "Import- en kostenspecialist",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "accountingSpecialist": {
+        "name": "Boekhoudspecialist",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      },
+      "erpAuditor": {
+        "name": "ERP-auditor (Alleen-lezen)",
+        "description": "Vooraf gedefinieerd ERP-taakprofiel met minimale rechten."
+      }
+    },
+    "previewPermissions": "Toegewezen rechten bekijken",
+    "restoreDefaults": {
+      "button": "Standaardmachtigingsgroepen maken",
+      "title": "Standaardmachtigingsgroepen herstellen",
+      "description": "De ingebouwde groepen voor systeembeheer, ontvangst, magazijn, verzending en overige functies worden met veilige standaardrechten hersteld. Aangepaste groepen blijven ongewijzigd.",
+      "confirm": "Herstellen",
+      "success": "{{count}} standaardmachtigingsgroepen zijn hersteld."
+    }
+  },
+  "userGroupAssignments": {
+    "title": "Toewijzingen van gebruikersgroepen",
+    "description": "Wijs machtigingsgroepen toe aan gebruikers",
+    "selectUser": "Selecteer gebruiker",
+    "selectUserPlaceholder": "Zoek en selecteer een gebruiker...",
+    "selectUserHint": "Selecteer een gebruiker om de toewijzingen van zijn machtigingsgroepen te beheren",
+    "assignedGroups": "Toegewezen machtigingsgroepen",
+    "noUsers": "Geen gebruikers gevonden",
+    "noGroups": "Geen rechtengroepen beschikbaar",
+    "selectAll": "Selecteer alles"
+  },
+  "visibilityPolicies": {
+    "title": "Zichtbaarheidsbeleid",
+    "description": "Beheer beleidssets die bepalen wie welke records kan zien",
+    "add": "Beleid toevoegen",
+    "search": "Zoekbeleid...",
+    "table": {
+      "title": "Lijst met zichtbaarheidsbeleid",
+      "code": "Codeer",
+      "name": "Naam",
+      "entityType": "Entiteit",
+      "scopeType": "Reikwijdte",
+      "includeSelf": "Zelf opnemen",
+      "isActive": "Actief",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "stats": {
+      "total": "Totaal beleid",
+      "active": "Actief beleid",
+      "entities": "Entiteitstypen"
+    },
+    "form": {
+      "addTitle": "Voeg zichtbaarheidsbeleid toe",
+      "editTitle": "Zichtbaarheidsbeleid bewerken",
+      "addDescription": "Maak een nieuwe zichtbaarheidsbeleidsdefinitie",
+      "editDescription": "Werk de geselecteerde zichtbaarheidsbeleidsinstellingen bij",
+      "code": "Codeer",
+      "codePlaceholder": "ERP_GOODS_RECEIPT_BRANCH",
+      "name": "Naam",
+      "namePlaceholder": "Goederenontvangst — Dezelfde vestiging",
+      "entityType": "Entiteit",
+      "entityTypePlaceholder": "Selecteer entiteit",
+      "scopeType": "Reikwijdte",
+      "scopeTypePlaceholder": "Selecteer bereik",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Optionele korte beschrijving",
+      "includeSelf": "Voeg de eigen records van de gebruiker toe",
+      "isActive": "Actief",
+      "summaryTitle": "Beleidssamenvatting",
+      "summary": "Het bereik {{scope}} wordt toegepast op {{entity}}-records."
+    },
+    "scope": {
+      "self": "Alleen zichzelf",
+      "managerHierarchy": "Managerhiërarchie",
+      "permissionGroup": "Toestemmingsgroep",
+      "company": "Bedrijfsbreed",
+      "branch": "Dezelfde vestiging",
+      "warehouse": "Magazijnbereik"
+    },
+    "entity": {
+      "businessPartner": "Handelspartner",
+      "product": "Voorraad / product",
+      "warehouse": "Magazijn en locatie",
+      "inventory": "Voorraadmutaties",
+      "goodsReceipt": "Goederenontvangst",
+      "transferOrder": "Overboeking tussen magazijnen",
+      "shipment": "Zending en pakbon",
+      "purchaseOrder": "Inkooporder",
+      "salesOrder": "Verkooporder",
+      "importDossier": "Importdossier",
+      "electronicDocument": "E-document",
+      "accounting": "Boekhouding"
+    }
+  },
+  "userVisibilityAssignments": {
+    "title": "Toewijzingen voor gebruikerszichtbaarheid",
+    "description": "Beheer beleidstoewijzingen voor entiteitszichtbaarheid per gebruiker",
+    "selectUser": "Selecteer gebruiker",
+    "selectedUser": "Geselecteerde gebruiker",
+    "selectUserPlaceholder": "Zoek en selecteer een gebruiker...",
+    "selectUserHint": "Selecteer een gebruiker om zichtbaarheidstoewijzingen te beheren",
+    "assignedPolicies": "Toegewezen beleid",
+    "status": "Status",
+    "ready": "Up-to-date",
+    "unsavedChanges": "Niet opgeslagen",
+    "unsavedChangesCount": "{{count}}-module(s) wachten om te worden opgeslagen",
+    "upToDate": "Up-to-date",
+    "pendingChange": "In afwachting van opslaan",
+    "unsavedCardHint": "Uw selectie is nog niet opgeslagen. Druk op Opslaan om toe te passen.",
+    "saveEntity": "Opslaan",
+    "revert": "Annuleer",
+    "moduleSectionTitle": "Zichtbaarheid van modules",
+    "moduleSectionDescription": "Selecteer een beleid voor elke module en sla het op vanaf de kaart.",
+    "unassigned": "Niet toegewezen",
+    "cardDescription": "Kies het zichtbaarheidsbeleid dat wordt toegepast op {{entity}}-records voor deze gebruiker.",
+    "selectPolicyPlaceholder": "Selecteer beleid",
+    "noPolicy": "Geen beleid",
+    "noPolicyCompanyHint": "Wanneer Geen beleid is geselecteerd, kan de gebruiker alle bedrijfs-/fabrieksrecords in deze module zien."
+  },
+  "visibilitySimulator": {
+    "title": "Zichtbaarheidssimulator",
+    "description": "Test welke gebruikersrecords en actieve goedkeuringsoverschrijvingsrecords zichtbaar zijn voor de geselecteerde gebruiker voor het geselecteerde entiteitstype.",
+    "selectUser": "Gebruiker",
+    "helpUser": "Selecteer de gebruiker wiens zichtbaarheid u wilt simuleren.",
+    "selectUserPlaceholder": "Selecteer een gebruiker...",
+    "selectEntity": "Entiteit",
+    "helpEntity": "Selecteer de module waarvoor u de recordzichtbaarheid wilt simuleren.",
+    "selectEntityPlaceholder": "Selecteer entiteit",
+    "recordId": "Record-ID",
+    "recordIdPlaceholder": "bijv. 125",
+    "helpRecordId": "Voer een specifieke record-ID in om te simuleren of acties voor bekijken, bijwerken, verwijderen en goedkeuren zijn toegestaan.",
+    "selectedUser": "Geselecteerde gebruiker",
+    "entity": "Entiteit",
+    "visibleUsers": "Zichtbare gebruikers",
+    "approvalOverrides": "Goedkeuringsoverschrijvingsrecords",
+    "visibleUsersTitle": "Gebruikers binnen bereik",
+    "policyDefined": "Beleid gedefinieerd",
+    "noPolicy": "Geen beleid",
+    "companyWide": "Bedrijfsbrede toegang",
+    "policyActive": "Er wordt een actief zichtbaarheidsbeleid toegepast",
+    "includeSelf": "omvat zichzelf",
+    "awaitingSelection": "Selecteer eerst een gebruiker en entiteit",
+    "overrideTitle": "Actieve goedkeuringsoverschrijvingsrecords",
+    "noOverrides": "Er zijn geen actieve goedkeuringsoverschrijvingsrecords gevonden",
+    "overrideRecord": "Neem #{{id}} op",
+    "auditTitle": "Goedkeuring overschrijven audit",
+    "noAudit": "Er zijn geen actieve controle-invoeren voor het overschrijven van goedkeuring gevonden",
+    "auditActionId": "Goedkeuringsactie",
+    "auditRequestId": "Goedkeuringsverzoek",
+    "auditFlow": "Stroom",
+    "auditApprover": "Goedkeurder",
+    "auditStepValue": "Stap {{step}} / huidige {{currentStep}}",
+    "actionPanelTitle": "Actiesimulatie op recordniveau",
+    "noRecordSimulation": "Wanneer u een record-ID invoert, verschijnt hier het resultaat bekijken/bijwerken/verwijderen/goedkeuren.",
+    "actionAllowed": "Toegestaan",
+    "actionDenied": "Geweigerd",
+    "action": {
+      "view": "Bekijk",
+      "update": "Bijwerken",
+      "delete": "Verwijderen",
+      "approve": "Goedkeuren"
+    },
+    "visibleUsersShowing": "{{from}}-{{to}} van {{total}}-gebruikers",
+    "visibleUsersPage": "Pagina {{page}} / {{totalPages}}",
+    "noVisibleUsers": "Geen gebruikers binnen bereik"
+  },
+  "auditLogs": {
+    "title": "Auditlogboeken",
+    "description": "Houd bij wie cruciale acties heeft uitgevoerd, onder welk spoor, en hoe deze zijn geëindigd.",
+    "search": "Auditlogboeken zoeken...",
+    "results": {
+      "success": "Succes",
+      "succeeded": "Geslaagd",
+      "warning": "Waarschuwing",
+      "partial": "Gedeeltelijk",
+      "error": "Fout",
+      "failed": "Mislukt"
+    },
+    "filters": {
+      "result": "Resultaat",
+      "actionType": "Actie",
+      "entityType": "Entiteit",
+      "entityId": "Record-ID",
+      "performedByUserEmail": "Uitgevoerd door",
+      "source": "Bron",
+      "branchCode": "Tak",
+      "requestPath": "Pad aanvragen",
+      "requestMethod": "Methode",
+      "createdDate": "Datum"
+    },
+    "clearTraceFilter": "Wis sporenfilter",
+    "viewDetail": "Details",
+    "filterTrace": "Tracering filteren",
+    "loadError": "Auditlogboeken kunnen niet worden geladen",
+    "stats": {
+      "total": "Totaal aantal records",
+      "errors": "Mislukte resultaten",
+      "traces": "Actieve sporen"
+    },
+    "table": {
+      "title": "Lijst met auditlogboeken",
+      "createdDate": "Datum",
+      "traceId": "Trace-ID",
+      "actionType": "Actie",
+      "entityType": "Entiteit",
+      "entityId": "Record-ID",
+      "result": "Resultaat",
+      "source": "Bron",
+      "performedBy": "Uitgevoerd door",
+      "branchCode": "Tak",
+      "requestPath": "Pad aanvragen",
+      "requestMethod": "Methode",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "detail": {
+      "title": "Details van het auditlogboek",
+      "description": "Inspecteer de aanvraagcontext en wijzigingssamenvatting van het geselecteerde record.",
+      "contextTitle": "Actiecontext",
+      "requestTitle": "Samenvatting opvragen",
+      "reason": "Reden",
+      "failureReason": "Foutdetails",
+      "changedFieldsTitle": "Gewijzigde velden",
+      "noChangedFields": "Er is geen velddiff beschikbaar voor dit record.",
+      "oldValuesTitle": "Oude waarden",
+      "newValuesTitle": "Nieuwe waarden"
+    },
+    "traceDrillDown": {
+      "traceId": "Geselecteerd spoor",
+      "startedAt": "Begonnen om",
+      "completedAt": "Voltooid om",
+      "entities": "Aangeraakte entiteiten",
+      "timelineTitle": "Samenvatting van de traceerstroom",
+      "openTrace": "Open dit spoor"
+    }
+  },
+  "common": {
+    "cancel": "Annuleer",
+    "saving": "Opslaan...",
+    "save": "Opslaan en toepassen",
+    "loading": "Laden...",
+    "search": "Zoeken...",
+    "noData": "Geen gegevens",
+    "actions": "Acties",
+    "yes": "Ja",
+    "no": "Nee",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "previous": "Vorige",
+    "next": "Volgende",
+    "processing": "Verwerken..."
+  },
+  "sidebar": {
+    "accessControl": "Toegangscontrole",
+    "permissionDefinitions": "Toestemmingsdefinities",
+    "permissionGroups": "Toestemmingsgroepen",
+    "userGroupAssignments": "Toewijzingen van gebruikersgroepen",
+    "visibilityPolicies": "Zichtbaarheidsbeleid",
+    "userVisibilityAssignments": "Toewijzingen voor gebruikerszichtbaarheid",
+    "auditLogs": "Auditlogboeken",
+    "visibilitySimulator": "Zichtbaarheidssimulator",
+    "accessControlGuide": "Gids voor toegangscontrole"
+  },
+  "guide": {
+    "title": "Gids voor toegangscontrole",
+    "description": "In deze handleiding wordt uitgelegd wat elk toegangscontrolescherm doet en wat elke instelling verandert. Het doel is om het systeem begrijpelijk te maken, zelfs voor iemand die het model voor het eerst ziet.",
+    "hero": {
+      "coreLogicLabel": "Kernlogica",
+      "coreLogicValue": "Machtigingen toestaan, zichtbaarheidslimieten.",
+      "finalCheckLabel": "Laatste controle",
+      "finalCheckValue": "Valideer in de simulator."
+    },
+    "quickRulesTitle": "Vijf kernregels",
+    "screensTitle": "Wat doet elk scherm?",
+    "scenariosTitle": "Op scenario's gebaseerde voorbeelden",
+    "expectedResultLabel": "Verwacht resultaat",
+    "mistakesTitle": "Veelvoorkomende fouten",
+    "checklistTitle": "Aanbevolen installatievolgorde",
+    "faqTitle": "Veelgestelde vragen",
+    "footer": {
+      "title": "Korte beslissingsregel",
+      "body": "Als een gebruiker een actie niet kan uitvoeren, begin dan met Permissiegroepen. Als een gebruiker te veel of te weinig records ziet, begin dan met Zichtbaarheid. Controleer altijd de uiteindelijke beslissing in Visibility Simulator."
+    },
+    "quickRules": [
+      "Paginatoestemming is een apart probleem, de zichtbaarheid van records is een apart probleem. Een gebruiker kan de pagina betreden, maar niet alle records kunnen zien.",
+      "Het rechtengroepscherm bepaalt welke pagina de gebruiker kan openen en welke actie hij kan ondernemen.",
+      "Het zichtbaarheidsbeleidscherm bepaalt welke records de gebruiker op die pagina ziet.",
+      "Gebruikersgroeptoewijzingen wijzen groepen toe. Toewijzingen voor gebruikerszichtbaarheid definiëren op gebruikers gebaseerde zichtbaarheidsuitzonderingen.",
+      "Regels geven aan een wezen zonder het resultaat van de zichtbaarheidssimulator te lezen is riskant; Zorg ervoor dat u het resultaat in de simulator controleert."
+    ],
+    "pageCards": [
+      {
+        "id": "toestemmingGroepen",
+        "title": "toestemming groepen",
+        "summary": "Dit scherm bepaalt welke modules de gebruiker kan zien en welke acties hij kan ondernemen.",
+        "bullets": [
+          "Als u wilt dat het offertescherm wordt geopend, moet u het weergaverechten geven, zoals `receiving.goods-receipts.view`.",
+          "Als u wilt dat er een nieuwe offerte wordt gemaakt, moet er in dezelfde groep de machtiging 'receiving.goods-receipts.create' zijn.",
+          "Als je wilt dat het wordt bijgewerkt, heb je `receiving.goods-receipts.update` nodig, als je wilt dat het wordt verwijderd, heb je `receiving.goods-receipts.delete` nodig.",
+          "De machtigingen hier openen de pagina en de actiedeur; Het bepaalt niet alleen welke records het zal zien."
+        ]
+      },
+      {
+        "id": "userGroupAssignments",
+        "title": "Toewijzingen van gebruikersgroepen",
+        "summary": "Dit scherm wordt gebruikt om één of meerdere rechtengroepen aan een gebruiker te koppelen.",
+        "bullets": [
+          "De gebruiker wordt geselecteerd en vervolgens worden de groepen geselecteerd die de gebruiker zal hebben.",
+          "Als de gebruiker in meer dan één groep zit, worden de machtigingen samengevoegd; Met andere woorden: de autoriteit in de ene groep ondersteunt ook de andere groep.",
+          "Als u een gebruiker de verkeerde groep geeft, kunt u toegang krijgen tot pagina's die u nog nooit hebt gedefinieerd.",
+          "Dit scherm wordt het meest gebruikt voor rolverdeling: verkoopvertegenwoordiger, beheerder, operations, systeembeheerder, etc."
+        ]
+      },
+      {
+        "id": "zichtbaarheidsbeleid",
+        "title": "Zichtbaarheidsbeleid",
+        "summary": "Dit scherm definieert op basis van regels wie records zoals aanbiedingen, activiteiten, verzoeken en bestellingen te zien krijgt.",
+        "bullets": [
+          "Zelfs als de gebruiker de pagina betreedt en er geen regels zijn voor de relevante entiteit, ziet hij slechts zoveel records als de beleidslogica toelaat.",
+          "De scopeselectie hier verandert het systeemgedrag: alleen de eigen records, het team waarbij het is aangesloten, het bedrijf in het algemeen, etc.",
+          "In hetzelfde scherm kunt u verschillende zichtbaarheidsmodellen definiëren voor verschillende activa, zoals aanbiedingen en activiteiten.",
+          "Als een beleid actief is maar voor de verkeerde entiteit is gedefinieerd, zal het verwachte effect nooit optreden."
+        ]
+      },
+      {
+        "id": "userVisibilityAssignments",
+        "title": "Toewijzingen voor gebruikerszichtbaarheid",
+        "summary": "Dit scherm wordt gebruikt om op gebruikers gebaseerde zichtbaarheidsuitzonderingen toe te staan.",
+        "bullets": [
+          "Als de standaardregel niet voldoende is, kunt u een ander, op entiteiten gebaseerd zichtbaarheidsbeleid aan een specifieke gebruiker koppelen.",
+          "Deze structuur is ideaal om een enkele beheerder of speciale gebruiker verschillende zichtbaarheid te geven zonder de algemene regel te overtreden.",
+          "Als je de uitzondering wilt definiëren in plaats van de regel die het hele bedrijf treft, moet je hier werken.",
+          "Dit scherm verleent geen groepsautorisatie; Het verandert alleen de zichtbaarheid van de records."
+        ]
+      },
+      {
+        "id": "zichtbaarheidSimulator",
+        "title": "zichtbaarheidssimulator",
+        "summary": "Dit scherm test wat het systeem daadwerkelijk zal weergeven wanneer een gebruiker, een entiteit en een record worden geselecteerd.",
+        "bullets": [
+          "Als u een regel heeft geschreven maar u bent niet zeker van het resultaat, kunt u hier het gebruiker- en entiteitstype selecteren en de zichtbare gebruikers lezen.",
+          "Als u de ID-waarde van een bepaald record typt, wordt het resultaat voor dat record berekend.",
+          "Als er goedkeuringsoverschrijvingen of auditgegevens zijn, zal de simulator dat ook laten zien.",
+          "Dit scherm is het veiligste antwoord op de vraag of het resultaat klopt voordat het live gaat."
+        ]
+      },
+      {
+        "id": "toestemmingDefinities",
+        "title": "Toestemmingsdefinities",
+        "summary": "Dit scherm is niet langer bedoeld voor operationele noodzaak, maar als referentie om de systeemcataloguslogica te begrijpen.",
+        "bullets": [
+          "Toestemmingscodes worden nu beheerd met automatische synchronisatielogica.",
+          "Uiteindelijk bestaat de belangrijkste werkruimte van de beheerder uit machtigingsgroepen en toewijzingsschermen.",
+          "Wanneer er een nieuwe route of nieuwe vergunningencatalogus binnenkomt, is het systeem zo ingesteld dat deze automatisch wordt gecatalogiseerd."
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "s1",
+        "title": "Scenario 1: Verkopers zien alleen hun eigen offertes",
+        "target": "Laat hem het aanbiedingsscherm betreden, een nieuwe aanbieding openen, maar de aanbiedingen van anderen niet zien.",
+        "steps": [
+          "Voeg op het scherm met machtigingsgroepen indien nodig 'receiving.goods-receipts.view' en 'receiving.goods-receipts.create' toe aan de groep die u gaat gebruiken.",
+          "Wijs deze groep toe aan de relevante vertegenwoordiger vanuit het toewijzingsscherm van de gebruikersgroep.",
+          "Definieer op het scherm Zichtbaarheidsbeleid een beleid voor de offerte-entiteit om alleen de eigen records weer te geven.",
+          "Koppel dit beleid indien nodig aan de gebruiker vanuit het scherm Toewijzingen voor gebruikerszichtbaarheid."
+        ],
+        "result": "De gebruiker opent de aanbiedingspagina en kan een nieuw aanbod aanmaken, maar ziet in de lijst alleen aanbiedingen die binnen zijn bevoegdheid vallen."
+      },
+      {
+        "id": "s2",
+        "title": "Scenario 2: Laat de verkoopmanager de activiteiten van zijn team zien",
+        "target": "De manager houdt de teamactiviteiten bij, maar ziet niet alle bedrijfsgegevens.",
+        "steps": [
+          "Voeg op het scherm met machtigingsgroepen de machtiging 'warehouses.warehouse-management.view' toe aan de relevante beheerdersgroep.",
+          "Als de activiteit wordt bijgewerkt, voeg dan ook de toestemming `warehouses.warehouse-management.update` toe.",
+          "Schakel op het scherm Zichtbaarheidsbeleid het beleid in dat het teamgebonden bereik voor de entiteit Activiteit definieert.",
+          "Koppel dit beleid rechtstreeks aan de beheerder of gebruikers in de juiste beheerdersgroep."
+        ],
+        "result": "De manager komt op het activiteitenscherm en ziet alleen activiteiten die betrekking hebben op zijn/haar team; De activiteiten van irrelevante gebruikers worden niet vermeld."
+      },
+      {
+        "id": "s3",
+        "title": "Scenario 3: De gebruiker kan alleen bestellingen volgen, niet aanmaken",
+        "target": "Het zou het bestelscherm moeten openen, maar het kan geen nieuwe bestelling openen.",
+        "steps": [
+          "Verleen de machtiging 'sales.orders.view' op het scherm met machtigingsgroepen.",
+          "Verleen geen 'sales.orders.create'-rechten aan dezelfde groep.",
+          "Wijs deze groep toe aan de gebruiker vanuit het scherm Gebruikersgroeptoewijzingen."
+        ],
+        "result": "De gebruiker kan de bestellijst openen. De nieuwe bestelknop of de maakstroom kunnen echter niet worden gebruikt omdat er geen machtigingen zijn."
+      },
+      {
+        "id": "s4",
+        "title": "Scenario 4: Een aanbieding in het goedkeuringsproces is zichtbaar voor auditdoeleinden",
+        "target": "Het moet kunnen verklaren waarom een record buiten de normale zichtbaarheid verschijnt met het goedkeuringseffect.",
+        "steps": [
+          "Selecteer eerst op het zichtbaarheidssimulatorscherm de gebruiker, Offerte als entiteit en de bijbehorende record-ID.",
+          "Bekijk een voorbeeld en bekijk het auditresultaat.",
+          "Als er een goedkeuringsoverschrijving is, ziet u deze in het auditgebied."
+        ],
+        "result": "Het antwoord op de vraag waarom het record verschijnt, wordt dus niet gelezen door te raden, maar door de auditgegevens van het systeem."
+      }
+    ],
+    "mistakes": [
+      "Alleen een zichtbaarheidsregel definiëren en geen paginarechten verlenen. Resultaat: de gebruiker kan de pagina helemaal niet betreden.",
+      "Gewoon paginatoestemming verlenen en niet nadenken over de zichtbaarheidsregel. Resultaat: er kunnen meer records worden gezien dan verwacht.",
+      "Het toewijzen van meer dan één groep aan de gebruiker en geen rekening houden met het effect van de gecombineerde toestemming.",
+      "Publicatiebeleid voor live data zonder deze in de simulator te testen.",
+      "Combinatie van offerte-, activiteit-, aanvraag- en orderentiteitstypen."
+    ],
+    "checklist": [
+      "Maak eerst duidelijk welke pagina de gebruiker moet openen.",
+      "Kies vervolgens welke acties u op die pagina moet ondernemen.",
+      "Beperk vervolgens de zichtbaarheid van de records die u voor die entiteit ziet.",
+      "Verleen indien nodig op gebruikers gebaseerde uitzonderingen met toewijzingen voor gebruikerszichtbaarheid.",
+      "Test het resultaat met de nieuwste zichtbaarheidssimulator."
+    ],
+    "faqs": [
+      {
+        "id": "veelgestelde vragen 1",
+        "question": "Een gebruiker kan de aanbiedingspagina openen, maar kan geen records zien. Van waar?",
+        "answer": "Er is paginatoestemming, maar de zichtbaarheidsregel beperkt de records. De speling kan correct zijn, het zicht ontbreekt of is te smal."
+      },
+      {
+        "id": "veelgestelde vragen2",
+        "question": "Een gebruiker kan geen aanbiedingen toevoegen. Van waar?",
+        "answer": "Over het algemeen ontbreekt de machtiging `receiving.goods-receipts.create`. Opent het scherm met kijkrechten; De aanmaakrechten geven de bevoegdheid om een ​​nieuw record te openen."
+      },
+      {
+        "id": "veelgestelde vragen3",
+        "question": "Een gebruiker ziet te veel records. Waar moet ik beginnen?",
+        "answer": "Controleer eerst met welke machtigingsgroepen u bent verbonden. Controleer vervolgens het entiteitsspecifieke zichtbaarheidsbeleid en de toewijzingsrecords voor de zichtbaarheid van gebruikers. Test ten slotte dezelfde gebruiker in de simulator."
+      }
+    ]
+  }
+}

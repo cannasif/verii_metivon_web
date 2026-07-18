@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{countConfig}from'@/features/erp-operation-management/configs';export function InventoryCountManagementPage(){return <ErpPagedManagementPage config={countConfig}/>}

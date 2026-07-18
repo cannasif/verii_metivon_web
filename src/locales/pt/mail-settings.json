@@ -1,0 +1,23 @@
+{
+  "PageTitle": "Configurações de correio",
+  "PageDescription": "Definir configurações do servidor SMTP",
+  "Save": "Salvar",
+  "SavedSuccessfully": "Configurações de e-mail salvas com sucesso",
+  "SaveFailed": "Falha ao salvar as configurações de e-mail",
+  "Fields": {
+    "Host": "Nome do servidor",
+    "Port": "Porta de conexão",
+    "EnableSsl": "Habilitar SSL",
+    "Username": "Nome de usuário",
+    "Password": "Senha",
+    "PasswordPlaceholder": "Digite a nova senha para alterar",
+    "FromEmail": "Do e-mail",
+    "FromName": "Do nome",
+    "Timeout": "Tempo limite (seg)"
+  },
+  "TestMail": {
+    "Send": "Enviar e-mail de teste",
+    "Sending": "O teste está sendo enviado...",
+    "Success": "E-mail de teste enviado"
+  }
+}

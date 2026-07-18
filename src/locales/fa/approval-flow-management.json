@@ -1,0 +1,103 @@
+{
+  "approvalFlow": {
+    "menu": "مدیریت جریان تایید",
+    "description": "مدیریت و سازماندهی جریان های تایید",
+    "addButton": "اضافه کردن جریان تایید جدید",
+    "table": {
+      "id": "شناسه",
+      "documentType": "نوع سند",
+      "description": "توضیحات",
+      "isActive": "فعال",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط",
+      "actions": "اقدامات",
+      "showing": "نمایش {{from}}-{{to}} / {{total}}",
+      "page": "صفحه {{current}} / {{total}}",
+      "title": "جریان های تایید"
+    },
+    "form": {
+      "addTitle": "اضافه کردن جریان تایید جدید",
+      "editTitle": "جریان تأیید را ویرایش کنید",
+      "addDescription": "اطلاعات جریان تأیید جدید را وارد کنید",
+      "editDescription": "اطلاعات جریان تایید را ویرایش کنید",
+      "documentType": "نوع سند",
+      "selectDocumentType": "نوع سند را انتخاب کنید",
+      "noDocumentTypeSelected": "هیچ نوع سندی انتخاب نشده است",
+      "documentTypeRequired": "انتخاب نوع سند الزامی است",
+      "description": "توضیحات",
+      "descriptionPlaceholder": "توضیحات را وارد کنید (اختیاری)",
+      "descriptionMaxLength": "توضیحات حداکثر می تواند 200 کاراکتر باشد",
+      "isActive": "فعال",
+      "isActiveDescription": "وضعیت فعال جریان تأیید",
+      "cancel": "لغو کنید",
+      "save": "ذخیره کنید",
+      "saving": "در حال ذخیره..."
+    },
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای وجود ندارد",
+    "active": "فعال",
+    "inactive": "غیر فعال",
+    "previous": "قبلی",
+    "next": "بعدی",
+    "delete": {
+      "action": "حذف کنید",
+      "cancel": "لغو کنید",
+      "confirmTitle": "جریان تأیید را حذف کنید",
+      "confirmMessage": "آیا مطمئنید که می‌خواهید این جریان تأیید را حذف کنید؟",
+      "title": "جریان تأیید را حذف کنید",
+      "confirm": "آیا مطمئنید که می‌خواهید این جریان تأیید را حذف کنید؟"
+    },
+    "documentType": {
+      "offer": "پیشنهاد",
+      "request": "درخواست کنید",
+      "order": "سفارش دهید",
+      "demand": "تقاضا",
+      "quotation": "نقل قول",
+      "purchaseRequest": "درخواست خرید",
+      "purchaseRfq": "درخواست برای نقل قول (RFQ)",
+      "supplierQuotation": "نقل قول تامین کننده",
+      "purchaseOrder": "سفارش خرید"
+    },
+    "advancedFilter": {
+      "columnDocumentType": "نوع سند",
+      "columnDescription": "توضیحات",
+      "columnIsActive": "فعال",
+      "columnCreatedBy": "ایجاد شده توسط"
+    },
+    "messages": {
+      "deleteSuccess": "جریان تأیید با موفقیت حذف شد",
+      "deleteError": "هنگام حذف جریان تأیید خطایی روی داد"
+    },
+    "steps": "مراحل جریان",
+    "error": "خطایی رخ داد"
+  },
+  "approvalFlowStep": {
+    "title": "مراحل جریان",
+    "addButton": "مرحله را اضافه کنید",
+    "empty": "هنوز هیچ مرحله ای اضافه نشده است",
+    "unknownRoleGroup": "گروه بدون نقش",
+    "stepDescription": "سفارش تایید: {{order}}",
+    "deleteDialog": {
+      "title": "مرحله را حذف کنید",
+      "description": "آیا مطمئن هستید که می خواهید این مرحله را حذف کنید؟",
+      "confirm": "حذف کنید",
+      "cancel": "لغو کنید"
+    },
+    "form": {
+      "addTitle": "مرحله جدید را اضافه کنید",
+      "editTitle": "مرحله ویرایش",
+      "addDescription": "مرحله جریان جدید را اضافه کنید",
+      "editDescription": "اطلاعات مرحله جریان را ویرایش کنید",
+      "approvalRoleGroup": "گروه نقش",
+      "selectRoleGroup": "گروه نقش را انتخاب کنید",
+      "noRoleGroupSelected": "هیچ گروه نقشی انتخاب نشد",
+      "approvalRoleGroupIdRequired": "انتخاب گروه نقش الزامی است",
+      "cancel": "لغو کنید",
+      "save": "ذخیره کنید",
+      "saving": "در حال ذخیره..."
+    },
+    "messages": {
+      "deleteConfirm": "آیا مطمئن هستید که می خواهید این مرحله را حذف کنید؟"
+    }
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "loading": "در حال بارگیری...",
+  "saving": "در حال ضبط ...",
+  "error": "خطا",
+  "noData": "داده ای یافت نشد",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "actions": "معاملات",
+  "edit": "ویرایش کنید",
+  "delete": "حذف کنید",
+  "back": "برگشت",
+  "refresh": "تازه کردن",
+  "select": "انتخاب کنید",
+  "yes": "بله",
+  "add": "اضافه کنید",
+  "backToQuotations": "بازگشت به درخواست ها",
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "confirm": "تایید کنید",
+  "saveAndApply": "ذخیره و اعمال کنید",
+  "notes": {
+    "title": "یادداشت های ادعایی",
+    "description": "یادداشت های داخلی را برای درخواست اضافه و به روز کنید.",
+    "placeholder": "یادداشت درخواست را وارد کنید",
+    "noteLabel": "درخواست یادداشت",
+    "addLineTooltip": "افزودن خط نظر",
+    "linesHint": "هر خط به طور جداگانه در یادداشت های PDF و سند ظاهر می شود.",
+    "removeLine": "حذف ردیف",
+    "pageLabel": "صفحه {{current}} / {{total}}",
+    "saving": "در حال ذخیره یادداشت ها...",
+    "notesTooltipText": "اینها یادداشت های حمل و نقل/فاکتور هستند که به کل درخواست مربوط می شوند. وقتی به ERP منتقل می‌شود، نقل قول/سفارش به‌طور متوالی در قسمت‌های Annotation 1-5 بالا ثبت می‌شود. Note 2 به Netsis Annotation 2 می رود.",
+    "maxLengthError": "فیلد یادداشت می تواند تا 100 کاراکتر باشد."
+  },
+  "list": {
+    "revise": "تجدید نظر کنید",
+    "showing": "{{total}} به صورت {{from}}-{{to}} از رکورد نشان داده می شود",
+    "title": "لیست درخواست",
+    "description": "مشاهده و مدیریت تمام درخواست ها",
+    "detail": "جزئیات",
+    "createNew": "درخواست جدید ایجاد کنید",
+    "searchPlaceholder": "جستجو بر اساس شماره درخواست یا نام مشتری...",
+    "cardTitle": "لیست درخواست",
+    "refresh": "تازه کردن",
+    "actions": "معاملات",
+    "id": "شناسه",
+    "offerNo": "شماره درخواست",
+    "revisionNo": "شماره تجدید نظر",
+    "customer": "مشتری",
+    "customerCode": "کد فعلی",
+    "representative": "نماینده فروش",
+    "offerDate": "تاریخ درخواست",
+    "validUntil": "اعتبار",
+    "currency": "ارز",
+    "grandTotal": "کل بزرگ",
+    "status": "وضعیت"
+  },
+  "detail": {
+    "title": "جزئیات درخواست",
+    "subtitle": "جزئیات درخواست را مشاهده و مدیریت کنید.",
+    "notFound": "درخواستی پیدا نشد",
+    "revisionNo": "شماره تجدید نظر",
+    "tabDetail": "جزئیات",
+    "tabApprovalFlow": "جریان تایید",
+    "tabReport": "گزارش دهید"
+  },
+  "create": {
+    "title": "درخواست جدید ایجاد کنید",
+    "submit": "درخواست را ذخیره کنید و برای تایید ارسال کنید",
+    "success": "درخواست با موفقیت ایجاد شد",
+    "successMessage": "درخواست به فرآیند تایید ارسال شده است.",
+    "error": "درخواست ایجاد نشد",
+    "errorMessage": "هنگام ایجاد درخواست خطایی روی داد.",
+    "subtitle": "اطلاعات درخواست را پر کنید و ذخیره کنید.",
+    "deliveryDateRequired": "تاریخ تحویل الزامی است.",
+    "paymentTypeRequired": "نوع پرداخت الزامی است.",
+    "invalidCurrency": "ارز نامعتبر",
+    "validationError": "لطفا فیلدهای مورد نیاز را بررسی کنید.",
+    "notesMaxLengthError": "هر نت می تواند تا 400 کاراکتر باشد."
+  },
+  "header": {
+    "title": "درخواست اطلاعات",
+    "customer": "مشتری",
+    "selectCustomer": "انتخاب مشتری",
+    "shippingAddress": "آدرس تحویل",
+    "selectShippingAddress": "آدرس تحویل را انتخاب کنید",
+    "representative": "نماینده فروش",
+    "selectRepresentative": "یک نماینده انتخاب کنید",
+    "offerType": "نوع درخواست",
+    "selectOfferType": "نوع درخواست را انتخاب کنید",
+    "currency": "ارز",
+    "selectCurrency": "لطفا ارز را انتخاب کنید",
+    "showExchangeRates": "نمایش نرخ ارز",
+    "offerDate": "تاریخ درخواست",
+    "deliveryDate": "تاریخ تحویل",
+    "paymentType": "نوع پرداخت",
+    "selectPaymentType": "نوع پرداخت را انتخاب کنید",
+    "description": "توضیحات",
+    "notes": "یادداشت ها",
+    "descriptionErpTooltip": "این توضیحات کلی است که می خواهید تولید برای کل درخواست مشاهده شود. هنگامی که به عنوان یک پیشنهاد/سفارش به ERP ارسال می شود، در قسمت توضیحات بالای Netsis (FatUst.Description) ثبت می شود.",
+    "descriptionPlaceholder": "توضیحات را وارد کنید",
+    "offerNo": "شماره درخواست",
+    "offerNoPlaceholder": "شماره درخواست",
+    "currencyChange": {
+      "title": "تغییر ارز",
+      "message": "هنگامی که واحد پول تغییر می کند، تمام ردیف های موجود با توجه به ارز جدید مجدداً محاسبه می شوند. آیا این معامله را تایید می کنید؟"
+    },
+    "deliveryMethod": "روش تحویل",
+    "documentDetail": "شرح سند",
+    "ozelKod1": "کد ویژه 1",
+    "ozelKod1Placeholder": "کد ویژه 1 را انتخاب کنید",
+    "ozelKod2": "کد ویژه 2",
+    "ozelKod2Placeholder": "کد ویژه 2 را انتخاب کنید",
+    "specialCodeSearchPlaceholder": "جستجوی کد ویژه..."
+  },
+  "lines": {
+    "title": "درخواست خطوط",
+    "add": "ردیف اضافه کنید",
+    "empty": "هنوز هیچ ردیفی اضافه نشده است",
+    "emptyDescription": "از دکمه \"انتخاب سهام\" یا \"افزودن خط\" برای اضافه کردن خطوط درخواست استفاده کنید",
+    "itemCount": "ردیف {{count}}",
+    "editLine": "ویرایش ردیف",
+    "selectStock": "سهام را انتخاب کنید",
+    "selectProduct": "محصول را انتخاب کنید",
+    "selectStockFirst": "سهام انتخاب نشده است",
+    "stock": "سهام",
+    "productCode": "کد سهام",
+    "enterProductCode": "کد محصول را وارد کنید یا جستجو کنید",
+    "productName": "نام سهام",
+    "enterProductName": "نام محصول را وارد کنید",
+    "quantity": "مقدار",
+    "unitPrice": "قیمت واحد",
+    "discount1": "تخفیف 1%",
+    "discount2": "تخفیف 2%",
+    "discount3": "تخفیف 3%",
+    "discounts": "تخفیف",
+    "discountAmount": "مبلغ تخفیف",
+    "netPrice": "قیمت خالص",
+    "vatRate": "نرخ مالیات بر ارزش افزوده %",
+    "lineTotal": "کل خط (با احتساب مالیات بر ارزش افزوده)",
+    "calculations": "محاسبات",
+    "required": "حداقل 1 خط باید اضافه شود",
+    "noProductsFound": "محصول یافت نشد",
+    "delete": {
+      "confirmTitle": "حذف ردیف",
+      "confirmMessage": "آیا مطمئن هستید که می خواهید این ردیف را حذف کنید؟",
+      "confirmTitleMultiple": "ردیف ها را حذف کنید",
+      "confirmMessageMultiple": "آیا مطمئن هستید که می خواهید ردیف های انتخاب شده را حذف کنید؟"
+    },
+    "noItems": "هنوز هیچ خطی وجود ندارد.",
+    "addLine": "ردیف اضافه کنید",
+    "relatedStocks": "سهام وابسته",
+    "groupCode": "کد گروه",
+    "approvalRequired": "تایید لازم است",
+    "requiredFieldsMissing": "فیلدهای ردیف الزامی وجود ندارد.",
+    "createSuccess": "خط اضافه شد",
+    "createError": "ردیف اضافه نشد.",
+    "updateSuccess": "خط به روز شد",
+    "updateError": "ردیف به روز نمی شود.",
+    "deleteSuccess": "خط حذف شده است.",
+    "deleteError": "ردیف را نمی توان حذف کرد.",
+    "editStockItemDetails": "جزئیات اقلام سهام را ویرایش کنید",
+    "descriptionFieldsTitle": "فیلدهای توضیحات",
+    "description1": "توضیحات 1",
+    "description2": "توضیحات 2",
+    "description3": "توضیحات 3",
+    "descriptionPlaceholder": "توضیحات را وارد کنید...",
+    "descriptionTooltipText": "این یک توصیف تولید مبتنی بر ردیف است. مطابقت Netsis هنگام وارد کردن به ERP: توضیحات 1 -> فیلد اضافی 1، توضیحات 2 -> فیلد اضافی 2، توضیحات 3 -> حاشیه نویسی ردیف 7.",
+    "descriptionTooltipPrefix": "این یک توصیف تولید مبتنی بر ردیف است. تطبیق Netsis هنگام انتقال به ERP:",
+    "erpTargetExtraField1": "فیلد اضافی 1",
+    "erpTargetExtraField2": "منطقه اضافی 2",
+    "erpTargetLineExtraDesc7": "حاشیه نویسی ردیف 7",
+    "profileErpTooltip": "این انتخاب نمایه هنگام ارسال به ERP در قسمت Netsis Line Annotation 2 ذخیره می شود.",
+    "rebarErpTooltip": "این انتخاب Iron هنگام ارسال به ERP به عنوان مقدار Netsis Row Annotation 3 ذخیره می شود.",
+    "screwErpTooltip": "این انتخاب پیچ هنگام ارسال به ERP به عنوان مقدار Netsis Line Annotation 4 ذخیره می شود.",
+    "printErpTooltip": "این انتخاب Print هنگام ارسال به ERP به عنوان مقدار Netsis Line Annotation 8 ذخیره می شود. کامنت چاپی همچنین به فیلدهای Comment 9 خط Netsis و Line Annotation 9 می رود.",
+    "lineItemDescriptionPlaceholder": "شرح مورد مبتنی بر خط",
+    "doubleClickToEdit": "برای ویرایش دوبار کلیک کنید"
+  },
+  "exchangeRates": {
+    "title": "نرخ ارز",
+    "currency": "ارز",
+    "rate": "نصب کنید",
+    "date": "تاریخ نرخ ارز",
+    "isOfficial": "Official را نصب کنید",
+    "official": "رسمی",
+    "custom": "خصوصی",
+    "empty": "نرخ ارز پیدا نشد",
+    "status": "وضعیت",
+    "dialog": {
+      "title": "نرخ ارز",
+      "description": "مشاهده و ویرایش نرخ ارز در صورت لزوم. نرخ های تغییر یافته به عنوان نرخ های رسمی علامت گذاری نمی شوند.",
+      "subtitle": "می توانید نرخ ها را ویرایش و ذخیره کنید.",
+      "info": "به روز رسانی های دستی را می توان خارج از نرخ رسمی ارز انجام داد."
+    },
+    "updateSuccess": "نرخ ارز به روز شده است.",
+    "updateError": "نرخ ارز به روز نشد.",
+    "cannotEditUsedCurrency": "واحد پول مورد استفاده قابل ویرایش نیست.",
+    "zeroRateError": "لطفاً برای ادامه نرخ ارز را وارد کنید."
+  },
+  "summary": {
+    "title": "خلاصه",
+    "grandTotalAnalysis": "تجزیه و تحلیل کل کل",
+    "subtotal": "جمع فرعی",
+    "totalVat": "کل مالیات بر ارزش افزوده",
+    "grandTotal": "کل بزرگ",
+    "generalDiscount": "تخفیف عمومی",
+    "generalDiscountRate": "نرخ تخفیف عمومی",
+    "generalDiscountAmount": "مبلغ تخفیف عمومی",
+    "generalDiscountHelp": "به طور کلی اعمال می شود."
+  },
+  "offerType": {
+    "domestic": "داخلی",
+    "export": "صادرات"
+  },
+  "wizard": {
+    "title": "درخواست جدید ایجاد کنید",
+    "step1": {
+      "title": "مرحله 1: درخواست اطلاعات",
+      "description": "اطلاعات هدر درخواست و نرخ ارز را وارد کنید",
+      "validation": {
+        "offerType": "نوع درخواست",
+        "currency": "ارز",
+        "exchangeRate": "نرخ ارز"
+      },
+      "exchangeRate": {
+        "required": "برای ارزهایی که TRY نیستند، حداقل یک نرخ تبدیل باید اضافه شود"
+      },
+      "currency": {
+        "try": {
+          "info": "هنگام انتخاب TRY، نرخ ارز مورد نیاز نیست"
+        }
+      }
+    },
+    "step2": {
+      "title": "مرحله 2: درخواست خطوط",
+      "description": "اطلاعات محصول و قیمت را اضافه کنید",
+      "info": "شما باید حداقل یک خط اضافه کنید",
+      "validation": {
+        "noLines": "حداقل یک خط باید اضافه شود",
+        "invalidLines": "همه خطوط باید دارای اطلاعات معتبر باشند",
+        "allValid": "ردیف {{count}} با موفقیت اضافه شد"
+      }
+    },
+    "step3": {
+      "title": "مرحله 3: جمع بندی و تایید",
+      "description": "اطلاعات را بررسی کنید و درخواست را ذخیره کنید",
+      "header": {
+        "title": "درخواست اطلاعات"
+      },
+      "lines": {
+        "title": "درخواست خطوط"
+      },
+      "summary": {
+        "title": "خلاصه نهایی"
+      },
+      "approval": {
+        "info": "پس از ذخیره شدن درخواست، به طور خودکار به فرآیند تأیید ارسال می شود"
+      }
+    }
+  },
+  "loadError": "هنگام بارگیری داده ها خطایی روی داد.",
+  "backToDemands": "بازگشت به درخواست ها",
+  "untitled": "بدون عنوان",
+  "sections": {
+    "header": "اطلاعات عنوان",
+    "lines": "ردیف ها",
+    "summary": "خلاصه"
+  },
+  "approval": {
+    "approve": "تایید کنید",
+    "reject": "رد کردن",
+    "sending": "ارسال...",
+    "sendForApproval": "برای تایید ارسال کنید",
+    "approveSuccess": "فرآیند تأیید موفقیت آمیز است.",
+    "approveError": "تأیید ناموفق بود.",
+    "rejectSuccess": "فرآیند رد با موفقیت انجام شد.",
+    "rejectError": "رد نشد.",
+    "startSuccess": "فرآیند تایید آغاز شده است.",
+    "startError": "فرآیند تأیید شروع نشد.",
+    "rejectTitle": "رد درخواست",
+    "rejectDescription": "دلیل رد را وارد کنید.",
+    "rejectReasonPlaceholder": "دلیل رد",
+    "statusFilterLabel": "وضعیت تایید",
+    "lockedForNonApprover": "این ثبت نام در مرحله تایید است. فقط کاربر تأیید فعال می تواند تغییرات ایجاد کند. ویرایش برای شما خاموش است.",
+    "approvedReadOnlyReason": "از آنجایی که این درخواست تایید شده است، هیچ تغییری امکان پذیر نیست.",
+    "rejectedReadOnlyReason": "از آنجایی که این درخواست رد شده است، هیچ تغییری امکان پذیر نیست. برای به روز رسانی، از \"Revise\" از لیست استفاده کنید.",
+    "closedReason": "این رکورد بسته شد زیرا رکورد دیگری با همان شماره سند تأیید شد. نمی توان تغییرات ایجاد کرد",
+    "status": {
+      "notRequired": "پیش نویس",
+      "waiting": "در انتظار",
+      "approved": "تصویب شد",
+      "rejected": "رد شد",
+      "closed": "بسته شد"
+    }
+  },
+  "approvalFlow": {
+    "noData": "مرحله تأیید یافت نشد.",
+    "notStarted": "مقداردهی اولیه نشده است",
+    "stepCompleted": "مرحله تکمیل شد",
+    "stepInProgress": "گام ادامه دارد",
+    "stepNotStarted": "قدم من منتظر است",
+    "stepRejected": "اسم من رد شد",
+    "errorTitle": "خطا رخ داد"
+  },
+  "update": {
+    "success": "درخواست به روز شده است.",
+    "successMessage": "درخواست با موفقیت به روز شد.",
+    "error": "درخواست به روز نشد.",
+    "errorMessage": "هنگام به‌روزرسانی درخواست خطایی روی داد.",
+    "invalidCurrency": "ارز نامعتبر",
+    "validationError": "یک خطای اعتبار سنجی فرم رخ داد."
+  },
+  "revision": {
+    "success": "بازبینی ایجاد شد.",
+    "error": "بازبینی ایجاد نشد."
+  },
+  "waitingApprovals": {
+    "title": "درخواست های تایید در انتظار",
+    "list": "لیست تایید در انتظار",
+    "noApprovals": "هیچ تأییدیه معلقی یافت نشد.",
+    "requestId": "شماره درخواست",
+    "description": "توضیحات",
+    "stepOrder": "گام",
+    "approvedBy": "تایید شده توسط",
+    "actionDate": "تاریخ معامله",
+    "status": "وضعیت",
+    "waiting": "در انتظار"
+  },
+  "quotation": {
+    "notes": {
+      "maxLengthError": "هر نت می تواند تا 100 کاراکتر باشد. لطفا بررسی کنید."
+    }
+  },
+  "customerCancel": {
+    "readOnlyReason": "از آنجایی که این درخواست توسط مشتری لغو شده است، امکان تغییر وجود ندارد.",
+    "reasonLabel": "دلیل لغو",
+    "button": "لغو مشتری",
+    "title": "لغو مشتری",
+    "description": "شما در شرف علامت گذاری این درخواست به عنوان لغو شده توسط مشتری هستید.",
+    "reasonPlaceholder": "دلیل انصراف مشتری را بنویسید...",
+    "confirmButton": "لغو کنید"
+  },
+  "pdfExportTemplate": {
+    "draftWatermark": "این پیش نویس است"
+  }
+}

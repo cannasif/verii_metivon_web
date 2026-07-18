@@ -1,0 +1,346 @@
+{
+  "loading": "로드 중...",
+  "saving": "녹음 중...",
+  "error": "오류",
+  "noData": "데이터가 없습니다",
+  "previous": "이전",
+  "next": "다음",
+  "actions": "거래",
+  "edit": "편집",
+  "delete": "삭제",
+  "back": "뒤로",
+  "refresh": "새로고침",
+  "select": "선택",
+  "yes": "예",
+  "add": "추가",
+  "backToQuotations": "요청으로 돌아가기",
+  "cancel": "취소",
+  "save": "저장",
+  "confirm": "확인",
+  "saveAndApply": "저장 및 적용",
+  "notes": {
+    "title": "청구서 메모",
+    "description": "요청에 대한 내부 메모를 추가하고 업데이트합니다.",
+    "placeholder": "요청사항을 입력하세요",
+    "noteLabel": "요청 메모",
+    "addLineTooltip": "주석 줄 추가",
+    "linesHint": "각 줄은 PDF 및 문서 메모에 별도로 표시됩니다.",
+    "removeLine": "행 제거",
+    "pageLabel": "페이지 {{current}} / {{total}}",
+    "saving": "메모 저장 중...",
+    "notesTooltipText": "이는 전체 요청과 관련된 배송/송장 메모입니다. ERP로 전송되면 견적/주문이 상단 주석 1~5 필드에 순차적으로 기록됩니다. 참고 2는 Netsis Annotation 2로 이동합니다.",
+    "maxLengthError": "메모 필드는 최대 100자까지 입력할 수 있습니다."
+  },
+  "list": {
+    "revise": "수정하다",
+    "showing": "{{total}}는 레코드에서 {{from}}-{{to}}로 표시됩니다.",
+    "title": "요청 목록",
+    "description": "모든 요청 보기 및 관리",
+    "detail": "세부정보",
+    "createNew": "새 요청 생성",
+    "searchPlaceholder": "요청번호 또는 고객명으로 검색하세요...",
+    "cardTitle": "요청 목록",
+    "refresh": "새로고침",
+    "actions": "거래",
+    "id": "아이디",
+    "offerNo": "요청 번호",
+    "revisionNo": "개정 번호",
+    "customer": "고객",
+    "customerCode": "현재 코드",
+    "representative": "영업 담당자",
+    "offerDate": "요청 날짜",
+    "validUntil": "유효성",
+    "currency": "통화",
+    "grandTotal": "총계",
+    "status": "상태"
+  },
+  "detail": {
+    "title": "요청 세부정보",
+    "subtitle": "요청 세부정보를 보고 관리합니다.",
+    "notFound": "요청을 찾을 수 없습니다.",
+    "revisionNo": "개정 번호",
+    "tabDetail": "세부정보",
+    "tabApprovalFlow": "승인 흐름",
+    "tabReport": "신고"
+  },
+  "create": {
+    "title": "새 요청 생성",
+    "submit": "요청 저장 및 승인을 위해 보내기",
+    "success": "요청이 성공적으로 생성되었습니다.",
+    "successMessage": "요청이 승인 프로세스로 전송되었습니다.",
+    "error": "요청을 생성할 수 없습니다.",
+    "errorMessage": "요청을 생성하는 동안 오류가 발생했습니다.",
+    "subtitle": "요청 정보를 입력하고 저장하세요.",
+    "deliveryDateRequired": "배송일은 필수입니다.",
+    "paymentTypeRequired": "결제 유형이 필요합니다.",
+    "invalidCurrency": "잘못된 통화입니다.",
+    "validationError": "필수 항목을 확인해주세요.",
+    "notesMaxLengthError": "각 메모는 최대 400자까지 가능합니다."
+  },
+  "header": {
+    "title": "정보 요청",
+    "customer": "고객",
+    "selectCustomer": "고객 선택",
+    "shippingAddress": "배송 주소",
+    "selectShippingAddress": "배송 주소를 선택하세요",
+    "representative": "영업 담당자",
+    "selectRepresentative": "대표자를 선택하세요",
+    "offerType": "요청 유형",
+    "selectOfferType": "요청 유형 선택",
+    "currency": "통화",
+    "selectCurrency": "통화를 선택하세요",
+    "showExchangeRates": "환율 표시",
+    "offerDate": "요청 날짜",
+    "deliveryDate": "배송일",
+    "paymentType": "결제 유형",
+    "selectPaymentType": "결제 유형 선택",
+    "description": "설명",
+    "notes": "메모",
+    "descriptionErpTooltip": "전체 요청에 대해 프로덕션에서 확인하려는 일반적인 설명입니다. 제안/주문으로 ERP에 전송되면 Netsis 상단 설명(FatUst.Description) 필드에 기록됩니다.",
+    "descriptionPlaceholder": "설명 입력",
+    "offerNo": "요청 번호",
+    "offerNoPlaceholder": "요청번호",
+    "currencyChange": {
+      "title": "통화 변경",
+      "message": "통화가 변경되면 기존의 모든 행이 새 통화에 따라 다시 계산됩니다. 이 거래를 승인하시겠습니까?"
+    },
+    "deliveryMethod": "배송 방법",
+    "documentDetail": "문서 설명",
+    "ozelKod1": "특수 코드 1",
+    "ozelKod1Placeholder": "특수 코드 1을 선택하세요.",
+    "ozelKod2": "특수 코드 2",
+    "ozelKod2Placeholder": "특수 코드 2를 선택하세요.",
+    "specialCodeSearchPlaceholder": "특수 코드 검색..."
+  },
+  "lines": {
+    "title": "요청 라인",
+    "add": "행 추가",
+    "empty": "아직 추가된 행이 없습니다.",
+    "emptyDescription": "구매요청 라인을 추가하려면 \"재고 선택\" 또는 \"라인 추가\" 버튼을 사용하세요.",
+    "itemCount": "{{count}} 행",
+    "editLine": "행 편집",
+    "selectStock": "주식 선택",
+    "selectProduct": "제품 선택",
+    "selectStockFirst": "재고가 선택되지 않았습니다.",
+    "stock": "주식",
+    "productCode": "주식 코드",
+    "enterProductCode": "제품 코드 입력 또는 검색",
+    "productName": "주식명",
+    "enterProductName": "제품명을 입력하세요",
+    "quantity": "수량",
+    "unitPrice": "단가",
+    "discount1": "1% 할인",
+    "discount2": "2% 할인",
+    "discount3": "3% 할인",
+    "discounts": "할인",
+    "discountAmount": "할인금액",
+    "netPrice": "순 가격",
+    "vatRate": "부가가치세율(%)",
+    "lineTotal": "라인 합계(VAT 포함)",
+    "calculations": "계산",
+    "required": "최소 1줄을 추가해야 합니다.",
+    "noProductsFound": "제품을 찾을 수 없습니다",
+    "delete": {
+      "confirmTitle": "행 삭제",
+      "confirmMessage": "이 행을 삭제하시겠습니까?",
+      "confirmTitleMultiple": "행 삭제",
+      "confirmMessageMultiple": "선택한 행을 삭제하시겠습니까?"
+    },
+    "noItems": "아직 줄이 없습니다.",
+    "addLine": "행 추가",
+    "relatedStocks": "공동주식",
+    "groupCode": "그룹 코드",
+    "approvalRequired": "승인 필요",
+    "requiredFieldsMissing": "필수 행 필드가 누락되었습니다.",
+    "createSuccess": "라인이 추가되었습니다.",
+    "createError": "행을 추가할 수 없습니다.",
+    "updateSuccess": "라인이 업데이트되었습니다.",
+    "updateError": "행을 업데이트할 수 없습니다.",
+    "deleteSuccess": "라인이 삭제되었습니다.",
+    "deleteError": "행을 삭제할 수 없습니다.",
+    "editStockItemDetails": "재고 품목 세부정보 편집",
+    "descriptionFieldsTitle": "설명 필드",
+    "description1": "설명 1",
+    "description2": "설명 2",
+    "description3": "설명 3",
+    "descriptionPlaceholder": "설명을 입력하세요...",
+    "descriptionTooltipText": "행 기반 생산 설명입니다. ERP로 가져올 때 Netsis 일치: 설명 1 -> 추가 필드 1, 설명 2 -> 추가 필드 2, 설명 3 -> 행 주석 7.",
+    "descriptionTooltipPrefix": "행 기반 생산 설명입니다. ERP로 전송 시 Netsis 일치:",
+    "erpTargetExtraField1": "추가 필드 1",
+    "erpTargetExtraField2": "추가 영역 2",
+    "erpTargetLineExtraDesc7": "행 주석 7",
+    "profileErpTooltip": "이 프로필 선택은 ERP로 보낼 때 Netsis Line Annotation 2 필드에 저장됩니다.",
+    "rebarErpTooltip": "이 Iron 선택은 ERP로 보낼 때 Netsis Row Annotation 3 값으로 저장됩니다.",
+    "screwErpTooltip": "이 나사 선택은 ERP로 보낼 때 Netsis Line Annotation 4 값으로 저장됩니다.",
+    "printErpTooltip": "이 인쇄 선택 사항은 ERP로 보낼 때 Netsis Line Annotation 8 값으로 저장됩니다. 인쇄 주석은 Netsis 라인 Comment 9 및 Line Annotation 9 필드에도 들어갑니다.",
+    "lineItemDescriptionPlaceholder": "라인 기반 품목 설명",
+    "doubleClickToEdit": "편집하려면 두 번 클릭하세요."
+  },
+  "exchangeRates": {
+    "title": "환율",
+    "currency": "통화",
+    "rate": "설치",
+    "date": "환율 날짜",
+    "isOfficial": "공식 설치",
+    "official": "공식",
+    "custom": "비공개",
+    "empty": "환율을 찾을 수 없습니다.",
+    "status": "상태",
+    "dialog": {
+      "title": "환율",
+      "description": "필요한 경우 환율을 보고 편집합니다. 변경된 요금은 공식 요금으로 표시되지 않습니다.",
+      "subtitle": "요금을 편집하고 저장할 수 있습니다.",
+      "info": "수동 업데이트는 공식 환율 외에 이루어질 수 있습니다."
+    },
+    "updateSuccess": "환율이 업데이트되었습니다.",
+    "updateError": "환율을 업데이트할 수 없습니다.",
+    "cannotEditUsedCurrency": "사용된 통화는 편집할 수 없습니다.",
+    "zeroRateError": "계속하려면 환율을 입력하세요."
+  },
+  "summary": {
+    "title": "요약",
+    "grandTotalAnalysis": "총계 분석",
+    "subtotal": "소계",
+    "totalVat": "총 부가가치세",
+    "grandTotal": "총계",
+    "generalDiscount": "일반할인",
+    "generalDiscountRate": "일반 할인율",
+    "generalDiscountAmount": "일반할인금액",
+    "generalDiscountHelp": "종합적으로 적용됩니다."
+  },
+  "offerType": {
+    "domestic": "국내",
+    "export": "수출"
+  },
+  "wizard": {
+    "title": "새 요청 생성",
+    "step1": {
+      "title": "1단계: 정보 요청",
+      "description": "요청 헤더 정보 및 환율 입력",
+      "validation": {
+        "offerType": "요청 유형",
+        "currency": "통화",
+        "exchangeRate": "환율"
+      },
+      "exchangeRate": {
+        "required": "TRY가 아닌 통화의 경우 하나 이상의 환율을 추가해야 합니다."
+      },
+      "currency": {
+        "try": {
+          "info": "TRY를 선택하면 환율이 필요하지 않습니다."
+        }
+      }
+    },
+    "step2": {
+      "title": "2단계: 요청 라인",
+      "description": "제품 및 가격 정보 추가",
+      "info": "한 줄 이상 추가해야 합니다.",
+      "validation": {
+        "noLines": "한 줄 이상 추가해야 합니다.",
+        "invalidLines": "모든 행에는 유효한 정보가 있어야 합니다.",
+        "allValid": "{{count}} 행이 성공적으로 추가되었습니다."
+      }
+    },
+    "step3": {
+      "title": "3단계: 요약 및 승인",
+      "description": "정보를 검토하고 요청을 저장하세요.",
+      "header": {
+        "title": "정보 요청"
+      },
+      "lines": {
+        "title": "요청 라인"
+      },
+      "summary": {
+        "title": "최종 요약"
+      },
+      "approval": {
+        "info": "요청이 저장되면 자동으로 승인 프로세스로 전송됩니다."
+      }
+    }
+  },
+  "loadError": "데이터를 로드하는 동안 오류가 발생했습니다.",
+  "backToDemands": "요청으로 돌아가기",
+  "untitled": "제목 없음",
+  "sections": {
+    "header": "타이틀 정보",
+    "lines": "행",
+    "summary": "요약"
+  },
+  "approval": {
+    "approve": "확인",
+    "reject": "거절하다",
+    "sending": "보내는 중...",
+    "sendForApproval": "승인을 위해 제출",
+    "approveSuccess": "확인 프로세스가 성공적으로 완료되었습니다.",
+    "approveError": "확인에 실패했습니다.",
+    "rejectSuccess": "거부 프로세스가 성공적으로 완료되었습니다.",
+    "rejectError": "거부에 실패했습니다.",
+    "startSuccess": "승인 프로세스가 시작되었습니다.",
+    "startError": "승인 프로세스를 시작할 수 없습니다.",
+    "rejectTitle": "요청 거부",
+    "rejectDescription": "거부 사유를 입력하세요.",
+    "rejectReasonPlaceholder": "거부 이유",
+    "statusFilterLabel": "승인상태",
+    "lockedForNonApprover": "등록 승인 절차가 진행 중입니다. 활성 승인 사용자만 변경할 수 있습니다. 편집이 중지되었습니다.",
+    "approvedReadOnlyReason": "이 요청은 승인되었으므로 변경할 수 없습니다.",
+    "rejectedReadOnlyReason": "이 요청은 거부되었으므로 변경할 수 없습니다. 업데이트하려면 목록에서 \"수정\"을 사용하세요.",
+    "closedReason": "동일한 문서 번호를 가진 다른 기록이 승인되었기 때문에 이 기록은 종료되었습니다. 변경할 수 없습니다.",
+    "status": {
+      "notRequired": "초안",
+      "waiting": "기다리는 중",
+      "approved": "승인됨",
+      "rejected": "거부됨",
+      "closed": "휴무"
+    }
+  },
+  "approvalFlow": {
+    "noData": "확인 단계를 찾을 수 없습니다.",
+    "notStarted": "초기화되지 않음",
+    "stepCompleted": "단계 완료",
+    "stepInProgress": "단계는 계속된다",
+    "stepNotStarted": "내 발걸음이 기다리고 있어",
+    "stepRejected": "내 이름이 거부되었습니다.",
+    "errorTitle": "오류가 발생했습니다"
+  },
+  "update": {
+    "success": "요청이 업데이트되었습니다.",
+    "successMessage": "요청이 성공적으로 업데이트되었습니다.",
+    "error": "요청을 업데이트할 수 없습니다.",
+    "errorMessage": "요청을 업데이트하는 동안 오류가 발생했습니다.",
+    "invalidCurrency": "잘못된 통화입니다.",
+    "validationError": "양식 유효성 검사 오류가 발생했습니다."
+  },
+  "revision": {
+    "success": "버전이 생성되었습니다.",
+    "error": "버전을 생성하지 못했습니다."
+  },
+  "waitingApprovals": {
+    "title": "보류 중인 승인 요청",
+    "list": "보류 중인 승인 목록",
+    "noApprovals": "대기 중인 승인이 없습니다.",
+    "requestId": "요청 번호",
+    "description": "설명",
+    "stepOrder": "단계",
+    "approvedBy": "승인자",
+    "actionDate": "거래 날짜",
+    "status": "상태",
+    "waiting": "기다리는 중"
+  },
+  "quotation": {
+    "notes": {
+      "maxLengthError": "각 메모는 최대 100자까지 가능합니다. 확인해주세요."
+    }
+  },
+  "customerCancel": {
+    "readOnlyReason": "이 요청은 고객이 취소했기 때문에 변경할 수 없습니다.",
+    "reasonLabel": "취소 이유",
+    "button": "고객 취소",
+    "title": "고객 취소",
+    "description": "이 요청을 고객이 취소한 것으로 표시하려고 합니다.",
+    "reasonPlaceholder": "고객의 취소 사유를 작성하세요.",
+    "confirmButton": "취소"
+  },
+  "pdfExportTemplate": {
+    "draftWatermark": "초안입니다"
+  }
+}

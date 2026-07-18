@@ -1,0 +1,28 @@
+{
+  "title": "选择客户",
+  "description": "您可以通过 ERP 和潜在标签来区分所有客户；只需使用潜在客户列表的另一个选项卡即可。",
+  "badgeKindErp": "企业资源计划",
+  "badgeKindPotential": "潜力",
+  "erpCustomers": "企业资源计划",
+  "crmCustomers": "客户关系管理客户",
+  "potentialCustomers": "潜力",
+  "allCustomers": "全部",
+  "erp": "企业资源计划",
+  "crm": "客户关系管理",
+  "noErpCustomers": "未找到 ERP 客户",
+  "noCrmCustomers": "未找到 CRM 客户",
+  "noPotentialCustomers": "未找到潜在客户",
+  "noCustomers": "未找到客户",
+  "noResults": "未找到搜索结果",
+  "searchPlaceholder": "按名称或代码搜索...",
+  "voiceSearch": "语音搜索",
+  "loading": "加载中",
+  "table": {
+    "type": "类型",
+    "customerCode": "客户代码",
+    "customerName": "客户名称",
+    "phone": "电话",
+    "city": "城市",
+    "email": "电子邮件"
+  }
+}

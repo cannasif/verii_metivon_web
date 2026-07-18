@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{shipmentConfig}from'@/features/erp-operation-management/configs';export function ShipmentManagementPage(){return <ErpPagedManagementPage config={shipmentConfig}/>}

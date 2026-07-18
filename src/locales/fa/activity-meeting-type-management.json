@@ -1,0 +1,82 @@
+{
+  "menu": "مدیریت جلسات",
+  "description": "مدیریت و ویرایش تعاریف جلسه",
+  "addButton": "افزودن جلسه جدید",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای وجود ندارد",
+  "actions": "اقدامات",
+  "edit": "ویرایش کنید",
+  "deleteButton": "حذف کنید",
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "saving": "در حال ذخیره...",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "advancedFilter": {
+    "columnName": "نام جلسه",
+    "columnDescription": "توضیحات",
+    "columnCreatedBy": "ایجاد شده توسط"
+  },
+  "activityType": {
+    "create": "افزودن جلسه جدید",
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای وجود ندارد",
+    "actions": "اقدامات",
+    "cancel": "لغو کنید",
+    "save": "ذخیره کنید",
+    "saving": "در حال ذخیره...",
+    "error": "خطایی رخ داد",
+    "form": {
+      "addTitle": "افزودن جلسه جدید",
+      "editTitle": "ویرایش جلسه",
+      "addDescription": "اطلاعات جلسه جدید را وارد کنید",
+      "editDescription": "ویرایش اطلاعات جلسه",
+      "name": "نام جلسه",
+      "namePlaceholder": "نام جلسه را وارد کنید",
+      "nameRequired": "نام جلسه الزامی است",
+      "nameMaxLength": "نام جلسه حداکثر می تواند 100 کاراکتر باشد",
+      "description": "توضیحات",
+      "descriptionPlaceholder": "توضیحات را وارد کنید (اختیاری)",
+      "descriptionMaxLength": "توضیحات حداکثر می تواند 500 کاراکتر باشد"
+    },
+    "table": {
+      "title": "لیست جلسات",
+      "id": "شناسه",
+      "name": "نام جلسه",
+      "description": "توضیحات",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط",
+      "showing": "نمایش {{from}}-{{to}} / {{total}}",
+      "page": "صفحه {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "مجموع جلسات",
+      "activeActivityTypes": "جلسات فعال",
+      "newThisMonth": "جدید این ماه"
+    },
+    "messages": {
+      "createSuccess": "جلسه با موفقیت ایجاد شد",
+      "createError": "جلسه ایجاد نشد",
+      "updateSuccess": "جلسه با موفقیت به روز شد",
+      "updateError": "جلسه به‌روزرسانی نشد",
+      "deleteSuccess": "جلسه با موفقیت حذف شد",
+      "deleteError": "جلسه حذف نشد"
+    }
+  },
+  "deleteConfirm": {
+    "confirmTitle": "حذف جلسه",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید {{name}} را حذف کنید؟"
+  },
+  "messages": {
+    "deleteSuccess": "جلسه با موفقیت حذف شد",
+    "deleteError": "جلسه حذف نشد"
+  },
+  "table": {
+    "title": "لیست جلسات",
+    "id": "شناسه",
+    "name": "نام جلسه",
+    "description": "توضیحات",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط"
+  }
+}

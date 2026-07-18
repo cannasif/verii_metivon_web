@@ -1,0 +1,73 @@
+{
+  "title": "Панель управления",
+  "loading": "Загрузка...",
+  "greeting": {
+    "morning": "доброе утро",
+    "afternoon": "Добрый день",
+    "evening": "Добрый вечер"
+  },
+  "refresh": "Обновить",
+  "refreshing": "Его обновляют...",
+  "refreshed": "Данные обновлены",
+  "refreshError": "Обновление не выполнено",
+  "user": "Пользователь",
+  "noSalesData": "Данных о продажах пока нет",
+  "noActivities": "Пока нет активности",
+  "selectFormat": "Выберите формат",
+  "reportPreparing": "Отчет готовится...",
+  "reportDownloaded": "Отчет скачан.",
+  "reportError": "Отчет не удалось получить.",
+  "stats": {
+    "totalRevenue": "Общий оборот",
+    "activeOpportunities": "Активные возможности",
+    "newLeads": "Новые кандидаты",
+    "pendingOrders": "Отложенные ордера"
+  },
+  "salesAnalysis": "Анализ продаж",
+  "targetVsActual": "Цель против достигнутого",
+  "latestActivities": "Последние мероприятия",
+  "viewAll": "Посмотреть все",
+  "reportDownload": "Скачать отчет",
+  "quickAction": "Быстрая транзакция",
+  "activityType": {
+    "meeting": "встреча",
+    "call": "Поиск",
+    "email": "электронная почта",
+    "general": "Общий"
+  },
+  "noDate": "без даты",
+  "unnamedActivity": "Анонимная активность",
+  "monthsShort": {
+    "jan": "январь",
+    "feb": "февраль",
+    "mar": "Мар",
+    "apr": "апрель",
+    "may": "май",
+    "jun": "удовольствие",
+    "jul": "июль",
+    "aug": "август",
+    "sep": "Сентябрь",
+    "oct": "октябрь",
+    "nov": "мышца",
+    "dec": "Поиск"
+  },
+  "quickStats": {
+    "pendingTasks": "Ожидающие задачи",
+    "checkTasks": "Проверьте список задач",
+    "openQuotations": "Открытые предложения",
+    "reviewQuotations": "Ознакомьтесь с предложениями",
+    "criticalStock": "Критический запас",
+    "stockStatus": "Посмотреть состояние запасов"
+  },
+  "sidebar": {
+    "customers": "Клиенты",
+    "customerManagement": "Управление клиентами",
+    "salesManagement": "Воронка продаж",
+    "demandCreateWizard": "Создать новый запрос",
+    "quotationCreateWizard": "Создать новое предложение",
+    "orderCreateWizard": "Создать новый заказ",
+    "erpOrderList": "Список заказов ERP",
+    "activities": "Планирование",
+    "activityManagement": "Управление деятельностью"
+  }
+}

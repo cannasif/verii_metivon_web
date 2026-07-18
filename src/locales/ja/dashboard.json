@@ -1,0 +1,73 @@
+{
+  "title": "ダッシュボード",
+  "loading": "読み込み中...",
+  "greeting": {
+    "morning": "おはようございます",
+    "afternoon": "こんにちは",
+    "evening": "こんばんは"
+  },
+  "refresh": "リフレッシュ",
+  "refreshing": "リニューアルされてるんですね…",
+  "refreshed": "データが更新されました",
+  "refreshError": "アップデートに失敗しました",
+  "user": "ユーザー",
+  "noSalesData": "販売データはまだありません",
+  "noActivities": "まだ活動はありません",
+  "selectFormat": "フォーマットの選択",
+  "reportPreparing": "報告書は準備中です...",
+  "reportDownloaded": "レポートがダウンロードされました。",
+  "reportError": "レポートを受信できませんでした。",
+  "stats": {
+    "totalRevenue": "総売上高",
+    "activeOpportunities": "積極的な機会",
+    "newLeads": "新規候補者",
+    "pendingOrders": "未決注文"
+  },
+  "salesAnalysis": "売上分析",
+  "targetVsActual": "目標と達成度",
+  "latestActivities": "最新の活動",
+  "viewAll": "すべて見る",
+  "reportDownload": "レポートのダウンロード",
+  "quickAction": "高速トランザクション",
+  "activityType": {
+    "meeting": "会議",
+    "call": "検索",
+    "email": "電子メール",
+    "general": "一般"
+  },
+  "noDate": "日付なし",
+  "unnamedActivity": "匿名アクティビティ",
+  "monthsShort": {
+    "jan": "1月",
+    "feb": "2月",
+    "mar": "3月",
+    "apr": "4月",
+    "may": "5月",
+    "jun": "喜び",
+    "jul": "7月",
+    "aug": "8月",
+    "sep": "9月",
+    "oct": "10月",
+    "nov": "筋肉",
+    "dec": "検索"
+  },
+  "quickStats": {
+    "pendingTasks": "保留中のタスク",
+    "checkTasks": "タスクリストを確認する",
+    "openQuotations": "オープンオファー",
+    "reviewQuotations": "オファーをチェックしてください",
+    "criticalStock": "クリティカルストック",
+    "stockStatus": "在庫状況を見る"
+  },
+  "sidebar": {
+    "customers": "お客様",
+    "customerManagement": "顧客管理",
+    "salesManagement": "セールスファネル",
+    "demandCreateWizard": "新しいリクエストの作成",
+    "quotationCreateWizard": "新しいオファーを作成する",
+    "orderCreateWizard": "新しい注文の作成",
+    "erpOrderList": "ERP注文リスト",
+    "activities": "企画",
+    "activityManagement": "アクティビティ管理"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "menu": "绞火监控",
+  "title": "绞火监控",
+  "description": "监视作业运行状况、失败的作业和无法交付的队列。",
+  "summary": {
+    "title": "系统概要",
+    "description": "快速查看重复作业的运行状况和队列行为。",
+    "totalJobs": "经常性工作总数",
+    "withQueue": "活动队列",
+    "withErrors": "错误的工作",
+    "help": "统计数据是您的 Hangfire 服务器的快照；通过刷新来更新列表。"
+  },
+  "refresh": "刷新",
+  "stats": {
+    "enqueued": "在队列中",
+    "processing": "加工",
+    "succeeded": "成功的",
+    "failed": "失败"
+  },
+  "table": {
+    "jobId": "企业ID",
+    "jobName": "商业",
+    "state": "状态",
+    "time": "时间",
+    "reason": "为什么",
+    "queue": "尾巴",
+    "duration": "持续时间",
+    "retryCount": "再次",
+    "recurringJobId": "预定工作"
+  },
+  "succeeded": {
+    "title": "成功作品",
+    "empty": "没有找到成功的工作。",
+    "description": "最近完成的 Hangfire 工作列表。"
+  },
+  "failed": {
+    "title": "失败的工作",
+    "empty": "未找到失败的作业。",
+    "total": "合计",
+    "description": "导致错误或等待重试的作业。"
+  },
+  "deadLetter": {
+    "title": "无法送达队列",
+    "empty": "无法送达的队列为空。",
+    "enqueued": "在队列中",
+    "description": "无法传递给消费者且需要人工审核的消息。"
+  },
+  "recurring": {
+    "title": "预定的工作",
+    "description": "从这里您可以查看已保存的 Hangfire 作业并立即触发您选择的作业。",
+    "selectLabel": "要运行的作业",
+    "selectPlaceholder": "选择工作",
+    "triggerButton": "现在运行",
+    "triggerSuccess": "作业 {{jobName}} 已触发。",
+    "triggerError": "触发作业时发生错误。",
+    "empty": "尚未找到注册的经常性工作。",
+    "tableTitle": "预定的工作",
+    "tableDescription": "所有重复的 Hangfire 作业和调度信息。",
+    "labels": {
+      "schedule": "时机",
+      "method": "方法",
+      "error": "有错误",
+      "healthy": "健康的"
+    },
+    "table": {
+      "id": "职位编号",
+      "job": "商业",
+      "cron": "时机",
+      "nextExecution": "下一步工作",
+      "lastExecution": "最新作品",
+      "queue": "尾巴"
+    }
+  }
+}

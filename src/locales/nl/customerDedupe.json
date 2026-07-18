@@ -1,0 +1,34 @@
+{
+  "title": "Conflict-inbox",
+  "tableTitle": "Dubbele klantleads",
+  "subtitle": "Controleer en voeg dubbele leads samen",
+  "refresh": "Vernieuwen",
+  "searchPlaceholder": "Zoek op primaire of dubbele klantnaam",
+  "matchType": "Overeenkomsttype",
+  "minScore": "Minimale score",
+  "all": "Allemaal",
+  "masterCustomer": "belangrijkste klant",
+  "duplicateCustomer": "terugkerende klant",
+  "score": "Scoren",
+  "actions": "Transacties",
+  "previewMerge": "Voorbeeld van samenvoeging",
+  "merge": "combineren",
+  "preferMasterValues": "Gebruik hoofdwaarden",
+  "confirmMergeTitle": "Bevestig het samenvoegen",
+  "confirmMergeDescription": "Dubbele registratie wordt samengevoegd met de hoofdklant. Deze actie kan niet ongedaan worden gemaakt.",
+  "mergeSuccess": "De fusie is succesvol voltooid.",
+  "mergeError": "Samenvoegen mislukt. Probeer het opnieuw.",
+  "emptyTitle": "geen conflict",
+  "emptyDescription": "Er zijn geen dubbele leads om te beoordelen.",
+  "loadErrorTitle": "Installatie mislukt",
+  "loadErrorDescription": "Dubbele kandidaten konden niet worden geladen. Probeer het opnieuw.",
+  "retry": "probeer het opnieuw",
+  "TaxNumber": "belasting nummer",
+  "TcknNumber": "TR ID-nummer",
+  "CustomerCode": "Klantcode",
+  "common": {
+    "table": {
+      "showing": "Resultaat {{from}}-{{to}} / {{total}}"
+    }
+  }
+}

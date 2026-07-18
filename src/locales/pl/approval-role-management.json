@@ -1,0 +1,60 @@
+{
+  "approvalRole": {
+    "menu": "Zarządzanie rolami zatwierdzającymi",
+    "description": "Zarządzaj rolami zatwierdzającymi i organizuj je",
+    "addButton": "Dodaj nową rolę zatwierdzającą",
+    "searchPlaceholder": "Szukaj...",
+    "refresh": "Odśwież",
+    "loading": "Ładowanie...",
+    "noData": "Brak danych",
+    "table": {
+      "id": "Identyfikator",
+      "approvalRoleGroupName": "Grupa ról",
+      "name": "Nazwa roli",
+      "maxAmount": "Maksymalna ilość",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "actions": "Działania",
+      "totalRecords": "Łączna liczba rekordów {{count}}.",
+      "page": "Strona {{current}} / {{total}}",
+      "previous": "Poprzedni",
+      "next": "Następny",
+      "title": "Role zatwierdzające"
+    },
+    "delete": {
+      "confirmTitle": "Usuń potwierdzenie",
+      "confirmMessage": "Czy na pewno chcesz usunąć ten rekord? Tej akcji nie można cofnąć.",
+      "cancelButton": "Anuluj",
+      "confirmButton": "Usuń",
+      "deleting": "Usuwanie..."
+    },
+    "form": {
+      "editTitle": "Edytuj rolę zatwierdzającą",
+      "addTitle": "Dodaj nową rolę zatwierdzającą",
+      "editDescription": "Edytuj szczegóły roli zatwierdzającej",
+      "addDescription": "Wprowadź szczegóły nowej roli zatwierdzającej",
+      "approvalRoleGroupId": "Grupa ról zatwierdzania",
+      "selectApprovalRoleGroup": "Wybierz grupę ról zatwierdzania",
+      "noApprovalRoleGroupSelected": "Nie wybrano grupy ról zatwierdzających",
+      "name": "Nazwa roli",
+      "namePlaceholder": "Wpisz nazwę roli",
+      "maxAmount": "Maksymalna ilość",
+      "maxAmountPlaceholder": "Wpisz maksymalną kwotę",
+      "approvalRoleGroupIdRequired": "Wymagany jest wybór grupy ról zatwierdzania",
+      "nameRequired": "Nazwa roli jest wymagana",
+      "nameMaxLength": "Nazwa roli może mieć maksymalnie 100 znaków",
+      "maxAmountMin": "Maksymalna kwota nie może być mniejsza niż 0",
+      "cancel": "Anuluj",
+      "save": "Zapisz",
+      "saving": "Zapisywanie..."
+    },
+    "advancedFilter": {
+      "columnName": "Nazwa roli",
+      "columnApprovalRoleGroupName": "Grupa ról",
+      "columnMaxAmount": "Maksymalna kwota"
+    },
+    "messages": {
+      "error": "Wystąpił błąd"
+    }
+  }
+}

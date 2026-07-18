@@ -1,0 +1,23 @@
+{
+  "PageTitle": "メール設定",
+  "PageDescription": "SMTPサーバー設定を構成する",
+  "Save": "保存",
+  "SavedSuccessfully": "メール設定が正常に保存されました",
+  "SaveFailed": "メール設定の保存に失敗しました",
+  "Fields": {
+    "Host": "サーバー名",
+    "Port": "接続ポート",
+    "EnableSsl": "SSLを有効にする",
+    "Username": "ユーザー名",
+    "Password": "パスワード",
+    "PasswordPlaceholder": "変更するには新しいパスワードを入力してください",
+    "FromEmail": "メールから",
+    "FromName": "差出人名",
+    "Timeout": "タイムアウト (秒)"
+  },
+  "TestMail": {
+    "Send": "テストメールを送信する",
+    "Sending": "テストが送信されています...",
+    "Success": "テストメールを送信しました"
+  }
+}

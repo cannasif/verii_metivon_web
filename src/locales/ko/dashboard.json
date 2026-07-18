@@ -1,0 +1,73 @@
+{
+  "title": "대시보드",
+  "loading": "로드 중...",
+  "greeting": {
+    "morning": "좋은 아침",
+    "afternoon": "좋은 하루",
+    "evening": "안녕하세요"
+  },
+  "refresh": "새로고침",
+  "refreshing": "리뉴얼중인데..",
+  "refreshed": "데이터가 업데이트되었습니다.",
+  "refreshError": "업데이트 실패",
+  "user": "사용자",
+  "noSalesData": "아직 판매 데이터가 없습니다.",
+  "noActivities": "아직 활동이 없습니다",
+  "selectFormat": "형식 선택",
+  "reportPreparing": "보고서를 준비 중입니다...",
+  "reportDownloaded": "보고서가 다운로드되었습니다.",
+  "reportError": "보고서를 수신할 수 없습니다.",
+  "stats": {
+    "totalRevenue": "총 매출액",
+    "activeOpportunities": "활성 기회",
+    "newLeads": "새로운 후보자",
+    "pendingOrders": "대기 중인 주문"
+  },
+  "salesAnalysis": "매출 분석",
+  "targetVsActual": "목표 대 달성",
+  "latestActivities": "최신 활동",
+  "viewAll": "모두 보기",
+  "reportDownload": "보고서 다운로드",
+  "quickAction": "빠른 거래",
+  "activityType": {
+    "meeting": "회의",
+    "call": "검색",
+    "email": "이메일",
+    "general": "일반"
+  },
+  "noDate": "날짜 없음",
+  "unnamedActivity": "익명 활동",
+  "monthsShort": {
+    "jan": "1월",
+    "feb": "2월",
+    "mar": "3월",
+    "apr": "4월",
+    "may": "5월",
+    "jun": "즐거움",
+    "jul": "7월",
+    "aug": "8월",
+    "sep": "9월",
+    "oct": "10월",
+    "nov": "근육",
+    "dec": "검색"
+  },
+  "quickStats": {
+    "pendingTasks": "보류 중인 작업",
+    "checkTasks": "작업 목록을 확인하세요",
+    "openQuotations": "공개 제안",
+    "reviewQuotations": "제안을 확인하세요",
+    "criticalStock": "중요 재고",
+    "stockStatus": "재고 현황 보기"
+  },
+  "sidebar": {
+    "customers": "고객",
+    "customerManagement": "고객관리",
+    "salesManagement": "판매 유입 경로",
+    "demandCreateWizard": "새 요청 생성",
+    "quotationCreateWizard": "새 제안 만들기",
+    "orderCreateWizard": "새 주문 만들기",
+    "erpOrderList": "ERP 주문 목록",
+    "activities": "기획",
+    "activityManagement": "활동 관리"
+  }
+}

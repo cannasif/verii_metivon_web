@@ -1,0 +1,88 @@
+{
+  "list": {
+    "title": "Aprovações pendentes",
+    "description": "Visualizar e aprovar ou rejeitar cotações atribuídas a você",
+    "empty": "Nenhuma aprovação pendente",
+    "error": "Ocorreu um erro ao carregar as aprovações"
+  },
+  "yes": "Sim",
+  "no": "Não",
+  "processing": "Processando...",
+  "detail": {
+    "title": "Detalhes da cotação",
+    "subtitle": "Visualize detalhes da cotação e execute ações",
+    "tabs": {
+      "detail": "Detalhe",
+      "history": "História",
+      "action": "Ação"
+    },
+    "notFound": "Cotação não encontrada",
+    "quotationInfo": "Informações de cotação",
+    "offerNo": "Oferta Não",
+    "customer": "Cliente",
+    "representative": "Representante",
+    "currency": "Moeda",
+    "offerDate": "Data da oferta",
+    "deliveryDate": "Data de entrega",
+    "total": "Total",
+    "grandTotal": "Total geral",
+    "description": "Descrição",
+    "lines": "Linhas de cotação",
+    "productCode": "Código do produto",
+    "productName": "Nome do produto",
+    "quantity": "Quantidade",
+    "unitPrice": "Preço unitário",
+    "lineTotal": "Total de linhas",
+    "lineGrandTotal": "Linha Total Geral",
+    "exchangeRates": "Taxas de câmbio",
+    "exchangeRate": "Taxa",
+    "exchangeRateDate": "Data da taxa",
+    "isOfficial": "Taxa Oficial"
+  },
+  "actions": {
+    "view": "Ver",
+    "approve": "Aprovar",
+    "reject": "Rejeitar"
+  },
+  "status": {
+    "notRequired": "Rascunho",
+    "waiting": "Aguardando aprovação",
+    "approved": "Aprovado",
+    "rejected": "Rejeitado",
+    "closed": "Fechado",
+    "customerCancelled": "Cancelado pelo cliente",
+    "salespersonClosedForRevision": "Registro ERP fechado pelo vendedor para revisão",
+    "supersededByApprovedRevision": "Fechado porque outra revisão foi aprovada"
+  },
+  "closedReason": "Este registro foi encerrado porque outro registro com o mesmo número de oferta foi aprovado.",
+  "statusFilterLabel": "Status de aprovação",
+  "level": {
+    "salesManager": "Gerente de Vendas",
+    "regionalManager": "Gerente Regional",
+    "finance": "Finanças",
+    "generalManager": "Gerente Geral",
+    "unknown": "Desconhecido"
+  },
+  "note": {
+    "label": "Nota",
+    "placeholder": "Você pode adicionar uma nota de aprovação/rejeição (opcional)",
+    "maxLength": "A nota pode ter no máximo 500 caracteres"
+  },
+  "approve": {
+    "success": "Aprovado",
+    "successMessage": "Orçamento aprovado com sucesso",
+    "error": "Erro de aprovação",
+    "errorMessage": "Ocorreu um erro ao aprovar o orçamento"
+  },
+  "reject": {
+    "success": "Rejeitado",
+    "successMessage": "Cotação rejeitada",
+    "error": "Erro de rejeição",
+    "errorMessage": "Ocorreu um erro ao rejeitar a cotação"
+  },
+  "history": {
+    "empty": "Sem histórico de aprovação",
+    "approvedBy": "Aprovado por"
+  },
+  "assignedTo": "Usuário atribuído"
+}

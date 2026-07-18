@@ -1,0 +1,16 @@
+{
+  "invalidId": "relatório inválido",
+  "backToList": "Voltar à lista",
+  "loadError": "Falha ao carregar o relatório",
+  "loadingReport": "Carregando relatório...",
+  "listTitle": "Relatórios do PowerBI",
+  "listDescription": "Você pode visualizar os relatórios clicando",
+  "name": "Nome",
+  "description": "Descrição",
+  "isActive": "Estado",
+  "view": "Ver",
+  "status": {
+    "active": "ativo",
+    "inactive": "passivo"
+  }
+}

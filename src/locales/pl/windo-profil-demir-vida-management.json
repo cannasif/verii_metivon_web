@@ -1,0 +1,75 @@
+{
+  "page": {
+    "title": "Definicje Windoformu",
+    "description": "Zarządzaj zapisami profili, żelaza, śrub i ciśnień w strukturze tabel stronicowanych, kompatybilnej ze stronami zarządzania całym projektem.",
+    "documentTitle": "Definicje Windoformu"
+  },
+  "sections": {
+    "profil": {
+      "title": "Zdefiniuj profil",
+      "description": "Zarządzaj definicjami profili, które mają być wybierane wierszowo."
+    },
+    "demir": {
+      "title": "Zidentyfikuj żelazo",
+      "description": "Zarządzaj definicjami żelaza, które mają być wybierane w wierszach."
+    },
+    "vida": {
+      "title": "Zidentyfikuj śrubę",
+      "description": "Zarządzaj definicjami śrub, które mają być wybierane wierszowo."
+    },
+    "baski": {
+      "title": "Zdefiniuj druk",
+      "description": "Zarządzaj definicjami drukowania, które mają być wybierane w wierszach."
+    },
+    "koliBaski": {
+      "title": "Zdefiniuj drukowanie pudełek",
+      "description": "Zarządzaj definicjami drukowania pudełek, które zostaną wybrane w nagłówku oferty i przesłane do pola opisu nagłówka Netsis."
+    }
+  },
+  "table": {
+    "id": "Identyfikator",
+    "name": "Imię",
+    "profilName": "Profil",
+    "createdDate": "Stworzenie",
+    "updatedDate": "Zaktualizowano",
+    "newRecord": "Nowa rejestracja",
+    "searchPlaceholder": "Szukaj definicji...",
+    "refresh": "Odśwież",
+    "loading": "Trwa ładowanie definicji...",
+    "empty": "Nie znaleziono rekordu.",
+    "actions": "transakcja",
+    "previous": "Poprzedni",
+    "next": "Następny",
+    "pagination": "Razem {{total}} z rekordu pokazującego {{from}}-{{to}}",
+    "filterName": "Imię",
+    "dateDash": "-"
+  },
+  "dialog": {
+    "addNewProfile": "Dodaj nowy profil",
+    "addNewRebar": "Dodaj nowe żelazo",
+    "addNewScrew": "dodaj nową śrubę",
+    "addNewPrint": "Dodaj nowe wydanie",
+    "addNewKoliBaski": "Dodaj nowy nadruk na pudełku",
+    "editTitle": "Zaktualizuj {{section}}",
+    "addTitle": "Dodaj {{section}}",
+    "nameLabel": "Imię",
+    "profilLabel": "Połączony profil",
+    "profilPlaceholder": "Wybierz profil",
+    "profilSearchPlaceholder": "Wyszukaj profil",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "demirNameLabel": "żelazne imię",
+    "demirNamePlaceholder": "Związane żelazne imię",
+    "vidaNameLabel": "nazwa śruby",
+    "vidaNamePlaceholder": "Nazwa podłączonej śruby"
+  },
+  "validation": {
+    "nameRequired": "Pole nazwy jest wymagane",
+    "profilRequired": "Wybór profilu jest obowiązkowy"
+  },
+  "toasts": {
+    "created": "Utworzono rekord {{section}}",
+    "updated": "Zaktualizowano rekord {{section}}",
+    "deleted": "Rekord {{section}} został usunięty"
+  }
+}

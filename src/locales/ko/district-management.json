@@ -1,0 +1,138 @@
+{
+  "menu": "지구 행정",
+  "description": "지구 관리 및 구성",
+  "addButton": "새 지구 추가",
+  "showStats": "통계 표시",
+  "hideStats": "통계 숨기기",
+  "listTitle": "지구 목록",
+  "listDescription": "여기에서 시스템에 등록된 모든 지구를 관리할 수 있습니다.",
+  "loading": "로드 중...",
+  "noData": "데이터가 없습니다",
+  "actions": "거래",
+  "previous": "이전",
+  "next": "다음",
+  "cancel": "취소",
+  "delete": {
+    "confirmTitle": "구역 삭제",
+    "confirmMessage": "{{name}} 구역을 삭제하시겠습니까?",
+    "success": "구역이 삭제되었습니다.",
+    "error": "구역을 삭제할 수 없습니다.",
+    "deleting": "삭제 중...",
+    "action": "삭제"
+  },
+  "save": "저장",
+  "saving": "녹음 중...",
+  "countryManagement": {
+    "error": "오류가 발생했습니다"
+  },
+  "table": {
+    "id": "아이디",
+    "name": "지구 이름",
+    "erpCode": "ERP 코드",
+    "postalCode": "우편번호",
+    "city": "도시",
+    "cityName": "도시 이름",
+    "status": "상태",
+    "title": "지구 목록",
+    "createdDate": "생성 날짜",
+    "createdBy": "작성자:",
+    "showing": "{{from}}-{{to}} / {{total}} 표시 중",
+    "page": "페이지 {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "구역 편집",
+    "addDistrict": "새 지구 추가",
+    "editDescription": "지구 정보 편집",
+    "addDescription": "새로운 지구 정보를 입력하세요",
+    "name": "지구 이름",
+    "namePlaceholder": "지역명을 입력하세요",
+    "city": "도시",
+    "selectCity": "도시를 선택하세요",
+    "searchCity": "도시 검색...",
+    "erpCode": "ERP 코드",
+    "erpCodePlaceholder": "ERP 코드 입력(선택 사항)",
+    "postalCode": "우편번호",
+    "postalCodePlaceholder": "우편번호 입력(선택사항)",
+    "nameRequired": "구역 이름은 필수 항목입니다.",
+    "nameMaxLength": "구역 이름은 최대 100자까지 가능합니다.",
+    "erpCodeMaxLength": "ERP 코드는 최대 10자까지 가능합니다.",
+    "postalCodeMaxLength": "우편번호는 최대 20자까지 가능합니다.",
+    "cityRequired": "도시 선택은 필수입니다."
+  },
+  "stats": {
+    "totalDistricts": "총 지구",
+    "activeDistricts": "활성 지구",
+    "newThisMonth": "이번 달 새로운"
+  },
+  "status": {
+    "inactive": "수동적",
+    "active": "활성"
+  },
+  "messages": {
+    "createSuccess": "구역이 성공적으로 생성되었습니다.",
+    "createError": "구역을 생성할 수 없습니다.",
+    "updateSuccess": "지역이 업데이트되었습니다.",
+    "updateError": "지역을 업데이트할 수 없습니다.",
+    "deleteSuccess": "구역이 삭제되었습니다.",
+    "deleteError": "구역을 삭제할 수 없습니다."
+  },
+  "districtManagement": {
+    "menu": "지구 행정",
+    "description": "지구 관리 및 구성",
+    "addButton": "새 지구 추가",
+    "loading": "로드 중...",
+    "noData": "데이터가 없습니다",
+    "table": {
+      "id": "아이디",
+      "name": "지구 이름",
+      "erpCode": "ERP 코드",
+      "postalCode": "우편번호",
+      "city": "도시",
+      "cityName": "도시 이름",
+      "status": "상태",
+      "title": "지구 목록"
+    },
+    "delete": {
+      "confirmTitle": "구역 삭제",
+      "confirmMessage": "{{name}} 구역을 삭제하시겠습니까?",
+      "success": "구역이 삭제되었습니다.",
+      "error": "구역을 삭제하는 중에 오류가 발생했습니다."
+    },
+    "messages": {
+      "createSuccess": "구역이 성공적으로 생성되었습니다.",
+      "createError": "구역을 생성할 수 없습니다.",
+      "updateSuccess": "지역이 업데이트되었습니다.",
+      "updateError": "지역을 업데이트할 수 없습니다."
+    },
+    "stats": {
+      "totalDistricts": "총 지구",
+      "activeDistricts": "활성 지구",
+      "newThisMonth": "이번 달 새로운"
+    },
+    "status": {
+      "inactive": "수동적",
+      "active": "활성"
+    },
+    "error": "오류가 발생했습니다",
+    "form": {
+      "editDistrict": "구역 편집",
+      "addDistrict": "새 지구 추가",
+      "editDescription": "지구 정보 편집",
+      "addDescription": "새로운 지구 정보를 입력하세요",
+      "name": "지구 이름",
+      "namePlaceholder": "지역명을 입력하세요",
+      "city": "도시",
+      "selectCity": "도시를 선택하세요",
+      "searchCity": "도시 검색...",
+      "erpCode": "ERP 코드",
+      "erpCodePlaceholder": "ERP 코드 입력(선택 사항)",
+      "postalCode": "우편번호",
+      "postalCodePlaceholder": "우편번호 입력(선택사항)",
+      "nameRequired": "구역 이름은 필수 항목입니다.",
+      "nameMaxLength": "구역 이름은 최대 100자까지 가능합니다.",
+      "erpCodeMaxLength": "ERP 코드는 최대 10자까지 가능합니다.",
+      "postalCodeMaxLength": "우편번호는 최대 20자까지 가능합니다.",
+      "cityRequired": "도시 선택은 필수입니다."
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "menu": "ERP 고객",
+  "description": "ERP 시스템의 고객 목록",
+  "loading": "로드 중...",
+  "noData": "고객을 찾을 수 없습니다",
+  "table": {
+    "title": "고객 목록",
+    "branchCode": "지점 코드",
+    "businessUnitCode": "사업부 코드",
+    "customerCode": "고객 코드",
+    "customerName": "고객 이름",
+    "phone": "전화",
+    "city": "도시",
+    "district": "지구",
+    "address": "주소",
+    "countryCode": "국가 코드",
+    "email": "이메일",
+    "website": "웹사이트",
+    "taxNumber": "세금 번호",
+    "taxOffice": "세무서",
+    "tcknNumber": "TR ID 번호",
+    "visibleColumns": "보이는 열",
+    "editColumns": "열 편집"
+  },
+  "filterLabels": {
+    "branchCode": "지점 코드",
+    "customerCode": "고객 코드",
+    "customerName": "고객 이름",
+    "city": "도시",
+    "district": "지구",
+    "taxNumber": "세금 번호"
+  },
+  "placeholders": {
+    "quickSearch": "빠른 검색...",
+    "all": "모두",
+    "codeExample": "예: 120...",
+    "nameExample": "고객 이름...",
+    "cityExample": "지방...",
+    "districtExample": "지구...",
+    "taxExample": "세금/TR ID 번호..."
+  },
+  "actions": {
+    "detailedFilter": "상세 필터",
+    "clear": "명확한",
+    "filter": "필터",
+    "all": "전체",
+    "active": "활성",
+    "passive": "패시브",
+    "apply": "결과 나열"
+  },
+  "details": {
+    "title": "고객 세부정보",
+    "addressInfo": "주소정보"
+  },
+  "common": {
+    "close": "닫기",
+    "selectAll": "모두 선택",
+    "ok": "알았어",
+    "totalRecords": "총 등록"
+  },
+  "advancedFilter": {
+    "title": "고급 필터",
+    "add": "필터 추가",
+    "column": "기둥",
+    "operator": "운영자",
+    "value": "가치",
+    "search": "검색",
+    "clear": "명확한",
+    "remove": "제거",
+    "columnCustomerCode": "고객 코드",
+    "columnCustomerName": "고객 이름",
+    "columnBranchCode": "지점 코드",
+    "columnCity": "도시",
+    "columnDistrict": "지구",
+    "columnTaxNumber": "세금 번호",
+    "operatorContains": "포함",
+    "operatorStartsWith": "그것은 다음으로 시작한다",
+    "operatorEndsWith": "다음으로 끝남",
+    "operatorEquals": "같음",
+    "operator>": ">",
+    "operator>=": ">=",
+    "operator<": "<",
+    "operator<=": "<="
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "menu": "مشتری ERP",
+  "description": "لیست مشتریان از سیستم ERP",
+  "loading": "در حال بارگیری...",
+  "noData": "مشتری پیدا نشد",
+  "table": {
+    "title": "لیست مشتریان",
+    "branchCode": "کد شعبه",
+    "businessUnitCode": "کد واحد تجاری",
+    "customerCode": "کد مشتری",
+    "customerName": "نام مشتری",
+    "phone": "تلفن",
+    "city": "شهر",
+    "district": "منطقه",
+    "address": "آدرس",
+    "countryCode": "کد کشور",
+    "email": "ایمیل",
+    "website": "وب سایت",
+    "taxNumber": "شماره مالیات",
+    "taxOffice": "اداره مالیات",
+    "tcknNumber": "شماره شناسه TR",
+    "visibleColumns": "ستون های قابل مشاهده",
+    "editColumns": "ویرایش ستون ها"
+  },
+  "filterLabels": {
+    "branchCode": "کد شعبه",
+    "customerCode": "کد مشتری",
+    "customerName": "نام مشتری",
+    "city": "شهر",
+    "district": "منطقه",
+    "taxNumber": "شماره مالیات"
+  },
+  "placeholders": {
+    "quickSearch": "جستجوی سریع...",
+    "all": "همه",
+    "codeExample": "مثال: 120 ...",
+    "nameExample": "نام مشتری ...",
+    "cityExample": "استان...",
+    "districtExample": "ناحیه...",
+    "taxExample": "شماره شناسه مالیاتی/TR..."
+  },
+  "actions": {
+    "detailedFilter": "فیلتر تفصیلی",
+    "clear": "روشن",
+    "filter": "فیلتر کنید",
+    "all": "همه",
+    "active": "فعال",
+    "passive": "منفعل",
+    "apply": "فهرست نتایج"
+  },
+  "details": {
+    "title": "جزئیات مشتری",
+    "addressInfo": "اطلاعات آدرس"
+  },
+  "common": {
+    "close": "بستن",
+    "selectAll": "همه را انتخاب کنید",
+    "ok": "باشه",
+    "totalRecords": "کل ثبت نام"
+  },
+  "advancedFilter": {
+    "title": "فیلتر پیشرفته",
+    "add": "افزودن فیلتر",
+    "column": "ستون",
+    "operator": "اپراتور",
+    "value": "ارزش",
+    "search": "جستجو کنید",
+    "clear": "روشن",
+    "remove": "حذف کنید",
+    "columnCustomerCode": "کد مشتری",
+    "columnCustomerName": "نام مشتری",
+    "columnBranchCode": "کد شعبه",
+    "columnCity": "شهر",
+    "columnDistrict": "منطقه",
+    "columnTaxNumber": "شماره مالیات",
+    "operatorContains": "حاوی",
+    "operatorStartsWith": "با شروع می شود",
+    "operatorEndsWith": "به پایان می رسد",
+    "operatorEquals": "برابر است",
+    "operator>": ">",
+    "operator>=": ">=",
+    "operator<": "<",
+    "operator<=": "<="
+  }
+}

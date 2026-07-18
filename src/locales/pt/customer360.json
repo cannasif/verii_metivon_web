@@ -1,0 +1,268 @@
+{
+  "title": "Cliente 360",
+  "notFound": "Cliente não encontrado",
+  "error": "Ocorreu um erro",
+  "retry": "Tente novamente",
+  "quickActivity": "Atividade rápida",
+  "currencyFilter": {
+    "label": "moeda",
+    "all": "Todos"
+  },
+  "balanceDialog": {
+    "openButton": "Resumo do saldo atual",
+    "title": "Resumo do saldo atual",
+    "error": "Não foi possível carregar o resumo do saldo do ERP."
+  },
+  "tabs": {
+    "quotations": "Ofertas",
+    "orders": "Pedidos",
+    "activities": "Atividades",
+    "overview": "Resumo",
+    "analytics": "Análise",
+    "quickQuotations": "Cotações rápidas",
+    "erpMovements": "Movimento ERP",
+    "erpOrders": "Pedido de ERP",
+    "mailLogs": "Histórico de e-mail",
+    "images": "Imagens",
+    "imagesDefaultDescription": "Imagem do cartão de visita"
+  },
+  "quickQuotations": {
+    "empty": "Nenhuma oferta rápida encontrada para esta concubina",
+    "error": "Falha ao carregar cotações rápidas",
+    "draft": "rascunho",
+    "converted": "Devolvido à oferta",
+    "sentToApproval": "Enviado para aprovação",
+    "notSentToApproval": "Não fui para aprovação",
+    "currency": "Moeda",
+    "total": "Total",
+    "quotationStatus": "Status da oferta",
+    "approvalStep": "Etapa de confirmação",
+    "stepValue": "Etapa {{step}}",
+    "convertedAt": "Conversão: {{date}}",
+    "notConvertedYet": "Ainda não se transformou em uma oferta",
+    "openQuotation": "Oferta aberta"
+  },
+  "erpMovements": {
+    "title": "Movimento ERP",
+    "tableTitle": "Movimentos Atuais",
+    "error": "Falha ao carregar dados de transação do ERP",
+    "columns": {
+      "date": "data",
+      "dueDate": "Data de Vencimento",
+      "documentNo": "Número do documento",
+      "description": "Descrição",
+      "currency": "Moeda",
+      "debit": "dívida",
+      "credit": "contas a receber",
+      "tlBalanceByDate": "Data do pedido Saldo TL",
+      "tlBalanceByDueDate": "Saldo TL da sequência de maturidade",
+      "fxDebit": "Dívida Cambial",
+      "fxCredit": "Recebíveis em Moeda Estrangeira",
+      "fxBalanceByDate": "Data do Saldo da Moeda do Pedido",
+      "fxBalanceByDueDate": "Saldo Cambial da Sequência de Vencimentos",
+      "actions": "Transações"
+    },
+    "detail": {
+      "button": "Detalhe",
+      "title": "Detalhe da caneta de documento",
+      "description": "Itens de estoque da Netsis pertencentes ao documento número {{documentNo}}.",
+      "error": "Os itens do documento não puderam ser carregados.",
+      "empty": "Nenhum item de inventário encontrado para este documento.",
+      "columns": {
+        "stockCode": "Código de estoque",
+        "stockName": "Nome do estoque",
+        "quantity": "Quantidade",
+        "grossPrice": "Preço Bruto",
+        "netPrice": "Preço Líquido",
+        "grossAmount": "Valor bruto de vendas",
+        "discountAmount": "Valor do desconto",
+        "vatAmount": "Valor do IVA",
+        "total": "Quantidade",
+        "fxPrice": "Preço em moeda estrangeira",
+        "fxAmount": "Valor em moeda estrangeira"
+      }
+    },
+    "summary": {
+      "totalDebit": "Dívida Total",
+      "totalCredit": "Total a Receber",
+      "balance": "equilíbrio",
+      "closed": "Fechado"
+    }
+  },
+  "erpOrders": {
+    "title": "Pedidos Netsis",
+    "noCariCode": "O código atual do ERP não está definido para este cliente. Os pedidos Netsis não podem ser visualizados.",
+    "forbidden": "Você não está autorizado a visualizar pedidos de ERP.",
+    "error": "Não foi possível carregar os pedidos do ERP.",
+    "empty": "Nenhum pedido Netsis encontrado para esta conta corrente.",
+    "scopeHint": "A lista é limitada a pedidos dentro do escopo Netsis do usuário logado.",
+    "columns": {
+      "branch": "filial",
+      "orderNo": "Pedido nº.",
+      "date": "data",
+      "deliveryDate": "Entrega",
+      "gross": "bruto",
+      "vat": "IVA",
+      "total": "Total",
+      "salesRep": "vendedor"
+    }
+  },
+  "mail": {
+    "providers": {
+      "google": "Google",
+      "outlook": "Perspectivas"
+    },
+    "columns": {
+      "date": "data",
+      "sender": "Postado por",
+      "to": "Comprador",
+      "subject": "Assunto",
+      "status": "Estado",
+      "template": "modelo",
+      "errorCode": "Código de erro",
+      "body": "Mensagem"
+    }
+  },
+  "kpi": {
+    "totalDemands": "Oferta Total",
+    "totalQuotations": "Oferta Total",
+    "totalOrders": "Pedido total",
+    "openQuotations": "Oferta aberta",
+    "openOrders": "Pedido pendente"
+  },
+  "sections": {
+    "contacts": "Comunicações",
+    "shippingAddresses": "Endereços de envio",
+    "recentDemands": "Últimas solicitações",
+    "recentQuotations": "Últimas ofertas",
+    "recentOrders": "Últimos pedidos",
+    "recentActivities": "Últimas atividades",
+    "timeline": "Linha do tempo"
+  },
+  "analytics": {
+    "error": "Falha ao carregar dados analíticos",
+    "last12MonthsOrderAmount": "Valor do pedido dos últimos 12 meses",
+    "openQuotationAmount": "Valor do lance aberto",
+    "openOrderAmount": "Valor do pedido aberto",
+    "activityCount": "Número de atividades",
+    "lastActivityDate": "Data da última atividade"
+  },
+  "analyticsCharts": {
+    "demand": "Oferta",
+    "quotation": "Oferta",
+    "order": "Pedido",
+    "last12MonthsOrderAmount": "Pedido dos últimos 12 meses",
+    "openQuotationAmount": "Oferta aberta",
+    "openOrderAmount": "Pedido aberto",
+    "distributionTitle": "distribuição",
+    "monthlyTrendTitle": "Tendência Mensal",
+    "amountComparisonTitle": "Comparação de valores"
+  },
+  "currencyTotals": {
+    "currency": "Moeda",
+    "demandAmount": "Valor do lance",
+    "quotationAmount": "Valor do lance",
+    "orderAmount": "Valor do pedido"
+  },
+  "revenueQuality": {
+    "title": "Qualidade da receita",
+    "churnRisk": "Risco de perda",
+    "upsell": "Tendência de upsell",
+    "payment": "Comportamento de pagamento",
+    "segment": "Agrupamento RFM",
+    "ltv": "Valor vitalício"
+  },
+  "cohort": {
+    "title": "Mantendo uma coorte",
+    "empty": "Não há dados de coorte",
+    "cohortKey": "coorte"
+  },
+  "actions": {
+    "title": "Ações recomendadas",
+    "empty": "Nenhuma ação recomendada",
+    "execute": "Aplicar"
+  },
+  "explain": {
+    "revenueQualityTitle": "A qualidade da receita resume o potencial de vendas e o perfil de risco do cliente.",
+    "churnRisk": "O risco de perda indica a probabilidade de o cliente não fazer um novo pedido.",
+    "upsellPropensity": "Uma tendência de upsell indica o potencial do cliente para comprar volumes maiores ou produtos adicionais.",
+    "paymentBehavior": "O comportamento de pagamento resume o padrão de cobrança e pagamento do cliente.",
+    "rfmSegment": "agrupamento RFM; Mostra o grupo do cliente com base em dados de proximidade, frequência e quantidade.",
+    "modelNote": "Esses campos são resultados do modelo analítico e são exibidos para fins de suporte à decisão.",
+    "cohortRetentionTitle": "A retenção de coorte mostra a continuidade dos clientes adquiridos em um período semelhante ao longo do tempo.",
+    "noCohortData": "Foram encontrados dados de coorte insuficientes para este cliente.",
+    "recommendedActionsTitle": "As ações recomendadas pelo sistema estão listadas nesta área.",
+    "executeAction": "Aplicar ação"
+  },
+  "hero": {
+    "statusActive": "ativo",
+    "statusCrm": "Registro de CRM",
+    "since": "desde {{year}}",
+    "whatsapp": "WhatsApp",
+    "call": "Pesquisar",
+    "email": "E-mail",
+    "quickQuote": "Orçamento rápido",
+    "editCustomer": "Editar cliente",
+    "none": "Nenhum",
+    "emailLabel": "E-mail",
+    "phoneLabel": "telefone",
+    "websiteLabel": "Site",
+    "addressLabel": "Endereço",
+    "infoTitle": "Informação",
+    "taxNumber": "Número fiscal",
+    "customerType": "Tipo de cliente",
+    "salesRep": "Representante de vendas",
+    "creditLimit": "Limite de crédito"
+  },
+  "related": {
+    "newQuotation": "Nova oferta",
+    "newOrder": "Novo pedido",
+    "newActivity": "Nova atividade",
+    "error": "Falha ao carregar lista",
+    "emptyQuotations": "Nenhuma oferta encontrada para este cliente",
+    "emptyOrders": "Nenhum pedido encontrado para este cliente",
+    "emptyActivities": "Nenhuma atividade encontrada para este cliente",
+    "columns": {
+      "offerNo": "Não.",
+      "date": "data",
+      "representative": "representante",
+      "total": "Quantidade",
+      "subject": "Assunto",
+      "type": "Tipo",
+      "assignee": "Responsável",
+      "status": "Estado"
+    },
+    "activityStatus": {
+      "scheduled": "planejado",
+      "completed": "concluído",
+      "cancelled": "Cancelar"
+    }
+  },
+  "images": {
+    "upload": "Carregar imagem",
+    "delete": "Excluir",
+    "emptyHint": "Clique ou arraste para adicionar uma imagem",
+    "deleteConfirmTitle": "excluir imagem",
+    "deleteConfirmDescription": "Tem certeza de que deseja excluir esta imagem? Esta ação não pode ser desfeita."
+  },
+  "button": "Cliente 360",
+  "status": {
+    "havenotstarted": "Não começou",
+    "notstarted": "Não começou",
+    "inprogress": "No processo de aprovação",
+    "pending": "Pendente",
+    "waiting": "esperando",
+    "approved": "Aprovado",
+    "rejected": "rejeitado",
+    "completed": "concluído",
+    "cancelled": "Cancelado",
+    "canceled": "Cancelado",
+    "draft": "rascunho",
+    "converted": "Devolvido à oferta",
+    "sent": "enviado",
+    "active": "ativo",
+    "passive": "passivo",
+    "closed": "Fechado",
+    "open": "aberto"
+  }
+}

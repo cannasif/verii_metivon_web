@@ -1,0 +1,120 @@
+{
+  "countryManagement": {
+    "menu": "국가 관리",
+    "description": "국가 관리 및 규제",
+    "addButton": "새 국가 추가",
+    "searchPlaceholder": "검색...",
+    "loading": "로드 중...",
+    "error": "오류가 발생했습니다",
+    "table": {
+      "id": "아이디",
+      "name": "국가 이름",
+      "code": "코드",
+      "erpCode": "ERP 코드",
+      "createdDate": "생성 날짜",
+      "createdBy": "작성자:",
+      "noData": "데이터가 없습니다",
+      "title": "국가 목록"
+    },
+    "delete": {
+      "confirmTitle": "국가 삭제",
+      "confirmMessage": "{{name}} 국가를 삭제하시겠습니까?"
+    },
+    "messages": {
+      "deleteSuccess": "국가가 삭제되었습니다.",
+      "deleteError": "국가를 삭제할 수 없습니다.",
+      "createSuccess": "국가가 성공적으로 생성되었습니다",
+      "createError": "국가를 생성할 수 없습니다.",
+      "updateSuccess": "국가가 업데이트되었습니다.",
+      "updateError": "국가를 업데이트할 수 없습니다."
+    },
+    "form": {
+      "addCountry": "새 국가 추가",
+      "editCountry": "국가 수정",
+      "addDescription": "새로운 국가 정보를 입력하세요",
+      "editDescription": "국가 정보 수정",
+      "name": "국가 이름",
+      "namePlaceholder": "국가 이름을 입력하세요",
+      "code": "국가 코드",
+      "codePlaceholder": "국가 코드를 입력하세요(예: TR, US)",
+      "erpCode": "ERP 코드",
+      "erpCodePlaceholder": "ERP 코드 입력(선택 사항)",
+      "nameRequired": "국가 이름은 필수 항목입니다.",
+      "nameMaxLength": "국가 이름은 최대 100자까지 가능합니다.",
+      "codeMinLength": "국가 코드는 2자 이상이어야 합니다.",
+      "codeMaxLength": "국가 코드는 최대 5자까지 가능합니다.",
+      "erpCodeMaxLength": "ERP 코드는 최대 10자까지 가능합니다.",
+      "cancel": "취소",
+      "save": "저장",
+      "tabs": {
+        "header": "일반 정보"
+      }
+    },
+    "stats": {
+      "totalCountries": "총 국가",
+      "activeCountries": "활성 국가",
+      "newThisMonth": "이번 달 새로운"
+    }
+  },
+  "menu": "국가 관리",
+  "description": "국가 관리 및 규제",
+  "addButton": "새 국가 추가",
+  "search": "검색...",
+  "loading": "로드 중...",
+  "noData": "데이터가 없습니다",
+  "actions": "거래",
+  "previous": "이전",
+  "next": "다음",
+  "deleteConfirmTitle": "삭제 확인",
+  "cancel": "취소",
+  "deleting": "삭제 중...",
+  "delete": {
+    "confirmTitle": "국가 삭제",
+    "confirmMessage": "{{name}} 국가를 삭제하시겠습니까?"
+  },
+  "saving": "녹음 중...",
+  "save": "저장",
+  "stats": {
+    "totalCountries": "총 국가",
+    "activeCountries": "활성 국가",
+    "newThisMonth": "이번 달 새로운"
+  },
+  "table": {
+    "id": "아이디",
+    "name": "국가 이름",
+    "code": "코드",
+    "erpCode": "ERP 코드",
+    "createdDate": "생성 날짜",
+    "createdBy": "작성자:",
+    "showing": "{{from}}-{{to}} / {{total}} 표시 중",
+    "page": "페이지 {{current}} / {{total}}",
+    "noData": "데이터가 없습니다",
+    "title": "국가 목록"
+  },
+  "advancedFilter": {
+    "columnName": "국가 이름",
+    "columnCode": "국가 코드",
+    "columnErpCode": "ERP 코드"
+  },
+  "form": {
+    "addCountry": "새 국가 추가",
+    "editCountry": "국가 수정",
+    "addDescription": "새로운 국가 정보를 입력하세요",
+    "editDescription": "국가 정보 수정",
+    "name": "국가 이름",
+    "namePlaceholder": "국가 이름을 입력하세요",
+    "code": "국가 코드",
+    "codePlaceholder": "국가 코드를 입력하세요(예: TR, US)",
+    "erpCode": "ERP 코드",
+    "erpCodePlaceholder": "ERP 코드 입력(선택 사항)",
+    "nameRequired": "국가 이름은 필수 항목입니다.",
+    "nameMaxLength": "국가 이름은 최대 100자까지 가능합니다.",
+    "codeMinLength": "국가 코드는 2자 이상이어야 합니다.",
+    "codeMaxLength": "국가 코드는 최대 5자까지 가능합니다.",
+    "erpCodeMaxLength": "ERP 코드는 최대 10자까지 가능합니다."
+  },
+  "deleteConfirm": {
+    "confirmMessage": "{{name}} 국가를 삭제하시겠습니까?"
+  },
+  "searchPlaceholder": "찾다..."
+}

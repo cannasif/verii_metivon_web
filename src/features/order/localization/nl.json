@@ -1,0 +1,78 @@
+{
+  "lines": {
+    "doubleClickToEdit": "Dubbelklik om te bewerken",
+    "unit": "eenheid",
+    "descriptionFieldsTitle": "Beschrijving Velden",
+    "descriptionTooltipText": "Het is een rijgebaseerde productiebeschrijving. Netsis-match bij importeren in ERP: Beschrijving 1 -> Aanvullend veld 1, Beschrijving 2 -> Aanvullend veld 2, Beschrijving 3 -> Rijannotatie 7.",
+    "descriptionTooltipPrefix": "Het is een rijgebaseerde productiebeschrijving. Netsis-matching bij overdracht naar ERP:",
+    "erpTargetExtraField1": "Extra veld 1",
+    "erpTargetExtraField2": "Extra gebied 2",
+    "erpTargetLineExtraDesc7": "Rijannotatie 7",
+    "profileErpTooltip": "Deze profielselectie wordt bij verzending naar ERP opgeslagen in het veld Netsis Line Annotation 2.",
+    "rebarErpTooltip": "Deze ijzerselectie wordt bij verzending naar ERP opgeslagen als Netsis Row Annotation 3-waarde.",
+    "screwErpTooltip": "Deze schroefselectie wordt bij verzending naar ERP opgeslagen als Netsis Line Annotation 4-waarde.",
+    "printErpTooltip": "Deze afdrukselectie wordt bij verzending naar ERP opgeslagen als Netsis Line Annotation 8-waarde. Het afdrukcommentaar wordt ook in de velden Netsis-regelcommentaar 9 en Regelannotatie 9 geplaatst.",
+    "lineItemDescriptionPlaceholder": "Op regels gebaseerde artikelbeschrijving"
+  },
+  "notes": {
+    "title": "Bestelnotities",
+    "description": "Interne opmerkingen voor de bestelling toevoegen en bijwerken.",
+    "placeholder": "Bestelnotitie invoeren",
+    "noteLabel": "Bestelnotitie",
+    "notesTooltipText": "Dit zijn de verzend-/factuurnotities die betrekking hebben op de gehele bestelling. De Netsis-volgorde wordt opeenvolgend vastgelegd in de bovenste velden van Annotatie 1-5; Opmerking 2 gaat naar Netsis-annotatie 2.",
+    "addLineTooltip": "Voeg commentaarregel toe",
+    "linesHint": "Elke regel verschijnt afzonderlijk in PDF- en documentnotities.",
+    "removeLine": "rij verwijderen",
+    "pageLabel": "Pagina {{current}} / {{total}}",
+    "saving": "Notities opslaan...",
+    "maxLengthError": "Het memoveld kan maximaal 100 tekens lang zijn."
+  },
+  "erpOrder": {
+    "title": "ERP-bestellijst",
+    "description": "Controleer de bovenliggende orderrecords en items die verschijnen binnen het bereik van de gebruiker die is ingelogd op Netsis.",
+    "currentUserScope": "Gebaseerd op ingelogde gebruiker",
+    "searchPlaceholder": "Zoek op bestelnummer, huidige, verkoper of datum...",
+    "loading": "ERP-bestellingen worden geladen...",
+    "loadError": "ERP-bestellingen konden niet worden geladen.",
+    "noData": "ERP-bestelling niet gevonden.",
+    "detailAction": "Details",
+    "detailTitle": "{{orderNo}}-bestellingsdetail",
+    "unknownCustomer": "Geen huidige naam",
+    "lineCount": "{{count}}-pen",
+    "linesLoading": "Bestelartikelen worden geladen...",
+    "lineLoadError": "Bestelartikelen konden niet worden geladen.",
+    "noLines": "Er zijn geen artikelen gevonden voor deze bestelling.",
+    "table": {
+      "title": "Bestelkoppen",
+      "branchCode": "tak",
+      "orderNo": "Bestelnr.",
+      "customerCode": "Huidige code",
+      "customerName": "Huidige naam",
+      "date": "datum",
+      "deliveryDate": "Leveringsdatum",
+      "grossTotal": "Bruto bedrag",
+      "vat": "BTW",
+      "grandTotal": "Algemeen totaal",
+      "salesRepCode": "verkoper"
+    },
+    "lines": {
+      "rowNo": "volgorde",
+      "stockCode": "Voorraadcode",
+      "stockName": "Voorraadnaam",
+      "quantity": "Hoeveelheid",
+      "unit": "eenheid",
+      "netPrice": "Netto prijs",
+      "vatRate": "BTW-tarief",
+      "warehouseCode": "Magazijn"
+    }
+  },
+  "header": {
+    "notes": "Opmerkingen",
+    "descriptionErpTooltip": "Het is de algemene omschrijving die u wilt dat de productie voor de gehele order ziet. Wanneer de Netsis-bestelling naar ERP wordt verzonden, wordt deze vastgelegd in het bovenste veld Beschrijving (FatUst.Description).",
+    "ozelKod1": "Speciale code 1",
+    "ozelKod1Placeholder": "Selecteer Speciale code 1",
+    "ozelKod2": "Speciale code 2",
+    "ozelKod2Placeholder": "Selecteer Speciale code 2",
+    "specialCodeSearchPlaceholder": "Zoek naar speciale code..."
+  }
+}

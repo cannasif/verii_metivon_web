@@ -1,0 +1,138 @@
+{
+  "menu": "Администрация района",
+  "description": "Управлять и организовывать районы",
+  "addButton": "Добавить новый район",
+  "showStats": "Показать статистику",
+  "hideStats": "Скрыть статистику",
+  "listTitle": "Список округов",
+  "listDescription": "Здесь вы можете управлять всеми зарегистрированными округами в системе.",
+  "loading": "Загрузка...",
+  "noData": "Данные не найдены",
+  "actions": "Транзакции",
+  "previous": "Предыдущий",
+  "next": "Далее",
+  "cancel": "Отмена",
+  "delete": {
+    "confirmTitle": "Удалить район",
+    "confirmMessage": "Вы уверены, что хотите удалить район {{name}}?",
+    "success": "Район успешно удален",
+    "error": "Не удалось удалить район.",
+    "deleting": "Удаление...",
+    "action": "Удалить"
+  },
+  "save": "Сохранить",
+  "saving": "Запись...",
+  "countryManagement": {
+    "error": "Произошла ошибка"
+  },
+  "table": {
+    "id": "идентификатор",
+    "name": "Название района",
+    "erpCode": "ERP-код",
+    "postalCode": "Почтовый индекс",
+    "city": "город",
+    "cityName": "Название города",
+    "status": "Статус",
+    "title": "Список округов",
+    "createdDate": "Дата создания",
+    "createdBy": "Создано",
+    "showing": "Показаны {{from}}-{{to}} / {{total}}",
+    "page": "Страница {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "Изменить район",
+    "addDistrict": "Добавить новый район",
+    "editDescription": "Редактировать информацию о округе",
+    "addDescription": "Введите новую информацию о округе",
+    "name": "Название района",
+    "namePlaceholder": "Введите название района",
+    "city": "город",
+    "selectCity": "Выберите город",
+    "searchCity": "Поиск города...",
+    "erpCode": "ERP-код",
+    "erpCodePlaceholder": "Введите код ERP (необязательно)",
+    "postalCode": "Почтовый индекс",
+    "postalCodePlaceholder": "Введите почтовый индекс (необязательно)",
+    "nameRequired": "Требуется название района",
+    "nameMaxLength": "Название района может содержать не более 100 символов.",
+    "erpCodeMaxLength": "Код ERP может состоять максимум из 10 символов.",
+    "postalCodeMaxLength": "Почтовый индекс может содержать до 20 символов.",
+    "cityRequired": "Выбор города обязателен"
+  },
+  "stats": {
+    "totalDistricts": "Всего округа",
+    "activeDistricts": "Активный район",
+    "newThisMonth": "Новое в этом месяце"
+  },
+  "status": {
+    "inactive": "пассивный",
+    "active": "активный"
+  },
+  "messages": {
+    "createSuccess": "Район успешно создан",
+    "createError": "Район не может быть создан",
+    "updateSuccess": "Район успешно обновлен.",
+    "updateError": "Не удалось обновить район.",
+    "deleteSuccess": "Район успешно удален",
+    "deleteError": "Не удалось удалить район."
+  },
+  "districtManagement": {
+    "menu": "Администрация района",
+    "description": "Управлять и организовывать районы",
+    "addButton": "Добавить новый район",
+    "loading": "Загрузка...",
+    "noData": "Данные не найдены",
+    "table": {
+      "id": "идентификатор",
+      "name": "Название района",
+      "erpCode": "ERP-код",
+      "postalCode": "Почтовый индекс",
+      "city": "город",
+      "cityName": "Название города",
+      "status": "Статус",
+      "title": "Список округов"
+    },
+    "delete": {
+      "confirmTitle": "Удалить район",
+      "confirmMessage": "Вы уверены, что хотите удалить район {{name}}?",
+      "success": "Район успешно удален",
+      "error": "Произошла ошибка при удалении района."
+    },
+    "messages": {
+      "createSuccess": "Район успешно создан",
+      "createError": "Район не может быть создан",
+      "updateSuccess": "Район успешно обновлен.",
+      "updateError": "Не удалось обновить район."
+    },
+    "stats": {
+      "totalDistricts": "Всего округа",
+      "activeDistricts": "Активный район",
+      "newThisMonth": "Новое в этом месяце"
+    },
+    "status": {
+      "inactive": "пассивный",
+      "active": "активный"
+    },
+    "error": "Произошла ошибка",
+    "form": {
+      "editDistrict": "Изменить район",
+      "addDistrict": "Добавить новый район",
+      "editDescription": "Редактировать информацию о округе",
+      "addDescription": "Введите новую информацию о округе",
+      "name": "Название района",
+      "namePlaceholder": "Введите название района",
+      "city": "город",
+      "selectCity": "Выберите город",
+      "searchCity": "Поиск города...",
+      "erpCode": "ERP-код",
+      "erpCodePlaceholder": "Введите код ERP (необязательно)",
+      "postalCode": "Почтовый индекс",
+      "postalCodePlaceholder": "Введите почтовый индекс (необязательно)",
+      "nameRequired": "Требуется название района",
+      "nameMaxLength": "Название района может содержать не более 100 символов.",
+      "erpCodeMaxLength": "Код ERP может состоять максимум из 10 символов.",
+      "postalCodeMaxLength": "Почтовый индекс может содержать до 20 символов.",
+      "cityRequired": "Выбор города обязателен"
+    }
+  }
+}

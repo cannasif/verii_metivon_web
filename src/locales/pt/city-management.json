@@ -1,0 +1,83 @@
+{
+  "menu": "Gestão Municipal",
+  "description": "Gerenciar e organizar cidades",
+  "addButton": "Adicionar nova cidade",
+  "searchPlaceholder": "Pesquisar...",
+  "loading": "Carregando...",
+  "noData": "Nenhum dado encontrado",
+  "stats": {
+    "totalCities": "Total de cidades",
+    "activeCities": "Cidades Ativas",
+    "newThisMonth": "Novidade este mês"
+  },
+  "table": {
+    "title": "Lista de cidades",
+    "id": "ID",
+    "name": "Nome da cidade",
+    "erpCode": "Código ERP",
+    "countryName": "Nome do país",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por",
+    "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+    "page": "Página {{current}} / {{total}}"
+  },
+  "cityManagement": {
+    "table": {
+      "title": "Lista de cidades",
+      "id": "ID",
+      "name": "Nome da cidade",
+      "erpCode": "ERP Code",
+      "countryName": "Nome do país",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por"
+    },
+    "error": "Ocorreu um erro",
+    "form": {
+      "tabs": {
+        "header": "Informações Gerais"
+      }
+    },
+    "menu": "Gestão Municipal",
+    "description": "Gerenciar e organizar cidades",
+    "addButton": "Adicionar nova cidade",
+    "searchPlaceholder": "Pesquisa rápida...",
+    "loading": "Carregando...",
+    "noData": "Nenhum dado encontrado",
+    "actions": "Ações",
+    "delete": {
+      "success": "Cidade excluída com sucesso",
+      "error": "Ocorreu um erro ao excluir a cidade",
+      "confirmTitle": "Excluir cidade",
+      "confirmMessage": "Tem certeza de que deseja excluir {{name}}?"
+    }
+  },
+  "form": {
+    "editCity": "Editar cidade",
+    "addCity": "Adicionar nova cidade",
+    "editDescription": "Editar detalhes da cidade",
+    "addDescription": "Insira os novos detalhes da cidade",
+    "name": "Nome da cidade",
+    "namePlaceholder": "Digite o nome da cidade",
+    "country": "País",
+    "selectCountry": "Selecione o país",
+    "erpCode": "Código ERP",
+    "erpCodePlaceholder": "Insira o código ERP (opcional)",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "saving": "Salvando...",
+    "nameRequired": "O nome da cidade é obrigatório",
+    "nameMaxLength": "City name can be at most 100 characters",
+    "erpCodeMaxLength": "O código ERP pode ter no máximo 10 caracteres",
+    "countryRequired": "A seleção do país é obrigatória"
+  },
+  "actions": "Ações",
+  "delete": {
+    "button": "Excluir",
+    "success": "Cidade excluída com sucesso",
+    "error": "Ocorreu um erro ao excluir a cidade",
+    "confirmTitle": "Excluir cidade",
+    "confirmMessage": "Tem certeza de que deseja excluir {{name}}?"
+  },
+  "previous": "Anterior",
+  "next": "Próximo"
+}

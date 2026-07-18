@@ -1,0 +1,35 @@
+{
+  "menu": "판매 유형 관리",
+  "description": "판매 유형 관리 및 편집",
+  "addButton": "새 판매 유형 추가",
+  "searchPlaceholder": "판매 유형 검색...",
+  "advancedFilter": {
+    "columnName": "이름",
+    "columnCode": "코드",
+    "columnSalesType": "제안 유형"
+  },
+  "table": {
+    "title": "판매 유형 목록",
+    "salesType": "제안 유형",
+    "name": "이름",
+    "code": "코드",
+    "createdDate": "생성 날짜"
+  },
+  "form": {
+    "addTitle": "새 판매 유형 추가",
+    "editTitle": "판매 유형 편집",
+    "addDescription": "새 판매 유형 정의를 만듭니다.",
+    "editDescription": "기존 판매 유형 정의를 업데이트합니다.",
+    "salesType": "제안 유형",
+    "name": "이름",
+    "namePlaceholder": "판매 유형 이름을 입력하세요.",
+    "code": "코드",
+    "codePlaceholder": "예. 1 또는 FOB",
+    "codeHelp": "선택사항입니다. 주문이 Netsis로 전송되면 수출/배송 유형 코드(있는 경우)로 전송됩니다. 비어 있으면 해외용 기본 FOB가 사용됩니다.",
+    "validation": {
+      "required": "이름은 필수입니다",
+      "whitespace": "이름은 비어 있거나 공백일 수 없습니다.",
+      "codeMaxLength": "코드는 최대 50자까지 가능합니다."
+    }
+  }
+}

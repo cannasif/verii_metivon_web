@@ -1,0 +1,13 @@
+{
+  "title": "関連銘柄を選択",
+  "description": "マスター株式とともに追加する子会社株式を選択します。必須の株式は自動的に選択されます。",
+  "mandatoryStocks": "必須株式",
+  "optionalStocks": "オプションストック",
+  "unknownStock": "不明な在庫",
+  "quantity": "数量",
+  "mandatory": "必須",
+  "noRelatedStocks": "リンクされた在庫が見つかりません",
+  "cancel": "キャンセル",
+  "add": "追加",
+  "calculating": "計算中..."
+}

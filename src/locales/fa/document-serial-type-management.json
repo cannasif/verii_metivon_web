@@ -1,0 +1,88 @@
+{
+  "menu": "مدیریت نوع فایل",
+  "description": "مدیریت و سازماندهی انواع فایل ها",
+  "search": "جستجو...",
+  "refresh": "تازه کردن",
+  "addButton": "افزودن نوع فایل جدید",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای وجود ندارد",
+  "actions": "معاملات",
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "saving": "در حال ضبط ...",
+  "delete": "حذف کنید",
+  "deleting": "در حال حذف...",
+  "deleteConfirmTitle": "تایید حذف",
+  "deleteConfirmDescription": "آیا مطمئن هستید که می خواهید این رکورد را حذف کنید؟ این عمل قابل بازگشت نیست.",
+  "table": {
+    "title": "لیست نوع فایل",
+    "id": "شناسه",
+    "ruleType": "نوع قانون",
+    "customerType": "نوع مشتری",
+    "salesRep": "نماینده فروش",
+    "serialPrefix": "پیشوند سریال",
+    "serialLength": "طول سریال",
+    "createdDate": "تاریخ ایجاد"
+  },
+  "form": {
+    "addTitle": "افزودن نوع فایل جدید",
+    "editTitle": "ویرایش نوع فایل",
+    "addDescription": "اطلاعات نوع فایل جدید را وارد کنید",
+    "editDescription": "اطلاعات نوع فایل را ویرایش کنید",
+    "ruleType": {
+      "required": "نوع قانون باید انتخاب شود"
+    },
+    "selectRuleType": "نوع قانون را انتخاب کنید",
+    "customerType": "نوع مشتری",
+    "selectCustomerType": "انتخاب نوع مشتری (اختیاری)",
+    "searchCustomerType": "جستجوی نوع مشتری...",
+    "noCustomerTypeSelected": "نوع مشتری انتخاب نشده است",
+    "salesRep": "نماینده فروش",
+    "selectSalesRep": "انتخاب نماینده فروش (اختیاری)",
+    "searchSalesRep": "به دنبال نماینده فروش...",
+    "noSalesRepSelected": "نماینده فروش انتخاب نشده است",
+    "serialPrefix": {
+      "required": "پیشوند سریال مورد نیاز است",
+      "maxLength": "پیشوند سریال می تواند حداکثر 50 کاراکتر باشد"
+    },
+    "serialPrefixPlaceholder": "پیشوند سریال را وارد کنید",
+    "serialLength": {
+      "min": "طول سری باید حداقل 1 باشد",
+      "max": "طول سری می تواند تا 100 باشد"
+    },
+    "serialLengthPlaceholder": "طول سری را وارد کنید",
+    "serialStart": {
+      "min": "شروع سریال باید حداقل 0 باشد"
+    },
+    "serialStartPlaceholder": "مقدار شروع سری را وارد کنید",
+    "serialCurrent": {
+      "min": "جریان سری باید حداقل 0 باشد"
+    },
+    "serialCurrentPlaceholder": "مقدار سریال فعلی را وارد کنید",
+    "serialIncrement": {
+      "min": "افزایش سریال باید حداقل 1 باشد"
+    },
+    "serialIncrementPlaceholder": "مقدار افزایش سریال را وارد کنید"
+  },
+  "totalRecords": "کل رکوردهای {{count}}",
+  "advancedFilter": {
+    "columnSerialPrefix": "پیشوند سریال",
+    "columnCustomerTypeName": "نوع مشتری",
+    "columnSalesRepFullName": "نماینده فروش",
+    "columnRuleType": "نوع قانون"
+  },
+  "messages": {
+    "createSuccess": "نوع فایل با موفقیت ایجاد شد",
+    "createError": "هنگام ایجاد نوع فایل خطایی روی داد",
+    "updateSuccess": "نوع فایل با موفقیت به روز شد",
+    "updateError": "هنگام به‌روزرسانی نوع فایل خطایی روی داد",
+    "deleteSuccess": "نوع فایل با موفقیت حذف شد",
+    "deleteError": "هنگام حذف نوع فایل خطایی روی داد"
+  },
+  "common": {
+    "delete": "حذف کنید"
+  },
+  "error": "فعالیت ذخیره نشد",
+  "previous": "قبلی",
+  "next": "بعدی"
+}

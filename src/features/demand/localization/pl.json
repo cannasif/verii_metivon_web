@@ -1,0 +1,346 @@
+{
+  "loading": "Ładowanie...",
+  "saving": "Nagrywanie...",
+  "error": "Błąd",
+  "noData": "Nie znaleziono danych",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "actions": "Transakcje",
+  "edit": "Edytuj",
+  "delete": "Usuń",
+  "back": "Powrót",
+  "refresh": "Odśwież",
+  "select": "Wybierz",
+  "yes": "Tak",
+  "add": "Dodaj",
+  "backToQuotations": "Wróć do Żądań",
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "confirm": "Potwierdź",
+  "saveAndApply": "Zapisz i zastosuj",
+  "notes": {
+    "title": "Uwagi dotyczące roszczeń",
+    "description": "Dodaj i zaktualizuj notatki wewnętrzne do żądania.",
+    "placeholder": "Wprowadź notatkę dotyczącą żądania",
+    "noteLabel": "Prośba o notatkę",
+    "addLineTooltip": "Dodaj linię komentarza",
+    "linesHint": "Każda linia pojawia się osobno w plikach PDF i notatkach do dokumentów.",
+    "removeLine": "usuń wiersz",
+    "pageLabel": "Strona {{current}} / {{total}}",
+    "saving": "Zapisywanie notatek...",
+    "notesTooltipText": "Są to uwagi do wysyłki/faktury, które dotyczą całego zamówienia. Po przesłaniu do ERP oferta/zamówienie zapisywane jest sekwencyjnie w górnych polach Adnotacji 1-5; Uwaga 2 dotyczy adnotacji Netsis 2.",
+    "maxLengthError": "Pole notatki może zawierać maksymalnie 100 znaków."
+  },
+  "list": {
+    "revise": "Popraw",
+    "showing": "{{total}} jest pokazane w rekordzie jako {{from}}-{{to}}",
+    "title": "Lista żądań",
+    "description": "Przeglądaj i zarządzaj wszystkimi żądaniami",
+    "detail": "Szczegół",
+    "createNew": "Utwórz nowe żądanie",
+    "searchPlaceholder": "Wyszukaj według numeru żądania lub nazwy klienta...",
+    "cardTitle": "Lista żądań",
+    "refresh": "Odśwież",
+    "actions": "Transakcje",
+    "id": "Identyfikator",
+    "offerNo": "Numer żądania",
+    "revisionNo": "Numer wersji",
+    "customer": "klient",
+    "customerCode": "Aktualny kod",
+    "representative": "Przedstawiciel handlowy",
+    "offerDate": "Data żądania",
+    "validUntil": "Ważność",
+    "currency": "Waluta",
+    "grandTotal": "Wielka suma",
+    "status": "Stan"
+  },
+  "detail": {
+    "title": "Szczegóły żądania",
+    "subtitle": "Przeglądaj szczegóły żądania i zarządzaj nimi.",
+    "notFound": "Nie znaleziono żadnego żądania.",
+    "revisionNo": "Numer wersji",
+    "tabDetail": "Szczegół",
+    "tabApprovalFlow": "Przepływ zatwierdzania",
+    "tabReport": "Raport"
+  },
+  "create": {
+    "title": "Utwórz nowe żądanie",
+    "submit": "Zapisz żądanie i wyślij do zatwierdzenia",
+    "success": "Żądanie utworzono pomyślnie",
+    "successMessage": "Zapytanie zostało przesłane do procesu akceptacji.",
+    "error": "Nie można utworzyć żądania",
+    "errorMessage": "Wystąpił błąd podczas tworzenia żądania.",
+    "subtitle": "Wprowadź informacje dotyczące żądania i zapisz.",
+    "deliveryDateRequired": "Termin dostawy jest obowiązkowy.",
+    "paymentTypeRequired": "Rodzaj płatności jest wymagany.",
+    "invalidCurrency": "Nieprawidłowa waluta.",
+    "validationError": "Proszę sprawdzić wymagane pola.",
+    "notesMaxLengthError": "Każda notatka może mieć maksymalnie 400 znaków."
+  },
+  "header": {
+    "title": "Poproś o informacje",
+    "customer": "klient",
+    "selectCustomer": "Wybierz klienta",
+    "shippingAddress": "Adres dostawy",
+    "selectShippingAddress": "Wybierz adres dostawy",
+    "representative": "Przedstawiciel handlowy",
+    "selectRepresentative": "Wybierz przedstawiciela",
+    "offerType": "Typ żądania",
+    "selectOfferType": "Wybierz typ żądania",
+    "currency": "Waluta",
+    "selectCurrency": "Proszę wybrać walutę",
+    "showExchangeRates": "Pokaż kursy wymiany",
+    "offerDate": "Data żądania",
+    "deliveryDate": "Data dostawy",
+    "paymentType": "Rodzaj płatności",
+    "selectPaymentType": "Wybierz rodzaj płatności",
+    "description": "Opis",
+    "notes": "Notatki",
+    "descriptionErpTooltip": "Jest to ogólny opis, który ma być widoczny dla produkcji dla całego żądania. Po wysłaniu do ERP jako oferta/zamówienie jest ono rejestrowane w górnym polu Opis Netsis (FatUst.Description).",
+    "descriptionPlaceholder": "Wprowadź opis",
+    "offerNo": "Numer żądania",
+    "offerNoPlaceholder": "Numer żądania",
+    "currencyChange": {
+      "title": "Zmiana waluty",
+      "message": "Gdy zmieni się waluta, wszystkie istniejące wiersze zostaną przeliczone zgodnie z nową walutą. Czy zatwierdzasz tę transakcję?"
+    },
+    "deliveryMethod": "Sposób dostawy",
+    "documentDetail": "Opis dokumentu",
+    "ozelKod1": "Kod specjalny 1",
+    "ozelKod1Placeholder": "Wybierz kod specjalny 1",
+    "ozelKod2": "Kod specjalny 2",
+    "ozelKod2Placeholder": "Wybierz kod specjalny 2",
+    "specialCodeSearchPlaceholder": "Wyszukaj specjalny kod..."
+  },
+  "lines": {
+    "title": "Linie żądań",
+    "add": "Dodaj wiersz",
+    "empty": "Nie dodano jeszcze żadnych wierszy",
+    "emptyDescription": "Użyj przycisku „Wybierz zapas” lub „Dodaj wiersz”, aby dodać wiersze zapotrzebowania",
+    "itemCount": "Wiersz {{count}}",
+    "editLine": "Edytuj wiersz",
+    "selectStock": "Wybierz opcję Magazyn",
+    "selectProduct": "Wybierz Produkt",
+    "selectStockFirst": "Nie wybrano zapasów",
+    "stock": "Zapas",
+    "productCode": "Kod magazynowy",
+    "enterProductCode": "Wpisz lub wyszukaj kod produktu",
+    "productName": "Nazwa akcji",
+    "enterProductName": "Wpisz nazwę produktu",
+    "quantity": "Ilość",
+    "unitPrice": "Cena jednostkowa",
+    "discount1": "Rabat 1%",
+    "discount2": "Rabat 2%",
+    "discount3": "Rabat 3%",
+    "discounts": "Rabaty",
+    "discountAmount": "Kwota rabatu",
+    "netPrice": "Cena netto",
+    "vatRate": "Stawka VAT%",
+    "lineTotal": "Suma wiersza (z VAT)",
+    "calculations": "Obliczenia",
+    "required": "Należy dodać co najmniej 1 linię",
+    "noProductsFound": "Nie znaleziono produktu",
+    "delete": {
+      "confirmTitle": "Usuń wiersz",
+      "confirmMessage": "Czy na pewno chcesz usunąć ten wiersz?",
+      "confirmTitleMultiple": "Usuń wiersze",
+      "confirmMessageMultiple": "Czy na pewno chcesz usunąć wybrane wiersze?"
+    },
+    "noItems": "Jeszcze nie ma linii.",
+    "addLine": "Dodaj wiersz",
+    "relatedStocks": "Powiązane akcje",
+    "groupCode": "Kod grupy",
+    "approvalRequired": "Wymagane zatwierdzenie",
+    "requiredFieldsMissing": "Brak wymaganych pól wierszy.",
+    "createSuccess": "Linia dodana.",
+    "createError": "Nie można dodać wiersza.",
+    "updateSuccess": "Linia zaktualizowana.",
+    "updateError": "Nie można zaktualizować wiersza.",
+    "deleteSuccess": "Linia została usunięta.",
+    "deleteError": "Nie można usunąć wiersza.",
+    "editStockItemDetails": "Edytuj szczegóły pozycji magazynowej",
+    "descriptionFieldsTitle": "Pola opisu",
+    "description1": "Opis 1",
+    "description2": "Opis 2",
+    "description3": "Opis 3",
+    "descriptionPlaceholder": "Wprowadź opis...",
+    "descriptionTooltipText": "Jest to opis produkcji oparty na wierszach. Dopasowanie Netsis po zaimportowaniu do ERP: Opis 1 -> Dodatkowe pole 1, Opis 2 -> Dodatkowe pole 2, Opis 3 -> Adnotacja wiersza 7.",
+    "descriptionTooltipPrefix": "Jest to opis produkcji oparty na wierszach. Dopasowanie Netsis po przeniesieniu do ERP:",
+    "erpTargetExtraField1": "Pole dodatkowe 1",
+    "erpTargetExtraField2": "Dodatkowy obszar 2",
+    "erpTargetLineExtraDesc7": "Adnotacja wiersza 7",
+    "profileErpTooltip": "Ten wybór profilu jest zapisywany w polu Netsis Line Adnotation 2 podczas wysyłania do ERP.",
+    "rebarErpTooltip": "Ten wybór żelaza jest zapisywany jako wartość adnotacji wiersza Netsis 3 podczas wysyłania do ERP.",
+    "screwErpTooltip": "Ten wybór śrub jest zapisywany jako wartość adnotacji liniowej Netsis 4 podczas wysyłania do ERP.",
+    "printErpTooltip": "Ten wybór wydruku jest zapisywany jako wartość adnotacji liniowej Netsis 8 podczas wysyłania do ERP. Komentarz do wydruku trafia także do pól Komentarz 9 linii Netsis i Adnotacja linii 9.",
+    "lineItemDescriptionPlaceholder": "Opis elementu oparty na linii",
+    "doubleClickToEdit": "Kliknij dwukrotnie, aby edytować"
+  },
+  "exchangeRates": {
+    "title": "Kursy wymiany",
+    "currency": "Waluta",
+    "rate": "Zainstaluj",
+    "date": "Data kursu wymiany",
+    "isOfficial": "Zainstaluj oficjalną wersję",
+    "official": "oficjalny",
+    "custom": "prywatny",
+    "empty": "Nie znaleziono kursu wymiany",
+    "status": "Stan",
+    "dialog": {
+      "title": "Kursy wymiany",
+      "description": "W razie potrzeby przeglądaj i edytuj kursy wymiany. Zmienione stawki nie będą oznaczone jako stawki oficjalne.",
+      "subtitle": "Możesz edytować i zapisywać stawki.",
+      "info": "Ręcznych aktualizacji można dokonać poza oficjalnym kursem wymiany."
+    },
+    "updateSuccess": "Kursy walut zostały zaktualizowane.",
+    "updateError": "Nie udało się zaktualizować kursów wymiany.",
+    "cannotEditUsedCurrency": "Nie można edytować używanej waluty.",
+    "zeroRateError": "Aby kontynuować, wprowadź kurs wymiany."
+  },
+  "summary": {
+    "title": "Podsumowanie",
+    "grandTotalAnalysis": "Całkowita analiza",
+    "subtotal": "Suma częściowa",
+    "totalVat": "Całkowity podatek VAT",
+    "grandTotal": "Wielka suma",
+    "generalDiscount": "Ogólny rabat",
+    "generalDiscountRate": "Ogólna stopa dyskontowa",
+    "generalDiscountAmount": "Ogólna kwota rabatu",
+    "generalDiscountHelp": "Stosuje się go całościowo."
+  },
+  "offerType": {
+    "domestic": "domowe",
+    "export": "eksport"
+  },
+  "wizard": {
+    "title": "Utwórz nowe żądanie",
+    "step1": {
+      "title": "Krok 1: Poproś o informacje",
+      "description": "Wprowadź informacje z nagłówka żądania i kursy wymiany",
+      "validation": {
+        "offerType": "Typ żądania",
+        "currency": "Waluta",
+        "exchangeRate": "Kurs wymiany"
+      },
+      "exchangeRate": {
+        "required": "W przypadku walut innych niż TRY należy dodać co najmniej jeden kurs wymiany"
+      },
+      "currency": {
+        "try": {
+          "info": "Kurs wymiany nie jest wymagany w przypadku wybrania opcji TRY"
+        }
+      }
+    },
+    "step2": {
+      "title": "Krok 2: Linie żądań",
+      "description": "Dodaj informacje o produkcie i cenie",
+      "info": "Musisz dodać co najmniej jedną linię",
+      "validation": {
+        "noLines": "Należy dodać co najmniej jedną linię",
+        "invalidLines": "Wszystkie linie muszą zawierać ważne informacje",
+        "allValid": "Pomyślnie dodano wiersz {{count}}"
+      }
+    },
+    "step3": {
+      "title": "Krok 3: Podsumowanie i zatwierdzenie",
+      "description": "Przejrzyj informacje i zapisz żądanie",
+      "header": {
+        "title": "Poproś o informacje"
+      },
+      "lines": {
+        "title": "Linie żądań"
+      },
+      "summary": {
+        "title": "Podsumowanie końcowe"
+      },
+      "approval": {
+        "info": "Po zapisaniu wniosek zostanie automatycznie przesłany do procesu akceptacji"
+      }
+    }
+  },
+  "loadError": "Wystąpił błąd podczas ładowania danych.",
+  "backToDemands": "Wróć do Żądań",
+  "untitled": "bez tytułu",
+  "sections": {
+    "header": "Informacje o tytule",
+    "lines": "rzędy",
+    "summary": "Podsumowanie"
+  },
+  "approval": {
+    "approve": "Potwierdź",
+    "reject": "odrzucić",
+    "sending": "Wysyłanie...",
+    "sendForApproval": "Prześlij do zatwierdzenia",
+    "approveSuccess": "Proces potwierdzenia zakończył się pomyślnie.",
+    "approveError": "Potwierdzenie nie powiodło się.",
+    "rejectSuccess": "Proces odrzucenia zakończył się pomyślnie.",
+    "rejectError": "Odrzucenie nie powiodło się.",
+    "startSuccess": "Rozpoczęto proces zatwierdzania.",
+    "startError": "Nie można rozpocząć procesu zatwierdzania.",
+    "rejectTitle": "Odrzuć żądanie",
+    "rejectDescription": "Wprowadź powód odrzucenia.",
+    "rejectReasonPlaceholder": "Powód odrzucenia",
+    "statusFilterLabel": "Stan zatwierdzenia",
+    "lockedForNonApprover": "Rejestracja ta jest w trakcie zatwierdzania. Tylko aktywny użytkownik zatwierdzający może wprowadzać zmiany; Edytowanie jest dla Ciebie wyłączone.",
+    "approvedReadOnlyReason": "Ponieważ wniosek został zatwierdzony, nie można wprowadzać żadnych zmian.",
+    "rejectedReadOnlyReason": "Ponieważ wniosek został odrzucony, nie można wprowadzić żadnych zmian. Aby zaktualizować, użyj opcji „Popraw” z listy.",
+    "closedReason": "Ten rekord został zamknięty, ponieważ zatwierdzono inny rekord o tym samym numerze dokumentu; nie można dokonać zmian.",
+    "status": {
+      "notRequired": "projekt",
+      "waiting": "czekanie",
+      "approved": "Zatwierdzone",
+      "rejected": "odrzucony",
+      "closed": "Zamknięte"
+    }
+  },
+  "approvalFlow": {
+    "noData": "Nie znaleziono kroku potwierdzenia.",
+    "notStarted": "Nie zainicjowano",
+    "stepCompleted": "Krok ukończony",
+    "stepInProgress": "krok trwa",
+    "stepNotStarted": "Mój krok czeka",
+    "stepRejected": "Moje imię zostało odrzucone",
+    "errorTitle": "Wystąpił błąd"
+  },
+  "update": {
+    "success": "Żądanie zostało zaktualizowane.",
+    "successMessage": "Żądanie zostało pomyślnie zaktualizowane.",
+    "error": "Nie udało się zaktualizować żądania.",
+    "errorMessage": "Wystąpił błąd podczas aktualizowania żądania.",
+    "invalidCurrency": "Nieprawidłowa waluta.",
+    "validationError": "Wystąpił błąd sprawdzania poprawności formularza."
+  },
+  "revision": {
+    "success": "Wersja utworzona.",
+    "error": "Nie udało się utworzyć wersji."
+  },
+  "waitingApprovals": {
+    "title": "Oczekujące prośby o zatwierdzenie",
+    "list": "Lista oczekujących zatwierdzeń",
+    "noApprovals": "Nie znaleziono żadnych oczekujących zatwierdzeń.",
+    "requestId": "Numer żądania",
+    "description": "Opis",
+    "stepOrder": "krok",
+    "approvedBy": "Zatwierdzone przez",
+    "actionDate": "Data transakcji",
+    "status": "Stan",
+    "waiting": "czekanie"
+  },
+  "quotation": {
+    "notes": {
+      "maxLengthError": "Każda notatka może mieć maksymalnie 100 znaków. Proszę sprawdzić."
+    }
+  },
+  "customerCancel": {
+    "readOnlyReason": "Ponieważ żądanie to zostało anulowane przez klienta, nie można wprowadzać żadnych zmian.",
+    "reasonLabel": "Powód anulowania",
+    "button": "Anulowanie Klienta",
+    "title": "Anulowanie klienta",
+    "description": "Zamierzasz oznaczyć to żądanie jako anulowane przez klienta.",
+    "reasonPlaceholder": "Wpisz powód rezygnacji klienta...",
+    "confirmButton": "Anuluj"
+  },
+  "pdfExportTemplate": {
+    "draftWatermark": "TO JEST PROJEKT"
+  }
+}

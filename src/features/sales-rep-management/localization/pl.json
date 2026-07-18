@@ -1,0 +1,52 @@
+{
+  "menu": "Zarządzanie kodem przedstawiciela handlowego",
+  "description": "Przeglądaj, dodawaj i usuwaj kody przedstawicieli handlowych z ERP.",
+  "addButton": "Nowy przedstawiciel handlowy",
+  "searchPlaceholder": "Wyszukaj kod przedstawiciela handlowego, opis lub nazwę",
+  "empty": "Nie znaleziono danych przedstawiciela handlowego.",
+  "error": "Nie można załadować rekordów przedstawiciela handlowego.",
+  "deleteConfirmMessage": "Usunąć rekord przedstawiciela handlowego z kodem {{code}}?",
+  "table": {
+    "title": "Lista przedstawicieli handlowych",
+    "branchCode": "Kod oddziału",
+    "salesRepCode": "Kodeks przedstawiciela handlowego",
+    "salesRepDescription": "Opis",
+    "name": "imię",
+    "createdDate": "Data utworzenia"
+  },
+  "form": {
+    "addTitle": "Dodaj nowego przedstawiciela handlowego",
+    "addDescription": "Dodaj ręcznie rekord kodu przedstawiciela handlowego.",
+    "editTitle": "Przedstawiciel handlowy Edytuj",
+    "editDescription": "Zaktualizuj rekord kodu przedstawiciela handlowego.",
+    "branchCode": "Kod oddziału",
+    "branchCodePlaceholder": "Wprowadź kod oddziału",
+    "salesRepCode": "Kodeks przedstawiciela handlowego",
+    "salesRepCodePlaceholder": "wprowadź kod",
+    "salesRepDescription": "Opis",
+    "salesRepDescriptionPlaceholder": "Wprowadź opis",
+    "name": "imię",
+    "namePlaceholder": "Wpisz nazwę",
+    "validation": {
+      "branchCodeRequired": "Wymagany jest kod oddziału.",
+      "codeRequired": "Sales representative code is required.",
+      "codeMaxLength": "Kod przedstawiciela handlowego może składać się maksymalnie z 8 znaków.",
+      "descriptionMaxLength": "The description can be up to 30 characters.",
+      "nameMaxLength": "Nazwa może mieć maksymalnie 35 znaków."
+    }
+  },
+  "messages": {
+    "createSuccess": "A sales representative record has been created.",
+    "createError": "Nie można utworzyć rekordu przedstawiciela handlowego.",
+    "updateSuccess": "Sales representative record updated.",
+    "updateError": "Nie można zaktualizować rekordu przedstawiciela handlowego.",
+    "deleteSuccess": "Rekord przedstawiciela handlowego został usunięty.",
+    "deleteError": "Nie można usunąć rekordu przedstawiciela handlowego."
+  },
+  "advancedFilter": {
+    "columnBranchCode": "Kod oddziału",
+    "columnSalesRepCode": "Kodeks przedstawiciela handlowego",
+    "columnDescription": "Opis",
+    "columnName": "imię"
+  }
+}

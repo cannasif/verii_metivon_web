@@ -1,0 +1,120 @@
+{
+  "countryManagement": {
+    "menu": "国家管理",
+    "description": "管理和规范国家",
+    "addButton": "添加新国家/地区",
+    "searchPlaceholder": "搜索...",
+    "loading": "加载中...",
+    "error": "发生错误",
+    "table": {
+      "id": "身份证号",
+      "name": "国家名称",
+      "code": "代码",
+      "erpCode": "ERP代码",
+      "createdDate": "创建日期",
+      "createdBy": "创建者：",
+      "noData": "没有找到数据",
+      "title": "国家列表"
+    },
+    "delete": {
+      "confirmTitle": "删除国家/地区",
+      "confirmMessage": "您确定要删除国家 {{name}} 吗？"
+    },
+    "messages": {
+      "deleteSuccess": "国家已成功删除",
+      "deleteError": "国家/地区无法删除",
+      "createSuccess": "国家创建成功",
+      "createError": "无法创建国家",
+      "updateSuccess": "国家/地区更新成功",
+      "updateError": "国家/地区无法更新"
+    },
+    "form": {
+      "addCountry": "添加新国家/地区",
+      "editCountry": "编辑国家",
+      "addDescription": "输入新的国家/地区信息",
+      "editDescription": "编辑国家信息",
+      "name": "国家名称",
+      "namePlaceholder": "输入国家名称",
+      "code": "国家/地区代码",
+      "codePlaceholder": "输入国家/地区代码（例如：TR、US）",
+      "erpCode": "ERP代码",
+      "erpCodePlaceholder": "输入 ERP 代码（可选）",
+      "nameRequired": "国家/地区名称为必填项",
+      "nameMaxLength": "国家/地区名称最多可包含 100 个字符",
+      "codeMinLength": "国家/地区代码必须至少为 2 个字符",
+      "codeMaxLength": "国家/地区代码最多可包含 5 个字符",
+      "erpCodeMaxLength": "ERP 代码最多可为 10 个字符",
+      "cancel": "取消",
+      "save": "保存",
+      "tabs": {
+        "header": "一般信息"
+      }
+    },
+    "stats": {
+      "totalCountries": "国家总数",
+      "activeCountries": "活跃国家",
+      "newThisMonth": "本月新品"
+    }
+  },
+  "menu": "国家管理",
+  "description": "管理和规范国家",
+  "addButton": "添加新国家/地区",
+  "search": "搜索...",
+  "loading": "加载中...",
+  "noData": "没有找到数据",
+  "actions": "交易",
+  "previous": "上一页",
+  "next": "下一步",
+  "deleteConfirmTitle": "删除确认",
+  "cancel": "取消",
+  "deleting": "正在删除...",
+  "delete": {
+    "confirmTitle": "删除国家/地区",
+    "confirmMessage": "您确定要删除国家 {{name}} 吗？"
+  },
+  "saving": "录音...",
+  "save": "保存",
+  "stats": {
+    "totalCountries": "国家总数",
+    "activeCountries": "活跃国家",
+    "newThisMonth": "本月新品"
+  },
+  "table": {
+    "id": "身份证号",
+    "name": "国家名称",
+    "code": "代码",
+    "erpCode": "ERP代码",
+    "createdDate": "创建日期",
+    "createdBy": "创建者：",
+    "showing": "显示 {{from}}-{{to}} / {{total}}",
+    "page": "页 {{current}} / {{total}}",
+    "noData": "没有找到数据",
+    "title": "国家列表"
+  },
+  "advancedFilter": {
+    "columnName": "国家名称",
+    "columnCode": "国家/地区代码",
+    "columnErpCode": "ERP代码"
+  },
+  "form": {
+    "addCountry": "添加新国家/地区",
+    "editCountry": "编辑国家",
+    "addDescription": "输入新的国家/地区信息",
+    "editDescription": "编辑国家信息",
+    "name": "国家名称",
+    "namePlaceholder": "输入国家名称",
+    "code": "国家/地区代码",
+    "codePlaceholder": "输入国家/地区代码（例如：TR、US）",
+    "erpCode": "ERP代码",
+    "erpCodePlaceholder": "输入 ERP 代码（可选）",
+    "nameRequired": "国家/地区名称为必填项",
+    "nameMaxLength": "国家/地区名称最多可包含 100 个字符",
+    "codeMinLength": "国家/地区代码必须至少为 2 个字符",
+    "codeMaxLength": "国家/地区代码最多可包含 5 个字符",
+    "erpCodeMaxLength": "ERP 代码最多可为 10 个字符"
+  },
+  "deleteConfirm": {
+    "confirmMessage": "您确定要删除国家 {{name}} 吗？"
+  },
+  "searchPlaceholder": "搜索..."
+}

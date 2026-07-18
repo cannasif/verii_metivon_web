@@ -1,0 +1,13 @@
+{
+  "title": "Wybierz powiązane akcje",
+  "description": "Wybierz akcje zależne, które chcesz dodać wraz z zapasami głównymi. Zapasy obowiązkowe są wybierane automatycznie.",
+  "mandatoryStocks": "Zapasy obowiązkowe",
+  "optionalStocks": "Zapasy opcjonalne",
+  "unknownStock": "Nieznany zapas",
+  "quantity": "Ilość",
+  "mandatory": "obowiązkowe",
+  "noRelatedStocks": "Nie znaleziono powiązanego magazynu",
+  "cancel": "Anuluj",
+  "add": "Dodaj",
+  "calculating": "Obliczanie..."
+}

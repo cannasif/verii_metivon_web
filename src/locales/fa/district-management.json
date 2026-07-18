@@ -1,0 +1,138 @@
+{
+  "menu": "مدیریت منطقه",
+  "description": "مدیریت و سازماندهی مناطق",
+  "addButton": "افزودن ناحیه جدید",
+  "showStats": "نمایش آمار",
+  "hideStats": "مخفی کردن آمار",
+  "listTitle": "فهرست منطقه",
+  "listDescription": "در اینجا می توانید تمام مناطق ثبت شده در سیستم را مدیریت کنید.",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای یافت نشد",
+  "actions": "معاملات",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "cancel": "لغو کنید",
+  "delete": {
+    "confirmTitle": "حذف منطقه",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید منطقه {{name}} را حذف کنید؟",
+    "success": "منطقه با موفقیت حذف شد",
+    "error": "منطقه قابل حذف نیست",
+    "deleting": "در حال حذف...",
+    "action": "حذف کنید"
+  },
+  "save": "ذخیره کنید",
+  "saving": "در حال ضبط ...",
+  "countryManagement": {
+    "error": "خطایی رخ داد"
+  },
+  "table": {
+    "id": "شناسه",
+    "name": "نام منطقه",
+    "erpCode": "کد ERP",
+    "postalCode": "کد پستی",
+    "city": "شهر",
+    "cityName": "نام شهر",
+    "status": "وضعیت",
+    "title": "فهرست منطقه",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط",
+    "showing": "نمایش {{from}}-{{to}} / {{total}}",
+    "page": "صفحه {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "ویرایش منطقه",
+    "addDistrict": "افزودن ناحیه جدید",
+    "editDescription": "ویرایش اطلاعات منطقه",
+    "addDescription": "اطلاعات منطقه جدید را وارد کنید",
+    "name": "نام منطقه",
+    "namePlaceholder": "نام منطقه را وارد کنید",
+    "city": "شهر",
+    "selectCity": "شهر را انتخاب کنید",
+    "searchCity": "جستجوی شهر...",
+    "erpCode": "کد ERP",
+    "erpCodePlaceholder": "کد ERP را وارد کنید (اختیاری)",
+    "postalCode": "کد پستی",
+    "postalCodePlaceholder": "کد پستی را وارد کنید (اختیاری)",
+    "nameRequired": "نام منطقه الزامی است",
+    "nameMaxLength": "نام ناحیه می تواند حداکثر 100 کاراکتر باشد",
+    "erpCodeMaxLength": "کد ERP حداکثر می تواند 10 کاراکتر باشد",
+    "postalCodeMaxLength": "کد پستی می تواند حداکثر 20 کاراکتر باشد",
+    "cityRequired": "انتخاب شهر الزامی است"
+  },
+  "stats": {
+    "totalDistricts": "کل منطقه",
+    "activeDistricts": "منطقه فعال",
+    "newThisMonth": "جدید این ماه"
+  },
+  "status": {
+    "inactive": "منفعل",
+    "active": "فعال"
+  },
+  "messages": {
+    "createSuccess": "ناحیه با موفقیت ایجاد شد",
+    "createError": "منطقه ایجاد نشد",
+    "updateSuccess": "منطقه با موفقیت به روز شد",
+    "updateError": "منطقه به‌روزرسانی نشد",
+    "deleteSuccess": "منطقه با موفقیت حذف شد",
+    "deleteError": "منطقه قابل حذف نیست"
+  },
+  "districtManagement": {
+    "menu": "مدیریت منطقه",
+    "description": "مدیریت و سازماندهی مناطق",
+    "addButton": "افزودن ناحیه جدید",
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای یافت نشد",
+    "table": {
+      "id": "شناسه",
+      "name": "نام منطقه",
+      "erpCode": "کد ERP",
+      "postalCode": "کد پستی",
+      "city": "شهر",
+      "cityName": "نام شهر",
+      "status": "وضعیت",
+      "title": "فهرست منطقه"
+    },
+    "delete": {
+      "confirmTitle": "حذف منطقه",
+      "confirmMessage": "آیا مطمئن هستید که می خواهید منطقه {{name}} را حذف کنید؟",
+      "success": "منطقه با موفقیت حذف شد",
+      "error": "هنگام حذف ناحیه خطایی روی داد"
+    },
+    "messages": {
+      "createSuccess": "ناحیه با موفقیت ایجاد شد",
+      "createError": "منطقه ایجاد نشد",
+      "updateSuccess": "منطقه با موفقیت به روز شد",
+      "updateError": "منطقه به‌روزرسانی نشد"
+    },
+    "stats": {
+      "totalDistricts": "کل منطقه",
+      "activeDistricts": "منطقه فعال",
+      "newThisMonth": "جدید این ماه"
+    },
+    "status": {
+      "inactive": "منفعل",
+      "active": "فعال"
+    },
+    "error": "خطایی رخ داد",
+    "form": {
+      "editDistrict": "ویرایش منطقه",
+      "addDistrict": "افزودن ناحیه جدید",
+      "editDescription": "ویرایش اطلاعات منطقه",
+      "addDescription": "اطلاعات منطقه جدید را وارد کنید",
+      "name": "نام منطقه",
+      "namePlaceholder": "نام منطقه را وارد کنید",
+      "city": "شهر",
+      "selectCity": "شهر را انتخاب کنید",
+      "searchCity": "جستجوی شهر...",
+      "erpCode": "کد ERP",
+      "erpCodePlaceholder": "کد ERP را وارد کنید (اختیاری)",
+      "postalCode": "کد پستی",
+      "postalCodePlaceholder": "کد پستی را وارد کنید (اختیاری)",
+      "nameRequired": "نام منطقه الزامی است",
+      "nameMaxLength": "نام ناحیه می تواند حداکثر 100 کاراکتر باشد",
+      "erpCodeMaxLength": "کد ERP حداکثر می تواند 10 کاراکتر باشد",
+      "postalCodeMaxLength": "کد پستی می تواند حداکثر 20 کاراکتر باشد",
+      "cityRequired": "انتخاب شهر الزامی است"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "menu": "مدیریت کد نماینده فروش",
+  "description": "مشاهده، افزودن و حذف کدهای نماینده فروش از ERP.",
+  "addButton": "نماینده فروش جدید",
+  "searchPlaceholder": "کد، توضیحات یا نام نماینده فروش را جستجو کنید",
+  "empty": "هیچ سابقه نماینده فروش یافت نشد.",
+  "error": "سوابق نماینده فروش بارگیری نشد.",
+  "deleteConfirmMessage": "سابقه نمایندگی فروش با کد {{code}} حذف شود؟",
+  "table": {
+    "title": "لیست نمایندگان فروش",
+    "branchCode": "کد شعبه",
+    "salesRepCode": "کد نماینده فروش",
+    "salesRepDescription": "توضیحات",
+    "name": "نام",
+    "createdDate": "تاریخ ایجاد"
+  },
+  "form": {
+    "addTitle": "نماینده فروش جدید اضافه کنید",
+    "addDescription": "رکورد کد نماینده فروش را به صورت دستی اضافه کنید.",
+    "editTitle": "ویرایش نماینده فروش",
+    "editDescription": "رکورد کد نماینده فروش را به روز کنید.",
+    "branchCode": "کد شعبه",
+    "branchCodePlaceholder": "کد شعبه را وارد کنید",
+    "salesRepCode": "کد نماینده فروش",
+    "salesRepCodePlaceholder": "کد را وارد کنید",
+    "salesRepDescription": "توضیحات",
+    "salesRepDescriptionPlaceholder": "توضیحات را وارد کنید",
+    "name": "نام",
+    "namePlaceholder": "نام را وارد کنید",
+    "validation": {
+      "branchCodeRequired": "کد شعبه الزامی است.",
+      "codeRequired": "کد نماینده فروش الزامی است.",
+      "codeMaxLength": "کد نماینده فروش حداکثر می تواند 8 کاراکتر باشد.",
+      "descriptionMaxLength": "توضیحات می تواند حداکثر 30 کاراکتر باشد.",
+      "nameMaxLength": "نام می تواند حداکثر 35 کاراکتر باشد."
+    }
+  },
+  "messages": {
+    "createSuccess": "سابقه نمایندگی فروش ایجاد شده است.",
+    "createError": "سابقه نماینده فروش ایجاد نشد.",
+    "updateSuccess": "سابقه نماینده فروش به روز شد.",
+    "updateError": "سابقه نماینده فروش نمی تواند به روز شود.",
+    "deleteSuccess": "سابقه نماینده فروش حذف شده است.",
+    "deleteError": "سابقه نماینده فروش قابل حذف نیست."
+  },
+  "advancedFilter": {
+    "columnBranchCode": "کد شعبه",
+    "columnSalesRepCode": "کد نماینده فروش",
+    "columnDescription": "توضیحات",
+    "columnName": "نام"
+  }
+}

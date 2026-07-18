@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{locationConfig}from'@/features/erp-operation-management/configs';export function StorageLocationManagementPage(){return <ErpPagedManagementPage config={locationConfig}/>}

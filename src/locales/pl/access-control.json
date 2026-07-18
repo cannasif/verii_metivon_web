@@ -1,0 +1,146 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "Unikalny klucz używany przez strażników tras i stron. Preferuj stabilne nazewnictwo Snake_case lub kropka.",
+      "name": "Nazwa wyświetlana wyświetlana administratorom podczas zarządzania uprawnieniami.",
+      "description": "Opcjonalne wewnętrzne wyjaśnienie tego pozwolenia.",
+      "isActive": "Nieaktywne uprawnienia nie są uwzględniane przy obliczaniu dostępu użytkownika.",
+      "save": "Zmiany wpływają na przepływy autoryzacji ról i grup."
+    },
+    "permissionGroup": {
+      "name": "Nazwa grupy do identyfikacji podczas przypisywania do użytkowników.",
+      "isSystemAdmin": "Członkowie tej grupy mogą uzyskać dostęp do wszystkich stron i działań bez indywidualnej kontroli uprawnień.",
+      "isActive": "Nieaktywnych grup nie należy przypisywać do nowych decyzji o dostępie.",
+      "permissions": "Wybrane uprawnienia definiują dostęp członków tej grupy.",
+      "save": "Aktualizuje efektywny dostęp dla wszystkich użytkowników przypisanych do tej grupy."
+    },
+    "userAssignment": {
+      "user": "Wybierz użytkownika, którego zakresem dostępu chcesz zarządzać.",
+      "groups": "Użytkownik otrzymuje połączone uprawnienia ze wszystkich wybranych grup.",
+      "save": "Przydziały obowiązują natychmiast przy następnych kontrolach autoryzacji. Użytkownicy mogą potrzebować odświeżenia sesji.",
+      "systemAdminNote": "Jeśli użytkownik ma grupę administratorów systemu, szczegółowe uprawnienia są pomijane."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "Definicje uprawnień",
+    "description": "Zarządzaj kodami uprawnień używanymi w systemie",
+    "add": "Dodaj definicję",
+    "form": {
+      "editTitle": "Edytuj definicję uprawnień",
+      "addTitle": "Dodaj definicję uprawnień",
+      "editDescription": "Zaktualizuj szczegóły definicji uprawnień",
+      "addDescription": "Utwórz nową definicję uprawnień",
+      "code": "Kod",
+      "codePlaceholder": "Wybierz kod",
+      "affectedRoutes": "Dotknięte strony",
+      "affectedRoutesNone": "Nie znaleziono pasujących tras dla tego kodu",
+      "name": "Imię",
+      "namePlaceholder": "Nazwa wyświetlana",
+      "description": "Opis",
+      "descriptionPlaceholder": "Opcjonalny opis",
+      "isActive": "Aktywny",
+      "codeSearchPlaceholder": "Szukaj...",
+      "codeEmpty": "Nie znaleziono żadnych wyników"
+    },
+    "table": {
+      "title": "Definicje uprawnień",
+      "code": "Kod",
+      "name": "Imię",
+      "isActive": "Aktywny",
+      "updatedDate": "Zaktualizowano",
+      "showing": "{{from}}-{{to}} z {{total}}"
+    },
+    "delete": {
+      "confirmTitle": "Usuń definicję uprawnień",
+      "confirmMessage": "Czy na pewno chcesz usunąć „{{name}}”? Tej akcji nie można cofnąć."
+    },
+    "syncFromRoutes": "Synchronizuj z trasami",
+    "syncSummaryTitle": "Synchronizacja tras"
+  },
+  "permissionGroups": {
+    "title": "Grupy uprawnień",
+    "description": "Zarządzaj grupami uprawnień i ich przypisaniami",
+    "add": "Dodaj grupę",
+    "selectAll": "Zaznacz wszystko",
+    "noDefinitions": "Brak dostępnych definicji uprawnień",
+    "form": {
+      "editTitle": "Edytuj grupę uprawnień",
+      "addTitle": "Dodaj grupę uprawnień",
+      "editDescription": "Zaktualizuj szczegóły grupy uprawnień",
+      "addDescription": "Utwórz nową grupę uprawnień",
+      "name": "Imię",
+      "namePlaceholder": "Nazwa grupy",
+      "description": "Opis",
+      "descriptionPlaceholder": "Opcjonalny opis",
+      "isSystemAdmin": "Administrator systemu",
+      "isActive": "Aktywny",
+      "permissions": "Uprawnienia"
+    },
+    "table": {
+      "name": "Imię",
+      "isSystemAdmin": "Administrator systemu",
+      "isActive": "Aktywny",
+      "permissionCount": "Uprawnienia",
+      "showing": "{{from}}-{{to}} z {{total}}",
+      "title": "İzin grupları"
+    },
+    "managePermissions": "Zarządzaj uprawnieniami",
+    "permissionsPanel": {
+      "title": "Edytuj uprawnienia grupy",
+      "description": "Wybierz uprawnienia dla tej grupy",
+      "currentCodes": "Aktualne kody uprawnień",
+      "groupedRows": "ekrany",
+      "screen": "Ekran",
+      "actionsMapped": "działania",
+      "actions": {
+        "create": "Utwórz",
+        "read": "Przeczytaj",
+        "update": "Aktualizacja",
+        "delete": "Usuń",
+        "other": "Uprawnienia operacyjne"
+      }
+    },
+    "delete": {
+      "confirmTitle": "Usuń grupę uprawnień",
+      "confirmMessage": "Czy na pewno chcesz usunąć „{{name}}”? Tej akcji nie można cofnąć."
+    },
+    "search": "Szukaj...",
+    "systemAdminLocked": "Nie można zmienić grupy administratorów systemu"
+  },
+  "userGroupAssignments": {
+    "title": "Przypisania grup użytkowników",
+    "description": "Przypisz grupy uprawnień użytkownikom",
+    "selectUser": "Wybierz opcję Użytkownik",
+    "selectUserPlaceholder": "Wyszukaj i wybierz użytkownika...",
+    "selectUserHint": "Wybierz użytkownika, aby zarządzać przypisaniami jego grup uprawnień",
+    "assignedGroups": "Przypisane grupy uprawnień",
+    "noUsers": "Nie znaleziono żadnych użytkowników",
+    "noGroups": "Brak dostępnych grup uprawnień",
+    "selectAll": "Zaznacz wszystko",
+    "status": "Stan",
+    "unsavedChanges": "Niezapisane",
+    "upToDate": "Aktualne"
+  },
+  "common": {
+    "cancel": "Anuluj",
+    "saving": "Zapisywanie...",
+    "save": "Zapisz i zastosuj",
+    "loading": "Ładowanie...",
+    "search": "Szukaj...",
+    "noData": "Brak danych",
+    "actions": "Działania",
+    "yes": "Tak",
+    "no": "Nie",
+    "edit": "Edytuj",
+    "delete": "Usuń",
+    "previous": "Poprzedni",
+    "next": "Następny",
+    "processing": "Przetwarzanie..."
+  },
+  "sidebar": {
+    "accessControl": "Kontrola dostępu",
+    "permissionDefinitions": "Definicje uprawnień",
+    "permissionGroups": "Grupy uprawnień",
+    "userGroupAssignments": "Przypisania grup użytkowników"
+  }
+}

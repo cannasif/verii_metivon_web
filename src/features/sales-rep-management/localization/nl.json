@@ -1,0 +1,52 @@
+{
+  "menu": "Codebeheer voor verkoopvertegenwoordigers",
+  "description": "Bekijk, voeg codes voor vertegenwoordigers toe en verwijder ze uit ERP.",
+  "addButton": "Nieuwe verkoopvertegenwoordiger",
+  "searchPlaceholder": "Zoek naar de code, beschrijving of naam van de vertegenwoordiger",
+  "empty": "Geen verkoopvertegenwoordigerrecord gevonden.",
+  "error": "Records van verkoopvertegenwoordigers kunnen niet worden geladen.",
+  "deleteConfirmMessage": "Het verkoopvertegenwoordigerrecord met code {{code}} verwijderen?",
+  "table": {
+    "title": "Lijst met vertegenwoordigers",
+    "branchCode": "Filiaalcode",
+    "salesRepCode": "Code voor verkoopvertegenwoordigers",
+    "salesRepDescription": "Beschrijving",
+    "name": "naam",
+    "createdDate": "Aanmaakdatum"
+  },
+  "form": {
+    "addTitle": "Nieuwe verkoopvertegenwoordiger toevoegen",
+    "addDescription": "Voeg de coderecord voor de vertegenwoordiger handmatig toe.",
+    "editTitle": "Verkoopvertegenwoordiger Bewerken",
+    "editDescription": "Werk de coderecord voor de verkoopvertegenwoordiger bij.",
+    "branchCode": "Filiaalcode",
+    "branchCodePlaceholder": "Voer filiaalcode in",
+    "salesRepCode": "Code voor verkoopvertegenwoordigers",
+    "salesRepCodePlaceholder": "code invoeren",
+    "salesRepDescription": "Beschrijving",
+    "salesRepDescriptionPlaceholder": "Voer een beschrijving in",
+    "name": "naam",
+    "namePlaceholder": "Voer naam in",
+    "validation": {
+      "branchCodeRequired": "Vestigingscode is vereist.",
+      "codeRequired": "Code voor vertegenwoordiger is vereist.",
+      "codeMaxLength": "De vertegenwoordigercode kan maximaal 8 tekens lang zijn.",
+      "descriptionMaxLength": "De beschrijving mag maximaal 30 tekens lang zijn.",
+      "nameMaxLength": "De naam mag maximaal 35 tekens lang zijn."
+    }
+  },
+  "messages": {
+    "createSuccess": "Er is een verkoopvertegenwoordigerrecord gemaakt.",
+    "createError": "Het record van de verkoopvertegenwoordiger kan niet worden gemaakt.",
+    "updateSuccess": "Vertegenwoordigerrecord bijgewerkt.",
+    "updateError": "Het verkoopvertegenwoordigerrecord kan niet worden bijgewerkt.",
+    "deleteSuccess": "Het verkoopvertegenwoordigerrecord is verwijderd.",
+    "deleteError": "Het verkoopvertegenwoordigerrecord kan niet worden verwijderd."
+  },
+  "advancedFilter": {
+    "columnBranchCode": "Filiaalcode",
+    "columnSalesRepCode": "Code voor verkoopvertegenwoordigers",
+    "columnDescription": "Beschrijving",
+    "columnName": "naam"
+  }
+}

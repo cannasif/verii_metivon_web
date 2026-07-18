@@ -1,0 +1,62 @@
+{
+  "menu": "承認ロールグループ管理",
+  "description": "承認役割グループを管理および整理する",
+  "addButton": "新しいグループを追加",
+  "refresh": "リフレッシュ",
+  "searchPlaceholder": "検索...",
+  "loading": "読み込み中...",
+  "noData": "データが見つかりませんでした",
+  "noDataDescription": "検索条件に一致するレコードが見つからないか、レコードがまだ追加されていません。",
+  "table": {
+    "id": "ID",
+    "name": "グループ名",
+    "createdDate": "作成日",
+    "createdBy": "作成者",
+    "actions": "アクション",
+    "showing": "{{total}} レコード中 {{from}} ～ {{to}} を表示しています"
+  },
+  "delete": {
+    "confirmTitle": "削除の確認",
+    "confirmMessage": "この操作は元に戻すことができません。続けますか?"
+  },
+  "advancedFilter": {
+    "columnName": "グループ名",
+    "columnCreatedBy": "作成者"
+  },
+  "approvalRoleGroup": {
+    "menu": "承認ロールグループ管理",
+    "description": "承認役割グループを管理および整理する",
+    "addButton": "新しいグループを追加",
+    "searchPlaceholder": "検索...",
+    "noData": "データが見つかりませんでした",
+    "table": {
+      "title": "グループリスト",
+      "id": "ID",
+      "name": "グループ名",
+      "createdDate": "作成日",
+      "createdBy": "作成者",
+      "actions": "アクション",
+      "showing": "{{total}} レコード中 {{from}} ～ {{to}} を表示しています"
+    },
+    "delete": {
+      "title": "削除の確認",
+      "confirmMessage": "{{name}} を削除してもよろしいですか?",
+      "success": "グループは正常に削除されました",
+      "error": "グループの削除中にエラーが発生しました"
+    }
+  },
+  "cancel": "キャンセル",
+  "save": "保存",
+  "saving": "保存中...",
+  "deleteButton": "削除",
+  "form": {
+    "editTitle": "承認役割グループの編集",
+    "addTitle": "新しい承認役割グループの追加",
+    "editDescription": "承認役割グループ情報の編集",
+    "addDescription": "新しい承認役割グループ情報を入力します",
+    "name": "グループ名",
+    "namePlaceholder": "グループ名を入力してください",
+    "nameRequired": "グループ名は必須です",
+    "nameMaxLength": "グループ名は最大 100 文字です"
+  }
+}

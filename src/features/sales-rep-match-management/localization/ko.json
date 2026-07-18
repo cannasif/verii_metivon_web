@@ -1,0 +1,44 @@
+{
+  "menu": "영업사원 매칭 관리",
+  "description": "영업 담당자 코드와 사용자 일치 항목을 보고 추가하고 삭제합니다.",
+  "addButton": "새로운 경기",
+  "searchPlaceholder": "영업 담당자 코드, 사용자 또는 이메일 검색",
+  "empty": "일치하는 영업 담당자가 없습니다.",
+  "error": "영업 담당자 일치 항목을 로드할 수 없습니다.",
+  "deleteConfirmMessage": "{{salesRep}} 및 {{user}} 페어링을 삭제하시겠습니까?",
+  "table": {
+    "title": "영업 담당자 일치 목록",
+    "salesRepCode": "영업대표 코드",
+    "salesRepName": "영업 담당자 이름",
+    "userFullName": "사용자",
+    "username": "사용자 이름",
+    "userEmail": "이메일",
+    "createdDate": "생성 날짜"
+  },
+  "form": {
+    "addTitle": "새로운 영업 담당자 일치",
+    "addDescription": "영업 담당자 레코드를 사용자와 일치시킵니다.",
+    "salesRep": "영업 담당자",
+    "salesRepPlaceholder": "영업 담당자 선택",
+    "salesRepSearchPlaceholder": "영업 담당자 검색",
+    "user": "사용자",
+    "userPlaceholder": "사용자 선택",
+    "userSearchPlaceholder": "사용자 검색",
+    "validation": {
+      "salesRepRequired": "영업사원 선정은 필수입니다.",
+      "userRequired": "사용자 선택은 필수입니다."
+    }
+  },
+  "messages": {
+    "createSuccess": "영업 담당자 일치가 생성되었습니다.",
+    "createError": "영업 담당자 일치를 생성할 수 없습니다.",
+    "deleteSuccess": "영업 담당자 일치가 삭제되었습니다.",
+    "deleteError": "영업 담당자와 일치하는 항목을 삭제할 수 없습니다."
+  },
+  "advancedFilter": {
+    "columnSalesRepCode": "영업대표 코드",
+    "columnSalesRepName": "영업 담당자 이름",
+    "columnUsername": "사용자 이름",
+    "columnEmail": "이메일"
+  }
+}

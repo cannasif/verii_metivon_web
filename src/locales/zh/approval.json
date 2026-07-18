@@ -1,0 +1,88 @@
+{
+  "list": {
+    "title": "待批准",
+    "description": "查看并批准或拒绝分配给您的报价",
+    "empty": "没有等待批准的情况",
+    "error": "加载批准时发生错误"
+  },
+  "yes": "是的",
+  "no": "否",
+  "processing": "处理中...",
+  "detail": {
+    "title": "报价详情",
+    "subtitle": "查看报价详细信息并执行操作",
+    "tabs": {
+      "detail": "详情",
+      "history": "历史",
+      "action": "行动"
+    },
+    "notFound": "未找到报价",
+    "quotationInfo": "报价信息",
+    "offerNo": "报价编号",
+    "customer": "客户",
+    "representative": "代表",
+    "currency": "货币",
+    "offerDate": "报价日期",
+    "deliveryDate": "交货日期",
+    "total": "合计",
+    "grandTotal": "总计",
+    "description": "描述",
+    "lines": "报价行",
+    "productCode": "产品代码",
+    "productName": "产品名称",
+    "quantity": "数量",
+    "unitPrice": "单价",
+    "lineTotal": "行总数",
+    "lineGrandTotal": "线路总计",
+    "exchangeRates": "汇率",
+    "exchangeRate": "率",
+    "exchangeRateDate": "利率日期",
+    "isOfficial": "官方利率"
+  },
+  "actions": {
+    "view": "查看",
+    "approve": "批准",
+    "reject": "拒绝"
+  },
+  "status": {
+    "notRequired": "吃水",
+    "waiting": "等待批准",
+    "approved": "已批准",
+    "rejected": "被拒绝",
+    "closed": "关闭",
+    "customerCancelled": "被客户取消",
+    "salespersonClosedForRevision": "销售人员关闭 ERP 记录进行修改",
+    "supersededByApprovedRevision": "因另一次修订获得批准而关闭"
+  },
+  "closedReason": "该记录已关闭，因为具有相同报价编号的另一条记录已获得批准。",
+  "statusFilterLabel": "审批情况",
+  "level": {
+    "salesManager": "销售经理",
+    "regionalManager": "区域经理",
+    "finance": "金融",
+    "generalManager": "总经理",
+    "unknown": "未知"
+  },
+  "note": {
+    "label": "注意事项",
+    "placeholder": "您可以添加批准/拒绝注释（可选）",
+    "maxLength": "备注最多可包含 500 个字符"
+  },
+  "approve": {
+    "success": "已批准",
+    "successMessage": "报价已成功批准",
+    "error": "批准错误",
+    "errorMessage": "批准报价时发生错误"
+  },
+  "reject": {
+    "success": "被拒绝",
+    "successMessage": "报价被拒绝",
+    "error": "拒绝错误",
+    "errorMessage": "拒绝报价时发生错误"
+  },
+  "history": {
+    "empty": "无批准历史",
+    "approvedBy": "批准人"
+  },
+  "assignedTo": "指定用户"
+}

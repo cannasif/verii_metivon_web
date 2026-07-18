@@ -1,0 +1,13 @@
+{
+  "title": "계열주 선택",
+  "description": "마스터 스톡과 함께 추가할 자회사 주식을 선택합니다. 필수 주식은 자동으로 선택됩니다.",
+  "mandatoryStocks": "필수주식",
+  "optionalStocks": "선택 주식",
+  "unknownStock": "알 수 없는 주식",
+  "quantity": "수량",
+  "mandatory": "필수",
+  "noRelatedStocks": "연결된 주식을 찾을 수 없습니다.",
+  "cancel": "취소",
+  "add": "추가",
+  "calculating": "계산 중..."
+}

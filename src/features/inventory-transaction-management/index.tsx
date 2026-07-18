@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{transactionConfig}from'@/features/erp-operation-management/configs';export function InventoryTransactionManagementPage(){return <ErpPagedManagementPage config={transactionConfig}/>}

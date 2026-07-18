@@ -1,0 +1,13 @@
+{
+  "title": "Selecione ações afiliadas",
+  "description": "Selecione os estoques subsidiários que deseja adicionar junto com o estoque mestre. Os estoques obrigatórios são selecionados automaticamente.",
+  "mandatoryStocks": "Ações Obrigatórias",
+  "optionalStocks": "Ações opcionais",
+  "unknownStock": "Estoque desconhecido",
+  "quantity": "Quantidade",
+  "mandatory": "obrigatório",
+  "noRelatedStocks": "Estoque vinculado não encontrado",
+  "cancel": "Cancelar",
+  "add": "Adicionar",
+  "calculating": "Calculando..."
+}

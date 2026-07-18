@@ -1,0 +1,16 @@
+{
+  "invalidId": "无效报告",
+  "backToList": "返回列表",
+  "loadError": "无法加载报告",
+  "loadingReport": "报告加载中...",
+  "listTitle": "PowerBI 报告",
+  "listDescription": "您可以通过点击查看报告",
+  "name": "名称",
+  "description": "描述",
+  "isActive": "状态",
+  "view": "查看",
+  "status": {
+    "active": "活跃的",
+    "inactive": "被动"
+  }
+}

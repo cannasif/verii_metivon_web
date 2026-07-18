@@ -1,0 +1,268 @@
+{
+  "title": "고객 360",
+  "notFound": "고객을 찾을 수 없습니다",
+  "error": "오류가 발생했습니다",
+  "retry": "다시 시도",
+  "quickActivity": "빠른 활동",
+  "currencyFilter": {
+    "label": "통화",
+    "all": "모두"
+  },
+  "balanceDialog": {
+    "openButton": "현재 잔액 요약",
+    "title": "현재 잔액 요약",
+    "error": "ERP 잔액 요약을 로드할 수 없습니다."
+  },
+  "tabs": {
+    "quotations": "제안",
+    "orders": "주문",
+    "activities": "활동",
+    "overview": "요약",
+    "analytics": "분석",
+    "quickQuotations": "빠른 견적",
+    "erpMovements": "ERP 운동",
+    "erpOrders": "ERP 주문",
+    "mailLogs": "이메일 기록",
+    "images": "이미지",
+    "imagesDefaultDescription": "명함 이미지"
+  },
+  "quickQuotations": {
+    "empty": "이 첩에 대한 빠른 제안을 찾을 수 없습니다.",
+    "error": "빠른 견적을 로드하지 못했습니다.",
+    "draft": "초안",
+    "converted": "제안으로 반환됨",
+    "sentToApproval": "승인을 위해 전송됨",
+    "notSentToApproval": "승인을 받지 못했습니다.",
+    "currency": "통화",
+    "total": "합계",
+    "quotationStatus": "제안 상태",
+    "approvalStep": "확인 단계",
+    "stepValue": "단계 {{step}}",
+    "convertedAt": "변환: {{date}}",
+    "notConvertedYet": "아직 제안으로 바뀌지 않았습니다",
+    "openQuotation": "공개 제안"
+  },
+  "erpMovements": {
+    "title": "ERP 운동",
+    "tableTitle": "현재의 움직임",
+    "error": "ERP 거래 데이터를 로드하지 못했습니다.",
+    "columns": {
+      "date": "날짜",
+      "dueDate": "만기일",
+      "documentNo": "문서번호",
+      "description": "설명",
+      "currency": "통화",
+      "debit": "부채",
+      "credit": "미수금",
+      "tlBalanceByDate": "주문 날짜 TL 잔액",
+      "tlBalanceByDueDate": "만기 순서 TL 잔액",
+      "fxDebit": "외환부채",
+      "fxCredit": "외화채권",
+      "fxBalanceByDate": "주문 날짜 통화 잔액",
+      "fxBalanceByDueDate": "만기 순서 외환 잔액",
+      "actions": "거래"
+    },
+    "detail": {
+      "button": "세부정보",
+      "title": "문서 펜 세부 사항",
+      "description": "문서 번호 {{documentNo}}에 속하는 Netsis 재고 품목.",
+      "error": "문서 항목을 로드할 수 없습니다.",
+      "empty": "이 문서에 대한 재고 항목이 없습니다.",
+      "columns": {
+        "stockCode": "주식 코드",
+        "stockName": "주식명",
+        "quantity": "수량",
+        "grossPrice": "총 가격",
+        "netPrice": "순 가격",
+        "grossAmount": "총판매액",
+        "discountAmount": "할인금액",
+        "vatAmount": "부가가치세 금액",
+        "total": "금액",
+        "fxPrice": "외화시세",
+        "fxAmount": "외화금액"
+      }
+    },
+    "summary": {
+      "totalDebit": "총부채",
+      "totalCredit": "총 미수금",
+      "balance": "균형",
+      "closed": "휴무"
+    }
+  },
+  "erpOrders": {
+    "title": "넷시스 주문",
+    "noCariCode": "이 고객에 대해 ERP 현재 코드가 정의되어 있지 않습니다. Netsis 주문을 볼 수 없습니다.",
+    "forbidden": "ERP 주문을 볼 수 있는 권한이 없습니다.",
+    "error": "ERP 주문을 로드할 수 없습니다.",
+    "empty": "현재 계정에 대한 Netsis 주문이 없습니다.",
+    "scopeHint": "목록은 로그인한 사용자의 Netsis 범위 내의 주문으로 제한됩니다.",
+    "columns": {
+      "branch": "가지",
+      "orderNo": "주문번호",
+      "date": "날짜",
+      "deliveryDate": "배달",
+      "gross": "심한",
+      "vat": "부가가치세",
+      "total": "합계",
+      "salesRep": "세일즈맨"
+    }
+  },
+  "mail": {
+    "providers": {
+      "google": "구글",
+      "outlook": "전망"
+    },
+    "columns": {
+      "date": "날짜",
+      "sender": "게시자:",
+      "to": "구매자",
+      "subject": "주제",
+      "status": "상태",
+      "template": "템플릿",
+      "errorCode": "오류 코드",
+      "body": "메시지"
+    }
+  },
+  "kpi": {
+    "totalDemands": "총 제안",
+    "totalQuotations": "총 제안",
+    "totalOrders": "총 주문량",
+    "openQuotations": "공개 제안",
+    "openOrders": "보류중인 주문"
+  },
+  "sections": {
+    "contacts": "통신",
+    "shippingAddresses": "배송 주소",
+    "recentDemands": "최신 요청",
+    "recentQuotations": "최신 제안",
+    "recentOrders": "최근 주문",
+    "recentActivities": "최신 활동",
+    "timeline": "타임라인"
+  },
+  "analytics": {
+    "error": "분석 데이터를 로드하지 못했습니다.",
+    "last12MonthsOrderAmount": "최근 12개월 주문금액",
+    "openQuotationAmount": "공개 입찰 금액",
+    "openOrderAmount": "미결제 주문 금액",
+    "activityCount": "활동 횟수",
+    "lastActivityDate": "마지막 활동 날짜"
+  },
+  "analyticsCharts": {
+    "demand": "제안",
+    "quotation": "제안",
+    "order": "주문",
+    "last12MonthsOrderAmount": "지난 12개월 주문",
+    "openQuotationAmount": "공개 제안",
+    "openOrderAmount": "오픈 주문",
+    "distributionTitle": "유통",
+    "monthlyTrendTitle": "월별 동향",
+    "amountComparisonTitle": "금액 비교"
+  },
+  "currencyTotals": {
+    "currency": "통화",
+    "demandAmount": "입찰 금액",
+    "quotationAmount": "입찰 금액",
+    "orderAmount": "주문금액"
+  },
+  "revenueQuality": {
+    "title": "수익의 질",
+    "churnRisk": "손실 위험",
+    "upsell": "상향 판매 추세",
+    "payment": "결제 행위",
+    "segment": "RFM 그룹화",
+    "ltv": "평생 가치"
+  },
+  "cohort": {
+    "title": "코호트 유지",
+    "empty": "동질 집단 데이터 없음",
+    "cohortKey": "집단"
+  },
+  "actions": {
+    "title": "권장 조치",
+    "empty": "권장 조치 없음",
+    "execute": "적용"
+  },
+  "explain": {
+    "revenueQualityTitle": "수익 품질은 고객의 판매 잠재력과 위험 프로필을 요약합니다.",
+    "churnRisk": "손실 위험은 고객이 재주문하지 않을 가능성을 나타냅니다.",
+    "upsellPropensity": "상향 판매 추세는 고객이 더 많은 양이나 추가 제품을 구매할 가능성이 있음을 나타냅니다.",
+    "paymentBehavior": "결제 행동은 고객의 수집 및 결제 패턴을 요약합니다.",
+    "rfmSegment": "RFM 그룹화; 근접성, 빈도, 금액 데이터를 기반으로 고객의 그룹을 표시합니다.",
+    "modelNote": "이러한 필드는 분석 모델 출력이며 의사결정 지원 목적으로 표시됩니다.",
+    "cohortRetentionTitle": "코호트 유지율은 비슷한 기간에 걸쳐 획득한 고객의 연속성을 보여줍니다.",
+    "noCohortData": "이 클라이언트에 대한 코호트 데이터가 충분하지 않습니다.",
+    "recommendedActionsTitle": "시스템에서 권장하는 작업이 이 영역에 나열됩니다.",
+    "executeAction": "조치 적용"
+  },
+  "hero": {
+    "statusActive": "활성",
+    "statusCrm": "CRM 등록",
+    "since": "{{year}} 이후",
+    "whatsapp": "왓츠앱",
+    "call": "검색",
+    "email": "이메일",
+    "quickQuote": "빠른 견적",
+    "editCustomer": "고객 편집",
+    "none": "없음",
+    "emailLabel": "이메일",
+    "phoneLabel": "전화",
+    "websiteLabel": "웹사이트",
+    "addressLabel": "주소",
+    "infoTitle": "정보",
+    "taxNumber": "세금 번호",
+    "customerType": "고객 유형",
+    "salesRep": "영업 담당자",
+    "creditLimit": "신용한도"
+  },
+  "related": {
+    "newQuotation": "새로운 제안",
+    "newOrder": "새로운 주문",
+    "newActivity": "새로운 활동",
+    "error": "목록을 로드하지 못했습니다.",
+    "emptyQuotations": "이 고객에 대한 제안을 찾을 수 없습니다.",
+    "emptyOrders": "이 고객의 주문을 찾을 수 없습니다.",
+    "emptyActivities": "이 고객에 대한 활동이 없습니다.",
+    "columns": {
+      "offerNo": "아니요.",
+      "date": "날짜",
+      "representative": "대표",
+      "total": "금액",
+      "subject": "주제",
+      "type": "유형",
+      "assignee": "책임",
+      "status": "상태"
+    },
+    "activityStatus": {
+      "scheduled": "계획된",
+      "completed": "완료",
+      "cancelled": "취소"
+    }
+  },
+  "images": {
+    "upload": "이미지 업로드",
+    "delete": "삭제",
+    "emptyHint": "이미지를 추가하려면 클릭하거나 드래그하세요.",
+    "deleteConfirmTitle": "이미지 삭제",
+    "deleteConfirmDescription": "이 이미지를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
+  },
+  "button": "고객 360",
+  "status": {
+    "havenotstarted": "시작하지 않음",
+    "notstarted": "시작하지 않음",
+    "inprogress": "승인 프로세스에서",
+    "pending": "보류 중",
+    "waiting": "기다리는 중",
+    "approved": "승인됨",
+    "rejected": "거부됨",
+    "completed": "완료",
+    "cancelled": "취소됨",
+    "canceled": "취소됨",
+    "draft": "초안",
+    "converted": "제안으로 반환됨",
+    "sent": "보냈습니다",
+    "active": "활성",
+    "passive": "수동적",
+    "closed": "휴무",
+    "open": "열다"
+  }
+}

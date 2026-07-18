@@ -1,0 +1,148 @@
+{
+  "page": {
+    "connectionTitle": "WhatsApp-integratie",
+    "connectionDescription": "Meta Beheer WhatsApp Cloud API-instellingen, verifieer de webhookverbinding en verzend een testbericht."
+  },
+  "settings": {
+    "title": "Verbindingsinstellingen",
+    "configured": "Klaar",
+    "notConfigured": "ontbreekt",
+    "enabled": "Maak actief gebruik van integratie",
+    "enabledDescription": "Indien actief, gebruiken webhook- en testinzendingen deze instellingen.",
+    "displayName": "Weergavenaam",
+    "graphApiVersion": "Graph API-versie",
+    "phoneNumberId": "Telefoonnummer-ID",
+    "businessAccountId": "Zakelijk account-ID",
+    "verifyToken": "Webhook-verificatietoken",
+    "accessToken": "Toegangstoken",
+    "appSecret": "App-geheim",
+    "keepCurrent": "De huidige waarde blijft behouden",
+    "save": "Instellingen opslaan",
+    "saveSuccess": "WhatsApp-instellingen zijn opgeslagen.",
+    "saveError": "WhatsApp-instellingen konden niet worden opgeslagen."
+  },
+  "webhook": {
+    "title": "webhaak",
+    "url": "Meta-webhook-URL",
+    "lastInbound": "nieuwste webhook",
+    "lastOutbound": "Laatste uitgaande bericht"
+  },
+  "test": {
+    "title": "Testbericht",
+    "phone": "telefoon",
+    "message": "Bericht",
+    "defaultMessage": "V3RII CRM WhatsApp-testbericht.",
+    "send": "Test indienen",
+    "sendSuccess": "WhatsApp-testbericht verzonden.",
+    "sendError": "WhatsApp-testbericht kon niet worden verzonden."
+  },
+  "logs": {
+    "title": "WhatsApp-logboeken",
+    "description": "Monitor webhook, test bericht en toekomstige aanbiedingsstroomopnames.",
+    "tableTitle": "Transactierecords",
+    "searchPlaceholder": "Telefoon, bericht of transactiegesprek...",
+    "errorsOnly": "Gewoon fouten",
+    "directionAll": "Alle richtingen",
+    "inbound": "inkomend",
+    "outbound": "uitgaand",
+    "success": "succesvol",
+    "error": "Fout",
+    "empty": "Geen record gevonden.",
+    "total": "{{count}}-register",
+    "columns": {
+      "date": "datum",
+      "direction": "Richting",
+      "operation": "transactie",
+      "phone": "telefoon",
+      "message": "Bericht",
+      "status": "Status"
+    }
+  },
+  "drafts": {
+    "title": "WhatsApp-aanbiedingsconcepten",
+    "description": "Volg de winkelwagentjes die door de klant zijn aangemaakt via WhatsApp voor controle door agenten.",
+    "tableTitle": "Agentcontrolewachtrij",
+    "searchPlaceholder": "Bel, klant of bericht...",
+    "empty": "Concept niet gevonden.",
+    "total": "{{count}} ontwerp",
+    "customerMessage": "Klant bericht",
+    "mainLine": "Hoofdproduct",
+    "relatedLine": "aangesloten product",
+    "status": {
+      "WaitingRepresentativeReview": "Onder controle van agenten"
+    },
+    "columns": {
+      "createdDate": "datum",
+      "phone": "telefoon",
+      "customer": "klant",
+      "status": "Status",
+      "lineCount": "potlood",
+      "grandTotal": "Algemeen totaal"
+    },
+    "lineColumns": {
+      "code": "Codeer",
+      "name": "Voorraad",
+      "quantity": "Hoeveelheid",
+      "unitPrice": "Eenheidsprijs",
+      "total": "Totaal",
+      "type": "Typ"
+    },
+    "actions": {
+      "title": "Representatief biedproces",
+      "description": "Zet het concept om in een CRM-voorstel en stuur dit desgewenst via WhatsApp als pdf naar de klant.",
+      "representativeId": "Vertegenwoordiger-ID",
+      "customer": "klant",
+      "selectCustomer": "klant selecteren",
+      "paymentType": "Betalingstype",
+      "selectPaymentType": "Kies betalingstype",
+      "documentSerial": "Documentserietype",
+      "selectDocumentSerial": "Selecteer het type documentserie",
+      "offerType": "Soort aanbieding",
+      "domestic": "binnenlands",
+      "foreign": "in het buitenland",
+      "currency": "valuta",
+      "offerDate": "Datum aanbieding",
+      "deliveryDate": "leveringsdatum",
+      "descriptionField": "interne beschrijving",
+      "customerMessageField": "Bericht aan klant",
+      "sendAfterConvert": "Stuur WhatsApp wanneer u belt",
+      "attachPdf": "PDF toevoegen",
+      "convertAndSend": "Converteren naar aanbieden en verzenden",
+      "sendAgain": "Opnieuw verzenden naar WhatsApp",
+      "createdQuotation": "Aanbieding #{{id}}",
+      "loading": "Laden...",
+      "convertSuccess": "Het WhatsApp-concept is opgenomen in de voorstelstroom.",
+      "convertError": "Het WhatsApp-concept kon niet worden omgezet in een voorstel.",
+      "sendSuccess": "De aanbieding is verzonden via WhatsApp.",
+      "sendError": "De aanbieding kon niet via WhatsApp worden verzonden."
+    }
+  },
+  "quotationSend": {
+    "sendSuccess": "De aanbieding is via WhatsApp verzonden via PDF.",
+    "sendError": "De aanbieding kon niet via WhatsApp worden verzonden."
+  },
+  "flow": {
+    "title": "WhatsApp-aanbiedingsstroom",
+    "description": "Veilig moduleplan waarmee de klant telefonisch een offerteaanvraag kan indienen.",
+    "steps": {
+      "inbound": {
+        "title": "1. Berichtontvangst",
+        "text": "Het bericht van de klant wordt via webhook ontvangen, de handtekening wordt gecontroleerd en het ruwe record wordt gelogd."
+      },
+      "intent": {
+        "title": "2. Intentie en aandelenselectie",
+        "text": "Vanuit de catalogus of voorraadoverzicht wordt de klant aangestuurd; vrije tekst wordt niet direct in volgorde vertaald."
+      },
+      "quote": {
+        "title": "3. Ontwerpvoorstel",
+        "text": "De selecties worden aan de CRM-kant geopend als een conceptvoorstel en het definitieve document wordt niet gemaakt zonder dat de vertegenwoordiger het heeft gecontroleerd."
+      },
+      "handoff": {
+        "title": "4. Goedkeuring door vertegenwoordiger",
+        "text": "Nadat prijs-, kortings-, leverings- en actuele controles zijn uitgevoerd, wordt de aanbieding naar de klant verzonden."
+      }
+    },
+    "nextPhaseTitle": "Volgende fase",
+    "nextPhaseText": "In deze fase wordt de infrastructuur geopend. Gespreksstroom, catalogusselecties, voorstelconcepten en WhatsApp-sjablooninzendingen worden in een aparte gecontroleerde fase toegevoegd."
+  }
+}

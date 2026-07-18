@@ -1,0 +1,83 @@
+{
+  "menu": "Stadsbeheer",
+  "description": "Steden beheren en organiseren",
+  "addButton": "Nieuwe stad toevoegen",
+  "searchPlaceholder": "Zoeken...",
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "stats": {
+    "totalCities": "Totaal steden",
+    "activeCities": "Actieve steden",
+    "newThisMonth": "Nieuw deze maand"
+  },
+  "table": {
+    "title": "Stadslijst",
+    "id": "Identiteitskaart",
+    "name": "Plaatsnaam",
+    "erpCode": "ERP-code",
+    "countryName": "Landnaam",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door",
+    "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+    "page": "Pagina {{current}} / {{total}}"
+  },
+  "cityManagement": {
+    "table": {
+      "title": "Stadslijst",
+      "id": "Identiteitskaart",
+      "name": "Plaatsnaam",
+      "erpCode": "ERP-code",
+      "countryName": "Landnaam",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door"
+    },
+    "error": "Er is een fout opgetreden",
+    "form": {
+      "tabs": {
+        "header": "Algemene informatie"
+      }
+    },
+    "menu": "Stadsbeheer",
+    "description": "Steden beheren en organiseren",
+    "addButton": "Nieuwe stad toevoegen",
+    "searchPlaceholder": "Snel zoeken...",
+    "loading": "Laden...",
+    "noData": "Geen gegevens gevonden",
+    "actions": "Acties",
+    "delete": {
+      "success": "Stad succesvol verwijderd",
+      "error": "Er is een fout opgetreden bij het verwijderen van de stad",
+      "confirmTitle": "Stad verwijderen",
+      "confirmMessage": "Weet u zeker dat u {{name}} wilt verwijderen?"
+    }
+  },
+  "form": {
+    "editCity": "Stad bewerken",
+    "addCity": "Nieuwe stad toevoegen",
+    "editDescription": "Stadsgegevens bewerken",
+    "addDescription": "Voer nieuwe stadsgegevens in",
+    "name": "Plaatsnaam",
+    "namePlaceholder": "Voer de plaatsnaam in",
+    "country": "Land",
+    "selectCountry": "Selecteer land",
+    "erpCode": "ERP-code",
+    "erpCodePlaceholder": "ERP-code invoeren (optioneel)",
+    "cancel": "Annuleer",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
+    "nameRequired": "Plaatsnaam is vereist",
+    "nameMaxLength": "De plaatsnaam mag maximaal 100 tekens lang zijn",
+    "erpCodeMaxLength": "ERP-code mag maximaal 10 tekens lang zijn",
+    "countryRequired": "Landselectie is vereist"
+  },
+  "actions": "Acties",
+  "delete": {
+    "button": "Verwijderen",
+    "success": "Stad succesvol verwijderd",
+    "error": "Er is een fout opgetreden bij het verwijderen van de stad",
+    "confirmTitle": "Stad verwijderen",
+    "confirmMessage": "Weet u zeker dat u {{name}} wilt verwijderen?"
+  },
+  "previous": "Vorige",
+  "next": "Volgende"
+}

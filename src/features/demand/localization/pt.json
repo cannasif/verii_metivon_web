@@ -1,0 +1,346 @@
+{
+  "loading": "Carregando...",
+  "saving": "Gravando...",
+  "error": "Erro",
+  "noData": "Nenhum dado encontrado",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "actions": "Transações",
+  "edit": "Editar",
+  "delete": "Excluir",
+  "back": "Voltar",
+  "refresh": "Atualizar",
+  "select": "Selecione",
+  "yes": "Sim",
+  "add": "Adicionar",
+  "backToQuotations": "Voltar para Solicitações",
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "confirm": "Confirmar",
+  "saveAndApply": "Salvar e aplicar",
+  "notes": {
+    "title": "Notas de reivindicação",
+    "description": "Adicione e atualize notas internas para a solicitação.",
+    "placeholder": "Insira a nota de solicitação",
+    "noteLabel": "Nota de solicitação",
+    "addLineTooltip": "Adicionar linha de comentário",
+    "linesHint": "Cada linha aparece separadamente no PDF e nas notas do documento.",
+    "removeLine": "remover linha",
+    "pageLabel": "Página {{current}} / {{total}}",
+    "saving": "Salvando notas...",
+    "notesTooltipText": "Estas são as notas de envio/fatura que dizem respeito a todo o pedido. Quando transferida para o ERP, a cotação/pedido é registrada sequencialmente nos campos superiores da Anotação 1 a 5; A nota 2 vai para a anotação 2 do Netsis.",
+    "maxLengthError": "O campo de memorando pode ter até 100 caracteres."
+  },
+  "list": {
+    "revise": "Revisar",
+    "showing": "{{total}} é mostrado como {{from}}-{{to}} do registro",
+    "title": "Lista de solicitações",
+    "description": "Visualize e gerencie todas as solicitações",
+    "detail": "Detalhe",
+    "createNew": "Criar nova solicitação",
+    "searchPlaceholder": "Pesquise por número de solicitação ou nome do cliente...",
+    "cardTitle": "Lista de solicitações",
+    "refresh": "Atualizar",
+    "actions": "Transações",
+    "id": "ID",
+    "offerNo": "Número da solicitação",
+    "revisionNo": "Número de revisão",
+    "customer": "cliente",
+    "customerCode": "Código Atual",
+    "representative": "Representante de vendas",
+    "offerDate": "Data da solicitação",
+    "validUntil": "Validade",
+    "currency": "Moeda",
+    "grandTotal": "Total geral",
+    "status": "Estado"
+  },
+  "detail": {
+    "title": "Detalhes da solicitação",
+    "subtitle": "Visualize e gerencie detalhes da solicitação.",
+    "notFound": "Nenhuma solicitação encontrada.",
+    "revisionNo": "Número de revisão",
+    "tabDetail": "Detalhe",
+    "tabApprovalFlow": "Fluxo de aprovação",
+    "tabReport": "Relatório"
+  },
+  "create": {
+    "title": "Criar nova solicitação",
+    "submit": "Salvar solicitação e enviar para aprovação",
+    "success": "Solicitação criada com sucesso",
+    "successMessage": "A solicitação foi enviada para o processo de aprovação.",
+    "error": "A solicitação não pôde ser criada",
+    "errorMessage": "Ocorreu um erro ao criar a solicitação.",
+    "subtitle": "Preencha as informações da solicitação e salve.",
+    "deliveryDateRequired": "A data de entrega é obrigatória.",
+    "paymentTypeRequired": "O tipo de pagamento é obrigatório.",
+    "invalidCurrency": "Moeda inválida.",
+    "validationError": "Por favor verifique os campos obrigatórios.",
+    "notesMaxLengthError": "Cada nota pode ter até 400 caracteres."
+  },
+  "header": {
+    "title": "Solicitar informações",
+    "customer": "cliente",
+    "selectCustomer": "Selecione o cliente",
+    "shippingAddress": "Endereço de entrega",
+    "selectShippingAddress": "Escolha o endereço de entrega",
+    "representative": "Representante de vendas",
+    "selectRepresentative": "Selecione um representante",
+    "offerType": "Tipo de solicitação",
+    "selectOfferType": "Selecione o tipo de solicitação",
+    "currency": "Moeda",
+    "selectCurrency": "Selecione a moeda",
+    "showExchangeRates": "Mostrar taxas de câmbio",
+    "offerDate": "Data da solicitação",
+    "deliveryDate": "Data de entrega",
+    "paymentType": "Tipo de pagamento",
+    "selectPaymentType": "Selecione o tipo de pagamento",
+    "description": "Descrição",
+    "notes": "Notas",
+    "descriptionErpTooltip": "É a descrição geral que você deseja que a produção veja para toda a solicitação. Quando enviado ao ERP como oferta/pedido, é registrado no campo Descrição superior do Netsis (FatUst.Description).",
+    "descriptionPlaceholder": "Insira a descrição",
+    "offerNo": "Número da solicitação",
+    "offerNoPlaceholder": "Número da solicitação",
+    "currencyChange": {
+      "title": "Mudança de moeda",
+      "message": "Quando a moeda for alterada, todas as linhas existentes serão recalculadas de acordo com a nova moeda. Você aprova esta transação?"
+    },
+    "deliveryMethod": "Método de entrega",
+    "documentDetail": "Descrição do documento",
+    "ozelKod1": "Código Especial 1",
+    "ozelKod1Placeholder": "Selecione o código especial 1",
+    "ozelKod2": "Código Especial 2",
+    "ozelKod2Placeholder": "Selecione o código especial 2",
+    "specialCodeSearchPlaceholder": "Procure por código especial..."
+  },
+  "lines": {
+    "title": "Solicitar Linhas",
+    "add": "Adicionar linha",
+    "empty": "Nenhuma linha adicionada ainda",
+    "emptyDescription": "Use o botão \"Selecionar estoque\" ou \"Adicionar linha\" para adicionar linhas de requisição",
+    "itemCount": "Linha {{count}}",
+    "editLine": "Editar linha",
+    "selectStock": "Selecione Estoque",
+    "selectProduct": "Selecione o produto",
+    "selectStockFirst": "Estoque não selecionado",
+    "stock": "Estoque",
+    "productCode": "Código de estoque",
+    "enterProductCode": "Digite ou pesquise o código do produto",
+    "productName": "Nome do estoque",
+    "enterProductName": "Insira o nome do produto",
+    "quantity": "Quantidade",
+    "unitPrice": "Preço unitário",
+    "discount1": "Desconto 1%",
+    "discount2": "Desconto 2%",
+    "discount3": "Desconto 3%",
+    "discounts": "Descontos",
+    "discountAmount": "Valor do desconto",
+    "netPrice": "Preço Líquido",
+    "vatRate": "Taxa de IVA%",
+    "lineTotal": "Total da linha (IVA incluído)",
+    "calculations": "Cálculos",
+    "required": "Pelo menos 1 linha deve ser adicionada",
+    "noProductsFound": "Produto não encontrado",
+    "delete": {
+      "confirmTitle": "Excluir linha",
+      "confirmMessage": "Tem certeza de que deseja excluir esta linha?",
+      "confirmTitleMultiple": "Excluir linhas",
+      "confirmMessageMultiple": "Tem certeza de que deseja excluir as linhas selecionadas?"
+    },
+    "noItems": "Ainda não há filas.",
+    "addLine": "Adicionar linha",
+    "relatedStocks": "Ações vinculadas",
+    "groupCode": "Código do grupo",
+    "approvalRequired": "Aprovação necessária",
+    "requiredFieldsMissing": "Os campos de linha obrigatórios estão faltando.",
+    "createSuccess": "Linha adicionada.",
+    "createError": "A linha não pôde ser adicionada.",
+    "updateSuccess": "Linha atualizada.",
+    "updateError": "A linha não pôde ser atualizada.",
+    "deleteSuccess": "A linha foi excluída.",
+    "deleteError": "A linha não pôde ser excluída.",
+    "editStockItemDetails": "Editar detalhes do item em estoque",
+    "descriptionFieldsTitle": "Descrição Campos",
+    "description1": "Descrição 1",
+    "description2": "Descrição 2",
+    "description3": "Descrição 3",
+    "descriptionPlaceholder": "Insira a descrição...",
+    "descriptionTooltipText": "É uma descrição de produção baseada em linhas. Correspondência Netsis quando importado para ERP: Descrição 1 -> Campo Adicional 1, Descrição 2 -> Campo Adicional 2, Descrição 3 -> Anotação de Linha 7.",
+    "descriptionTooltipPrefix": "É uma descrição de produção baseada em linhas. Correspondência Netsis quando transferida para ERP:",
+    "erpTargetExtraField1": "Campo Adicional 1",
+    "erpTargetExtraField2": "Área Adicional 2",
+    "erpTargetLineExtraDesc7": "Anotação de linha 7",
+    "profileErpTooltip": "Esta seleção de Perfil é salva no campo Netsis Line Annotation 2 ao enviar para o ERP.",
+    "rebarErpTooltip": "Esta seleção de Ferro é salva como valor Netsis Row Annotation 3 ao enviar para o ERP.",
+    "screwErpTooltip": "Esta seleção de parafuso é salva como valor Netsis Line Annotation 4 ao enviar para o ERP.",
+    "printErpTooltip": "Esta seleção de impressão é salva como valor Netsis Line Annotation 8 ao enviar para o ERP. O comentário de impressão também vai para os campos Comentário 9 da linha Netsis e Anotação de linha 9.",
+    "lineItemDescriptionPlaceholder": "Descrição do item baseada em linha",
+    "doubleClickToEdit": "Clique duas vezes para editar"
+  },
+  "exchangeRates": {
+    "title": "Taxas de câmbio",
+    "currency": "Moeda",
+    "rate": "Instalar",
+    "date": "Data da Taxa de Câmbio",
+    "isOfficial": "Instalar oficial",
+    "official": "oficial",
+    "custom": "privado",
+    "empty": "Taxa de câmbio não encontrada",
+    "status": "Estado",
+    "dialog": {
+      "title": "Taxas de câmbio",
+      "description": "Visualize e edite as taxas de câmbio, se necessário. As taxas alteradas não serão marcadas como taxas oficiais.",
+      "subtitle": "Você pode editar e salvar as taxas.",
+      "info": "As atualizações manuais podem ser feitas fora da taxa de câmbio oficial."
+    },
+    "updateSuccess": "As taxas de câmbio foram atualizadas.",
+    "updateError": "Não foi possível atualizar as taxas de câmbio.",
+    "cannotEditUsedCurrency": "A moeda utilizada não pode ser editada.",
+    "zeroRateError": "Por favor, insira a taxa de câmbio para continuar."
+  },
+  "summary": {
+    "title": "Resumo",
+    "grandTotalAnalysis": "Análise Total Geral",
+    "subtotal": "Subtotal",
+    "totalVat": "IVA total",
+    "grandTotal": "Total geral",
+    "generalDiscount": "Desconto Geral",
+    "generalDiscountRate": "Taxa de desconto geral",
+    "generalDiscountAmount": "Valor do desconto geral",
+    "generalDiscountHelp": "É aplicado de forma total."
+  },
+  "offerType": {
+    "domestic": "doméstico",
+    "export": "exportar"
+  },
+  "wizard": {
+    "title": "Criar nova solicitação",
+    "step1": {
+      "title": "Etapa 1: solicitar informações",
+      "description": "Insira as informações do cabeçalho da solicitação e as taxas de câmbio",
+      "validation": {
+        "offerType": "Tipo de solicitação",
+        "currency": "Moeda",
+        "exchangeRate": "Taxa de câmbio"
+      },
+      "exchangeRate": {
+        "required": "Para moedas que não sejam TRY, pelo menos uma taxa de câmbio deve ser adicionada"
+      },
+      "currency": {
+        "try": {
+          "info": "A taxa de câmbio não é necessária quando TRY é selecionado"
+        }
+      }
+    },
+    "step2": {
+      "title": "Etapa 2: Solicitar Linhas",
+      "description": "Adicione informações de produto e preço",
+      "info": "Você deve adicionar pelo menos uma linha",
+      "validation": {
+        "noLines": "Pelo menos uma linha deve ser adicionada",
+        "invalidLines": "Todas as linhas devem ter informações válidas",
+        "allValid": "Linha {{count}} adicionada com sucesso"
+      }
+    },
+    "step3": {
+      "title": "Etapa 3: Resumo e Aprovação",
+      "description": "Revise as informações e salve a solicitação",
+      "header": {
+        "title": "Solicitar informações"
+      },
+      "lines": {
+        "title": "Solicitar Linhas"
+      },
+      "summary": {
+        "title": "Resumo Final"
+      },
+      "approval": {
+        "info": "Assim que a solicitação for salva ela será enviada automaticamente para o processo de aprovação"
+      }
+    }
+  },
+  "loadError": "Ocorreu um erro ao carregar dados.",
+  "backToDemands": "Voltar para Solicitações",
+  "untitled": "sem título",
+  "sections": {
+    "header": "Informações do título",
+    "lines": "linhas",
+    "summary": "Resumo"
+  },
+  "approval": {
+    "approve": "Confirmar",
+    "reject": "rejeitar",
+    "sending": "Enviando...",
+    "sendForApproval": "Enviar para aprovação",
+    "approveSuccess": "O processo de confirmação foi bem-sucedido.",
+    "approveError": "Falha na confirmação.",
+    "rejectSuccess": "O processo de rejeição foi bem-sucedido.",
+    "rejectError": "A rejeição falhou.",
+    "startSuccess": "O processo de aprovação foi iniciado.",
+    "startError": "Não foi possível iniciar o processo de aprovação.",
+    "rejectTitle": "Negar solicitação",
+    "rejectDescription": "Insira o motivo da rejeição.",
+    "rejectReasonPlaceholder": "Motivo da rejeição",
+    "statusFilterLabel": "Status de aprovação",
+    "lockedForNonApprover": "Este registro está em processo de aprovação. Somente o usuário de aprovação ativo pode fazer alterações; A edição está desativada para você.",
+    "approvedReadOnlyReason": "Como esta solicitação foi aprovada, nenhuma alteração poderá ser feita.",
+    "rejectedReadOnlyReason": "Como esta solicitação foi rejeitada, nenhuma alteração poderá ser feita. Para atualizar, use \"Revisar\" da lista.",
+    "closedReason": "Este registro foi encerrado porque foi aprovado outro registro com o mesmo número de documento; não é possível fazer alterações.",
+    "status": {
+      "notRequired": "rascunho",
+      "waiting": "esperando",
+      "approved": "Aprovado",
+      "rejected": "rejeitado",
+      "closed": "Fechado"
+    }
+  },
+  "approvalFlow": {
+    "noData": "Etapa de confirmação não encontrada.",
+    "notStarted": "Não inicializado",
+    "stepCompleted": "Etapa concluída",
+    "stepInProgress": "etapa continua",
+    "stepNotStarted": "Meu passo está esperando",
+    "stepRejected": "Meu nome foi rejeitado",
+    "errorTitle": "Ocorreu um erro"
+  },
+  "update": {
+    "success": "A solicitação foi atualizada.",
+    "successMessage": "A solicitação foi atualizada com sucesso.",
+    "error": "Não foi possível atualizar a solicitação.",
+    "errorMessage": "Ocorreu um erro ao atualizar a solicitação.",
+    "invalidCurrency": "Moeda inválida.",
+    "validationError": "Ocorreu um erro de validação de formulário."
+  },
+  "revision": {
+    "success": "Revisão criada.",
+    "error": "Falha ao criar revisão."
+  },
+  "waitingApprovals": {
+    "title": "Solicitações de aprovação pendentes",
+    "list": "Lista de aprovação pendente",
+    "noApprovals": "Nenhuma aprovação pendente encontrada.",
+    "requestId": "Número da solicitação",
+    "description": "Descrição",
+    "stepOrder": "passo",
+    "approvedBy": "Aprovado por",
+    "actionDate": "Data da transação",
+    "status": "Estado",
+    "waiting": "esperando"
+  },
+  "quotation": {
+    "notes": {
+      "maxLengthError": "Cada nota pode ter até 100 caracteres. Por favor, verifique."
+    }
+  },
+  "customerCancel": {
+    "readOnlyReason": "Como esta solicitação foi cancelada pelo cliente, nenhuma alteração poderá ser feita.",
+    "reasonLabel": "Motivo do cancelamento",
+    "button": "Cancelamento do cliente",
+    "title": "Cancelamento do cliente",
+    "description": "Você está prestes a marcar esta solicitação como cancelada pelo cliente.",
+    "reasonPlaceholder": "Escreva o motivo do cancelamento do cliente...",
+    "confirmButton": "Cancelar"
+  },
+  "pdfExportTemplate": {
+    "draftWatermark": "É PROJETO"
+  }
+}

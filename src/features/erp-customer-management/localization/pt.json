@@ -1,0 +1,85 @@
+{
+  "menu": "Cliente ERP",
+  "description": "Lista de clientes do sistema ERP",
+  "loading": "Carregando...",
+  "noData": "Cliente não encontrado",
+  "table": {
+    "title": "Lista de clientes",
+    "branchCode": "Código da filial",
+    "businessUnitCode": "Código da unidade de negócios",
+    "customerCode": "Código do cliente",
+    "customerName": "Nome do cliente",
+    "phone": "telefone",
+    "city": "cidade",
+    "district": "distrito",
+    "address": "Endereço",
+    "countryCode": "Código do país",
+    "email": "E-mail",
+    "website": "Site",
+    "taxNumber": "Número fiscal",
+    "taxOffice": "Repartição de Finanças",
+    "tcknNumber": "Número de identificação TR",
+    "visibleColumns": "Colunas Visíveis",
+    "editColumns": "Editar colunas"
+  },
+  "filterLabels": {
+    "branchCode": "Código da filial",
+    "customerCode": "Código do cliente",
+    "customerName": "Nome do cliente",
+    "city": "cidade",
+    "district": "distrito",
+    "taxNumber": "Número fiscal"
+  },
+  "placeholders": {
+    "quickSearch": "Pesquisa rápida...",
+    "all": "Todos",
+    "codeExample": "Exemplo: 120...",
+    "nameExample": "Nome do cliente...",
+    "cityExample": "Província...",
+    "districtExample": "Distrito...",
+    "taxExample": "Número de identificação fiscal/TR..."
+  },
+  "actions": {
+    "detailedFilter": "Filtro detalhado",
+    "clear": "claro",
+    "filter": "Filtro",
+    "all": "TODOS",
+    "active": "ATIVO",
+    "passive": "PASSIVO",
+    "apply": "LISTA DE RESULTADOS"
+  },
+  "details": {
+    "title": "Detalhes do cliente",
+    "addressInfo": "Informações de endereço"
+  },
+  "common": {
+    "close": "Fechar",
+    "selectAll": "Selecionar tudo",
+    "ok": "OK",
+    "totalRecords": "Cadastro Total"
+  },
+  "advancedFilter": {
+    "title": "Filtro Avançado",
+    "add": "Adicionar filtro",
+    "column": "coluna",
+    "operator": "operador",
+    "value": "Valor",
+    "search": "Pesquisar",
+    "clear": "claro",
+    "remove": "Remover",
+    "columnCustomerCode": "Código do cliente",
+    "columnCustomerName": "Nome do cliente",
+    "columnBranchCode": "Código da filial",
+    "columnCity": "cidade",
+    "columnDistrict": "distrito",
+    "columnTaxNumber": "Número fiscal",
+    "operatorContains": "Contém",
+    "operatorStartsWith": "Começa com",
+    "operatorEndsWith": "termina com",
+    "operatorEquals": "é igual",
+    "operator>": ">",
+    "operator>=": ">=",
+    "operator<": "<",
+    "operator<=": "<="
+  }
+}

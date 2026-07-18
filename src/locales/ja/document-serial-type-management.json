@@ -1,0 +1,88 @@
+{
+  "menu": "ファイルタイプの管理",
+  "description": "ファイルの種類を管理および整理する",
+  "search": "検索...",
+  "refresh": "リフレッシュ",
+  "addButton": "新しいファイルタイプを追加",
+  "loading": "読み込み中...",
+  "noData": "データなし",
+  "actions": "取引",
+  "cancel": "キャンセル",
+  "save": "保存",
+  "saving": "録音中...",
+  "delete": "削除",
+  "deleting": "削除中...",
+  "deleteConfirmTitle": "削除の確認",
+  "deleteConfirmDescription": "このレコードを削除してもよろしいですか?この操作は元に戻すことができません。",
+  "table": {
+    "title": "ファイルタイプリスト",
+    "id": "ID",
+    "ruleType": "ルールの種類",
+    "customerType": "顧客タイプ",
+    "salesRep": "営業担当者",
+    "serialPrefix": "シリアルプレフィックス",
+    "serialLength": "シリーズの長さ",
+    "createdDate": "作成日"
+  },
+  "form": {
+    "addTitle": "新しいファイルタイプを追加",
+    "editTitle": "ファイルタイプの編集",
+    "addDescription": "新しいファイルタイプ情報を入力してください",
+    "editDescription": "ファイルタイプ情報の編集",
+    "ruleType": {
+      "required": "ルールの種類を選択する必要があります"
+    },
+    "selectRuleType": "ルールの種類を選択してください",
+    "customerType": "顧客タイプ",
+    "selectCustomerType": "顧客タイプの選択 (オプション)",
+    "searchCustomerType": "顧客タイプを検索...",
+    "noCustomerTypeSelected": "顧客タイプが選択されていません",
+    "salesRep": "営業担当者",
+    "selectSalesRep": "営業担当者の選択 (オプション)",
+    "searchSalesRep": "営業担当者を探しています...",
+    "noSalesRepSelected": "営業担当者が選択されていません",
+    "serialPrefix": {
+      "required": "シリアルプレフィックスは必須です",
+      "maxLength": "シリアルプレフィックスは最大 50 文字です"
+    },
+    "serialPrefixPlaceholder": "シリアルプレフィックスを入力してください",
+    "serialLength": {
+      "min": "シリーズの長さは少なくとも 1 でなければなりません",
+      "max": "シリーズの長さは最大 100 まで可能です"
+    },
+    "serialLengthPlaceholder": "シリーズの長さを入力してください",
+    "serialStart": {
+      "min": "シリアル開始は少なくとも 0 でなければなりません"
+    },
+    "serialStartPlaceholder": "シリーズの開始値を入力してください",
+    "serialCurrent": {
+      "min": "直列電流は少なくとも0でなければなりません"
+    },
+    "serialCurrentPlaceholder": "現在のシリアル値を入力してください",
+    "serialIncrement": {
+      "min": "シリアル増分は少なくとも 1 である必要があります"
+    },
+    "serialIncrementPlaceholder": "シリアル増分値を入力してください"
+  },
+  "totalRecords": "合計 {{count}} レコード",
+  "advancedFilter": {
+    "columnSerialPrefix": "シリアルプレフィックス",
+    "columnCustomerTypeName": "顧客タイプ",
+    "columnSalesRepFullName": "営業担当者",
+    "columnRuleType": "ルールの種類"
+  },
+  "messages": {
+    "createSuccess": "ファイルの種類が正常に作成されました",
+    "createError": "ファイルタイプの作成中にエラーが発生しました",
+    "updateSuccess": "ファイルタイプが正常に更新されました",
+    "updateError": "ファイルタイプの更新中にエラーが発生しました",
+    "deleteSuccess": "ファイルの種類は正常に削除されました",
+    "deleteError": "ファイルタイプの削除中にエラーが発生しました"
+  },
+  "common": {
+    "delete": "削除"
+  },
+  "error": "アクティビティを保存できませんでした",
+  "previous": "前へ",
+  "next": "次へ"
+}

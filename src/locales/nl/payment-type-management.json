@@ -1,0 +1,67 @@
+{
+  "title": "Beheer van betalingstypes",
+  "headerDescription": "Betaalmethoden beheren en bewerken",
+  "create": "Nieuw betalingstype",
+  "edit": "Betalingstype bewerken",
+  "editDescription": "Bewerk informatie over het betalingstype",
+  "createDescription": "Voer nieuwe informatie over het betalingstype in",
+  "delete": {
+    "confirmTitle": "Betalingstype verwijderen",
+    "confirmMessage": "Weet u zeker dat u het betalingstype {{name}} wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+    "success": "Betaaltype succesvol verwijderd",
+    "error": "Er is een fout opgetreden bij het verwijderen van het betalingstype"
+  },
+  "deleteTitle": "Betalingstype verwijderen",
+  "name": "Naam",
+  "namePlaceholder": "Voer de naam van het betalingstype in",
+  "description": "Beschrijving",
+  "descriptionPlaceholder": "Voer een beschrijving in (optioneel)",
+  "createdDate": "Aanmaakdatum",
+  "updatedDate": "Bijgewerkte datum",
+  "actions": "Transacties",
+  "search": "Zoeken",
+  "refresh": "Vernieuwen",
+  "loading": "Laden...",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "advancedFilter": {
+    "columnName": "Naam",
+    "columnDescription": "Beschrijving"
+  },
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opnemen...",
+  "noData": "Geen gegevens gevonden",
+  "error": "Er is een fout opgetreden",
+  "confirmDelete": "Weet u zeker dat u dit betalingstype wilt verwijderen?",
+  "createSuccess": "Betaaltype succesvol aangemaakt",
+  "updateSuccess": "Betalingstype is succesvol bijgewerkt",
+  "deleteSuccess": "Betaaltype succesvol verwijderd",
+  "createError": "Er is een fout opgetreden bij het aanmaken van het betalingstype",
+  "updateError": "Er is een fout opgetreden bij het updaten van het betalingstype",
+  "deleteError": "Er is een fout opgetreden bij het verwijderen van het betalingstype",
+  "table": {
+    "title": "Betalingstypen",
+    "status": "Status",
+    "id": "Identiteitskaart",
+    "name": "Naam",
+    "description": "Beschrijving",
+    "createdDate": "Aanmaakdatum",
+    "updatedDate": "Bijgewerkte datum",
+    "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+    "page": "Pagina {{current}} / {{total}}"
+  },
+  "form": {
+    "name": {
+      "required": "Naam is vereist",
+      "maxLength": "Naam kan maximaal 100 tekens lang zijn"
+    },
+    "description": {
+      "maxLength": "De beschrijving mag maximaal 500 tekens bevatten"
+    }
+  },
+  "status": {
+    "inactive": "passief",
+    "active": "actief"
+  }
+}

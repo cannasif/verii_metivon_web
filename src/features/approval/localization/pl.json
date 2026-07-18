@@ -1,0 +1,85 @@
+{
+  "list": {
+    "title": "Oczekujące zatwierdzenia",
+    "description": "Możesz przeglądać i zatwierdzać lub odrzucać przypisane Ci oferty",
+    "empty": "Brak oczekujących zatwierdzeń",
+    "error": "Wystąpił błąd podczas ładowania potwierdzeń"
+  },
+  "yes": "Tak",
+  "no": "nie",
+  "processing": "Przetwarzanie...",
+  "detail": {
+    "title": "Szczegóły oferty",
+    "subtitle": "Zobacz szczegóły oferty i podejmij działanie",
+    "tabs": {
+      "detail": "Szczegół",
+      "history": "przeszłość",
+      "action": "transakcja"
+    },
+    "notFound": "Nie znaleziono oferty",
+    "quotationInfo": "Informacje o ofercie",
+    "offerNo": "Oferta nr.",
+    "customer": "klient",
+    "representative": "przedstawiciel",
+    "currency": "Waluta",
+    "offerDate": "Data oferty",
+    "deliveryDate": "Data dostawy",
+    "total": "Razem",
+    "grandTotal": "Wielka suma",
+    "description": "Opis",
+    "lines": "Linie cytatów",
+    "productCode": "Kod produktu",
+    "productName": "Nazwa produktu",
+    "quantity": "Ilość",
+    "unitPrice": "Cena jednostkowa",
+    "lineTotal": "Suma wiersza",
+    "lineGrandTotal": "Suma całkowita wiersza",
+    "exchangeRates": "Kursy wymiany",
+    "exchangeRate": "Zainstaluj",
+    "exchangeRateDate": "Data kursu wymiany",
+    "isOfficial": "Zainstaluj oficjalną wersję"
+  },
+  "actions": {
+    "view": "Zobacz",
+    "approve": "Potwierdź",
+    "reject": "odrzucić"
+  },
+  "status": {
+    "notRequired": "projekt",
+    "waiting": "czekanie",
+    "approved": "Zatwierdzone",
+    "rejected": "odrzucony",
+    "closed": "Zamknięte"
+  },
+  "closedReason": "Ten rekord został zamknięty, ponieważ zatwierdzono inny rekord o tym samym numerze oferty.",
+  "statusFilterLabel": "Stan zatwierdzenia",
+  "level": {
+    "salesManager": "Menedżer sprzedaży",
+    "regionalManager": "Menedżer regionalny",
+    "finance": "Finanse",
+    "generalManager": "Dyrektor Generalny",
+    "unknown": "nieznany"
+  },
+  "note": {
+    "label": "uwaga",
+    "placeholder": "Możesz dodać notatkę o zatwierdzeniu/odrzuceniu (opcjonalnie)",
+    "maxLength": "Uwaga może mieć maksymalnie 500 znaków"
+  },
+  "approve": {
+    "success": "Zatwierdzone",
+    "successMessage": "Oferta została pomyślnie zatwierdzona",
+    "error": "Błąd asercji",
+    "errorMessage": "Wystąpił błąd podczas zatwierdzania oferty"
+  },
+  "reject": {
+    "success": "odrzucony",
+    "successMessage": "oferta odrzucona",
+    "error": "Błąd odrzucenia",
+    "errorMessage": "Wystąpił błąd podczas odrzucania oferty"
+  },
+  "history": {
+    "empty": "Nie ma historii zatwierdzeń",
+    "approvedBy": "Zatwierdzone przez"
+  },
+  "assignedTo": "Przypisany użytkownik"
+}

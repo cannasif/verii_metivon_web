@@ -1,0 +1,62 @@
+{
+  "menu": "Zarządzanie typami działań",
+  "description": "Zarządzaj i edytuj typy aktywności",
+  "addButton": "Dodaj nowy typ aktywności",
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "actions": "Działania",
+  "edit": "Edytuj",
+  "deleteButton": "Usuń",
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Zapisywanie...",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "advancedFilter": {
+    "columnName": "Nazwa typu działania",
+    "columnDescription": "Opis",
+    "columnCreatedBy": "Stworzony przez"
+  },
+  "form": {
+    "addTitle": "Dodaj nowy typ aktywności",
+    "editTitle": "Edytuj typ działania",
+    "addDescription": "Wprowadź informacje o nowym typie działania",
+    "editDescription": "Edytuj informacje o typie działania",
+    "name": "Nazwa typu działania",
+    "namePlaceholder": "Wprowadź nazwę typu działania",
+    "nameRequired": "Nazwa typu działania jest wymagana",
+    "nameMaxLength": "Nazwa typu działania może mieć maksymalnie 100 znaków",
+    "description": "Opis",
+    "descriptionPlaceholder": "Wprowadź opis (opcjonalnie)",
+    "descriptionMaxLength": "Opis może mieć maksymalnie 500 znaków"
+  },
+  "table": {
+    "id": "Identyfikator",
+    "name": "Nazwa typu działania",
+    "description": "Opis",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez",
+    "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+    "page": "Strona {{current}} / {{total}}",
+    "title": "Lista typów działań"
+  },
+  "stats": {
+    "totalActivityTypes": "Łączna liczba typów aktywności",
+    "activeActivityTypes": "Aktywne typy aktywności",
+    "newThisMonth": "Nowość w tym miesiącu"
+  },
+  "messages": {
+    "createSuccess": "Typ działania został utworzony pomyślnie",
+    "createError": "Nie udało się utworzyć typu działania",
+    "updateSuccess": "Typ działania został pomyślnie zaktualizowany",
+    "updateError": "Nie udało się zaktualizować typu działania",
+    "deleteSuccess": "Typ działania został pomyślnie usunięty",
+    "deleteError": "Nie udało się usunąć typu działania"
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Usuń typ działania",
+    "confirmMessage": "Czy na pewno chcesz usunąć typ działania {{name}}?"
+  },
+  "create": "Nowy typ aktywności",
+  "error": "Wystąpił błąd"
+}

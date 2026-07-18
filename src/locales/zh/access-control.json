@@ -1,0 +1,146 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "路由和页面防护使用的唯一密钥。更喜欢稳定的蛇形命名或点命名。",
+      "name": "管理权限时向管理员显示的显示名称。",
+      "description": "此权限的可选内部解释。",
+      "isActive": "计算用户访问权限时不考虑非活动权限。",
+      "save": "更改会影响角色和组授权流程。"
+    },
+    "permissionGroup": {
+      "name": "分配给用户时用于识别的组名称。",
+      "isSystemAdmin": "该组的成员可以访问所有页面和操作，无需进行单独的权限检查。",
+      "isActive": "不应为新的访问决策分配不活动组。",
+      "permissions": "选定的权限定义了该组的成员可以访问的内容。",
+      "save": "更新分配给该组的所有用户的有效访问权限。"
+    },
+    "userAssignment": {
+      "user": "选择您要管理其访问范围的用户。",
+      "groups": "用户接收来自所有选定组的组合权限。",
+      "save": "分配立即适用于下一次授权检查。用户可能需要刷新他们的会话。",
+      "systemAdminNote": "如果用户拥有系统管理员组，则将绕过详细权限。"
+    }
+  },
+  "permissionDefinitions": {
+    "title": "权限定义",
+    "description": "管理系统中使用的权限代码",
+    "add": "添加定义",
+    "form": {
+      "editTitle": "编辑权限定义",
+      "addTitle": "添加权限定义",
+      "editDescription": "更新权限定义详细信息",
+      "addDescription": "创建新的权限定义",
+      "code": "代码",
+      "codePlaceholder": "选择代码",
+      "affectedRoutes": "受影响的页面",
+      "affectedRoutesNone": "找不到与此代码匹配的路由",
+      "name": "名称",
+      "namePlaceholder": "显示名称",
+      "description": "描述",
+      "descriptionPlaceholder": "可选描述",
+      "isActive": "活跃",
+      "codeSearchPlaceholder": "搜索...",
+      "codeEmpty": "没有找到结果"
+    },
+    "table": {
+      "title": "权限定义",
+      "code": "代码",
+      "name": "名称",
+      "isActive": "活跃",
+      "updatedDate": "已更新",
+      "showing": "{{from}}-{{to}} {{total}}"
+    },
+    "delete": {
+      "confirmTitle": "删除权限定义",
+      "confirmMessage": "您确定要删除“{{name}}”吗？此操作无法撤消。"
+    },
+    "syncFromRoutes": "从路线同步",
+    "syncSummaryTitle": "路由同步"
+  },
+  "permissionGroups": {
+    "title": "权限组",
+    "description": "管理权限组及其分配",
+    "add": "添加组",
+    "selectAll": "选择全部",
+    "noDefinitions": "没有可用的权限定义",
+    "form": {
+      "editTitle": "编辑权限组",
+      "addTitle": "添加权限组",
+      "editDescription": "更新权限组详细信息",
+      "addDescription": "创建新权限组",
+      "name": "名称",
+      "namePlaceholder": "团体名称",
+      "description": "描述",
+      "descriptionPlaceholder": "可选描述",
+      "isSystemAdmin": "系统管理员",
+      "isActive": "活跃",
+      "permissions": "权限"
+    },
+    "table": {
+      "name": "名称",
+      "isSystemAdmin": "系统管理员",
+      "isActive": "活跃",
+      "permissionCount": "权限",
+      "showing": "{{from}}-{{to}} {{total}}",
+      "title": "伊津·格鲁普拉勒"
+    },
+    "managePermissions": "管理权限",
+    "permissionsPanel": {
+      "title": "编辑组权限",
+      "description": "选择该组的权限",
+      "currentCodes": "当前权限代码",
+      "groupedRows": "屏幕",
+      "screen": "屏幕",
+      "actionsMapped": "行动",
+      "actions": {
+        "create": "创建",
+        "read": "阅读",
+        "update": "更新",
+        "delete": "删除",
+        "other": "操作权限"
+      }
+    },
+    "delete": {
+      "confirmTitle": "删除权限组",
+      "confirmMessage": "您确定要删除“{{name}}”吗？此操作无法撤消。"
+    },
+    "search": "搜索...",
+    "systemAdminLocked": "系统管理员组无法更改"
+  },
+  "userGroupAssignments": {
+    "title": "用户组分配",
+    "description": "为用户分配权限组",
+    "selectUser": "选择用户",
+    "selectUserPlaceholder": "搜索并选择用户...",
+    "selectUserHint": "选择一个用户来管理其权限组分配",
+    "assignedGroups": "分配的权限组",
+    "noUsers": "没有找到用户",
+    "noGroups": "没有可用的权限组",
+    "selectAll": "选择全部",
+    "status": "状态",
+    "unsavedChanges": "未保存",
+    "upToDate": "最新"
+  },
+  "common": {
+    "cancel": "取消",
+    "saving": "正在保存...",
+    "save": "保存并应用",
+    "loading": "加载中...",
+    "search": "搜索...",
+    "noData": "无数据",
+    "actions": "行动",
+    "yes": "是的",
+    "no": "否",
+    "edit": "编辑",
+    "delete": "删除",
+    "previous": "上一页",
+    "next": "下一步",
+    "processing": "处理中..."
+  },
+  "sidebar": {
+    "accessControl": "访问控制",
+    "permissionDefinitions": "权限定义",
+    "permissionGroups": "权限组",
+    "userGroupAssignments": "用户组分配"
+  }
+}

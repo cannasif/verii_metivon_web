@@ -1,0 +1,16 @@
+{
+  "invalidId": "ongeldig rapport",
+  "backToList": "Terug naar lijst",
+  "loadError": "Kan rapport niet laden",
+  "loadingReport": "Rapport laden...",
+  "listTitle": "PowerBI-rapporten",
+  "listDescription": "U kunt de rapporten bekijken door op te klikken",
+  "name": "Naam",
+  "description": "Beschrijving",
+  "isActive": "Status",
+  "view": "Bekijk",
+  "status": {
+    "active": "actief",
+    "inactive": "passief"
+  }
+}

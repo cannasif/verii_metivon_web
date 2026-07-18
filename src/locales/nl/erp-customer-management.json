@@ -1,0 +1,85 @@
+{
+  "menu": "ERP-klant",
+  "description": "Klantenlijst uit ERP-systeem",
+  "loading": "Laden...",
+  "noData": "Klant niet gevonden",
+  "table": {
+    "title": "Klantenlijst",
+    "branchCode": "Filiaalcode",
+    "businessUnitCode": "Bedrijfseenheidcode",
+    "customerCode": "Klantcode",
+    "customerName": "Klantnaam",
+    "phone": "telefoon",
+    "city": "stad",
+    "district": "wijk",
+    "address": "Adres",
+    "countryCode": "Landcode",
+    "email": "E-mail",
+    "website": "Website",
+    "taxNumber": "Belastingnummer",
+    "taxOffice": "Belastingdienst",
+    "tcknNumber": "TR ID-nummer",
+    "visibleColumns": "Zichtbare kolommen",
+    "editColumns": "Kolommen bewerken"
+  },
+  "filterLabels": {
+    "branchCode": "Filiaalcode",
+    "customerCode": "Klantcode",
+    "customerName": "Klantnaam",
+    "city": "stad",
+    "district": "wijk",
+    "taxNumber": "Belastingnummer"
+  },
+  "placeholders": {
+    "quickSearch": "Snel zoeken...",
+    "all": "Allemaal",
+    "codeExample": "Bijv.: 120...",
+    "nameExample": "Klantnaam...",
+    "cityExample": "Provincie...",
+    "districtExample": "Wijk...",
+    "taxExample": "Belasting-/TR-ID-nummer..."
+  },
+  "actions": {
+    "detailedFilter": "Gedetailleerd filter",
+    "clear": "duidelijk",
+    "filter": "Filteren",
+    "all": "ALLEN",
+    "active": "ACTIEF",
+    "passive": "PASSIEF",
+    "apply": "LIJST RESULTATEN"
+  },
+  "details": {
+    "title": "Klantgegevens",
+    "addressInfo": "Adresgegevens"
+  },
+  "common": {
+    "close": "Sluiten",
+    "selectAll": "Selecteer Alles",
+    "ok": "Oké",
+    "totalRecords": "Totale registratie"
+  },
+  "advancedFilter": {
+    "title": "Geavanceerd filter",
+    "add": "Filter toevoegen",
+    "column": "kolom",
+    "operator": "exploitant",
+    "value": "Waarde",
+    "search": "Zoeken",
+    "clear": "duidelijk",
+    "remove": "Verwijderen",
+    "columnCustomerCode": "Klantcode",
+    "columnCustomerName": "Klantnaam",
+    "columnBranchCode": "Filiaalcode",
+    "columnCity": "stad",
+    "columnDistrict": "wijk",
+    "columnTaxNumber": "Belastingnummer",
+    "operatorContains": "Bevat",
+    "operatorStartsWith": "Het begint met",
+    "operatorEndsWith": "eindigt met",
+    "operatorEquals": "gelijk aan",
+    "operator>": ">",
+    "operator>=": ">=",
+    "operator<": "<",
+    "operator<=": "<="
+  }
+}

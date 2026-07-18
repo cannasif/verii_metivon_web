@@ -1,0 +1,148 @@
+{
+  "page": {
+    "connectionTitle": "WhatsAppの統合",
+    "connectionDescription": "WhatsApp クラウド API 設定をメタ管理し、Webhook 接続を確認し、テスト メッセージを送信します。"
+  },
+  "settings": {
+    "title": "接続設定",
+    "configured": "準備完了",
+    "notConfigured": "行方不明",
+    "enabled": "統合を積極的に活用する",
+    "enabledDescription": "アクティブな場合、Webhook とテストの送信ではこれらの設定が使用されます。",
+    "displayName": "表示名",
+    "graphApiVersion": "グラフAPIのバージョン",
+    "phoneNumberId": "電話番号ID",
+    "businessAccountId": "ビジネスアカウントID",
+    "verifyToken": "Webhook トークン検証",
+    "accessToken": "アクセストークン",
+    "appSecret": "アプリの秘密",
+    "keepCurrent": "現在の値が維持されます",
+    "save": "設定の保存",
+    "saveSuccess": "WhatsAppの設定が保存されました。",
+    "saveError": "WhatsApp 設定を保存できませんでした。"
+  },
+  "webhook": {
+    "title": "ウェブフック",
+    "url": "メタ Webhook URL",
+    "lastInbound": "最新のウェブフック",
+    "lastOutbound": "最後の送信メッセージ"
+  },
+  "test": {
+    "title": "テストメッセージ",
+    "phone": "電話",
+    "message": "メッセージ",
+    "defaultMessage": "V3RII CRM WhatsApp テスト メッセージ。",
+    "send": "テストを送信する",
+    "sendSuccess": "WhatsApp テスト メッセージが送信されました。",
+    "sendError": "WhatsApp テスト メッセージを送信できませんでした。"
+  },
+  "logs": {
+    "title": "WhatsApp のログ",
+    "description": "Webhook、テスト メッセージ、将来のオファー フローの記録を監視します。",
+    "tableTitle": "取引記録",
+    "searchPlaceholder": "電話、メッセージ、または取引通話...",
+    "errorsOnly": "ただの間違い",
+    "directionAll": "全方向",
+    "inbound": "入ってくる",
+    "outbound": "発信",
+    "success": "成功した",
+    "error": "エラー",
+    "empty": "記録が見つかりませんでした。",
+    "total": "{{count}}レジスタ",
+    "columns": {
+      "date": "日付",
+      "direction": "方向",
+      "operation": "トランザクション",
+      "phone": "電話",
+      "message": "メッセージ",
+      "status": "ステータス"
+    }
+  },
+  "drafts": {
+    "title": "WhatsApp オファーの下書き",
+    "description": "顧客が作成したカートを WhatsApp 経由で監視し、エージェントを制御します。",
+    "tableTitle": "エージェント制御キュー",
+    "searchPlaceholder": "電話、顧客、またはメッセージ...",
+    "empty": "ドラフトが見つかりません。",
+    "total": "{{count}} ドラフト",
+    "customerMessage": "お客様からのメッセージ",
+    "mainLine": "主な製品",
+    "relatedLine": "アフィリエイト商品",
+    "status": {
+      "WaitingRepresentativeReview": "エージェントの制御下にある"
+    },
+    "columns": {
+      "createdDate": "日付",
+      "phone": "電話",
+      "customer": "顧客",
+      "status": "ステータス",
+      "lineCount": "鉛筆",
+      "grandTotal": "総計"
+    },
+    "lineColumns": {
+      "code": "コード",
+      "name": "在庫",
+      "quantity": "数量",
+      "unitPrice": "単価",
+      "total": "合計",
+      "type": "種類"
+    },
+    "actions": {
+      "title": "代表入札プロセス",
+      "description": "ドラフトを CRM 提案に変換し、必要に応じて WhatsApp 経由で PDF として顧客に送信します。",
+      "representativeId": "代表者ID",
+      "customer": "顧客",
+      "selectCustomer": "顧客を選択",
+      "paymentType": "支払いタイプ",
+      "selectPaymentType": "支払いタイプを選択してください",
+      "documentSerial": "ドキュメントシリアルタイプ",
+      "selectDocumentSerial": "ドキュメント シリーズのタイプを選択してください",
+      "offerType": "オファーの種類",
+      "domestic": "国内",
+      "foreign": "海外",
+      "currency": "通貨",
+      "offerDate": "オファー日",
+      "deliveryDate": "納期",
+      "descriptionField": "内部説明",
+      "customerMessageField": "お客様へのメッセージ",
+      "sendAfterConvert": "ダイヤル時に WhatsApp を送信する",
+      "attachPdf": "PDFを追加",
+      "convertAndSend": "オファーに変換して送信",
+      "sendAgain": "WhatsAppに再送信",
+      "createdQuotation": "オファー #{{id}}",
+      "loading": "読み込み中...",
+      "convertSuccess": "WhatsApp のドラフトは提案フローに含まれていました。",
+      "convertError": "WhatsApp の草案は提案に変えることができませんでした。",
+      "sendSuccess": "オファーはWhatsApp経由で送信されました。",
+      "sendError": "WhatsApp 経由でオファーを送信できませんでした。"
+    }
+  },
+  "quotationSend": {
+    "sendSuccess": "オファーはWhatsApp経由でPDFで送信されました。",
+    "sendError": "WhatsApp 経由でオファーを送信できませんでした。"
+  },
+  "flow": {
+    "title": "WhatsApp オファーの流れ",
+    "description": "顧客が電話で見積もりリクエストを作成できるように実装されるセキュア モジュール プラン。",
+    "steps": {
+      "inbound": {
+        "title": "1. メッセージ受信",
+        "text": "顧客からのメッセージは Webhook 経由で受信され、署名がチェックされ、生のレコードが記録されます。"
+      },
+      "intent": {
+        "title": "2. 意図と銘柄の選択",
+        "text": "顧客はカタログまたは在庫の内訳から誘導されます。フリーテキストは直接順序に変換されません。"
+      },
+      "quote": {
+        "title": "3. 提案草案",
+        "text": "選択内容はCRM側で提案書として公開され、担当者のチェックなしに最終文書は作成されません。"
+      },
+      "handoff": {
+        "title": "4. 代表者の承認",
+        "text": "価格、割引、納期、現在の確認が行われた後、オファーが顧客に送信されます。"
+      }
+    },
+    "nextPhaseTitle": "次のフェーズ",
+    "nextPhaseText": "このフェーズではインフラストラクチャをオープンします。会話フロー、カタログの選択、提案草案、WhatsApp テンプレートの送信は、別の管理されたフェーズに追加されます。"
+  }
+}

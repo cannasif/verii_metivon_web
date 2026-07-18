@@ -1,0 +1,82 @@
+{
+  "menu": "兴趣话题管理",
+  "description": "管理和编辑感兴趣的主题",
+  "addButton": "添加新主题",
+  "loading": "加载中...",
+  "noData": "没有找到数据",
+  "actions": "行动",
+  "edit": "编辑",
+  "deleteButton": "删除",
+  "cancel": "取消",
+  "save": "保存",
+  "saving": "正在保存...",
+  "previous": "上一页",
+  "next": "下一步",
+  "advancedFilter": {
+    "columnName": "主题名称",
+    "columnDescription": "描述",
+    "columnCreatedBy": "创建者"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "添加新主题",
+      "editTitle": "编辑主题",
+      "addDescription": "输入新主题信息",
+      "editDescription": "编辑主题信息",
+      "name": "主题名称",
+      "namePlaceholder": "输入主题名称",
+      "nameRequired": "主题名称为必填项",
+      "nameMaxLength": "主题名称最多 100 个字符",
+      "description": "描述",
+      "descriptionPlaceholder": "输入描述（可选）",
+      "descriptionMaxLength": "描述最多 500 个字符"
+    },
+    "table": {
+      "title": "感兴趣的主题列表",
+      "id": "身份证号",
+      "name": "主题名称",
+      "description": "描述",
+      "createdDate": "创建日期",
+      "createdBy": "创建者",
+      "showing": "显示 {{from}}-{{to}} / {{total}}",
+      "page": "页 {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "总主题",
+      "activeActivityTypes": "活跃主题",
+      "newThisMonth": "本月新品"
+    },
+    "messages": {
+      "createSuccess": "主题创建成功",
+      "createError": "创建主题失败",
+      "updateSuccess": "主题更新成功",
+      "updateError": "更新主题失败",
+      "deleteSuccess": "主题删除成功",
+      "deleteError": "删除主题失败"
+    },
+    "error": "发生错误",
+    "create": "添加新主题",
+    "loading": "加载中...",
+    "noData": "无数据",
+    "actions": "行动",
+    "cancel": "取消",
+    "save": "保存",
+    "saving": "正在保存..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "删除主题",
+    "confirmMessage": "您确定要删除 {{name}} 吗？"
+  },
+  "messages": {
+    "deleteSuccess": "主题删除成功",
+    "deleteError": "删除主题失败"
+  },
+  "table": {
+    "title": "感兴趣的主题列表",
+    "id": "身份证号",
+    "name": "主题名称",
+    "description": "描述",
+    "createdDate": "创建日期",
+    "createdBy": "创建者"
+  }
+}

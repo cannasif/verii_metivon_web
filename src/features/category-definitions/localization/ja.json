@@ -1,0 +1,511 @@
+{
+  "categoryDefinitions": {
+    "title": "カテゴリの定義",
+    "description": "ここから、B2B および B2C カタログのカテゴリ ツリーとカテゴリ関連在庫の管理を開始できます。",
+    "guidedTitle": "3 つのステップでカテゴリ構造を管理",
+    "hierarchyBlueprintTitle": "推奨される企業カテゴリの設定",
+    "hierarchyBlueprintDescription": "カテゴリツリーを一定のロジックで構築すると、ユーザーにとってわかりやすくなり、商品マッチングがよりスムーズに進みます。",
+    "hierarchyExampleLabel": "サンプルフロー",
+    "hierarchyExampleValue": "携帯電話 > プッシュボタン電話 > iPhone > 17 シリーズ > 製品一覧",
+    "easyModeTitle": "ここで何をするか考える必要はありません",
+    "summaryGuideTitle": "正しい次のステップを示しています",
+    "createCatalogTitle": "新しいカタログを作成する",
+    "createCatalogDescription": "B2B、B2C、またはカスタム フローの新しいカタログ定義を追加します。",
+    "editCatalogTitle": "カタログの編集",
+    "editCatalogDescription": "選択したカタログの名前、タイプ、並べ替えを更新します。",
+    "createCategoryTitle": "カテゴリを追加",
+    "createCategoryDescription": "{{target}} の下に新しいカテゴリを作成します。",
+    "editCategoryTitle": "カテゴリを編集する",
+    "editCategoryDescription": "{{target}} のカテゴリ情報を更新します。",
+    "createCategoryTarget": "接続できるレベル",
+    "deleteCatalogConfirm": "カタログ {{name}} を削除してもよろしいですか?",
+    "deleteCategoryConfirm": "カテゴリ {{name}} を削除してもよろしいですか?",
+    "deleteStockConfirm": "このストック リンクを削除してもよろしいですか?",
+    "createRuleTitle": "ルールの追加",
+    "createRuleDescription": "カテゴリ {{category}} の自動リンク ルールを作成します。",
+    "editRuleTitle": "ルールの編集",
+    "editRuleDescription": "カテゴリ {{category}} のルール情報を更新します。",
+    "deleteRuleConfirm": "ルール {{name}} を削除してもよろしいですか?",
+    "noRules": "このカテゴリにはまだルールが定義されていません。",
+    "rulePriority": "優先順位 {{priority}}",
+    "catalogsTitle": "カタログ",
+    "catalogsDescription": "まず、操作したいカタログを選択します。",
+    "catalogDescriptionFallback": "このカタログにはまだ説明が入力されていません。",
+    "catalogHelperText": "つまり、左側でカタログを選択し、中央でカテゴリに移動し、右側で在庫とルールを管理します。",
+    "treeTitle": "カテゴリツリー",
+    "treeDescription": "トレンディオールやヘプシブラダと同様に、カテゴリからサブカテゴリに進みます。",
+    "treeReorderHint": "同じ階層のカテゴリをドラッグ＆ドロップすることで並べ替えることができます。",
+    "chooseCatalogFirst": "まずは左からカタログを選択してください。カテゴリ管理はカタログを選択しないと始まりません。",
+    "stocksTitle": "カテゴリー 株式",
+    "stocksDescription": "リーフ カテゴリを選択すると、リンクされた銘柄がそこにリストされます。",
+    "stocksDescriptionSelected": "{{category}}カテゴリーに関連する銘柄",
+    "stocksGuideTitle": "このフィールドは何をするのでしょうか?",
+    "stocksGuideDescription": "ここで、選択したカテゴリにどの製品が該当するかを決定します。必要に応じて、株式を 1 つずつリンクすることができます。",
+    "stocksHelperText": "簡単なロジック: まずカテゴリを選択し、次に [在庫をリンク] ボタンを押して、ドロップダウン リストから製品を選択します。",
+    "favoritesGuideTitle": "お気に入りは何をしますか?",
+    "favoritesGuideDescription": "ユーザーベースのクイック アクセス リストで、選択したカテゴリ内の好みの銘柄が表示されます。株式のお気に入りはカテゴリのお気に入りと混在しません。",
+    "favoritesHelperText": "{{count}} はこのカテゴリのお気に入りの銘柄です。もう一度ハートアイコンを押すとお気に入りから削除できます。",
+    "rulesGuideTitle": "ルール画面は何をするのでしょうか?",
+    "rulesGuideDescription": "同じ種類の商品を 1 つずつリンクしたくない場合は、ここでルールを定義できます。たとえば、Code1 = CAM の場合、これはこのカテゴリに分類されると言えます。",
+    "rulesHelperText": "まずルールを追加します。次に、「プレビュー ルール」で何が起こるかを見てみましょう。 true の場合、「ルールの適用」で自動リンクします。",
+    "selectionTitle": "選挙状況",
+    "selectionDescription": "右側のパネルから、選択したカタログ、カテゴリ、リンクされた銘柄を一目で確認できます。",
+    "selectionCatalog": "カタログ",
+    "selectionCategory": "選択したカテゴリ",
+    "selectionCurrentLevel": "現在のレベル",
+    "selectionPath": "道路",
+    "selectionTotalStocks": "タイストック",
+    "selectionValueEmpty": "まだ選択されていません",
+    "nextStepTitle": "推奨される次のステップ",
+    "nextStepChooseCatalog": "まず、左側のパネルからカタログを選択します。",
+    "nextStepBrowseTree": "中央のパネルのメインカテゴリから始めて、サブブレークダウンに進みます。",
+    "nextStepSelectLeaf": "極端なカテゴリを選択すると、在庫リストが表示されます。",
+    "nextStepReviewStocks": "選択したカテゴリにリンクされている銘柄をチェックし、正しく一致していることを確認してください。",
+    "stepCatalogTitle": "カタログを選択",
+    "stepCatalogDescription": "B2B、B2C、または特別なカタログのいずれで作業するかを決定します。",
+    "stepTreeTitle": "木の上に移動します",
+    "stepTreeDescription": "メイン カテゴリ、サブカテゴリ、およびサブ内訳をクリックして進みます。",
+    "stepStocksTitle": "在庫を確認する",
+    "stepStocksDescription": "最終カテゴリを選択すると、右側のパネルに接続された株式と ERP コードの内訳が表示されます。",
+    "ready": "準備完了",
+    "pending": "待っています",
+    "openBranchAction": "サブカテゴリを開く",
+    "selectLeafAction": "このカテゴリーを選択してください",
+    "root": "ルート",
+    "leaf": "飛ぶ",
+    "branch": "支店",
+    "treeLevelLabel": "レベル{{level}}",
+    "noCatalogs": "定義されたカタログはまだありません。",
+    "noCategories": "このレベルにはカテゴリはありません。",
+    "noStocks": "このカテゴリーに関連する在庫はありません。",
+    "noFavorites": "このカテゴリーにはまだお気に入りの銘柄がありません。",
+    "selectLeafHint": "極端なカテゴリを選択して銘柄を表示します。",
+    "stockSearchPlaceholder": "銘柄コードまたは銘柄名で検索...",
+    "favoriteSearchPlaceholder": "銘柄コードまたは銘柄名でお気に入りを検索...",
+    "primaryBadge": "メインカテゴリー",
+    "tabs": {
+      "summary": "ヘルプ",
+      "stocks": "在庫を追加する",
+      "favorites": "お気に入り",
+      "rules": "ルールの追加",
+      "tips": "使用法"
+    },
+    "catalogTypes": {
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "dealer": "ディーラー",
+      "custom": "プライベート"
+    },
+    "tips": {
+      "catalogTitle": "1. まず適切なカタログを選択します",
+      "catalogDescription": "B2B 側と B2C 側で同じカテゴリ名があっても、異なるカタログで異なるビューを作成できます。",
+      "branchTitle": "2. ブランチはカテゴリ間を移動するためのものです",
+      "branchDescription": "ブランチ カテゴリは最終的な選択ポイントではありませんが、ユーザーを正しいサブブレークダウンに移動するために使用されます。",
+      "leafTitle": "3. 極端なカテゴリの在庫を確認する",
+      "leafDescription": "在庫リストは、極端なカテゴリーでは最も合理的です。したがって、最終的な選択は極端なカテゴリで行うことをお勧めします。",
+      "exampleTitle": "4. 企業階層を安定的に保つ",
+      "exampleDescription": "推奨構成: メインカテゴリ > サブカテゴリ > ブランド > シリーズ > 製品。こうすることで、チームは新しいレコードを開くときに同じ言語を使用し、検索結果がより予測しやすくなります。"
+    },
+    "hierarchyStages": {
+      "root": {
+        "title": "メインカテゴリー",
+        "description": "これは最高レベルのビジネス領域を表します。例: 電話"
+      },
+      "subcategory": {
+        "title": "サブカテゴリ",
+        "description": "製品グループを区切ります。例: プッシュボタン電話"
+      },
+      "brand": {
+        "title": "ブランド",
+        "description": "ブランドまたはメーカーの内訳に使用されます。例: iPhone"
+      },
+      "series": {
+        "title": "シリーズ",
+        "description": "モデルファミリーまたはシリーズベースの区別はここに保持されます。例：17シリーズ"
+      },
+      "products": {
+        "title": "製品",
+        "description": "最後のレベルはリーフ カテゴリである必要があります。株の製本はここで行う必要があります。"
+      }
+    },
+    "actions": {
+      "newCatalog": "新しいカタログ",
+      "createCatalog": "カタログの作成",
+      "addRootCategory": "ルートカテゴリの追加",
+      "addSubCategory": "サブカテゴリの追加",
+      "createCategory": "カテゴリの作成",
+      "uploadCategoryImage": "画像をアップロードする",
+      "uploadingCategoryImage": "画像の読み込み",
+      "removeCategoryImage": "画像の削除",
+      "addStock": "リンクストック",
+      "removeStock": "リンクを削除",
+      "addFavorite": "お気に入りに追加",
+      "removeFavorite": "お気に入りから削除",
+      "addRule": "ルールの追加",
+      "createRule": "ルールの作成",
+      "previewRules": "プレビュールール",
+      "previewingRules": "プレビューの準備中",
+      "applyRules": "ルールの適用",
+      "applyingRules": "ルールが適用されます",
+      "importFromRiiStock": "RII_STOKから作成",
+      "previewingStockHierarchy": "読み取りの内訳",
+      "refreshStockHierarchyPreview": "プレビューを更新",
+      "applyStockHierarchy": "カタログツリーの作成",
+      "applyingStockHierarchy": "カタログツリーの作成",
+      "addCategoryFavorite": "カテゴリをお気に入りに追加",
+      "removeCategoryFavorite": "カテゴリをお気に入りから削除する"
+    },
+    "messages": {
+      "catalogCreateSuccess": "カタログが正常に作成されました。",
+      "catalogCreateError": "カタログを作成できませんでした。",
+      "catalogUpdateSuccess": "カタログは正常に更新されました。",
+      "catalogUpdateError": "カタログを更新できませんでした。",
+      "catalogDeleteSuccess": "カタログは正常に削除されました。",
+      "catalogDeleteError": "カタログを削除できませんでした。",
+      "rootCategoryCreateSuccess": "ルート カテゴリが正常に作成されました。",
+      "subCategoryCreateSuccess": "サブカテゴリが正常に作成されました。",
+      "categoryCreateError": "カテゴリを作成できませんでした。",
+      "categoryUpdateSuccess": "カテゴリが正常に更新されました。",
+      "categoryUpdateError": "カテゴリを更新できませんでした。",
+      "categoryReorderSuccess": "カテゴリの順序が更新されました。",
+      "categoryReorderError": "カテゴリの順序を更新できませんでした。",
+      "categoryDeleteSuccess": "カテゴリが正常に削除されました。",
+      "categoryDeleteError": "カテゴリを削除できませんでした。",
+      "stockAssignSuccess": "在庫がカテゴリに正常にリンクされました。",
+      "stockAssignError": "在庫をカテゴリにリンクできませんでした。",
+      "stockUnassignSuccess": "ストックリンクが削除されました。",
+      "stockUnassignError": "ストックリンクを削除できませんでした。",
+      "favoriteAddSuccess": "在庫をお気に入りに追加しました。",
+      "favoriteRemoveSuccess": "在庫をお気に入りから削除しました。",
+      "favoriteToggleError": "お気に入りステータスを更新できませんでした。",
+      "ruleCreateSuccess": "ルールは正常に作成されました。",
+      "ruleCreateError": "ルールを作成できませんでした。",
+      "ruleUpdateSuccess": "ルールは正常に更新されました。",
+      "ruleUpdateError": "ルールを更新できませんでした。",
+      "ruleDeleteSuccess": "ルールは正常に削除されました。",
+      "ruleDeleteError": "ルールを削除できませんでした。",
+      "rulePreviewError": "ルールのプレビューを取得できませんでした。",
+      "ruleApplySuccess": "ルールは正常に実装されました。",
+      "ruleApplyError": "ルールを適用できませんでした。",
+      "stockHierarchyPreviewError": "在庫の内訳プレビューを取得できません。",
+      "stockHierarchyApplySuccess": "カタログ ツリーは RII_STOK の内訳から作成されました。",
+      "stockHierarchyApplyError": "RII_STOK ブレークダウンからカタログ ツリーを作成できませんでした。",
+      "categoryFavoriteAddSuccess": "カテゴリをお気に入りに追加しました。",
+      "categoryFavoriteRemoveSuccess": "カテゴリがお気に入りから削除されました。"
+    },
+    "stockHierarchyImport": {
+      "title": "RII_STOK の内訳からカタログを作成する",
+      "description": "これは、グループ コード > コード 1 > コード 2 > コード 3 のシーケンスをカタログ ツリーに変換します。 Trendyol/Sahibinden ロジックと同様に、ユーザーはクリックするたびに下位の内訳に移動し、最後のレベルの株式を確認します。",
+      "options": {
+        "includeCode1": {
+          "title": "コード1レベルを含める",
+          "description": "グループコードの下の最初の内訳を開きます。例：ガソリン/ディーゼル。"
+        },
+        "includeCode2": {
+          "title": "Code2レベルを含む",
+          "description": "コード 1 の下に 2 番目の内訳が開きます。例：手動/自動。"
+        },
+        "includeCode3": {
+          "title": "Code3レベルを含む",
+          "description": "Code2 の下の 3 番目の内訳が開きます。空の在庫では、最も深い占有レベルが極端なカテゴリになります。"
+        },
+        "assignStocks": {
+          "title": "株を最後のレベルにリンクする",
+          "description": "カテゴリ ツリーを作成すると、株式が最も深い内訳に自動的にリンクされます。"
+        }
+      },
+      "preview": {
+        "sourceStock": "在庫を読む",
+        "category": "カテゴリ合計",
+        "newCategory": "新しいカテゴリー",
+        "newStockAssignment": "新しいストックリンク",
+        "group": "グループ: {{count}}",
+        "code1": "コード1: {{count}}",
+        "code2": "コード2: {{count}}",
+        "code3": "コード3: {{count}}",
+        "samples": "例を示す方法",
+        "noSamples": "サンプルの内訳は見つかりませんでした。"
+      }
+    },
+    "rulePreviewSummaryTitle": "ルールプレビューの概要",
+    "rulePreviewSummary": {
+      "matched": "一致する在庫: {{count}}",
+      "created": "新しいリンクは {{count}} になります。",
+      "updated": "更新へのリンク: {{count}}",
+      "skipped": "手動で保護されたレジスタ: {{count}}"
+    },
+    "rulePreviewListTitle": "サンプルのプレビュー",
+    "rulePreviewListEmpty": "プレビューに一致するサンプルが見つかりませんでした。",
+    "rulePreviewMatchedRule": "マッチングルール: {{rule}} 優先度 {{priority}}",
+    "rulePreviewActions": {
+      "create": "新しいリンク",
+      "update": "リンクは更新されます",
+      "skip": "手作業で保存"
+    },
+    "ruleApplySummaryTitle": "ルール適用の概要",
+    "ruleApplySummary": {
+      "matched": "適合在庫: {{count}}",
+      "created": "新しいリンク: {{count}}",
+      "updated": "更新されたリンク: {{count}}",
+      "skipped": "手動で保護されたレジスタ: {{count}}"
+    },
+    "form": {
+      "catalogName": "カタログ名",
+      "catalogNamePlaceholder": "例: B2B メインカタログ",
+      "catalogCode": "カタログコード",
+      "catalogCodePlaceholder": "例: B2B_MAIN",
+      "catalogType": "カタログの種類",
+      "branchCode": "支店コード",
+      "branchCodePlaceholder": "オプション",
+      "sortOrder": "並べ替え順",
+      "description": "説明",
+      "descriptionPlaceholder": "他のマネージャーが理解できるように、この定義を簡単に説明してください。",
+      "categoryName": "カテゴリ名",
+      "categoryNamePlaceholder": "例: ガラス システム",
+      "categoryCode": "カテゴリコード",
+      "categoryCodePlaceholder": "例: CAM_SISTEMLERI",
+      "nodeType": "カテゴリの種類",
+      "nodeTypeBranchHelp": "このブランチは、カテゴリのナビゲーションとサブブレークを開くためのものです。このレベルで製品を直接接続しないでください。",
+      "nodeTypeLeafHelp": "極端なカテゴリは、最終的な選択ポイントです。在庫マッピングと製品リストはこのレベルに維持する必要があります。",
+      "visualPreset": "ビジュアルテーマ",
+      "visualPresetPlaceholder": "検索してテーマを選択してください",
+      "visualPresetSearchPlaceholder": "テーマを検索...",
+      "visualPresetEmpty": "適切なテーマが見つかりませんでした。",
+      "visualPresetHelp": "外部から画像をアップロードすることはありません。システムは、この選択に基づいて独自のカテゴリ ビューを作成します。",
+      "categoryImage": "カテゴリ画像",
+      "categoryImageHelp": "必要に応じて、特別な画像をシステムにアップロードできます。アップロードすると、この画像がカテゴリ カードのプリセット アイコンの代わりに使用されます。",
+      "ruleName": "ルール名",
+      "ruleCode": "ルールコード",
+      "stockAttribute": "ストックエリア",
+      "operator": "オペレーター",
+      "ruleValue": "ルールの値",
+      "ruleValuePlaceholder": "例: ガラスまたはプロファイル、アクセサリー",
+      "ruleValueDropdownPlaceholder": "ストックプリセットから選択",
+      "ruleValueSearchPlaceholder": "ERP の内訳を検索...",
+      "ruleValueLoading": "値をロード中...",
+      "ruleValueEmpty": "このフィールドに適切な値が見つかりませんでした。",
+      "ruleValueDropdownHelp": "選択した在庫領域の実際の ERP 値が一覧表示されます。ここでは、入力する代わりに選択した方が安全です。",
+      "ruleValueInListHelp": "リスト内の var 演算子で複数の値を選択できます。追加するには上を選択し、削除するにはタグをクリックします。",
+      "ruleValueInListEmpty": "まだ付加価値はありません。",
+      "ruleValueManualHelp": "この演算子はフリーテキストを処理します。ここに開始ルール、含めるルール、または終了ルールを入力します。",
+      "ruleValueTopMatchesTitle": "システム内で最も頻繁に発生する値",
+      "ruleValueTopMatchesSubtitle": "クリックして素早く選択できます",
+      "ruleValueTopMatchesEmpty": "このフィールドには未解決の値が見つかりませんでした。",
+      "priority": "優先順位"
+    },
+    "visualPreviewTitle": "カテゴリビュー",
+    "visualPreviewFallback": "カテゴリのプレビュー",
+    "visualPresets": {
+      "general": {
+        "label": "一般"
+      },
+      "glass": {
+        "label": "ガラス"
+      },
+      "profile": {
+        "label": "プロフィール"
+      },
+      "accessory": {
+        "label": "アクセサリー"
+      },
+      "service": {
+        "label": "サービス"
+      },
+      "logistics": {
+        "label": "物流"
+      },
+      "machinery": {
+        "label": "機械"
+      },
+      "electronics": {
+        "label": "エレクトロニクス"
+      },
+      "security": {
+        "label": "セキュリティ"
+      },
+      "lighting": {
+        "label": "照明"
+      },
+      "construction": {
+        "label": "建設"
+      },
+      "furniture": {
+        "label": "家具"
+      },
+      "hardware": {
+        "label": "ハードウェア"
+      },
+      "automation": {
+        "label": "自動化"
+      },
+      "energy": {
+        "label": "エネルギー"
+      },
+      "office": {
+        "label": "オフィス"
+      },
+      "textile": {
+        "label": "繊維"
+      },
+      "chemical": {
+        "label": "化学"
+      },
+      "outdoor": {
+        "label": "アウトドア"
+      },
+      "cooling": {
+        "label": "冷却"
+      },
+      "heating": {
+        "label": "暖房"
+      },
+      "plumbing": {
+        "label": "配管"
+      },
+      "decoration": {
+        "label": "装飾"
+      },
+      "packaging": {
+        "label": "梱包"
+      },
+      "automotive": {
+        "label": "自動車"
+      },
+      "agriculture": {
+        "label": "農業"
+      },
+      "medical": {
+        "label": "医療"
+      },
+      "pharmacy": {
+        "label": "薬局"
+      },
+      "cosmetics": {
+        "label": "化粧品"
+      },
+      "food": {
+        "label": "食べ物"
+      },
+      "beverage": {
+        "label": "飲み物"
+      },
+      "cleaning": {
+        "label": "掃除"
+      },
+      "education": {
+        "label": "教育"
+      },
+      "finance": {
+        "label": "金融"
+      },
+      "insurance": {
+        "label": "保険"
+      },
+      "real-estate": {
+        "label": "不動産"
+      },
+      "tourism": {
+        "label": "観光"
+      },
+      "hospitality": {
+        "label": "宿泊施設"
+      },
+      "restaurant": {
+        "label": "レストラン"
+      },
+      "ecommerce": {
+        "label": "電子商取引"
+      },
+      "retail": {
+        "label": "小売"
+      },
+      "wholesale": {
+        "label": "卸売"
+      },
+      "manufacturing": {
+        "label": "生産"
+      },
+      "mining": {
+        "label": "採掘"
+      },
+      "marine": {
+        "label": "海事"
+      },
+      "aviation": {
+        "label": "航空"
+      },
+      "telecom": {
+        "label": "電気通信"
+      },
+      "software": {
+        "label": "ソフトウェア"
+      },
+      "data-center": {
+        "label": "データセンター"
+      },
+      "media": {
+        "label": "メディア"
+      },
+      "printing": {
+        "label": "印刷所"
+      },
+      "sports": {
+        "label": "スポーツ"
+      },
+      "baby-kids": {
+        "label": "ベビー＆チャイルド"
+      },
+      "pet": {
+        "label": "ペット"
+      },
+      "jewelry": {
+        "label": "ジュエリー"
+      },
+      "luxury": {
+        "label": "贅沢な"
+      },
+      "stationery": {
+        "label": "文房具"
+      },
+      "laboratory": {
+        "label": "研究室"
+      },
+      "recycling": {
+        "label": "リサイクル"
+      },
+      "defense": {
+        "label": "防御"
+      }
+    },
+    "ruleAttributes": {
+      "groupCode": "グループコード",
+      "groupName": "グループ名",
+      "code1": "コード1",
+      "code1Name": "コード1の名前",
+      "code2": "コード2",
+      "code2Name": "コード 2 の名前",
+      "code3": "コード3",
+      "code3Name": "コード 3 の名前",
+      "code4": "コード4",
+      "code4Name": "コード 4 の名前",
+      "code5": "コード5",
+      "code5Name": "コード5の名前",
+      "manufacturerCode": "メーカーコード",
+      "erpStockCode": "ERP証券コード",
+      "stockName": "銘柄名"
+    },
+    "ruleOperators": {
+      "equals": "等しい",
+      "contains": "含まれています",
+      "startsWith": "それはから始まります",
+      "endsWith": "で終わる",
+      "inList": "リストに載ってるよ"
+    },
+    "meta": {
+      "group": "グループ",
+      "code1": "コード1",
+      "code2": "コード2",
+      "code3": "コード3"
+    }
+  }
+}

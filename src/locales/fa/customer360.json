@@ -1,0 +1,268 @@
+{
+  "title": "مشتری 360",
+  "notFound": "مشتری پیدا نشد",
+  "error": "خطایی رخ داد",
+  "retry": "دوباره امتحان کنید",
+  "quickActivity": "فعالیت سریع",
+  "currencyFilter": {
+    "label": "ارز",
+    "all": "همه"
+  },
+  "balanceDialog": {
+    "openButton": "خلاصه موجودی فعلی",
+    "title": "خلاصه موجودی فعلی",
+    "error": "خلاصه موجودی ERP بارگیری نشد."
+  },
+  "tabs": {
+    "quotations": "ارائه می دهد",
+    "orders": "سفارشات",
+    "activities": "فعالیت ها",
+    "overview": "خلاصه",
+    "analytics": "تجزیه و تحلیل",
+    "quickQuotations": "نقل قول های سریع",
+    "erpMovements": "جنبش ERP",
+    "erpOrders": "سفارش ERP",
+    "mailLogs": "تاریخچه ایمیل",
+    "images": "تصاویر",
+    "imagesDefaultDescription": "تصویر کارت ویزیت"
+  },
+  "quickQuotations": {
+    "empty": "هیچ پیشنهاد سریعی برای این صیغه یافت نشد",
+    "error": "نقل قول های سریع بارگیری نشدند",
+    "draft": "پیش نویس",
+    "converted": "به پیشنهاد بازگشت",
+    "sentToApproval": "برای تایید ارسال شد",
+    "notSentToApproval": "به تایید نرسید",
+    "currency": "ارز",
+    "total": "مجموع",
+    "quotationStatus": "وضعیت پیشنهاد",
+    "approvalStep": "مرحله تایید",
+    "stepValue": "مرحله {{step}}",
+    "convertedAt": "تبدیل: {{date}}",
+    "notConvertedYet": "هنوز به پیشنهاد تبدیل نشده است",
+    "openQuotation": "پیشنهاد را باز کنید"
+  },
+  "erpMovements": {
+    "title": "جنبش ERP",
+    "tableTitle": "جنبش های جاری",
+    "error": "داده های تراکنش ERP بارگیری نشد",
+    "columns": {
+      "date": "تاریخ",
+      "dueDate": "تاریخ سررسید",
+      "documentNo": "شماره سند",
+      "description": "توضیحات",
+      "currency": "ارز",
+      "debit": "بدهی",
+      "credit": "قابل دریافت",
+      "tlBalanceByDate": "تاریخ سفارش موجودی TL",
+      "tlBalanceByDueDate": "توالی سررسید TL موجودی",
+      "fxDebit": "بدهی ارزی",
+      "fxCredit": "ارز خارجی قابل دریافت",
+      "fxBalanceByDate": "تاریخ سفارش مانده ارز",
+      "fxBalanceByDueDate": "توالی سررسید موجودی ارز",
+      "actions": "معاملات"
+    },
+    "detail": {
+      "button": "جزئیات",
+      "title": "جزئیات قلم سند",
+      "description": "اقلام سهام Netsis متعلق به شماره سند {{documentNo}}.",
+      "error": "موارد سند بارگیری نشدند.",
+      "empty": "هیچ مورد موجودی برای این سند یافت نشد.",
+      "columns": {
+        "stockCode": "کد سهام",
+        "stockName": "نام سهام",
+        "quantity": "مقدار",
+        "grossPrice": "قیمت ناخالص",
+        "netPrice": "قیمت خالص",
+        "grossAmount": "میزان فروش ناخالص",
+        "discountAmount": "مبلغ تخفیف",
+        "vatAmount": "مقدار مالیات بر ارزش افزوده",
+        "total": "مقدار",
+        "fxPrice": "قیمت ارز خارجی",
+        "fxAmount": "مقدار ارز خارجی"
+      }
+    },
+    "summary": {
+      "totalDebit": "کل بدهی",
+      "totalCredit": "کل دریافتنی",
+      "balance": "تعادل",
+      "closed": "بسته شد"
+    }
+  },
+  "erpOrders": {
+    "title": "سفارشات نتسیس",
+    "noCariCode": "کد فعلی ERP برای این مشتری تعریف نشده است. سفارشات Netsis قابل مشاهده نیست.",
+    "forbidden": "شما مجاز به مشاهده سفارشات ERP نیستید.",
+    "error": "سفارشات ERP بارگیری نشد.",
+    "empty": "هیچ سفارش Netsis برای این حساب جاری یافت نشد.",
+    "scopeHint": "این لیست محدود به سفارشات در محدوده Netsis کاربر وارد شده است.",
+    "columns": {
+      "branch": "شاخه",
+      "orderNo": "شماره سفارش",
+      "date": "تاریخ",
+      "deliveryDate": "تحویل",
+      "gross": "ناخالص",
+      "vat": "مالیات بر ارزش افزوده",
+      "total": "مجموع",
+      "salesRep": "فروشنده"
+    }
+  },
+  "mail": {
+    "providers": {
+      "google": "گوگل",
+      "outlook": "چشم انداز"
+    },
+    "columns": {
+      "date": "تاریخ",
+      "sender": "ارسال شده توسط",
+      "to": "خریدار",
+      "subject": "موضوع",
+      "status": "وضعیت",
+      "template": "قالب",
+      "errorCode": "کد خطا",
+      "body": "پیام"
+    }
+  },
+  "kpi": {
+    "totalDemands": "کل پیشنهاد",
+    "totalQuotations": "کل پیشنهاد",
+    "totalOrders": "کل سفارش",
+    "openQuotations": "پیشنهاد را باز کنید",
+    "openOrders": "سفارش در انتظار"
+  },
+  "sections": {
+    "contacts": "ارتباطات",
+    "shippingAddresses": "آدرس های حمل و نقل",
+    "recentDemands": "آخرین درخواست ها",
+    "recentQuotations": "آخرین پیشنهادات",
+    "recentOrders": "آخرین سفارشات",
+    "recentActivities": "آخرین فعالیت ها",
+    "timeline": "جدول زمانی"
+  },
+  "analytics": {
+    "error": "داده های تجزیه و تحلیل بارگیری نشد",
+    "last12MonthsOrderAmount": "مبلغ سفارش 12 ماه گذشته",
+    "openQuotationAmount": "باز کردن مبلغ پیشنهاد",
+    "openOrderAmount": "مبلغ سفارش باز",
+    "activityCount": "تعداد فعالیت ها",
+    "lastActivityDate": "تاریخ آخرین فعالیت"
+  },
+  "analyticsCharts": {
+    "demand": "پیشنهاد",
+    "quotation": "پیشنهاد",
+    "order": "سفارش دهید",
+    "last12MonthsOrderAmount": "سفارش 12 ماه گذشته",
+    "openQuotationAmount": "پیشنهاد را باز کنید",
+    "openOrderAmount": "سفارش باز",
+    "distributionTitle": "توزیع",
+    "monthlyTrendTitle": "روند ماهانه",
+    "amountComparisonTitle": "مقایسه مقدار"
+  },
+  "currencyTotals": {
+    "currency": "ارز",
+    "demandAmount": "مبلغ پیشنهادی",
+    "quotationAmount": "مبلغ پیشنهادی",
+    "orderAmount": "مبلغ سفارش"
+  },
+  "revenueQuality": {
+    "title": "کیفیت درآمد",
+    "churnRisk": "خطر از دست دادن",
+    "upsell": "روند پرفروش",
+    "payment": "رفتار پرداخت",
+    "segment": "گروه بندی RFM",
+    "ltv": "ارزش مادام العمر"
+  },
+  "cohort": {
+    "title": "حفظ یک گروه",
+    "empty": "داده های گروهی وجود ندارد",
+    "cohortKey": "گروه"
+  },
+  "actions": {
+    "title": "اقدامات توصیه شده",
+    "empty": "هیچ اقدام توصیه شده ای وجود ندارد",
+    "execute": "درخواست کنید"
+  },
+  "explain": {
+    "revenueQualityTitle": "کیفیت درآمد، پتانسیل فروش و مشخصات ریسک مشتری را خلاصه می کند.",
+    "churnRisk": "ریسک ضرر نشان دهنده احتمال عدم سفارش مجدد مشتری است.",
+    "upsellPropensity": "روند صعودی نشان دهنده پتانسیل مشتری برای خرید حجم بالاتر یا محصولات اضافی است.",
+    "paymentBehavior": "رفتار پرداخت جمع بندی و الگوی پرداخت مشتری را خلاصه می کند.",
+    "rfmSegment": "گروه بندی RFM؛ گروه مشتری را بر اساس داده های نزدیکی، فراوانی و مقدار نشان می دهد.",
+    "modelNote": "این فیلدها خروجی های مدل تحلیلی هستند و برای اهداف پشتیبانی تصمیم نمایش داده می شوند.",
+    "cohortRetentionTitle": "حفظ کوهورت تداوم مشتریانی را که در یک دوره مشابه در طول زمان به دست آورده اند نشان می دهد.",
+    "noCohortData": "داده‌های گروهی کافی برای این مشتری یافت نشد.",
+    "recommendedActionsTitle": "اقدامات توصیه شده توسط سیستم در این زمینه فهرست شده است.",
+    "executeAction": "اقدام را اعمال کنید"
+  },
+  "hero": {
+    "statusActive": "فعال",
+    "statusCrm": "ثبت CRM",
+    "since": "از {{year}}",
+    "whatsapp": "واتس اپ",
+    "call": "جستجو کنید",
+    "email": "ایمیل",
+    "quickQuote": "نقل قول سریع",
+    "editCustomer": "مشتری را ویرایش کنید",
+    "none": "هیچ کدام",
+    "emailLabel": "ایمیل",
+    "phoneLabel": "تلفن",
+    "websiteLabel": "وب سایت",
+    "addressLabel": "آدرس",
+    "infoTitle": "اطلاعات",
+    "taxNumber": "شماره مالیات",
+    "customerType": "نوع مشتری",
+    "salesRep": "نماینده فروش",
+    "creditLimit": "محدودیت اعتباری"
+  },
+  "related": {
+    "newQuotation": "پیشنهاد جدید",
+    "newOrder": "سفارش جدید",
+    "newActivity": "فعالیت جدید",
+    "error": "لیست بارگیری نشد",
+    "emptyQuotations": "هیچ پیشنهادی برای این مشتری یافت نشد",
+    "emptyOrders": "سفارشی برای این مشتری پیدا نشد",
+    "emptyActivities": "هیچ فعالیتی برای این مشتری یافت نشد",
+    "columns": {
+      "offerNo": "خیر",
+      "date": "تاریخ",
+      "representative": "نماینده",
+      "total": "مقدار",
+      "subject": "موضوع",
+      "type": "تایپ کنید",
+      "assignee": "مسئول",
+      "status": "وضعیت"
+    },
+    "activityStatus": {
+      "scheduled": "برنامه ریزی شده است",
+      "completed": "تکمیل شد",
+      "cancelled": "لغو کنید"
+    }
+  },
+  "images": {
+    "upload": "آپلود تصویر",
+    "delete": "حذف کنید",
+    "emptyHint": "برای افزودن تصویر کلیک کنید یا بکشید",
+    "deleteConfirmTitle": "حذف تصویر",
+    "deleteConfirmDescription": "آیا مطمئن هستید که می خواهید این تصویر را حذف کنید؟ این عمل قابل بازگشت نیست."
+  },
+  "button": "مشتری 360",
+  "status": {
+    "havenotstarted": "شروع نشد",
+    "notstarted": "شروع نشد",
+    "inprogress": "در فرآیند تایید",
+    "pending": "در انتظار",
+    "waiting": "در انتظار",
+    "approved": "تصویب شد",
+    "rejected": "رد شد",
+    "completed": "تکمیل شد",
+    "cancelled": "لغو شد",
+    "canceled": "لغو شد",
+    "draft": "پیش نویس",
+    "converted": "به پیشنهاد بازگشت",
+    "sent": "فرستاده شد",
+    "active": "فعال",
+    "passive": "منفعل",
+    "closed": "بسته شد",
+    "open": "باز کردن"
+  }
+}

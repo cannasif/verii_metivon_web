@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "Планирование ресурсов с поддержкой ИИ",
+      "slogan": "Управляйте бизнесом с Metivon, а не с догадками.",
+      "branchPlaceholder": "Выберите филиал",
+      "emailPlaceholder": "Корпоративная электронная почта",
+      "passwordPlaceholder": "пароль",
+      "rememberMe": "Помни меня",
+      "forgotPassword": "Забыли мой пароль?",
+      "submitButton": "Войти",
+      "processing": "Обработка...",
+      "sessionExpired": "Срок вашей сессии истек. Пожалуйста, войдите снова.",
+      "comingSoon": "скоро",
+      "loginError": "Произошла ошибка при входе в систему.",
+      "capsLockOn": "Caps Lock включен",
+      "animationOn": "Открыть анимацию",
+      "animationOff": "Закрыть анимацию",
+      "eyebrow": "ERP С ПОДДЕРЖКОЙ ИИ",
+      "heroTitle": "Все потоки вашего бизнеса в одном",
+      "heroDescription": "Управляйте контрагентами, запасами, складом, приёмкой, отгрузкой и финансами в едином ядре.",
+      "welcomeEyebrow": "БЕЗОПАСНОЕ ПРОСТРАНСТВО",
+      "welcomeTitle": "Войти в Metivon",
+      "welcomeDescription": "Выберите филиал и безопасно войдите в рабочее пространство.",
+      "modules": {
+        "accounts": "Контрагенты",
+        "inventory": "Управление запасами",
+        "warehouse": "Склад и ячейки",
+        "shipping": "Отгрузка"
+      },
+      "live": "Онлайн",
+      "secureWorkspace": "Все операции в едином защищённом потоке данных",
+      "defaultBranch": "По умолчанию",
+      "showPassword": "Показать пароль",
+      "hidePassword": "Скрыть пароль",
+      "secureLogin": "Зашифрованный безопасный сеанс"
+    },
+    "forgotPassword": {
+      "title": "Я забыл свой пароль",
+      "description": "Введите свой адрес электронной почты, чтобы сбросить пароль. Мы вышлем вам ссылку для сброса пароля.",
+      "emailPlaceholder": "Адрес электронной почты",
+      "submitButton": "Отправить запрос на сброс пароля",
+      "backToLogin": "Вернуться на главную страницу",
+      "processing": "Обработка...",
+      "logoAlt": "Логотип приложения"
+    },
+    "resetPassword": {
+      "title": "Сброс пароля",
+      "newPasswordPlaceholder": "Новый пароль",
+      "confirmPasswordPlaceholder": "Повторите пароль",
+      "submitButton": "Сбросить пароль",
+      "processing": "Обработка...",
+      "invalidToken": "Неверный или отсутствующий токен. Пожалуйста, проверьте ссылку для сброса пароля еще раз.",
+      "tokenNotFound": "Токен не найден",
+      "successRedirect": "Ваш пароль был успешно сброшен. Вы будете перенаправлены на экран входа в систему...",
+      "failed": "Сбросить пароль не удалось.",
+      "error": "Во время процесса сброса пароля произошла ошибка."
+    },
+    "changePassword": {
+      "success": "Пароль успешно изменен.",
+      "error": "Пароль не удалось изменить."
+    },
+    "validation": {
+      "emailRequired": "Требуется электронная почта",
+      "emailInvalid": "Введите действительный адрес электронной почты",
+      "passwordRequired": "Требуется пароль",
+      "branchRequired": "Выбор филиала обязателен",
+      "passwordMinLength": "Пароль должен быть не менее 8 символов",
+      "tokenRequired": "Токен является обязательным",
+      "newPasswordMinLength": "Пароль должен быть не менее 6 символов",
+      "confirmPasswordRequired": "Требуется повторение пароля",
+      "passwordsMismatch": "Пароли не совпадают",
+      "currentPasswordRequired": "Требуется текущий пароль",
+      "newPasswordMaxLength": "Новый пароль может содержать не более 100 символов.",
+      "newPasswordSameAsCurrent": "Новый пароль не может совпадать с существующим паролем.",
+      "requiredFieldsNotFilled": "Обязательные поля не были заполнены."
+    }
+  }
+}

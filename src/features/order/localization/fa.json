@@ -1,0 +1,78 @@
+{
+  "lines": {
+    "doubleClickToEdit": "برای ویرایش دوبار کلیک کنید",
+    "unit": "واحد",
+    "descriptionFieldsTitle": "فیلدهای توضیحات",
+    "descriptionTooltipText": "این یک توصیف تولید مبتنی بر ردیف است. مطابقت Netsis هنگام وارد کردن به ERP: توضیحات 1 -> فیلد اضافی 1، توضیحات 2 -> فیلد اضافی 2، توضیحات 3 -> حاشیه نویسی ردیف 7.",
+    "descriptionTooltipPrefix": "این یک توصیف تولید مبتنی بر ردیف است. تطبیق Netsis هنگام انتقال به ERP:",
+    "erpTargetExtraField1": "فیلد اضافی 1",
+    "erpTargetExtraField2": "منطقه اضافی 2",
+    "erpTargetLineExtraDesc7": "حاشیه نویسی ردیف 7",
+    "profileErpTooltip": "این انتخاب نمایه هنگام ارسال به ERP در قسمت Netsis Line Annotation 2 ذخیره می شود.",
+    "rebarErpTooltip": "این انتخاب Iron هنگام ارسال به ERP به عنوان مقدار Netsis Row Annotation 3 ذخیره می شود.",
+    "screwErpTooltip": "این انتخاب پیچ هنگام ارسال به ERP به عنوان مقدار Netsis Line Annotation 4 ذخیره می شود.",
+    "printErpTooltip": "این انتخاب Print هنگام ارسال به ERP به عنوان مقدار Netsis Line Annotation 8 ذخیره می شود. کامنت چاپی همچنین به فیلدهای Comment 9 خط Netsis و Line Annotation 9 می رود.",
+    "lineItemDescriptionPlaceholder": "شرح مورد مبتنی بر خط"
+  },
+  "notes": {
+    "title": "یادداشت های سفارش",
+    "description": "یادداشت های داخلی را برای سفارش اضافه و به روز کنید.",
+    "placeholder": "یادداشت سفارش را وارد کنید",
+    "noteLabel": "یادداشت سفارش",
+    "notesTooltipText": "اینها یادداشت های حمل و نقل/فاکتور هستند که به کل سفارش مربوط می شوند. ترتیب Netsis به ترتیب در قسمت های حاشیه 1-5 بالا ثبت می شود. Note 2 به Netsis Annotation 2 می رود.",
+    "addLineTooltip": "افزودن خط نظر",
+    "linesHint": "هر خط به طور جداگانه در یادداشت های PDF و سند ظاهر می شود.",
+    "removeLine": "حذف ردیف",
+    "pageLabel": "صفحه {{current}} / {{total}}",
+    "saving": "در حال ذخیره یادداشت ها...",
+    "maxLengthError": "فیلد یادداشت می تواند تا 100 کاراکتر باشد."
+  },
+  "erpOrder": {
+    "title": "فهرست سفارش ERP",
+    "description": "سوابق والد سفارش و مواردی را که در محدوده کاربری وارد شده در Netsis ظاهر می شود، نظارت کنید.",
+    "currentUserScope": "بر اساس کاربر وارد شده",
+    "searchPlaceholder": "جستجوی شماره سفارش، فعلی، فروشنده یا تاریخ...",
+    "loading": "سفارشات ERP در حال بارگیری هستند...",
+    "loadError": "سفارشات ERP بارگیری نشد.",
+    "noData": "سفارش ERP پیدا نشد.",
+    "detailAction": "جزئیات",
+    "detailTitle": "جزئیات سفارش {{orderNo}}",
+    "unknownCustomer": "نام فعلی وجود ندارد",
+    "lineCount": "قلم {{count}}",
+    "linesLoading": "اقلام سفارش در حال بارگیری هستند...",
+    "lineLoadError": "موارد سفارش بارگیری نشدند.",
+    "noLines": "هیچ موردی برای این سفارش یافت نشد",
+    "table": {
+      "title": "سفارش هدرها",
+      "branchCode": "شاخه",
+      "orderNo": "شماره سفارش",
+      "customerCode": "کد فعلی",
+      "customerName": "نام فعلی",
+      "date": "تاریخ",
+      "deliveryDate": "تاریخ تحویل",
+      "grossTotal": "مقدار ناخالص",
+      "vat": "مالیات بر ارزش افزوده",
+      "grandTotal": "کل بزرگ",
+      "salesRepCode": "فروشنده"
+    },
+    "lines": {
+      "rowNo": "دنباله",
+      "stockCode": "کد سهام",
+      "stockName": "نام سهام",
+      "quantity": "مقدار",
+      "unit": "واحد",
+      "netPrice": "قیمت خالص",
+      "vatRate": "نرخ مالیات بر ارزش افزوده",
+      "warehouseCode": "انبار"
+    }
+  },
+  "header": {
+    "notes": "یادداشت ها",
+    "descriptionErpTooltip": "این توضیحات کلی است که می خواهید تولید برای کل سفارش مشاهده شود. هنگام ارسال به ERP، سفارش Netsis در قسمت بالا توضیحات (FatUst.Description) ثبت می شود.",
+    "ozelKod1": "کد ویژه 1",
+    "ozelKod1Placeholder": "کد ویژه 1 را انتخاب کنید",
+    "ozelKod2": "کد ویژه 2",
+    "ozelKod2Placeholder": "کد ویژه 2 را انتخاب کنید",
+    "specialCodeSearchPlaceholder": "جستجوی کد ویژه..."
+  }
+}

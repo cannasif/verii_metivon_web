@@ -1,0 +1,35 @@
+{
+  "menu": "Beheer van verkooptypen",
+  "description": "Beheer en bewerk verkooptypen",
+  "addButton": "Nieuw verkooptype toevoegen",
+  "searchPlaceholder": "Zoek naar verkooptype...",
+  "advancedFilter": {
+    "columnName": "Naam",
+    "columnCode": "Codeer",
+    "columnSalesType": "Aanbiedingstype"
+  },
+  "table": {
+    "title": "Lijst met verkooptypen",
+    "salesType": "Aanbiedingstype",
+    "name": "Naam",
+    "code": "Codeer",
+    "createdDate": "Aanmaakdatum"
+  },
+  "form": {
+    "addTitle": "Nieuw verkooptype toevoegen",
+    "editTitle": "Verkooptype bewerken",
+    "addDescription": "Maak een nieuwe definitie van het verkooptype.",
+    "editDescription": "Update de bestaande definitie van het verkooptype.",
+    "salesType": "Aanbiedingstype",
+    "name": "Naam",
+    "namePlaceholder": "Voer de naam van het verkooptype in",
+    "code": "Codeer",
+    "codePlaceholder": "Bijv. 1 of FOB",
+    "codeHelp": "Het is optioneel. Wanneer de bestelling wordt overgedragen aan Netsis, wordt deze verzonden als een eventuele export-/leveringstypecode; Indien leeg, wordt standaard FOB gebruikt voor het buitenland.",
+    "validation": {
+      "required": "Naam is vereist",
+      "whitespace": "Naam mag niet leeg zijn of alleen maar spaties zijn",
+      "codeMaxLength": "De code kan maximaal 50 tekens lang zijn"
+    }
+  }
+}

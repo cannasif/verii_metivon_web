@@ -1,0 +1,60 @@
+{
+  "approvalRole": {
+    "menu": "承認ロール管理",
+    "description": "承認ロールを管理および整理する",
+    "addButton": "新しい承認ロールの追加",
+    "searchPlaceholder": "検索...",
+    "refresh": "リフレッシュ",
+    "loading": "読み込み中...",
+    "noData": "データなし",
+    "table": {
+      "id": "ID",
+      "approvalRoleGroupName": "役割グループ",
+      "name": "役割名",
+      "maxAmount": "最大金額",
+      "createdDate": "作成日",
+      "createdBy": "作成者",
+      "actions": "アクション",
+      "totalRecords": "合計 {{count}} レコード。",
+      "page": "ページ {{current}} / {{total}}",
+      "previous": "前へ",
+      "next": "次へ",
+      "title": "承認の役割"
+    },
+    "delete": {
+      "confirmTitle": "削除の確認",
+      "confirmMessage": "このレコードを削除してもよろしいですか?この操作は元に戻すことができません。",
+      "cancelButton": "キャンセル",
+      "confirmButton": "削除",
+      "deleting": "削除中..."
+    },
+    "form": {
+      "editTitle": "承認ロールの編集",
+      "addTitle": "新しい承認ロールの追加",
+      "editDescription": "承認ロールの詳細を編集する",
+      "addDescription": "新しい承認ロールの詳細を入力します",
+      "approvalRoleGroupId": "承認役割グループ",
+      "selectApprovalRoleGroup": "承認役割グループの選択",
+      "noApprovalRoleGroupSelected": "承認役割グループが選択されていません",
+      "name": "役割名",
+      "namePlaceholder": "ロール名を入力してください",
+      "maxAmount": "最大金額",
+      "maxAmountPlaceholder": "最大金額を入力してください",
+      "approvalRoleGroupIdRequired": "承認役割グループの選択が必要です",
+      "nameRequired": "ロール名は必須です",
+      "nameMaxLength": "ロール名は最大 100 文字です",
+      "maxAmountMin": "最大金額は 0 未満にすることはできません",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "saving": "保存中..."
+    },
+    "advancedFilter": {
+      "columnName": "役割名",
+      "columnApprovalRoleGroupName": "役割グループ",
+      "columnMaxAmount": "最高額"
+    },
+    "messages": {
+      "error": "エラーが発生しました"
+    }
+  }
+}

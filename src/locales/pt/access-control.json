@@ -1,0 +1,146 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "Chave exclusiva usada pelos protetores de rota e página. Prefira Snake_case estável ou nomenclatura de pontos.",
+      "name": "Nome de exibição mostrado aos administradores ao gerenciar permissões.",
+      "description": "Explicação interna opcional para esta permissão.",
+      "isActive": "As permissões inativas não são consideradas no cálculo do acesso do usuário.",
+      "save": "As alterações afetam os fluxos de autorização de função e grupo."
+    },
+    "permissionGroup": {
+      "name": "Nome do grupo para identificação ao atribuir usuários.",
+      "isSystemAdmin": "Os membros deste grupo podem acessar todas as páginas e ações sem verificações de permissão individuais.",
+      "isActive": "Grupos inativos não devem ser atribuídos para novas decisões de acesso.",
+      "permissions": "As permissões selecionadas definem o que os membros deste grupo podem acessar.",
+      "save": "Atualiza o acesso efetivo para todos os usuários atribuídos a este grupo."
+    },
+    "userAssignment": {
+      "user": "Escolha o usuário cujo escopo de acesso você deseja gerenciar.",
+      "groups": "O usuário recebe permissões combinadas de todos os grupos selecionados.",
+      "save": "As atribuições aplicam-se imediatamente às próximas verificações de autorização. Os usuários podem precisar atualizar sua sessão.",
+      "systemAdminNote": "Se o usuário tiver um grupo de administradores do sistema, as permissões detalhadas serão ignoradas."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "Definições de permissão",
+    "description": "Gerenciar códigos de permissão usados no sistema",
+    "add": "Adicionar definição",
+    "form": {
+      "editTitle": "Editar definição de permissão",
+      "addTitle": "Adicionar definição de permissão",
+      "editDescription": "Atualizar detalhes da definição de permissão",
+      "addDescription": "Crie uma nova definição de permissão",
+      "code": "Código",
+      "codePlaceholder": "Selecione um código",
+      "affectedRoutes": "Páginas afetadas",
+      "affectedRoutesNone": "Nenhuma rota correspondente encontrada para este código",
+      "name": "Nome",
+      "namePlaceholder": "Nome de exibição",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Descrição opcional",
+      "isActive": "Ativo",
+      "codeSearchPlaceholder": "Pesquisar...",
+      "codeEmpty": "Nenhum resultado encontrado"
+    },
+    "table": {
+      "title": "Definições de permissão",
+      "code": "Código",
+      "name": "Nome",
+      "isActive": "Ativo",
+      "updatedDate": "Atualizado",
+      "showing": "{{from}}-{{to}} de {{total}}"
+    },
+    "delete": {
+      "confirmTitle": "Excluir definição de permissão",
+      "confirmMessage": "Tem certeza de que deseja excluir \"{{name}}\"? Esta ação não pode ser desfeita."
+    },
+    "syncFromRoutes": "Sincronizar de rotas",
+    "syncSummaryTitle": "Sincronização de rota"
+  },
+  "permissionGroups": {
+    "title": "Grupos de permissão",
+    "description": "Gerenciar grupos de permissões e suas atribuições",
+    "add": "Adicionar grupo",
+    "selectAll": "Selecionar tudo",
+    "noDefinitions": "Nenhuma definição de permissão disponível",
+    "form": {
+      "editTitle": "Editar grupo de permissões",
+      "addTitle": "Adicionar grupo de permissões",
+      "editDescription": "Atualizar detalhes do grupo de permissões",
+      "addDescription": "Crie um novo grupo de permissões",
+      "name": "Nome",
+      "namePlaceholder": "Nome do grupo",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Descrição opcional",
+      "isSystemAdmin": "Administrador do sistema",
+      "isActive": "Ativo",
+      "permissions": "Permissões"
+    },
+    "table": {
+      "name": "Nome",
+      "isSystemAdmin": "Administrador do sistema",
+      "isActive": "Ativo",
+      "permissionCount": "Permissões",
+      "showing": "{{from}}-{{to}} de {{total}}",
+      "title": "İzin Grupları"
+    },
+    "managePermissions": "Gerenciar permissões",
+    "permissionsPanel": {
+      "title": "Editar permissões de grupo",
+      "description": "Selecione permissões para este grupo",
+      "currentCodes": "Códigos de permissão atuais",
+      "groupedRows": "telas",
+      "screen": "Tela",
+      "actionsMapped": "ações",
+      "actions": {
+        "create": "Criar",
+        "read": "Leia",
+        "update": "Atualizar",
+        "delete": "Excluir",
+        "other": "Permissões de operação"
+      }
+    },
+    "delete": {
+      "confirmTitle": "Excluir grupo de permissões",
+      "confirmMessage": "Tem certeza de que deseja excluir \"{{name}}\"? Esta ação não pode ser desfeita."
+    },
+    "search": "Pesquisar...",
+    "systemAdminLocked": "O grupo System Admin não pode ser alterado"
+  },
+  "userGroupAssignments": {
+    "title": "Atribuições de grupos de usuários",
+    "description": "Atribuir grupos de permissão aos usuários",
+    "selectUser": "Selecione o usuário",
+    "selectUserPlaceholder": "Pesquise e selecione o usuário...",
+    "selectUserHint": "Selecione um usuário para gerenciar suas atribuições de grupo de permissões",
+    "assignedGroups": "Grupos de permissão atribuídos",
+    "noUsers": "Nenhum usuário encontrado",
+    "noGroups": "Nenhum grupo de permissão disponível",
+    "selectAll": "Selecionar tudo",
+    "status": "Estado",
+    "unsavedChanges": "Não salvo",
+    "upToDate": "Atualizado"
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "saving": "Salvando...",
+    "save": "Salvar e aplicar",
+    "loading": "Carregando...",
+    "search": "Pesquisar...",
+    "noData": "Sem dados",
+    "actions": "Ações",
+    "yes": "Sim",
+    "no": "Não",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "processing": "Processando..."
+  },
+  "sidebar": {
+    "accessControl": "Controle de acesso",
+    "permissionDefinitions": "Definições de permissão",
+    "permissionGroups": "Grupos de permissão",
+    "userGroupAssignments": "Atribuições de grupos de usuários"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "approvalRole": {
+    "menu": "Gerenciamento de funções de aprovação",
+    "description": "Gerenciar e organizar funções de aprovação",
+    "addButton": "Adicionar nova função de aprovação",
+    "searchPlaceholder": "Pesquisar...",
+    "refresh": "Atualizar",
+    "loading": "Carregando...",
+    "noData": "Sem dados",
+    "table": {
+      "id": "ID",
+      "approvalRoleGroupName": "Grupo de funções",
+      "name": "Nome da função",
+      "maxAmount": "Valor máximo",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por",
+      "actions": "Ações",
+      "totalRecords": "Total de registros {{count}}.",
+      "page": "Página {{current}} / {{total}}",
+      "previous": "Anterior",
+      "next": "Próximo",
+      "title": "Funções de aprovação"
+    },
+    "delete": {
+      "confirmTitle": "Excluir confirmação",
+      "confirmMessage": "Tem certeza de que deseja excluir este registro? Esta ação não pode ser desfeita.",
+      "cancelButton": "Cancelar",
+      "confirmButton": "Excluir",
+      "deleting": "Excluindo..."
+    },
+    "form": {
+      "editTitle": "Editar função de aprovação",
+      "addTitle": "Adicionar nova função de aprovação",
+      "editDescription": "Editar detalhes da função de aprovação",
+      "addDescription": "Insira os detalhes da nova função de aprovação",
+      "approvalRoleGroupId": "Grupo de funções de aprovação",
+      "selectApprovalRoleGroup": "Selecione o grupo de funções de aprovação",
+      "noApprovalRoleGroupSelected": "Nenhum grupo de funções de aprovação selecionado",
+      "name": "Nome da função",
+      "namePlaceholder": "Insira o nome da função",
+      "maxAmount": "Valor máximo",
+      "maxAmountPlaceholder": "Insira o valor máximo",
+      "approvalRoleGroupIdRequired": "A seleção do grupo de funções de aprovação é obrigatória",
+      "nameRequired": "O nome da função é obrigatório",
+      "nameMaxLength": "O nome da função pode ter no máximo 100 caracteres",
+      "maxAmountMin": "O valor máximo não pode ser inferior a 0",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "saving": "Salvando..."
+    },
+    "advancedFilter": {
+      "columnName": "Nome da função",
+      "columnApprovalRoleGroupName": "Grupo de funções",
+      "columnMaxAmount": "Valor Máximo"
+    },
+    "messages": {
+      "error": "Ocorreu um erro"
+    }
+  }
+}

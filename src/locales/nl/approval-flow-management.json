@@ -1,0 +1,103 @@
+{
+  "approvalFlow": {
+    "menu": "Goedkeuringsstroombeheer",
+    "description": "Beheer en organiseer goedkeuringsstromen",
+    "addButton": "Voeg een nieuwe goedkeuringsstroom toe",
+    "table": {
+      "id": "Identiteitskaart",
+      "documentType": "Documenttype",
+      "description": "Beschrijving",
+      "isActive": "Actief",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "actions": "Acties",
+      "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+      "page": "Pagina {{current}} / {{total}}",
+      "title": "Goedkeuringsstromen"
+    },
+    "form": {
+      "addTitle": "Voeg een nieuwe goedkeuringsstroom toe",
+      "editTitle": "Goedkeuringsstroom bewerken",
+      "addDescription": "Voer nieuwe goedkeuringsstroominformatie in",
+      "editDescription": "Goedkeuringsstroominformatie bewerken",
+      "documentType": "Documenttype",
+      "selectDocumentType": "Selecteer documenttype",
+      "noDocumentTypeSelected": "Geen documenttype geselecteerd",
+      "documentTypeRequired": "Selectie van het documenttype is vereist",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Beschrijving invoeren (optioneel)",
+      "descriptionMaxLength": "De beschrijving mag maximaal 200 tekens bevatten",
+      "isActive": "Actief",
+      "isActiveDescription": "Actieve status van de goedkeuringsstroom",
+      "cancel": "Annuleer",
+      "save": "Opslaan",
+      "saving": "Opslaan..."
+    },
+    "loading": "Laden...",
+    "noData": "Geen gegevens",
+    "active": "Actief",
+    "inactive": "Inactief",
+    "previous": "Vorige",
+    "next": "Volgende",
+    "delete": {
+      "action": "Verwijderen",
+      "cancel": "Annuleer",
+      "confirmTitle": "Goedkeuringsstroom verwijderen",
+      "confirmMessage": "Weet u zeker dat u dit goedkeuringsproces wilt verwijderen?",
+      "title": "Goedkeuringsstroom verwijderen",
+      "confirm": "Weet u zeker dat u dit goedkeuringsproces wilt verwijderen?"
+    },
+    "documentType": {
+      "offer": "Aanbieding",
+      "request": "Verzoek",
+      "order": "Bestel",
+      "demand": "Vraag",
+      "quotation": "Offerte",
+      "purchaseRequest": "Aankoopverzoek",
+      "purchaseRfq": "Offerteaanvraag (RFQ)",
+      "supplierQuotation": "Offerte van leverancier",
+      "purchaseOrder": "Aankooporder"
+    },
+    "advancedFilter": {
+      "columnDocumentType": "Documenttype",
+      "columnDescription": "Beschrijving",
+      "columnIsActive": "Actief",
+      "columnCreatedBy": "Gemaakt door"
+    },
+    "messages": {
+      "deleteSuccess": "Goedkeuringsstroom is succesvol verwijderd",
+      "deleteError": "Er is een fout opgetreden bij het verwijderen van de goedkeuringsstroom"
+    },
+    "steps": "Stroom stappen",
+    "error": "Er is een fout opgetreden"
+  },
+  "approvalFlowStep": {
+    "title": "Stroomstappen",
+    "addButton": "Stap toevoegen",
+    "empty": "Nog geen stappen toegevoegd",
+    "unknownRoleGroup": "Geen rolgroep",
+    "stepDescription": "Goedkeuringsorder: {{order}}",
+    "deleteDialog": {
+      "title": "Stap verwijderen",
+      "description": "Weet u zeker dat u deze stap wilt verwijderen?",
+      "confirm": "Verwijderen",
+      "cancel": "Annuleer"
+    },
+    "form": {
+      "addTitle": "Nieuwe stap toevoegen",
+      "editTitle": "Stap bewerken",
+      "addDescription": "Voeg een nieuwe stroomstap toe",
+      "editDescription": "Stroomstapinformatie bewerken",
+      "approvalRoleGroup": "Rolgroep",
+      "selectRoleGroup": "Selecteer rollengroep",
+      "noRoleGroupSelected": "Geen rollengroep geselecteerd",
+      "approvalRoleGroupIdRequired": "Selectie van rolgroepen is vereist",
+      "cancel": "Annuleer",
+      "save": "Opslaan",
+      "saving": "Opslaan..."
+    },
+    "messages": {
+      "deleteConfirm": "Weet u zeker dat u deze stap wilt verwijderen?"
+    }
+  }
+}

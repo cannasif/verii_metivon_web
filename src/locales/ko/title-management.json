@@ -1,0 +1,65 @@
+{
+  "loading": "로드 중...",
+  "noData": "데이터가 없습니다",
+  "error": "오류가 발생했습니다",
+  "search": "검색...",
+  "refresh": "새로고침",
+  "previous": "이전",
+  "next": "다음",
+  "advancedFilter": {
+    "columnTitleName": "제목 이름",
+    "columnCode": "코드"
+  },
+  "cancel": "취소",
+  "save": "저장",
+  "saving": "녹음 중...",
+  "delete": {
+    "confirmTitle": "제목 삭제",
+    "confirmMessage": "{{titleName}} 제목을 삭제하시겠습니까?",
+    "button": "삭제"
+  },
+  "deleting": "삭제 중...",
+  "actions": "거래",
+  "edit": "편집",
+  "header": {
+    "title": "타이틀 관리",
+    "description": "여기에서 제목 정의를 관리할 수 있습니다."
+  },
+  "table": {
+    "title": "타이틀 목록",
+    "id": "아이디",
+    "name": "제목 이름",
+    "code": "코드",
+    "createdDate": "생성 날짜",
+    "createdBy": "사용자가 생성함",
+    "showing": "{{from}}-{{to}} / {{total}} 표시 중",
+    "page": "페이지 {{current}} / {{total}}"
+  },
+  "form": {
+    "addTitle": "새 제목 추가",
+    "editTitle": "제목 편집",
+    "addDescription": "새 제목 정보를 입력하세요.",
+    "editDescription": "제목 정보 수정",
+    "titleName": "제목 이름",
+    "titleNamePlaceholder": "제목 이름을 입력하세요",
+    "titleCode": "타이틀 코드",
+    "codePlaceholder": "코드 입력(선택사항)",
+    "cancel": "취소",
+    "save": "저장",
+    "saving": "녹음 중..."
+  },
+  "menu": "타이틀 관리",
+  "stats": {
+    "totalTitles": "총 제목",
+    "activeTitles": "활성 제목",
+    "newThisMonth": "이번 달 새로운"
+  },
+  "description": "제목 관리 및 편집",
+  "addButton": "새 제목 추가",
+  "showStats": "통계 표시",
+  "hideStats": "통계 숨기기",
+  "messages": {
+    "deleteSuccess": "제목이 삭제되었습니다.",
+    "deleteError": "제목을 삭제할 수 없습니다."
+  }
+}

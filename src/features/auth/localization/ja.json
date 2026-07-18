@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "AI搭載の統合基幹業務システム",
+      "slogan": "推測ではなくMetivonでビジネスを管理。",
+      "branchPlaceholder": "ブランチの選択",
+      "emailPlaceholder": "企業メール",
+      "passwordPlaceholder": "パスワード",
+      "rememberMe": "リメンバー・ミー",
+      "forgotPassword": "パスワードを忘れましたか?",
+      "submitButton": "ログイン",
+      "processing": "処理中...",
+      "sessionExpired": "セッションの有効期限が切れました。再度ログインしてください。",
+      "comingSoon": "すぐに",
+      "loginError": "ログイン中にエラーが発生しました。",
+      "capsLockOn": "CapsLockがオンになっている",
+      "animationOn": "アニメーションを開く",
+      "animationOff": "アニメーションを閉じる",
+      "eyebrow": "AI搭載ERP",
+      "heroTitle": "企業のすべての流れをひとつの",
+      "heroDescription": "取引先、在庫、倉庫、入荷、出荷、財務をひとつの業務コアで管理します。",
+      "welcomeEyebrow": "安全なワークスペース",
+      "welcomeTitle": "Metivonにサインイン",
+      "welcomeDescription": "支店を選択して企業ワークスペースへ安全にアクセスしてください。",
+      "modules": {
+        "accounts": "取引先管理",
+        "inventory": "在庫管理",
+        "warehouse": "倉庫・ロケーション",
+        "shipping": "出荷"
+      },
+      "live": "稼働中",
+      "secureWorkspace": "すべての業務を安全なデータフローで統合",
+      "defaultBranch": "既定",
+      "showPassword": "パスワードを表示",
+      "hidePassword": "パスワードを隠す",
+      "secureLogin": "暗号化された安全なセッション"
+    },
+    "forgotPassword": {
+      "title": "パスワードを忘れた場合",
+      "description": "メールアドレスを入力してパスワードをリセットしてください。パスワードリセットリンクをお送りします。",
+      "emailPlaceholder": "メールアドレス",
+      "submitButton": "パスワードリセットリクエストを送信する",
+      "backToLogin": "ホームページに戻る",
+      "processing": "処理中...",
+      "logoAlt": "アプリケーションのロゴ"
+    },
+    "resetPassword": {
+      "title": "パスワードのリセット",
+      "newPasswordPlaceholder": "新しいパスワード",
+      "confirmPasswordPlaceholder": "パスワードの繰り返し",
+      "submitButton": "パスワードのリセット",
+      "processing": "処理中...",
+      "invalidToken": "トークンが無効または欠落しています。パスワードリセットリンクを再度ご確認ください。",
+      "tokenNotFound": "トークンが見つかりません",
+      "successRedirect": "パスワードは正常にリセットされました。ログイン画面に移動します...",
+      "failed": "パスワードのリセットに失敗しました。",
+      "error": "パスワードのリセット処理中にエラーが発生しました。"
+    },
+    "changePassword": {
+      "success": "パスワードは正常に変更されました。",
+      "error": "パスワードを変更できませんでした。"
+    },
+    "validation": {
+      "emailRequired": "メールアドレスは必須です",
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "passwordRequired": "パスワードが必要です",
+      "branchRequired": "ブランチの選択は必須です",
+      "passwordMinLength": "パスワードは8文字以上である必要があります",
+      "tokenRequired": "トークンは必須です",
+      "newPasswordMinLength": "パスワードは6文字以上である必要があります",
+      "confirmPasswordRequired": "パスワードの繰り返しが必要です",
+      "passwordsMismatch": "パスワードが一致しません",
+      "currentPasswordRequired": "現在のパスワードが必要です",
+      "newPasswordMaxLength": "新しいパスワードは最大 100 文字です。",
+      "newPasswordSameAsCurrent": "新しいパスワードは既存のパスワードと同じにすることはできません",
+      "requiredFieldsNotFilled": "必須フィールドが入力されていませんでした。"
+    }
+  }
+}

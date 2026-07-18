@@ -1,0 +1,83 @@
+{
+  "menu": "城市管理",
+  "description": "管理和组织城市",
+  "addButton": "添加新城市",
+  "searchPlaceholder": "搜索...",
+  "loading": "加载中...",
+  "noData": "没有找到数据",
+  "stats": {
+    "totalCities": "城市总数",
+    "activeCities": "活跃城市",
+    "newThisMonth": "本月新品"
+  },
+  "table": {
+    "title": "城市列表",
+    "id": "身份证号",
+    "name": "城市名称",
+    "erpCode": "ERP代码",
+    "countryName": "国家名称",
+    "createdDate": "创建日期",
+    "createdBy": "创建者",
+    "showing": "显示 {{from}}-{{to}} / {{total}}",
+    "page": "页 {{current}} / {{total}}"
+  },
+  "cityManagement": {
+    "table": {
+      "title": "城市列表",
+      "id": "身份证号",
+      "name": "城市名称",
+      "erpCode": "ERP代码",
+      "countryName": "国家名称",
+      "createdDate": "创建日期",
+      "createdBy": "创建者"
+    },
+    "error": "发生错误",
+    "form": {
+      "tabs": {
+        "header": "一般信息"
+      }
+    },
+    "menu": "城市管理",
+    "description": "管理和组织城市",
+    "addButton": "添加新城市",
+    "searchPlaceholder": "快速搜索...",
+    "loading": "加载中...",
+    "noData": "没有找到数据",
+    "actions": "行动",
+    "delete": {
+      "success": "城市删除成功",
+      "error": "删除城市时出错",
+      "confirmTitle": "删除城市",
+      "confirmMessage": "您确定要删除 {{name}} 吗？"
+    }
+  },
+  "form": {
+    "editCity": "编辑城市",
+    "addCity": "添加新城市",
+    "editDescription": "编辑城市详细信息",
+    "addDescription": "输入新城市详细信息",
+    "name": "城市名称",
+    "namePlaceholder": "输入城市名称",
+    "country": "国家",
+    "selectCountry": "选择国家",
+    "erpCode": "ERP代码",
+    "erpCodePlaceholder": "输入 ERP 代码（可选）",
+    "cancel": "取消",
+    "save": "保存",
+    "saving": "正在保存...",
+    "nameRequired": "城市名称为必填项",
+    "nameMaxLength": "城市名称最多 100 个字符",
+    "erpCodeMaxLength": "ERP 代码最多可以是 10 个字符",
+    "countryRequired": "需要选择国家/地区"
+  },
+  "actions": "行动",
+  "delete": {
+    "button": "删除",
+    "success": "城市删除成功",
+    "error": "删除城市时出错",
+    "confirmTitle": "删除城市",
+    "confirmMessage": "您确定要删除 {{name}} 吗？"
+  },
+  "previous": "上一页",
+  "next": "下一步"
+}

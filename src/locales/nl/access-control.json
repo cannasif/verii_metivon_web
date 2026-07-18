@@ -1,0 +1,146 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "Unieke sleutel gebruikt door route- en paginabewakers. Geef de voorkeur aan stabiele snake_case of puntnaamgeving.",
+      "name": "Weergavenaam die aan beheerders wordt getoond bij het beheren van machtigingen.",
+      "description": "Optionele interne uitleg voor deze toestemming.",
+      "isActive": "Bij het berekenen van de gebruikerstoegang wordt geen rekening gehouden met inactieve machtigingen.",
+      "save": "Wijzigingen zijn van invloed op de autorisatiestromen voor rollen en groepen."
+    },
+    "permissionGroup": {
+      "name": "Groepsnaam ter identificatie bij het toewijzen aan gebruikers.",
+      "isSystemAdmin": "Leden van deze groep hebben toegang tot alle pagina's en acties zonder individuele toestemmingscontroles.",
+      "isActive": "Inactieve groepen mogen niet worden toegewezen voor nieuwe toegangsbeslissingen.",
+      "permissions": "Geselecteerde machtigingen bepalen waartoe leden van deze groep toegang hebben.",
+      "save": "Werkt de effectieve toegang bij voor alle gebruikers die aan deze groep zijn toegewezen."
+    },
+    "userAssignment": {
+      "user": "Kies de gebruiker wiens toegangsniveau u wilt beheren.",
+      "groups": "Gebruiker ontvangt gecombineerde machtigingen van alle geselecteerde groepen.",
+      "save": "Opdrachten gelden direct voor de volgende autorisatiecontroles. Gebruikers moeten mogelijk hun sessie vernieuwen.",
+      "systemAdminNote": "Als de gebruiker een systeembeheerdersgroep heeft, worden gedetailleerde machtigingen omzeild."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "Toestemmingsdefinities",
+    "description": "Beheer toestemmingscodes die in het systeem worden gebruikt",
+    "add": "Definitie toevoegen",
+    "form": {
+      "editTitle": "Toestemmingsdefinitie bewerken",
+      "addTitle": "Toestemmingsdefinitie toevoegen",
+      "editDescription": "Details van de machtigingsdefinitie bijwerken",
+      "addDescription": "Maak een nieuwe machtigingsdefinitie",
+      "code": "Codeer",
+      "codePlaceholder": "Selecteer een code",
+      "affectedRoutes": "Betrokken pagina's",
+      "affectedRoutesNone": "Er zijn geen overeenkomende routes gevonden voor deze code",
+      "name": "Naam",
+      "namePlaceholder": "Weergavenaam",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Optionele beschrijving",
+      "isActive": "Actief",
+      "codeSearchPlaceholder": "Zoeken...",
+      "codeEmpty": "Geen resultaten gevonden"
+    },
+    "table": {
+      "title": "Toestemmingsdefinities",
+      "code": "Codeer",
+      "name": "Naam",
+      "isActive": "Actief",
+      "updatedDate": "Bijgewerkt",
+      "showing": "{{from}}-{{to}} van {{total}}"
+    },
+    "delete": {
+      "confirmTitle": "Toestemmingsdefinitie verwijderen",
+      "confirmMessage": "Weet u zeker dat u \"{{name}}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt."
+    },
+    "syncFromRoutes": "Synchroniseer van routes",
+    "syncSummaryTitle": "Routesynchronisatie"
+  },
+  "permissionGroups": {
+    "title": "Toestemmingsgroepen",
+    "description": "Beheer machtigingsgroepen en hun toewijzingen",
+    "add": "Groep toevoegen",
+    "selectAll": "Selecteer alles",
+    "noDefinitions": "Er zijn geen machtigingsdefinities beschikbaar",
+    "form": {
+      "editTitle": "Machtigingsgroep bewerken",
+      "addTitle": "Machtigingsgroep toevoegen",
+      "editDescription": "Update de details van de machtigingsgroep",
+      "addDescription": "Maak een nieuwe machtigingsgroep",
+      "name": "Naam",
+      "namePlaceholder": "Groepsnaam",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Optionele beschrijving",
+      "isSystemAdmin": "Systeembeheerder",
+      "isActive": "Actief",
+      "permissions": "Machtigingen"
+    },
+    "table": {
+      "name": "Naam",
+      "isSystemAdmin": "Systeembeheerder",
+      "isActive": "Actief",
+      "permissionCount": "Machtigingen",
+      "showing": "{{from}}-{{to}} van {{total}}",
+      "title": "İzin Grupları"
+    },
+    "managePermissions": "Beheer machtigingen",
+    "permissionsPanel": {
+      "title": "Groepsrechten bewerken",
+      "description": "Selecteer machtigingen voor deze groep",
+      "currentCodes": "Huidige toestemmingscodes",
+      "groupedRows": "schermen",
+      "screen": "Scherm",
+      "actionsMapped": "acties",
+      "actions": {
+        "create": "Creëer",
+        "read": "Lees",
+        "update": "Bijwerken",
+        "delete": "Verwijderen",
+        "other": "Bedieningsrechten"
+      }
+    },
+    "delete": {
+      "confirmTitle": "Machtigingsgroep verwijderen",
+      "confirmMessage": "Weet u zeker dat u \"{{name}}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt."
+    },
+    "search": "Zoeken...",
+    "systemAdminLocked": "Systeembeheerdersgroep kan niet worden gewijzigd"
+  },
+  "userGroupAssignments": {
+    "title": "Toewijzingen van gebruikersgroepen",
+    "description": "Wijs machtigingsgroepen toe aan gebruikers",
+    "selectUser": "Selecteer Gebruiker",
+    "selectUserPlaceholder": "Zoek en selecteer gebruiker...",
+    "selectUserHint": "Selecteer een gebruiker om de toewijzingen van zijn machtigingsgroepen te beheren",
+    "assignedGroups": "Toegewezen machtigingsgroepen",
+    "noUsers": "Geen gebruikers gevonden",
+    "noGroups": "Geen rechtengroepen beschikbaar",
+    "selectAll": "Selecteer alles",
+    "status": "Status",
+    "unsavedChanges": "Niet opgeslagen",
+    "upToDate": "Up-to-date"
+  },
+  "common": {
+    "cancel": "Annuleer",
+    "saving": "Opslaan...",
+    "save": "Opslaan en toepassen",
+    "loading": "Laden...",
+    "search": "Zoeken...",
+    "noData": "Geen gegevens",
+    "actions": "Acties",
+    "yes": "Ja",
+    "no": "Nee",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "previous": "Vorige",
+    "next": "Volgende",
+    "processing": "Verwerken..."
+  },
+  "sidebar": {
+    "accessControl": "Toegangscontrole",
+    "permissionDefinitions": "Toestemmingsdefinities",
+    "permissionGroups": "Toestemmingsgroepen",
+    "userGroupAssignments": "Toewijzingen van gebruikersgroepen"
+  }
+}

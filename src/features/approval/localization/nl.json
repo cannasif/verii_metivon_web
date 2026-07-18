@@ -1,0 +1,85 @@
+{
+  "list": {
+    "title": "In afwachting van goedkeuringen",
+    "description": "U kunt de aan u toegewezen aanbiedingen bekijken en goedkeuren of afwijzen",
+    "empty": "Er zijn geen goedkeuringen in behandeling",
+    "error": "Er is een fout opgetreden tijdens het laden van bevestigingen"
+  },
+  "yes": "Ja",
+  "no": "nee",
+  "processing": "Verwerken...",
+  "detail": {
+    "title": "Aanbiedingsdetails",
+    "subtitle": "Bekijk de aanbiedingsdetails en onderneem actie",
+    "tabs": {
+      "detail": "Details",
+      "history": "verleden",
+      "action": "transactie"
+    },
+    "notFound": "Geen aanbieding gevonden",
+    "quotationInfo": "Informatie aanbieden",
+    "offerNo": "Aanbieding nr.",
+    "customer": "klant",
+    "representative": "vertegenwoordiger",
+    "currency": "Valuta",
+    "offerDate": "Aanbiedingsdatum",
+    "deliveryDate": "Leveringsdatum",
+    "total": "Totaal",
+    "grandTotal": "Algemeen totaal",
+    "description": "Beschrijving",
+    "lines": "Citaatregels",
+    "productCode": "Productcode",
+    "productName": "Productnaam",
+    "quantity": "Hoeveelheid",
+    "unitPrice": "Eenheidsprijs",
+    "lineTotal": "Rij Totaal",
+    "lineGrandTotal": "Rij eindtotaal",
+    "exchangeRates": "Wisselkoersen",
+    "exchangeRate": "Installeren",
+    "exchangeRateDate": "Wisselkoersdatum",
+    "isOfficial": "Officieel installeren"
+  },
+  "actions": {
+    "view": "Bekijk",
+    "approve": "Bevestig",
+    "reject": "afwijzen"
+  },
+  "status": {
+    "notRequired": "ontwerp",
+    "waiting": "wachten",
+    "approved": "Goedgekeurd",
+    "rejected": "afgewezen",
+    "closed": "Gesloten"
+  },
+  "closedReason": "Dit record is gesloten omdat een ander record met hetzelfde aanbiedingsnummer is goedgekeurd.",
+  "statusFilterLabel": "Goedkeuringsstatus",
+  "level": {
+    "salesManager": "Verkoopmanager",
+    "regionalManager": "Regiomanager",
+    "finance": "Financiën",
+    "generalManager": "Algemeen directeur",
+    "unknown": "onbekend"
+  },
+  "note": {
+    "label": "opmerking",
+    "placeholder": "U kunt een goedkeurings-/afwijzingsnotitie toevoegen (optioneel)",
+    "maxLength": "Opmerking kan maximaal 500 tekens lang zijn"
+  },
+  "approve": {
+    "success": "Goedgekeurd",
+    "successMessage": "Aanbieding succesvol goedgekeurd",
+    "error": "Bewering fout",
+    "errorMessage": "Er is een fout opgetreden bij het goedkeuren van de aanbieding"
+  },
+  "reject": {
+    "success": "afgewezen",
+    "successMessage": "aanbod afgewezen",
+    "error": "Afwijzingsfout",
+    "errorMessage": "Er is een fout opgetreden bij het afwijzen van het aanbod"
+  },
+  "history": {
+    "empty": "Er is geen goedkeuringsgeschiedenis",
+    "approvedBy": "Goedgekeurd door"
+  },
+  "assignedTo": "Toegewezen gebruiker"
+}

@@ -1,0 +1,85 @@
+{
+  "menu": "ERP顧客",
+  "description": "ERPシステムからの顧客リスト",
+  "loading": "読み込み中...",
+  "noData": "顧客が見つかりません",
+  "table": {
+    "title": "顧客リスト",
+    "branchCode": "支店コード",
+    "businessUnitCode": "ビジネスユニットコード",
+    "customerCode": "顧客コード",
+    "customerName": "顧客名",
+    "phone": "電話",
+    "city": "市",
+    "district": "地区",
+    "address": "住所",
+    "countryCode": "国コード",
+    "email": "電子メール",
+    "website": "ウェブサイト",
+    "taxNumber": "納税者番号",
+    "taxOffice": "税務署",
+    "tcknNumber": "TR ID 番号",
+    "visibleColumns": "表示される列",
+    "editColumns": "列の編集"
+  },
+  "filterLabels": {
+    "branchCode": "支店コード",
+    "customerCode": "顧客コード",
+    "customerName": "顧客名",
+    "city": "市",
+    "district": "地区",
+    "taxNumber": "納税者番号"
+  },
+  "placeholders": {
+    "quickSearch": "クイック検索...",
+    "all": "すべて",
+    "codeExample": "例: 120...",
+    "nameExample": "お客様のお名前...",
+    "cityExample": "県...",
+    "districtExample": "地区...",
+    "taxExample": "税/TR ID 番号..."
+  },
+  "actions": {
+    "detailedFilter": "詳細フィルター",
+    "clear": "クリア",
+    "filter": "フィルター",
+    "all": "すべて",
+    "active": "アクティブ",
+    "passive": "パッシブ",
+    "apply": "結果をリストする"
+  },
+  "details": {
+    "title": "顧客の詳細",
+    "addressInfo": "住所情報"
+  },
+  "common": {
+    "close": "閉じる",
+    "selectAll": "すべて選択",
+    "ok": "OK",
+    "totalRecords": "総登録数"
+  },
+  "advancedFilter": {
+    "title": "高度なフィルター",
+    "add": "フィルターの追加",
+    "column": "コラム",
+    "operator": "オペレーター",
+    "value": "値",
+    "search": "検索",
+    "clear": "クリア",
+    "remove": "削除",
+    "columnCustomerCode": "顧客コード",
+    "columnCustomerName": "顧客名",
+    "columnBranchCode": "支店コード",
+    "columnCity": "市",
+    "columnDistrict": "地区",
+    "columnTaxNumber": "納税者番号",
+    "operatorContains": "含まれています",
+    "operatorStartsWith": "それはから始まります",
+    "operatorEndsWith": "で終わる",
+    "operatorEquals": "等しい",
+    "operator>": ">",
+    "operator>=": ">=",
+    "operator<": "<",
+    "operator<=": "<="
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "error": "Wystąpił błąd",
+  "search": "Szukaj...",
+  "refresh": "Odśwież",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "advancedFilter": {
+    "columnTitleName": "Tytuł Nazwa",
+    "columnCode": "Kod"
+  },
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Nagrywanie...",
+  "delete": {
+    "confirmTitle": "Usuń tytuł",
+    "confirmMessage": "Czy na pewno chcesz usunąć tytuł {{titleName}}?",
+    "button": "Usuń"
+  },
+  "deleting": "Usuwanie...",
+  "actions": "Transakcje",
+  "edit": "Edytuj",
+  "header": {
+    "title": "Zarządzanie tytułami",
+    "description": "Tutaj możesz zarządzać definicjami tytułów."
+  },
+  "table": {
+    "title": "Lista tytułów",
+    "id": "Identyfikator",
+    "name": "Tytuł Nazwa",
+    "code": "Kod",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Utworzone przez użytkownika",
+    "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+    "page": "Strona {{current}} / {{total}}"
+  },
+  "form": {
+    "addTitle": "Dodaj nowy tytuł",
+    "editTitle": "Edytuj tytuł",
+    "addDescription": "Wprowadź nowe informacje o tytule",
+    "editDescription": "Edytuj informacje o tytule",
+    "titleName": "Tytuł Nazwa",
+    "titleNamePlaceholder": "Wpisz nazwę tytułu",
+    "titleCode": "Kod tytułu",
+    "codePlaceholder": "Wpisz kod (opcjonalnie)",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "saving": "Nagrywanie..."
+  },
+  "menu": "Zarządzanie tytułami",
+  "stats": {
+    "totalTitles": "Łączny tytuł",
+    "activeTitles": "Aktywny tytuł",
+    "newThisMonth": "Nowość w tym miesiącu"
+  },
+  "description": "Zarządzaj i edytuj tytuły",
+  "addButton": "Dodaj nowy tytuł",
+  "showStats": "Pokaż statystyki",
+  "hideStats": "Ukryj statystyki",
+  "messages": {
+    "deleteSuccess": "Tytuł pomyślnie usunięty",
+    "deleteError": "Nie można usunąć tytułu"
+  }
+}

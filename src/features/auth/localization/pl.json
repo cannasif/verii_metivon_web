@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "Planowanie zasobów wspierane przez AI",
+      "slogan": "Zarządzaj firmą z Metivon, a nie na podstawie domysłów.",
+      "branchPlaceholder": "Wybierz Oddział",
+      "emailPlaceholder": "Firmowy e-mail",
+      "passwordPlaceholder": "hasło",
+      "rememberMe": "Zapamiętaj mnie",
+      "forgotPassword": "Zapomniałeś hasła?",
+      "submitButton": "Zaloguj się",
+      "processing": "Przetwarzanie...",
+      "sessionExpired": "Twoja sesja wygasła. Proszę zalogować się ponownie.",
+      "comingSoon": "wkrótce",
+      "loginError": "Wystąpił błąd podczas logowania.",
+      "capsLockOn": "Caps Lock jest włączony",
+      "animationOn": "Otwórz animację",
+      "animationOff": "Zamknij animację",
+      "eyebrow": "ERP WSPIERANE PRZEZ AI",
+      "heroTitle": "Cały przepływ firmy w jednym",
+      "heroDescription": "Zarządzaj kontrahentami, zapasami, magazynem, przyjęciami, wysyłką i finansami w jednym rdzeniu.",
+      "welcomeEyebrow": "BEZPIECZNA PRZESTRZEŃ",
+      "welcomeTitle": "Zaloguj się do Metivon",
+      "welcomeDescription": "Wybierz oddział i bezpiecznie przejdź do przestrzeni firmowej.",
+      "modules": {
+        "accounts": "Zarządzanie kontrahentami",
+        "inventory": "Zarządzanie zapasami",
+        "warehouse": "Magazyn i lokalizacje",
+        "shipping": "Wysyłka"
+      },
+      "live": "Aktywne",
+      "secureWorkspace": "Wszystkie operacje w jednym bezpiecznym przepływie danych",
+      "defaultBranch": "Domyślny",
+      "showPassword": "Pokaż hasło",
+      "hidePassword": "Ukryj hasło",
+      "secureLogin": "Szyfrowana i bezpieczna sesja"
+    },
+    "forgotPassword": {
+      "title": "Zapomniałem hasła",
+      "description": "Wpisz swój adres e-mail, aby zresetować hasło. Wyślemy Ci link do resetowania hasła.",
+      "emailPlaceholder": "Adres e-mail",
+      "submitButton": "Prześlij prośbę o zresetowanie hasła",
+      "backToLogin": "Wróć do strony głównej",
+      "processing": "Przetwarzanie...",
+      "logoAlt": "Logo aplikacji"
+    },
+    "resetPassword": {
+      "title": "Resetowanie hasła",
+      "newPasswordPlaceholder": "Nowe hasło",
+      "confirmPasswordPlaceholder": "Powtórz hasło",
+      "submitButton": "Zresetuj hasło",
+      "processing": "Przetwarzanie...",
+      "invalidToken": "Nieprawidłowy lub brakujący token. Sprawdź ponownie link do resetowania hasła.",
+      "tokenNotFound": "Nie znaleziono tokena",
+      "successRedirect": "Twoje hasło zostało pomyślnie zresetowane. Zostaniesz przekierowany do ekranu logowania...",
+      "failed": "Resetowanie hasła nie powiodło się.",
+      "error": "Wystąpił błąd podczas procesu resetowania hasła."
+    },
+    "changePassword": {
+      "success": "Hasło zostało pomyślnie zmienione.",
+      "error": "Nie można było zmienić hasła."
+    },
+    "validation": {
+      "emailRequired": "Adres e-mail jest wymagany",
+      "emailInvalid": "Wpisz prawidłowy adres e-mail",
+      "passwordRequired": "Hasło jest wymagane",
+      "branchRequired": "Wybór oddziału jest obowiązkowy",
+      "passwordMinLength": "Hasło musi mieć co najmniej 8 znaków",
+      "tokenRequired": "Token jest obowiązkowy",
+      "newPasswordMinLength": "Hasło musi mieć co najmniej 6 znaków",
+      "confirmPasswordRequired": "Wymagane jest powtórzenie hasła",
+      "passwordsMismatch": "Hasła nie pasują",
+      "currentPasswordRequired": "Wymagane jest aktualne hasło",
+      "newPasswordMaxLength": "Nowe hasło może mieć maksymalnie 100 znaków",
+      "newPasswordSameAsCurrent": "Nowe hasło nie może być takie samo jak istniejące hasło",
+      "requiredFieldsNotFilled": "Pola obowiązkowe nie zostały wypełnione."
+    }
+  }
+}

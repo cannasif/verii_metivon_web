@@ -1,0 +1,13 @@
+{
+  "buttons": {
+    "back": "Voltar",
+    "next": "Próximo",
+    "complete": "Salvar e enviar para aprovação"
+  },
+  "validation": {
+    "error": "Erro de validação"
+  },
+  "step": {
+    "unknown": "etapa desconhecida"
+  }
+}

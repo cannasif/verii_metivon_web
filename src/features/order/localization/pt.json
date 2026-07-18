@@ -1,0 +1,78 @@
+{
+  "lines": {
+    "doubleClickToEdit": "Clique duas vezes para editar",
+    "unit": "unidade",
+    "descriptionFieldsTitle": "Descrição Campos",
+    "descriptionTooltipText": "É uma descrição de produção baseada em linhas. Correspondência Netsis quando importado para ERP: Descrição 1 -> Campo Adicional 1, Descrição 2 -> Campo Adicional 2, Descrição 3 -> Anotação de Linha 7.",
+    "descriptionTooltipPrefix": "É uma descrição de produção baseada em linhas. Correspondência Netsis quando transferida para ERP:",
+    "erpTargetExtraField1": "Campo Adicional 1",
+    "erpTargetExtraField2": "Área Adicional 2",
+    "erpTargetLineExtraDesc7": "Anotação de linha 7",
+    "profileErpTooltip": "Esta seleção de Perfil é salva no campo Netsis Line Annotation 2 ao enviar para o ERP.",
+    "rebarErpTooltip": "Esta seleção de Ferro é salva como valor Netsis Row Annotation 3 ao enviar para o ERP.",
+    "screwErpTooltip": "Esta seleção de parafuso é salva como valor Netsis Line Annotation 4 ao enviar para o ERP.",
+    "printErpTooltip": "Esta seleção de impressão é salva como valor Netsis Line Annotation 8 ao enviar para o ERP. O comentário de impressão também vai para os campos Comentário 9 da linha Netsis e Anotação de linha 9.",
+    "lineItemDescriptionPlaceholder": "Descrição do item baseada em linha"
+  },
+  "notes": {
+    "title": "Notas de pedido",
+    "description": "Adicione e atualize notas internas do pedido.",
+    "placeholder": "Insira a nota do pedido",
+    "noteLabel": "Nota de pedido",
+    "notesTooltipText": "Estas são as notas de envio/fatura que dizem respeito a toda a encomenda. A ordem do Netsis é registrada sequencialmente nos campos superiores da Anotação 1 a 5; A nota 2 vai para a anotação 2 do Netsis.",
+    "addLineTooltip": "Adicionar linha de comentário",
+    "linesHint": "Cada linha aparece separadamente no PDF e nas notas do documento.",
+    "removeLine": "remover linha",
+    "pageLabel": "Página {{current}} / {{total}}",
+    "saving": "Salvando notas...",
+    "maxLengthError": "O campo de memorando pode ter até 100 caracteres."
+  },
+  "erpOrder": {
+    "title": "Lista de pedidos de ERP",
+    "description": "Monitore os registros pai do pedido e os itens que aparecem no escopo do usuário logado no Netsis.",
+    "currentUserScope": "Com base no usuário logado",
+    "searchPlaceholder": "Pesquise o número do pedido, atual, vendedor ou data...",
+    "loading": "Os pedidos do ERP estão carregando...",
+    "loadError": "Não foi possível carregar os pedidos do ERP.",
+    "noData": "Pedido ERP não encontrado.",
+    "detailAction": "Detalhe",
+    "detailTitle": "Detalhes do pedido {{orderNo}}",
+    "unknownCustomer": "Nenhum nome atual",
+    "lineCount": "Caneta {{count}}",
+    "linesLoading": "Os itens do pedido estão carregando...",
+    "lineLoadError": "Não foi possível carregar os itens do pedido.",
+    "noLines": "Nenhum item encontrado para este pedido.",
+    "table": {
+      "title": "Cabeçalhos de pedidos",
+      "branchCode": "filial",
+      "orderNo": "Pedido nº.",
+      "customerCode": "Código Atual",
+      "customerName": "Nome Atual",
+      "date": "data",
+      "deliveryDate": "Data de entrega",
+      "grossTotal": "Valor Bruto",
+      "vat": "IVA",
+      "grandTotal": "Total geral",
+      "salesRepCode": "vendedor"
+    },
+    "lines": {
+      "rowNo": "sequência",
+      "stockCode": "Código de estoque",
+      "stockName": "Nome do estoque",
+      "quantity": "Quantidade",
+      "unit": "unidade",
+      "netPrice": "Preço Líquido",
+      "vatRate": "Taxa de IVA",
+      "warehouseCode": "Armazém"
+    }
+  },
+  "header": {
+    "notes": "Notas",
+    "descriptionErpTooltip": "É a descrição geral que você deseja que a produção veja para todo o pedido. Quando enviado ao ERP, o pedido Netsis é registrado no campo superior Descrição (FatUst.Description).",
+    "ozelKod1": "Código Especial 1",
+    "ozelKod1Placeholder": "Selecione o código especial 1",
+    "ozelKod2": "Código Especial 2",
+    "ozelKod2Placeholder": "Selecione o código especial 2",
+    "specialCodeSearchPlaceholder": "Procure por código especial..."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "menu": "Gerenciamento de tipo de cliente",
+  "description": "Gerenciar e editar tipos de clientes",
+  "showStats": "Mostrar estatísticas",
+  "hideStats": "Ocultar estatísticas",
+  "addButton": "Adicionar novo tipo de cliente",
+  "loading": "Carregando...",
+  "error": "Ocorreu um erro",
+  "noData": "Nenhum dado encontrado",
+  "actions": "Transações",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "advancedFilter": {
+    "columnName": "Nome do tipo de cliente",
+    "columnDescription": "Descrição"
+  },
+  "stats": {
+    "totalCustomerTypes": "Tipo total de cliente",
+    "activeCustomerTypes": "Tipo de cliente ativo",
+    "newThisMonth": "Novidade este mês"
+  },
+  "table": {
+    "title": "Lista de tipos de cliente",
+    "id": "ID",
+    "name": "Nome do tipo de cliente",
+    "description": "Descrição",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por",
+    "updatedDate": "Data atualizada",
+    "updatedBy": "Atualizado por",
+    "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+    "page": "Página {{current}} / {{total}}"
+  },
+  "form": {
+    "addCustomerType": "Adicionar novo tipo de cliente",
+    "editCustomerType": "Edição de tipo de cliente",
+    "addDescription": "Insira novas informações de tipo de cliente",
+    "editDescription": "Editar informações do tipo de cliente",
+    "name": "Nome do tipo de cliente",
+    "namePlaceholder": "Insira o nome do tipo de cliente",
+    "nameRequired": "O nome do tipo de cliente é obrigatório",
+    "nameMaxLength": "O nome do tipo de cliente pode ter até 100 caracteres",
+    "description": "Descrição",
+    "descriptionPlaceholder": "Insira uma descrição (opcional)",
+    "descriptionMaxLength": "A descrição pode ter até 500 caracteres",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "saving": "Gravando..."
+  },
+  "delete": {
+    "action": "Excluir",
+    "confirmTitle": "Excluir tipo de cliente",
+    "confirmMessage": "Tem certeza de que deseja excluir o tipo de cliente {{name}}?",
+    "confirmButton": "Excluir",
+    "success": "Tipo de cliente excluído com sucesso",
+    "error": "Não foi possível excluir o tipo de cliente",
+    "deleting": "Excluindo..."
+  },
+  "messages": {
+    "createSuccess": "Tipo de cliente criado com sucesso",
+    "createError": "Não foi possível criar o tipo de cliente",
+    "updateSuccess": "Tipo de cliente atualizado com sucesso",
+    "updateError": "Falha ao atualizar o tipo de cliente",
+    "deleteSuccess": "Tipo de cliente excluído com sucesso",
+    "deleteError": "Não foi possível excluir o tipo de cliente"
+  }
+}

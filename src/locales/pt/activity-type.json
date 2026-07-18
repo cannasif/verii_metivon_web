@@ -1,0 +1,62 @@
+{
+  "menu": "Gerenciamento de tipo de atividade",
+  "description": "Gerenciar e editar tipos de atividades",
+  "addButton": "Adicionar novo tipo de atividade",
+  "loading": "Carregando...",
+  "noData": "Nenhum dado encontrado",
+  "actions": "Ações",
+  "edit": "Editar",
+  "deleteButton": "Excluir",
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Salvando...",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "advancedFilter": {
+    "columnName": "Nome do tipo de atividade",
+    "columnDescription": "Descrição",
+    "columnCreatedBy": "Criado por"
+  },
+  "form": {
+    "addTitle": "Adicionar novo tipo de atividade",
+    "editTitle": "Editar tipo de atividade",
+    "addDescription": "Insira novas informações de tipo de atividade",
+    "editDescription": "Editar informações do tipo de atividade",
+    "name": "Nome do tipo de atividade",
+    "namePlaceholder": "Insira o nome do tipo de atividade",
+    "nameRequired": "O nome do tipo de atividade é obrigatório",
+    "nameMaxLength": "O nome do tipo de atividade pode ter no máximo 100 caracteres",
+    "description": "Descrição",
+    "descriptionPlaceholder": "Insira a descrição (opcional)",
+    "descriptionMaxLength": "A descrição pode ter no máximo 500 caracteres"
+  },
+  "table": {
+    "id": "ID",
+    "name": "Nome do tipo de atividade",
+    "description": "Descrição",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por",
+    "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+    "page": "Página {{current}} / {{total}}",
+    "title": "Lista de tipos de atividade"
+  },
+  "stats": {
+    "totalActivityTypes": "Total de tipos de atividades",
+    "activeActivityTypes": "Tipos de atividades ativas",
+    "newThisMonth": "Novidade este mês"
+  },
+  "messages": {
+    "createSuccess": "Tipo de atividade criada com sucesso",
+    "createError": "Falha ao criar o tipo de atividade",
+    "updateSuccess": "Tipo de atividade atualizado com sucesso",
+    "updateError": "Falha ao atualizar o tipo de atividade",
+    "deleteSuccess": "Tipo de atividade excluído com sucesso",
+    "deleteError": "Falha ao excluir o tipo de atividade"
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Excluir tipo de atividade",
+    "confirmMessage": "Tem certeza de que deseja excluir o tipo de atividade {{name}}?"
+  },
+  "create": "Novo tipo de atividade",
+  "error": "Ocorreu um erro"
+}

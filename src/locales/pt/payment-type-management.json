@@ -1,0 +1,67 @@
+{
+  "title": "Gerenciamento de tipos de pagamento",
+  "headerDescription": "Gerenciar e editar tipos de pagamento",
+  "create": "Novo tipo de pagamento",
+  "edit": "Editar tipo de pagamento",
+  "editDescription": "Editar informações do tipo de pagamento",
+  "createDescription": "Insira novas informações de tipo de pagamento",
+  "delete": {
+    "confirmTitle": "Excluir tipo de pagamento",
+    "confirmMessage": "Tem certeza de que deseja excluir o tipo de pagamento {{name}}? Esta ação não pode ser desfeita.",
+    "success": "Tipo de pagamento excluído com sucesso",
+    "error": "Ocorreu um erro ao excluir o tipo de pagamento"
+  },
+  "deleteTitle": "Excluir tipo de pagamento",
+  "name": "Nome",
+  "namePlaceholder": "Insira o nome do tipo de pagamento",
+  "description": "Descrição",
+  "descriptionPlaceholder": "Insira uma descrição (opcional)",
+  "createdDate": "Data de criação",
+  "updatedDate": "Data atualizada",
+  "actions": "Transações",
+  "search": "Pesquisar",
+  "refresh": "Atualizar",
+  "loading": "Carregando...",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "advancedFilter": {
+    "columnName": "Nome",
+    "columnDescription": "Descrição"
+  },
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Gravando...",
+  "noData": "Nenhum dado encontrado",
+  "error": "Ocorreu um erro",
+  "confirmDelete": "Tem certeza de que deseja excluir este tipo de pagamento?",
+  "createSuccess": "Tipo de pagamento criado com sucesso",
+  "updateSuccess": "Tipo de pagamento atualizado com sucesso",
+  "deleteSuccess": "Tipo de pagamento excluído com sucesso",
+  "createError": "Ocorreu um erro ao criar o tipo de pagamento",
+  "updateError": "Ocorreu um erro ao atualizar o tipo de pagamento",
+  "deleteError": "Ocorreu um erro ao excluir o tipo de pagamento",
+  "table": {
+    "title": "Tipos de pagamento",
+    "status": "Estado",
+    "id": "ID",
+    "name": "Nome",
+    "description": "Descrição",
+    "createdDate": "Data de criação",
+    "updatedDate": "Data atualizada",
+    "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+    "page": "Página {{current}} / {{total}}"
+  },
+  "form": {
+    "name": {
+      "required": "O nome é obrigatório",
+      "maxLength": "O nome pode ter até 100 caracteres"
+    },
+    "description": {
+      "maxLength": "A descrição pode ter até 500 caracteres"
+    }
+  },
+  "status": {
+    "inactive": "passivo",
+    "active": "ativo"
+  }
+}

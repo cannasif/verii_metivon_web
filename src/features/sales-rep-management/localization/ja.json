@@ -1,0 +1,52 @@
+{
+  "menu": "営業担当者コード管理",
+  "description": "ERP から営業担当者コードを表示、追加、削除します。",
+  "addButton": "新しい営業担当者",
+  "searchPlaceholder": "営業担当者コード、説明、または名前を検索します",
+  "empty": "営業担当者の記録が見つかりません。",
+  "error": "営業担当者のレコードをロードできませんでした。",
+  "deleteConfirmMessage": "コード {{code}} の営業担当者レコードを削除しますか?",
+  "table": {
+    "title": "営業担当者一覧",
+    "branchCode": "支店コード",
+    "salesRepCode": "営業担当者コード",
+    "salesRepDescription": "説明",
+    "name": "名前",
+    "createdDate": "作成日"
+  },
+  "form": {
+    "addTitle": "新しい営業担当者の追加",
+    "addDescription": "営業担当者コードレコードを手動で追加します。",
+    "editTitle": "営業担当者 編集",
+    "editDescription": "営業担当者コードレコードを更新します。",
+    "branchCode": "支店コード",
+    "branchCodePlaceholder": "支店コードを入力してください",
+    "salesRepCode": "営業担当者コード",
+    "salesRepCodePlaceholder": "コードを入力してください",
+    "salesRepDescription": "説明",
+    "salesRepDescriptionPlaceholder": "説明を入力してください",
+    "name": "名前",
+    "namePlaceholder": "名前を入力してください",
+    "validation": {
+      "branchCodeRequired": "支店コードは必須です。",
+      "codeRequired": "営業担当者コードは必須です。",
+      "codeMaxLength": "営業担当者コードは最大 8 文字です。",
+      "descriptionMaxLength": "説明は最大 30 文字まで入力できます。",
+      "nameMaxLength": "名前は最大 35 文字まで入力できます。"
+    }
+  },
+  "messages": {
+    "createSuccess": "営業担当者レコードが作成されました。",
+    "createError": "営業担当者レコードを作成できませんでした。",
+    "updateSuccess": "営業担当者の記録が更新されました。",
+    "updateError": "営業担当者のレコードを更新できませんでした。",
+    "deleteSuccess": "営業担当者の記録は削除されました。",
+    "deleteError": "営業担当者レコードを削除できませんでした。"
+  },
+  "advancedFilter": {
+    "columnBranchCode": "支店コード",
+    "columnSalesRepCode": "営業担当者コード",
+    "columnDescription": "説明",
+    "columnName": "名前"
+  }
+}

@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{warehouseConfig}from'@/features/erp-operation-management/configs';export function WarehouseManagementPage(){return <ErpPagedManagementPage config={warehouseConfig}/>}

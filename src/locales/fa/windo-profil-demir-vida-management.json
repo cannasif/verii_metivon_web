@@ -1,0 +1,75 @@
+{
+  "page": {
+    "title": "تعاریف Windoform",
+    "description": "سوابق پروفیل، آهن، پیچ و فشار را در ساختار جدول صفحه بندی شده سازگار با صفحات مدیریت پروژه در سطح وسیع مدیریت کنید.",
+    "documentTitle": "تعاریف Windoform"
+  },
+  "sections": {
+    "profil": {
+      "title": "پروفایل را تعریف کنید",
+      "description": "تعاریف نمایه را که باید بر اساس ردیف انتخاب شوند مدیریت کنید."
+    },
+    "demir": {
+      "title": "آهن را شناسایی کنید",
+      "description": "تعاریف آهن را مدیریت کنید تا بر اساس ردیف انتخاب شوند."
+    },
+    "vida": {
+      "title": "Screw را شناسایی کنید",
+      "description": "تعاریف پیچ را مدیریت کنید تا بر اساس ردیف انتخاب شوند."
+    },
+    "baski": {
+      "title": "چاپ را تعریف کنید",
+      "description": "تعاریف چاپی را مدیریت کنید تا بر اساس ردیف انتخاب شوند."
+    },
+    "koliBaski": {
+      "title": "تعریف چاپ جعبه",
+      "description": "تعاریف چاپ جعبه را مدیریت کنید که در هدر پیشنهاد انتخاب شده و به قسمت توضیحات هدر Netsis ارسال می شود."
+    }
+  },
+  "table": {
+    "id": "شناسه",
+    "name": "نام",
+    "profilName": "نمایه",
+    "createdDate": "خلقت",
+    "updatedDate": "به روز شد",
+    "newRecord": "ثبت نام جدید",
+    "searchPlaceholder": "جستجو برای تعریف ...",
+    "refresh": "تازه کردن",
+    "loading": "تعاریف در حال بارگیری هستند...",
+    "empty": "هیچ سابقه ای پیدا نشد",
+    "actions": "معامله",
+    "previous": "قبلی",
+    "next": "بعدی",
+    "pagination": "مجموع {{total}} از رکورد نشان دهنده {{from}}-{{to}}",
+    "filterName": "نام",
+    "dateDash": "-"
+  },
+  "dialog": {
+    "addNewProfile": "افزودن نمایه جدید",
+    "addNewRebar": "آهن جدید اضافه کنید",
+    "addNewScrew": "پیچ جدید اضافه کنید",
+    "addNewPrint": "ویرایش جدید اضافه کنید",
+    "addNewKoliBaski": "چاپ جعبه جدید را اضافه کنید",
+    "editTitle": "{{section}} را به روز کنید",
+    "addTitle": "{{section}} را اضافه کنید",
+    "nameLabel": "نام",
+    "profilLabel": "نمایه متصل",
+    "profilPlaceholder": "پروفایل را انتخاب کنید",
+    "profilSearchPlaceholder": "جستجوی نمایه",
+    "cancel": "لغو کنید",
+    "save": "ذخیره کنید",
+    "demirNameLabel": "نام آهن",
+    "demirNamePlaceholder": "نام آهن صحافی",
+    "vidaNameLabel": "نام پیچ",
+    "vidaNamePlaceholder": "نام پیچ متصل"
+  },
+  "validation": {
+    "nameRequired": "فیلد نام الزامی است",
+    "profilRequired": "انتخاب پروفایل الزامی است"
+  },
+  "toasts": {
+    "created": "رکورد {{section}} ایجاد شد",
+    "updated": "رکورد {{section}} به روز شد",
+    "deleted": "رکورد {{section}} حذف شد"
+  }
+}

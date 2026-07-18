@@ -1,0 +1,82 @@
+{
+  "menu": "运输管理",
+  "description": "管理和编辑运输定义",
+  "addButton": "添加新的运输",
+  "loading": "加载中...",
+  "noData": "没有找到数据",
+  "actions": "行动",
+  "edit": "编辑",
+  "deleteButton": "删除",
+  "cancel": "取消",
+  "save": "保存",
+  "saving": "正在保存...",
+  "previous": "上一页",
+  "next": "下一步",
+  "advancedFilter": {
+    "columnName": "运输名称",
+    "columnDescription": "描述",
+    "columnCreatedBy": "创建者"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "添加新的运输",
+      "editTitle": "编辑运输",
+      "addDescription": "输入新的运输信息",
+      "editDescription": "编辑运输信息",
+      "name": "运输名称",
+      "namePlaceholder": "输入运输名称",
+      "nameRequired": "运输名称为必填项",
+      "nameMaxLength": "运输名称最多可包含 100 个字符",
+      "description": "描述",
+      "descriptionPlaceholder": "输入描述（可选）",
+      "descriptionMaxLength": "描述最多 500 个字符"
+    },
+    "table": {
+      "title": "发货清单",
+      "id": "身份证号",
+      "name": "运输名称",
+      "description": "描述",
+      "createdDate": "创建日期",
+      "createdBy": "创建者",
+      "showing": "显示 {{from}}-{{to}} / {{total}}",
+      "page": "页 {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "总运输记录",
+      "activeActivityTypes": "有效的运输记录",
+      "newThisMonth": "本月新品"
+    },
+    "messages": {
+      "createSuccess": "发货创建成功",
+      "createError": "创建发货失败",
+      "updateSuccess": "发货更新成功",
+      "updateError": "无法更新运费",
+      "deleteSuccess": "发货删除成功",
+      "deleteError": "删除运费失败"
+    },
+    "error": "发生错误",
+    "create": "添加新的运输",
+    "loading": "加载中...",
+    "noData": "没有找到数据",
+    "actions": "行动",
+    "cancel": "取消",
+    "save": "保存",
+    "saving": "正在保存..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "删除运输",
+    "confirmMessage": "您确定要删除 {{name}} 吗？"
+  },
+  "messages": {
+    "deleteSuccess": "发货删除成功",
+    "deleteError": "删除运费失败"
+  },
+  "table": {
+    "title": "发货清单",
+    "id": "身份证号",
+    "name": "运输名称",
+    "description": "描述",
+    "createdDate": "创建日期",
+    "createdBy": "创建者"
+  }
+}

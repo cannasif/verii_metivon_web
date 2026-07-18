@@ -1,0 +1,60 @@
+{
+  "approvalRole": {
+    "menu": "Goedkeuringsrollenbeheer",
+    "description": "Goedkeuringsrollen beheren en organiseren",
+    "addButton": "Nieuwe goedkeuringsrol toevoegen",
+    "searchPlaceholder": "Zoeken...",
+    "refresh": "Vernieuwen",
+    "loading": "Laden...",
+    "noData": "Geen gegevens",
+    "table": {
+      "id": "Identiteitskaart",
+      "approvalRoleGroupName": "Rolgroep",
+      "name": "Rolnaam",
+      "maxAmount": "Maximaal bedrag",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "actions": "Acties",
+      "totalRecords": "Totaal {{count}}-records.",
+      "page": "Pagina {{current}} / {{total}}",
+      "previous": "Vorige",
+      "next": "Volgende",
+      "title": "Goedkeuringsrollen"
+    },
+    "delete": {
+      "confirmTitle": "Bevestiging verwijderen",
+      "confirmMessage": "Weet u zeker dat u deze record wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cancelButton": "Annuleer",
+      "confirmButton": "Verwijderen",
+      "deleting": "Verwijderen..."
+    },
+    "form": {
+      "editTitle": "Goedkeuringsrol bewerken",
+      "addTitle": "Nieuwe goedkeuringsrol toevoegen",
+      "editDescription": "Details van goedkeuringsrol bewerken",
+      "addDescription": "Voer nieuwe details van de goedkeuringsrol in",
+      "approvalRoleGroupId": "Goedkeuringsrolgroep",
+      "selectApprovalRoleGroup": "Selecteer Goedkeuringsrolgroep",
+      "noApprovalRoleGroupSelected": "Er is geen goedkeuringsrolgroep geselecteerd",
+      "name": "Rolnaam",
+      "namePlaceholder": "Voer de rolnaam in",
+      "maxAmount": "Maximaal bedrag",
+      "maxAmountPlaceholder": "Voer het maximale bedrag in",
+      "approvalRoleGroupIdRequired": "Selectie van een goedkeuringsrolgroep is vereist",
+      "nameRequired": "Rolnaam is vereist",
+      "nameMaxLength": "De rolnaam mag maximaal 100 tekens lang zijn",
+      "maxAmountMin": "Het maximale bedrag kan niet kleiner zijn dan 0",
+      "cancel": "Annuleer",
+      "save": "Opslaan",
+      "saving": "Opslaan..."
+    },
+    "advancedFilter": {
+      "columnName": "Rolnaam",
+      "columnApprovalRoleGroupName": "Rolgroep",
+      "columnMaxAmount": "Maximaal bedrag"
+    },
+    "messages": {
+      "error": "Er is een fout opgetreden"
+    }
+  }
+}

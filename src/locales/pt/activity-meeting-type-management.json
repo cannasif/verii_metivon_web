@@ -1,0 +1,82 @@
+{
+  "menu": "Gerenciamento de reuniões",
+  "description": "Gerenciar e editar definições de reunião",
+  "addButton": "Adicionar nova reunião",
+  "loading": "Carregando...",
+  "noData": "Sem dados",
+  "actions": "Ações",
+  "edit": "Editar",
+  "deleteButton": "Excluir",
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Salvando...",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "advancedFilter": {
+    "columnName": "Nome da reunião",
+    "columnDescription": "Descrição",
+    "columnCreatedBy": "Criado por"
+  },
+  "activityType": {
+    "create": "Adicionar nova reunião",
+    "loading": "Carregando...",
+    "noData": "Sem dados",
+    "actions": "Ações",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "saving": "Salvando...",
+    "error": "Ocorreu um erro",
+    "form": {
+      "addTitle": "Adicionar nova reunião",
+      "editTitle": "Editar reunião",
+      "addDescription": "Insira as novas informações da reunião",
+      "editDescription": "Editar informações da reunião",
+      "name": "Nome da reunião",
+      "namePlaceholder": "Digite o nome da reunião",
+      "nameRequired": "O nome da reunião é obrigatório",
+      "nameMaxLength": "O nome da reunião pode ter no máximo 100 caracteres",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Insira a descrição (opcional)",
+      "descriptionMaxLength": "A descrição pode ter no máximo 500 caracteres"
+    },
+    "table": {
+      "title": "Lista de reuniões",
+      "id": "ID",
+      "name": "Nome da reunião",
+      "description": "Descrição",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por",
+      "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+      "page": "Página {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Total de reuniões",
+      "activeActivityTypes": "Reuniões ativas",
+      "newThisMonth": "Novidade este mês"
+    },
+    "messages": {
+      "createSuccess": "Reunião criada com sucesso",
+      "createError": "Falha ao criar reunião",
+      "updateSuccess": "Reunião atualizada com sucesso",
+      "updateError": "Falha ao atualizar a reunião",
+      "deleteSuccess": "Reunião excluída com sucesso",
+      "deleteError": "Falha ao excluir a reunião"
+    }
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Excluir reunião",
+    "confirmMessage": "Tem certeza de que deseja excluir {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Reunião excluída com sucesso",
+    "deleteError": "Falha ao excluir a reunião"
+  },
+  "table": {
+    "title": "Lista de reuniões",
+    "id": "ID",
+    "name": "Nome da reunião",
+    "description": "Descrição",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Selecione o cliente",
+  "description": "Você pode distinguir todos os clientes por seu ERP e tags potenciais; basta usar a outra guia para a lista de clientes potenciais.",
+  "badgeKindErp": "ERP",
+  "badgeKindPotential": "potencial",
+  "erpCustomers": "ERP",
+  "crmCustomers": "Clientes CRM",
+  "potentialCustomers": "potencial",
+  "allCustomers": "Todos",
+  "erp": "ERP",
+  "crm": "CRM",
+  "noErpCustomers": "Cliente ERP não encontrado",
+  "noCrmCustomers": "Cliente CRM não encontrado",
+  "noPotentialCustomers": "Nenhum cliente potencial encontrado",
+  "noCustomers": "Cliente não encontrado",
+  "noResults": "Resultados da pesquisa não encontrados",
+  "searchPlaceholder": "Pesquise por nome ou código...",
+  "voiceSearch": "pesquisa por voz",
+  "loading": "carregando",
+  "table": {
+    "type": "Tipo",
+    "customerCode": "Código do cliente",
+    "customerName": "Nome do cliente",
+    "phone": "telefone",
+    "city": "cidade",
+    "email": "E-mail"
+  }
+}

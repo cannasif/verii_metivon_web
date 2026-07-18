@@ -1,0 +1,600 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "路由和页面防护使用的唯一密钥。更喜欢稳定的蛇形命名法或点符号。",
+      "name": "管理权限时向管理员显示的显示名称。",
+      "description": "此权限的可选内部描述。",
+      "isActive": "评估用户访问权限时，将忽略非活动权限。",
+      "save": "更改会影响角色和组授权流程。"
+    },
+    "permissionGroup": {
+      "name": "分配给用户时用于识别的组名称。",
+      "isSystemAdmin": "该组的成员可以访问所有页面和操作，无需进行单独的权限检查。",
+      "isActive": "不应为新的访问决策分配不活动组。",
+      "permissions": "选定的权限定义了该组的成员可以访问的内容。",
+      "save": "更新分配给该组的每个用户的有效访问权限。"
+    },
+    "userAssignment": {
+      "user": "选择您要管理其访问范围的用户。",
+      "groups": "用户接收来自所有选定组的组合权限。",
+      "save": "分配在下一次授权检查时立即生效。用户可能需要刷新他们的会话。",
+      "systemAdminNote": "如果用户属于系统管理员组，则跳过详细权限。"
+    },
+    "visibilityPolicy": {
+      "code": "使用唯一的代码，以便可以在分配和审核流程中识别策略。",
+      "name": "管理员在管理策略时将看到的显示名称。",
+      "includeSelf": "启用后，用户自己的记录在此范围内保持可见。",
+      "isActive": "不活动的策略不参与新的分配和访问决策。"
+    },
+    "userVisibilityAssignment": {
+      "user": "选择您要管理其实体可见性的用户。",
+      "policy": "为每个实体选择一项活动可见性策略或将其留空。",
+      "save": "在保存之前，不会应用下拉更改。保存并应用将所有卡选择一起发送。"
+    }
+  },
+  "permissionDefinitions": {
+    "title": "权限定义",
+    "description": "管理整个系统使用的权限代码",
+    "add": "添加定义",
+    "form": {
+      "editTitle": "编辑权限定义",
+      "addTitle": "添加权限定义",
+      "editDescription": "更新权限定义详细信息",
+      "addDescription": "创建新的权限定义",
+      "code": "代码",
+      "codePlaceholder": "选择代码",
+      "affectedRoutes": "受影响的页面",
+      "affectedRoutesNone": "找不到该代码的匹配路线",
+      "name": "名称",
+      "namePlaceholder": "显示名称",
+      "availableOnWeb": "可在网络上找到",
+      "availableOnWebHint": "此权限可用于 Web 应用程序中的菜单、页面和操作。",
+      "availableOnMobile": "可在手机上使用",
+      "availableOnMobileHint": "此权限可用于移动应用程序中的菜单、屏幕和操作。",
+      "description": "描述",
+      "descriptionPlaceholder": "可选描述",
+      "isActive": "活跃",
+      "codeSearchPlaceholder": "搜索...",
+      "codeEmpty": "没有找到结果"
+    },
+    "table": {
+      "title": "权限定义",
+      "code": "代码",
+      "name": "名称",
+      "platform": "平台",
+      "isActive": "活跃",
+      "updatedDate": "已更新",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "platform": {
+      "web": "网络",
+      "mobile": "手机",
+      "both": "网络+移动"
+    },
+    "delete": {
+      "confirmTitle": "删除权限定义",
+      "confirmMessage": "您确定要删除“{{name}}”吗？此操作无法撤消。"
+    },
+    "syncFromRoutes": "从路线同步"
+  },
+  "permissionGroups": {
+    "title": "权限组",
+    "description": "管理权限组和分配",
+    "systemAdminLocked": "系统管理员组不可更改",
+    "add": "添加群组",
+    "selectAll": "选择全部",
+    "noDefinitions": "没有可用的权限定义",
+    "form": {
+      "editTitle": "编辑权限组",
+      "addTitle": "添加权限组",
+      "editDescription": "更新权限组详细信息",
+      "addDescription": "创建新权限组",
+      "name": "名称",
+      "namePlaceholder": "团体名称",
+      "description": "描述",
+      "descriptionPlaceholder": "可选描述",
+      "isSystemAdmin": "系统管理员",
+      "isActive": "活跃",
+      "permissions": "权限"
+    },
+    "table": {
+      "title": "权限组",
+      "name": "名称",
+      "isSystemAdmin": "系统管理员",
+      "isActive": "活跃",
+      "permissionCount": "权限",
+      "showing": "{{from}}-{{to}} / {{total}}",
+      "id": "记录 ID"
+    },
+    "managePermissions": "管理权限",
+    "permissionsPanel": {
+      "title": "编辑组权限",
+      "description": "选择该组的权限",
+      "currentCodes": "当前权限代码",
+      "screen": "屏幕/权限区域",
+      "groupedRows": "许可区域",
+      "actionsMapped": "权限",
+      "actions": {
+        "create": "创建",
+        "read": "阅读",
+        "update": "更新",
+        "delete": "删除",
+        "other": "其他"
+      },
+      "previewTitle": "预览组权限",
+      "previewDescription": "快速查看分配给此组的权限。"
+    },
+    "delete": {
+      "confirmTitle": "删除权限组",
+      "confirmMessage": "您确定要删除“{{name}}”吗？此操作无法撤消。"
+    },
+    "search": "搜索...",
+    "builtInLocked": "内置系统组不可更改；请创建自定义组。",
+    "presets": {
+      "systemAdministrators": {
+        "name": "系统管理员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "masterDataSpecialist": {
+        "name": "主数据专员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "purchasingSpecialist": {
+        "name": "采购专员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "goodsReceiptOperator": {
+        "name": "收货操作员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "warehouseOperator": {
+        "name": "仓库操作员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "shippingOperator": {
+        "name": "发运操作员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "salesSpecialist": {
+        "name": "销售专员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "importCostSpecialist": {
+        "name": "进口与成本专员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "accountingSpecialist": {
+        "name": "会计专员",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      },
+      "erpAuditor": {
+        "name": "ERP 审计员（只读）",
+        "description": "预定义的最小权限 ERP 职务配置。"
+      }
+    },
+    "previewPermissions": "预览已分配权限",
+    "restoreDefaults": {
+      "button": "创建默认权限组",
+      "title": "恢复默认权限组",
+      "description": "系统管理员、收货、仓库、发运及其他内置岗位组将恢复为安全的默认权限。自定义组不会受到影响。",
+      "confirm": "恢复",
+      "success": "已恢复 {{count}} 个默认权限组。"
+    }
+  },
+  "userGroupAssignments": {
+    "title": "用户组分配",
+    "description": "为用户分配权限组",
+    "selectUser": "选择用户",
+    "selectUserPlaceholder": "搜索并选择用户...",
+    "selectUserHint": "选择一个用户来管理其权限组分配",
+    "assignedGroups": "分配的权限组",
+    "noUsers": "没有找到用户",
+    "noGroups": "没有可用的权限组",
+    "selectAll": "选择全部"
+  },
+  "visibilityPolicies": {
+    "title": "可见性政策",
+    "description": "管理定义谁可以查看哪些记录的策略集",
+    "add": "添加政策",
+    "search": "搜索政策...",
+    "table": {
+      "title": "可见性政策列表",
+      "code": "代码",
+      "name": "名称",
+      "entityType": "实体",
+      "scopeType": "适用范围",
+      "includeSelf": "包括自我",
+      "isActive": "活跃",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "stats": {
+      "total": "保单总数",
+      "active": "积极的政策",
+      "entities": "实体类型"
+    },
+    "form": {
+      "addTitle": "添加可见性策略",
+      "editTitle": "编辑可见性政策",
+      "addDescription": "创建新的可见性策略定义",
+      "editDescription": "更新选定的可见性策略设置",
+      "code": "代码",
+      "codePlaceholder": "ERP_GOODS_RECEIPT_BRANCH",
+      "name": "名称",
+      "namePlaceholder": "收货 — 同一分支机构",
+      "entityType": "实体",
+      "entityTypePlaceholder": "选择实体",
+      "scopeType": "适用范围",
+      "scopeTypePlaceholder": "选择范围",
+      "description": "描述",
+      "descriptionPlaceholder": "可选的简短描述",
+      "includeSelf": "包含用户自己的记录",
+      "isActive": "活跃",
+      "summaryTitle": "政策概要",
+      "summary": "{{scope}} 范围将应用于 {{entity}} 记录。"
+    },
+    "scope": {
+      "self": "仅限自己",
+      "managerHierarchy": "经理层级",
+      "permissionGroup": "权限组",
+      "company": "全公司范围",
+      "branch": "同一分支机构",
+      "warehouse": "仓库范围"
+    },
+    "entity": {
+      "businessPartner": "业务伙伴",
+      "product": "库存 / 产品",
+      "warehouse": "仓库和库位",
+      "inventory": "库存交易",
+      "goodsReceipt": "收货",
+      "transferOrder": "仓库间调拨",
+      "shipment": "发运和送货单",
+      "purchaseOrder": "采购订单",
+      "salesOrder": "销售订单",
+      "importDossier": "进口档案",
+      "electronicDocument": "电子单据",
+      "accounting": "会计"
+    }
+  },
+  "userVisibilityAssignments": {
+    "title": "用户可见性分配",
+    "description": "管理每个用户的实体可见性策略分配",
+    "selectUser": "选择用户",
+    "selectedUser": "选定的用户",
+    "selectUserPlaceholder": "搜索并选择用户...",
+    "selectUserHint": "选择一个用户来管理可见性分配",
+    "assignedPolicies": "分配的策略",
+    "status": "状态",
+    "ready": "最新",
+    "unsavedChanges": "未保存",
+    "unsavedChangesCount": "{{count}} 模块等待保存",
+    "upToDate": "最新",
+    "pendingChange": "待保存",
+    "unsavedCardHint": "您的选择尚未保存。按“保存”进行应用。",
+    "saveEntity": "保存",
+    "revert": "取消",
+    "moduleSectionTitle": "模块可见性",
+    "moduleSectionDescription": "为每个模块选择一个策略并从卡中保存。",
+    "unassigned": "未分配",
+    "cardDescription": "选择将应用于该用户的 {{entity}} 记录的可见性策略。",
+    "selectPolicyPlaceholder": "选择政策",
+    "noPolicy": "无政策",
+    "noPolicyCompanyHint": "当选择无策略时，用户可以在此模块中查看所有公司/工厂记录。"
+  },
+  "visibilitySimulator": {
+    "title": "能见度模拟器",
+    "description": "测试哪些用户记录和活动批准覆盖记录对于所选实体类型的所选用户可见。",
+    "selectUser": "用户",
+    "helpUser": "选择您要模拟其可见性的用户。",
+    "selectUserPlaceholder": "选择一个用户...",
+    "selectEntity": "实体",
+    "helpEntity": "选择您想要模拟记录可见性的模块。",
+    "selectEntityPlaceholder": "选择实体",
+    "recordId": "记录ID",
+    "recordIdPlaceholder": "例如125",
+    "helpRecordId": "输入特定的记录 ID 来模拟是否允许查看、更新、删除和批准操作。",
+    "selectedUser": "选定的用户",
+    "entity": "实体",
+    "visibleUsers": "可见用户",
+    "approvalOverrides": "审批覆盖记录",
+    "visibleUsersTitle": "范围内的用户",
+    "policyDefined": "政策定义",
+    "noPolicy": "无政策",
+    "companyWide": "全公司访问",
+    "policyActive": "应用主动可见性策略",
+    "includeSelf": "包括自我",
+    "awaitingSelection": "首先选择用户和实体",
+    "overrideTitle": "主动批准覆盖记录",
+    "noOverrides": "未找到有效的批准覆盖记录",
+    "overrideRecord": "记录#{{id}}",
+    "auditTitle": "批准覆盖审核",
+    "noAudit": "未找到有效的批准覆盖审核条目",
+    "auditActionId": "审批行动",
+    "auditRequestId": "批准请求",
+    "auditFlow": "流量",
+    "auditApprover": "审批人",
+    "auditStepValue": "步骤 {{step}} / 当前 {{currentStep}}",
+    "actionPanelTitle": "创纪录级别的动作模拟",
+    "noRecordSimulation": "当您输入记录ID时，此处将显示查看/更新/删除/批准结果。",
+    "actionAllowed": "允许",
+    "actionDenied": "被拒绝",
+    "action": {
+      "view": "查看",
+      "update": "更新",
+      "delete": "删除",
+      "approve": "批准"
+    },
+    "visibleUsersShowing": "{{total}} 用户的 {{from}}-{{to}}",
+    "visibleUsersPage": "页 {{page}} / {{totalPages}}",
+    "noVisibleUsers": "范围内没有用户"
+  },
+  "auditLogs": {
+    "title": "审核日志",
+    "description": "跟踪谁执行了关键操作、在哪些跟踪下以及这些操作如何结束。",
+    "search": "搜索审核日志...",
+    "results": {
+      "success": "成功",
+      "succeeded": "成功了",
+      "warning": "警告",
+      "partial": "部分",
+      "error": "错误",
+      "failed": "失败"
+    },
+    "filters": {
+      "result": "结果",
+      "actionType": "行动",
+      "entityType": "实体",
+      "entityId": "记录ID",
+      "performedByUserEmail": "表演者：",
+      "source": "来源",
+      "branchCode": "分公司",
+      "requestPath": "请求路径",
+      "requestMethod": "方法",
+      "createdDate": "日期"
+    },
+    "clearTraceFilter": "清除痕迹过滤器",
+    "viewDetail": "详情",
+    "filterTrace": "过滤痕迹",
+    "loadError": "无法加载审核日志",
+    "stats": {
+      "total": "总记录数",
+      "errors": "失败的结果",
+      "traces": "活动痕迹"
+    },
+    "table": {
+      "title": "审核日志列表",
+      "createdDate": "日期",
+      "traceId": "迹线ID",
+      "actionType": "行动",
+      "entityType": "实体",
+      "entityId": "记录ID",
+      "result": "结果",
+      "source": "来源",
+      "performedBy": "表演者：",
+      "branchCode": "分公司",
+      "requestPath": "请求路径",
+      "requestMethod": "方法",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "detail": {
+      "title": "审核日志详细信息",
+      "description": "检查所选记录的请求上下文和更改摘要。",
+      "contextTitle": "行动背景",
+      "requestTitle": "请求摘要",
+      "reason": "原因",
+      "failureReason": "故障详情",
+      "changedFieldsTitle": "更改的字段",
+      "noChangedFields": "此记录没有可用的字段差异。",
+      "oldValuesTitle": "旧价值观",
+      "newValuesTitle": "新价值观"
+    },
+    "traceDrillDown": {
+      "traceId": "选定的轨迹",
+      "startedAt": "开始于",
+      "completedAt": "完成于",
+      "entities": "接触的实体",
+      "timelineTitle": "跟踪流摘要",
+      "openTrace": "打开这个轨迹"
+    }
+  },
+  "common": {
+    "cancel": "取消",
+    "saving": "正在保存...",
+    "save": "保存并应用",
+    "loading": "加载中...",
+    "search": "搜索...",
+    "noData": "无数据",
+    "actions": "行动",
+    "yes": "是的",
+    "no": "否",
+    "edit": "编辑",
+    "delete": "删除",
+    "previous": "上一页",
+    "next": "下一步",
+    "processing": "处理中..."
+  },
+  "sidebar": {
+    "accessControl": "访问控制",
+    "permissionDefinitions": "权限定义",
+    "permissionGroups": "权限组",
+    "userGroupAssignments": "用户组分配",
+    "visibilityPolicies": "可见性政策",
+    "userVisibilityAssignments": "用户可见性分配",
+    "auditLogs": "审核日志",
+    "visibilitySimulator": "能见度模拟器",
+    "accessControlGuide": "访问控制指南"
+  },
+  "guide": {
+    "title": "访问控制指南",
+    "description": "本指南解释了每个访问控制屏幕的用途以及每个设置的更改内容。目标是让第一次看到该模型的人也能理解该系统。",
+    "hero": {
+      "coreLogicLabel": "核心逻辑",
+      "coreLogicValue": "权限允许，可见性限制。",
+      "finalCheckLabel": "最终检查",
+      "finalCheckValue": "在模拟器中验证。"
+    },
+    "quickRulesTitle": "五项核心规则",
+    "screensTitle": "每个屏幕有什么作用？",
+    "scenariosTitle": "基于场景的示例",
+    "expectedResultLabel": "预期结果",
+    "mistakesTitle": "常见错误",
+    "checklistTitle": "推荐的设置顺序",
+    "faqTitle": "常见问题解答",
+    "footer": {
+      "title": "短决策规则",
+      "body": "如果用户无法执行操作，请从权限组开始。如果用户看到太多或太少的记录，请从可见性开始。始终在可见性模拟器中验证最终决定。"
+    },
+    "quickRules": [
+      "页面权限是一个单独的问题，记录可见性是一个单独的问题。用户可以进入该页面，但无法看到所有记录。",
+      "权限组屏幕决定用户可以打开哪个页面以及可以执行什么操作。",
+      "可见性策略屏幕确定用户在该页面上看到哪些记录。",
+      "用户组分配分配组。用户可见性分配定义基于用户的可见性例外。",
+      "在不阅读可见性模拟器结果的情况下为生物制定规则是有风险的；请务必在模拟器中检查结果。"
+    ],
+    "pageCards": [
+      {
+        "id": "权限组",
+        "title": "权限组",
+        "summary": "该屏幕决定用户可以看到哪些模块以及可以执行哪些操作。",
+        "bullets": [
+          "如果您希望它打开报价屏幕，则必须授予其显示权限，例如“receiving.goods-receipts.view”。",
+          "如果您希望它创建新的报价，则同一组中必须有“receiving.goods-receipts.create”权限。",
+          "如果你想让它更新，你需要`receiving.goods-receipts.update`，如果你想让它删除它，你需要`receiving.goods-receipts.delete`。",
+          "这里的权限打开页面和操作门；它并不单独确定它将看到哪些记录。"
+        ]
+      },
+      {
+        "id": "用户组分配",
+        "title": "用户组分配",
+        "summary": "此屏幕用于将一个或多个权限组绑定到用户。",
+        "bullets": [
+          "选择用户，然后选择该用户将拥有的组。",
+          "如果用户属于多个组，则权限被合并；换句话说，一个群体的权威也支持另一群体。",
+          "如果您为用户提供了错误的组，则您可以打开对从未定义的页面的访问权限。",
+          "此屏幕最常用于角色分配：销售代表、管理员、操作、系统管理员等。"
+        ]
+      },
+      {
+        "id": "可见性政策",
+        "title": "可见性政策",
+        "summary": "该屏幕根据规则定义谁将看到报价、活动、请求和订单等记录。",
+        "bullets": [
+          "即使用户进入页面，如果相关实体没有规则，他也只能看到策略逻辑允许的尽可能多的记录。",
+          "这里的范围选择改变了系统行为：只有它自己的记录、它所属的团队、整个公司等。",
+          "同一屏幕允许您为不同的资产（例如优惠和活动）定义不同的可见性模型。",
+          "如果策略处于活动状态但为错误的实体定义，则您期望的效果将永远不会发生。"
+        ]
+      },
+      {
+        "id": "用户可见性分配",
+        "title": "用户可见性分配",
+        "summary": "此屏幕用于授予基于用户的可见性例外。",
+        "bullets": [
+          "如果标准规则不够，您可以将不同的基于实体的可见性策略绑定到特定用户。",
+          "此结构非常适合为单个管理员或特殊用户提供不同的可见性，而不会违反一般规则。",
+          "如果您想定义例外情况而不是影响整个公司的规则，那么您应该在这里工作。",
+          "该界面不授予群组授权；它仅更改记录可见性。"
+        ]
+      },
+      {
+        "id": "能见度模拟器",
+        "title": "能见度模拟器",
+        "summary": "此屏幕测试当选择用户、实体和记录时系统实际显示的内容。",
+        "bullets": [
+          "如果您编写了规则但不确定结果，您可以在此处选择用户和实体类型并读取可见用户。",
+          "如果您键入特定记录的 ID 值，系统将计算该记录的结果。",
+          "如果存在批准覆盖或审核记录，模拟器也会显示出来。",
+          "此屏幕是对上线前结果是否正确的问题最安全的答案。"
+        ]
+      },
+      {
+        "id": "权限定义",
+        "title": "权限定义",
+        "summary": "该屏幕不再是出于操作需要，而是作为了解系统目录逻辑的参考。",
+        "bullets": [
+          "权限代码现在通过自动同步逻辑进行管理。",
+          "归根结底，管理员的主要工作区是权限组和分配屏幕。",
+          "当新路线或新许可证目录到达时，系统会自动对其进行编目。"
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "s1",
+        "title": "场景 1：销售代表只能看到自己的报价",
+        "target": "让他进入报价屏幕，打开一个新报价，但看不到其他人的报价。",
+        "steps": [
+          "在权限组屏幕上，根据需要将“receiving.goods-receipts.view”和“receiving.goods-receipts.create”添加到您将使用的组中。",
+          "从用户组分配屏幕将此组分配给相关销售代表。",
+          "在可见性策略屏幕上，为报价实体定义策略以仅显示其自己的记录。",
+          "如有必要，请从用户可见性分配屏幕将此策略链接到用户。"
+        ],
+        "result": "用户打开报价页面并可以创建新报价，但只能看到列表中属于其权限范围的报价。"
+      },
+      {
+        "id": "s2",
+        "title": "场景 2：让销售经理查看其团队的活动",
+        "target": "经理跟踪团队活动，但看不到所有公司数据。",
+        "steps": [
+          "在权限组界面，为相关管理员组添加“warehouses.warehouse-management.view”权限。",
+          "如果它将更新活动，还请添加“warehouses.warehouse-management.update”权限。",
+          "在“可见性策略”屏幕上，启用定义活动实体的团队绑定范围的策略。",
+          "将此策略直接链接到管理员用户或相应管理组中的用户。"
+        ],
+        "result": "经理进入活动屏幕，只能看到与他/她的团队相关的活动；不相关用户的活动未列出。"
+      },
+      {
+        "id": "s3",
+        "title": "场景3：用户只能跟踪订单，不能创建订单",
+        "target": "它应该进入订单屏幕，但无法打开新订单。",
+        "steps": [
+          "在权限组屏幕上授予“sales.orders.view”权限。",
+          "不要向同一组授予“sales.orders.create”权限。",
+          "从用户组分配屏幕将此组分配给用户。"
+        ],
+        "result": "用户可以打开订单列表。但是，由于没有权限，因此无法使用新订单按钮或创建流程。"
+      },
+      {
+        "id": "s4",
+        "title": "场景 4：出于审计目的，审批流程中的要约可见",
+        "target": "应该能够解释为什么正常可见性之外的记录会出现审批效果。",
+        "steps": [
+          "首先，在可见性模拟器屏幕上，选择用户、报价单作为实体，以及相应的记录 ID。",
+          "预览并查看审核结果。",
+          "如果存在批准覆盖，您将在审核区域中看到它。"
+        ],
+        "result": "因此，记录为何出现的问题的答案不是通过猜测，而是通过系统的审计数据来读取。"
+      }
+    ],
+    "mistakes": [
+      "仅定义可见性规则，不授予页面权限。结果：用户根本无法进入页面。",
+      "仅授予页面权限，不考虑可见性规则。结果：可能会看到比预期更多的记录。",
+      "为用户分配多个组且不考虑组合权限的影响。",
+      "发布实时数据的策略，而无需在模拟器中进行测试。",
+      "混合报价、活动、请求和订单实体类型。"
+    ],
+    "checklist": [
+      "首先，明确用户应该进入哪个页面。",
+      "然后选择您需要在该页面上执行哪些操作。",
+      "然后限制您看到的该实体记录的可见性。",
+      "如有必要，通过用户可见性分配授予基于用户的例外。",
+      "使用最新的能见度模拟器测试结果。"
+    ],
+    "faqs": [
+      {
+        "id": "常见问题1",
+        "question": "用户可以进入报价页面，但看不到任何记录。从哪里？",
+        "answer": "有页面权限，但可见性规则限制了记录。间隙可能正确，但能见度可能缺失或太窄。"
+      },
+      {
+        "id": "常见问题2",
+        "question": "用户无法添加任何优惠。从哪里？",
+        "answer": "通常缺少“receiving.goods-receipts.create”权限。打开查看权限屏幕；创建权限授予打开新记录的权限。"
+      },
+      {
+        "id": "常见问题3",
+        "question": "用户看到太多记录。我应该从哪里开始？",
+        "answer": "首先检查您连接到哪些权限组。然后查看特定于实体的可见性策略和用户可见性分配记录。最后，在模拟器中测试同一用户。"
+      }
+    ]
+  }
+}

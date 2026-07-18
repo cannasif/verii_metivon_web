@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "Planeamento empresarial com IA",
+      "slogan": "Gira o seu negócio com o Metivon, não com suposições.",
+      "branchPlaceholder": "Selecione filial",
+      "emailPlaceholder": "E-mail Corporativo",
+      "passwordPlaceholder": "senha",
+      "rememberMe": "Lembre-se de mim",
+      "forgotPassword": "Esqueci minha senha?",
+      "submitButton": "Entrar",
+      "processing": "Processando...",
+      "sessionExpired": "Sua sessão expirou. Faça login novamente.",
+      "comingSoon": "em breve",
+      "loginError": "Ocorreu um erro ao fazer login.",
+      "capsLockOn": "O Caps Lock está ativado",
+      "animationOn": "Abrir Animação",
+      "animationOff": "Fechar animação",
+      "eyebrow": "ERP COM INTELIGÊNCIA ARTIFICIAL",
+      "heroTitle": "Todo o fluxo da sua empresa num único",
+      "heroDescription": "Gira contas, stock, armazém, receção, expedição e finanças num único núcleo operacional.",
+      "welcomeEyebrow": "ÁREA DE TRABALHO SEGURA",
+      "welcomeTitle": "Entrar no Metivon",
+      "welcomeDescription": "Selecione a filial e aceda com segurança ao seu espaço empresarial.",
+      "modules": {
+        "accounts": "Gestão de contas",
+        "inventory": "Gestão de stock",
+        "warehouse": "Armazém & Localizações",
+        "shipping": "Expedição"
+      },
+      "live": "Ativo",
+      "secureWorkspace": "Todas as operações num fluxo de dados seguro",
+      "defaultBranch": "Predefinida",
+      "showPassword": "Mostrar palavra-passe",
+      "hidePassword": "Ocultar palavra-passe",
+      "secureLogin": "Sessão encriptada e segura"
+    },
+    "forgotPassword": {
+      "title": "Esqueci minha senha",
+      "description": "Digite seu endereço de e-mail para redefinir sua senha. Enviaremos a você um link de redefinição de senha.",
+      "emailPlaceholder": "Endereço de e-mail",
+      "submitButton": "Enviar solicitação de redefinição de senha",
+      "backToLogin": "Retornar à página inicial",
+      "processing": "Processando...",
+      "logoAlt": "Logotipo do aplicativo"
+    },
+    "resetPassword": {
+      "title": "Redefinição de senha",
+      "newPasswordPlaceholder": "Nova senha",
+      "confirmPasswordPlaceholder": "Repetir senha",
+      "submitButton": "Redefinir senha",
+      "processing": "Processando...",
+      "invalidToken": "Token inválido ou ausente. Verifique o link de redefinição de senha novamente.",
+      "tokenNotFound": "Token não encontrado",
+      "successRedirect": "Sua senha foi redefinida com sucesso. Você é direcionado para a tela de login...",
+      "failed": "Falha na redefinição de senha.",
+      "error": "Ocorreu um erro durante o processo de redefinição de senha."
+    },
+    "changePassword": {
+      "success": "A senha foi alterada com sucesso.",
+      "error": "A senha não pôde ser alterada."
+    },
+    "validation": {
+      "emailRequired": "O e-mail é obrigatório",
+      "emailInvalid": "Insira um endereço de e-mail válido",
+      "passwordRequired": "A senha é obrigatória",
+      "branchRequired": "A seleção da filial é obrigatória",
+      "passwordMinLength": "A senha deve ter pelo menos 8 caracteres",
+      "tokenRequired": "O token é obrigatório",
+      "newPasswordMinLength": "A senha deve ter pelo menos 6 caracteres",
+      "confirmPasswordRequired": "A repetição da senha é obrigatória",
+      "passwordsMismatch": "As senhas não coincidem",
+      "currentPasswordRequired": "A senha atual é obrigatória",
+      "newPasswordMaxLength": "A nova senha pode ter no máximo 100 caracteres",
+      "newPasswordSameAsCurrent": "A nova senha não pode ser igual à senha existente",
+      "requiredFieldsNotFilled": "Os campos obrigatórios não foram preenchidos."
+    }
+  }
+}

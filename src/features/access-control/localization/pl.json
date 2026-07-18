@@ -1,0 +1,600 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "Unikalny klucz używany przez strażników tras i stron. Preferuj stabilną notację Snake_case lub kropkę.",
+      "name": "Nazwa wyświetlana wyświetlana administratorom podczas zarządzania uprawnieniami.",
+      "description": "Opcjonalny opis wewnętrzny tego uprawnienia.",
+      "isActive": "Nieaktywne uprawnienia są ignorowane podczas oceny dostępu użytkownika.",
+      "save": "Zmiany wpływają na przepływy autoryzacji ról i grup."
+    },
+    "permissionGroup": {
+      "name": "Nazwa grupy używana do identyfikacji podczas przypisywania do użytkowników.",
+      "isSystemAdmin": "Członkowie tej grupy mogą uzyskać dostęp do wszystkich stron i działań bez indywidualnej kontroli uprawnień.",
+      "isActive": "Nieaktywnych grup nie należy przypisywać do nowych decyzji o dostępie.",
+      "permissions": "Wybrane uprawnienia definiują dostęp członków tej grupy.",
+      "save": "Aktualizuje efektywny dostęp dla każdego użytkownika przypisanego do tej grupy."
+    },
+    "userAssignment": {
+      "user": "Wybierz użytkownika, którego zakresem dostępu chcesz zarządzać.",
+      "groups": "Użytkownik otrzymuje połączone uprawnienia ze wszystkich wybranych grup.",
+      "save": "Przydziały obowiązują natychmiast przy następnych kontrolach autoryzacji. Użytkownicy mogą potrzebować odświeżenia sesji.",
+      "systemAdminNote": "Jeśli użytkownik należy do grupy administratorów systemu, uprawnienia szczegółowe są pomijane."
+    },
+    "visibilityPolicy": {
+      "code": "Użyj unikalnego kodu, aby zasady mogły zostać rozpoznane w procesach przypisania i audytu.",
+      "name": "Nazwa wyświetlana, którą będą widzieć administratorzy podczas zarządzania polityką.",
+      "includeSelf": "Po włączeniu, własne rekordy użytkownika pozostają widoczne w tym zakresie.",
+      "isActive": "Nieaktywne zasady uniemożliwiają nowe przypisania i decyzje dotyczące dostępu."
+    },
+    "userVisibilityAssignment": {
+      "user": "Wybierz użytkownika, którego widocznością encji chcesz zarządzać.",
+      "policy": "Wybierz jedną aktywną politykę widoczności na jednostkę lub pozostaw ją pustą.",
+      "save": "Zmiany w menu rozwijanym nie zostaną zastosowane, dopóki nie zapiszesz. Zapisz i zastosuj wysyła wszystkie wybrane karty razem."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "Definicje uprawnień",
+    "description": "Zarządzaj kodami uprawnień używanymi w całym systemie",
+    "add": "Dodaj definicję",
+    "form": {
+      "editTitle": "Edytuj definicję uprawnień",
+      "addTitle": "Dodaj definicję uprawnień",
+      "editDescription": "Zaktualizuj szczegóły definicji uprawnień",
+      "addDescription": "Utwórz nową definicję uprawnień",
+      "code": "Kod",
+      "codePlaceholder": "Wybierz kod",
+      "affectedRoutes": "Dotknięte strony",
+      "affectedRoutesNone": "Nie znaleziono pasującej trasy dla tego kodu",
+      "name": "Imię",
+      "namePlaceholder": "Nazwa wyświetlana",
+      "availableOnWeb": "Dostępne w internecie",
+      "availableOnWebHint": "Tego uprawnienia można używać w przypadku menu, stron i działań w aplikacji internetowej.",
+      "availableOnMobile": "Dostępne na urządzeniach mobilnych",
+      "availableOnMobileHint": "Tego uprawnienia można używać w przypadku menu, ekranów i działań w aplikacji mobilnej.",
+      "description": "Opis",
+      "descriptionPlaceholder": "Opcjonalny opis",
+      "isActive": "Aktywny",
+      "codeSearchPlaceholder": "Szukaj...",
+      "codeEmpty": "Nie znaleziono żadnych wyników"
+    },
+    "table": {
+      "title": "Definicje uprawnień",
+      "code": "Kod",
+      "name": "Imię",
+      "platform": "Platforma",
+      "isActive": "Aktywny",
+      "updatedDate": "Zaktualizowano",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "platform": {
+      "web": "Sieć",
+      "mobile": "Mobilny",
+      "both": "Internet + Mobilność"
+    },
+    "delete": {
+      "confirmTitle": "Usuń definicję uprawnień",
+      "confirmMessage": "Czy na pewno chcesz usunąć „{{name}}”? Tej akcji nie można cofnąć."
+    },
+    "syncFromRoutes": "Synchronizuj z trasami"
+  },
+  "permissionGroups": {
+    "title": "Grupy uprawnień",
+    "description": "Zarządzaj grupami uprawnień i przypisaniami",
+    "systemAdminLocked": "Nie można zmienić grupy administratorów systemu",
+    "add": "Dodaj grupę",
+    "selectAll": "Zaznacz wszystko",
+    "noDefinitions": "Brak dostępnych definicji uprawnień",
+    "form": {
+      "editTitle": "Edytuj grupę uprawnień",
+      "addTitle": "Dodaj grupę uprawnień",
+      "editDescription": "Zaktualizuj szczegóły grupy uprawnień",
+      "addDescription": "Utwórz nową grupę uprawnień",
+      "name": "Imię",
+      "namePlaceholder": "Nazwa grupy",
+      "description": "Opis",
+      "descriptionPlaceholder": "Opcjonalny opis",
+      "isSystemAdmin": "Administrator systemu",
+      "isActive": "Aktywny",
+      "permissions": "Uprawnienia"
+    },
+    "table": {
+      "title": "Grupy uprawnień",
+      "name": "Imię",
+      "isSystemAdmin": "Administrator systemu",
+      "isActive": "Aktywny",
+      "permissionCount": "Uprawnienia",
+      "showing": "{{from}}-{{to}} / {{total}}",
+      "id": "ID rekordu"
+    },
+    "managePermissions": "Zarządzaj uprawnieniami",
+    "permissionsPanel": {
+      "title": "Edytuj uprawnienia grupy",
+      "description": "Wybierz uprawnienia dla tej grupy",
+      "currentCodes": "Aktualne kody uprawnień",
+      "screen": "Obszar ekranu / uprawnień",
+      "groupedRows": "obszary uprawnień",
+      "actionsMapped": "uprawnienia",
+      "actions": {
+        "create": "Utwórz",
+        "read": "Przeczytaj",
+        "update": "Aktualizacja",
+        "delete": "Usuń",
+        "other": "Inne"
+      },
+      "previewTitle": "Podgląd uprawnień grupy",
+      "previewDescription": "Szybko sprawdź uprawnienia przypisane do tej grupy."
+    },
+    "delete": {
+      "confirmTitle": "Usuń grupę uprawnień",
+      "confirmMessage": "Czy na pewno chcesz usunąć „{{name}}”? Tej akcji nie można cofnąć."
+    },
+    "search": "Szukaj...",
+    "builtInLocked": "Wbudowanych grup nie można zmieniać; utwórz grupę niestandardową.",
+    "presets": {
+      "systemAdministrators": {
+        "name": "Administratorzy systemu",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "masterDataSpecialist": {
+        "name": "Specjalista danych podstawowych",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "purchasingSpecialist": {
+        "name": "Specjalista zakupów",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "goodsReceiptOperator": {
+        "name": "Operator przyjęcia towaru",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "warehouseOperator": {
+        "name": "Operator magazynu",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "shippingOperator": {
+        "name": "Operator wysyłki",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "salesSpecialist": {
+        "name": "Specjalista sprzedaży",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "importCostSpecialist": {
+        "name": "Specjalista importu i kosztów",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "accountingSpecialist": {
+        "name": "Specjalista księgowości",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      },
+      "erpAuditor": {
+        "name": "Audytor ERP (Tylko odczyt)",
+        "description": "Wstępnie zdefiniowany profil ERP z minimalnymi uprawnieniami."
+      }
+    },
+    "previewPermissions": "Podgląd przypisanych uprawnień",
+    "restoreDefaults": {
+      "button": "Utwórz domyślne grupy uprawnień",
+      "title": "Przywróć domyślne grupy uprawnień",
+      "description": "Wbudowane grupy administratora, przyjęcia, magazynu, wysyłki i pozostałych ról zostaną przywrócone z bezpiecznymi uprawnieniami. Grupy niestandardowe pozostaną bez zmian.",
+      "confirm": "Przywróć",
+      "success": "Przywrócono {{count}} domyślnych grup uprawnień."
+    }
+  },
+  "userGroupAssignments": {
+    "title": "Przypisania grup użytkowników",
+    "description": "Przypisz grupy uprawnień użytkownikom",
+    "selectUser": "Wybierz użytkownika",
+    "selectUserPlaceholder": "Wyszukaj i wybierz użytkownika...",
+    "selectUserHint": "Wybierz użytkownika, aby zarządzać przypisaniami jego grup uprawnień",
+    "assignedGroups": "Przypisane grupy uprawnień",
+    "noUsers": "Nie znaleziono żadnych użytkowników",
+    "noGroups": "Brak dostępnych grup uprawnień",
+    "selectAll": "Zaznacz wszystko"
+  },
+  "visibilityPolicies": {
+    "title": "Zasady widoczności",
+    "description": "Zarządzaj zestawami zasad, które definiują, kto może zobaczyć które rekordy",
+    "add": "Dodaj politykę",
+    "search": "Zasady wyszukiwania...",
+    "table": {
+      "title": "Lista zasad widoczności",
+      "code": "Kod",
+      "name": "Imię",
+      "entityType": "Jednostka",
+      "scopeType": "Zakres",
+      "includeSelf": "Uwzględnij siebie",
+      "isActive": "Aktywny",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "stats": {
+      "total": "Całkowita polityka",
+      "active": "Aktywne zasady",
+      "entities": "Typy jednostek"
+    },
+    "form": {
+      "addTitle": "Dodaj politykę widoczności",
+      "editTitle": "Edytuj zasady widoczności",
+      "addDescription": "Utwórz nową definicję zasad widoczności",
+      "editDescription": "Zaktualizuj wybrane ustawienia zasad widoczności",
+      "code": "Kod",
+      "codePlaceholder": "ERP_GOODS_RECEIPT_BRANCH",
+      "name": "Imię",
+      "namePlaceholder": "Przyjęcie towaru — Ten sam oddział",
+      "entityType": "Jednostka",
+      "entityTypePlaceholder": "Wybierz podmiot",
+      "scopeType": "Zakres",
+      "scopeTypePlaceholder": "Wybierz zakres",
+      "description": "Opis",
+      "descriptionPlaceholder": "Opcjonalny krótki opis",
+      "includeSelf": "Uwzględnij własne rekordy użytkownika",
+      "isActive": "Aktywny",
+      "summaryTitle": "Podsumowanie zasad",
+      "summary": "Zakres {{scope}} zostanie zastosowany do rekordów {{entity}}."
+    },
+    "scope": {
+      "self": "Tylko siebie",
+      "managerHierarchy": "Hierarchia menedżera",
+      "permissionGroup": "Grupa uprawnień",
+      "company": "W całej firmie",
+      "branch": "Ten sam oddział",
+      "warehouse": "Zakres magazynu"
+    },
+    "entity": {
+      "businessPartner": "Kontrahent",
+      "product": "Zapas / produkt",
+      "warehouse": "Magazyn i lokalizacja",
+      "inventory": "Ruchy magazynowe",
+      "goodsReceipt": "Przyjęcie towaru",
+      "transferOrder": "Przesunięcie międzymagazynowe",
+      "shipment": "Wysyłka i dokument dostawy",
+      "purchaseOrder": "Zamówienie zakupu",
+      "salesOrder": "Zamówienie sprzedaży",
+      "importDossier": "Teczka importowa",
+      "electronicDocument": "E-dokument",
+      "accounting": "Księgowość"
+    }
+  },
+  "userVisibilityAssignments": {
+    "title": "Przypisania widoczności użytkownika",
+    "description": "Zarządzaj przypisaniami zasad widoczności encji dla każdego użytkownika",
+    "selectUser": "Wybierz użytkownika",
+    "selectedUser": "Wybrany użytkownik",
+    "selectUserPlaceholder": "Wyszukaj i wybierz użytkownika...",
+    "selectUserHint": "Wybierz użytkownika, aby zarządzać przypisaniami widoczności",
+    "assignedPolicies": "Przypisane zasady",
+    "status": "Stan",
+    "ready": "Aktualne",
+    "unsavedChanges": "Niezapisane",
+    "unsavedChangesCount": "Moduły {{count}} czekają na zapisanie",
+    "upToDate": "Aktualne",
+    "pendingChange": "Oczekujące na zapisanie",
+    "unsavedCardHint": "Twój wybór nie został jeszcze zapisany. Naciśnij Zapisz, aby zastosować.",
+    "saveEntity": "Zapisz",
+    "revert": "Anuluj",
+    "moduleSectionTitle": "Widoczność modułu",
+    "moduleSectionDescription": "Wybierz polisę dla każdego modułu i zapisz z karty.",
+    "unassigned": "Nieprzypisany",
+    "cardDescription": "Wybierz zasadę widoczności, która będzie stosowana do rekordów {{entity}} dla tego użytkownika.",
+    "selectPolicyPlaceholder": "Wybierz zasady",
+    "noPolicy": "Brak polityki",
+    "noPolicyCompanyHint": "W przypadku wybrania opcji Brak polisy użytkownik może zobaczyć w tym module wszystkie rekordy firmy/fabryki."
+  },
+  "visibilitySimulator": {
+    "title": "Symulator widoczności",
+    "description": "Sprawdź, które rekordy użytkowników i aktywne rekordy zastąpienia zatwierdzenia są widoczne dla wybranego użytkownika dla wybranego typu jednostki.",
+    "selectUser": "Użytkownik",
+    "helpUser": "Wybierz użytkownika, którego widoczność chcesz symulować.",
+    "selectUserPlaceholder": "Wybierz użytkownika...",
+    "selectEntity": "Jednostka",
+    "helpEntity": "Wybierz moduł, dla którego chcesz symulować widoczność rekordów.",
+    "selectEntityPlaceholder": "Wybierz podmiot",
+    "recordId": "Identyfikator rekordu",
+    "recordIdPlaceholder": "np. 125",
+    "helpRecordId": "Wprowadź konkretny identyfikator rekordu, aby zasymulować, czy dozwolone są działania związane z przeglądaniem, aktualizowaniem, usuwaniem i zatwierdzaniem.",
+    "selectedUser": "Wybrany użytkownik",
+    "entity": "Jednostka",
+    "visibleUsers": "Widoczni użytkownicy",
+    "approvalOverrides": "Rekordy zastąpienia zatwierdzenia",
+    "visibleUsersTitle": "Użytkownicy w zakresie",
+    "policyDefined": "Zdefiniowano politykę",
+    "noPolicy": "Brak polityki",
+    "companyWide": "Dostęp w całej firmie",
+    "policyActive": "Stosowana jest aktywna polityka widoczności",
+    "includeSelf": "obejmuje siebie",
+    "awaitingSelection": "Najpierw wybierz użytkownika i podmiot",
+    "overrideTitle": "Aktywne rekordy zastąpienia zatwierdzenia",
+    "noOverrides": "Nie znaleziono aktywnych rekordów zastąpienia zatwierdzenia",
+    "overrideRecord": "Nagraj #{{id}}",
+    "auditTitle": "Audyt zastąpienia zatwierdzenia",
+    "noAudit": "Nie znaleziono aktywnych wpisów kontroli zastąpienia zatwierdzenia",
+    "auditActionId": "Akcja zatwierdzająca",
+    "auditRequestId": "Prośba o zatwierdzenie",
+    "auditFlow": "Przepływ",
+    "auditApprover": "Osoba zatwierdzająca",
+    "auditStepValue": "Krok {{step}} / bieżący {{currentStep}}",
+    "actionPanelTitle": "Symulacja akcji na rekordowym poziomie",
+    "noRecordSimulation": "Po wprowadzeniu identyfikatora rekordu w tym miejscu pojawi się wynik przeglądania/aktualizowania/usuwania/zatwierdzania.",
+    "actionAllowed": "Dozwolone",
+    "actionDenied": "Odmówiono",
+    "action": {
+      "view": "Zobacz",
+      "update": "Aktualizacja",
+      "delete": "Usuń",
+      "approve": "Zatwierdź"
+    },
+    "visibleUsersShowing": "{{from}}-{{to}} użytkowników {{total}}",
+    "visibleUsersPage": "Strona {{page}} / {{totalPages}}",
+    "noVisibleUsers": "Brak użytkowników w zakresie"
+  },
+  "auditLogs": {
+    "title": "Dzienniki audytu",
+    "description": "Śledź, kto wykonał krytyczne działania, pod jakim śladem i jak się zakończyły.",
+    "search": "Przeszukaj dzienniki kontrolne...",
+    "results": {
+      "success": "Sukces",
+      "succeeded": "Udało się",
+      "warning": "Ostrzeżenie",
+      "partial": "Częściowe",
+      "error": "Błąd",
+      "failed": "Nie udało się"
+    },
+    "filters": {
+      "result": "Wynik",
+      "actionType": "Akcja",
+      "entityType": "Jednostka",
+      "entityId": "Identyfikator rekordu",
+      "performedByUserEmail": "Wykonywane przez",
+      "source": "Źródło",
+      "branchCode": "Oddział",
+      "requestPath": "Ścieżka żądania",
+      "requestMethod": "Metoda",
+      "createdDate": "Data"
+    },
+    "clearTraceFilter": "Wyczyść filtr śledzenia",
+    "viewDetail": "Szczegół",
+    "filterTrace": "Filtruj ślad",
+    "loadError": "Nie udało się wczytać dzienników kontrolnych",
+    "stats": {
+      "total": "Suma rekordów",
+      "errors": "Nieudane wyniki",
+      "traces": "Aktywne ślady"
+    },
+    "table": {
+      "title": "Lista dzienników audytu",
+      "createdDate": "Data",
+      "traceId": "Identyfikator śledzenia",
+      "actionType": "Akcja",
+      "entityType": "Jednostka",
+      "entityId": "Identyfikator rekordu",
+      "result": "Wynik",
+      "source": "Źródło",
+      "performedBy": "Wykonywane przez",
+      "branchCode": "Oddział",
+      "requestPath": "Ścieżka żądania",
+      "requestMethod": "Metoda",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "detail": {
+      "title": "Szczegóły dziennika audytu",
+      "description": "Sprawdź kontekst żądania i zmień podsumowanie wybranego rekordu.",
+      "contextTitle": "Kontekst działania",
+      "requestTitle": "Poproś o podsumowanie",
+      "reason": "Powód",
+      "failureReason": "Szczegóły awarii",
+      "changedFieldsTitle": "Zmienione pola",
+      "noChangedFields": "Dla tego rekordu nie jest dostępna żadna różnica pól.",
+      "oldValuesTitle": "Stare wartości",
+      "newValuesTitle": "Nowe wartości"
+    },
+    "traceDrillDown": {
+      "traceId": "Wybrany ślad",
+      "startedAt": "Rozpoczęło się o godz",
+      "completedAt": "Zakończono o godz",
+      "entities": "Dotknięte istoty",
+      "timelineTitle": "Podsumowanie przepływu śledzenia",
+      "openTrace": "Otwórz ten ślad"
+    }
+  },
+  "common": {
+    "cancel": "Anuluj",
+    "saving": "Zapisywanie...",
+    "save": "Zapisz i aplikuj",
+    "loading": "Ładowanie...",
+    "search": "Szukaj...",
+    "noData": "Brak danych",
+    "actions": "Działania",
+    "yes": "Tak",
+    "no": "Nie",
+    "edit": "Edytuj",
+    "delete": "Usuń",
+    "previous": "Poprzedni",
+    "next": "Następny",
+    "processing": "Przetwarzanie..."
+  },
+  "sidebar": {
+    "accessControl": "Kontrola dostępu",
+    "permissionDefinitions": "Definicje uprawnień",
+    "permissionGroups": "Grupy uprawnień",
+    "userGroupAssignments": "Przypisania grup użytkowników",
+    "visibilityPolicies": "Zasady widoczności",
+    "userVisibilityAssignments": "Przypisania widoczności użytkownika",
+    "auditLogs": "Dzienniki audytu",
+    "visibilitySimulator": "Symulator widoczności",
+    "accessControlGuide": "Przewodnik kontroli dostępu"
+  },
+  "guide": {
+    "title": "Przewodnik kontroli dostępu",
+    "description": "W tym przewodniku wyjaśniono, do czego służy każdy ekran kontroli dostępu i co zmienia każde ustawienie. Celem jest uczynienie systemu zrozumiałym nawet dla osoby, która widzi model po raz pierwszy.",
+    "hero": {
+      "coreLogicLabel": "Logika rdzenia",
+      "coreLogicValue": "Uprawnienia pozwalają, ograniczenia widoczności.",
+      "finalCheckLabel": "Kontrola końcowa",
+      "finalCheckValue": "Sprawdź w symulatorze."
+    },
+    "quickRulesTitle": "Pięć podstawowych zasad",
+    "screensTitle": "Co robi każdy ekran?",
+    "scenariosTitle": "Przykłady oparte na scenariuszach",
+    "expectedResultLabel": "Oczekiwany wynik",
+    "mistakesTitle": "Typowe błędy",
+    "checklistTitle": "Zalecana kolejność konfiguracji",
+    "faqTitle": "Często zadawane pytania",
+    "footer": {
+      "title": "Zasada krótkiej decyzji",
+      "body": "Jeśli użytkownik nie może wykonać akcji, zacznij od grup uprawnień. Jeśli użytkownik widzi za dużo lub za mało rekordów, zacznij od Widoczności. Zawsze weryfikuj ostateczną decyzję w Symulatorze Widoczności."
+    },
+    "quickRules": [
+      "Pozwolenia na stronę to osobna kwestia, widoczność rekordów to osobna kwestia. Użytkownik może wejść na stronę, ale nie może zobaczyć wszystkich rekordów.",
+      "Ekran grupy uprawnień określa, którą stronę użytkownik może otworzyć i jakie działania może podjąć.",
+      "Ekran zasad widoczności określa, które rekordy użytkownik widzi na tej stronie.",
+      "Przypisania grup użytkowników przypisują grupy. Przypisania widoczności użytkownika definiują wyjątki widoczności oparte na użytkownikach.",
+      "Nadawanie zasad stworzeniu bez odczytania wyniku symulatora widoczności jest ryzykowne; Koniecznie sprawdź wynik w symulatorze."
+    ],
+    "pageCards": [
+      {
+        "id": "Grupy uprawnień",
+        "title": "grupy uprawnień",
+        "summary": "Ekran ten określa, które moduły użytkownik może zobaczyć i jakie akcje może podjąć.",
+        "bullets": [
+          "Jeśli chcesz, aby otwierał ekran ofert, musisz nadać mu uprawnienia do wyświetlania, takie jak `receiving.goods-receipts.view`.",
+          "Jeśli chcesz, aby utworzył nową wycenę, w tej samej grupie musi znajdować się uprawnienie `receiving.goods-receipts.create`.",
+          "Jeśli chcesz go zaktualizować, potrzebujesz `receiving.goods-receipts.update`, jeśli chcesz, aby go usunął, potrzebujesz `receiving.goods-receipts.delete`.",
+          "Uprawnienia tutaj otwierają stronę i drzwi akcji; Nie sam określa, które rekordy zobaczy."
+        ]
+      },
+      {
+        "id": "Przypisania grupy użytkowników",
+        "title": "Przypisania grup użytkowników",
+        "summary": "Ten ekran służy do powiązania jednej lub większej liczby grup uprawnień z użytkownikiem.",
+        "bullets": [
+          "Wybierany jest użytkownik, a następnie wybierane są grupy, które będzie miał użytkownik.",
+          "Jeżeli użytkownik należy do więcej niż jednej grupy, uprawnienia zostają scalone; Innymi słowy, autorytet w jednej grupie wspiera także drugą grupę.",
+          "Jeśli przydzielisz użytkownikowi niewłaściwą grupę, możesz otworzyć dostęp do stron, których nigdy nie zdefiniowałeś.",
+          "Ten ekran jest najczęściej używany do podziału ról: przedstawiciel handlowy, administrator, operator, administrator systemu itp."
+        ]
+      },
+      {
+        "id": "zasady widoczności",
+        "title": "Zasady widoczności",
+        "summary": "Ten ekran określa na podstawie reguły, kto będzie widział rekordy, takie jak oferty, działania, prośby i zamówienia.",
+        "bullets": [
+          "Nawet jeśli użytkownik wejdzie na stronę, jeśli dla danego podmiotu nie ma żadnych reguł, zobaczy tylko tyle rekordów, na ile pozwala logika polityki.",
+          "Wybór zakresu zmienia zachowanie systemu: tylko jego własne rekordy, zespół, z którym jest powiązany, firmę w ogóle itp.",
+          "Na tym samym ekranie możesz zdefiniować różne modele widoczności dla różnych zasobów, takich jak oferty i działania.",
+          "Jeśli polityka jest aktywna, ale zdefiniowana dla niewłaściwej jednostki, oczekiwany efekt nigdy nie nastąpi."
+        ]
+      },
+      {
+        "id": "Przypisania widoczności użytkownika",
+        "title": "Przypisania widoczności użytkownika",
+        "summary": "Ten ekran służy do przyznawania wyjątków widoczności na podstawie użytkownika.",
+        "bullets": [
+          "Jeśli standardowa reguła nie wystarczy, możesz powiązać inną politykę widoczności opartą na encjach z konkretnym użytkownikiem.",
+          "Ta struktura jest idealna do zapewnienia różnej widoczności pojedynczemu administratorowi lub specjalnemu użytkownikowi bez łamania ogólnej zasady.",
+          "Jeśli chcesz zdefiniować wyjątek, a nie regułę obowiązującą całą firmę, powinieneś popracować tutaj.",
+          "Ten ekran nie umożliwia autoryzacji grupowej; Zmienia jedynie widoczność rekordu."
+        ]
+      },
+      {
+        "id": "symulator widoczności",
+        "title": "symulator widoczności",
+        "summary": "Na tym ekranie sprawdzane jest, co system faktycznie wyświetli po wybraniu użytkownika, podmiotu i rekordu.",
+        "bullets": [
+          "Jeśli napisałeś regułę, ale nie jesteś pewien wyniku, możesz tutaj wybrać typ użytkownika i encji oraz odczytać widocznych użytkowników.",
+          "Jeśli wpiszesz wartość identyfikacyjną konkretnego rekordu, wynik zostanie obliczony dla tego rekordu.",
+          "Jeśli istnieją zmiany w zatwierdzeniu lub zapisy audytu, symulator również to pokaże.",
+          "Ten ekran jest najbezpieczniejszą odpowiedzią na pytanie, czy wynik jest prawidłowy przed publikacją."
+        ]
+      },
+      {
+        "id": "definicje uprawnień",
+        "title": "Definicje uprawnień",
+        "summary": "Ten ekran nie służy już do celów operacyjnych, ale jako odniesienie do zrozumienia logiki katalogu systemowego.",
+        "bullets": [
+          "Kody uprawnień są teraz zarządzane za pomocą logiki automatycznej synchronizacji.",
+          "Ostatecznie głównym obszarem roboczym administratora są grupy uprawnień i ekrany przydziałów.",
+          "Kiedy pojawi się nowa trasa lub nowy katalog zezwoleń, system jest skonfigurowany tak, aby automatycznie go katalogował."
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "s1",
+        "title": "Scenariusz 1: Przedstawiciel handlowy widzi tylko własne oferty",
+        "target": "Pozwól mu wejść na ekran oferty, otworzyć nową ofertę, ale nie widzieć ofert innych osób.",
+        "steps": [
+          "Na ekranie grup uprawnień dodaj w razie potrzeby `receiving.goods-receipts.view` i `receiving.goods-receipts.create` do grupy, której będziesz używać.",
+          "Przypisz tę grupę do odpowiedniego przedstawiciela handlowego z ekranu przypisania grup użytkowników.",
+          "Na ekranie Zasady widoczności zdefiniuj zasady dla encji Oferta, aby wyświetlały tylko własne rekordy.",
+          "W razie potrzeby połącz tę zasadę z użytkownikiem na ekranie przypisań widoczności użytkownika."
+        ],
+        "result": "Użytkownik otwiera stronę z ofertami i może utworzyć nową ofertę, ale widzi na liście tylko te oferty, które wchodzą w zakres jego uprawnień."
+      },
+      {
+        "id": "s2",
+        "title": "Scenariusz 2: Pozwól menadżerowi sprzedaży zobaczyć działania swojego zespołu",
+        "target": "Menedżer śledzi aktywność zespołu, ale nie widzi wszystkich danych firmy.",
+        "steps": [
+          "Na ekranie grup uprawnień dodaj uprawnienie `warehouses.warehouse-management.view` do odpowiedniej grupy administratorów.",
+          "Jeśli zaktualizuje działanie, dodaj także uprawnienie `warehouses.warehouse-management.update`.",
+          "Na ekranie Zasady widoczności włącz zasadę definiującą zakres powiązany z zespołem dla encji Działanie.",
+          "Połącz tę politykę bezpośrednio z użytkownikiem administratorem lub użytkownikami w odpowiedniej grupie administratorów."
+        ],
+        "result": "Menedżer wchodzi na ekran aktywności i widzi tylko czynności związane z jego zespołem; Aktywności nieistotnych użytkowników nie są wymienione."
+      },
+      {
+        "id": "s3",
+        "title": "Scenariusz 3: Użytkownik może jedynie śledzić zamówienia, a nie je tworzyć",
+        "target": "Powinien wejść na ekran zamówienia, ale nie może otworzyć nowego zamówienia.",
+        "steps": [
+          "Nadaj uprawnienia `sales.orders.view` na ekranie grup uprawnień.",
+          "Nie udzielaj uprawnienia „sales.orders.create” tej samej grupie.",
+          "Przypisz tę grupę do użytkownika na ekranie przypisań grup użytkowników."
+        ],
+        "result": "Użytkownik może otworzyć listę zamówień. Nie można jednak użyć przycisku nowego zamówienia ani utworzyć przepływu, ponieważ nie ma żadnych uprawnień."
+      },
+      {
+        "id": "s4",
+        "title": "Scenariusz 4: Oferta w procesie zatwierdzania jest widoczna dla celów audytu",
+        "target": "Powinien być w stanie wyjaśnić, dlaczego zapis poza normalną widocznością pojawia się ze skutkiem zatwierdzenia.",
+        "steps": [
+          "Najpierw na ekranie symulatora widoczności wybierz użytkownika, Ofertę jako podmiot i odpowiedni identyfikator rekordu.",
+          "Wyświetl podgląd i zobacz wynik audytu.",
+          "Jeśli nastąpi zastąpienie zatwierdzenia, zobaczysz to w obszarze kontroli."
+        ],
+        "result": "Zatem odpowiedź na pytanie, dlaczego rekord się pojawia, odczytuje się nie poprzez domysły, ale dane audytowe systemu."
+      }
+    ],
+    "mistakes": [
+      "Definiowanie tylko reguły widoczności i nieudzielanie uprawnień do strony. Wynik: użytkownik w ogóle nie może wejść na stronę.",
+      "Po prostu udzielam pozwolenia na stronę i nie myślę o regule widoczności. Wynik: może zostać wyświetlonych więcej rekordów niż oczekiwano.",
+      "Przypisanie użytkownikowi więcej niż jednej grupy i nieuwzględnienie efektu połączonych uprawnień.",
+      "Polityka publikowania danych bieżących bez testowania ich w symulatorze.",
+      "Mieszanie typów jednostek ofert, działań, żądań i zamówień."
+    ],
+    "checklist": [
+      "Najpierw ustal, na którą stronę powinien wejść użytkownik.",
+      "Następnie wybierz działania, które chcesz wykonać na tej stronie.",
+      "Następnie ogranicz widoczność rekordów, które widzisz dla tej jednostki.",
+      "Jeśli to konieczne, przyznaj wyjątek oparty na użytkowniku z przypisaniami widoczności użytkownika.",
+      "Przetestuj wynik za pomocą najnowszego symulatora widoczności."
+    ],
+    "faqs": [
+      {
+        "id": "często zadawane pytania 1",
+        "question": "Użytkownik może wejść na stronę oferty, ale nie widzi żadnych rekordów. Skąd?",
+        "answer": "Istnieje pozwolenie na stronę, ale reguła widoczności ogranicza rekordy. Prześwit może być prawidłowy, widoczność może być brakująca lub zbyt wąska."
+      },
+      {
+        "id": "często zadawane pytania 2",
+        "question": "Użytkownik nie może dodawać żadnych ofert. Skąd?",
+        "answer": "Generalnie brakuje uprawnienia `receiving.goods-receipts.create`. Otwiera ekran uprawnień do przeglądania; Pozwolenie na tworzenie daje uprawnienia do otwarcia nowego rekordu."
+      },
+      {
+        "id": "często zadawane pytania 3",
+        "question": "Użytkownik widzi zbyt wiele rekordów. Gdzie powinienem zacząć?",
+        "answer": "Najpierw sprawdź, z którymi grupami uprawnień jesteś połączony. Następnie przejrzyj zasady widoczności specyficzne dla jednostki i zapisy przypisania widoczności użytkownika. Na koniec przetestuj tego samego użytkownika w symulatorze."
+      }
+    ]
+  }
+}

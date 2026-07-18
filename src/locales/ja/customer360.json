@@ -1,0 +1,268 @@
+{
+  "title": "顧客360度",
+  "notFound": "顧客が見つかりません",
+  "error": "エラーが発生しました",
+  "retry": "もう一度試してください",
+  "quickActivity": "クイックアクティビティ",
+  "currencyFilter": {
+    "label": "通貨",
+    "all": "すべて"
+  },
+  "balanceDialog": {
+    "openButton": "現在の残高の概要",
+    "title": "現在の残高の概要",
+    "error": "ERP 残高概要をロードできませんでした。"
+  },
+  "tabs": {
+    "quotations": "オファー",
+    "orders": "注文",
+    "activities": "活動内容",
+    "overview": "概要",
+    "analytics": "分析",
+    "quickQuotations": "簡単な見積もり",
+    "erpMovements": "ERPの動き",
+    "erpOrders": "ERP注文",
+    "mailLogs": "メール履歴",
+    "images": "画像",
+    "imagesDefaultDescription": "名刺画像"
+  },
+  "quickQuotations": {
+    "empty": "この側室に対する即時オファーは見つかりませんでした",
+    "error": "クイック見積もりを読み込めませんでした",
+    "draft": "ドラフト",
+    "converted": "オファーに戻りました",
+    "sentToApproval": "承認のために送信されました",
+    "notSentToApproval": "承認には至らなかった",
+    "currency": "通貨",
+    "total": "合計",
+    "quotationStatus": "オファーステータス",
+    "approvalStep": "確認ステップ",
+    "stepValue": "ステップ{{step}}",
+    "convertedAt": "変換: {{date}}",
+    "notConvertedYet": "まだオファーにはなっていません",
+    "openQuotation": "オープンオファー"
+  },
+  "erpMovements": {
+    "title": "ERPの動き",
+    "tableTitle": "現在の動き",
+    "error": "ERPトランザクションデータのロードに失敗しました",
+    "columns": {
+      "date": "日付",
+      "dueDate": "満期日",
+      "documentNo": "文書番号",
+      "description": "説明",
+      "currency": "通貨",
+      "debit": "借金",
+      "credit": "受取可能",
+      "tlBalanceByDate": "注文日 TL 残高",
+      "tlBalanceByDueDate": "満期順序 TL バランス",
+      "fxDebit": "外国為替債務",
+      "fxCredit": "外貨債権",
+      "fxBalanceByDate": "注文日 通貨残高",
+      "fxBalanceByDueDate": "満期順 外国為替残高",
+      "actions": "取引"
+    },
+    "detail": {
+      "button": "詳細",
+      "title": "ドキュメントペンの詳細",
+      "description": "Netsis の在庫品目は文書番号 {{documentNo}} に属します。",
+      "error": "ドキュメントアイテムをロードできませんでした。",
+      "empty": "このドキュメントの在庫アイテムは見つかりませんでした。",
+      "columns": {
+        "stockCode": "証券コード",
+        "stockName": "銘柄名",
+        "quantity": "数量",
+        "grossPrice": "総価格",
+        "netPrice": "正味価格",
+        "grossAmount": "総売上高",
+        "discountAmount": "割引額",
+        "vatAmount": "VAT 額",
+        "total": "金額",
+        "fxPrice": "外貨価格",
+        "fxAmount": "外貨金額"
+      }
+    },
+    "summary": {
+      "totalDebit": "負債総額",
+      "totalCredit": "総売掛金",
+      "balance": "バランス",
+      "closed": "閉店"
+    }
+  },
+  "erpOrders": {
+    "title": "ネシスの注文",
+    "noCariCode": "ERP の現在のコードはこの顧客に対して定義されていません。 Netsis の注文は表示できません。",
+    "forbidden": "ERP オーダーを表示する権限がありません。",
+    "error": "ERP注文をロードできませんでした。",
+    "empty": "この当座預金口座には Netsis 注文が見つかりません。",
+    "scopeHint": "このリストは、ログイン ユーザーの Netsis スコープ内の注文に限定されます。",
+    "columns": {
+      "branch": "支店",
+      "orderNo": "注文番号",
+      "date": "日付",
+      "deliveryDate": "配送",
+      "gross": "ひどい",
+      "vat": "VAT",
+      "total": "合計",
+      "salesRep": "セールスマン"
+    }
+  },
+  "mail": {
+    "providers": {
+      "google": "Google",
+      "outlook": "展望"
+    },
+    "columns": {
+      "date": "日付",
+      "sender": "投稿者",
+      "to": "購入者",
+      "subject": "件名",
+      "status": "ステータス",
+      "template": "テンプレート",
+      "errorCode": "エラーコード",
+      "body": "メッセージ"
+    }
+  },
+  "kpi": {
+    "totalDemands": "トータルオファー",
+    "totalQuotations": "トータルオファー",
+    "totalOrders": "合計注文数",
+    "openQuotations": "オープンオファー",
+    "openOrders": "保留中の注文"
+  },
+  "sections": {
+    "contacts": "コミュニケーション",
+    "shippingAddresses": "配送先住所",
+    "recentDemands": "最新のリクエスト",
+    "recentQuotations": "最新のオファー",
+    "recentOrders": "最新の注文",
+    "recentActivities": "最新の活動",
+    "timeline": "タイムライン"
+  },
+  "analytics": {
+    "error": "分析データのロードに失敗しました",
+    "last12MonthsOrderAmount": "過去 12 か月の注文金額",
+    "openQuotationAmount": "オープン入札額",
+    "openOrderAmount": "オープン注文金額",
+    "activityCount": "アクティビティの数",
+    "lastActivityDate": "最終アクティビティ日"
+  },
+  "analyticsCharts": {
+    "demand": "オファー",
+    "quotation": "オファー",
+    "order": "注文",
+    "last12MonthsOrderAmount": "過去 12 か月の注文",
+    "openQuotationAmount": "オープンオファー",
+    "openOrderAmount": "オープンオーダー",
+    "distributionTitle": "配布",
+    "monthlyTrendTitle": "月次傾向",
+    "amountComparisonTitle": "金額比較"
+  },
+  "currencyTotals": {
+    "currency": "通貨",
+    "demandAmount": "入札金額",
+    "quotationAmount": "入札金額",
+    "orderAmount": "注文金額"
+  },
+  "revenueQuality": {
+    "title": "収益の質",
+    "churnRisk": "損失の危険性",
+    "upsell": "アップセルの傾向",
+    "payment": "支払い行動",
+    "segment": "RFM のグループ化",
+    "ltv": "生涯価値"
+  },
+  "cohort": {
+    "title": "コホートを維持する",
+    "empty": "コホートデータなし",
+    "cohortKey": "コホート"
+  },
+  "actions": {
+    "title": "推奨されるアクション",
+    "empty": "推奨されるアクションはありません",
+    "execute": "申し込む"
+  },
+  "explain": {
+    "revenueQualityTitle": "収益の質は、顧客の販売可能性とリスク プロファイルを要約します。",
+    "churnRisk": "損失のリスクは、顧客が再注文しない可能性を示します。",
+    "upsellPropensity": "アップセルの傾向は、顧客がより大量または追加の製品を購入する可能性があることを示しています。",
+    "paymentBehavior": "支払い行動は、顧客の回収と支払いのパターンを要約したものです。",
+    "rfmSegment": "RFM のグループ化。近接性、頻度、金額データに基づいて顧客のグループを表示します。",
+    "modelNote": "これらのフィールドは分析モデルの出力であり、意思決定支援の目的で表示されます。",
+    "cohortRetentionTitle": "コホート維持率は、同様の期間に獲得した顧客の長期にわたる継続性を示します。",
+    "noCohortData": "このクライアントには不十分なコホート データが見つかる可能性があります。",
+    "recommendedActionsTitle": "システムによって推奨されるアクションがこの領域にリストされます。",
+    "executeAction": "アクションを適用する"
+  },
+  "hero": {
+    "statusActive": "アクティブな",
+    "statusCrm": "CRM登録",
+    "since": "{{year}}以降",
+    "whatsapp": "ワッツアップ",
+    "call": "検索",
+    "email": "電子メール",
+    "quickQuote": "簡単な見積もり",
+    "editCustomer": "顧客の編集",
+    "none": "なし",
+    "emailLabel": "電子メール",
+    "phoneLabel": "電話",
+    "websiteLabel": "ウェブサイト",
+    "addressLabel": "住所",
+    "infoTitle": "情報",
+    "taxNumber": "納税者番号",
+    "customerType": "顧客タイプ",
+    "salesRep": "営業担当者",
+    "creditLimit": "与信限度額"
+  },
+  "related": {
+    "newQuotation": "新しいオファー",
+    "newOrder": "新しい秩序",
+    "newActivity": "新しいアクティビティ",
+    "error": "リストのロードに失敗しました",
+    "emptyQuotations": "この顧客向けのオファーは見つかりませんでした",
+    "emptyOrders": "この顧客の注文は見つかりませんでした",
+    "emptyActivities": "この顧客のアクティビティは見つかりませんでした",
+    "columns": {
+      "offerNo": "いいえ。",
+      "date": "日付",
+      "representative": "代表者",
+      "total": "金額",
+      "subject": "件名",
+      "type": "種類",
+      "assignee": "責任者",
+      "status": "ステータス"
+    },
+    "activityStatus": {
+      "scheduled": "計画された",
+      "completed": "完成した",
+      "cancelled": "キャンセル"
+    }
+  },
+  "images": {
+    "upload": "画像をアップロードする",
+    "delete": "削除",
+    "emptyHint": "クリックまたはドラッグして画像を追加します",
+    "deleteConfirmTitle": "画像を削除する",
+    "deleteConfirmDescription": "この画像を削除してもよろしいですか?この操作は元に戻すことができません。"
+  },
+  "button": "顧客360度",
+  "status": {
+    "havenotstarted": "起動しませんでした",
+    "notstarted": "起動しませんでした",
+    "inprogress": "承認プロセス中",
+    "pending": "保留中",
+    "waiting": "待っています",
+    "approved": "承認済み",
+    "rejected": "拒否されました",
+    "completed": "完成した",
+    "cancelled": "キャンセルされました",
+    "canceled": "キャンセルされました",
+    "draft": "ドラフト",
+    "converted": "オファーに戻りました",
+    "sent": "送信されました",
+    "active": "アクティブな",
+    "passive": "受動的な",
+    "closed": "閉店",
+    "open": "開く"
+  }
+}

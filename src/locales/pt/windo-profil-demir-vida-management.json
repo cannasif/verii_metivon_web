@@ -1,0 +1,75 @@
+{
+  "page": {
+    "title": "Definições de formato de janela",
+    "description": "Gerencie registros de perfis, ferros, parafusos e pressões em uma estrutura de tabela paginada compatível com páginas de gerenciamento de todo o projeto.",
+    "documentTitle": "Definições de formato de janela"
+  },
+  "sections": {
+    "profil": {
+      "title": "Definir perfil",
+      "description": "Gerencie as definições de perfil a serem selecionadas por linha."
+    },
+    "demir": {
+      "title": "Identificar Ferro",
+      "description": "Gerencie as definições de ferro a serem selecionadas por linha."
+    },
+    "vida": {
+      "title": "Identificar parafuso",
+      "description": "Gerencie definições de parafusos a serem selecionadas por linha."
+    },
+    "baski": {
+      "title": "Definir impressão",
+      "description": "Gerencie as definições de impressão a serem selecionadas por linha."
+    },
+    "koliBaski": {
+      "title": "Definir impressão de caixa",
+      "description": "Gerencie as definições de impressão da caixa que serão selecionadas no cabeçalho da oferta e enviadas para o campo de descrição do cabeçalho Netsis."
+    }
+  },
+  "table": {
+    "id": "ID",
+    "name": "Nome",
+    "profilName": "Perfil",
+    "createdDate": "Criação",
+    "updatedDate": "Atualizado",
+    "newRecord": "Novo registro",
+    "searchPlaceholder": "Procure por definição...",
+    "refresh": "Atualizar",
+    "loading": "As definições estão carregando...",
+    "empty": "Nenhum registro encontrado.",
+    "actions": "transação",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "pagination": "Total {{total}} do registro mostrando {{from}}-{{to}}",
+    "filterName": "Nome",
+    "dateDash": "-"
+  },
+  "dialog": {
+    "addNewProfile": "Adicionar novo perfil",
+    "addNewRebar": "Adicione novo ferro",
+    "addNewScrew": "adicionar novo parafuso",
+    "addNewPrint": "Adicionar nova edição",
+    "addNewKoliBaski": "Adicionar nova impressão de caixa",
+    "editTitle": "Atualizar {{section}}",
+    "addTitle": "Adicionar {{section}}",
+    "nameLabel": "Nome",
+    "profilLabel": "Perfil conectado",
+    "profilPlaceholder": "Selecione o perfil",
+    "profilSearchPlaceholder": "Perfil de pesquisa",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "demirNameLabel": "nome de ferro",
+    "demirNamePlaceholder": "Nome de ferro encadernado",
+    "vidaNameLabel": "nome do parafuso",
+    "vidaNamePlaceholder": "Nome do parafuso conectado"
+  },
+  "validation": {
+    "nameRequired": "O campo Nome é obrigatório",
+    "profilRequired": "A seleção do perfil é obrigatória"
+  },
+  "toasts": {
+    "created": "Registro {{section}} criado",
+    "updated": "Registro atualizado {{section}}",
+    "deleted": "Registro {{section}} excluído"
+  }
+}

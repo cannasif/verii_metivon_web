@@ -1,0 +1,53 @@
+{
+  "approvalUserRole": {
+    "menu": "تایید مدیریت نقش کاربر",
+    "description": "نقش های کاربر تأیید را مدیریت و سازماندهی کنید",
+    "addButton": "اضافه کردن نقش جدید",
+    "searchPlaceholder": "جستجو...",
+    "refresh": "تازه کردن",
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای وجود ندارد",
+    "table": {
+      "id": "شناسه",
+      "userFullName": "کاربر",
+      "approvalRoleName": "نقش تایید",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط",
+      "actions": "اقدامات",
+      "showing": "نمایش {{from}}-{{to}} / {{total}}",
+      "page": "صفحه {{current}} / {{total}}",
+      "previous": "قبلی",
+      "next": "بعدی",
+      "title": "تایید نقش های کاربر"
+    },
+    "delete": {
+      "title": "نقش را حذف کنید",
+      "confirmMessage": "آیا مطمئنید که می خواهید این نقش کاربری را حذف کنید؟",
+      "confirmButton": "حذف کنید",
+      "cancelButton": "لغو کنید"
+    },
+    "form": {
+      "editTitle": "ویرایش نقش کاربر تأیید",
+      "addTitle": "نقش کاربر تأیید جدید را اضافه کنید",
+      "editDescription": "اطلاعات نقش کاربر تأیید را ویرایش کنید",
+      "addDescription": "اطلاعات نقش کاربر تأیید جدید را وارد کنید",
+      "userId": "کاربر",
+      "selectUser": "کاربر را انتخاب کنید",
+      "noUserSelected": "هیچ کاربری انتخاب نشده است",
+      "approvalRoleId": "نقش تایید",
+      "selectApprovalRole": "نقش تأیید را انتخاب کنید",
+      "noApprovalRoleSelected": "هیچ نقش تأییدی انتخاب نشده است",
+      "userIdRequired": "انتخاب کاربر الزامی است",
+      "approvalRoleIdRequired": "انتخاب نقش تایید الزامی است",
+      "save": "ذخیره کنید",
+      "saving": "در حال ذخیره...",
+      "cancel": "لغو کنید"
+    },
+    "advancedFilter": {
+      "columnUserFullName": "کاربر",
+      "columnApprovalRoleName": "نقش تایید",
+      "columnCreatedBy": "ایجاد شده توسط"
+    },
+    "error": "خطایی رخ داد"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "menu": "Hangfire-bewaking",
+  "title": "Hangfire-bewaking",
+  "description": "Controleer de status van taken, mislukte taken en onbestelbare wachtrijen.",
+  "summary": {
+    "title": "Systeemoverzicht",
+    "description": "Bekijk snel terugkerende taakstatus en wachtrijgedrag.",
+    "totalJobs": "Totaal terugkerende opdrachten",
+    "withQueue": "actieve wachtrijen",
+    "withErrors": "foutief werk",
+    "help": "Statistieken zijn een momentopname van uw Hangfire-server; Werk de lijsten bij door ze te vernieuwen."
+  },
+  "refresh": "Vernieuwen",
+  "stats": {
+    "enqueued": "in de wachtrij",
+    "processing": "Verwerking",
+    "succeeded": "succesvol",
+    "failed": "mislukken"
+  },
+  "table": {
+    "jobId": "Bedrijfs-ID",
+    "jobName": "zaken",
+    "state": "Status",
+    "time": "tijd",
+    "reason": "Waarom",
+    "queue": "staart",
+    "duration": "Duur",
+    "retryCount": "opnieuw",
+    "recurringJobId": "Geplande taak"
+  },
+  "succeeded": {
+    "title": "Succesvolle werken",
+    "empty": "Geen succesvolle baan gevonden.",
+    "description": "Lijst met onlangs voltooide Hangfire-taken."
+  },
+  "failed": {
+    "title": "Mislukte banen",
+    "empty": "Geen mislukte vacatures gevonden.",
+    "total": "Totaal",
+    "description": "Taken die tot fouten hebben geleid of die hebben gewacht op een nieuwe poging."
+  },
+  "deadLetter": {
+    "title": "Onbezorgbare wachtrij",
+    "empty": "De onbestelbare wachtrij is leeg.",
+    "enqueued": "in de wachtrij",
+    "description": "Berichten die niet aan de consument kunnen worden afgeleverd en handmatige beoordeling vereisen."
+  },
+  "recurring": {
+    "title": "Geplande taken",
+    "description": "Vanaf hier kunt u uw opgeslagen Hangfire-taken bekijken en de door u geselecteerde taak onmiddellijk activeren.",
+    "selectLabel": "Taak om uit te voeren",
+    "selectPlaceholder": "Kies een baan",
+    "triggerButton": "rennen nu",
+    "triggerSuccess": "Taak {{jobName}} is geactiveerd.",
+    "triggerError": "Er is een fout opgetreden bij het activeren van de taak.",
+    "empty": "Nog geen geregistreerde terugkerende vacatures gevonden.",
+    "tableTitle": "geplande klussen",
+    "tableDescription": "Alle terugkerende Hangfire-taken en planningsinformatie.",
+    "labels": {
+      "schedule": "timing",
+      "method": "methode",
+      "error": "Er is een fout opgetreden",
+      "healthy": "gezond"
+    },
+    "table": {
+      "id": "Taak-ID",
+      "job": "zaken",
+      "cron": "timing",
+      "nextExecution": "Volgende werk",
+      "lastExecution": "nieuwste werk",
+      "queue": "staart"
+    }
+  }
+}

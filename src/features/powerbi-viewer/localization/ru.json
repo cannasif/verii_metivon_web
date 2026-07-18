@@ -1,0 +1,16 @@
+{
+  "invalidId": "недействительный отчет",
+  "backToList": "Вернуться к списку",
+  "loadError": "Не удалось загрузить отчет",
+  "loadingReport": "Отчет о загрузке...",
+  "listTitle": "Отчеты PowerBI",
+  "listDescription": "Посмотреть отчеты можно нажав кнопку",
+  "name": "Имя",
+  "description": "Описание",
+  "isActive": "Статус",
+  "view": "Посмотреть",
+  "status": {
+    "active": "активный",
+    "inactive": "пассивный"
+  }
+}

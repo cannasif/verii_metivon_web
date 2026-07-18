@@ -1,0 +1,13 @@
+{
+  "title": "Selecteer aangesloten aandelen",
+  "description": "Selecteer de dochteraandelen die u samen met de hoofdaandelen wilt toevoegen. Verplichte voorraden worden automatisch geselecteerd.",
+  "mandatoryStocks": "Verplichte aandelen",
+  "optionalStocks": "Optionele aandelen",
+  "unknownStock": "Onbekende voorraad",
+  "quantity": "Hoeveelheid",
+  "mandatory": "verplicht",
+  "noRelatedStocks": "Gekoppelde voorraad niet gevonden",
+  "cancel": "Annuleer",
+  "add": "Toevoegen",
+  "calculating": "Berekenen..."
+}

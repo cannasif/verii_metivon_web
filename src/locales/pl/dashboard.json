@@ -1,0 +1,73 @@
+{
+  "title": "Pulpit nawigacyjny",
+  "loading": "Ładowanie...",
+  "greeting": {
+    "morning": "dzień dobry",
+    "afternoon": "Dzień dobry",
+    "evening": "Dobry wieczór"
+  },
+  "refresh": "Odśwież",
+  "refreshing": "Jest odnawiany...",
+  "refreshed": "Dane zaktualizowane",
+  "refreshError": "Aktualizacja nie powiodła się",
+  "user": "Użytkownik",
+  "noSalesData": "Nie ma jeszcze danych o sprzedaży",
+  "noActivities": "Brak aktywności",
+  "selectFormat": "Wybierz opcję Formatuj",
+  "reportPreparing": "Raport jest w przygotowaniu...",
+  "reportDownloaded": "Raport został pobrany.",
+  "reportError": "Nie udało się odebrać raportu.",
+  "stats": {
+    "totalRevenue": "Całkowity obrót",
+    "activeOpportunities": "Aktywne możliwości",
+    "newLeads": "Nowi kandydaci",
+    "pendingOrders": "Zamówienia oczekujące"
+  },
+  "salesAnalysis": "Analiza sprzedaży",
+  "targetVsActual": "Cel vs osiągnięty",
+  "latestActivities": "Najnowsze aktywności",
+  "viewAll": "Zobacz wszystko",
+  "reportDownload": "Pobierz raport",
+  "quickAction": "Szybka transakcja",
+  "activityType": {
+    "meeting": "spotkanie",
+    "call": "Szukaj",
+    "email": "E-mail",
+    "general": "Generał"
+  },
+  "noDate": "bez daty",
+  "unnamedActivity": "Anonimowa aktywność",
+  "monthsShort": {
+    "jan": "Styczeń",
+    "feb": "luty",
+    "mar": "marca",
+    "apr": "kwiecień",
+    "may": "Maj",
+    "jun": "przyjemność",
+    "jul": "lipiec",
+    "aug": "sierpień",
+    "sep": "wrzesień",
+    "oct": "paź",
+    "nov": "mięsień",
+    "dec": "Szukaj"
+  },
+  "quickStats": {
+    "pendingTasks": "Oczekujące zadania",
+    "checkTasks": "Sprawdź listę zadań",
+    "openQuotations": "Otwórz oferty",
+    "reviewQuotations": "Sprawdź oferty",
+    "criticalStock": "Zapas krytyczny",
+    "stockStatus": "Zobacz stan zapasów"
+  },
+  "sidebar": {
+    "customers": "Klienci",
+    "customerManagement": "Zarządzanie klientami",
+    "salesManagement": "Lejek sprzedaży",
+    "demandCreateWizard": "Utwórz nowe żądanie",
+    "quotationCreateWizard": "Utwórz nową ofertę",
+    "orderCreateWizard": "Utwórz nowe zamówienie",
+    "erpOrderList": "Lista zamówień ERP",
+    "activities": "Planowanie",
+    "activityManagement": "Zarządzanie działalnością"
+  }
+}

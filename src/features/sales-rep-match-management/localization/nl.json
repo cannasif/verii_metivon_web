@@ -1,0 +1,44 @@
+{
+  "menu": "Verkoopvertegenwoordiger Matchmanagement",
+  "description": "Bekijk, voeg toe en verwijder verkoopvertegenwoordigercodes en gebruikersmatches.",
+  "addButton": "Nieuwe wedstrijd",
+  "searchPlaceholder": "Zoek naar verkopercode, gebruiker of e-mailadres",
+  "empty": "Er zijn geen overeenkomsten met vertegenwoordigers gevonden.",
+  "error": "Overeenkomsten met verkoopvertegenwoordigers kunnen niet worden geladen.",
+  "deleteConfirmMessage": "Koppeling {{salesRep}} en {{user}} verwijderen?",
+  "table": {
+    "title": "Wedstrijdlijst verkoopvertegenwoordiger",
+    "salesRepCode": "Code voor verkoopvertegenwoordigers",
+    "salesRepName": "Naam verkoopvertegenwoordiger",
+    "userFullName": "Gebruiker",
+    "username": "Gebruikersnaam",
+    "userEmail": "E-mail",
+    "createdDate": "Aanmaakdatum"
+  },
+  "form": {
+    "addTitle": "Nieuwe verkoopvertegenwoordigermatch",
+    "addDescription": "Koppel een verkoopvertegenwoordigerrecord aan de gebruiker.",
+    "salesRep": "Verkoopvertegenwoordiger",
+    "salesRepPlaceholder": "Selecteer een vertegenwoordiger",
+    "salesRepSearchPlaceholder": "Zoek een vertegenwoordiger",
+    "user": "Gebruiker",
+    "userPlaceholder": "Selecteer gebruiker",
+    "userSearchPlaceholder": "Zoek naar gebruikers",
+    "validation": {
+      "salesRepRequired": "Selectie van een vertegenwoordiger is verplicht.",
+      "userRequired": "Gebruikersselectie is verplicht."
+    }
+  },
+  "messages": {
+    "createSuccess": "Match voor verkoopvertegenwoordigers gemaakt.",
+    "createError": "Kon geen verkoopvertegenwoordigerovereenkomst maken.",
+    "deleteSuccess": "De verkoopvertegenwoordigerovereenkomst is verwijderd.",
+    "deleteError": "De overeenkomst met de vertegenwoordiger kan niet worden verwijderd."
+  },
+  "advancedFilter": {
+    "columnSalesRepCode": "Code voor verkoopvertegenwoordigers",
+    "columnSalesRepName": "Naam verkoopvertegenwoordiger",
+    "columnUsername": "Gebruikersnaam",
+    "columnEmail": "E-mail"
+  }
+}

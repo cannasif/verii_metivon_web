@@ -1,0 +1,62 @@
+{
+  "menu": "Gerenciamento de grupo de funções de aprovação",
+  "description": "Gerenciar e organizar grupos de funções de aprovação",
+  "addButton": "Adicionar novo grupo",
+  "refresh": "Atualizar",
+  "searchPlaceholder": "Pesquisar...",
+  "loading": "Carregando...",
+  "noData": "Nenhum dado encontrado",
+  "noDataDescription": "Nenhum registro encontrado que corresponda aos seus critérios de pesquisa ou nenhum registro adicionado ainda.",
+  "table": {
+    "id": "ID",
+    "name": "Nome do grupo",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por",
+    "actions": "Ações",
+    "showing": "Mostrando {{from}}-{{to}} de registros {{total}}"
+  },
+  "delete": {
+    "confirmTitle": "Excluir confirmação",
+    "confirmMessage": "Esta ação não pode ser desfeita. Você quer continuar?"
+  },
+  "advancedFilter": {
+    "columnName": "Nome do grupo",
+    "columnCreatedBy": "Criado por"
+  },
+  "approvalRoleGroup": {
+    "menu": "Gerenciamento de grupo de funções de aprovação",
+    "description": "Gerenciar e organizar grupos de funções de aprovação",
+    "addButton": "Adicionar novo grupo",
+    "searchPlaceholder": "Pesquisar...",
+    "noData": "Nenhum dado encontrado",
+    "table": {
+      "title": "Lista de grupos",
+      "id": "ID",
+      "name": "Nome do grupo",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por",
+      "actions": "Ações",
+      "showing": "Mostrando {{from}}-{{to}} de registros {{total}}"
+    },
+    "delete": {
+      "title": "Excluir confirmação",
+      "confirmMessage": "Tem certeza de que deseja excluir {{name}}?",
+      "success": "Grupo excluído com sucesso",
+      "error": "Erro ao excluir o grupo"
+    }
+  },
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Salvando...",
+  "deleteButton": "Excluir",
+  "form": {
+    "editTitle": "Editar grupo de funções de aprovação",
+    "addTitle": "Adicionar novo grupo de funções de aprovação",
+    "editDescription": "Editar informações do grupo de funções de aprovação",
+    "addDescription": "Insira as novas informações do grupo de funções de aprovação",
+    "name": "Nome do grupo",
+    "namePlaceholder": "Insira o nome do grupo",
+    "nameRequired": "O nome do grupo é obrigatório",
+    "nameMaxLength": "O nome do grupo pode ter no máximo 100 caracteres"
+  }
+}

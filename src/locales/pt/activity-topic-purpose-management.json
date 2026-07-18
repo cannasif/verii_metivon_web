@@ -1,0 +1,82 @@
+{
+  "menu": "Gerenciamento de tópicos de interesse",
+  "description": "Gerenciar e editar tópicos de interesse",
+  "addButton": "Adicionar novo tópico",
+  "loading": "Carregando...",
+  "noData": "Nenhum dado encontrado",
+  "actions": "Ações",
+  "edit": "Editar",
+  "deleteButton": "Excluir",
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Salvando...",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "advancedFilter": {
+    "columnName": "Nome do tópico",
+    "columnDescription": "Descrição",
+    "columnCreatedBy": "Criado por"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Adicionar novo tópico",
+      "editTitle": "Editar tópico",
+      "addDescription": "Insira novas informações do tópico",
+      "editDescription": "Editar informações do tópico",
+      "name": "Nome do tópico",
+      "namePlaceholder": "Digite o nome do tópico",
+      "nameRequired": "O nome do tópico é obrigatório",
+      "nameMaxLength": "O nome do tópico pode ter no máximo 100 caracteres",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Insira a descrição (opcional)",
+      "descriptionMaxLength": "A descrição pode ter no máximo 500 caracteres"
+    },
+    "table": {
+      "title": "Lista de tópicos de interesse",
+      "id": "ID",
+      "name": "Nome do tópico",
+      "description": "Descrição",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por",
+      "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+      "page": "Página {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Total de tópicos",
+      "activeActivityTypes": "Tópicos Ativos",
+      "newThisMonth": "Novidade este mês"
+    },
+    "messages": {
+      "createSuccess": "Tópico criado com sucesso",
+      "createError": "Falha ao criar tópico",
+      "updateSuccess": "Tópico atualizado com sucesso",
+      "updateError": "Falha ao atualizar o tópico",
+      "deleteSuccess": "Tópico excluído com sucesso",
+      "deleteError": "Falha ao excluir tópico"
+    },
+    "error": "Ocorreu um erro",
+    "create": "Adicionar novo tópico",
+    "loading": "Carregando...",
+    "noData": "Sem dados",
+    "actions": "Ações",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "saving": "Salvando..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Excluir tópico",
+    "confirmMessage": "Tem certeza de que deseja excluir {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Tópico excluído com sucesso",
+    "deleteError": "Falha ao excluir tópico"
+  },
+  "table": {
+    "title": "Lista de tópicos de interesse",
+    "id": "ID",
+    "name": "Nome do tópico",
+    "description": "Descrição",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado por"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "page": {
+    "title": "Windowsform 정의",
+    "description": "프로젝트 전체 관리 페이지와 호환되는 페이지 테이블 구조에서 프로파일, 철, 나사 및 압력 기록을 관리합니다.",
+    "documentTitle": "Windowsform 정의"
+  },
+  "sections": {
+    "profil": {
+      "title": "프로필 정의",
+      "description": "행 단위로 선택할 프로필 정의를 관리합니다."
+    },
+    "demir": {
+      "title": "철분 식별",
+      "description": "행 단위로 선택할 철 정의를 관리합니다."
+    },
+    "vida": {
+      "title": "나사 식별",
+      "description": "행 단위로 선택할 수 있는 나사 정의를 관리합니다."
+    },
+    "baski": {
+      "title": "인쇄 정의",
+      "description": "행 단위로 선택할 인쇄 정의를 관리합니다."
+    },
+    "koliBaski": {
+      "title": "박스 인쇄 정의",
+      "description": "제안 헤더에서 선택되어 Netsis 헤더 설명 필드로 전송되는 박스 인쇄 정의를 관리합니다."
+    }
+  },
+  "table": {
+    "id": "아이디",
+    "name": "이름",
+    "profilName": "프로필",
+    "createdDate": "창조",
+    "updatedDate": "업데이트됨",
+    "newRecord": "신규등록",
+    "searchPlaceholder": "정의 검색...",
+    "refresh": "새로고침",
+    "loading": "정의를 로드하는 중입니다...",
+    "empty": "기록을 찾을 수 없습니다.",
+    "actions": "프로세스",
+    "previous": "이전",
+    "next": "다음",
+    "pagination": "{{from}}-{{to}}를 표시하는 레코드의 총 {{total}}",
+    "filterName": "이름",
+    "dateDash": "-"
+  },
+  "dialog": {
+    "addNewProfile": "새 프로필 추가",
+    "addNewRebar": "새로운 철분 추가",
+    "addNewScrew": "새 나사 추가",
+    "addNewPrint": "새 버전 추가",
+    "addNewKoliBaski": "새 상자 인쇄 추가",
+    "editTitle": "{{section}} 업데이트",
+    "addTitle": "{{section}} 추가",
+    "nameLabel": "이름",
+    "profilLabel": "연결된 프로필",
+    "profilPlaceholder": "프로필 선택",
+    "profilSearchPlaceholder": "프로필 검색",
+    "cancel": "취소",
+    "save": "저장",
+    "demirNameLabel": "철 이름",
+    "demirNamePlaceholder": "바운드 아이언 이름",
+    "vidaNameLabel": "나사 이름",
+    "vidaNamePlaceholder": "접속 나사 이름"
+  },
+  "validation": {
+    "nameRequired": "이름 입력란은 필수 항목입니다.",
+    "profilRequired": "프로필 선택은 필수입니다"
+  },
+  "toasts": {
+    "created": "레코드 {{section}}가 생성되었습니다.",
+    "updated": "업데이트된 레코드 {{section}}",
+    "deleted": "{{section}} 레코드가 삭제되었습니다."
+  }
+}

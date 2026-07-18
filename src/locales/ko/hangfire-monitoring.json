@@ -1,0 +1,74 @@
+{
+  "menu": "중단 모니터링",
+  "title": "중단 모니터링",
+  "description": "작업 상태, 실패한 작업, 전달할 수 없는 대기열을 모니터링합니다.",
+  "summary": {
+    "title": "시스템 요약",
+    "description": "반복되는 작업 상태와 대기열 동작을 빠르게 확인하세요.",
+    "totalJobs": "총 반복 작업",
+    "withQueue": "활성 대기열",
+    "withErrors": "잘못된 작업",
+    "help": "통계는 Hangfire 서버의 스냅샷입니다. 목록을 새로 고쳐서 업데이트하세요."
+  },
+  "refresh": "새로고침",
+  "stats": {
+    "enqueued": "대기열에",
+    "processing": "처리",
+    "succeeded": "성공하다",
+    "failed": "실패하다"
+  },
+  "table": {
+    "jobId": "사업자번호",
+    "jobName": "사업",
+    "state": "상태",
+    "time": "시간",
+    "reason": "왜?",
+    "queue": "꼬리",
+    "duration": "기간",
+    "retryCount": "다시",
+    "recurringJobId": "예정된 작업"
+  },
+  "succeeded": {
+    "title": "성공적인 작품",
+    "empty": "성공적인 작업을 찾을 수 없습니다.",
+    "description": "최근 완료된 Hangfire 작업 목록입니다."
+  },
+  "failed": {
+    "title": "실패한 작업",
+    "empty": "실패한 작업을 찾을 수 없습니다.",
+    "total": "합계",
+    "description": "오류가 발생했거나 재시도 대기 중인 작업입니다."
+  },
+  "deadLetter": {
+    "title": "전달할 수 없는 대기열",
+    "empty": "전달할 수 없는 대기열이 비어 있습니다.",
+    "enqueued": "대기열에",
+    "description": "소비자에게 전달할 수 없고 수동 검토가 필요한 메시지입니다."
+  },
+  "recurring": {
+    "title": "예정된 작업",
+    "description": "여기에서 저장된 Hangfire 작업을 보고 선택한 작업을 즉시 실행할 수 있습니다.",
+    "selectLabel": "실행할 작업",
+    "selectPlaceholder": "직업을 선택하세요",
+    "triggerButton": "지금 달려라",
+    "triggerSuccess": "{{jobName}} 작업이 트리거되었습니다.",
+    "triggerError": "작업을 트리거하는 동안 오류가 발생했습니다.",
+    "empty": "등록된 반복 채용정보가 아직 없습니다.",
+    "tableTitle": "예정된 작업",
+    "tableDescription": "모든 반복 Hangfire 작업 및 일정 정보.",
+    "labels": {
+      "schedule": "타이밍",
+      "method": "방법",
+      "error": "오류가 있습니다",
+      "healthy": "건강한"
+    },
+    "table": {
+      "id": "작업 ID",
+      "job": "사업",
+      "cron": "타이밍",
+      "nextExecution": "다음 작품",
+      "lastExecution": "최신작",
+      "queue": "꼬리"
+    }
+  }
+}

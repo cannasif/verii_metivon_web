@@ -1,0 +1,67 @@
+{
+  "menu": "Zarządzanie typami klientów",
+  "description": "Zarządzaj i edytuj typy klientów",
+  "showStats": "Pokaż statystyki",
+  "hideStats": "Ukryj statystyki",
+  "addButton": "Dodaj nowy typ klienta",
+  "loading": "Ładowanie...",
+  "error": "Wystąpił błąd",
+  "noData": "Nie znaleziono danych",
+  "actions": "Transakcje",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "advancedFilter": {
+    "columnName": "Nazwa typu klienta",
+    "columnDescription": "Opis"
+  },
+  "stats": {
+    "totalCustomerTypes": "Całkowity typ klienta",
+    "activeCustomerTypes": "Aktywny typ klienta",
+    "newThisMonth": "Nowość w tym miesiącu"
+  },
+  "table": {
+    "title": "Lista typów klientów",
+    "id": "Identyfikator",
+    "name": "Nazwa typu klienta",
+    "description": "Opis",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez",
+    "updatedDate": "Zaktualizowana data",
+    "updatedBy": "Zaktualizowany przez",
+    "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+    "page": "Strona {{current}} / {{total}}"
+  },
+  "form": {
+    "addCustomerType": "Dodaj nowy typ klienta",
+    "editCustomerType": "Edycja typu klienta",
+    "addDescription": "Wprowadź informacje o nowym typie klienta",
+    "editDescription": "Edytuj informacje o typie klienta",
+    "name": "Nazwa typu klienta",
+    "namePlaceholder": "Wprowadź nazwę typu klienta",
+    "nameRequired": "Nazwa typu klienta jest wymagana",
+    "nameMaxLength": "Nazwa typu klienta może mieć maksymalnie 100 znaków",
+    "description": "Opis",
+    "descriptionPlaceholder": "Wprowadź opis (opcjonalnie)",
+    "descriptionMaxLength": "Opis może mieć maksymalnie 500 znaków",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "saving": "Nagrywanie..."
+  },
+  "delete": {
+    "action": "Usuń",
+    "confirmTitle": "Usuń typ klienta",
+    "confirmMessage": "Czy na pewno chcesz usunąć typ klienta {{name}}?",
+    "confirmButton": "Usuń",
+    "success": "Typ klienta został pomyślnie usunięty",
+    "error": "Nie można usunąć typu klienta",
+    "deleting": "Usuwanie..."
+  },
+  "messages": {
+    "createSuccess": "Typ klienta został utworzony pomyślnie",
+    "createError": "Nie można utworzyć typu klienta",
+    "updateSuccess": "Typ klienta został pomyślnie zaktualizowany",
+    "updateError": "Nie udało się zaktualizować typu klienta",
+    "deleteSuccess": "Typ klienta został pomyślnie usunięty",
+    "deleteError": "Nie można usunąć typu klienta"
+  }
+}

@@ -1,0 +1,1 @@
+{"parts":"编号组成部分","help":"添加组成部分，拖动调整顺序，并选择流水号位数。","fixedText":"固定文本 / 分隔符","preview":"实时预览","technicalFormat":"显示技术格式","tokens":{"SERIES":"系列代码","BRANCH":"分支代码","TYPE":"记录类型","YYYY":"4位年份","YY":"2位年份","MM":"月份","DD":"日期","NUMBER":"流水号位数"}}

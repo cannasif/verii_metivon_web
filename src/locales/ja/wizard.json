@@ -1,0 +1,13 @@
+{
+  "buttons": {
+    "back": "戻る",
+    "next": "次へ",
+    "complete": "保存して承認のために送信する"
+  },
+  "validation": {
+    "error": "検証エラー"
+  },
+  "step": {
+    "unknown": "未知のステップ"
+  }
+}

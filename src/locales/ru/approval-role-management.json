@@ -1,0 +1,60 @@
+{
+  "approvalRole": {
+    "menu": "Управление ролями утверждения",
+    "description": "Управление и организация ролей утверждения",
+    "addButton": "Добавить новую роль утверждения",
+    "searchPlaceholder": "Искать...",
+    "refresh": "Обновить",
+    "loading": "Загрузка...",
+    "noData": "Нет данных",
+    "table": {
+      "id": "идентификатор",
+      "approvalRoleGroupName": "Ролевая группа",
+      "name": "Имя роли",
+      "maxAmount": "Макс. сумма",
+      "createdDate": "Дата создания",
+      "createdBy": "Создано",
+      "actions": "Действия",
+      "totalRecords": "Всего записей {{count}}.",
+      "page": "Страница {{current}} / {{total}}",
+      "previous": "Предыдущий",
+      "next": "Далее",
+      "title": "Роли утверждения"
+    },
+    "delete": {
+      "confirmTitle": "Удалить подтверждение",
+      "confirmMessage": "Вы уверены, что хотите удалить эту запись? Это действие невозможно отменить.",
+      "cancelButton": "Отмена",
+      "confirmButton": "Удалить",
+      "deleting": "Удаление..."
+    },
+    "form": {
+      "editTitle": "Изменить роль утверждения",
+      "addTitle": "Добавить новую роль утверждения",
+      "editDescription": "Изменение сведений о роли утверждения",
+      "addDescription": "Введите сведения о новой роли утверждения",
+      "approvalRoleGroupId": "Ролевая группа утверждения",
+      "selectApprovalRoleGroup": "Выберите группу ролей утверждения",
+      "noApprovalRoleGroupSelected": "Группа ролей утверждения не выбрана",
+      "name": "Имя роли",
+      "namePlaceholder": "Введите имя роли",
+      "maxAmount": "Макс. сумма",
+      "maxAmountPlaceholder": "Введите максимальную сумму",
+      "approvalRoleGroupIdRequired": "Требуется выбрать группу ролей утверждения.",
+      "nameRequired": "Укажите название роли.",
+      "nameMaxLength": "Имя роли может содержать не более 100 символов.",
+      "maxAmountMin": "Максимальная сумма не может быть меньше 0",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "saving": "Сохранение..."
+    },
+    "advancedFilter": {
+      "columnName": "Имя роли",
+      "columnApprovalRoleGroupName": "Ролевая группа",
+      "columnMaxAmount": "Максимальная сумма"
+    },
+    "messages": {
+      "error": "Произошла ошибка"
+    }
+  }
+}

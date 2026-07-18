@@ -1,0 +1,82 @@
+{
+  "menu": "Управление интересными темами",
+  "description": "Управляйте и редактируйте интересующие темы",
+  "addButton": "Добавить новую тему",
+  "loading": "Загрузка...",
+  "noData": "Данные не найдены",
+  "actions": "Действия",
+  "edit": "Редактировать",
+  "deleteButton": "Удалить",
+  "cancel": "Отмена",
+  "save": "Сохранить",
+  "saving": "Сохранение...",
+  "previous": "Предыдущий",
+  "next": "Далее",
+  "advancedFilter": {
+    "columnName": "Название темы",
+    "columnDescription": "Описание",
+    "columnCreatedBy": "Создано"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Добавить новую тему",
+      "editTitle": "Редактировать тему",
+      "addDescription": "Введите новую информацию о теме",
+      "editDescription": "Редактировать информацию о теме",
+      "name": "Название темы",
+      "namePlaceholder": "Введите название темы",
+      "nameRequired": "Укажите название темы.",
+      "nameMaxLength": "Название темы может содержать не более 100 символов.",
+      "description": "Описание",
+      "descriptionPlaceholder": "Введите описание (необязательно)",
+      "descriptionMaxLength": "Описание может содержать не более 500 символов."
+    },
+    "table": {
+      "title": "Список интересных тем",
+      "id": "идентификатор",
+      "name": "Название темы",
+      "description": "Описание",
+      "createdDate": "Дата создания",
+      "createdBy": "Создано",
+      "showing": "Показаны {{from}}-{{to}} / {{total}}",
+      "page": "Страница {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Всего тем",
+      "activeActivityTypes": "Активные темы",
+      "newThisMonth": "Новое в этом месяце"
+    },
+    "messages": {
+      "createSuccess": "Тема успешно создана",
+      "createError": "Не удалось создать тему",
+      "updateSuccess": "Тема успешно обновлена",
+      "updateError": "Не удалось обновить тему",
+      "deleteSuccess": "Тема успешно удалена",
+      "deleteError": "Не удалось удалить тему"
+    },
+    "error": "Произошла ошибка",
+    "create": "Добавить новую тему",
+    "loading": "Загрузка...",
+    "noData": "Нет данных",
+    "actions": "Действия",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "saving": "Сохранение..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Удалить тему",
+    "confirmMessage": "Вы уверены, что хотите удалить {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Тема успешно удалена",
+    "deleteError": "Не удалось удалить тему"
+  },
+  "table": {
+    "title": "Список интересных тем",
+    "id": "идентификатор",
+    "name": "Название темы",
+    "description": "Описание",
+    "createdDate": "Дата создания",
+    "createdBy": "Создано"
+  }
+}

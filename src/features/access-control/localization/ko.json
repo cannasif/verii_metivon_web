@@ -1,0 +1,600 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "경로 및 페이지 가드에서 사용되는 고유 키입니다. 안정적인 snake_case 또는 점 표기법을 선호합니다.",
+      "name": "권한을 관리할 때 관리자에게 표시되는 표시 이름입니다.",
+      "description": "이 권한에 대한 선택적 내부 설명입니다.",
+      "isActive": "사용자 액세스를 평가할 때 비활성 권한은 무시됩니다.",
+      "save": "변경사항은 역할 및 그룹 인증 흐름에 영향을 미칩니다."
+    },
+    "permissionGroup": {
+      "name": "사용자에게 할당할 때 식별에 사용되는 그룹 이름입니다.",
+      "isSystemAdmin": "이 그룹의 구성원은 개별 권한 확인 없이 모든 페이지와 작업에 액세스할 수 있습니다.",
+      "isActive": "새로운 액세스 결정을 위해 비활성 그룹을 할당해서는 안 됩니다.",
+      "permissions": "선택한 권한은 이 그룹의 구성원이 액세스할 수 있는 항목을 정의합니다.",
+      "save": "이 그룹에 할당된 모든 사용자에 대한 유효 액세스를 업데이트합니다."
+    },
+    "userAssignment": {
+      "user": "관리하려는 액세스 범위의 사용자를 선택합니다.",
+      "groups": "사용자는 선택된 모든 그룹으로부터 결합된 권한을 받습니다.",
+      "save": "할당은 다음 승인 확인을 위해 즉시 적용됩니다. 사용자는 세션을 새로 고쳐야 할 수도 있습니다.",
+      "systemAdminNote": "사용자가 시스템 관리자 그룹에 속한 경우 세부 권한은 건너뜁니다."
+    },
+    "visibilityPolicy": {
+      "code": "할당 및 감사 흐름에서 정책을 인식할 수 있도록 고유 코드를 사용합니다.",
+      "name": "정책을 관리하는 동안 관리자가 보게 될 표시 이름입니다.",
+      "includeSelf": "활성화되면 사용자 자신의 기록이 이 범위 내에서 계속 표시됩니다.",
+      "isActive": "비활성 정책은 새 할당 및 액세스 결정에서 제외됩니다."
+    },
+    "userVisibilityAssignment": {
+      "user": "관리하려는 엔터티 가시성을 가진 사용자를 선택합니다.",
+      "policy": "엔터티당 하나의 활성 공개 상태 정책을 선택하거나 비워 둡니다.",
+      "save": "드롭다운 변경사항은 저장할 때까지 적용되지 않습니다. 저장 및 적용은 모든 카드 선택을 함께 보냅니다."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "권한 정의",
+    "description": "시스템 전체에서 사용되는 권한 코드 관리",
+    "add": "정의 추가",
+    "form": {
+      "editTitle": "권한 정의 편집",
+      "addTitle": "권한 정의 추가",
+      "editDescription": "권한 정의 세부정보 업데이트",
+      "addDescription": "새 권한 정의 만들기",
+      "code": "코드",
+      "codePlaceholder": "코드를 선택하세요",
+      "affectedRoutes": "영향을 받은 페이지",
+      "affectedRoutesNone": "이 코드와 일치하는 경로를 찾을 수 없습니다.",
+      "name": "이름",
+      "namePlaceholder": "표시 이름",
+      "availableOnWeb": "웹에서 사용 가능",
+      "availableOnWebHint": "이 권한은 웹앱의 메뉴, 페이지, 작업에 사용할 수 있습니다.",
+      "availableOnMobile": "모바일에서 이용 가능",
+      "availableOnMobileHint": "해당 권한은 모바일 앱 내 메뉴, 화면, 액션에 사용할 수 있습니다.",
+      "description": "설명",
+      "descriptionPlaceholder": "선택적 설명",
+      "isActive": "활성",
+      "codeSearchPlaceholder": "검색...",
+      "codeEmpty": "검색결과가 없습니다"
+    },
+    "table": {
+      "title": "권한 정의",
+      "code": "코드",
+      "name": "이름",
+      "platform": "플랫폼",
+      "isActive": "활성",
+      "updatedDate": "업데이트됨",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "platform": {
+      "web": "웹",
+      "mobile": "모바일",
+      "both": "웹 + 모바일"
+    },
+    "delete": {
+      "confirmTitle": "권한 정의 삭제",
+      "confirmMessage": "정말로 \"{{name}}\"을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
+    },
+    "syncFromRoutes": "경로에서 동기화"
+  },
+  "permissionGroups": {
+    "title": "권한 그룹",
+    "description": "권한 그룹 및 할당 관리",
+    "systemAdminLocked": "시스템 관리자 그룹은 변경할 수 없습니다.",
+    "add": "그룹 추가",
+    "selectAll": "모두 선택",
+    "noDefinitions": "사용 가능한 권한 정의가 없습니다.",
+    "form": {
+      "editTitle": "권한 그룹 편집",
+      "addTitle": "권한 그룹 추가",
+      "editDescription": "권한 그룹 세부정보 업데이트",
+      "addDescription": "새 권한 그룹 만들기",
+      "name": "이름",
+      "namePlaceholder": "그룹 이름",
+      "description": "설명",
+      "descriptionPlaceholder": "선택적 설명",
+      "isSystemAdmin": "시스템 관리자",
+      "isActive": "활성",
+      "permissions": "권한"
+    },
+    "table": {
+      "title": "권한 그룹",
+      "name": "이름",
+      "isSystemAdmin": "시스템 관리자",
+      "isActive": "활성",
+      "permissionCount": "권한",
+      "showing": "{{from}}-{{to}} / {{total}}",
+      "id": "레코드 ID"
+    },
+    "managePermissions": "권한 관리",
+    "permissionsPanel": {
+      "title": "그룹 권한 편집",
+      "description": "이 그룹에 대한 권한 선택",
+      "currentCodes": "현재 허가 코드",
+      "screen": "화면/권한 영역",
+      "groupedRows": "허가 지역",
+      "actionsMapped": "권한",
+      "actions": {
+        "create": "만들기",
+        "read": "읽기",
+        "update": "업데이트",
+        "delete": "삭제",
+        "other": "기타"
+      },
+      "previewTitle": "그룹 권한 미리 보기",
+      "previewDescription": "이 그룹에 할당된 권한을 빠르게 검토합니다."
+    },
+    "delete": {
+      "confirmTitle": "권한 그룹 삭제",
+      "confirmMessage": "정말로 \"{{name}}\"을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
+    },
+    "search": "검색...",
+    "builtInLocked": "기본 제공 그룹은 변경할 수 없습니다. 사용자 지정 그룹을 만드세요.",
+    "presets": {
+      "systemAdministrators": {
+        "name": "시스템 관리자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "masterDataSpecialist": {
+        "name": "마스터 데이터 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "purchasingSpecialist": {
+        "name": "구매 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "goodsReceiptOperator": {
+        "name": "입고 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "warehouseOperator": {
+        "name": "창고 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "shippingOperator": {
+        "name": "출하 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "salesSpecialist": {
+        "name": "영업 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "importCostSpecialist": {
+        "name": "수입 및 원가 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "accountingSpecialist": {
+        "name": "회계 담당자",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      },
+      "erpAuditor": {
+        "name": "ERP 감사자(읽기 전용)",
+        "description": "최소 권한으로 사전 정의된 ERP 업무 프로필입니다."
+      }
+    },
+    "previewPermissions": "할당된 권한 미리 보기",
+    "restoreDefaults": {
+      "button": "기본 권한 그룹 만들기",
+      "title": "기본 권한 그룹 복원",
+      "description": "시스템 관리자, 입고, 창고, 배송 및 기타 기본 업무 그룹을 안전한 기본 권한으로 복원합니다. 사용자 지정 그룹은 변경되지 않습니다.",
+      "confirm": "복원",
+      "success": "기본 권한 그룹 {{count}}개를 복원했습니다."
+    }
+  },
+  "userGroupAssignments": {
+    "title": "사용자 그룹 할당",
+    "description": "사용자에게 권한 그룹 할당",
+    "selectUser": "사용자 선택",
+    "selectUserPlaceholder": "사용자 검색 및 선택...",
+    "selectUserHint": "권한 그룹 할당을 관리할 사용자를 선택하세요.",
+    "assignedGroups": "할당된 권한 그룹",
+    "noUsers": "사용자를 찾을 수 없습니다.",
+    "noGroups": "사용 가능한 권한 그룹이 없습니다.",
+    "selectAll": "모두 선택"
+  },
+  "visibilityPolicies": {
+    "title": "가시성 정책",
+    "description": "누가 어떤 기록을 볼 수 있는지 정의하는 정책 세트 관리",
+    "add": "정책 추가",
+    "search": "검색 정책...",
+    "table": {
+      "title": "가시성 정책 목록",
+      "code": "코드",
+      "name": "이름",
+      "entityType": "엔터티",
+      "scopeType": "범위",
+      "includeSelf": "본인 포함",
+      "isActive": "활성",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "stats": {
+      "total": "총 정책",
+      "active": "활성 정책",
+      "entities": "엔터티 유형"
+    },
+    "form": {
+      "addTitle": "가시성 정책 추가",
+      "editTitle": "공개 상태 정책 수정",
+      "addDescription": "새로운 가시성 정책 정의 만들기",
+      "editDescription": "선택한 공개 상태 정책 설정 업데이트",
+      "code": "코드",
+      "codePlaceholder": "ERP_GOODS_RECEIPT_BRANCH",
+      "name": "이름",
+      "namePlaceholder": "입고 — 동일 지점",
+      "entityType": "엔터티",
+      "entityTypePlaceholder": "엔터티 선택",
+      "scopeType": "범위",
+      "scopeTypePlaceholder": "범위 선택",
+      "description": "설명",
+      "descriptionPlaceholder": "선택적 간단한 설명",
+      "includeSelf": "사용자 자신의 기록 포함",
+      "isActive": "활성",
+      "summaryTitle": "정책 요약",
+      "summary": "{{scope}} 범위는 {{entity}} 레코드에 적용됩니다."
+    },
+    "scope": {
+      "self": "본인만",
+      "managerHierarchy": "관리자 계층",
+      "permissionGroup": "권한 그룹",
+      "company": "전사적으로",
+      "branch": "동일 지점",
+      "warehouse": "창고 범위"
+    },
+    "entity": {
+      "businessPartner": "거래처",
+      "product": "재고 / 제품",
+      "warehouse": "창고 및 위치",
+      "inventory": "재고 이동",
+      "goodsReceipt": "입고",
+      "transferOrder": "창고 간 이동",
+      "shipment": "출하 및 납품서",
+      "purchaseOrder": "구매 주문",
+      "salesOrder": "판매 주문",
+      "importDossier": "수입 서류",
+      "electronicDocument": "전자 문서",
+      "accounting": "회계"
+    }
+  },
+  "userVisibilityAssignments": {
+    "title": "사용자 가시성 할당",
+    "description": "사용자별 엔터티 가시성 정책 할당 관리",
+    "selectUser": "사용자 선택",
+    "selectedUser": "선택된 사용자",
+    "selectUserPlaceholder": "사용자 검색 및 선택...",
+    "selectUserHint": "공개 상태 할당을 관리할 사용자를 선택하세요.",
+    "assignedPolicies": "할당된 정책",
+    "status": "상태",
+    "ready": "최신",
+    "unsavedChanges": "저장되지 않음",
+    "unsavedChangesCount": "저장 대기 중인 {{count}} 모듈",
+    "upToDate": "최신",
+    "pendingChange": "저장 대기 중",
+    "unsavedCardHint": "선택사항이 아직 저장되지 않았습니다. 저장을 눌러 적용하세요.",
+    "saveEntity": "저장",
+    "revert": "취소",
+    "moduleSectionTitle": "모듈 가시성",
+    "moduleSectionDescription": "각 모듈에 대한 정책을 선택하고 카드에 저장합니다.",
+    "unassigned": "할당되지 않음",
+    "cardDescription": "이 사용자의 {{entity}} 레코드에 적용될 가시성 정책을 선택하십시오.",
+    "selectPolicyPlaceholder": "정책 선택",
+    "noPolicy": "정책 없음",
+    "noPolicyCompanyHint": "정책 없음을 선택하면 사용자는 이 모듈에서 모든 회사/공장 기록을 볼 수 있습니다."
+  },
+  "visibilitySimulator": {
+    "title": "가시성 시뮬레이터",
+    "description": "선택한 엔터티 유형에 대해 선택한 사용자에게 표시되는 사용자의 레코드 및 활성 승인 재정의 레코드를 테스트합니다.",
+    "selectUser": "사용자",
+    "helpUser": "가시성을 시뮬레이션하려는 사용자를 선택하십시오.",
+    "selectUserPlaceholder": "사용자를 선택하세요...",
+    "selectEntity": "엔터티",
+    "helpEntity": "레코드 가시성을 시뮬레이션하려는 모듈을 선택하십시오.",
+    "selectEntityPlaceholder": "엔터티 선택",
+    "recordId": "레코드 ID",
+    "recordIdPlaceholder": "예를 들어 125",
+    "helpRecordId": "특정 레코드 ID를 입력하여 보기, 업데이트, 삭제 및 승인 작업이 허용되는지 여부를 시뮬레이션합니다.",
+    "selectedUser": "선택된 사용자",
+    "entity": "엔터티",
+    "visibleUsers": "보이는 사용자",
+    "approvalOverrides": "승인 재정의 기록",
+    "visibleUsersTitle": "범위 내의 사용자",
+    "policyDefined": "정책이 정의됨",
+    "noPolicy": "정책 없음",
+    "companyWide": "전사적 접근",
+    "policyActive": "활성 공개 상태 정책이 적용되었습니다.",
+    "includeSelf": "자신을 포함",
+    "awaitingSelection": "먼저 사용자와 엔터티를 선택하세요.",
+    "overrideTitle": "활성 승인 재정의 기록",
+    "noOverrides": "활성 승인 재정의 기록이 없습니다.",
+    "overrideRecord": "레코드 #{{id}}",
+    "auditTitle": "승인 무시 감사",
+    "noAudit": "활성 승인 재정의 감사 항목이 없습니다.",
+    "auditActionId": "승인 조치",
+    "auditRequestId": "승인 요청",
+    "auditFlow": "흐름",
+    "auditApprover": "승인자",
+    "auditStepValue": "단계 {{step}} / 현재 {{currentStep}}",
+    "actionPanelTitle": "기록 수준의 액션 시뮬레이션",
+    "noRecordSimulation": "레코드 ID를 입력하면 조회/업데이트/삭제/승인 결과가 여기에 표시됩니다.",
+    "actionAllowed": "허용됨",
+    "actionDenied": "거부됨",
+    "action": {
+      "view": "보기",
+      "update": "업데이트",
+      "delete": "삭제",
+      "approve": "승인하다"
+    },
+    "visibleUsersShowing": "{{total}} 사용자의 {{from}}-{{to}}",
+    "visibleUsersPage": "페이지 {{page}} / {{totalPages}}",
+    "noVisibleUsers": "범위에 사용자 없음"
+  },
+  "auditLogs": {
+    "title": "감사 로그",
+    "description": "중요한 작업을 수행한 사람, 추적 대상, 종료 방법을 추적합니다.",
+    "search": "감사 로그 검색...",
+    "results": {
+      "success": "성공",
+      "succeeded": "성공함",
+      "warning": "경고",
+      "partial": "부분",
+      "error": "오류",
+      "failed": "실패"
+    },
+    "filters": {
+      "result": "결과",
+      "actionType": "액션",
+      "entityType": "엔터티",
+      "entityId": "레코드 ID",
+      "performedByUserEmail": "수행자:",
+      "source": "소스",
+      "branchCode": "지점",
+      "requestPath": "요청 경로",
+      "requestMethod": "방법",
+      "createdDate": "날짜"
+    },
+    "clearTraceFilter": "추적 필터 지우기",
+    "viewDetail": "세부정보",
+    "filterTrace": "추적 필터링",
+    "loadError": "감사 로그를 로드할 수 없습니다.",
+    "stats": {
+      "total": "총 기록",
+      "errors": "실패한 결과",
+      "traces": "활성 추적"
+    },
+    "table": {
+      "title": "감사 로그 목록",
+      "createdDate": "날짜",
+      "traceId": "추적 ID",
+      "actionType": "액션",
+      "entityType": "엔터티",
+      "entityId": "레코드 ID",
+      "result": "결과",
+      "source": "소스",
+      "performedBy": "수행자:",
+      "branchCode": "지점",
+      "requestPath": "요청 경로",
+      "requestMethod": "방법",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "detail": {
+      "title": "감사 로그 세부정보",
+      "description": "요청 컨텍스트와 선택한 레코드의 변경 요약을 검사합니다.",
+      "contextTitle": "액션 컨텍스트",
+      "requestTitle": "요청 요약",
+      "reason": "이유",
+      "failureReason": "실패 세부정보",
+      "changedFieldsTitle": "변경된 필드",
+      "noChangedFields": "이 레코드에는 필드 차이를 사용할 수 없습니다.",
+      "oldValuesTitle": "이전 값",
+      "newValuesTitle": "새로운 가치"
+    },
+    "traceDrillDown": {
+      "traceId": "선택된 트레이스",
+      "startedAt": "시작 시간",
+      "completedAt": "완료 시간",
+      "entities": "접촉된 엔터티",
+      "timelineTitle": "추적 흐름 요약",
+      "openTrace": "이 추적 열기"
+    }
+  },
+  "common": {
+    "cancel": "취소",
+    "saving": "저장 중...",
+    "save": "저장 및 적용",
+    "loading": "로드 중...",
+    "search": "검색...",
+    "noData": "데이터 없음",
+    "actions": "작업",
+    "yes": "예",
+    "no": "아니요",
+    "edit": "편집",
+    "delete": "삭제",
+    "previous": "이전",
+    "next": "다음",
+    "processing": "처리 중..."
+  },
+  "sidebar": {
+    "accessControl": "접근 통제",
+    "permissionDefinitions": "권한 정의",
+    "permissionGroups": "권한 그룹",
+    "userGroupAssignments": "사용자 그룹 할당",
+    "visibilityPolicies": "가시성 정책",
+    "userVisibilityAssignments": "사용자 가시성 할당",
+    "auditLogs": "감사 로그",
+    "visibilitySimulator": "가시성 시뮬레이터",
+    "accessControlGuide": "출입통제 안내"
+  },
+  "guide": {
+    "title": "출입통제 안내",
+    "description": "이 가이드에서는 각 액세스 제어 화면의 기능과 각 설정이 변경되는 내용을 설명합니다. 목표는 모델을 처음 보는 사람이라도 시스템을 이해할 수 있도록 만드는 것입니다.",
+    "hero": {
+      "coreLogicLabel": "핵심 로직",
+      "coreLogicValue": "권한이 허용되고 가시성이 제한됩니다.",
+      "finalCheckLabel": "최종 확인",
+      "finalCheckValue": "시뮬레이터에서 유효성을 검사합니다."
+    },
+    "quickRulesTitle": "5가지 핵심 규칙",
+    "screensTitle": "각 화면의 기능은 무엇입니까?",
+    "scenariosTitle": "시나리오 기반 예시",
+    "expectedResultLabel": "예상 결과",
+    "mistakesTitle": "일반적인 실수",
+    "checklistTitle": "권장 설정 순서",
+    "faqTitle": "자주 묻는 질문",
+    "footer": {
+      "title": "단기 결정 규칙",
+      "body": "사용자가 작업을 수행할 수 없는 경우 권한 그룹부터 시작하세요. 사용자에게 기록이 너무 많거나 너무 적다면 가시성부터 시작하세요. 항상 가시성 시뮬레이터에서 최종 결정을 확인하십시오."
+    },
+    "quickRules": [
+      "페이지 권한은 별도의 문제이고, 기록 가시성은 별도의 문제입니다. 사용자가 페이지에 들어갈 수 있지만 모든 기록을 볼 수는 없습니다.",
+      "권한 그룹 화면은 사용자가 열 수 있는 페이지와 수행할 수 있는 작업을 결정합니다.",
+      "가시성 정책 화면은 해당 페이지에서 사용자에게 표시되는 기록을 결정합니다.",
+      "사용자 그룹 할당은 그룹을 할당합니다. 사용자 가시성 할당은 사용자 기반 가시성 예외를 정의합니다.",
+      "가시성 시뮬레이터 결과를 읽지 않고 생명체에게 규칙을 부여하는 것은 위험합니다. 시뮬레이터에서 결과를 꼭 확인하세요."
+    ],
+    "pageCards": [
+      {
+        "id": "허가 그룹",
+        "title": "권한 그룹",
+        "summary": "이 화면에서는 사용자가 볼 수 있는 모듈과 취할 수 있는 작업이 결정됩니다.",
+        "bullets": [
+          "견적 화면을 열려면 `receiving.goods-receipts.view`와 같은 표시 권한을 부여해야 합니다.",
+          "새 견적을 생성하려면 동일한 그룹에 `receiving.goods-receipts.create` 권한이 있어야 합니다.",
+          "업데이트하려면 `receiving.goods-receipts.update`가 필요하고, 삭제하려면 `receiving.goods-receipts.delete`가 필요합니다.",
+          "여기의 권한은 페이지와 작업 문을 엽니다. 어떤 레코드를 볼 것인지 단독으로 결정하는 것은 아닙니다."
+        ]
+      },
+      {
+        "id": "사용자그룹할당",
+        "title": "사용자 그룹 할당",
+        "summary": "이 화면은 하나 이상의 권한 그룹을 사용자에게 바인딩하는 데 사용됩니다.",
+        "bullets": [
+          "사용자가 선택되면 사용자가 갖게 될 그룹이 선택됩니다.",
+          "사용자가 둘 이상의 그룹에 속해 있으면 권한이 병합됩니다. 즉, 한 그룹의 권위는 다른 그룹도 지원합니다.",
+          "사용자에게 잘못된 그룹을 제공하면 정의한 적이 없는 페이지에 대한 액세스를 열 수 있습니다.",
+          "이 화면은 영업 담당자, 관리자, 운영, 시스템 관리자 등 역할 분배에 가장 일반적으로 사용됩니다."
+        ]
+      },
+      {
+        "id": "가시성 정책",
+        "title": "가시성 정책",
+        "summary": "이 화면은 제안, 활동, 요청 및 주문과 같은 기록을 볼 수 있는 사람을 규칙 기반으로 정의합니다.",
+        "bullets": [
+          "사용자가 해당 페이지에 들어가더라도 해당 엔터티에 대한 규칙이 없으면 정책 로직이 허용하는 만큼의 레코드만 볼 수 있습니다.",
+          "여기에서 범위를 선택하면 시스템 동작이 변경됩니다(자체 기록, 소속 팀, 일반 회사 등).",
+          "동일한 화면에서 제안 및 활동과 같은 다양한 자산에 대해 다양한 가시성 모델을 정의할 수 있습니다.",
+          "정책이 활성화되어 있지만 잘못된 엔터티에 대해 정의된 경우 예상한 효과는 결코 발생하지 않습니다."
+        ]
+      },
+      {
+        "id": "userVisibility할당",
+        "title": "사용자 가시성 할당",
+        "summary": "이 화면은 사용자 기반 가시성 예외를 부여하는 데 사용됩니다.",
+        "bullets": [
+          "표준 규칙이 충분하지 않은 경우 다른 엔터티 기반 가시성 정책을 특정 사용자에게 바인딩할 수 있습니다.",
+          "이 구조는 일반 규칙을 위반하지 않고 단일 관리자 또는 특수 사용자에게 다양한 가시성을 제공하는 데 이상적입니다.",
+          "회사 전체에 영향을 미치는 규칙이 아닌 예외를 정의하려면 여기에서 작업해야 합니다.",
+          "이 화면에서는 그룹 인증을 부여하지 않습니다. 레코드 가시성만 변경됩니다."
+        ]
+      },
+      {
+        "id": "가시성 시뮬레이터",
+        "title": "가시성 시뮬레이터",
+        "summary": "이 화면은 사용자, 엔터티 및 레코드가 선택될 때 시스템이 실제로 표시하는 내용을 테스트합니다.",
+        "bullets": [
+          "규칙을 작성했지만 결과가 확실하지 않은 경우 여기에서 사용자 및 엔터티 유형을 선택하고 표시되는 사용자를 읽을 수 있습니다.",
+          "특정 레코드의 ID 값을 입력하면 해당 레코드에 대한 결과가 계산됩니다.",
+          "승인 재정의 또는 감사 기록이 있는 경우 시뮬레이터는 이를 표시합니다.",
+          "본 화면은 라이브를 진행하기 전 결과가 맞는지 묻는 질문에 대한 가장 안전한 답변입니다."
+        ]
+      },
+      {
+        "id": "허가 정의",
+        "title": "권한 정의",
+        "summary": "이 화면은 더 이상 운영상 필요한 화면이 아니며, 시스템 카탈로그 로직을 이해하기 위한 참고용 화면입니다.",
+        "bullets": [
+          "이제 권한 코드가 자동 동기화 로직으로 관리됩니다.",
+          "결국 관리자의 주요 작업 공간은 권한 그룹 및 할당 화면입니다.",
+          "새로운 경로나 새로운 허가증 카탈로그가 도착하면 시스템은 이를 자동으로 카탈로그화하도록 설정됩니다."
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "s1",
+        "title": "시나리오 1: 영업 담당자는 자신의 견적만 볼 수 있습니다.",
+        "target": "제안 화면에 들어가서 새 제안을 열도록 하세요. 하지만 다른 사람의 제안은 볼 수 없습니다.",
+        "steps": [
+          "권한 그룹 화면에서 사용할 그룹에 필요한 경우 `receiving.goods-receipts.view` 및 `receiving.goods-receipts.create`를 추가합니다.",
+          "사용자 그룹 할당 화면에서 해당 영업 담당자에게 이 그룹을 할당합니다.",
+          "가시성 정책 화면에서 자체 레코드만 표시하도록 견적 엔터티에 대한 정책을 정의합니다.",
+          "필요한 경우 사용자 가시성 할당 화면에서 이 정책을 사용자에게 연결합니다."
+        ],
+        "result": "사용자는 제안 페이지를 열고 새 제안을 생성할 수 있지만 목록에서 자신의 권한 범위에 해당하는 제안만 볼 수 있습니다."
+      },
+      {
+        "id": "s2",
+        "title": "시나리오 2: 영업 관리자가 팀 활동을 볼 수 있도록 합니다.",
+        "target": "관리자는 팀 활동을 추적하지만 모든 회사 데이터를 볼 수는 없습니다.",
+        "steps": [
+          "권한 그룹 화면에서 해당 관리자 그룹에 `warehouses.warehouse-management.view` 권한을 추가합니다.",
+          "활동을 업데이트하는 경우 'warehouses.warehouse-management.update' 권한도 추가하세요.",
+          "가시성 정책 화면에서 활동 엔터티에 대한 팀 바인딩 범위를 정의하는 정책을 활성화합니다.",
+          "이 정책을 관리 사용자 또는 적절한 관리 그룹의 사용자에게 직접 연결하십시오."
+        ],
+        "result": "관리자는 활동 화면에 들어가 자신의 팀과 관련된 활동만 볼 수 있습니다. 관련 없는 사용자의 활동은 나열되지 않습니다."
+      },
+      {
+        "id": "s3",
+        "title": "시나리오 3: 사용자는 주문을 추적할 수만 있고 생성할 수는 없습니다.",
+        "target": "주문 화면으로 들어가야 하지만 새 주문을 열 수는 없습니다.",
+        "steps": [
+          "권한 그룹 화면에서 'sales.orders.view' 권한을 부여하세요.",
+          "동일한 그룹에 `sales.orders.create` 권한을 부여하지 마세요.",
+          "사용자 그룹 할당 화면에서 이 그룹을 사용자에게 할당합니다."
+        ],
+        "result": "사용자는 주문 목록을 열 수 있습니다. 단, 신규주문 버튼이나 흐름생성 버튼은 권한이 없어 사용할 수 없습니다."
+      },
+      {
+        "id": "s4",
+        "title": "시나리오 4: 승인 프로세스의 제안이 감사 목적으로 표시됩니다.",
+        "target": "정상 가시성을 벗어난 기록이 승인 효과와 함께 나타나는 이유를 설명할 수 있어야 합니다.",
+        "steps": [
+          "먼저 가시성 시뮬레이터 화면에서 사용자, 견적을 엔터티로 선택하고 해당 레코드 ID를 선택합니다.",
+          "감사 결과를 미리 보고 확인하세요.",
+          "승인 재정의가 있는 경우 감사 영역에 표시됩니다."
+        ],
+        "result": "따라서 기록이 나타나는 이유에 대한 답은 추측이 아닌 시스템의 감사 데이터를 통해 읽혀집니다."
+      }
+    ],
+    "mistakes": [
+      "가시성 규칙만 정의하고 페이지 권한을 부여하지 않습니다. 결과: 사용자가 페이지에 전혀 들어갈 수 없습니다.",
+      "페이지 권한만 부여하고 가시성 규칙은 고려하지 않습니다. 결과: 예상보다 더 많은 기록이 나타날 수 있습니다.",
+      "사용자에게 둘 이상의 그룹을 할당하고 결합된 권한의 효과를 고려하지 않습니다.",
+      "시뮬레이터에서 테스트하지 않고 실시간 데이터에 대한 게시 정책입니다.",
+      "견적, 활동, 요청 및 주문 엔터티 유형을 혼합합니다."
+    ],
+    "checklist": [
+      "먼저 사용자가 어떤 페이지에 들어가야 하는지 명확히 합니다.",
+      "그런 다음 해당 페이지에서 수행해야 할 작업을 선택합니다.",
+      "그런 다음 해당 엔터티에 대해 표시되는 레코드의 가시성을 제한합니다.",
+      "필요한 경우 사용자 가시성 할당을 통해 사용자 기반 예외를 부여합니다.",
+      "최신 가시성 시뮬레이터로 결과를 테스트해 보세요."
+    ],
+    "faqs": [
+      {
+        "id": "자주 묻는 질문1",
+        "question": "사용자는 제안 페이지에 들어갈 수 있지만 어떤 기록도 볼 수 없습니다. 어디서?",
+        "answer": "페이지 권한이 있지만 공개 규칙으로 인해 기록이 제한됩니다. 간격이 정확할 수도 있고 가시성이 없거나 너무 좁을 수도 있습니다."
+      },
+      {
+        "id": "자주 묻는 질문2",
+        "question": "사용자는 어떤 제안도 추가할 수 없습니다. 어디서?",
+        "answer": "일반적으로 `receiving.goods-receipts.create` 권한이 없습니다. 보기 권한 화면을 엽니다. 생성 권한은 새로운 레코드를 열 수 있는 권한을 부여합니다."
+      },
+      {
+        "id": "자주 묻는 질문3",
+        "question": "사용자에게 너무 많은 레코드가 표시됩니다. 어디서부터 시작해야 할까요?",
+        "answer": "먼저 어떤 권한 그룹에 연결되어 있는지 확인하세요. 그런 다음 엔터티별 가시성 정책 및 사용자 가시성 할당 기록을 검토합니다. 마지막으로 시뮬레이터에서 동일한 사용자를 테스트합니다."
+      }
+    ]
+  }
+}

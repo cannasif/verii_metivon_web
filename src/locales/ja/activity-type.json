@@ -1,0 +1,62 @@
+{
+  "menu": "アクティビティタイプの管理",
+  "description": "アクティビティタイプの管理と編集",
+  "addButton": "新しいアクティビティ タイプの追加",
+  "loading": "読み込み中...",
+  "noData": "データが見つかりませんでした",
+  "actions": "アクション",
+  "edit": "編集",
+  "deleteButton": "削除",
+  "cancel": "キャンセル",
+  "save": "保存",
+  "saving": "保存中...",
+  "previous": "前へ",
+  "next": "次へ",
+  "advancedFilter": {
+    "columnName": "アクティビティの種類名",
+    "columnDescription": "説明",
+    "columnCreatedBy": "作成者"
+  },
+  "form": {
+    "addTitle": "新しいアクティビティ タイプの追加",
+    "editTitle": "アクティビティタイプの編集",
+    "addDescription": "新しいアクティビティ タイプの情報を入力します",
+    "editDescription": "アクティビティタイプ情報の編集",
+    "name": "アクティビティの種類名",
+    "namePlaceholder": "アクティビティタイプ名を入力してください",
+    "nameRequired": "アクティビティタイプ名は必須です",
+    "nameMaxLength": "アクティビティ タイプ名は最大 100 文字にすることができます",
+    "description": "説明",
+    "descriptionPlaceholder": "説明を入力します (オプション)",
+    "descriptionMaxLength": "説明は最大 500 文字まで可能です"
+  },
+  "table": {
+    "id": "ID",
+    "name": "アクティビティの種類名",
+    "description": "説明",
+    "createdDate": "作成日",
+    "createdBy": "作成者",
+    "showing": "{{from}}-{{to}} / {{total}} を表示中",
+    "page": "ページ {{current}} / {{total}}",
+    "title": "アクティビティタイプリスト"
+  },
+  "stats": {
+    "totalActivityTypes": "アクティビティの種類の合計",
+    "activeActivityTypes": "アクティブなアクティビティのタイプ",
+    "newThisMonth": "今月の新商品"
+  },
+  "messages": {
+    "createSuccess": "アクティビティタイプが正常に作成されました",
+    "createError": "アクティビティタイプの作成に失敗しました",
+    "updateSuccess": "アクティビティタイプが正常に更新されました",
+    "updateError": "アクティビティタイプの更新に失敗しました",
+    "deleteSuccess": "アクティビティ タイプが正常に削除されました",
+    "deleteError": "アクティビティタイプの削除に失敗しました"
+  },
+  "deleteConfirm": {
+    "confirmTitle": "アクティビティタイプの削除",
+    "confirmMessage": "{{name}} アクティビティ タイプを削除してもよろしいですか?"
+  },
+  "create": "新しいアクティビティ タイプ",
+  "error": "エラーが発生しました"
+}

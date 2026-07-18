@@ -1,0 +1,23 @@
+{
+  "PageTitle": "邮件设置",
+  "PageDescription": "Configure SMTP server settings",
+  "Save": "保存",
+  "SavedSuccessfully": "Mail settings saved successfully",
+  "SaveFailed": "Failed to save mail settings",
+  "Fields": {
+    "Host": "服务器名称",
+    "Port": "连接端口",
+    "EnableSsl": "启用 SSL",
+    "Username": "用户名",
+    "Password": "密码",
+    "PasswordPlaceholder": "Enter new password to change",
+    "FromEmail": "来自电子邮件",
+    "FromName": "来自姓名",
+    "Timeout": "超时（秒）"
+  },
+  "TestMail": {
+    "Send": "发送测试电子邮件",
+    "Sending": "测试正在发送...",
+    "Success": "测试邮件已发送"
+  }
+}

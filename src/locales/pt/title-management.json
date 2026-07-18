@@ -1,0 +1,65 @@
+{
+  "loading": "Carregando...",
+  "noData": "Nenhum dado encontrado",
+  "error": "Ocorreu um erro",
+  "search": "Pesquisar...",
+  "refresh": "Atualizar",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "advancedFilter": {
+    "columnTitleName": "Nome do título",
+    "columnCode": "Código"
+  },
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Gravando...",
+  "delete": {
+    "confirmTitle": "Excluir título",
+    "confirmMessage": "Tem certeza de que deseja excluir o título {{titleName}}?",
+    "button": "Excluir"
+  },
+  "deleting": "Excluindo...",
+  "actions": "Transações",
+  "edit": "Editar",
+  "header": {
+    "title": "Gerenciamento de títulos",
+    "description": "Você pode gerenciar as definições de títulos aqui."
+  },
+  "table": {
+    "title": "Lista de títulos",
+    "id": "ID",
+    "name": "Nome do título",
+    "code": "Código",
+    "createdDate": "Data de criação",
+    "createdBy": "Criado pelo usuário",
+    "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+    "page": "Página {{current}} / {{total}}"
+  },
+  "form": {
+    "addTitle": "Adicionar novo título",
+    "editTitle": "Editar título",
+    "addDescription": "Insira as novas informações do título",
+    "editDescription": "Editar informações do título",
+    "titleName": "Nome do título",
+    "titleNamePlaceholder": "Digite o nome do título",
+    "titleCode": "Código do título",
+    "codePlaceholder": "Digite o código (opcional)",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "saving": "Gravando..."
+  },
+  "menu": "Gerenciamento de títulos",
+  "stats": {
+    "totalTitles": "Título total",
+    "activeTitles": "Título ativo",
+    "newThisMonth": "Novidade este mês"
+  },
+  "description": "Gerenciar e editar títulos",
+  "addButton": "Adicionar novo título",
+  "showStats": "Mostrar estatísticas",
+  "hideStats": "Ocultar estatísticas",
+  "messages": {
+    "deleteSuccess": "Título excluído com sucesso",
+    "deleteError": "Não foi possível excluir o título"
+  }
+}

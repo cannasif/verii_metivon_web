@@ -1,0 +1,82 @@
+{
+  "menu": "Zarządzanie spotkaniami",
+  "description": "Zarządzaj i edytuj definicje spotkań",
+  "addButton": "Dodaj nowe spotkanie",
+  "loading": "Ładowanie...",
+  "noData": "Brak danych",
+  "actions": "Działania",
+  "edit": "Edytuj",
+  "deleteButton": "Usuń",
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Zapisywanie...",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "advancedFilter": {
+    "columnName": "Nazwa spotkania",
+    "columnDescription": "Opis",
+    "columnCreatedBy": "Stworzony przez"
+  },
+  "activityType": {
+    "create": "Dodaj nowe spotkanie",
+    "loading": "Ładowanie...",
+    "noData": "Brak danych",
+    "actions": "Działania",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "saving": "Zapisywanie...",
+    "error": "Wystąpił błąd",
+    "form": {
+      "addTitle": "Dodaj nowe spotkanie",
+      "editTitle": "Edytuj spotkanie",
+      "addDescription": "Wprowadź nowe informacje o spotkaniu",
+      "editDescription": "Edytuj informacje o spotkaniu",
+      "name": "Nazwa spotkania",
+      "namePlaceholder": "Wpisz nazwę spotkania",
+      "nameRequired": "Nazwa spotkania jest wymagana",
+      "nameMaxLength": "Nazwa spotkania może mieć maksymalnie 100 znaków",
+      "description": "Opis",
+      "descriptionPlaceholder": "Wprowadź opis (opcjonalnie)",
+      "descriptionMaxLength": "Opis może mieć maksymalnie 500 znaków"
+    },
+    "table": {
+      "title": "Lista spotkań",
+      "id": "Identyfikator",
+      "name": "Nazwa spotkania",
+      "description": "Opis",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez",
+      "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+      "page": "Strona {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Wszystkich spotkań",
+      "activeActivityTypes": "Aktywne spotkania",
+      "newThisMonth": "Nowość w tym miesiącu"
+    },
+    "messages": {
+      "createSuccess": "Spotkanie zostało utworzone pomyślnie",
+      "createError": "Nie udało się utworzyć spotkania",
+      "updateSuccess": "Spotkanie zostało pomyślnie zaktualizowane",
+      "updateError": "Nie udało się zaktualizować spotkania",
+      "deleteSuccess": "Spotkanie zostało pomyślnie usunięte",
+      "deleteError": "Nie udało się usunąć spotkania"
+    }
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Usuń spotkanie",
+    "confirmMessage": "Czy na pewno chcesz usunąć {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Spotkanie zostało pomyślnie usunięte",
+    "deleteError": "Nie udało się usunąć spotkania"
+  },
+  "table": {
+    "title": "Lista spotkań",
+    "id": "Identyfikator",
+    "name": "Nazwa spotkania",
+    "description": "Opis",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez"
+  }
+}

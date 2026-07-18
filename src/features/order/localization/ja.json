@@ -1,0 +1,78 @@
+{
+  "lines": {
+    "doubleClickToEdit": "ダブルクリックして編集します",
+    "unit": "単位",
+    "descriptionFieldsTitle": "説明フィールド",
+    "descriptionTooltipText": "これは行ベースのプロダクション記述です。 ERP にインポートされた場合の Netsis 一致: 説明 1 -> 追加フィールド 1、説明 2 -> 追加フィールド 2、説明 3 -> 行注釈 7。",
+    "descriptionTooltipPrefix": "これは行ベースのプロダクション記述です。 ERP に転送されるときの Netsis マッチング:",
+    "erpTargetExtraField1": "追加フィールド 1",
+    "erpTargetExtraField2": "追加エリア2",
+    "erpTargetLineExtraDesc7": "行の注釈 7",
+    "profileErpTooltip": "このプロファイルの選択は、ERP に送信するときに Netsis Line Annotation 2 フィールドに保存されます。",
+    "rebarErpTooltip": "この鉄の選択は、ERP に送信するときに Netsis Row Annotation 3 値として保存されます。",
+    "screwErpTooltip": "このネジの選択は、ERP に送信するときに Netsis Line Annotation 4 値として保存されます。",
+    "printErpTooltip": "この印刷選択は、ERP に送信するときに Netsis Line Annotation 8 値として保存されます。印刷コメントは、Netsis 行コメント 9 フィールドと行注釈 9 フィールドにも入ります。",
+    "lineItemDescriptionPlaceholder": "行ベースの項目説明"
+  },
+  "notes": {
+    "title": "注文メモ",
+    "description": "注文の内部メモを追加および更新します。",
+    "placeholder": "注文メモを入力してください",
+    "noteLabel": "注文メモ",
+    "notesTooltipText": "これらは、注文全体に関係する配送/請求書のメモです。 Netsis の順序は、上部の注釈 1 ～ 5 フィールドに順番に記録されます。注 2 は Netsis 注釈 2 に進みます。",
+    "addLineTooltip": "コメント行を追加",
+    "linesHint": "各行は PDF とドキュメントのメモに個別に表示されます。",
+    "removeLine": "行を削除する",
+    "pageLabel": "ページ {{current}} / {{total}}",
+    "saving": "メモを保存しています...",
+    "maxLengthError": "メモ欄は最大100文字まで入力できます。"
+  },
+  "erpOrder": {
+    "title": "ERP注文リスト",
+    "description": "Netsis にログインしているユーザーのスコープ内に表示される順序の親レコードとアイテムを監視します。",
+    "currentUserScope": "ログインユーザーに基づく",
+    "searchPlaceholder": "注文番号、現在、販売員、または日付を検索...",
+    "loading": "ERP 注文を読み込んでいます...",
+    "loadError": "ERP注文をロードできませんでした。",
+    "noData": "ERP注文が見つかりません。",
+    "detailAction": "詳細",
+    "detailTitle": "{{orderNo}} 注文詳細",
+    "unknownCustomer": "現在の名前はありません",
+    "lineCount": "{{count}} ペン",
+    "linesLoading": "注文商品を読み込み中...",
+    "lineLoadError": "注文商品を読み込めませんでした。",
+    "noLines": "この注文には商品が見つかりませんでした。",
+    "table": {
+      "title": "注文ヘッダー",
+      "branchCode": "支店",
+      "orderNo": "注文番号",
+      "customerCode": "現在のコード",
+      "customerName": "現在の名前",
+      "date": "日付",
+      "deliveryDate": "納期",
+      "grossTotal": "総額",
+      "vat": "VAT",
+      "grandTotal": "総計",
+      "salesRepCode": "セールスマン"
+    },
+    "lines": {
+      "rowNo": "シーケンス",
+      "stockCode": "証券コード",
+      "stockName": "銘柄名",
+      "quantity": "数量",
+      "unit": "単位",
+      "netPrice": "正味価格",
+      "vatRate": "VAT率",
+      "warehouseCode": "倉庫"
+    }
+  },
+  "header": {
+    "notes": "注意事項",
+    "descriptionErpTooltip": "これは、注文全体について生産側に確認してもらいたい一般的な説明です。 ERP に送信されると、Netsis 注文は上部の説明 (FatUst.Description) フィールドに記録されます。",
+    "ozelKod1": "特殊コード1",
+    "ozelKod1Placeholder": "特殊コード1を選択",
+    "ozelKod2": "特別コード2",
+    "ozelKod2Placeholder": "特殊コード2を選択",
+    "specialCodeSearchPlaceholder": "特別なコードを検索..."
+  }
+}

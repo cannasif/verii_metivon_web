@@ -1,0 +1,74 @@
+{
+  "menu": "Monitorowanie pożaru",
+  "title": "Monitorowanie pożaru",
+  "description": "Monitoruj kondycję zadań, zadania zakończone niepowodzeniem i kolejkę niemożliwą do dostarczenia.",
+  "summary": {
+    "title": "Podsumowanie systemu",
+    "description": "Szybko sprawdzaj powtarzający się stan zadań i zachowanie kolejek.",
+    "totalJobs": "Łączna liczba powtarzających się zadań",
+    "withQueue": "aktywne kolejki",
+    "withErrors": "błędna praca",
+    "help": "Statystyki to migawka Twojego serwera Hangfire; Zaktualizuj listy, odświeżając je."
+  },
+  "refresh": "Odśwież",
+  "stats": {
+    "enqueued": "w kolejce",
+    "processing": "Przetwarzanie",
+    "succeeded": "udany",
+    "failed": "ponieść porażkę"
+  },
+  "table": {
+    "jobId": "Identyfikator biznesowy",
+    "jobName": "biznes",
+    "state": "Stan",
+    "time": "czas",
+    "reason": "Dlaczego",
+    "queue": "ogon",
+    "duration": "Czas trwania",
+    "retryCount": "ponownie",
+    "recurringJobId": "Zaplanowana praca"
+  },
+  "succeeded": {
+    "title": "Udane Prace",
+    "empty": "Nie znaleziono żadnej pomyślnej pracy.",
+    "description": "Lista ostatnio ukończonych zadań Hangfire."
+  },
+  "failed": {
+    "title": "Nieudane zadania",
+    "empty": "Nie znaleziono nieudanych zadań.",
+    "total": "Razem",
+    "description": "Zadania, które spowodowały błędy lub oczekują na ponowną próbę."
+  },
+  "deadLetter": {
+    "title": "Kolejka niemożliwa do dostarczenia",
+    "empty": "Kolejka niedoręczonych zamówień jest pusta.",
+    "enqueued": "w kolejce",
+    "description": "Wiadomości, których nie można dostarczyć konsumentowi i które wymagają ręcznego sprawdzenia."
+  },
+  "recurring": {
+    "title": "Zaplanowane zadania",
+    "description": "Stąd możesz przeglądać zapisane zadania Hangfire i natychmiast uruchamiać wybrane zadanie.",
+    "selectLabel": "Zadanie do uruchomienia",
+    "selectPlaceholder": "Wybierz pracę",
+    "triggerButton": "biegnij teraz",
+    "triggerSuccess": "Zadanie {{jobName}} zostało uruchomione.",
+    "triggerError": "Wystąpił błąd podczas wyzwalania zadania.",
+    "empty": "Nie znaleziono jeszcze żadnych zarejestrowanych ofert pracy cyklicznej.",
+    "tableTitle": "zaplanowane prace",
+    "tableDescription": "Wszystkie powtarzające się zadania Hangfire i informacje o harmonogramie.",
+    "labels": {
+      "schedule": "czas",
+      "method": "metoda",
+      "error": "Wystąpił błąd",
+      "healthy": "zdrowy"
+    },
+    "table": {
+      "id": "Identyfikator zadania",
+      "job": "biznes",
+      "cron": "czas",
+      "nextExecution": "Następna praca",
+      "lastExecution": "najnowsze dzieło",
+      "queue": "ogon"
+    }
+  }
+}

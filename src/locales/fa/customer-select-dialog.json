@@ -1,0 +1,28 @@
+{
+  "title": "مشتری را انتخاب کنید",
+  "description": "شما می توانید همه مشتریان را با ERP و برچسب های بالقوه آنها متمایز کنید. فقط از برگه دیگر برای لیست بالقوه استفاده کنید.",
+  "badgeKindErp": "ERP",
+  "badgeKindPotential": "بالقوه",
+  "erpCustomers": "ERP",
+  "crmCustomers": "مشتریان CRM",
+  "potentialCustomers": "بالقوه",
+  "allCustomers": "همه",
+  "erp": "ERP",
+  "crm": "CRM",
+  "noErpCustomers": "مشتری ERP پیدا نشد",
+  "noCrmCustomers": "مشتری CRM پیدا نشد",
+  "noPotentialCustomers": "هیچ مشتری بالقوه ای پیدا نشد",
+  "noCustomers": "مشتری پیدا نشد",
+  "noResults": "نتایج جستجو یافت نشد",
+  "searchPlaceholder": "جستجو بر اساس نام یا کد ...",
+  "voiceSearch": "جستجوی صوتی",
+  "loading": "در حال بارگذاری",
+  "table": {
+    "type": "تایپ کنید",
+    "customerCode": "کد مشتری",
+    "customerName": "نام مشتری",
+    "phone": "تلفن",
+    "city": "شهر",
+    "email": "ایمیل"
+  }
+}

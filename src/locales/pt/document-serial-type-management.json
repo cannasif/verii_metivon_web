@@ -1,0 +1,88 @@
+{
+  "menu": "Gerenciamento de tipo de arquivo",
+  "description": "Gerenciar e organizar tipos de arquivos",
+  "search": "Pesquisar...",
+  "refresh": "Atualizar",
+  "addButton": "Adicionar novo tipo de arquivo",
+  "loading": "Carregando...",
+  "noData": "Sem dados",
+  "actions": "Transações",
+  "cancel": "Cancelar",
+  "save": "Salvar",
+  "saving": "Gravando...",
+  "delete": "Excluir",
+  "deleting": "Excluindo...",
+  "deleteConfirmTitle": "Confirmação de exclusão",
+  "deleteConfirmDescription": "Tem certeza de que deseja excluir este registro? Esta ação não pode ser desfeita.",
+  "table": {
+    "title": "Lista de tipos de arquivo",
+    "id": "ID",
+    "ruleType": "Tipo de regra",
+    "customerType": "Tipo de cliente",
+    "salesRep": "Representante de vendas",
+    "serialPrefix": "Prefixo serial",
+    "serialLength": "Comprimento da série",
+    "createdDate": "Data de criação"
+  },
+  "form": {
+    "addTitle": "Adicionar novo tipo de arquivo",
+    "editTitle": "Editar tipo de arquivo",
+    "addDescription": "Insira novas informações de tipo de arquivo",
+    "editDescription": "Editar informações de tipo de arquivo",
+    "ruleType": {
+      "required": "O tipo de regra deve ser selecionado"
+    },
+    "selectRuleType": "Selecione o tipo de regra",
+    "customerType": "Tipo de cliente",
+    "selectCustomerType": "Selecione o tipo de cliente (opcional)",
+    "searchCustomerType": "Pesquisar tipo de cliente...",
+    "noCustomerTypeSelected": "Tipo de cliente não selecionado",
+    "salesRep": "Representante de vendas",
+    "selectSalesRep": "Selecione o representante de vendas (opcional)",
+    "searchSalesRep": "Procurando um representante de vendas...",
+    "noSalesRepSelected": "Nenhum representante de vendas selecionado",
+    "serialPrefix": {
+      "required": "O prefixo de série é obrigatório",
+      "maxLength": "O prefixo serial pode ter até 50 caracteres"
+    },
+    "serialPrefixPlaceholder": "Insira o prefixo de série",
+    "serialLength": {
+      "min": "O comprimento da série deve ser de pelo menos 1",
+      "max": "O comprimento da série pode ser de até 100"
+    },
+    "serialLengthPlaceholder": "Insira a duração da série",
+    "serialStart": {
+      "min": "O início serial deve ser pelo menos 0"
+    },
+    "serialStartPlaceholder": "Insira o valor inicial da série",
+    "serialCurrent": {
+      "min": "A corrente em série deve ser pelo menos 0"
+    },
+    "serialCurrentPlaceholder": "Insira o valor de série atual",
+    "serialIncrement": {
+      "min": "O incremento serial deve ser de pelo menos 1"
+    },
+    "serialIncrementPlaceholder": "Insira o valor do incremento serial"
+  },
+  "totalRecords": "Total de registros {{count}}",
+  "advancedFilter": {
+    "columnSerialPrefix": "Prefixo serial",
+    "columnCustomerTypeName": "Tipo de cliente",
+    "columnSalesRepFullName": "Representante de vendas",
+    "columnRuleType": "Tipo de regra"
+  },
+  "messages": {
+    "createSuccess": "Tipo de arquivo criado com sucesso",
+    "createError": "Ocorreu um erro ao criar o tipo de arquivo",
+    "updateSuccess": "Tipo de arquivo atualizado com sucesso",
+    "updateError": "Ocorreu um erro ao atualizar o tipo de arquivo",
+    "deleteSuccess": "Tipo de arquivo excluído com sucesso",
+    "deleteError": "Ocorreu um erro ao excluir o tipo de arquivo"
+  },
+  "common": {
+    "delete": "Excluir"
+  },
+  "error": "Não foi possível salvar a atividade",
+  "previous": "Anterior",
+  "next": "Próximo"
+}

@@ -1,0 +1,103 @@
+{
+  "approvalFlow": {
+    "menu": "Управление потоком утверждений",
+    "description": "Управляйте и организуйте потоки утверждений",
+    "addButton": "Добавить новый процесс утверждения",
+    "table": {
+      "id": "идентификатор",
+      "documentType": "Тип документа",
+      "description": "Описание",
+      "isActive": "Активный",
+      "createdDate": "Дата создания",
+      "createdBy": "Создано",
+      "actions": "Действия",
+      "showing": "Показаны {{from}}-{{to}} / {{total}}",
+      "page": "Страница {{current}} / {{total}}",
+      "title": "Потоки утверждения"
+    },
+    "form": {
+      "addTitle": "Добавить новый процесс утверждения",
+      "editTitle": "Изменить процесс утверждения",
+      "addDescription": "Введите новую информацию о процессе утверждения",
+      "editDescription": "Изменение информации о процессе утверждения",
+      "documentType": "Тип документа",
+      "selectDocumentType": "Выберите тип документа",
+      "noDocumentTypeSelected": "Тип документа не выбран",
+      "documentTypeRequired": "Требуется выбор типа документа",
+      "description": "Описание",
+      "descriptionPlaceholder": "Введите описание (необязательно)",
+      "descriptionMaxLength": "Описание может содержать не более 200 символов.",
+      "isActive": "Активный",
+      "isActiveDescription": "Активный статус потока утверждения",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "saving": "Сохранение..."
+    },
+    "loading": "Загрузка...",
+    "noData": "Нет данных",
+    "active": "Активный",
+    "inactive": "Неактивный",
+    "previous": "Предыдущий",
+    "next": "Далее",
+    "delete": {
+      "action": "Удалить",
+      "cancel": "Отмена",
+      "confirmTitle": "Удалить процесс утверждения",
+      "confirmMessage": "Вы уверены, что хотите удалить этот поток утверждения?",
+      "title": "Удалить процесс утверждения",
+      "confirm": "Вы уверены, что хотите удалить этот поток утверждения?"
+    },
+    "documentType": {
+      "offer": "Предложение",
+      "request": "Запрос",
+      "order": "Заказать",
+      "demand": "Спрос",
+      "quotation": "Цитата",
+      "purchaseRequest": "Запрос на покупку",
+      "purchaseRfq": "Запрос цен (RFQ)",
+      "supplierQuotation": "Предложение поставщика",
+      "purchaseOrder": "Заказ на поставку"
+    },
+    "advancedFilter": {
+      "columnDocumentType": "Тип документа",
+      "columnDescription": "Описание",
+      "columnIsActive": "Активный",
+      "columnCreatedBy": "Создано"
+    },
+    "messages": {
+      "deleteSuccess": "Процесс утверждения успешно удален.",
+      "deleteError": "Произошла ошибка при удалении потока утверждения."
+    },
+    "steps": "Этапы потока",
+    "error": "Произошла ошибка"
+  },
+  "approvalFlowStep": {
+    "title": "Шаги потока",
+    "addButton": "Добавить шаг",
+    "empty": "Шаги пока не добавлены",
+    "unknownRoleGroup": "Нет ролевой группы",
+    "stepDescription": "Порядок утверждения: {{order}}",
+    "deleteDialog": {
+      "title": "Удалить шаг",
+      "description": "Вы уверены, что хотите удалить этот шаг?",
+      "confirm": "Удалить",
+      "cancel": "Отмена"
+    },
+    "form": {
+      "addTitle": "Добавить новый шаг",
+      "editTitle": "Редактировать шаг",
+      "addDescription": "Добавить новый шаг потока",
+      "editDescription": "Редактировать информацию о шаге потока",
+      "approvalRoleGroup": "Ролевая группа",
+      "selectRoleGroup": "Выберите группу ролей",
+      "noRoleGroupSelected": "Группа ролей не выбрана",
+      "approvalRoleGroupIdRequired": "Требуется выбрать группу ролей.",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "saving": "Сохранение..."
+    },
+    "messages": {
+      "deleteConfirm": "Вы уверены, что хотите удалить этот шаг?"
+    }
+  }
+}

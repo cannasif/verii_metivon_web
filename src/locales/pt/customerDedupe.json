@@ -1,0 +1,34 @@
+{
+  "title": "Caixa de entrada de conflitos",
+  "tableTitle": "Leads de clientes duplicados",
+  "subtitle": "Revise e mescle leads duplicados",
+  "refresh": "Atualizar",
+  "searchPlaceholder": "Pesquise por nome de cliente principal ou duplicado",
+  "matchType": "Tipo de correspondência",
+  "minScore": "Pontuação mínima",
+  "all": "Todos",
+  "masterCustomer": "cliente principal",
+  "duplicateCustomer": "cliente recorrente",
+  "score": "Pontuação",
+  "actions": "Transações",
+  "previewMerge": "Visualizar mesclagem",
+  "merge": "combinar",
+  "preferMasterValues": "Usar valores principais",
+  "confirmMergeTitle": "Confirmar mesclagem",
+  "confirmMergeDescription": "Cadastro duplicado será mesclado ao cliente principal. Esta ação não pode ser desfeita.",
+  "mergeSuccess": "A mesclagem foi concluída com sucesso.",
+  "mergeError": "A mesclagem falhou. Por favor, tente novamente.",
+  "emptyTitle": "sem conflito",
+  "emptyDescription": "Não há leads duplicados para análise.",
+  "loadErrorTitle": "Falha na instalação",
+  "loadErrorDescription": "Não foi possível carregar candidatos duplicados. Por favor, tente novamente.",
+  "retry": "tente novamente",
+  "TaxNumber": "número fiscal",
+  "TcknNumber": "Número de identificação TR",
+  "CustomerCode": "Código do cliente",
+  "common": {
+    "table": {
+      "showing": "Mostrando {{from}}-{{to}} / {{total}}"
+    }
+  }
+}

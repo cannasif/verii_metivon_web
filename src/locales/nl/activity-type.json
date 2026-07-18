@@ -1,0 +1,62 @@
+{
+  "menu": "Beheer van activiteitstypes",
+  "description": "Beheer en bewerk activiteitstypen",
+  "addButton": "Nieuw activiteitstype toevoegen",
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "actions": "Acties",
+  "edit": "Bewerken",
+  "deleteButton": "Verwijderen",
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opslaan...",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "advancedFilter": {
+    "columnName": "Naam activiteitstype",
+    "columnDescription": "Beschrijving",
+    "columnCreatedBy": "Gemaakt door"
+  },
+  "form": {
+    "addTitle": "Nieuw activiteitstype toevoegen",
+    "editTitle": "Activiteitstype bewerken",
+    "addDescription": "Voer nieuwe informatie over het activiteitstype in",
+    "editDescription": "Bewerk informatie over het activiteitstype",
+    "name": "Naam activiteitstype",
+    "namePlaceholder": "Voer de naam van het activiteitstype in",
+    "nameRequired": "Naam van activiteitstype is vereist",
+    "nameMaxLength": "De naam van het activiteitstype mag maximaal 100 tekens lang zijn",
+    "description": "Beschrijving",
+    "descriptionPlaceholder": "Beschrijving invoeren (optioneel)",
+    "descriptionMaxLength": "De beschrijving mag maximaal 500 tekens bevatten"
+  },
+  "table": {
+    "id": "Identiteitskaart",
+    "name": "Naam activiteitstype",
+    "description": "Beschrijving",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door",
+    "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+    "page": "Pagina {{current}} / {{total}}",
+    "title": "Lijst met activiteitstypen"
+  },
+  "stats": {
+    "totalActivityTypes": "Totaal aantal activiteitstypen",
+    "activeActivityTypes": "Actieve activiteitstypen",
+    "newThisMonth": "Nieuw deze maand"
+  },
+  "messages": {
+    "createSuccess": "Activiteitstype is succesvol aangemaakt",
+    "createError": "Kan activiteitstype niet maken",
+    "updateSuccess": "Activiteitstype bijgewerkt",
+    "updateError": "Kan activiteitstype niet updaten",
+    "deleteSuccess": "Activiteitstype is succesvol verwijderd",
+    "deleteError": "Kan activiteitstype niet verwijderen"
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Activiteitstype verwijderen",
+    "confirmMessage": "Weet u zeker dat u het activiteitstype {{name}} wilt verwijderen?"
+  },
+  "create": "Nieuw activiteitstype",
+  "error": "Er is een fout opgetreden"
+}

@@ -1,0 +1,82 @@
+{
+  "menu": "Geïnteresseerde onderwerpen Management",
+  "description": "Beheer en bewerk geïnteresseerde onderwerpen",
+  "addButton": "Nieuw onderwerp toevoegen",
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "actions": "Acties",
+  "edit": "Bewerken",
+  "deleteButton": "Verwijderen",
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opslaan...",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "advancedFilter": {
+    "columnName": "Onderwerpnaam",
+    "columnDescription": "Beschrijving",
+    "columnCreatedBy": "Gemaakt door"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Nieuw onderwerp toevoegen",
+      "editTitle": "Onderwerp bewerken",
+      "addDescription": "Voer nieuwe onderwerpinformatie in",
+      "editDescription": "Onderwerpinformatie bewerken",
+      "name": "Onderwerpnaam",
+      "namePlaceholder": "Voer de onderwerpnaam in",
+      "nameRequired": "Onderwerpnaam is vereist",
+      "nameMaxLength": "De onderwerpnaam mag maximaal 100 tekens lang zijn",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Beschrijving invoeren (optioneel)",
+      "descriptionMaxLength": "De beschrijving mag maximaal 500 tekens bevatten"
+    },
+    "table": {
+      "title": "Lijst met geïnteresseerde onderwerpen",
+      "id": "Identiteitskaart",
+      "name": "Onderwerpnaam",
+      "description": "Beschrijving",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+      "page": "Pagina {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Totaal onderwerpen",
+      "activeActivityTypes": "Actieve onderwerpen",
+      "newThisMonth": "Nieuw deze maand"
+    },
+    "messages": {
+      "createSuccess": "Onderwerp is succesvol aangemaakt",
+      "createError": "Kan onderwerp niet maken",
+      "updateSuccess": "Onderwerp is succesvol bijgewerkt",
+      "updateError": "Kan het onderwerp niet updaten",
+      "deleteSuccess": "Onderwerp succesvol verwijderd",
+      "deleteError": "Kan het onderwerp niet verwijderen"
+    },
+    "error": "Er is een fout opgetreden",
+    "create": "Nieuw onderwerp toevoegen",
+    "loading": "Laden...",
+    "noData": "Geen gegevens",
+    "actions": "Acties",
+    "cancel": "Annuleer",
+    "save": "Opslaan",
+    "saving": "Opslaan..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Onderwerp verwijderen",
+    "confirmMessage": "Weet u zeker dat u {{name}} wilt verwijderen?"
+  },
+  "messages": {
+    "deleteSuccess": "Onderwerp succesvol verwijderd",
+    "deleteError": "Kan het onderwerp niet verwijderen"
+  },
+  "table": {
+    "title": "Lijst met geïnteresseerde onderwerpen",
+    "id": "Identiteitskaart",
+    "name": "Onderwerpnaam",
+    "description": "Beschrijving",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door"
+  }
+}

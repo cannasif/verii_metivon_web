@@ -1,0 +1,600 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "Chave exclusiva usada pelos protetores de rota e página. Prefira cobra_case estável ou notação de ponto.",
+      "name": "Nome de exibição mostrado aos administradores ao gerenciar permissões.",
+      "description": "Descrição interna opcional para esta permissão.",
+      "isActive": "As permissões inativas são ignoradas quando o acesso do usuário é avaliado.",
+      "save": "As alterações afetam os fluxos de autorização de função e grupo."
+    },
+    "permissionGroup": {
+      "name": "Nome do grupo usado para identificação ao atribuir usuários.",
+      "isSystemAdmin": "Os membros deste grupo podem acessar todas as páginas e ações sem verificações de permissão individuais.",
+      "isActive": "Grupos inativos não devem ser atribuídos para novas decisões de acesso.",
+      "permissions": "As permissões selecionadas definem o que os membros deste grupo podem acessar.",
+      "save": "Atualiza o acesso efetivo para cada usuário atribuído a este grupo."
+    },
+    "userAssignment": {
+      "user": "Selecione o usuário cujo escopo de acesso você deseja gerenciar.",
+      "groups": "O usuário recebe as permissões combinadas de todos os grupos selecionados.",
+      "save": "As atribuições entram em vigor imediatamente nas próximas verificações de autorização. Os usuários podem precisar atualizar sua sessão.",
+      "systemAdminNote": "Se o usuário pertencer a um grupo de administradores de sistema, as permissões detalhadas serão ignoradas."
+    },
+    "visibilityPolicy": {
+      "code": "Use um código exclusivo para que a política possa ser reconhecida nos fluxos de atribuição e auditoria.",
+      "name": "Nome de exibição que os administradores verão ao gerenciar a política.",
+      "includeSelf": "Quando habilitado, os próprios registros do usuário permanecem visíveis neste escopo.",
+      "isActive": "As políticas inativas ficam fora de novas atribuições e decisões de acesso."
+    },
+    "userVisibilityAssignment": {
+      "user": "Selecione o usuário cuja visibilidade da entidade você deseja gerenciar.",
+      "policy": "Escolha uma política de visibilidade ativa por entidade ou deixe-a vazia.",
+      "save": "As alterações no menu suspenso não são aplicadas até que você salve. Salvar e aplicar envia todas as seleções de cartão juntas."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "Definições de permissão",
+    "description": "Gerenciar códigos de permissão usados em todo o sistema",
+    "add": "Adicionar definição",
+    "form": {
+      "editTitle": "Editar definição de permissão",
+      "addTitle": "Adicionar definição de permissão",
+      "editDescription": "Atualizar detalhes da definição de permissão",
+      "addDescription": "Crie uma nova definição de permissão",
+      "code": "Código",
+      "codePlaceholder": "Selecione um código",
+      "affectedRoutes": "Páginas afetadas",
+      "affectedRoutesNone": "Nenhuma rota correspondente encontrada para este código",
+      "name": "Nome",
+      "namePlaceholder": "Nome de exibição",
+      "availableOnWeb": "Disponível na web",
+      "availableOnWebHint": "Essa permissão pode ser usada para menus, páginas e ações no aplicativo web.",
+      "availableOnMobile": "Disponível no celular",
+      "availableOnMobileHint": "Essa permissão pode ser usada para menus, telas e ações no aplicativo móvel.",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Descrição opcional",
+      "isActive": "Ativo",
+      "codeSearchPlaceholder": "Pesquisar...",
+      "codeEmpty": "Nenhum resultado encontrado"
+    },
+    "table": {
+      "title": "Definições de permissão",
+      "code": "Código",
+      "name": "Nome",
+      "platform": "Plataforma",
+      "isActive": "Ativo",
+      "updatedDate": "Atualizado",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "platform": {
+      "web": "Rede",
+      "mobile": "Móvel",
+      "both": "Web + Celular"
+    },
+    "delete": {
+      "confirmTitle": "Excluir definição de permissão",
+      "confirmMessage": "Tem certeza de que deseja excluir \"{{name}}\"? Esta ação não pode ser desfeita."
+    },
+    "syncFromRoutes": "Sincronizar de rotas"
+  },
+  "permissionGroups": {
+    "title": "Grupos de permissão",
+    "description": "Gerenciar grupos de permissões e atribuições",
+    "systemAdminLocked": "O grupo de administradores do sistema não pode ser alterado",
+    "add": "Adicionar grupo",
+    "selectAll": "Selecionar tudo",
+    "noDefinitions": "Nenhuma definição de permissão disponível",
+    "form": {
+      "editTitle": "Editar grupo de permissões",
+      "addTitle": "Adicionar grupo de permissões",
+      "editDescription": "Atualizar detalhes do grupo de permissões",
+      "addDescription": "Crie um novo grupo de permissões",
+      "name": "Nome",
+      "namePlaceholder": "Nome do grupo",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Descrição opcional",
+      "isSystemAdmin": "Administrador do sistema",
+      "isActive": "Ativo",
+      "permissions": "Permissões"
+    },
+    "table": {
+      "title": "Grupos de permissão",
+      "name": "Nome",
+      "isSystemAdmin": "Administrador do sistema",
+      "isActive": "Ativo",
+      "permissionCount": "Permissões",
+      "showing": "{{from}}-{{to}} / {{total}}",
+      "id": "ID do registo"
+    },
+    "managePermissions": "Gerenciar permissões",
+    "permissionsPanel": {
+      "title": "Editar permissões de grupo",
+      "description": "Selecione permissões para este grupo",
+      "currentCodes": "Códigos de permissão atuais",
+      "screen": "Tela/área de permissão",
+      "groupedRows": "áreas de permissão",
+      "actionsMapped": "permissões",
+      "actions": {
+        "create": "Criar",
+        "read": "Leia",
+        "update": "Atualizar",
+        "delete": "Excluir",
+        "other": "Outro"
+      },
+      "previewTitle": "Pré-visualizar permissões do grupo",
+      "previewDescription": "Consulte rapidamente as permissões atribuídas a este grupo."
+    },
+    "delete": {
+      "confirmTitle": "Excluir grupo de permissões",
+      "confirmMessage": "Tem certeza de que deseja excluir \"{{name}}\"? Esta ação não pode ser desfeita."
+    },
+    "search": "Pesquisar...",
+    "builtInLocked": "Grupos integrados não podem ser alterados; crie um grupo personalizado.",
+    "presets": {
+      "systemAdministrators": {
+        "name": "Administradores do sistema",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "masterDataSpecialist": {
+        "name": "Especialista em dados mestres",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "purchasingSpecialist": {
+        "name": "Especialista de compras",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "goodsReceiptOperator": {
+        "name": "Operador de recebimento",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "warehouseOperator": {
+        "name": "Operador de armazém",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "shippingOperator": {
+        "name": "Operador de expedição",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "salesSpecialist": {
+        "name": "Especialista de vendas",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "importCostSpecialist": {
+        "name": "Especialista em importação e custos",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "accountingSpecialist": {
+        "name": "Especialista contábil",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      },
+      "erpAuditor": {
+        "name": "Auditor ERP (Somente leitura)",
+        "description": "Perfil de função ERP predefinido com privilégio mínimo."
+      }
+    },
+    "previewPermissions": "Pré-visualizar permissões atribuídas",
+    "restoreDefaults": {
+      "button": "Criar grupos de permissões predefinidos",
+      "title": "Restaurar grupos de permissões predefinidos",
+      "description": "Os grupos integrados de administrador, receção, armazém, expedição e outros perfis são restaurados com permissões seguras. Os grupos personalizados não são alterados.",
+      "confirm": "Restaurar",
+      "success": "Foram restaurados {{count}} grupos de permissões predefinidos."
+    }
+  },
+  "userGroupAssignments": {
+    "title": "Atribuições de grupos de usuários",
+    "description": "Atribuir grupos de permissão aos usuários",
+    "selectUser": "Selecione o usuário",
+    "selectUserPlaceholder": "Pesquise e selecione um usuário...",
+    "selectUserHint": "Selecione um usuário para gerenciar suas atribuições de grupo de permissões",
+    "assignedGroups": "Grupos de permissão atribuídos",
+    "noUsers": "Nenhum usuário encontrado",
+    "noGroups": "Nenhum grupo de permissão disponível",
+    "selectAll": "Selecionar tudo"
+  },
+  "visibilityPolicies": {
+    "title": "Políticas de visibilidade",
+    "description": "Gerenciar conjuntos de políticas que definem quem pode ver quais registros",
+    "add": "Adicionar política",
+    "search": "Políticas de pesquisa...",
+    "table": {
+      "title": "Lista de políticas de visibilidade",
+      "code": "Código",
+      "name": "Nome",
+      "entityType": "Entidade",
+      "scopeType": "Escopo",
+      "includeSelf": "Incluir a si mesmo",
+      "isActive": "Ativo",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "stats": {
+      "total": "Políticas totais",
+      "active": "Políticas ativas",
+      "entities": "Tipos de entidade"
+    },
+    "form": {
+      "addTitle": "Adicionar política de visibilidade",
+      "editTitle": "Editar política de visibilidade",
+      "addDescription": "Crie uma nova definição de política de visibilidade",
+      "editDescription": "Atualizar as configurações da política de visibilidade selecionada",
+      "code": "Código",
+      "codePlaceholder": "ERP_GOODS_RECEIPT_BRANCH",
+      "name": "Nome",
+      "namePlaceholder": "Receção de mercadorias — Mesma filial",
+      "entityType": "Entidade",
+      "entityTypePlaceholder": "Selecione a entidade",
+      "scopeType": "Escopo",
+      "scopeTypePlaceholder": "Selecione o escopo",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Breve descrição opcional",
+      "includeSelf": "Incluir os próprios registros do usuário",
+      "isActive": "Ativo",
+      "summaryTitle": "Resumo da política",
+      "summary": "O escopo {{scope}} será aplicado aos registros {{entity}}."
+    },
+    "scope": {
+      "self": "Somente eu",
+      "managerHierarchy": "Hierarquia do gerente",
+      "permissionGroup": "Grupo de permissão",
+      "company": "Em toda a empresa",
+      "branch": "Mesma filial",
+      "warehouse": "Âmbito do armazém"
+    },
+    "entity": {
+      "businessPartner": "Parceiro de negócios",
+      "product": "Stock / produto",
+      "warehouse": "Armazém e localização",
+      "inventory": "Movimentos de stock",
+      "goodsReceipt": "Receção de mercadorias",
+      "transferOrder": "Transferência entre armazéns",
+      "shipment": "Expedição e guia de remessa",
+      "purchaseOrder": "Ordem de compra",
+      "salesOrder": "Ordem de venda",
+      "importDossier": "Dossiê de importação",
+      "electronicDocument": "Documento eletrónico",
+      "accounting": "Contabilidade"
+    }
+  },
+  "userVisibilityAssignments": {
+    "title": "Atribuições de visibilidade do usuário",
+    "description": "Gerenciar atribuições de política de visibilidade de entidade por usuário",
+    "selectUser": "Selecione o usuário",
+    "selectedUser": "Usuário selecionado",
+    "selectUserPlaceholder": "Pesquise e selecione um usuário...",
+    "selectUserHint": "Selecione um usuário para gerenciar atribuições de visibilidade",
+    "assignedPolicies": "Políticas atribuídas",
+    "status": "Estado",
+    "ready": "Atualizado",
+    "unsavedChanges": "Não salvo",
+    "unsavedChangesCount": "Módulo(s) {{count}} aguardando para serem salvos",
+    "upToDate": "Atualizado",
+    "pendingChange": "Salvamento pendente",
+    "unsavedCardHint": "Sua seleção ainda não foi salva. Pressione Salvar para aplicar.",
+    "saveEntity": "Salvar",
+    "revert": "Cancelar",
+    "moduleSectionTitle": "Visibilidade do módulo",
+    "moduleSectionDescription": "Selecione uma política para cada módulo e salve no cartão.",
+    "unassigned": "Não atribuído",
+    "cardDescription": "Escolha a política de visibilidade que será aplicada aos registros {{entity}} deste usuário.",
+    "selectPolicyPlaceholder": "Selecione a política",
+    "noPolicy": "Nenhuma política",
+    "noPolicyCompanyHint": "Quando Nenhuma política for selecionada, o usuário poderá ver todos os registros da empresa/fábrica neste módulo."
+  },
+  "visibilitySimulator": {
+    "title": "Simulador de visibilidade",
+    "description": "Teste quais registros de usuários e registros de substituição de aprovação ativos estão visíveis para o usuário selecionado para o tipo de entidade selecionado.",
+    "selectUser": "Usuário",
+    "helpUser": "Selecione o usuário cuja visibilidade você deseja simular.",
+    "selectUserPlaceholder": "Selecione um usuário...",
+    "selectEntity": "Entidade",
+    "helpEntity": "Selecione o módulo para o qual deseja simular a visibilidade do registro.",
+    "selectEntityPlaceholder": "Selecione a entidade",
+    "recordId": "ID do registro",
+    "recordIdPlaceholder": "por exemplo 125",
+    "helpRecordId": "Insira um ID de registro específico para simular se ações de visualização, atualização, exclusão e aprovação são permitidas.",
+    "selectedUser": "Usuário selecionado",
+    "entity": "Entidade",
+    "visibleUsers": "Usuários visíveis",
+    "approvalOverrides": "Registros de substituição de aprovação",
+    "visibleUsersTitle": "Usuários dentro do escopo",
+    "policyDefined": "Política definida",
+    "noPolicy": "Nenhuma política",
+    "companyWide": "Acesso em toda a empresa",
+    "policyActive": "Uma política de visibilidade ativa é aplicada",
+    "includeSelf": "inclui a si mesmo",
+    "awaitingSelection": "Selecione um usuário e uma entidade primeiro",
+    "overrideTitle": "Registros de substituição de aprovação ativa",
+    "noOverrides": "Nenhum registro de substituição de aprovação ativo encontrado",
+    "overrideRecord": "Registro #{{id}}",
+    "auditTitle": "Auditoria de substituição de aprovação",
+    "noAudit": "Nenhuma entrada de auditoria de substituição de aprovação ativa encontrada",
+    "auditActionId": "Ação de aprovação",
+    "auditRequestId": "Solicitação de aprovação",
+    "auditFlow": "Fluxo",
+    "auditApprover": "Aprovador",
+    "auditStepValue": "Etapa {{step}} / atual {{currentStep}}",
+    "actionPanelTitle": "Simulação de ação em nível de registro",
+    "noRecordSimulation": "Quando você insere um ID de registro, o resultado de visualizar/atualizar/excluir/aprovar aparecerá aqui.",
+    "actionAllowed": "Permitido",
+    "actionDenied": "Negado",
+    "action": {
+      "view": "Ver",
+      "update": "Atualizar",
+      "delete": "Excluir",
+      "approve": "Aprovar"
+    },
+    "visibleUsersShowing": "{{from}}-{{to}} de usuários {{total}}",
+    "visibleUsersPage": "Página {{page}} / {{totalPages}}",
+    "noVisibleUsers": "Nenhum usuário no escopo"
+  },
+  "auditLogs": {
+    "title": "Registros de auditoria",
+    "description": "Acompanhe quem executou ações críticas, sob quais rastros e como elas terminaram.",
+    "search": "Pesquisar registros de auditoria...",
+    "results": {
+      "success": "Sucesso",
+      "succeeded": "Sucesso",
+      "warning": "Aviso",
+      "partial": "Parcial",
+      "error": "Erro",
+      "failed": "Falha"
+    },
+    "filters": {
+      "result": "Resultado",
+      "actionType": "Ação",
+      "entityType": "Entidade",
+      "entityId": "ID do registro",
+      "performedByUserEmail": "Realizado por",
+      "source": "Fonte",
+      "branchCode": "Filial",
+      "requestPath": "Caminho da solicitação",
+      "requestMethod": "Método",
+      "createdDate": "Data"
+    },
+    "clearTraceFilter": "Limpar filtro de rastreamento",
+    "viewDetail": "Detalhe",
+    "filterTrace": "Filtrar rastreamento",
+    "loadError": "Não foi possível carregar os registros de auditoria",
+    "stats": {
+      "total": "Registros totais",
+      "errors": "Resultados falhados",
+      "traces": "Rastreamentos ativos"
+    },
+    "table": {
+      "title": "Lista de registros de auditoria",
+      "createdDate": "Data",
+      "traceId": "ID de rastreamento",
+      "actionType": "Ação",
+      "entityType": "Entidade",
+      "entityId": "ID do registro",
+      "result": "Resultado",
+      "source": "Fonte",
+      "performedBy": "Realizado por",
+      "branchCode": "Filial",
+      "requestPath": "Caminho da solicitação",
+      "requestMethod": "Método",
+      "showing": "{{from}}-{{to}} / {{total}}"
+    },
+    "detail": {
+      "title": "Detalhe do registro de auditoria",
+      "description": "Inspecione o contexto da solicitação e altere o resumo do registro selecionado.",
+      "contextTitle": "Contexto de ação",
+      "requestTitle": "Solicitar resumo",
+      "reason": "Razão",
+      "failureReason": "Detalhe da falha",
+      "changedFieldsTitle": "Campos alterados",
+      "noChangedFields": "Nenhum campo de comparação está disponível para este registro.",
+      "oldValuesTitle": "Valores antigos",
+      "newValuesTitle": "Novos valores"
+    },
+    "traceDrillDown": {
+      "traceId": "Rastreamento selecionado",
+      "startedAt": "Começou em",
+      "completedAt": "Concluído em",
+      "entities": "Entidades tocadas",
+      "timelineTitle": "Resumo do fluxo de rastreamento",
+      "openTrace": "Abra este rastreamento"
+    }
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "saving": "Salvando...",
+    "save": "Salvar e aplicar",
+    "loading": "Carregando...",
+    "search": "Pesquisar...",
+    "noData": "Sem dados",
+    "actions": "Ações",
+    "yes": "Sim",
+    "no": "Não",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "processing": "Processando..."
+  },
+  "sidebar": {
+    "accessControl": "Controle de acesso",
+    "permissionDefinitions": "Definições de permissão",
+    "permissionGroups": "Grupos de permissão",
+    "userGroupAssignments": "Atribuições de grupos de usuários",
+    "visibilityPolicies": "Políticas de visibilidade",
+    "userVisibilityAssignments": "Atribuições de visibilidade do usuário",
+    "auditLogs": "Registros de auditoria",
+    "visibilitySimulator": "Simulador de Visibilidade",
+    "accessControlGuide": "Guia de controle de acesso"
+  },
+  "guide": {
+    "title": "Guia de controle de acesso",
+    "description": "Este guia explica o que cada tela de controle de acesso faz e o que cada configuração altera. O objetivo é tornar o sistema compreensível mesmo para quem está vendo o modelo pela primeira vez.",
+    "hero": {
+      "coreLogicLabel": "Lógica Central",
+      "coreLogicValue": "As permissões permitem, limites de visibilidade.",
+      "finalCheckLabel": "Verificação Final",
+      "finalCheckValue": "Valide no simulador."
+    },
+    "quickRulesTitle": "Cinco regras básicas",
+    "screensTitle": "O que cada tela faz?",
+    "scenariosTitle": "Exemplos baseados em cenários",
+    "expectedResultLabel": "Resultado Esperado",
+    "mistakesTitle": "Erros Comuns",
+    "checklistTitle": "Ordem de configuração recomendada",
+    "faqTitle": "Perguntas frequentes",
+    "footer": {
+      "title": "Regra de decisão curta",
+      "body": "Se um usuário não puder executar uma ação, comece com Grupos de permissões. Se um usuário vir muitos ou poucos registros, comece com Visibilidade. Verifique sempre a decisão final no Simulador de Visibilidade."
+    },
+    "quickRules": [
+      "A permissão da página é uma questão separada, a visibilidade do registro é uma questão separada. Um usuário pode entrar na página, mas não conseguir ver todos os registros.",
+      "A tela do grupo de permissões determina qual página o usuário pode abrir e qual ação ele pode realizar.",
+      "A tela da política de visibilidade determina quais registros o usuário vê naquela página.",
+      "As atribuições de grupos de usuários atribuem grupos. As atribuições de visibilidade do usuário definem exceções de visibilidade baseadas no usuário.",
+      "Dar regras a uma criatura sem ler o resultado do simulador de visibilidade é arriscado; Não deixe de conferir o resultado no simulador."
+    ],
+    "pageCards": [
+      {
+        "id": "grupos de permissão",
+        "title": "grupos de permissão",
+        "summary": "Esta tela determina quais módulos o usuário pode ver e quais ações ele pode realizar.",
+        "bullets": [
+          "Se quiser que ele abra a tela de cotações, você deve conceder permissão de exibição como `receiving.goods-receipts.view`.",
+          "Se você deseja criar uma nova cotação, deve haver permissão `receiving.goods-receipts.create` no mesmo grupo.",
+          "Se quiser atualizá-lo, você precisa de `receiving.goods-receipts.update`, se quiser excluí-lo, você precisa de `receiving.goods-receipts.delete`.",
+          "As permissões aqui abrem a página e a porta de ação; Ele não determina sozinho quais registros verá."
+        ]
+      },
+      {
+        "id": "userGroupAssignments",
+        "title": "Atribuições de grupos de usuários",
+        "summary": "Esta tela é usada para vincular um ou mais grupos de permissão a um usuário.",
+        "bullets": [
+          "O usuário é selecionado, então os grupos que o usuário terá são selecionados.",
+          "Se o usuário estiver em mais de um grupo, as permissões serão mescladas; Em outras palavras, a autoridade de um grupo também apoia o outro grupo.",
+          "Se você fornecer a um usuário o grupo errado, poderá abrir o acesso a páginas que nunca definiu.",
+          "Esta tela é mais comumente usada para distribuição de funções: representante de vendas, administrador, operações, administrador de sistema, etc."
+        ]
+      },
+      {
+        "id": "políticas de visibilidade",
+        "title": "Políticas de visibilidade",
+        "summary": "Esta tela define por regras quem verá registros como ofertas, atividades, solicitações e pedidos.",
+        "bullets": [
+          "Mesmo que o usuário entre na página, se não houver regras para a entidade relevante, ele verá apenas quantos registros a lógica da política permitir.",
+          "A seleção do escopo aqui altera o comportamento do sistema: apenas os seus próprios registros, a equipe à qual está afiliado, a empresa em geral, etc.",
+          "A mesma tela permite definir diferentes modelos de visibilidade para diferentes ativos como ofertas e atividades.",
+          "Se uma política estiver ativa, mas definida para a entidade errada, o efeito esperado nunca ocorrerá."
+        ]
+      },
+      {
+        "id": "userVisibilityAssignments",
+        "title": "Atribuições de visibilidade do usuário",
+        "summary": "Esta tela é usada para conceder exceções de visibilidade baseadas no usuário.",
+        "bullets": [
+          "Se a regra padrão não for suficiente, você poderá vincular uma política de visibilidade baseada em entidade diferente a um usuário específico.",
+          "Essa estrutura é ideal para dar visibilidade diferenciada para um único administrador ou usuário especial sem quebrar a regra geral.",
+          "Se você deseja definir a exceção e não a regra que afeta toda a empresa, você deve trabalhar aqui.",
+          "Esta tela não concede autorização de grupo; Isso apenas altera a visibilidade do registro."
+        ]
+      },
+      {
+        "id": "visibilidadeSimulador",
+        "title": "simulador de visibilidade",
+        "summary": "Esta tela testa o que o sistema realmente exibirá quando um usuário, uma entidade e um registro forem selecionados.",
+        "bullets": [
+          "Se você escreveu uma regra, mas não tem certeza sobre o resultado, você pode selecionar o usuário e o tipo de entidade aqui e ler os usuários visíveis.",
+          "Se você digitar o valor do ID de um registro específico, o resultado será calculado para esse registro.",
+          "Se houver substituições de aprovação ou registros de auditoria, o simulador também mostrará isso.",
+          "Esta tela é a resposta mais segura para a questão de saber se o resultado está correto antes de ir ao ar."
+        ]
+      },
+      {
+        "id": "permissãoDefinições",
+        "title": "Definições de permissão",
+        "summary": "Esta tela não é mais uma necessidade operacional, mas sim uma referência para entender a lógica do catálogo do sistema.",
+        "bullets": [
+          "Os códigos de permissão agora são gerenciados com lógica de sincronização automática.",
+          "No final das contas, o principal espaço de trabalho do administrador são grupos de permissão e telas de atribuição.",
+          "Quando chega uma nova rota ou novo catálogo de licenças, o sistema é configurado para catalogá-lo automaticamente."
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "s1",
+        "title": "Cenário 1: o representante de vendas vê apenas suas próprias cotações",
+        "target": "Deixe-o entrar na tela de ofertas, abrir uma nova oferta, mas não ver as ofertas de outras pessoas.",
+        "steps": [
+          "Na tela de grupos de permissão, adicione `receiving.goods-receipts.view` e `receiving.goods-receipts.create` se necessário ao grupo que você usará.",
+          "Atribua este grupo ao representante de vendas relevante na tela de atribuições de grupos de usuários.",
+          "Na tela Políticas de visibilidade, defina uma política para que a entidade Cotação mostre apenas seus próprios registros.",
+          "Se necessário, vincule esta política ao usuário na tela de atribuições de visibilidade do usuário."
+        ],
+        "result": "O usuário abre a página de ofertas e pode criar uma nova oferta, mas só vê na lista as ofertas que se enquadram em seu escopo de autoridade."
+      },
+      {
+        "id": "s2",
+        "title": "Cenário 2: Deixe o gerente de vendas ver as atividades de sua equipe",
+        "target": "O gerente acompanha a atividade da equipe, mas não vê todos os dados da empresa.",
+        "steps": [
+          "Na tela de grupos de permissão, adicione a permissão `warehouses.warehouse-management.view` ao grupo de administradores relevante.",
+          "Se for atualizar a atividade, adicione também a permissão `warehouses.warehouse-management.update`.",
+          "Na tela Políticas de visibilidade, habilite a política que define o escopo vinculado à equipe para a entidade Atividade.",
+          "Vincule esta política diretamente ao usuário administrador ou aos usuários do grupo de administradores apropriado."
+        ],
+        "result": "O gestor entra na tela de atividades e vê apenas as atividades relacionadas à sua equipe; As atividades de usuários irrelevantes não são listadas."
+      },
+      {
+        "id": "s3",
+        "title": "Cenário 3: o usuário só pode rastrear pedidos, não criá-los",
+        "target": "Deverá entrar na tela de pedidos, mas não poderá abrir um novo pedido.",
+        "steps": [
+          "Conceda permissão `sales.orders.view` na tela de grupos de permissão.",
+          "Não conceda permissão `sales.orders.create` ao mesmo grupo.",
+          "Atribua este grupo ao usuário na tela de atribuições de grupos de usuários."
+        ],
+        "result": "O usuário pode abrir a lista de pedidos. No entanto, o botão de novo pedido ou criação de fluxo não pode ser usado porque não há permissões."
+      },
+      {
+        "id": "s4",
+        "title": "Cenário 4: Uma oferta no processo de aprovação fica visível para fins de auditoria",
+        "target": "Deve ser capaz de explicar por que um registro fora da visibilidade normal aparece com efeito de aprovação.",
+        "steps": [
+          "Primeiramente, na tela do simulador de visibilidade, selecione o usuário, Cotação como entidade e o ID do registro correspondente.",
+          "Visualize e veja o resultado da auditoria.",
+          "Se houver uma substituição de aprovação, você a verá na área de auditoria."
+        ],
+        "result": "Assim, a resposta à questão de por que o registro aparece não é lida por adivinhação, mas pelos dados de auditoria do sistema."
+      }
+    ],
+    "mistakes": [
+      "Definir apenas uma regra de visibilidade e não conceder permissão de página. Resultado: o usuário não consegue entrar na página.",
+      "Apenas concedendo permissão à página e não pensando na regra de visibilidade. Resultado: mais registros do que o esperado poderão ser vistos.",
+      "Atribuir mais de um grupo ao usuário e não levar em consideração o efeito da permissão combinada.",
+      "Publicar política para dados ativos sem testá-los no simulador.",
+      "Misturando tipos de entidade de cotação, atividade, solicitação e pedido."
+    ],
+    "checklist": [
+      "Primeiro, esclareça em qual página o usuário deve entrar.",
+      "Em seguida, escolha quais ações você precisa realizar nessa página.",
+      "Em seguida, limite a visibilidade dos registros que você vê para essa entidade.",
+      "Se necessário, conceda uma exceção baseada no usuário com atribuições de visibilidade do usuário.",
+      "Teste o resultado com o mais recente simulador de visibilidade."
+    ],
+    "faqs": [
+      {
+        "id": "perguntas frequentes1",
+        "question": "Um usuário pode entrar na página de ofertas, mas não consegue ver nenhum registro. De onde?",
+        "answer": "Há permissão de página, mas a regra de visibilidade restringe os registros. A folga pode estar correta, a visibilidade pode estar ausente ou muito estreita."
+      },
+      {
+        "id": "perguntas frequentes2",
+        "question": "Um usuário não pode adicionar nenhuma oferta. De onde?",
+        "answer": "Geralmente a permissão `receiving.goods-receipts.create` está faltando. Abre a tela de permissão de visualização; A permissão de criação dá autoridade para abrir um novo registro."
+      },
+      {
+        "id": "perguntas frequentes3",
+        "question": "Um usuário vê muitos registros. Por onde devo começar?",
+        "answer": "Primeiro verifique a quais grupos de permissão você está conectado. Em seguida, revise a política de visibilidade específica da entidade e os registros de atribuição de visibilidade do usuário. Por fim, teste o mesmo usuário no simulador."
+      }
+    ]
+  }
+}

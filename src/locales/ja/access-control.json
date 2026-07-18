@@ -1,0 +1,146 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "ルートおよびページ ガードによって使用される一意のキー。安定したsnake_caseまたはドットの命名を推奨します。",
+      "name": "権限を管理するときに管理者に表示される表示名。",
+      "description": "この権限に関する内部説明 (オプション)。",
+      "isActive": "非アクティブな権限は、ユーザー アクセスの計算時に考慮されません。",
+      "save": "変更は、役割とグループの承認フローに影響します。"
+    },
+    "permissionGroup": {
+      "name": "ユーザーに割り当てる際に識別するためのグループ名。",
+      "isSystemAdmin": "このグループのメンバーは、個別の権限チェックを行わずに、すべてのページとアクションにアクセスできます。",
+      "isActive": "非アクティブなグループを新しいアクセス決定に割り当てるべきではありません。",
+      "permissions": "選択した権限により、このグループのメンバーがアクセスできる内容が定義されます。",
+      "save": "このグループに割り当てられているすべてのユーザーの実効アクセス権を更新します。"
+    },
+    "userAssignment": {
+      "user": "アクセス範囲を管理するユーザーを選択します。",
+      "groups": "ユーザーは、選択したすべてのグループから結合された権限を受け取ります。",
+      "save": "割り当ては、次回の認可チェックに直ちに適用されます。ユーザーはセッションを更新する必要がある場合があります。",
+      "systemAdminNote": "ユーザーが system-admin グループを持っている場合、詳細な権限はバイパスされます。"
+    }
+  },
+  "permissionDefinitions": {
+    "title": "権限の定義",
+    "description": "システムで使用する許可コードを管理する",
+    "add": "定義の追加",
+    "form": {
+      "editTitle": "権限定義の編集",
+      "addTitle": "権限定義の追加",
+      "editDescription": "権限定義の詳細を更新する",
+      "addDescription": "新しい権限定義を作成する",
+      "code": "コード",
+      "codePlaceholder": "コードを選択してください",
+      "affectedRoutes": "影響を受けるページ",
+      "affectedRoutesNone": "このコードに一致するルートは見つかりませんでした",
+      "name": "名前",
+      "namePlaceholder": "表示名",
+      "description": "説明",
+      "descriptionPlaceholder": "オプションの説明",
+      "isActive": "アクティブ",
+      "codeSearchPlaceholder": "検索...",
+      "codeEmpty": "結果が見つかりませんでした"
+    },
+    "table": {
+      "title": "権限の定義",
+      "code": "コード",
+      "name": "名前",
+      "isActive": "アクティブ",
+      "updatedDate": "更新されました",
+      "showing": "{{from}} ～ {{to}}/{{total}}"
+    },
+    "delete": {
+      "confirmTitle": "権限定義の削除",
+      "confirmMessage": "「{{name}}」を削除してもよろしいですか?この操作は元に戻すことができません。"
+    },
+    "syncFromRoutes": "ルートから同期する",
+    "syncSummaryTitle": "ルート同期"
+  },
+  "permissionGroups": {
+    "title": "権限グループ",
+    "description": "権限グループとその割り当てを管理する",
+    "add": "グループの追加",
+    "selectAll": "すべて選択",
+    "noDefinitions": "使用可能な権限定義がありません",
+    "form": {
+      "editTitle": "権限グループの編集",
+      "addTitle": "権限グループの追加",
+      "editDescription": "権限グループの詳細を更新する",
+      "addDescription": "新しい権限グループを作成する",
+      "name": "名前",
+      "namePlaceholder": "グループ名",
+      "description": "説明",
+      "descriptionPlaceholder": "オプションの説明",
+      "isSystemAdmin": "システム管理者",
+      "isActive": "アクティブ",
+      "permissions": "権限"
+    },
+    "table": {
+      "name": "名前",
+      "isSystemAdmin": "システム管理者",
+      "isActive": "アクティブ",
+      "permissionCount": "権限",
+      "showing": "{{from}} ～ {{to}}/{{total}}",
+      "title": "イジン・グルプラリ"
+    },
+    "managePermissions": "権限の管理",
+    "permissionsPanel": {
+      "title": "グループ権限の編集",
+      "description": "このグループの権限を選択してください",
+      "currentCodes": "現在の許可コード",
+      "groupedRows": "画面",
+      "screen": "画面",
+      "actionsMapped": "アクション",
+      "actions": {
+        "create": "作成",
+        "read": "読む",
+        "update": "アップデート",
+        "delete": "削除",
+        "other": "操作権限"
+      }
+    },
+    "delete": {
+      "confirmTitle": "権限グループの削除",
+      "confirmMessage": "「{{name}}」を削除してもよろしいですか?この操作は元に戻すことができません。"
+    },
+    "search": "検索...",
+    "systemAdminLocked": "システム管理者グループは変更できません"
+  },
+  "userGroupAssignments": {
+    "title": "ユーザーグループの割り当て",
+    "description": "ユーザーに権限グループを割り当てる",
+    "selectUser": "ユーザーの選択",
+    "selectUserPlaceholder": "ユーザーを検索して選択します...",
+    "selectUserHint": "権限グループの割り当てを管理するユーザーを選択してください",
+    "assignedGroups": "割り当てられた権限グループ",
+    "noUsers": "ユーザーが見つかりませんでした",
+    "noGroups": "使用可能な権限グループがありません",
+    "selectAll": "すべて選択",
+    "status": "ステータス",
+    "unsavedChanges": "未保存",
+    "upToDate": "最新の状態"
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "saving": "保存中...",
+    "save": "保存して適用",
+    "loading": "読み込み中...",
+    "search": "検索...",
+    "noData": "データなし",
+    "actions": "アクション",
+    "yes": "はい",
+    "no": "いいえ",
+    "edit": "編集",
+    "delete": "削除",
+    "previous": "前へ",
+    "next": "次へ",
+    "processing": "処理中..."
+  },
+  "sidebar": {
+    "accessControl": "アクセス制御",
+    "permissionDefinitions": "権限の定義",
+    "permissionGroups": "権限グループ",
+    "userGroupAssignments": "ユーザーグループの割り当て"
+  }
+}

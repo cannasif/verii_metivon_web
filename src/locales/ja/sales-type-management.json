@@ -1,0 +1,35 @@
+{
+  "menu": "販売形態管理",
+  "description": "販売タイプの管理と編集",
+  "addButton": "新しい販売タイプを追加",
+  "searchPlaceholder": "販売タイプを検索...",
+  "advancedFilter": {
+    "columnName": "名前",
+    "columnCode": "コード",
+    "columnSalesType": "オファーの種類"
+  },
+  "table": {
+    "title": "販売種類一覧",
+    "salesType": "オファーの種類",
+    "name": "名前",
+    "code": "コード",
+    "createdDate": "作成日"
+  },
+  "form": {
+    "addTitle": "新しい販売タイプを追加",
+    "editTitle": "販売タイプの編集",
+    "addDescription": "新しい販売タイプ定義を作成します。",
+    "editDescription": "既存の販売タイプ定義を更新します。",
+    "salesType": "オファーの種類",
+    "name": "名前",
+    "namePlaceholder": "販売タイプ名を入力してください",
+    "code": "コード",
+    "codePlaceholder": "例： 1またはFOB",
+    "codeHelp": "オプションです。注文が Netsis に転送されると、輸出/配送タイプ コード (存在する場合) として送信されます。空の場合、デフォルトの FOB が海外に使用されます。",
+    "validation": {
+      "required": "名前は必須です",
+      "whitespace": "名前を空にしたりスペースだけにしたりすることはできません",
+      "codeMaxLength": "コードは最大 50 文字まで可能です"
+    }
+  }
+}

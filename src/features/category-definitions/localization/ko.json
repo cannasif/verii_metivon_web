@@ -1,0 +1,511 @@
+{
+  "categoryDefinitions": {
+    "title": "카테고리 정의",
+    "description": "여기에서 B2B 및 B2C 카탈로그에 대한 카테고리 트리 및 카테고리 관련 재고 관리를 시작할 수 있습니다.",
+    "guidedTitle": "3단계로 카테고리 구조 관리",
+    "hierarchyBlueprintTitle": "권장 기업 카테고리 설정",
+    "hierarchyBlueprintDescription": "고정된 로직으로 카테고리 트리를 구축하면 사용자가 이해하기 쉽고, 상품 매칭이 더욱 원활하게 진행됩니다.",
+    "hierarchyExampleLabel": "샘플 흐름",
+    "hierarchyExampleValue": "휴대폰 > 푸시 버튼 휴대폰 > iPhone > 17 시리즈 > 제품 목록",
+    "easyModeTitle": "여기서 무엇을 해야할지 생각할 필요가 없습니다",
+    "summaryGuideTitle": "난 너에게 올바른 다음 단계를 보여주고 있어",
+    "createCatalogTitle": "새 카탈로그 만들기",
+    "createCatalogDescription": "B2B, B2C 또는 사용자 정의 흐름에 대한 새 카탈로그 정의를 추가합니다.",
+    "editCatalogTitle": "카탈로그 편집",
+    "editCatalogDescription": "선택한 카탈로그의 이름, 유형 및 정렬을 업데이트합니다.",
+    "createCategoryTitle": "카테고리 추가",
+    "createCategoryDescription": "{{target}} 아래에 새 카테고리를 만듭니다.",
+    "editCategoryTitle": "카테고리 수정",
+    "editCategoryDescription": "{{target}}에 대한 카테고리 정보를 업데이트합니다.",
+    "createCategoryTarget": "연결할 수 있는 수준",
+    "deleteCatalogConfirm": "{{name}} 카탈로그를 삭제하시겠습니까?",
+    "deleteCategoryConfirm": "{{name}} 카테고리를 삭제하시겠습니까?",
+    "deleteStockConfirm": "이 주식 링크를 제거하시겠습니까?",
+    "createRuleTitle": "규칙 추가",
+    "createRuleDescription": "{{category}} 카테고리에 대한 자동 연결 규칙을 생성합니다.",
+    "editRuleTitle": "규칙 수정",
+    "editRuleDescription": "카테고리 {{category}}에 대한 규칙 정보를 업데이트합니다.",
+    "deleteRuleConfirm": "{{name}} 규칙을 삭제하시겠습니까?",
+    "noRules": "이 카테고리에 대해 아직 정의된 규칙이 없습니다.",
+    "rulePriority": "우선순위 {{priority}}",
+    "catalogsTitle": "카탈로그",
+    "catalogsDescription": "먼저 작업할 카탈로그를 선택하세요.",
+    "catalogDescriptionFallback": "이 카탈로그에 대한 설명이 아직 입력되지 않았습니다.",
+    "catalogHelperText": "즉, 왼쪽에서 카탈로그를 선택하고, 가운데 카테고리로 이동하고, 오른쪽에서 재고 및 규칙을 관리하세요.",
+    "treeTitle": "카테고리 트리",
+    "treeDescription": "Fashionol 및 Hepsiburada와 유사하게 카테고리에서 하위 카테고리로 진행됩니다.",
+    "treeReorderHint": "동일한 수준의 카테고리를 드래그 앤 드롭하여 정렬할 수 있습니다.",
+    "chooseCatalogFirst": "먼저 왼쪽에서 카탈로그를 선택하세요. 카탈로그를 선택하지 않으면 카테고리 관리가 시작되지 않습니다.",
+    "stocksTitle": "카테고리 주식",
+    "stocksDescription": "리프 카테고리를 선택하면 해당 카테고리에 연결된 주식이 나열됩니다.",
+    "stocksDescriptionSelected": "{{category}} 카테고리와 관련된 주식",
+    "stocksGuideTitle": "이 필드의 역할은 무엇입니까?",
+    "stocksGuideDescription": "여기서는 귀하가 선택한 카테고리에 어떤 제품이 포함될지 결정합니다. 원하는 경우 주식을 하나씩 연결할 수 있습니다.",
+    "stocksHelperText": "쉬운 논리: 먼저 카테고리를 선택한 다음 '주식 연결' 버튼을 누르고 드롭다운 목록에서 제품을 선택하세요.",
+    "favoritesGuideTitle": "즐겨찾기는 무엇을 하나요?",
+    "favoritesGuideDescription": "사용자 기반의 빠른 접속 목록에서 선택한 카테고리의 마음에 드는 주식을 보여줍니다. 주식 즐겨찾기는 카테고리 즐겨찾기와 혼합되지 않습니다.",
+    "favoritesHelperText": "{{count}}는 이 카테고리에서 가장 좋아하는 주식입니다. 하트 아이콘을 다시 누르면 즐겨찾기에서 제거할 수 있습니다.",
+    "rulesGuideTitle": "규칙 화면의 기능은 무엇인가요?",
+    "rulesGuideDescription": "동일한 유형의 제품을 하나씩 연결하고 싶지 않은 경우 여기에서 규칙을 정의할 수 있습니다. 예를 들어 Code1 = CAM이면 이 범주에 속해야 한다고 말할 수 있습니다.",
+    "rulesHelperText": "먼저 규칙을 추가하세요. 그런 다음 '미리보기 규칙'에 어떤 일이 발생하는지 확인하세요. true인 경우 '규칙 적용'으로 자동 연결됩니다.",
+    "selectionTitle": "선거 상황",
+    "selectionDescription": "선택한 카탈로그와 카테고리, 링크된 종목을 오른쪽 패널에서 한 눈에 볼 수 있습니다.",
+    "selectionCatalog": "카탈로그",
+    "selectionCategory": "선택한 카테고리",
+    "selectionCurrentLevel": "현재 레벨",
+    "selectionPath": "도로",
+    "selectionTotalStocks": "묶여 있는 주식",
+    "selectionValueEmpty": "아직 선택되지 않음",
+    "nextStepTitle": "권장되는 다음 단계",
+    "nextStepChooseCatalog": "먼저 왼쪽 패널에서 카탈로그를 선택합니다.",
+    "nextStepBrowseTree": "중간 패널의 기본 카테고리부터 시작하여 하위 분류로 이동합니다.",
+    "nextStepSelectLeaf": "주식 목록을 보려면 극단적인 카테고리를 선택하세요.",
+    "nextStepReviewStocks": "선택한 카테고리에 연결된 주식을 확인하고 정확하게 일치하는지 확인하세요.",
+    "stepCatalogTitle": "카탈로그 선택",
+    "stepCatalogDescription": "B2B, B2C 또는 특수 카탈로그에서 작업할지 여부를 결정하십시오.",
+    "stepTreeTitle": "나무 위로 이동",
+    "stepTreeDescription": "기본 카테고리, 하위 카테고리, 하위 분류를 클릭하세요.",
+    "stepStocksTitle": "주식 확인",
+    "stepStocksDescription": "최종 카테고리를 선택하면 오른쪽 패널에서 연결된 주식 및 ERP 코드 분석을 확인하세요.",
+    "ready": "준비",
+    "pending": "기다리는 중",
+    "openBranchAction": "하위 카테고리 열기",
+    "selectLeafAction": "이 카테고리를 선택하세요",
+    "root": "뿌리",
+    "leaf": "파리",
+    "branch": "가지",
+    "treeLevelLabel": "레벨 {{level}}",
+    "noCatalogs": "아직 정의된 카탈로그가 없습니다.",
+    "noCategories": "이 수준에는 카테고리가 없습니다.",
+    "noStocks": "해당 카테고리와 관련된 재고가 없습니다.",
+    "noFavorites": "이 카테고리에는 아직 선호하는 주식이 없습니다.",
+    "selectLeafHint": "주식을 보려면 극단적인 카테고리를 선택하세요.",
+    "stockSearchPlaceholder": "주식 코드 또는 주식 이름으로 검색...",
+    "favoriteSearchPlaceholder": "주식 코드나 이름으로 즐겨찾기를 검색하세요...",
+    "primaryBadge": "주요 카테고리",
+    "tabs": {
+      "summary": "도움말",
+      "stocks": "재고 추가",
+      "favorites": "즐겨찾기",
+      "rules": "규칙 추가",
+      "tips": "사용법"
+    },
+    "catalogTypes": {
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "dealer": "딜러",
+      "custom": "비공개"
+    },
+    "tips": {
+      "catalogTitle": "1. 먼저 올바른 카탈로그를 선택하십시오",
+      "catalogDescription": "B2B측과 B2C측에 동일한 카테고리명이 있더라도 서로 다른 카탈로그에서는 서로 다른 뷰가 생성될 수 있습니다.",
+      "branchTitle": "2. Branch는 카테고리 탐색을 위한 것입니다.",
+      "branchDescription": "분기 카테고리는 최종 선택 지점은 아니지만 사용자를 올바른 하위 분류로 이동하는 데 사용됩니다.",
+      "leafTitle": "3. 극단적인 카테고리의 재고 확인",
+      "leafDescription": "주식 목록은 극단적인 범주에서 가장 의미가 있습니다. 따라서 극단적인 카테고리에서 최종 선택을 하는 것이 좋습니다.",
+      "exampleTitle": "4. 기업 계층 구조를 안정적으로 유지",
+      "exampleDescription": "권장 구조: 메인 카테고리 > 하위 카테고리 > 브랜드 > 시리즈 > 제품. 이런 방식으로 팀은 새 기록을 열 때 동일한 언어를 사용하며 검색 결과를 더 예측하기 쉽습니다."
+    },
+    "hierarchyStages": {
+      "root": {
+        "title": "주요 카테고리",
+        "description": "가장 높은 수준의 사업 영역을 나타냅니다. 예: 전화기"
+      },
+      "subcategory": {
+        "title": "하위 카테고리",
+        "description": "제품군을 구분하고 있습니다. 예: 푸시 버튼 전화기"
+      },
+      "brand": {
+        "title": "브랜드",
+        "description": "브랜드 또는 제조업체 분류에 사용됩니다. 예: 아이폰"
+      },
+      "series": {
+        "title": "시리즈",
+        "description": "모델 제품군 또는 시리즈 기반 구별이 여기에 유지됩니다. 예: 17 시리즈"
+      },
+      "products": {
+        "title": "제품",
+        "description": "마지막 수준은 리프 카테고리여야 합니다. 여기에서 스톡 바인딩을 수행해야 합니다."
+      }
+    },
+    "actions": {
+      "newCatalog": "새 카탈로그",
+      "createCatalog": "카탈로그 생성",
+      "addRootCategory": "루트 카테고리 추가",
+      "addSubCategory": "하위 카테고리 추가",
+      "createCategory": "카테고리 생성",
+      "uploadCategoryImage": "이미지 업로드",
+      "uploadingCategoryImage": "이미지 로딩",
+      "removeCategoryImage": "이미지 제거",
+      "addStock": "링크 스톡",
+      "removeStock": "링크 제거",
+      "addFavorite": "즐겨찾기에 추가",
+      "removeFavorite": "즐겨찾기에서 삭제",
+      "addRule": "규칙 추가",
+      "createRule": "규칙 생성",
+      "previewRules": "미리보기 규칙",
+      "previewingRules": "미리보기 준비 중",
+      "applyRules": "규칙 적용",
+      "applyingRules": "규칙 적용",
+      "importFromRiiStock": "RII_STOK에서 생성",
+      "previewingStockHierarchy": "읽기 분석",
+      "refreshStockHierarchyPreview": "미리보기 새로고침",
+      "applyStockHierarchy": "카탈로그 트리 생성",
+      "applyingStockHierarchy": "카탈로그 트리 생성",
+      "addCategoryFavorite": "즐겨찾기에 카테고리 추가",
+      "removeCategoryFavorite": "즐겨찾기에서 카테고리 삭제"
+    },
+    "messages": {
+      "catalogCreateSuccess": "카탈로그가 성공적으로 생성되었습니다.",
+      "catalogCreateError": "카탈로그를 생성할 수 없습니다.",
+      "catalogUpdateSuccess": "카탈로그가 성공적으로 업데이트되었습니다.",
+      "catalogUpdateError": "카탈로그를 업데이트할 수 없습니다.",
+      "catalogDeleteSuccess": "카탈로그가 성공적으로 삭제되었습니다.",
+      "catalogDeleteError": "카탈로그를 삭제할 수 없습니다.",
+      "rootCategoryCreateSuccess": "루트 카테고리가 성공적으로 생성되었습니다.",
+      "subCategoryCreateSuccess": "하위 카테고리가 성공적으로 생성되었습니다.",
+      "categoryCreateError": "카테고리를 생성할 수 없습니다.",
+      "categoryUpdateSuccess": "카테고리가 성공적으로 업데이트되었습니다.",
+      "categoryUpdateError": "카테고리를 업데이트할 수 없습니다.",
+      "categoryReorderSuccess": "카테고리 순서가 업데이트되었습니다.",
+      "categoryReorderError": "카테고리 순서를 업데이트할 수 없습니다.",
+      "categoryDeleteSuccess": "카테고리가 성공적으로 삭제되었습니다.",
+      "categoryDeleteError": "카테고리를 삭제할 수 없습니다.",
+      "stockAssignSuccess": "주식이 카테고리에 성공적으로 연결되었습니다.",
+      "stockAssignError": "주식을 카테고리에 연결할 수 없습니다.",
+      "stockUnassignSuccess": "주식 링크가 제거되었습니다.",
+      "stockUnassignError": "주식 링크를 삭제할 수 없습니다.",
+      "favoriteAddSuccess": "즐겨찾기에 재고가 추가되었습니다.",
+      "favoriteRemoveSuccess": "즐겨찾기에서 재고가 제거되었습니다.",
+      "favoriteToggleError": "즐겨찾기 상태를 업데이트할 수 없습니다.",
+      "ruleCreateSuccess": "규칙이 성공적으로 생성되었습니다.",
+      "ruleCreateError": "규칙을 생성할 수 없습니다.",
+      "ruleUpdateSuccess": "규칙이 성공적으로 업데이트되었습니다.",
+      "ruleUpdateError": "규칙을 업데이트할 수 없습니다.",
+      "ruleDeleteSuccess": "규칙이 성공적으로 삭제되었습니다.",
+      "ruleDeleteError": "규칙을 삭제할 수 없습니다.",
+      "rulePreviewError": "규칙 미리보기를 가져올 수 없습니다.",
+      "ruleApplySuccess": "규칙이 성공적으로 구현되었습니다.",
+      "ruleApplyError": "규칙을 적용할 수 없습니다.",
+      "stockHierarchyPreviewError": "재고 분석 미리보기를 가져올 수 없습니다.",
+      "stockHierarchyApplySuccess": "RII_STOK 분석에서 카탈로그 트리가 생성되었습니다.",
+      "stockHierarchyApplyError": "RII_STOK 분석에서 카탈로그 트리를 생성할 수 없습니다.",
+      "categoryFavoriteAddSuccess": "즐겨찾기에 카테고리가 추가되었습니다.",
+      "categoryFavoriteRemoveSuccess": "즐겨찾기에서 카테고리가 삭제되었습니다."
+    },
+    "stockHierarchyImport": {
+      "title": "RII_STOK 분석에서 카탈로그 생성",
+      "description": "그룹 코드 > Code1 > Code2 > Code3 시퀀스를 카탈로그 트리로 변환합니다. Fashionol/Sahibinden 논리와 마찬가지로 사용자는 클릭할 때마다 더 낮은 분석으로 내려가 마지막 수준의 주식을 봅니다.",
+      "options": {
+        "includeCode1": {
+          "title": "code1 레벨 포함",
+          "description": "그룹 코드 아래의 첫 번째 분석을 엽니다. 예: 가솔린/디젤."
+        },
+        "includeCode2": {
+          "title": "Code2 수준 포함",
+          "description": "Code1 아래의 두 번째 분석이 열립니다. 예: 수동/자동."
+        },
+        "includeCode3": {
+          "title": "Code3 레벨 포함",
+          "description": "Code2 아래의 세 번째 분석이 열립니다. 빈 재고에서 가장 깊은 점유 수준은 극단적인 범주입니다."
+        },
+        "assignStocks": {
+          "title": "주식을 마지막 수준으로 연결",
+          "description": "카테고리 트리를 생성할 때 주식을 가장 깊은 분류에 자동으로 연결합니다."
+        }
+      },
+      "preview": {
+        "sourceStock": "주식 읽기",
+        "category": "전체 카테고리",
+        "newCategory": "새로운 카테고리",
+        "newStockAssignment": "새로운 주식 링크",
+        "group": "그룹: {{count}}",
+        "code1": "코드1: {{count}}",
+        "code2": "코드2: {{count}}",
+        "code3": "코드3: {{count}}",
+        "samples": "모범을 보이는 방법",
+        "noSamples": "샘플 분석이 없습니다."
+      }
+    },
+    "rulePreviewSummaryTitle": "규칙 미리보기 요약",
+    "rulePreviewSummary": {
+      "matched": "일치하는 재고: {{count}}",
+      "created": "새 링크는 다음과 같습니다: {{count}}",
+      "updated": "업데이트 링크: {{count}}",
+      "skipped": "수동으로 보호되는 레지스터: {{count}}"
+    },
+    "rulePreviewListTitle": "샘플 미리보기",
+    "rulePreviewListEmpty": "미리보기에 일치하는 샘플이 없습니다.",
+    "rulePreviewMatchedRule": "일치 규칙: {{rule}} 우선 순위 {{priority}}",
+    "rulePreviewActions": {
+      "create": "새 링크",
+      "update": "링크가 업데이트됩니다",
+      "skip": "손으로 보존"
+    },
+    "ruleApplySummaryTitle": "규칙 시행 요약",
+    "ruleApplySummary": {
+      "matched": "일치하는 재고: {{count}}",
+      "created": "새 링크: {{count}}",
+      "updated": "업데이트된 링크: {{count}}",
+      "skipped": "수동으로 보호되는 레지스터: {{count}}"
+    },
+    "form": {
+      "catalogName": "카탈로그 이름",
+      "catalogNamePlaceholder": "예: B2B 메인 카탈로그",
+      "catalogCode": "카탈로그 코드",
+      "catalogCodePlaceholder": "예: B2B_MAIN",
+      "catalogType": "카탈로그 유형",
+      "branchCode": "지점코드",
+      "branchCodePlaceholder": "선택사항",
+      "sortOrder": "정렬 기준",
+      "description": "설명",
+      "descriptionPlaceholder": "다른 관리자가 이해할 수 있도록 이 정의를 간략하게 설명하십시오.",
+      "categoryName": "카테고리 이름",
+      "categoryNamePlaceholder": "예: 유리 시스템",
+      "categoryCode": "카테고리 코드",
+      "categoryCodePlaceholder": "예: CAM_SISTEMLERI",
+      "nodeType": "카테고리 유형",
+      "nodeTypeBranchHelp": "분기는 범주 탐색 및 하위 구분 열기용입니다. 이 수준에서 제품을 직접 연결하지 마십시오.",
+      "nodeTypeLeafHelp": "극단 카테고리가 최종 선택 포인트입니다. 재고 매핑과 제품 목록은 이 수준에서 유지되어야 합니다.",
+      "visualPreset": "시각적 테마",
+      "visualPresetPlaceholder": "검색하여 테마를 선택하세요",
+      "visualPresetSearchPlaceholder": "테마 검색...",
+      "visualPresetEmpty": "적합한 테마를 찾을 수 없습니다.",
+      "visualPresetHelp": "외부에서 이미지를 업로드하지 않습니다. 시스템은 이 선택을 기반으로 자체 범주 보기를 생성합니다.",
+      "categoryImage": "카테고리 이미지",
+      "categoryImageHelp": "원하는 경우 특수 이미지를 시스템에 업로드할 수 있습니다. 업로드하시면 카테고리 카드의 프리셋 아이콘 대신 이 이미지가 사용됩니다.",
+      "ruleName": "규칙 이름",
+      "ruleCode": "규칙 코드",
+      "stockAttribute": "재고 지역",
+      "operator": "운영자",
+      "ruleValue": "규칙 값",
+      "ruleValuePlaceholder": "예: 유리 또는 프로필, 액세서리",
+      "ruleValueDropdownPlaceholder": "스톡 사전 설정에서 선택",
+      "ruleValueSearchPlaceholder": "ERP 분석 검색...",
+      "ruleValueLoading": "값 로드 중...",
+      "ruleValueEmpty": "이 필드에 적합한 값을 찾을 수 없습니다.",
+      "ruleValueDropdownHelp": "시스템은 귀하가 선택한 재고 영역에 실제 ERP 값을 나열합니다. 직접 입력하는 것보다 여기서 선택하는 것이 더 안전합니다.",
+      "ruleValueInListHelp": "목록의 var 연산자에서 둘 이상의 값을 선택할 수 있습니다. 추가하려면 위에서 선택하고, 제거하려면 태그를 클릭하세요.",
+      "ruleValueInListEmpty": "아직 추가된 가치가 없습니다.",
+      "ruleValueManualHelp": "이 연산자는 자유 텍스트에서 작동합니다. 여기에 시작, 포함 또는 종료 규칙을 입력합니다.",
+      "ruleValueTopMatchesTitle": "시스템에서 가장 자주 발생하는 값",
+      "ruleValueTopMatchesSubtitle": "클릭하시면 빠르게 선택하실 수 있습니다",
+      "ruleValueTopMatchesEmpty": "이 필드에 대해 미해결 값이 없습니다.",
+      "priority": "우선순위"
+    },
+    "visualPreviewTitle": "카테고리 보기",
+    "visualPreviewFallback": "카테고리 미리보기",
+    "visualPresets": {
+      "general": {
+        "label": "일반"
+      },
+      "glass": {
+        "label": "유리"
+      },
+      "profile": {
+        "label": "프로필"
+      },
+      "accessory": {
+        "label": "액세서리"
+      },
+      "service": {
+        "label": "서비스"
+      },
+      "logistics": {
+        "label": "물류"
+      },
+      "machinery": {
+        "label": "기계"
+      },
+      "electronics": {
+        "label": "전자 제품"
+      },
+      "security": {
+        "label": "보안"
+      },
+      "lighting": {
+        "label": "조명"
+      },
+      "construction": {
+        "label": "건설"
+      },
+      "furniture": {
+        "label": "가구"
+      },
+      "hardware": {
+        "label": "하드웨어"
+      },
+      "automation": {
+        "label": "자동화"
+      },
+      "energy": {
+        "label": "에너지"
+      },
+      "office": {
+        "label": "사무실"
+      },
+      "textile": {
+        "label": "직물"
+      },
+      "chemical": {
+        "label": "화학"
+      },
+      "outdoor": {
+        "label": "야외"
+      },
+      "cooling": {
+        "label": "냉각"
+      },
+      "heating": {
+        "label": "난방"
+      },
+      "plumbing": {
+        "label": "배관"
+      },
+      "decoration": {
+        "label": "장식"
+      },
+      "packaging": {
+        "label": "포장"
+      },
+      "automotive": {
+        "label": "자동차"
+      },
+      "agriculture": {
+        "label": "농업"
+      },
+      "medical": {
+        "label": "의료"
+      },
+      "pharmacy": {
+        "label": "약국"
+      },
+      "cosmetics": {
+        "label": "화장품"
+      },
+      "food": {
+        "label": "음식"
+      },
+      "beverage": {
+        "label": "음료수"
+      },
+      "cleaning": {
+        "label": "청소"
+      },
+      "education": {
+        "label": "교육"
+      },
+      "finance": {
+        "label": "금융"
+      },
+      "insurance": {
+        "label": "보험"
+      },
+      "real-estate": {
+        "label": "부동산"
+      },
+      "tourism": {
+        "label": "관광"
+      },
+      "hospitality": {
+        "label": "숙소"
+      },
+      "restaurant": {
+        "label": "레스토랑"
+      },
+      "ecommerce": {
+        "label": "전자상거래"
+      },
+      "retail": {
+        "label": "소매"
+      },
+      "wholesale": {
+        "label": "도매"
+      },
+      "manufacturing": {
+        "label": "생산"
+      },
+      "mining": {
+        "label": "채광"
+      },
+      "marine": {
+        "label": "해상"
+      },
+      "aviation": {
+        "label": "항공"
+      },
+      "telecom": {
+        "label": "통신"
+      },
+      "software": {
+        "label": "소프트웨어"
+      },
+      "data-center": {
+        "label": "데이터 센터"
+      },
+      "media": {
+        "label": "미디어"
+      },
+      "printing": {
+        "label": "인쇄소"
+      },
+      "sports": {
+        "label": "스포츠"
+      },
+      "baby-kids": {
+        "label": "베이비 & 어린이"
+      },
+      "pet": {
+        "label": "애완동물"
+      },
+      "jewelry": {
+        "label": "보석류"
+      },
+      "luxury": {
+        "label": "사치"
+      },
+      "stationery": {
+        "label": "문구류"
+      },
+      "laboratory": {
+        "label": "실험실"
+      },
+      "recycling": {
+        "label": "재활용"
+      },
+      "defense": {
+        "label": "방어"
+      }
+    },
+    "ruleAttributes": {
+      "groupCode": "그룹 코드",
+      "groupName": "그룹 이름",
+      "code1": "코드 1",
+      "code1Name": "코드 1 이름",
+      "code2": "코드 2",
+      "code2Name": "코드 2 이름",
+      "code3": "코드 3",
+      "code3Name": "코드 3 이름",
+      "code4": "코드 4",
+      "code4Name": "코드 4 이름",
+      "code5": "코드 5",
+      "code5Name": "코드 5 이름",
+      "manufacturerCode": "제조업체 코드",
+      "erpStockCode": "ERP 주식 코드",
+      "stockName": "주식명"
+    },
+    "ruleOperators": {
+      "equals": "같음",
+      "contains": "포함",
+      "startsWith": "그것은 다음으로 시작한다",
+      "endsWith": "다음으로 끝남",
+      "inList": "목록에 있어요"
+    },
+    "meta": {
+      "group": "그룹",
+      "code1": "코드 1",
+      "code2": "코드 2",
+      "code3": "코드 3"
+    }
+  }
+}

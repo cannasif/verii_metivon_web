@@ -1,0 +1,78 @@
+{
+  "lines": {
+    "doubleClickToEdit": "편집하려면 두 번 클릭하세요.",
+    "unit": "단위",
+    "descriptionFieldsTitle": "설명 필드",
+    "descriptionTooltipText": "행 기반 생산 설명입니다. ERP로 가져올 때 Netsis 일치: 설명 1 -> 추가 필드 1, 설명 2 -> 추가 필드 2, 설명 3 -> 행 주석 7.",
+    "descriptionTooltipPrefix": "행 기반 생산 설명입니다. ERP로 전송 시 Netsis 일치:",
+    "erpTargetExtraField1": "추가 필드 1",
+    "erpTargetExtraField2": "추가 영역 2",
+    "erpTargetLineExtraDesc7": "행 주석 7",
+    "profileErpTooltip": "이 프로필 선택은 ERP로 보낼 때 Netsis Line Annotation 2 필드에 저장됩니다.",
+    "rebarErpTooltip": "이 Iron 선택은 ERP로 보낼 때 Netsis Row Annotation 3 값으로 저장됩니다.",
+    "screwErpTooltip": "이 나사 선택은 ERP로 보낼 때 Netsis Line Annotation 4 값으로 저장됩니다.",
+    "printErpTooltip": "이 인쇄 선택 사항은 ERP로 보낼 때 Netsis Line Annotation 8 값으로 저장됩니다. 인쇄 주석은 Netsis 라인 Comment 9 및 Line Annotation 9 필드에도 들어갑니다.",
+    "lineItemDescriptionPlaceholder": "라인 기반 품목 설명"
+  },
+  "notes": {
+    "title": "주문 메모",
+    "description": "주문에 대한 내부 메모를 추가하고 업데이트합니다.",
+    "placeholder": "주문 메모 입력",
+    "noteLabel": "주문 메모",
+    "notesTooltipText": "이는 전체 주문과 관련된 배송/송장 메모입니다. Netsis 순서는 상단 Annotation 1-5 필드에 순차적으로 기록됩니다. 참고 2는 Netsis Annotation 2로 이동합니다.",
+    "addLineTooltip": "주석 줄 추가",
+    "linesHint": "각 줄은 PDF 및 문서 메모에 별도로 표시됩니다.",
+    "removeLine": "행 제거",
+    "pageLabel": "페이지 {{current}} / {{total}}",
+    "saving": "메모 저장 중...",
+    "maxLengthError": "메모 필드는 최대 100자까지 입력할 수 있습니다."
+  },
+  "erpOrder": {
+    "title": "ERP 주문 목록",
+    "description": "Netsis에 로그인한 사용자의 범위 내에 나타나는 주문 상위 기록 및 항목을 모니터링합니다.",
+    "currentUserScope": "로그인한 사용자 기준",
+    "searchPlaceholder": "주문 번호, 현재, 영업사원 또는 날짜를 검색하세요...",
+    "loading": "ERP 주문이 로드 중입니다...",
+    "loadError": "ERP 주문을 로드할 수 없습니다.",
+    "noData": "ERP 주문을 찾을 수 없습니다.",
+    "detailAction": "세부정보",
+    "detailTitle": "{{orderNo}} 주문 세부정보",
+    "unknownCustomer": "현재 이름이 없습니다",
+    "lineCount": "{{count}} 펜",
+    "linesLoading": "주문 항목을 로드하는 중입니다...",
+    "lineLoadError": "주문 항목을 로드할 수 없습니다.",
+    "noLines": "이 주문에 대한 항목을 찾을 수 없습니다.",
+    "table": {
+      "title": "주문 헤더",
+      "branchCode": "가지",
+      "orderNo": "주문번호",
+      "customerCode": "현재 코드",
+      "customerName": "현재 이름",
+      "date": "날짜",
+      "deliveryDate": "배송일",
+      "grossTotal": "총액",
+      "vat": "부가가치세",
+      "grandTotal": "총계",
+      "salesRepCode": "세일즈맨"
+    },
+    "lines": {
+      "rowNo": "순서",
+      "stockCode": "주식 코드",
+      "stockName": "주식명",
+      "quantity": "수량",
+      "unit": "단위",
+      "netPrice": "순 가격",
+      "vatRate": "부가가치세율",
+      "warehouseCode": "창고"
+    }
+  },
+  "header": {
+    "notes": "메모",
+    "descriptionErpTooltip": "전체 주문에 대해 생산에서 확인하려는 일반적인 설명입니다. ERP로 전송되면 Netsis 주문이 상단 설명(FatUst.Description) 필드에 기록됩니다.",
+    "ozelKod1": "특수 코드 1",
+    "ozelKod1Placeholder": "특수 코드 1을 선택하세요.",
+    "ozelKod2": "특수 코드 2",
+    "ozelKod2Placeholder": "특수 코드 2를 선택하세요.",
+    "specialCodeSearchPlaceholder": "특수 코드 검색..."
+  }
+}

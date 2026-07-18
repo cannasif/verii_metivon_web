@@ -1,0 +1,10 @@
+{
+  "title": "通知",
+  "notifications": "通知",
+  "new": "新しい",
+  "loading": "読み込み中",
+  "noNotifications": "通知が見つかりません",
+  "markAllAsRead": "すべて既読としてマーク",
+  "close": "閉じる",
+  "unread": "未読"
+}

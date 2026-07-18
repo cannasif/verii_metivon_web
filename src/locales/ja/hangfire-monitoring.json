@@ -1,0 +1,74 @@
+{
+  "menu": "ハングファイア監視",
+  "title": "ハングファイア監視",
+  "description": "ジョブの健全性、失敗したジョブ、配信不能キューを監視します。",
+  "summary": {
+    "title": "システム概要",
+    "description": "定期的なジョブの健全性とキューの動作をすぐに確認できます。",
+    "totalJobs": "定期的なジョブの合計",
+    "withQueue": "アクティブなキュー",
+    "withErrors": "誤った仕事",
+    "help": "統計は、Hangfire サーバーのスナップショットです。リストを更新してリストを更新します。"
+  },
+  "refresh": "リフレッシュ",
+  "stats": {
+    "enqueued": "列に並んでいる",
+    "processing": "処理中",
+    "succeeded": "成功した",
+    "failed": "失敗する"
+  },
+  "table": {
+    "jobId": "ビジネスID",
+    "jobName": "ビジネス",
+    "state": "ステータス",
+    "time": "時間",
+    "reason": "なぜ",
+    "queue": "尻尾",
+    "duration": "期間",
+    "retryCount": "またまた",
+    "recurringJobId": "スケジュールされたジョブ"
+  },
+  "succeeded": {
+    "title": "成功した作品",
+    "empty": "成功したジョブが見つかりませんでした。",
+    "description": "最近完了した Hangfire ジョブのリスト。"
+  },
+  "failed": {
+    "title": "失敗したジョブ",
+    "empty": "失敗したジョブは見つかりませんでした。",
+    "total": "合計",
+    "description": "エラーが発生したジョブ、または再試行を待機しているジョブ。"
+  },
+  "deadLetter": {
+    "title": "配信不能キュー",
+    "empty": "配信不能キューは空です。",
+    "enqueued": "列に並んでいる",
+    "description": "消費者に配信できず、手動によるレビューが必要なメッセージ。"
+  },
+  "recurring": {
+    "title": "スケジュールされたジョブ",
+    "description": "ここから、保存した Hangfire ジョブを表示し、選択したジョブをすぐにトリガーできます。",
+    "selectLabel": "実行するジョブ",
+    "selectPlaceholder": "仕事を選ぶ",
+    "triggerButton": "今すぐ実行してください",
+    "triggerSuccess": "ジョブ {{jobName}} がトリガーされました。",
+    "triggerError": "ジョブのトリガー中にエラーが発生しました。",
+    "empty": "登録された定期的なジョブはまだ見つかりません。",
+    "tableTitle": "スケジュールされたジョブ",
+    "tableDescription": "すべての定期的な Hangfire ジョブとスケジュール情報。",
+    "labels": {
+      "schedule": "タイミング",
+      "method": "方法",
+      "error": "エラーがあります",
+      "healthy": "健康な"
+    },
+    "table": {
+      "id": "ジョブID",
+      "job": "ビジネス",
+      "cron": "タイミング",
+      "nextExecution": "次の仕事",
+      "lastExecution": "最新作",
+      "queue": "尻尾"
+    }
+  }
+}

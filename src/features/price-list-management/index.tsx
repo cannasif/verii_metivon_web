@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{priceConfig}from'@/features/erp-operation-management/configs';export function PriceListManagementPage(){return <ErpPagedManagementPage config={priceConfig}/>}

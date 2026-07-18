@@ -1,0 +1,67 @@
+{
+  "title": "Zarządzanie rodzajami płatności",
+  "headerDescription": "Zarządzaj i edytuj typy płatności",
+  "create": "Nowy rodzaj płatności",
+  "edit": "Edytuj typ płatności",
+  "editDescription": "Edytuj informacje o typie płatności",
+  "createDescription": "Wprowadź informacje o nowym typie płatności",
+  "delete": {
+    "confirmTitle": "Usuń typ płatności",
+    "confirmMessage": "Czy na pewno chcesz usunąć typ płatności {{name}}? Tej akcji nie można cofnąć.",
+    "success": "Typ płatności został pomyślnie usunięty",
+    "error": "Wystąpił błąd podczas usuwania typu płatności"
+  },
+  "deleteTitle": "Usuń typ płatności",
+  "name": "Imię",
+  "namePlaceholder": "Wpisz nazwę rodzaju płatności",
+  "description": "Opis",
+  "descriptionPlaceholder": "Wprowadź opis (opcjonalnie)",
+  "createdDate": "Data utworzenia",
+  "updatedDate": "Zaktualizowana data",
+  "actions": "Transakcje",
+  "search": "Szukaj",
+  "refresh": "Odśwież",
+  "loading": "Ładowanie...",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "advancedFilter": {
+    "columnName": "Imię",
+    "columnDescription": "Opis"
+  },
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Nagrywanie...",
+  "noData": "Nie znaleziono danych",
+  "error": "Wystąpił błąd",
+  "confirmDelete": "Czy na pewno chcesz usunąć ten rodzaj płatności?",
+  "createSuccess": "Typ płatności został utworzony pomyślnie",
+  "updateSuccess": "Typ płatności został pomyślnie zaktualizowany",
+  "deleteSuccess": "Typ płatności został pomyślnie usunięty",
+  "createError": "Wystąpił błąd podczas tworzenia typu płatności",
+  "updateError": "Wystąpił błąd podczas aktualizacji typu płatności",
+  "deleteError": "Wystąpił błąd podczas usuwania typu płatności",
+  "table": {
+    "title": "Rodzaje płatności",
+    "status": "Stan",
+    "id": "Identyfikator",
+    "name": "Imię",
+    "description": "Opis",
+    "createdDate": "Data utworzenia",
+    "updatedDate": "Zaktualizowana data",
+    "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+    "page": "Strona {{current}} / {{total}}"
+  },
+  "form": {
+    "name": {
+      "required": "Imię i nazwisko jest wymagane",
+      "maxLength": "Nazwa może mieć maksymalnie 100 znaków"
+    },
+    "description": {
+      "maxLength": "Opis może mieć maksymalnie 500 znaków"
+    }
+  },
+  "status": {
+    "inactive": "pasywny",
+    "active": "aktywny"
+  }
+}

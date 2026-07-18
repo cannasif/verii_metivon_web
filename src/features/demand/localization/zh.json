@@ -1,0 +1,346 @@
+{
+  "loading": "加载中...",
+  "saving": "录音...",
+  "error": "错误",
+  "noData": "没有找到数据",
+  "previous": "上一页",
+  "next": "下一步",
+  "actions": "交易",
+  "edit": "编辑",
+  "delete": "删除",
+  "back": "返回",
+  "refresh": "刷新",
+  "select": "选择",
+  "yes": "是的",
+  "add": "添加",
+  "backToQuotations": "返回请求",
+  "cancel": "取消",
+  "save": "保存",
+  "confirm": "确认",
+  "saveAndApply": "保存并应用",
+  "notes": {
+    "title": "理赔须知",
+    "description": "添加和更新请求的内部注释。",
+    "placeholder": "输入请求备注",
+    "noteLabel": "请求备注",
+    "addLineTooltip": "添加评论行",
+    "linesHint": "每行单独出现在 PDF 和文档注释中。",
+    "removeLine": "删除行",
+    "pageLabel": "页 {{current}} / {{total}}",
+    "saving": "正在保存笔记...",
+    "notesTooltipText": "这些是涉及整个请求的运输/发票注释。当传输到ERP时，报价/订单按顺序记录在上方注释1-5字段中；注 2 转到 Netsis 注释 2。",
+    "maxLengthError": "备注字段最多可包含 100 个字符。"
+  },
+  "list": {
+    "revise": "修改",
+    "showing": "{{total}} 在记录中显示为 {{from}}-{{to}}",
+    "title": "请求清单",
+    "description": "查看和管理所有请求",
+    "detail": "详情",
+    "createNew": "创建新请求",
+    "searchPlaceholder": "按请求编号或客户名称搜索...",
+    "cardTitle": "请求清单",
+    "refresh": "刷新",
+    "actions": "交易",
+    "id": "身份证号",
+    "offerNo": "请求号码",
+    "revisionNo": "修订号",
+    "customer": "顾客",
+    "customerCode": "当前代码",
+    "representative": "销售代表",
+    "offerDate": "请求日期",
+    "validUntil": "有效性",
+    "currency": "货币",
+    "grandTotal": "总计",
+    "status": "状态"
+  },
+  "detail": {
+    "title": "请求详情",
+    "subtitle": "查看和管理请求详细信息。",
+    "notFound": "没有找到请求。",
+    "revisionNo": "修订号",
+    "tabDetail": "详情",
+    "tabApprovalFlow": "审批流程",
+    "tabReport": "报告"
+  },
+  "create": {
+    "title": "创建新请求",
+    "submit": "保存请求并发送以供批准",
+    "success": "请求创建成功",
+    "successMessage": "该请求已发送至审批流程。",
+    "error": "无法创建请求",
+    "errorMessage": "创建请求时发生错误。",
+    "subtitle": "填写请求信息并保存。",
+    "deliveryDateRequired": "交货日期是强制性的。",
+    "paymentTypeRequired": "付款类型为必填项。",
+    "invalidCurrency": "货币无效。",
+    "validationError": "请检查必填字段。",
+    "notesMaxLengthError": "每个注释最多可包含 400 个字符。"
+  },
+  "header": {
+    "title": "索取信息",
+    "customer": "顾客",
+    "selectCustomer": "选择客户",
+    "shippingAddress": "送货地址",
+    "selectShippingAddress": "选择送货地址",
+    "representative": "销售代表",
+    "selectRepresentative": "选择代表",
+    "offerType": "请求类型",
+    "selectOfferType": "选择请求类型",
+    "currency": "货币",
+    "selectCurrency": "请选择货币",
+    "showExchangeRates": "显示汇率",
+    "offerDate": "请求日期",
+    "deliveryDate": "交货日期",
+    "paymentType": "付款方式",
+    "selectPaymentType": "选择付款类型",
+    "description": "描述",
+    "notes": "注释",
+    "descriptionErpTooltip": "这是您希望生产部门看到的整个请求的一般描述。当作为报价/订单发送到 ERP 时，它会记录在 Netsis 顶部描述 (FatUst.Description) 字段中。",
+    "descriptionPlaceholder": "输入描述",
+    "offerNo": "请求号码",
+    "offerNoPlaceholder": "请求号码",
+    "currencyChange": {
+      "title": "货币变动",
+      "message": "当货币发生变化时，所有现有行将根据新货币重新计算。您批准这笔交易吗？"
+    },
+    "deliveryMethod": "交货方式",
+    "documentDetail": "文件说明",
+    "ozelKod1": "特殊代码1",
+    "ozelKod1Placeholder": "选择特殊代码1",
+    "ozelKod2": "特别代码2",
+    "ozelKod2Placeholder": "选择特殊代码2",
+    "specialCodeSearchPlaceholder": "搜索特殊代码..."
+  },
+  "lines": {
+    "title": "请求行",
+    "add": "添加行",
+    "empty": "尚未添加行",
+    "emptyDescription": "使用“选择库存”或“添加行”按钮添加申请行",
+    "itemCount": "{{count}} 行",
+    "editLine": "编辑行",
+    "selectStock": "选择股票",
+    "selectProduct": "选择产品",
+    "selectStockFirst": "未选择库存",
+    "stock": "库存",
+    "productCode": "股票代码",
+    "enterProductCode": "输入或搜索产品代码",
+    "productName": "股票名称",
+    "enterProductName": "输入产品名称",
+    "quantity": "数量",
+    "unitPrice": "单价",
+    "discount1": "折扣1%",
+    "discount2": "折扣 2%",
+    "discount3": "折扣3%",
+    "discounts": "折扣",
+    "discountAmount": "折扣金额",
+    "netPrice": "净价",
+    "vatRate": "增值税税率%",
+    "lineTotal": "行总计（含增值税）",
+    "calculations": "计算",
+    "required": "必须添加至少 1 行",
+    "noProductsFound": "未找到产品",
+    "delete": {
+      "confirmTitle": "删除行",
+      "confirmMessage": "您确定要删除该行吗？",
+      "confirmTitleMultiple": "删除行",
+      "confirmMessageMultiple": "您确定要删除选定的行吗？"
+    },
+    "noItems": "还没有线路。",
+    "addLine": "添加行",
+    "relatedStocks": "捆绑股票",
+    "groupCode": "集团代码",
+    "approvalRequired": "需要批准",
+    "requiredFieldsMissing": "缺少必需的行字段。",
+    "createSuccess": "已添加线路。",
+    "createError": "无法添加该行。",
+    "updateSuccess": "线路已更新。",
+    "updateError": "无法更新该行。",
+    "deleteSuccess": "该行已被删除。",
+    "deleteError": "无法删除该行。",
+    "editStockItemDetails": "编辑库存商品详细信息",
+    "descriptionFieldsTitle": "描述字段",
+    "description1": "说明1",
+    "description2": "说明2",
+    "description3": "说明3",
+    "descriptionPlaceholder": "输入描述...",
+    "descriptionTooltipText": "它是基于行的生产描述。导入 ERP 时 Netsis 匹配：描述 1 -> 附加字段 1、描述 2 -> 附加字段 2、描述 3 -> 行注释 7。",
+    "descriptionTooltipPrefix": "它是基于行的生产描述。传输到 ERP 时的 Netsis 匹配：",
+    "erpTargetExtraField1": "附加字段 1",
+    "erpTargetExtraField2": "附加区域2",
+    "erpTargetLineExtraDesc7": "行注释 7",
+    "profileErpTooltip": "发送到 ERP 时，此配置文件选择将保存在 Netsis Line Annotation 2 字段中。",
+    "rebarErpTooltip": "发送到 ERP 时，此铁选择将保存为 Netsis Row Annotation 3 值。",
+    "screwErpTooltip": "发送到 ERP 时，此螺钉选择将保存为 Netsis Line Annotation 4 值。",
+    "printErpTooltip": "发送到 ERP 时，此打印选择将保存为 Netsis Line Annotation 8 值。打印注释也会进入 Netsis line Comment 9 和 Line Annotation 9 字段。",
+    "lineItemDescriptionPlaceholder": "基于行的项目描述",
+    "doubleClickToEdit": "双击即可编辑"
+  },
+  "exchangeRates": {
+    "title": "汇率",
+    "currency": "货币",
+    "rate": "安装",
+    "date": "汇率日期",
+    "isOfficial": "安装官方",
+    "official": "官方",
+    "custom": "私人的",
+    "empty": "未找到汇率",
+    "status": "状态",
+    "dialog": {
+      "title": "汇率",
+      "description": "如有必要，查看和编辑汇率。更改后的费率不会标记为官方费率。",
+      "subtitle": "您可以编辑并保存费率。",
+      "info": "可以在官方汇率之外进行手动更新。"
+    },
+    "updateSuccess": "汇率已更新。",
+    "updateError": "汇率无法更新。",
+    "cannotEditUsedCurrency": "无法编辑所使用的货币。",
+    "zeroRateError": "请输入汇率以继续。"
+  },
+  "summary": {
+    "title": "总结",
+    "grandTotalAnalysis": "总计分析",
+    "subtotal": "小计",
+    "totalVat": "增值税总额",
+    "grandTotal": "总计",
+    "generalDiscount": "一般折扣",
+    "generalDiscountRate": "一般折扣率",
+    "generalDiscountAmount": "一般折扣金额",
+    "generalDiscountHelp": "它是在总体基础上应用的。"
+  },
+  "offerType": {
+    "domestic": "国内",
+    "export": "出口"
+  },
+  "wizard": {
+    "title": "创建新请求",
+    "step1": {
+      "title": "第 1 步：索取信息",
+      "description": "输入请求标头信息和汇率",
+      "validation": {
+        "offerType": "请求类型",
+        "currency": "货币",
+        "exchangeRate": "汇率"
+      },
+      "exchangeRate": {
+        "required": "对于非 TRY 的货币，必须添加至少一种汇率"
+      },
+      "currency": {
+        "try": {
+          "info": "选择TRY时无需填写汇率"
+        }
+      }
+    },
+    "step2": {
+      "title": "第 2 步：请求行",
+      "description": "添加产品和价格信息",
+      "info": "您必须至少添加一行",
+      "validation": {
+        "noLines": "必须至少添加一行",
+        "invalidLines": "所有线路必须有有效信息",
+        "allValid": "行 {{count}} 添加成功"
+      }
+    },
+    "step3": {
+      "title": "第三步：总结并批准",
+      "description": "查看信息并保存请求",
+      "header": {
+        "title": "索取信息"
+      },
+      "lines": {
+        "title": "请求行"
+      },
+      "summary": {
+        "title": "最终总结"
+      },
+      "approval": {
+        "info": "保存请求后，它将自动发送到审批流程"
+      }
+    }
+  },
+  "loadError": "加载数据时发生错误。",
+  "backToDemands": "返回请求",
+  "untitled": "无标题",
+  "sections": {
+    "header": "标题信息",
+    "lines": "行",
+    "summary": "总结"
+  },
+  "approval": {
+    "approve": "确认",
+    "reject": "拒绝",
+    "sending": "正在发送...",
+    "sendForApproval": "提交审批",
+    "approveSuccess": "确认过程成功。",
+    "approveError": "确认失败。",
+    "rejectSuccess": "拒绝过程成功。",
+    "rejectError": "拒绝失败。",
+    "startSuccess": "审批程序已启动。",
+    "startError": "审批流程无法启动。",
+    "rejectTitle": "拒绝请求",
+    "rejectDescription": "输入拒绝原因。",
+    "rejectReasonPlaceholder": "拒绝原因",
+    "statusFilterLabel": "审批情况",
+    "lockedForNonApprover": "本次注册正在审批过程中。只有主动审批用户才能进行更改；您已关闭编辑功能。",
+    "approvedReadOnlyReason": "由于此请求已获得批准，因此无法进行任何更改。",
+    "rejectedReadOnlyReason": "由于该请求被拒绝，因此无法进行任何更改。要更新，请使用列表中的“修订”。",
+    "closedReason": "该记录已关闭，因为具有相同文档编号的另一条记录已获得批准；无法进行更改。",
+    "status": {
+      "notRequired": "草案",
+      "waiting": "等待",
+      "approved": "已批准",
+      "rejected": "被拒绝",
+      "closed": "关闭"
+    }
+  },
+  "approvalFlow": {
+    "noData": "未找到确认步骤。",
+    "notStarted": "未初始化",
+    "stepCompleted": "步骤已完成",
+    "stepInProgress": "步骤继续",
+    "stepNotStarted": "我的脚步在等待",
+    "stepRejected": "我的名字被拒绝了",
+    "errorTitle": "发生错误"
+  },
+  "update": {
+    "success": "请求已更新。",
+    "successMessage": "请求已成功更新。",
+    "error": "无法更新请求。",
+    "errorMessage": "更新请求时发生错误。",
+    "invalidCurrency": "货币无效。",
+    "validationError": "发生表单验证错误。"
+  },
+  "revision": {
+    "success": "已创建修订版。",
+    "error": "无法创建修订版。"
+  },
+  "waitingApprovals": {
+    "title": "待批准请求",
+    "list": "待批准名单",
+    "noApprovals": "未找到待批准的内容。",
+    "requestId": "请求号码",
+    "description": "描述",
+    "stepOrder": "步骤",
+    "approvedBy": "批准人",
+    "actionDate": "交易日期",
+    "status": "状态",
+    "waiting": "等待"
+  },
+  "quotation": {
+    "notes": {
+      "maxLengthError": "每个注释最多可包含 100 个字符。请检查。"
+    }
+  },
+  "customerCancel": {
+    "readOnlyReason": "由于该请求已被客户取消，因此无法进行任何更改。",
+    "reasonLabel": "取消原因",
+    "button": "客户取消",
+    "title": "客户取消",
+    "description": "您即将将此请求标记为已被客户取消。",
+    "reasonPlaceholder": "写下客户的取消原因...",
+    "confirmButton": "取消"
+  },
+  "pdfExportTemplate": {
+    "draftWatermark": "这是草稿"
+  }
+}

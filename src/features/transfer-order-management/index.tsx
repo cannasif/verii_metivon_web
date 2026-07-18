@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{transferConfig}from'@/features/erp-operation-management/configs';export function TransferOrderManagementPage(){return <ErpPagedManagementPage config={transferConfig}/>}

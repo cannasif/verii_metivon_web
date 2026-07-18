@@ -1,0 +1,138 @@
+{
+  "menu": "Districtsbestuur",
+  "description": "Districten beheren en organiseren",
+  "addButton": "Nieuwe wijk toevoegen",
+  "showStats": "Statistieken weergeven",
+  "hideStats": "Statistieken verbergen",
+  "listTitle": "Districtslijst",
+  "listDescription": "Hier kunt u alle geregistreerde wijken in het systeem beheren.",
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "actions": "Transacties",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "cancel": "Annuleer",
+  "delete": {
+    "confirmTitle": "Wijk verwijderen",
+    "confirmMessage": "Weet u zeker dat u district {{name}} wilt verwijderen?",
+    "success": "District succesvol verwijderd",
+    "error": "District kan niet worden verwijderd",
+    "deleting": "Verwijderen...",
+    "action": "Verwijderen"
+  },
+  "save": "Opslaan",
+  "saving": "Opnemen...",
+  "countryManagement": {
+    "error": "Er is een fout opgetreden"
+  },
+  "table": {
+    "id": "Identiteitskaart",
+    "name": "Districtsnaam",
+    "erpCode": "ERP-code",
+    "postalCode": "Postcode",
+    "city": "stad",
+    "cityName": "Plaatsnaam",
+    "status": "Status",
+    "title": "Districtslijst",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door",
+    "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+    "page": "Pagina {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "Wijk bewerken",
+    "addDistrict": "Nieuwe wijk toevoegen",
+    "editDescription": "Wijkinformatie bewerken",
+    "addDescription": "Voer nieuwe wijkinformatie in",
+    "name": "Districtsnaam",
+    "namePlaceholder": "Voer de wijknaam in",
+    "city": "stad",
+    "selectCity": "Selecteer stad",
+    "searchCity": "Stad zoeken...",
+    "erpCode": "ERP-code",
+    "erpCodePlaceholder": "ERP-code invoeren (optioneel)",
+    "postalCode": "Postcode",
+    "postalCodePlaceholder": "Voer postcode in (optioneel)",
+    "nameRequired": "Districtsnaam is vereist",
+    "nameMaxLength": "De districtsnaam mag maximaal 100 tekens lang zijn",
+    "erpCodeMaxLength": "ERP-code mag maximaal 10 tekens lang zijn",
+    "postalCodeMaxLength": "De postcode mag maximaal 20 tekens lang zijn",
+    "cityRequired": "Stadselectie is verplicht"
+  },
+  "stats": {
+    "totalDistricts": "Totaal district",
+    "activeDistricts": "Actieve wijk",
+    "newThisMonth": "Nieuw deze maand"
+  },
+  "status": {
+    "inactive": "passief",
+    "active": "actief"
+  },
+  "messages": {
+    "createSuccess": "District succesvol aangemaakt",
+    "createError": "District kan niet worden gemaakt",
+    "updateSuccess": "District succesvol bijgewerkt",
+    "updateError": "District kan niet worden bijgewerkt",
+    "deleteSuccess": "District succesvol verwijderd",
+    "deleteError": "District kan niet worden verwijderd"
+  },
+  "districtManagement": {
+    "menu": "Districtsbestuur",
+    "description": "Districten beheren en organiseren",
+    "addButton": "Nieuwe wijk toevoegen",
+    "loading": "Laden...",
+    "noData": "Geen gegevens gevonden",
+    "table": {
+      "id": "Identiteitskaart",
+      "name": "Districtsnaam",
+      "erpCode": "ERP-code",
+      "postalCode": "Postcode",
+      "city": "stad",
+      "cityName": "Plaatsnaam",
+      "status": "Status",
+      "title": "Districtslijst"
+    },
+    "delete": {
+      "confirmTitle": "Wijk verwijderen",
+      "confirmMessage": "Weet u zeker dat u district {{name}} wilt verwijderen?",
+      "success": "District succesvol verwijderd",
+      "error": "Er is een fout opgetreden bij het verwijderen van het district"
+    },
+    "messages": {
+      "createSuccess": "District succesvol aangemaakt",
+      "createError": "District kan niet worden gemaakt",
+      "updateSuccess": "District succesvol bijgewerkt",
+      "updateError": "District kan niet worden bijgewerkt"
+    },
+    "stats": {
+      "totalDistricts": "Totaal district",
+      "activeDistricts": "Actieve wijk",
+      "newThisMonth": "Nieuw deze maand"
+    },
+    "status": {
+      "inactive": "passief",
+      "active": "actief"
+    },
+    "error": "Er is een fout opgetreden",
+    "form": {
+      "editDistrict": "Wijk bewerken",
+      "addDistrict": "Nieuwe wijk toevoegen",
+      "editDescription": "Wijkinformatie bewerken",
+      "addDescription": "Voer nieuwe wijkinformatie in",
+      "name": "Districtsnaam",
+      "namePlaceholder": "Voer de wijknaam in",
+      "city": "stad",
+      "selectCity": "Selecteer stad",
+      "searchCity": "Stad zoeken...",
+      "erpCode": "ERP-code",
+      "erpCodePlaceholder": "ERP-code invoeren (optioneel)",
+      "postalCode": "Postcode",
+      "postalCodePlaceholder": "Voer postcode in (optioneel)",
+      "nameRequired": "Districtsnaam is vereist",
+      "nameMaxLength": "De districtsnaam mag maximaal 100 tekens lang zijn",
+      "erpCodeMaxLength": "ERP-code mag maximaal 10 tekens lang zijn",
+      "postalCodeMaxLength": "De postcode mag maximaal 20 tekens lang zijn",
+      "cityRequired": "Stadselectie is verplicht"
+    }
+  }
+}

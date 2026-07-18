@@ -1,0 +1,120 @@
+{
+  "countryManagement": {
+    "menu": "Управление страной",
+    "description": "Управляйте и регулируйте страны",
+    "addButton": "Добавить новую страну",
+    "searchPlaceholder": "Искать...",
+    "loading": "Загрузка...",
+    "error": "Произошла ошибка",
+    "table": {
+      "id": "идентификатор",
+      "name": "Название страны",
+      "code": "Код",
+      "erpCode": "ERP-код",
+      "createdDate": "Дата создания",
+      "createdBy": "Создано",
+      "noData": "Данные не найдены",
+      "title": "Список стран"
+    },
+    "delete": {
+      "confirmTitle": "Удалить страну",
+      "confirmMessage": "Вы уверены, что хотите удалить страну {{name}}?"
+    },
+    "messages": {
+      "deleteSuccess": "Страна успешно удалена",
+      "deleteError": "Не удалось удалить страну.",
+      "createSuccess": "Страна успешно создана",
+      "createError": "Страна не может быть создана",
+      "updateSuccess": "Страна успешно обновлена",
+      "updateError": "Не удалось обновить страну."
+    },
+    "form": {
+      "addCountry": "Добавить новую страну",
+      "editCountry": "Изменить страну",
+      "addDescription": "Введите новую информацию о стране",
+      "editDescription": "Изменить информацию о стране",
+      "name": "Название страны",
+      "namePlaceholder": "Введите название страны",
+      "code": "Код страны",
+      "codePlaceholder": "Введите код страны (например: TR, США)",
+      "erpCode": "ERP-код",
+      "erpCodePlaceholder": "Введите код ERP (необязательно)",
+      "nameRequired": "Укажите название страны.",
+      "nameMaxLength": "Название страны может содержать до 100 символов.",
+      "codeMinLength": "Код страны должен содержать не менее двух символов.",
+      "codeMaxLength": "Код страны может содержать до 5 символов.",
+      "erpCodeMaxLength": "Код ERP может состоять максимум из 10 символов.",
+      "cancel": "Отмена",
+      "save": "Сохранить",
+      "tabs": {
+        "header": "Общая информация"
+      }
+    },
+    "stats": {
+      "totalCountries": "Всего по стране",
+      "activeCountries": "Активная страна",
+      "newThisMonth": "Новое в этом месяце"
+    }
+  },
+  "menu": "Управление страной",
+  "description": "Управляйте и регулируйте страны",
+  "addButton": "Добавить новую страну",
+  "search": "Искать...",
+  "loading": "Загрузка...",
+  "noData": "Данные не найдены",
+  "actions": "Транзакции",
+  "previous": "Предыдущий",
+  "next": "Далее",
+  "deleteConfirmTitle": "Подтверждение удаления",
+  "cancel": "Отмена",
+  "deleting": "Удаление...",
+  "delete": {
+    "confirmTitle": "Удалить страну",
+    "confirmMessage": "Вы уверены, что хотите удалить страну {{name}}?"
+  },
+  "saving": "Запись...",
+  "save": "Сохранить",
+  "stats": {
+    "totalCountries": "Всего по стране",
+    "activeCountries": "Активная страна",
+    "newThisMonth": "Новое в этом месяце"
+  },
+  "table": {
+    "id": "идентификатор",
+    "name": "Название страны",
+    "code": "Код",
+    "erpCode": "ERP-код",
+    "createdDate": "Дата создания",
+    "createdBy": "Создано",
+    "showing": "Показаны {{from}}-{{to}} / {{total}}",
+    "page": "Страница {{current}} / {{total}}",
+    "noData": "Данные не найдены",
+    "title": "Список стран"
+  },
+  "advancedFilter": {
+    "columnName": "Название страны",
+    "columnCode": "Код страны",
+    "columnErpCode": "ERP-код"
+  },
+  "form": {
+    "addCountry": "Добавить новую страну",
+    "editCountry": "Изменить страну",
+    "addDescription": "Введите новую информацию о стране",
+    "editDescription": "Изменить информацию о стране",
+    "name": "Название страны",
+    "namePlaceholder": "Введите название страны",
+    "code": "Код страны",
+    "codePlaceholder": "Введите код страны (например: TR, США)",
+    "erpCode": "ERP-код",
+    "erpCodePlaceholder": "Введите код ERP (необязательно)",
+    "nameRequired": "Укажите название страны.",
+    "nameMaxLength": "Название страны может содержать до 100 символов.",
+    "codeMinLength": "Код страны должен содержать не менее двух символов.",
+    "codeMaxLength": "Код страны может содержать до 5 символов.",
+    "erpCodeMaxLength": "Код ERP может состоять максимум из 10 символов."
+  },
+  "deleteConfirm": {
+    "confirmMessage": "Вы уверены, что хотите удалить страну {{name}}?"
+  },
+  "searchPlaceholder": "Искать..."
+}

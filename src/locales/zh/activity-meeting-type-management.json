@@ -1,0 +1,82 @@
+{
+  "menu": "会议管理",
+  "description": "管理和编辑会议定义",
+  "addButton": "添加新会议",
+  "loading": "加载中...",
+  "noData": "无数据",
+  "actions": "行动",
+  "edit": "编辑",
+  "deleteButton": "删除",
+  "cancel": "取消",
+  "save": "保存",
+  "saving": "正在保存...",
+  "previous": "上一页",
+  "next": "下一步",
+  "advancedFilter": {
+    "columnName": "会议名称",
+    "columnDescription": "描述",
+    "columnCreatedBy": "创建者"
+  },
+  "activityType": {
+    "create": "添加新会议",
+    "loading": "加载中...",
+    "noData": "无数据",
+    "actions": "行动",
+    "cancel": "取消",
+    "save": "保存",
+    "saving": "正在保存...",
+    "error": "发生错误",
+    "form": {
+      "addTitle": "添加新会议",
+      "editTitle": "编辑会议",
+      "addDescription": "输入新的会议信息",
+      "editDescription": "编辑会议信息",
+      "name": "会议名称",
+      "namePlaceholder": "输入会议名称",
+      "nameRequired": "会议名称为必填项",
+      "nameMaxLength": "会议名称最多 100 个字符",
+      "description": "描述",
+      "descriptionPlaceholder": "输入描述（可选）",
+      "descriptionMaxLength": "描述最多 500 个字符"
+    },
+    "table": {
+      "title": "会议列表",
+      "id": "身份证号",
+      "name": "会议名称",
+      "description": "描述",
+      "createdDate": "创建日期",
+      "createdBy": "创建者",
+      "showing": "显示 {{from}}-{{to}} / {{total}}",
+      "page": "页 {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "会议总数",
+      "activeActivityTypes": "活跃会议",
+      "newThisMonth": "本月新品"
+    },
+    "messages": {
+      "createSuccess": "会议创建成功",
+      "createError": "创建会议失败",
+      "updateSuccess": "会议更新成功",
+      "updateError": "更新会议失败",
+      "deleteSuccess": "会议删除成功",
+      "deleteError": "删除会议失败"
+    }
+  },
+  "deleteConfirm": {
+    "confirmTitle": "删除会议",
+    "confirmMessage": "您确定要删除 {{name}} 吗？"
+  },
+  "messages": {
+    "deleteSuccess": "会议删除成功",
+    "deleteError": "删除会议失败"
+  },
+  "table": {
+    "title": "会议列表",
+    "id": "身份证号",
+    "name": "会议名称",
+    "description": "描述",
+    "createdDate": "创建日期",
+    "createdBy": "创建者"
+  }
+}

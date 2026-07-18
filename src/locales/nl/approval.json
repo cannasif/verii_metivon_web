@@ -1,0 +1,88 @@
+{
+  "list": {
+    "title": "In afwachting van goedkeuringen",
+    "description": "Aan u toegewezen offertes bekijken en goedkeuren of afwijzen",
+    "empty": "Geen lopende goedkeuringen",
+    "error": "Er is een fout opgetreden bij het laden van goedkeuringen"
+  },
+  "yes": "Ja",
+  "no": "Nee",
+  "processing": "Verwerken...",
+  "detail": {
+    "title": "Offertedetail",
+    "subtitle": "Offertedetails bekijken en acties uitvoeren",
+    "tabs": {
+      "detail": "Details",
+      "history": "Geschiedenis",
+      "action": "Actie"
+    },
+    "notFound": "Citaat niet gevonden",
+    "quotationInfo": "Offerte-informatie",
+    "offerNo": "Aanbieding nr",
+    "customer": "Klant",
+    "representative": "Representatief",
+    "currency": "Valuta",
+    "offerDate": "Aanbiedingsdatum",
+    "deliveryDate": "Leveringsdatum",
+    "total": "Totaal",
+    "grandTotal": "Algemeen totaal",
+    "description": "Beschrijving",
+    "lines": "Offerteregels",
+    "productCode": "Productcode",
+    "productName": "Productnaam",
+    "quantity": "Hoeveelheid",
+    "unitPrice": "Eenheidsprijs",
+    "lineTotal": "Lijntotaal",
+    "lineGrandTotal": "Regeleindtotaal",
+    "exchangeRates": "Wisselkoersen",
+    "exchangeRate": "Beoordeel",
+    "exchangeRateDate": "Tariefdatum",
+    "isOfficial": "Officieel tarief"
+  },
+  "actions": {
+    "view": "Bekijk",
+    "approve": "Goedkeuren",
+    "reject": "Afwijzen"
+  },
+  "status": {
+    "notRequired": "Diepgang",
+    "waiting": "In afwachting van goedkeuring",
+    "approved": "Goedgekeurd",
+    "rejected": "Afgewezen",
+    "closed": "Gesloten",
+    "customerCancelled": "Geannuleerd door klant",
+    "salespersonClosedForRevision": "ERP-record gesloten door verkoper voor revisie",
+    "supersededByApprovedRevision": "Gesloten omdat een andere revisie is goedgekeurd"
+  },
+  "closedReason": "Dit record is gesloten omdat een ander record met hetzelfde aanbiedingsnummer is goedgekeurd.",
+  "statusFilterLabel": "Goedkeuringsstatus",
+  "level": {
+    "salesManager": "Verkoopmanager",
+    "regionalManager": "Regiomanager",
+    "finance": "Financiën",
+    "generalManager": "Algemeen directeur",
+    "unknown": "Onbekend"
+  },
+  "note": {
+    "label": "Let op",
+    "placeholder": "U kunt een goedkeurings-/afwijzingsnotitie toevoegen (optioneel)",
+    "maxLength": "Opmerking kan maximaal 500 tekens lang zijn"
+  },
+  "approve": {
+    "success": "Goedgekeurd",
+    "successMessage": "Offerte succesvol goedgekeurd",
+    "error": "Goedkeuringsfout",
+    "errorMessage": "Er is een fout opgetreden bij het goedkeuren van de offerte"
+  },
+  "reject": {
+    "success": "Afgewezen",
+    "successMessage": "Offerte afgewezen",
+    "error": "Afwijzingsfout",
+    "errorMessage": "Er is een fout opgetreden bij het afwijzen van de offerte"
+  },
+  "history": {
+    "empty": "Geen goedkeuringsgeschiedenis",
+    "approvedBy": "Goedgekeurd door"
+  },
+  "assignedTo": "Toegewezen gebruiker"
+}

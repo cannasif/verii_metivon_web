@@ -1,0 +1,88 @@
+{
+  "menu": "Zarządzanie typami plików",
+  "description": "Zarządzaj i organizuj typy plików",
+  "search": "Szukaj...",
+  "refresh": "Odśwież",
+  "addButton": "Dodaj nowy typ pliku",
+  "loading": "Ładowanie...",
+  "noData": "Brak danych",
+  "actions": "Transakcje",
+  "cancel": "Anuluj",
+  "save": "Zapisz",
+  "saving": "Nagrywanie...",
+  "delete": "Usuń",
+  "deleting": "Usuwanie...",
+  "deleteConfirmTitle": "Potwierdzenie usunięcia",
+  "deleteConfirmDescription": "Czy na pewno chcesz usunąć ten rekord? Tej akcji nie można cofnąć.",
+  "table": {
+    "title": "Lista typów plików",
+    "id": "Identyfikator",
+    "ruleType": "Typ reguły",
+    "customerType": "Typ klienta",
+    "salesRep": "Przedstawiciel handlowy",
+    "serialPrefix": "Prefiks seryjny",
+    "serialLength": "Długość serii",
+    "createdDate": "Data utworzenia"
+  },
+  "form": {
+    "addTitle": "Dodaj nowy typ pliku",
+    "editTitle": "Edytuj typ pliku",
+    "addDescription": "Wprowadź informacje o nowym typie pliku",
+    "editDescription": "Edytuj informacje o typie pliku",
+    "ruleType": {
+      "required": "Należy wybrać typ reguły"
+    },
+    "selectRuleType": "Wybierz typ reguły",
+    "customerType": "Typ klienta",
+    "selectCustomerType": "Wybierz typ klienta (opcjonalnie)",
+    "searchCustomerType": "Wyszukaj typ klienta...",
+    "noCustomerTypeSelected": "Nie wybrano typu klienta",
+    "salesRep": "Przedstawiciel handlowy",
+    "selectSalesRep": "Wybierz przedstawiciela handlowego (opcjonalnie)",
+    "searchSalesRep": "Poszukuję przedstawiciela handlowego...",
+    "noSalesRepSelected": "Nie wybrano przedstawiciela handlowego",
+    "serialPrefix": {
+      "required": "Wymagany jest prefiks seryjny",
+      "maxLength": "Prefiks seryjny może mieć maksymalnie 50 znaków"
+    },
+    "serialPrefixPlaceholder": "Wprowadź prefiks seryjny",
+    "serialLength": {
+      "min": "Długość serii musi wynosić co najmniej 1",
+      "max": "Długość serii może wynosić do 100"
+    },
+    "serialLengthPlaceholder": "Wprowadź długość serii",
+    "serialStart": {
+      "min": "Początek szeregowy musi mieć wartość co najmniej 0"
+    },
+    "serialStartPlaceholder": "Wprowadź wartość początkową serii",
+    "serialCurrent": {
+      "min": "Prąd szeregowy musi wynosić co najmniej 0"
+    },
+    "serialCurrentPlaceholder": "Wprowadź aktualną wartość seryjną",
+    "serialIncrement": {
+      "min": "Przyrost szeregowy musi wynosić co najmniej 1"
+    },
+    "serialIncrementPlaceholder": "Wprowadź wartość przyrostu seryjnego"
+  },
+  "totalRecords": "Łączna liczba rekordów {{count}}",
+  "advancedFilter": {
+    "columnSerialPrefix": "Prefiks seryjny",
+    "columnCustomerTypeName": "Typ klienta",
+    "columnSalesRepFullName": "Przedstawiciel handlowy",
+    "columnRuleType": "Typ reguły"
+  },
+  "messages": {
+    "createSuccess": "Typ pliku został pomyślnie utworzony",
+    "createError": "Wystąpił błąd podczas tworzenia typu pliku",
+    "updateSuccess": "Typ pliku został pomyślnie zaktualizowany",
+    "updateError": "Wystąpił błąd podczas aktualizacji typu pliku",
+    "deleteSuccess": "Typ pliku został pomyślnie usunięty",
+    "deleteError": "Wystąpił błąd podczas usuwania typu pliku"
+  },
+  "common": {
+    "delete": "Usuń"
+  },
+  "error": "Nie udało się zapisać aktywności",
+  "previous": "Poprzedni",
+  "next": "Następny"
+}

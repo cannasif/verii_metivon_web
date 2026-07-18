@@ -1,0 +1,11 @@
+export { BusinessPartnerParametersPage } from './components/BusinessPartnerParametersPage';
+export { ReceivingParametersPage } from './components/ReceivingParametersPage';
+export { TransferParametersPage } from './components/TransferParametersPage';
+export { ShippingParametersPage } from './components/ShippingParametersPage';
+export { ProcurementParametersPage } from './components/ProcurementParametersPage';
+export { SalesOrderParametersPage } from './components/SalesOrderParametersPage';
+export { PricingParametersPage } from './components/PricingParametersPage';
+export { InventoryCountParametersPage } from './components/InventoryCountParametersPage';
+export { InventoryTraceabilityParametersPage } from './components/InventoryTraceabilityParametersPage';
+export { EDocumentParametersPage } from './components/EDocumentParametersPage';
+export { AccountingParametersPage } from './components/AccountingParametersPage';

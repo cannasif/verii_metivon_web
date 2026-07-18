@@ -1,0 +1,28 @@
+{
+  "title": "Selecteer Klant",
+  "description": "Je kunt alle klanten onderscheiden aan de hand van hun ERP- en potentiële tags; gebruik gewoon het andere tabblad voor de prospectlijst.",
+  "badgeKindErp": "ERP",
+  "badgeKindPotential": "potentieel",
+  "erpCustomers": "ERP",
+  "crmCustomers": "CRM-klanten",
+  "potentialCustomers": "potentieel",
+  "allCustomers": "Allemaal",
+  "erp": "ERP",
+  "crm": "CRM",
+  "noErpCustomers": "ERP-klant niet gevonden",
+  "noCrmCustomers": "CRM-klant niet gevonden",
+  "noPotentialCustomers": "Geen potentiële klanten gevonden",
+  "noCustomers": "Klant niet gevonden",
+  "noResults": "Zoekresultaten niet gevonden",
+  "searchPlaceholder": "Zoek op naam of code...",
+  "voiceSearch": "gesproken zoekopdracht",
+  "loading": "laden",
+  "table": {
+    "type": "Typ",
+    "customerCode": "Klantcode",
+    "customerName": "Klantnaam",
+    "phone": "telefoon",
+    "city": "stad",
+    "email": "E-mail"
+  }
+}

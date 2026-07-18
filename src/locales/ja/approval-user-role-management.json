@@ -1,0 +1,53 @@
+{
+  "approvalUserRole": {
+    "menu": "承認ユーザーの役割管理",
+    "description": "承認ユーザーの役割を管理および整理する",
+    "addButton": "新しい役割の追加",
+    "searchPlaceholder": "検索...",
+    "refresh": "リフレッシュ",
+    "loading": "読み込み中...",
+    "noData": "データなし",
+    "table": {
+      "id": "ID",
+      "userFullName": "ユーザー",
+      "approvalRoleName": "承認の役割",
+      "createdDate": "作成日",
+      "createdBy": "作成者",
+      "actions": "アクション",
+      "showing": "{{from}}-{{to}} / {{total}} を表示中",
+      "page": "ページ {{current}} / {{total}}",
+      "previous": "前へ",
+      "next": "次へ",
+      "title": "承認ユーザーの役割"
+    },
+    "delete": {
+      "title": "役割の削除",
+      "confirmMessage": "このユーザー役割を削除してもよろしいですか?",
+      "confirmButton": "削除",
+      "cancelButton": "キャンセル"
+    },
+    "form": {
+      "editTitle": "承認ユーザー役割の編集",
+      "addTitle": "新しい承認ユーザー役割の追加",
+      "editDescription": "承認ユーザー役割情報の編集",
+      "addDescription": "新しい承認ユーザーの役割情報を入力します",
+      "userId": "ユーザー",
+      "selectUser": "ユーザーの選択",
+      "noUserSelected": "ユーザーが選択されていません",
+      "approvalRoleId": "承認の役割",
+      "selectApprovalRole": "承認ロールの選択",
+      "noApprovalRoleSelected": "承認ロールが選択されていません",
+      "userIdRequired": "ユーザーの選択が必要です",
+      "approvalRoleIdRequired": "承認ロールの選択が必要です",
+      "save": "保存",
+      "saving": "保存中...",
+      "cancel": "キャンセル"
+    },
+    "advancedFilter": {
+      "columnUserFullName": "ユーザー",
+      "columnApprovalRoleName": "承認の役割",
+      "columnCreatedBy": "作成者"
+    },
+    "error": "エラーが発生しました"
+  }
+}

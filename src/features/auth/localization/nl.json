@@ -1,0 +1,79 @@
+{
+  "auth": {
+    "login": {
+      "title": "AI-gestuurde bedrijfsplanning",
+      "slogan": "Beheer uw bedrijf met Metivon, niet met aannames.",
+      "branchPlaceholder": "Selecteer Filiaal",
+      "emailPlaceholder": "Zakelijke e-mail",
+      "passwordPlaceholder": "wachtwoord",
+      "rememberMe": "Onthoud mij",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "submitButton": "Inloggen",
+      "processing": "Verwerken...",
+      "sessionExpired": "Uw sessie is verlopen. Log opnieuw in.",
+      "comingSoon": "binnenkort",
+      "loginError": "Er is een fout opgetreden tijdens het inloggen.",
+      "capsLockOn": "Capslock staat aan",
+      "animationOn": "Animatie openen",
+      "animationOff": "Animatie sluiten",
+      "eyebrow": "AI-GESTUURDE ERP",
+      "heroTitle": "Elke bedrijfsstroom in één",
+      "heroDescription": "Beheer accounts, voorraad, magazijn, ontvangst, verzending en financiën vanuit één operationele kern.",
+      "welcomeEyebrow": "VEILIGE WERKOMGEVING",
+      "welcomeTitle": "Aanmelden bij Metivon",
+      "welcomeDescription": "Selecteer uw vestiging en open veilig uw bedrijfsomgeving.",
+      "modules": {
+        "accounts": "Accountbeheer",
+        "inventory": "Voorraadbeheer",
+        "warehouse": "Magazijn & Locaties",
+        "shipping": "Verzending"
+      },
+      "live": "Live",
+      "secureWorkspace": "Alle activiteiten in één veilige gegevensstroom",
+      "defaultBranch": "Standaard",
+      "showPassword": "Wachtwoord tonen",
+      "hidePassword": "Wachtwoord verbergen",
+      "secureLogin": "Versleutelde en veilige sessie"
+    },
+    "forgotPassword": {
+      "title": "Ik ben mijn wachtwoord vergeten",
+      "description": "Voer uw e-mailadres in om uw wachtwoord opnieuw in te stellen. Wij sturen u een link voor het opnieuw instellen van uw wachtwoord.",
+      "emailPlaceholder": "E-mailadres",
+      "submitButton": "Verzoek om wachtwoord opnieuw instellen indienen",
+      "backToLogin": "Keer terug naar de startpagina",
+      "processing": "Verwerken...",
+      "logoAlt": "Applicatie-logo"
+    },
+    "resetPassword": {
+      "title": "Wachtwoord opnieuw instellen",
+      "newPasswordPlaceholder": "Nieuw wachtwoord",
+      "confirmPasswordPlaceholder": "Wachtwoord herhalen",
+      "submitButton": "Wachtwoord opnieuw instellen",
+      "processing": "Verwerken...",
+      "invalidToken": "Ongeldig of ontbrekend token. Controleer nogmaals de link voor het opnieuw instellen van het wachtwoord.",
+      "tokenNotFound": "Token niet gevonden",
+      "successRedirect": "Uw wachtwoord is succesvol opnieuw ingesteld. U wordt doorverwezen naar het inlogscherm...",
+      "failed": "Wachtwoord opnieuw instellen is mislukt.",
+      "error": "Er is een fout opgetreden tijdens het proces voor het opnieuw instellen van het wachtwoord."
+    },
+    "changePassword": {
+      "success": "Het wachtwoord is succesvol gewijzigd.",
+      "error": "Het wachtwoord kon niet worden gewijzigd."
+    },
+    "validation": {
+      "emailRequired": "E-mail is vereist",
+      "emailInvalid": "Voer een geldig e-mailadres in",
+      "passwordRequired": "Wachtwoord is vereist",
+      "branchRequired": "Brancheselectie is verplicht",
+      "passwordMinLength": "Wachtwoord moet minimaal 8 tekens lang zijn",
+      "tokenRequired": "Token is verplicht",
+      "newPasswordMinLength": "Wachtwoord moet minimaal 6 tekens lang zijn",
+      "confirmPasswordRequired": "Wachtwoordherhaling is vereist",
+      "passwordsMismatch": "Wachtwoorden komen niet overeen",
+      "currentPasswordRequired": "Huidig wachtwoord is vereist",
+      "newPasswordMaxLength": "Het nieuwe wachtwoord mag maximaal 100 tekens lang zijn",
+      "newPasswordSameAsCurrent": "Het nieuwe wachtwoord mag niet hetzelfde zijn als het bestaande wachtwoord",
+      "requiredFieldsNotFilled": "Verplichte velden zijn niet ingevuld."
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "顧客の選択",
+  "description": "ERP と潜在的なタグによってすべての顧客を区別できます。見込み客リストには別のタブを使用してください。",
+  "badgeKindErp": "ERP",
+  "badgeKindPotential": "可能性",
+  "erpCustomers": "ERP",
+  "crmCustomers": "CRM Customers",
+  "potentialCustomers": "可能性",
+  "allCustomers": "すべて",
+  "erp": "ERP",
+  "crm": "CRM",
+  "noErpCustomers": "ERP customer not found",
+  "noCrmCustomers": "CRM customer not found",
+  "noPotentialCustomers": "潜在的な顧客が見つかりませんでした",
+  "noCustomers": "顧客が見つかりません",
+  "noResults": "検索結果が見つかりませんでした",
+  "searchPlaceholder": "名前またはコードで検索...",
+  "voiceSearch": "音声検索",
+  "loading": "読み込み中",
+  "table": {
+    "type": "種類",
+    "customerCode": "顧客コード",
+    "customerName": "顧客名",
+    "phone": "電話",
+    "city": "市",
+    "email": "電子メール"
+  }
+}

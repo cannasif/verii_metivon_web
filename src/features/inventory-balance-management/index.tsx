@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{balanceConfig}from'@/features/erp-operation-management/configs';export function InventoryBalanceManagementPage(){return <ErpPagedManagementPage config={balanceConfig}/>}

@@ -1,0 +1,511 @@
+{
+  "categoryDefinitions": {
+    "title": "Definicje kategorii",
+    "description": "Tutaj możesz rozpocząć zarządzanie drzewem kategorii i zapasami powiązanymi z kategoriami dla katalogów B2B i B2C.",
+    "guidedTitle": "Zarządzaj strukturą kategorii w 3 krokach",
+    "hierarchyBlueprintTitle": "Zalecana konfiguracja kategorii korporacyjnej",
+    "hierarchyBlueprintDescription": "Jeśli zbudujesz drzewo kategorii według ustalonej logiki, będzie ono bardziej zrozumiałe dla użytkownika, a dopasowywanie produktów przebiegnie sprawniej.",
+    "hierarchyExampleLabel": "przepływ próbki",
+    "hierarchyExampleValue": "Telefony > Telefony z przyciskiem > iPhone > Seria 17 > Lista produktów",
+    "easyModeTitle": "Nie musisz się zastanawiać, co tu zrobić",
+    "summaryGuideTitle": "Pokazuję ci właściwy następny krok",
+    "createCatalogTitle": "Utwórz nowy katalog",
+    "createCatalogDescription": "Dodaj nową definicję katalogu dla przepływów B2B, B2C lub niestandardowych.",
+    "editCatalogTitle": "Edytuj katalog",
+    "editCatalogDescription": "Zaktualizuj nazwę, typ i sortowanie wybranego katalogu.",
+    "createCategoryTitle": "Dodaj kategorię",
+    "createCategoryDescription": "Utwórz nową kategorię pod {{target}}.",
+    "editCategoryTitle": "Edytuj kategorię",
+    "editCategoryDescription": "Zaktualizuj informacje o kategorii dla {{target}}.",
+    "createCategoryTarget": "Poziom do połączenia",
+    "deleteCatalogConfirm": "Czy na pewno chcesz usunąć katalog {{name}}?",
+    "deleteCategoryConfirm": "Czy na pewno chcesz usunąć kategorię {{name}}?",
+    "deleteStockConfirm": "Czy na pewno chcesz usunąć ten link do akcji?",
+    "createRuleTitle": "Dodaj regułę",
+    "createRuleDescription": "Utwórz regułę automatycznego łączenia dla kategorii {{category}}.",
+    "editRuleTitle": "Edytuj regułę",
+    "editRuleDescription": "Zaktualizuj informacje o regule dla kategorii {{category}}.",
+    "deleteRuleConfirm": "Czy na pewno chcesz usunąć regułę {{name}}?",
+    "noRules": "Nie ma jeszcze zdefiniowanych reguł dla tej kategorii.",
+    "rulePriority": "Priorytet {{priority}}",
+    "catalogsTitle": "Katalogi",
+    "catalogsDescription": "Najpierw wybierz katalog, z którym chcesz pracować.",
+    "catalogDescriptionFallback": "Do tego katalogu nie wprowadzono jeszcze żadnego opisu.",
+    "catalogHelperText": "W skrócie: wybierz katalog po lewej stronie, przejdź do kategorii pośrodku, zarządzaj stanami magazynowymi i regułami po prawej stronie.",
+    "treeTitle": "Drzewo kategorii",
+    "treeDescription": "Przejdź od kategorii do podkategorii, podobnie jak Trendyol i Hepsiburada.",
+    "treeReorderHint": "Możesz sortować, przeciągając i upuszczając kategorie na tym samym poziomie.",
+    "chooseCatalogFirst": "Po pierwsze, wybierz katalog z lewej strony. Zarządzanie kategoriami nie rozpoczyna się bez wybrania katalogu.",
+    "stocksTitle": "Kategoria Akcje",
+    "stocksDescription": "Po wybraniu kategorii liści zostaną tam wymienione powiązane akcje.",
+    "stocksDescriptionSelected": "Akcje powiązane z kategorią {{category}}",
+    "stocksGuideTitle": "Co robi to pole?",
+    "stocksGuideDescription": "Tutaj określasz, które produkty będą należeć do wybranej przez Ciebie kategorii. Jeśli chcesz, możesz łączyć akcje jeden po drugim.",
+    "stocksHelperText": "Prosta logika: najpierw wybierz kategorię, następnie naciśnij przycisk „Połącz magazyn” i wybierz produkt z rozwijanej listy.",
+    "favoritesGuideTitle": "Co robią ulubieńcy?",
+    "favoritesGuideDescription": "Pokazuje akcje, które lubisz w wybranej kategorii, na liście szybkiego dostępu opartej na użytkownikach. Ulubiony asortyment nie łączy się z ulubieńcem kategorii.",
+    "favoritesHelperText": "{{count}} to Twoja ulubiona akcja w tej kategorii. Możesz usunąć go z ulubionych, ponownie naciskając ikonę serca.",
+    "rulesGuideTitle": "Do czego służy ekran reguł?",
+    "rulesGuideDescription": "Jeśli nie chcesz łączyć jeden po drugim produktów tego samego typu, możesz tutaj zdefiniować regułę. Na przykład, jeśli Code1 = CAM, możesz powiedzieć, że powinien należeć do tej kategorii.",
+    "rulesHelperText": "Najpierw dodaj regułę. Następnie zobacz, co się stanie z „Regułami podglądu”. Jeśli to prawda, automatycznie połącz za pomocą opcji „Zastosuj reguły”.",
+    "selectionTitle": "status wyborczy",
+    "selectionDescription": "Z prawego panelu możesz szybko zobaczyć wybrany katalog, kategorię i powiązane akcje.",
+    "selectionCatalog": "katalog",
+    "selectionCategory": "Wybrana kategoria",
+    "selectionCurrentLevel": "Twój obecny poziom",
+    "selectionPath": "droga",
+    "selectionTotalStocks": "zapasy wiązane",
+    "selectionValueEmpty": "Jeszcze nie wybrany",
+    "nextStepTitle": "Zalecany następny krok",
+    "nextStepChooseCatalog": "Najpierw wybierz katalog z lewego panelu.",
+    "nextStepBrowseTree": "Zacznij od głównej kategorii w środkowym panelu i przejdź do podpodziałów.",
+    "nextStepSelectLeaf": "Wybierz ekstremalną kategorię, aby zobaczyć listę akcji.",
+    "nextStepReviewStocks": "Sprawdź akcje powiązane z wybraną kategorią i zweryfikuj poprawność dopasowania.",
+    "stepCatalogTitle": "Wybierz katalog",
+    "stepCatalogDescription": "Określ, czy będziesz pracować w katalogach B2B, B2C, czy specjalnych.",
+    "stepTreeTitle": "Przesuń się w górę drzewa",
+    "stepTreeDescription": "Kliknij kategorię główną, podkategorię i podpodziały.",
+    "stepStocksTitle": "Sprawdź zapasy",
+    "stepStocksDescription": "Po wybraniu kategorii końcowej w prawym panelu zobaczysz powiązane zapasy i zestawienia kodów ERP.",
+    "ready": "Gotowy",
+    "pending": "czekanie",
+    "openBranchAction": "Otwórz podkategorie",
+    "selectLeafAction": "Wybierz tę kategorię",
+    "root": "korzeń",
+    "leaf": "latać",
+    "branch": "oddział",
+    "treeLevelLabel": "Poziom {{level}}",
+    "noCatalogs": "Nie ma jeszcze zdefiniowanego katalogu.",
+    "noCategories": "Na tym poziomie nie ma żadnych kategorii.",
+    "noStocks": "Brak akcji powiązanych z tą kategorią.",
+    "noFavorites": "W tej kategorii nie ma jeszcze ulubionych akcji.",
+    "selectLeafHint": "Wybierz ekstremalną kategorię, aby wyświetlić akcje.",
+    "stockSearchPlaceholder": "Wyszukaj według kodu giełdowego lub nazwy giełdowej...",
+    "favoriteSearchPlaceholder": "Szukaj w ulubionych według kodu magazynowego lub nazwy...",
+    "primaryBadge": "Kategoria główna",
+    "tabs": {
+      "summary": "Pomoc",
+      "stocks": "Dodaj zapasy",
+      "favorites": "ulubione",
+      "rules": "Dodaj regułę",
+      "tips": "Użycie"
+    },
+    "catalogTypes": {
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "dealer": "Sprzedawca",
+      "custom": "prywatny"
+    },
+    "tips": {
+      "catalogTitle": "1. Najpierw wybierz odpowiedni katalog",
+      "catalogDescription": "Nawet jeśli na stronach B2B i B2C znajdują się te same nazwy kategorii, w różnych katalogach można utworzyć różne widoki.",
+      "branchTitle": "2. Oddział służy do nawigacji po kategoriach",
+      "branchDescription": "Kategorie oddziałów nie są ostatecznym punktem wyboru, ale służą do przeniesienia użytkownika do odpowiedniego podpodziału.",
+      "leafTitle": "3. Sprawdź asortyment w skrajnych kategoriach",
+      "leafDescription": "Lista akcji ma największy sens w kategorii skrajnej; dlatego zaleca się dokonanie ostatecznej selekcji w kategorii ekstremalnej.",
+      "exampleTitle": "4. Utrzymuj stabilną hierarchię korporacyjną",
+      "exampleDescription": "Zalecana struktura: Kategoria główna > Podkategoria > Marka > Seria > Produkty. Dzięki temu zespół używa tego samego języka podczas otwierania nowych rekordów, a wyniki wyszukiwania są bardziej przewidywalne."
+    },
+    "hierarchyStages": {
+      "root": {
+        "title": "Kategoria główna",
+        "description": "Reprezentuje obszar biznesowy najwyższego poziomu. Przykład: telefony"
+      },
+      "subcategory": {
+        "title": "Podkategoria",
+        "description": "Wydziela grupę produktową. Przykład: telefony z przyciskami"
+      },
+      "brand": {
+        "title": "Marka",
+        "description": "Służy do podziału marki lub producenta. Przykład: iPhone"
+      },
+      "series": {
+        "title": "seria",
+        "description": "W tym miejscu zachowane jest rozróżnienie na podstawie rodziny modeli lub serii. Przykład: seria 17"
+      },
+      "products": {
+        "title": "Produkty",
+        "description": "Ostatnim poziomem powinna być kategoria liścia; Tutaj należy wykonać wiązanie zapasów."
+      }
+    },
+    "actions": {
+      "newCatalog": "Nowy katalog",
+      "createCatalog": "Utwórz katalog",
+      "addRootCategory": "Dodaj kategorię główną",
+      "addSubCategory": "Dodaj podkategorię",
+      "createCategory": "Utwórz kategorię",
+      "uploadCategoryImage": "Prześlij obraz",
+      "uploadingCategoryImage": "Ładowanie obrazu",
+      "removeCategoryImage": "Usuń obraz",
+      "addStock": "Zapas łączy",
+      "removeStock": "Usuń łącze",
+      "addFavorite": "dodaj do ulubionych",
+      "removeFavorite": "Usuń z ulubionych",
+      "addRule": "Dodaj regułę",
+      "createRule": "Utwórz regułę",
+      "previewRules": "Podgląd reguł",
+      "previewingRules": "Przygotowanie podglądu",
+      "applyRules": "Zastosuj reguły",
+      "applyingRules": "Obowiązują zasady",
+      "importFromRiiStock": "Utwórz z RII_STOK",
+      "previewingStockHierarchy": "Załamanie czytelnicze",
+      "refreshStockHierarchyPreview": "Odśwież podgląd",
+      "applyStockHierarchy": "Utwórz drzewo katalogowe",
+      "applyingStockHierarchy": "Tworzenie drzewa katalogowego",
+      "addCategoryFavorite": "Dodaj kategorię do ulubionych",
+      "removeCategoryFavorite": "Usuń kategorię z ulubionych"
+    },
+    "messages": {
+      "catalogCreateSuccess": "Katalog został pomyślnie utworzony.",
+      "catalogCreateError": "Nie można utworzyć katalogu.",
+      "catalogUpdateSuccess": "Katalog został pomyślnie zaktualizowany.",
+      "catalogUpdateError": "Nie udało się zaktualizować katalogu.",
+      "catalogDeleteSuccess": "Katalog został pomyślnie usunięty.",
+      "catalogDeleteError": "Nie można usunąć katalogu.",
+      "rootCategoryCreateSuccess": "Kategoria główna została utworzona pomyślnie.",
+      "subCategoryCreateSuccess": "Podkategoria została utworzona pomyślnie.",
+      "categoryCreateError": "Nie można utworzyć kategorii.",
+      "categoryUpdateSuccess": "Kategoria została pomyślnie zaktualizowana.",
+      "categoryUpdateError": "Nie udało się zaktualizować kategorii.",
+      "categoryReorderSuccess": "Zaktualizowano kolejność kategorii.",
+      "categoryReorderError": "Nie można zaktualizować kolejności kategorii.",
+      "categoryDeleteSuccess": "Kategoria została pomyślnie usunięta.",
+      "categoryDeleteError": "Nie można usunąć kategorii.",
+      "stockAssignSuccess": "Akcje zostały pomyślnie powiązane z kategorią.",
+      "stockAssignError": "Nie udało się powiązać akcji z kategorią.",
+      "stockUnassignSuccess": "Usunięto link do magazynu.",
+      "stockUnassignError": "Nie można usunąć łącza giełdowego.",
+      "favoriteAddSuccess": "Zdjęcie dodane do ulubionych.",
+      "favoriteRemoveSuccess": "Zdjęcie usunięte z ulubionych.",
+      "favoriteToggleError": "Nie można zaktualizować statusu ulubionego.",
+      "ruleCreateSuccess": "Reguła została pomyślnie utworzona.",
+      "ruleCreateError": "Nie można utworzyć reguły.",
+      "ruleUpdateSuccess": "Reguła została pomyślnie zaktualizowana.",
+      "ruleUpdateError": "Nie udało się zaktualizować reguły.",
+      "ruleDeleteSuccess": "Reguła została pomyślnie usunięta.",
+      "ruleDeleteError": "Nie można usunąć reguły.",
+      "rulePreviewError": "Nie udało się uzyskać podglądu reguły.",
+      "ruleApplySuccess": "Zasady zostały pomyślnie wdrożone.",
+      "ruleApplyError": "Nie można było zastosować zasad.",
+      "stockHierarchyPreviewError": "Nie można uzyskać podglądu zestawienia zapasów.",
+      "stockHierarchyApplySuccess": "Z podziału RII_STOK utworzono drzewo katalogowe.",
+      "stockHierarchyApplyError": "Nie można utworzyć drzewa katalogów z zestawienia RII_STOK.",
+      "categoryFavoriteAddSuccess": "Kategoria dodana do ulubionych.",
+      "categoryFavoriteRemoveSuccess": "Kategoria usunięta z ulubionych."
+    },
+    "stockHierarchyImport": {
+      "title": "Utwórz katalog z zestawienia RII_STOK",
+      "description": "Konwertuje sekwencję Group Code > Code1 > Code2 > Code3 na drzewo katalogowe. Podobnie jak w przypadku logiki Trendyol/Sahibinden, użytkownik po każdym kliknięciu przechodzi do niższego zestawienia i widzi akcje na ostatnim poziomie.",
+      "options": {
+        "includeCode1": {
+          "title": "Uwzględnij poziom kodu 1",
+          "description": "Otwiera pierwszy podział w obszarze Kod grupy. Np.: Benzyna/Diesel."
+        },
+        "includeCode2": {
+          "title": "Uwzględnij poziom Code2",
+          "description": "Otwiera drugi podział w obszarze Code1. Np.: ręczny/automatyczny."
+        },
+        "includeCode3": {
+          "title": "Uwzględnij poziom Code3",
+          "description": "Otwiera trzeci podział w ramach Code2. W przypadku pustych zapasów najgłębiej zajęty poziom jest kategorią skrajną."
+        },
+        "assignStocks": {
+          "title": "Połącz akcje z ostatnim poziomem",
+          "description": "Tworząc drzewo kategorii, automatycznie łączy akcje z ich najgłębszym podziałem."
+        }
+      },
+      "preview": {
+        "sourceStock": "Przeczytaj zapasy",
+        "category": "Kategoria ogółem",
+        "newCategory": "nowa kategoria",
+        "newStockAssignment": "Nowy link do akcji",
+        "group": "Grupa: {{count}}",
+        "code1": "Kod 1: {{count}}",
+        "code2": "Kod 2: {{count}}",
+        "code3": "Kod 3: {{count}}",
+        "samples": "Sposoby dawania przykładów",
+        "noSamples": "Nie znaleziono podziału próbki."
+      }
+    },
+    "rulePreviewSummaryTitle": "Podsumowanie podglądu reguł",
+    "rulePreviewSummary": {
+      "matched": "Pasujący asortyment: {{count}}",
+      "created": "Nowym łączem będzie: {{count}}",
+      "updated": "Link do aktualizacji: {{count}}",
+      "skipped": "Rejestr chroniony ręcznie: {{count}}"
+    },
+    "rulePreviewListTitle": "Podgląd próbek",
+    "rulePreviewListEmpty": "Nie znaleziono przykładowych dopasowań do podglądu.",
+    "rulePreviewMatchedRule": "Reguła dopasowania: {{rule}} Priorytet {{priority}}",
+    "rulePreviewActions": {
+      "create": "Nowe połączenie",
+      "update": "Link zostanie zaktualizowany",
+      "skip": "Ręka zachowana"
+    },
+    "ruleApplySummaryTitle": "Podsumowanie egzekwowania zasad",
+    "ruleApplySummary": {
+      "matched": "Pasujący asortyment: {{count}}",
+      "created": "Nowe łącze: {{count}}",
+      "updated": "Zaktualizowany link: {{count}}",
+      "skipped": "Rejestr chroniony ręcznie: {{count}}"
+    },
+    "form": {
+      "catalogName": "Nazwa katalogu",
+      "catalogNamePlaceholder": "Przykład: Katalog główny B2B",
+      "catalogCode": "kod katalogowy",
+      "catalogCodePlaceholder": "Np.: B2B_MAIN",
+      "catalogType": "Typ katalogu",
+      "branchCode": "Kod oddziału",
+      "branchCodePlaceholder": "opcjonalne",
+      "sortOrder": "Sortuj według",
+      "description": "Opis",
+      "descriptionPlaceholder": "Wyjaśnij krótko tę definicję, aby inni menedżerowie mogli ją zrozumieć.",
+      "categoryName": "Nazwa kategorii",
+      "categoryNamePlaceholder": "Przykład: systemy szklane",
+      "categoryCode": "Kod kategorii",
+      "categoryCodePlaceholder": "Np.: CAM_SISTEMLERI",
+      "nodeType": "Typ kategorii",
+      "nodeTypeBranchHelp": "Gałąź służy do nawigacji kategorii i otwierania podpodziałów. Nie podłączaj produktów bezpośrednio na tym poziomie.",
+      "nodeTypeLeafHelp": "Kategoria ekstremalna jest ostatecznym punktem wyboru. Mapowanie zapasów i lista produktów powinny być utrzymywane na tym poziomie.",
+      "visualPreset": "Temat wizualny",
+      "visualPresetPlaceholder": "Wybierz motyw, wyszukując",
+      "visualPresetSearchPlaceholder": "Szukaj tematów...",
+      "visualPresetEmpty": "Nie znaleziono odpowiedniego tematu.",
+      "visualPresetHelp": "Nie przesyłasz zdjęć z zewnątrz. Na podstawie tego wyboru system tworzy własny widok kategorii.",
+      "categoryImage": "Obraz kategorii",
+      "categoryImageHelp": "Jeśli chcesz, możesz wgrać do systemu specjalny obraz. Jeśli go prześlesz, ten obraz zostanie użyty zamiast wstępnie ustawionej ikony na karcie kategorii.",
+      "ruleName": "Nazwa reguły",
+      "ruleCode": "kod reguły",
+      "stockAttribute": "obszar zapasów",
+      "operator": "operatora",
+      "ruleValue": "Wartość reguły",
+      "ruleValuePlaceholder": "Np. SZKŁO lub PROFIL, AKCESORIA",
+      "ruleValueDropdownPlaceholder": "Wybierz spośród gotowych ustawień wstępnych",
+      "ruleValueSearchPlaceholder": "Wyszukaj podział ERP...",
+      "ruleValueLoading": "Ładowanie wartości...",
+      "ruleValueEmpty": "Nie znaleziono odpowiedniej wartości dla tego pola.",
+      "ruleValueDropdownHelp": "System wyświetla rzeczywiste wartości ERP w wybranym obszarze magazynowym. Bezpieczniej jest wybrać go tutaj, zamiast go wpisywać.",
+      "ruleValueInListHelp": "Możesz wybrać więcej niż jedną wartość w operatorze var na liście. Wybierz powyżej, aby dodać, kliknij tag, aby usunąć.",
+      "ruleValueInListEmpty": "Nie ma jeszcze żadnej wartości dodanej.",
+      "ruleValueManualHelp": "Operator ten działa z dowolnym tekstem. Wpisz tutaj regułę początkową, dołączaną lub końcową.",
+      "ruleValueTopMatchesTitle": "Najczęściej występujące wartości w systemie",
+      "ruleValueTopMatchesSubtitle": "Możesz kliknąć i szybko wybrać",
+      "ruleValueTopMatchesEmpty": "Nie znaleziono żadnych zaległych wartości dla tego pola.",
+      "priority": "priorytet"
+    },
+    "visualPreviewTitle": "Widok kategorii",
+    "visualPreviewFallback": "Podgląd kategorii",
+    "visualPresets": {
+      "general": {
+        "label": "Generał"
+      },
+      "glass": {
+        "label": "szkło"
+      },
+      "profile": {
+        "label": "Profil"
+      },
+      "accessory": {
+        "label": "akcesoria"
+      },
+      "service": {
+        "label": "obsługa"
+      },
+      "logistics": {
+        "label": "logistyka"
+      },
+      "machinery": {
+        "label": "maszyna"
+      },
+      "electronics": {
+        "label": "elektronika"
+      },
+      "security": {
+        "label": "Bezpieczeństwo"
+      },
+      "lighting": {
+        "label": "oświetlenie"
+      },
+      "construction": {
+        "label": "konstrukcja"
+      },
+      "furniture": {
+        "label": "meble"
+      },
+      "hardware": {
+        "label": "sprzęt"
+      },
+      "automation": {
+        "label": "automatyzacja"
+      },
+      "energy": {
+        "label": "Energia"
+      },
+      "office": {
+        "label": "biuro"
+      },
+      "textile": {
+        "label": "tekstylny"
+      },
+      "chemical": {
+        "label": "chemiczny"
+      },
+      "outdoor": {
+        "label": "Na zewnątrz"
+      },
+      "cooling": {
+        "label": "chłodzenie"
+      },
+      "heating": {
+        "label": "ogrzewanie"
+      },
+      "plumbing": {
+        "label": "hydraulika"
+      },
+      "decoration": {
+        "label": "dekoracja"
+      },
+      "packaging": {
+        "label": "opakowanie"
+      },
+      "automotive": {
+        "label": "motoryzacyjna"
+      },
+      "agriculture": {
+        "label": "rolnictwo"
+      },
+      "medical": {
+        "label": "medyczny"
+      },
+      "pharmacy": {
+        "label": "apteka"
+      },
+      "cosmetics": {
+        "label": "kosmetyki"
+      },
+      "food": {
+        "label": "jedzenie"
+      },
+      "beverage": {
+        "label": "napój"
+      },
+      "cleaning": {
+        "label": "sprzątanie"
+      },
+      "education": {
+        "label": "Edukacja"
+      },
+      "finance": {
+        "label": "Finanse"
+      },
+      "insurance": {
+        "label": "Ubezpieczenie"
+      },
+      "real-estate": {
+        "label": "nieruchomości"
+      },
+      "tourism": {
+        "label": "turystyka"
+      },
+      "hospitality": {
+        "label": "zakwaterowanie"
+      },
+      "restaurant": {
+        "label": "restauracja"
+      },
+      "ecommerce": {
+        "label": "Handel elektroniczny"
+      },
+      "retail": {
+        "label": "Detal"
+      },
+      "wholesale": {
+        "label": "hurtowo"
+      },
+      "manufacturing": {
+        "label": "Produkcja"
+      },
+      "mining": {
+        "label": "górnictwo"
+      },
+      "marine": {
+        "label": "morski"
+      },
+      "aviation": {
+        "label": "lotnictwo"
+      },
+      "telecom": {
+        "label": "telekomunikacja"
+      },
+      "software": {
+        "label": "oprogramowanie"
+      },
+      "data-center": {
+        "label": "Centrum danych"
+      },
+      "media": {
+        "label": "Media"
+      },
+      "printing": {
+        "label": "drukarnia"
+      },
+      "sports": {
+        "label": "sport"
+      },
+      "baby-kids": {
+        "label": "Dziecko i dziecko"
+      },
+      "pet": {
+        "label": "zwierzak"
+      },
+      "jewelry": {
+        "label": "biżuteria"
+      },
+      "luxury": {
+        "label": "luksus"
+      },
+      "stationery": {
+        "label": "artykuły papiernicze"
+      },
+      "laboratory": {
+        "label": "laboratorium"
+      },
+      "recycling": {
+        "label": "Recykling"
+      },
+      "defense": {
+        "label": "obrona"
+      }
+    },
+    "ruleAttributes": {
+      "groupCode": "Kod grupy",
+      "groupName": "Nazwa grupy",
+      "code1": "Kod 1",
+      "code1Name": "Kod 1 Nazwa",
+      "code2": "Kod 2",
+      "code2Name": "Kod 2 Nazwa",
+      "code3": "Kod 3",
+      "code3Name": "Kod 3 Nazwa",
+      "code4": "Kod 4",
+      "code4Name": "Kod 4 Nazwa",
+      "code5": "Kod 5",
+      "code5Name": "Kod 5 Nazwa",
+      "manufacturerCode": "Kod producenta",
+      "erpStockCode": "Kod giełdowy ERP",
+      "stockName": "Nazwa akcji"
+    },
+    "ruleOperators": {
+      "equals": "równa się",
+      "contains": "Zawiera",
+      "startsWith": "Zaczyna się od",
+      "endsWith": "kończy się",
+      "inList": "Jest na liście"
+    },
+    "meta": {
+      "group": "grupa",
+      "code1": "Kod 1",
+      "code2": "Kod 2",
+      "code3": "Kod 3"
+    }
+  }
+}

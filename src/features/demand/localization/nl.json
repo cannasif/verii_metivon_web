@@ -1,0 +1,346 @@
+{
+  "loading": "Laden...",
+  "saving": "Opnemen...",
+  "error": "Fout",
+  "noData": "Geen gegevens gevonden",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "actions": "Transacties",
+  "edit": "Bewerken",
+  "delete": "Verwijderen",
+  "back": "Terug",
+  "refresh": "Vernieuwen",
+  "select": "Selecteer",
+  "yes": "Ja",
+  "add": "Toevoegen",
+  "backToQuotations": "Terug naar Verzoeken",
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "confirm": "Bevestig",
+  "saveAndApply": "Opslaan en toepassen",
+  "notes": {
+    "title": "Claimnotities",
+    "description": "Voeg interne opmerkingen voor het verzoek toe en werk deze bij.",
+    "placeholder": "Voer verzoeknotitie in",
+    "noteLabel": "Opmerking aanvragen",
+    "addLineTooltip": "Voeg commentaarregel toe",
+    "linesHint": "Elke regel verschijnt afzonderlijk in PDF- en documentnotities.",
+    "removeLine": "rij verwijderen",
+    "pageLabel": "Pagina {{current}} / {{total}}",
+    "saving": "Notities opslaan...",
+    "notesTooltipText": "Dit zijn de verzend-/factuurnota's die betrekking hebben op de gehele aanvraag. Bij overdracht naar ERP wordt de offerte/bestelling opeenvolgend vastgelegd in de bovenste velden van Annotatie 1-5; Opmerking 2 gaat naar Netsis-annotatie 2.",
+    "maxLengthError": "Het memoveld kan maximaal 100 tekens lang zijn."
+  },
+  "list": {
+    "revise": "Herzien",
+    "showing": "{{total}} wordt uit de record weergegeven als {{from}}-{{to}}",
+    "title": "Lijst met aanvragen",
+    "description": "Bekijk en beheer alle aanvragen",
+    "detail": "Details",
+    "createNew": "Nieuw verzoek aanmaken",
+    "searchPlaceholder": "Zoek op aanvraagnummer of klantnaam...",
+    "cardTitle": "Lijst aanvragen",
+    "refresh": "Vernieuwen",
+    "actions": "Transacties",
+    "id": "Identiteitskaart",
+    "offerNo": "Verzoeknummer",
+    "revisionNo": "Revisienummer",
+    "customer": "klant",
+    "customerCode": "Huidige code",
+    "representative": "Verkoopvertegenwoordiger",
+    "offerDate": "Datum van aanvraag",
+    "validUntil": "Geldigheid",
+    "currency": "Valuta",
+    "grandTotal": "Algemeen totaal",
+    "status": "Status"
+  },
+  "detail": {
+    "title": "Details aanvragen",
+    "subtitle": "Bekijk en beheer aanvraagdetails.",
+    "notFound": "Geen verzoek gevonden.",
+    "revisionNo": "Revisienummer",
+    "tabDetail": "Details",
+    "tabApprovalFlow": "Goedkeuringsstroom",
+    "tabReport": "Rapporteer"
+  },
+  "create": {
+    "title": "Nieuw verzoek aanmaken",
+    "submit": "Aanvraag opslaan en ter goedkeuring verzenden",
+    "success": "Verzoek succesvol aangemaakt",
+    "successMessage": "Het verzoek is naar het goedkeuringsproces verzonden.",
+    "error": "Verzoek kon niet worden gemaakt",
+    "errorMessage": "Er is een fout opgetreden bij het maken van de aanvraag.",
+    "subtitle": "Vul de aanvraaggegevens in en sla op.",
+    "deliveryDateRequired": "Leveringsdatum is verplicht.",
+    "paymentTypeRequired": "Betaalmethode is vereist.",
+    "invalidCurrency": "Ongeldige valuta.",
+    "validationError": "Controleer de verplichte velden.",
+    "notesMaxLengthError": "Elke notitie kan maximaal 400 tekens lang zijn."
+  },
+  "header": {
+    "title": "Informatie aanvragen",
+    "customer": "klant",
+    "selectCustomer": "Selecteer klant",
+    "shippingAddress": "Afleveradres",
+    "selectShippingAddress": "Kies afleveradres",
+    "representative": "Verkoopvertegenwoordiger",
+    "selectRepresentative": "Selecteer een vertegenwoordiger",
+    "offerType": "Verzoektype",
+    "selectOfferType": "Selecteer verzoektype",
+    "currency": "Valuta",
+    "selectCurrency": "Selecteer valuta",
+    "showExchangeRates": "Wisselkoersen weergeven",
+    "offerDate": "Datum van aanvraag",
+    "deliveryDate": "Leveringsdatum",
+    "paymentType": "Betalingstype",
+    "selectPaymentType": "Selecteer betalingstype",
+    "description": "Beschrijving",
+    "notes": "Opmerkingen",
+    "descriptionErpTooltip": "Het is de algemene omschrijving die u wilt dat de productie ziet voor de gehele aanvraag. Wanneer het als aanbieding/bestelling naar ERP wordt verzonden, wordt het vastgelegd in het veld Netsis topbeschrijving (FatUst.Description).",
+    "descriptionPlaceholder": "Voer een beschrijving in",
+    "offerNo": "Verzoeknummer",
+    "offerNoPlaceholder": "Verzoeknummer",
+    "currencyChange": {
+      "title": "Valutawijziging",
+      "message": "Wanneer de valuta verandert, worden alle bestaande rijen opnieuw berekend op basis van de nieuwe valuta. Keurt u deze transactie goed?"
+    },
+    "deliveryMethod": "Leveringsmethode",
+    "documentDetail": "Documentbeschrijving",
+    "ozelKod1": "Speciale code 1",
+    "ozelKod1Placeholder": "Selecteer Speciale code 1",
+    "ozelKod2": "Speciale code 2",
+    "ozelKod2Placeholder": "Selecteer Speciale code 2",
+    "specialCodeSearchPlaceholder": "Zoek naar speciale code..."
+  },
+  "lines": {
+    "title": "Aanvraaglijnen",
+    "add": "Rij toevoegen",
+    "empty": "Er zijn nog geen rijen toegevoegd",
+    "emptyDescription": "Gebruik de knop 'Voorraad selecteren' of 'Regel toevoegen' om aanvraagregels toe te voegen",
+    "itemCount": "{{count}} rij",
+    "editLine": "Rij bewerken",
+    "selectStock": "Selecteer Voorraad",
+    "selectProduct": "Selecteer Product",
+    "selectStockFirst": "Voorraad niet geselecteerd",
+    "stock": "Voorraad",
+    "productCode": "Voorraadcode",
+    "enterProductCode": "Voer de productcode in of zoek deze",
+    "productName": "Voorraadnaam",
+    "enterProductName": "Voer de productnaam in",
+    "quantity": "Hoeveelheid",
+    "unitPrice": "Eenheidsprijs",
+    "discount1": "Korting 1%",
+    "discount2": "Korting 2%",
+    "discount3": "Korting 3%",
+    "discounts": "Kortingen",
+    "discountAmount": "Kortingsbedrag",
+    "netPrice": "Netto prijs",
+    "vatRate": "BTW-tarief %",
+    "lineTotal": "Lijntotaal (inclusief BTW)",
+    "calculations": "Berekeningen",
+    "required": "Er moet minimaal 1 regel worden toegevoegd",
+    "noProductsFound": "Product niet gevonden",
+    "delete": {
+      "confirmTitle": "Rij verwijderen",
+      "confirmMessage": "Weet u zeker dat u deze rij wilt verwijderen?",
+      "confirmTitleMultiple": "Rijen verwijderen",
+      "confirmMessageMultiple": "Weet u zeker dat u de geselecteerde rijen wilt verwijderen?"
+    },
+    "noItems": "Nog geen lijnen.",
+    "addLine": "Rij toevoegen",
+    "relatedStocks": "Gebonden aandelen",
+    "groupCode": "Groepscode",
+    "approvalRequired": "Goedkeuring vereist",
+    "requiredFieldsMissing": "Vereiste rijvelden ontbreken.",
+    "createSuccess": "Lijn toegevoegd.",
+    "createError": "De rij kan niet worden toegevoegd.",
+    "updateSuccess": "Lijn bijgewerkt.",
+    "updateError": "De rij kan niet worden bijgewerkt.",
+    "deleteSuccess": "De lijn is verwijderd.",
+    "deleteError": "De rij kan niet worden verwijderd.",
+    "editStockItemDetails": "Bewerk voorraadartikelgegevens",
+    "descriptionFieldsTitle": "Beschrijving Velden",
+    "description1": "Beschrijving 1",
+    "description2": "Beschrijving 2",
+    "description3": "Beschrijving 3",
+    "descriptionPlaceholder": "Beschrijving invoeren...",
+    "descriptionTooltipText": "Het is een rijgebaseerde productiebeschrijving. Netsis-match bij importeren in ERP: Beschrijving 1 -> Aanvullend veld 1, Beschrijving 2 -> Aanvullend veld 2, Beschrijving 3 -> Rijannotatie 7.",
+    "descriptionTooltipPrefix": "Het is een rijgebaseerde productiebeschrijving. Netsis-matching bij overdracht naar ERP:",
+    "erpTargetExtraField1": "Extra veld 1",
+    "erpTargetExtraField2": "Extra gebied 2",
+    "erpTargetLineExtraDesc7": "Rijannotatie 7",
+    "profileErpTooltip": "Deze profielselectie wordt bij verzending naar ERP opgeslagen in het veld Netsis Line Annotation 2.",
+    "rebarErpTooltip": "Deze ijzerselectie wordt bij verzending naar ERP opgeslagen als Netsis Row Annotation 3-waarde.",
+    "screwErpTooltip": "Deze schroefselectie wordt bij verzending naar ERP opgeslagen als Netsis Line Annotation 4-waarde.",
+    "printErpTooltip": "Deze afdrukselectie wordt bij verzending naar ERP opgeslagen als Netsis Line Annotation 8-waarde. Het afdrukcommentaar wordt ook in de velden Netsis-regelcommentaar 9 en Regelannotatie 9 geplaatst.",
+    "lineItemDescriptionPlaceholder": "Op regels gebaseerde artikelbeschrijving",
+    "doubleClickToEdit": "Dubbelklik om te bewerken"
+  },
+  "exchangeRates": {
+    "title": "Wisselkoersen",
+    "currency": "Valuta",
+    "rate": "Installeren",
+    "date": "Wisselkoersdatum",
+    "isOfficial": "Officieel installeren",
+    "official": "ambtenaar",
+    "custom": "privé",
+    "empty": "Wisselkoers niet gevonden",
+    "status": "Status",
+    "dialog": {
+      "title": "Wisselkoersen",
+      "description": "Bekijk en bewerk wisselkoersen indien nodig. Gewijzigde tarieven worden niet aangemerkt als officiële tarieven.",
+      "subtitle": "U kunt de tarieven bewerken en opslaan.",
+      "info": "Handmatige updates kunnen buiten de officiële wisselkoers worden uitgevoerd."
+    },
+    "updateSuccess": "Wisselkoersen zijn bijgewerkt.",
+    "updateError": "Wisselkoersen konden niet worden bijgewerkt.",
+    "cannotEditUsedCurrency": "De gebruikte valuta kan niet worden bewerkt.",
+    "zeroRateError": "Voer de wisselkoers in om door te gaan."
+  },
+  "summary": {
+    "title": "Samenvatting",
+    "grandTotalAnalysis": "Analyse van het eindtotaal",
+    "subtotal": "Subtotaal",
+    "totalVat": "Totale BTW",
+    "grandTotal": "Algemeen totaal",
+    "generalDiscount": "Algemene korting",
+    "generalDiscountRate": "Algemeen kortingspercentage",
+    "generalDiscountAmount": "Algemeen kortingsbedrag",
+    "generalDiscountHelp": "Het wordt op totaalbasis toegepast."
+  },
+  "offerType": {
+    "domestic": "binnenlands",
+    "export": "exporteren"
+  },
+  "wizard": {
+    "title": "Nieuw verzoek aanmaken",
+    "step1": {
+      "title": "Stap 1: Informatie aanvragen",
+      "description": "Voer verzoekheaderinformatie en wisselkoersen in",
+      "validation": {
+        "offerType": "Verzoektype",
+        "currency": "Valuta",
+        "exchangeRate": "Wisselkoers"
+      },
+      "exchangeRate": {
+        "required": "Voor valuta's die niet TRY zijn, moet minimaal één wisselkoers worden toegevoegd"
+      },
+      "currency": {
+        "try": {
+          "info": "Wisselkoers is niet vereist wanneer TRY is geselecteerd"
+        }
+      }
+    },
+    "step2": {
+      "title": "Stap 2: Aanvraagregels",
+      "description": "Voeg product- en prijsinformatie toe",
+      "info": "U moet minimaal één regel toevoegen",
+      "validation": {
+        "noLines": "Er moet minimaal één regel worden toegevoegd",
+        "invalidLines": "Alle lijnen moeten geldige informatie bevatten",
+        "allValid": "Rij {{count}} is succesvol toegevoegd"
+      }
+    },
+    "step3": {
+      "title": "Stap 3: Samenvatting en goedkeuring",
+      "description": "Controleer de gegevens en sla de aanvraag op",
+      "header": {
+        "title": "Informatie aanvragen"
+      },
+      "lines": {
+        "title": "Aanvraaglijnen"
+      },
+      "summary": {
+        "title": "Laatste samenvatting"
+      },
+      "approval": {
+        "info": "Zodra de aanvraag is opgeslagen, wordt deze automatisch naar het goedkeuringsproces gestuurd"
+      }
+    }
+  },
+  "loadError": "Er is een fout opgetreden tijdens het laden van gegevens.",
+  "backToDemands": "Terug naar Verzoeken",
+  "untitled": "zonder titel",
+  "sections": {
+    "header": "Titelinformatie",
+    "lines": "rijen",
+    "summary": "Samenvatting"
+  },
+  "approval": {
+    "approve": "Bevestig",
+    "reject": "afwijzen",
+    "sending": "Verzenden...",
+    "sendForApproval": "Ter goedkeuring indienen",
+    "approveSuccess": "Het bevestigingsproces is succesvol.",
+    "approveError": "Bevestiging mislukt.",
+    "rejectSuccess": "Het afwijzingsproces was succesvol.",
+    "rejectError": "Afwijzing is mislukt.",
+    "startSuccess": "Het goedkeuringsproces is gestart.",
+    "startError": "Het goedkeuringsproces kon niet worden gestart.",
+    "rejectTitle": "Verzoek weigeren",
+    "rejectDescription": "Voer de reden van afwijzing in.",
+    "rejectReasonPlaceholder": "Reden voor afwijzing",
+    "statusFilterLabel": "Goedkeuringsstatus",
+    "lockedForNonApprover": "Deze registratie bevindt zich in het goedkeuringsproces. Alleen de actieve goedkeuringsgebruiker kan wijzigingen aanbrengen; Het bewerken staat voor u uit.",
+    "approvedReadOnlyReason": "Omdat dit verzoek is goedgekeurd, kunnen er geen wijzigingen meer worden aangebracht.",
+    "rejectedReadOnlyReason": "Omdat dit verzoek is afgewezen, kunnen er geen wijzigingen worden aangebracht. Om bij te werken, gebruikt u \"Revisie\" uit de lijst.",
+    "closedReason": "Dit record is gesloten omdat een ander record met hetzelfde documentnummer is goedgekeurd; er kunnen geen wijzigingen worden aangebracht.",
+    "status": {
+      "notRequired": "ontwerp",
+      "waiting": "wachten",
+      "approved": "Goedgekeurd",
+      "rejected": "afgewezen",
+      "closed": "Gesloten"
+    }
+  },
+  "approvalFlow": {
+    "noData": "Bevestigingsstap niet gevonden.",
+    "notStarted": "Niet geïnitialiseerd",
+    "stepCompleted": "Stap voltooid",
+    "stepInProgress": "stap gaat door",
+    "stepNotStarted": "Mijn stap wacht",
+    "stepRejected": "Mijn naam werd afgewezen",
+    "errorTitle": "Er is een fout opgetreden"
+  },
+  "update": {
+    "success": "Het verzoek is bijgewerkt.",
+    "successMessage": "Het verzoek is succesvol bijgewerkt.",
+    "error": "Het verzoek kan niet worden bijgewerkt.",
+    "errorMessage": "Er is een fout opgetreden bij het bijwerken van het verzoek.",
+    "invalidCurrency": "Ongeldige valuta.",
+    "validationError": "Er is een formuliervalidatiefout opgetreden."
+  },
+  "revision": {
+    "success": "Revisie gemaakt.",
+    "error": "Kan geen revisie maken."
+  },
+  "waitingApprovals": {
+    "title": "In behandeling zijnde goedkeuringsverzoeken",
+    "list": "Lijst met goedkeuring in afwachting",
+    "noApprovals": "Geen goedkeuringen in behandeling gevonden.",
+    "requestId": "Verzoeknummer",
+    "description": "Beschrijving",
+    "stepOrder": "stap",
+    "approvedBy": "Goedgekeurd door",
+    "actionDate": "Transactiedatum",
+    "status": "Status",
+    "waiting": "wachten"
+  },
+  "quotation": {
+    "notes": {
+      "maxLengthError": "Elke notitie kan maximaal 100 tekens lang zijn. Controleer alstublieft."
+    }
+  },
+  "customerCancel": {
+    "readOnlyReason": "Aangezien dit verzoek door de klant is geannuleerd, kunnen er geen wijzigingen worden aangebracht.",
+    "reasonLabel": "Reden van annulering",
+    "button": "Klantannulering",
+    "title": "Annulering van de klant",
+    "description": "U staat op het punt dit verzoek te markeren als geannuleerd door de klant.",
+    "reasonPlaceholder": "Schrijf de annuleringsreden van de klant...",
+    "confirmButton": "Annuleer"
+  },
+  "pdfExportTemplate": {
+    "draftWatermark": "HET IS ONTWERP"
+  }
+}

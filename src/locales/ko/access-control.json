@@ -1,0 +1,146 @@
+{
+  "help": {
+    "permissionDefinition": {
+      "code": "경로 및 페이지 가드에서 사용되는 고유 키입니다. 안정적인 snake_case 또는 점 이름 지정을 선호합니다.",
+      "name": "권한을 관리할 때 관리자에게 표시되는 표시 이름입니다.",
+      "description": "이 권한에 대한 선택적 내부 설명입니다.",
+      "isActive": "사용자 액세스를 계산할 때 비활성 권한은 고려되지 않습니다.",
+      "save": "변경사항은 역할 및 그룹 인증 흐름에 영향을 미칩니다."
+    },
+    "permissionGroup": {
+      "name": "사용자에게 할당할 때 식별을 위한 그룹 이름입니다.",
+      "isSystemAdmin": "이 그룹의 구성원은 개별 권한 확인 없이 모든 페이지와 작업에 액세스할 수 있습니다.",
+      "isActive": "새로운 액세스 결정을 위해 비활성 그룹을 할당해서는 안 됩니다.",
+      "permissions": "선택한 권한은 이 그룹의 구성원이 액세스할 수 있는 항목을 정의합니다.",
+      "save": "이 그룹에 할당된 모든 사용자에 대한 유효 액세스를 업데이트합니다."
+    },
+    "userAssignment": {
+      "user": "관리하려는 액세스 범위의 사용자를 선택합니다.",
+      "groups": "사용자는 선택된 모든 그룹으로부터 통합된 권한을 받습니다.",
+      "save": "다음 승인 확인을 위해 할당이 즉시 적용됩니다. 사용자는 세션을 새로 고쳐야 할 수도 있습니다.",
+      "systemAdminNote": "사용자에게 system-admin 그룹이 있는 경우 세부 권한은 무시됩니다."
+    }
+  },
+  "permissionDefinitions": {
+    "title": "권한 정의",
+    "description": "시스템에서 사용되는 권한 코드를 관리합니다.",
+    "add": "정의 추가",
+    "form": {
+      "editTitle": "권한 정의 편집",
+      "addTitle": "권한 정의 추가",
+      "editDescription": "권한 정의 세부정보 업데이트",
+      "addDescription": "새 권한 정의 만들기",
+      "code": "코드",
+      "codePlaceholder": "코드를 선택하세요",
+      "affectedRoutes": "영향을 받은 페이지",
+      "affectedRoutesNone": "이 코드와 일치하는 경로가 없습니다.",
+      "name": "이름",
+      "namePlaceholder": "표시 이름",
+      "description": "설명",
+      "descriptionPlaceholder": "선택적 설명",
+      "isActive": "활성",
+      "codeSearchPlaceholder": "검색...",
+      "codeEmpty": "검색결과가 없습니다"
+    },
+    "table": {
+      "title": "권한 정의",
+      "code": "코드",
+      "name": "이름",
+      "isActive": "활성",
+      "updatedDate": "업데이트됨",
+      "showing": "{{total}}의 {{from}}-{{to}}"
+    },
+    "delete": {
+      "confirmTitle": "권한 정의 삭제",
+      "confirmMessage": "정말로 \"{{name}}\"을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
+    },
+    "syncFromRoutes": "경로에서 동기화",
+    "syncSummaryTitle": "경로 동기화"
+  },
+  "permissionGroups": {
+    "title": "권한 그룹",
+    "description": "권한 그룹 및 할당 관리",
+    "add": "그룹 추가",
+    "selectAll": "모두 선택",
+    "noDefinitions": "사용 가능한 권한 정의가 없습니다.",
+    "form": {
+      "editTitle": "권한 그룹 편집",
+      "addTitle": "권한 그룹 추가",
+      "editDescription": "권한 그룹 세부정보 업데이트",
+      "addDescription": "새 권한 그룹 만들기",
+      "name": "이름",
+      "namePlaceholder": "그룹 이름",
+      "description": "설명",
+      "descriptionPlaceholder": "선택적 설명",
+      "isSystemAdmin": "시스템 관리자",
+      "isActive": "활성",
+      "permissions": "권한"
+    },
+    "table": {
+      "name": "이름",
+      "isSystemAdmin": "시스템 관리자",
+      "isActive": "활성",
+      "permissionCount": "권한",
+      "showing": "{{total}}의 {{from}}-{{to}}",
+      "title": "이진 그룹"
+    },
+    "managePermissions": "권한 관리",
+    "permissionsPanel": {
+      "title": "그룹 권한 편집",
+      "description": "이 그룹에 대한 권한 선택",
+      "currentCodes": "현재 허가 코드",
+      "groupedRows": "스크린",
+      "screen": "화면",
+      "actionsMapped": "행동",
+      "actions": {
+        "create": "만들기",
+        "read": "읽기",
+        "update": "업데이트",
+        "delete": "삭제",
+        "other": "작업 권한"
+      }
+    },
+    "delete": {
+      "confirmTitle": "권한 그룹 삭제",
+      "confirmMessage": "정말로 \"{{name}}\"을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다."
+    },
+    "search": "검색...",
+    "systemAdminLocked": "시스템 관리자 그룹은 변경할 수 없습니다."
+  },
+  "userGroupAssignments": {
+    "title": "사용자 그룹 할당",
+    "description": "사용자에게 권한 그룹 할당",
+    "selectUser": "사용자 선택",
+    "selectUserPlaceholder": "사용자 검색 및 선택...",
+    "selectUserHint": "권한 그룹 할당을 관리할 사용자를 선택하세요.",
+    "assignedGroups": "할당된 권한 그룹",
+    "noUsers": "사용자를 찾을 수 없습니다.",
+    "noGroups": "사용 가능한 권한 그룹이 없습니다.",
+    "selectAll": "모두 선택",
+    "status": "상태",
+    "unsavedChanges": "저장되지 않음",
+    "upToDate": "최신"
+  },
+  "common": {
+    "cancel": "취소",
+    "saving": "저장 중...",
+    "save": "저장 및 적용",
+    "loading": "로드 중...",
+    "search": "검색...",
+    "noData": "데이터 없음",
+    "actions": "작업",
+    "yes": "예",
+    "no": "아니요",
+    "edit": "편집",
+    "delete": "삭제",
+    "previous": "이전",
+    "next": "다음",
+    "processing": "처리 중..."
+  },
+  "sidebar": {
+    "accessControl": "접근 제어",
+    "permissionDefinitions": "권한 정의",
+    "permissionGroups": "권한 그룹",
+    "userGroupAssignments": "사용자 그룹 할당"
+  }
+}

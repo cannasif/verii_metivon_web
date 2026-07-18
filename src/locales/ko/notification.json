@@ -1,0 +1,10 @@
+{
+  "title": "알림",
+  "notifications": "알림",
+  "new": "새로운",
+  "loading": "로드 중",
+  "noNotifications": "알림을 찾을 수 없습니다.",
+  "markAllAsRead": "모두 읽은 것으로 표시",
+  "close": "닫기",
+  "unread": "읽지 않음"
+}

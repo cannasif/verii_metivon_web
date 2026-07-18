@@ -1,0 +1,83 @@
+{
+  "menu": "Zarządzanie miastem",
+  "description": "Zarządzaj i organizuj miasta",
+  "addButton": "Dodaj nowe miasto",
+  "searchPlaceholder": "Szukaj...",
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "stats": {
+    "totalCities": "Wszystkich miast",
+    "activeCities": "Aktywne Miasta",
+    "newThisMonth": "Nowość w tym miesiącu"
+  },
+  "table": {
+    "title": "Lista miast",
+    "id": "Identyfikator",
+    "name": "Nazwa miasta",
+    "erpCode": "Kod ERP",
+    "countryName": "Nazwa kraju",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez",
+    "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+    "page": "Strona {{current}} / {{total}}"
+  },
+  "cityManagement": {
+    "table": {
+      "title": "Lista miast",
+      "id": "Identyfikator",
+      "name": "Nazwa miasta",
+      "erpCode": "Kod ERP",
+      "countryName": "Nazwa kraju",
+      "createdDate": "Data utworzenia",
+      "createdBy": "Stworzony przez"
+    },
+    "error": "Wystąpił błąd",
+    "form": {
+      "tabs": {
+        "header": "Informacje ogólne"
+      }
+    },
+    "menu": "Zarządzanie miastem",
+    "description": "Zarządzaj i organizuj miasta",
+    "addButton": "Dodaj nowe miasto",
+    "searchPlaceholder": "Szybkie wyszukiwanie...",
+    "loading": "Ładowanie...",
+    "noData": "Nie znaleziono danych",
+    "actions": "Działania",
+    "delete": {
+      "success": "Miasto zostało pomyślnie usunięte",
+      "error": "Wystąpił błąd podczas usuwania miasta",
+      "confirmTitle": "Usuń miasto",
+      "confirmMessage": "Czy na pewno chcesz usunąć {{name}}?"
+    }
+  },
+  "form": {
+    "editCity": "Edytuj miasto",
+    "addCity": "Dodaj nowe miasto",
+    "editDescription": "Edytuj szczegóły miasta",
+    "addDescription": "Wprowadź nowe dane miasta",
+    "name": "Nazwa miasta",
+    "namePlaceholder": "Wpisz nazwę miasta",
+    "country": "Kraj",
+    "selectCountry": "Wybierz kraj",
+    "erpCode": "Kod ERP",
+    "erpCodePlaceholder": "Wpisz kod ERP (opcjonalnie)",
+    "cancel": "Anuluj",
+    "save": "Zapisz",
+    "saving": "Zapisywanie...",
+    "nameRequired": "Nazwa miasta jest wymagana",
+    "nameMaxLength": "Nazwa miasta może mieć maksymalnie 100 znaków",
+    "erpCodeMaxLength": "Kod ERP może mieć maksymalnie 10 znaków",
+    "countryRequired": "Wymagany jest wybór kraju"
+  },
+  "actions": "Działania",
+  "delete": {
+    "button": "Usuń",
+    "success": "Miasto zostało pomyślnie usunięte",
+    "error": "Wystąpił błąd podczas usuwania miasta",
+    "confirmTitle": "Usuń miasto",
+    "confirmMessage": "Czy na pewno chcesz usunąć {{name}}?"
+  },
+  "previous": "Poprzedni",
+  "next": "Następny"
+}

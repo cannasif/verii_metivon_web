@@ -1,0 +1,82 @@
+{
+  "menu": "Управление доставкой",
+  "description": "Управление и редактирование определений доставки",
+  "addButton": "Добавить новую доставку",
+  "loading": "Загрузка...",
+  "noData": "Данные не найдены",
+  "actions": "Действия",
+  "edit": "Редактировать",
+  "deleteButton": "Удалить",
+  "cancel": "Отмена",
+  "save": "Сохранить",
+  "saving": "Сохранение...",
+  "previous": "Предыдущий",
+  "next": "Далее",
+  "advancedFilter": {
+    "columnName": "Название доставки",
+    "columnDescription": "Описание",
+    "columnCreatedBy": "Создано"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "Добавить новую доставку",
+      "editTitle": "Редактировать доставку",
+      "addDescription": "Введите новую информацию о доставке",
+      "editDescription": "Изменить информацию о доставке",
+      "name": "Название доставки",
+      "namePlaceholder": "Введите название доставки",
+      "nameRequired": "Укажите название доставки.",
+      "nameMaxLength": "Название доставки может содержать не более 100 символов.",
+      "description": "Описание",
+      "descriptionPlaceholder": "Введите описание (необязательно)",
+      "descriptionMaxLength": "Описание может содержать не более 500 символов."
+    },
+    "table": {
+      "title": "Список доставки",
+      "id": "идентификатор",
+      "name": "Название доставки",
+      "description": "Описание",
+      "createdDate": "Дата создания",
+      "createdBy": "Создано",
+      "showing": "Показаны {{from}}-{{to}} / {{total}}",
+      "page": "Страница {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Всего записей о доставке",
+      "activeActivityTypes": "Активные записи о доставке",
+      "newThisMonth": "Новое в этом месяце"
+    },
+    "messages": {
+      "createSuccess": "Доставка успешно создана",
+      "createError": "Не удалось создать доставку.",
+      "updateSuccess": "Доставка успешно обновлена",
+      "updateError": "Не удалось обновить доставку.",
+      "deleteSuccess": "Доставка успешно удалена",
+      "deleteError": "Не удалось удалить доставку."
+    },
+    "error": "Произошла ошибка",
+    "create": "Добавить новую доставку",
+    "loading": "Загрузка...",
+    "noData": "Данные не найдены",
+    "actions": "Действия",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "saving": "Сохранение..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Удалить доставку",
+    "confirmMessage": "Вы уверены, что хотите удалить {{name}}?"
+  },
+  "messages": {
+    "deleteSuccess": "Доставка успешно удалена",
+    "deleteError": "Не удалось удалить доставку."
+  },
+  "table": {
+    "title": "Список доставки",
+    "id": "идентификатор",
+    "name": "Название доставки",
+    "description": "Описание",
+    "createdDate": "Дата создания",
+    "createdBy": "Создано"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "menu": "销售代表匹配管理",
+  "description": "查看、添加和删除销售代表代码和用户匹配。",
+  "addButton": "新比赛",
+  "searchPlaceholder": "搜索销售代表代码、用户或电子邮件",
+  "empty": "未找到匹配的销售代表。",
+  "error": "无法加载销售代表匹配。",
+  "deleteConfirmMessage": "删除配对 {{salesRep}} 和 {{user}} 吗？",
+  "table": {
+    "title": "销售代表匹配列表",
+    "salesRepCode": "销售代表代码",
+    "salesRepName": "销售代表姓名",
+    "userFullName": "用户",
+    "username": "用户名",
+    "userEmail": "电子邮件",
+    "createdDate": "创建日期"
+  },
+  "form": {
+    "addTitle": "新销售代表匹配",
+    "addDescription": "将销售代表记录与用户进行匹配。",
+    "salesRep": "销售代表",
+    "salesRepPlaceholder": "选择销售代表",
+    "salesRepSearchPlaceholder": "寻找销售代表",
+    "user": "用户",
+    "userPlaceholder": "选择用户",
+    "userSearchPlaceholder": "搜索用户",
+    "validation": {
+      "salesRepRequired": "销售代表的选择是强制性的。",
+      "userRequired": "用户选择是强制性的。"
+    }
+  },
+  "messages": {
+    "createSuccess": "销售代表匹配已创建。",
+    "createError": "无法创建销售代表匹配。",
+    "deleteSuccess": "销售代表匹配已被删除。",
+    "deleteError": "无法删除销售代表匹配。"
+  },
+  "advancedFilter": {
+    "columnSalesRepCode": "销售代表代码",
+    "columnSalesRepName": "销售代表姓名",
+    "columnUsername": "用户名",
+    "columnEmail": "电子邮件"
+  }
+}

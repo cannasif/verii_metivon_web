@@ -1,0 +1,346 @@
+{
+  "loading": "読み込み中...",
+  "saving": "録音中...",
+  "error": "エラー",
+  "noData": "データが見つかりませんでした",
+  "previous": "前へ",
+  "next": "次へ",
+  "actions": "取引",
+  "edit": "編集",
+  "delete": "削除",
+  "back": "戻る",
+  "refresh": "リフレッシュ",
+  "select": "選択",
+  "yes": "はい",
+  "add": "追加",
+  "backToQuotations": "リクエストに戻る",
+  "cancel": "キャンセル",
+  "save": "保存",
+  "confirm": "確認する",
+  "saveAndApply": "保存して適用",
+  "notes": {
+    "title": "請求メモ",
+    "description": "リクエストの内部メモを追加および更新します。",
+    "placeholder": "リクエストメモを入力してください",
+    "noteLabel": "リクエストメモ",
+    "addLineTooltip": "コメント行を追加",
+    "linesHint": "各行は PDF とドキュメントのメモに個別に表示されます。",
+    "removeLine": "行を削除する",
+    "pageLabel": "ページ {{current}} / {{total}}",
+    "saving": "メモを保存しています...",
+    "notesTooltipText": "これらはリクエスト全体に関係する配送/請求書のメモです。 ERP に転送されると、見積/注文は上部の注釈 1 ～ 5 フィールドに順番に記録されます。注 2 は Netsis 注釈 2 に進みます。",
+    "maxLengthError": "メモ欄は最大100文字まで入力できます。"
+  },
+  "list": {
+    "revise": "改訂",
+    "showing": "{{total}} は、レコードから {{from}}-{{to}} として表示されます",
+    "title": "リクエストリスト",
+    "description": "すべてのリクエストを表示および管理する",
+    "detail": "詳細",
+    "createNew": "新しいリクエストの作成",
+    "searchPlaceholder": "リクエスト番号または顧客名で検索...",
+    "cardTitle": "リクエスト一覧",
+    "refresh": "リフレッシュ",
+    "actions": "取引",
+    "id": "ID",
+    "offerNo": "リクエスト番号",
+    "revisionNo": "リビジョン番号",
+    "customer": "顧客",
+    "customerCode": "現在のコード",
+    "representative": "営業担当者",
+    "offerDate": "リクエスト日",
+    "validUntil": "有効性",
+    "currency": "通貨",
+    "grandTotal": "総計",
+    "status": "ステータス"
+  },
+  "detail": {
+    "title": "リクエストの詳細",
+    "subtitle": "リクエストの詳細を表示および管理します。",
+    "notFound": "リクエストが見つかりませんでした。",
+    "revisionNo": "リビジョン番号",
+    "tabDetail": "詳細",
+    "tabApprovalFlow": "承認の流れ",
+    "tabReport": "レポート"
+  },
+  "create": {
+    "title": "新しいリクエストの作成",
+    "submit": "リクエストを保存して承認のために送信する",
+    "success": "リクエストが正常に作成されました",
+    "successMessage": "リクエストは承認プロセスに送信されました。",
+    "error": "リクエストを作成できませんでした",
+    "errorMessage": "リクエストの作成中にエラーが発生しました。",
+    "subtitle": "リクエスト情報を入力して保存します。",
+    "deliveryDateRequired": "配達日は必須です。",
+    "paymentTypeRequired": "支払いタイプは必須です。",
+    "invalidCurrency": "無効な通貨です。",
+    "validationError": "必須項目にチェックを入れてください。",
+    "notesMaxLengthError": "各メモは最大 400 文字まで入力できます。"
+  },
+  "header": {
+    "title": "情報のリクエスト",
+    "customer": "顧客",
+    "selectCustomer": "顧客を選択してください",
+    "shippingAddress": "配送先住所",
+    "selectShippingAddress": "配送先住所を選択してください",
+    "representative": "営業担当者",
+    "selectRepresentative": "代表者を選択してください",
+    "offerType": "リクエストタイプ",
+    "selectOfferType": "リクエストタイプを選択してください",
+    "currency": "通貨",
+    "selectCurrency": "通貨を選択してください",
+    "showExchangeRates": "為替レートを表示",
+    "offerDate": "リクエスト日",
+    "deliveryDate": "納期",
+    "paymentType": "支払いタイプ",
+    "selectPaymentType": "支払いタイプを選択してください",
+    "description": "説明",
+    "notes": "注意事項",
+    "descriptionErpTooltip": "これは、リクエスト全体に関して本番環境に表示させたい一般的な説明です。オファー/オーダーとして ERP に送信されると、Netsis トップの説明 (FatUst.Description) フィールドに記録されます。",
+    "descriptionPlaceholder": "説明を入力してください",
+    "offerNo": "リクエスト番号",
+    "offerNoPlaceholder": "リクエスト番号",
+    "currencyChange": {
+      "title": "通貨の変更",
+      "message": "通貨が変更されると、既存のすべての行が新しい通貨に従って再計算されます。この取引を承認しますか?"
+    },
+    "deliveryMethod": "配送方法",
+    "documentDetail": "文書の説明",
+    "ozelKod1": "特殊コード1",
+    "ozelKod1Placeholder": "特殊コード1を選択",
+    "ozelKod2": "特別コード2",
+    "ozelKod2Placeholder": "特殊コード2を選択",
+    "specialCodeSearchPlaceholder": "特別なコードを検索..."
+  },
+  "lines": {
+    "title": "リクエストライン",
+    "add": "行を追加",
+    "empty": "まだ行が追加されていません",
+    "emptyDescription": "[在庫の選択] または [明細の追加] ボタンを使用して、購買依頼明細を追加します。",
+    "itemCount": "{{count}}行",
+    "editLine": "行の編集",
+    "selectStock": "在庫の選択",
+    "selectProduct": "製品の選択",
+    "selectStockFirst": "在庫が選択されていません",
+    "stock": "在庫",
+    "productCode": "証券コード",
+    "enterProductCode": "製品コードを入力または検索",
+    "productName": "銘柄名",
+    "enterProductName": "製品名を入力してください",
+    "quantity": "数量",
+    "unitPrice": "単価",
+    "discount1": "1%割引",
+    "discount2": "2%割引",
+    "discount3": "3%割引",
+    "discounts": "割引",
+    "discountAmount": "割引額",
+    "netPrice": "正味価格",
+    "vatRate": "VAT 率 %",
+    "lineTotal": "明細合計 (VAT を含む)",
+    "calculations": "計算",
+    "required": "少なくとも 1 行を追加する必要があります",
+    "noProductsFound": "製品が見つかりません",
+    "delete": {
+      "confirmTitle": "行の削除",
+      "confirmMessage": "この行を削除してもよろしいですか?",
+      "confirmTitleMultiple": "行の削除",
+      "confirmMessageMultiple": "選択した行を削除してもよろしいですか?"
+    },
+    "noItems": "まだ行はありません。",
+    "addLine": "行を追加",
+    "relatedStocks": "抱き合わせ株式",
+    "groupCode": "グループコード",
+    "approvalRequired": "承認が必要です",
+    "requiredFieldsMissing": "必須の行フィールドが欠落しています。",
+    "createSuccess": "行が追加されました。",
+    "createError": "行を追加できませんでした。",
+    "updateSuccess": "ラインが更新されました。",
+    "updateError": "行を更新できませんでした。",
+    "deleteSuccess": "行は削除されました。",
+    "deleteError": "行を削除できませんでした。",
+    "editStockItemDetails": "在庫品目の詳細を編集する",
+    "descriptionFieldsTitle": "説明フィールド",
+    "description1": "説明1",
+    "description2": "説明2",
+    "description3": "説明3",
+    "descriptionPlaceholder": "説明を入力してください...",
+    "descriptionTooltipText": "これは行ベースのプロダクション記述です。 ERP にインポートされた場合の Netsis 一致: 説明 1 -> 追加フィールド 1、説明 2 -> 追加フィールド 2、説明 3 -> 行注釈 7。",
+    "descriptionTooltipPrefix": "これは行ベースのプロダクション記述です。 ERP に転送されるときの Netsis マッチング:",
+    "erpTargetExtraField1": "追加フィールド 1",
+    "erpTargetExtraField2": "追加エリア2",
+    "erpTargetLineExtraDesc7": "行の注釈 7",
+    "profileErpTooltip": "このプロファイルの選択は、ERP に送信するときに Netsis Line Annotation 2 フィールドに保存されます。",
+    "rebarErpTooltip": "この鉄の選択は、ERP に送信するときに Netsis Row Annotation 3 値として保存されます。",
+    "screwErpTooltip": "このネジの選択は、ERP に送信するときに Netsis Line Annotation 4 値として保存されます。",
+    "printErpTooltip": "この印刷選択は、ERP に送信するときに Netsis Line Annotation 8 値として保存されます。印刷コメントは、Netsis 行コメント 9 フィールドと行注釈 9 フィールドにも入ります。",
+    "lineItemDescriptionPlaceholder": "行ベースの項目説明",
+    "doubleClickToEdit": "ダブルクリックして編集します"
+  },
+  "exchangeRates": {
+    "title": "為替レート",
+    "currency": "通貨",
+    "rate": "インストール",
+    "date": "為替レートの日付",
+    "isOfficial": "公式をインストールする",
+    "official": "役人",
+    "custom": "プライベート",
+    "empty": "為替レートが見つかりません",
+    "status": "ステータス",
+    "dialog": {
+      "title": "為替レート",
+      "description": "必要に応じて為替レートを表示および編集します。変更されたレートは正式なレートとしてマークされません。",
+      "subtitle": "料金を編集して保存できます。",
+      "info": "手動更新は公式為替レート以外でも行うことができます。"
+    },
+    "updateSuccess": "為替レートが更新されました。",
+    "updateError": "為替レートを更新できませんでした。",
+    "cannotEditUsedCurrency": "使用される通貨は編集できません。",
+    "zeroRateError": "続行するには為替レートを入力してください。"
+  },
+  "summary": {
+    "title": "概要",
+    "grandTotalAnalysis": "総計分析",
+    "subtotal": "小計",
+    "totalVat": "付加価値税総額",
+    "grandTotal": "総計",
+    "generalDiscount": "一般割引",
+    "generalDiscountRate": "一般割引率",
+    "generalDiscountAmount": "一般割引額",
+    "generalDiscountHelp": "合計ベースで適用されます。"
+  },
+  "offerType": {
+    "domestic": "国内",
+    "export": "輸出"
+  },
+  "wizard": {
+    "title": "新しいリクエストの作成",
+    "step1": {
+      "title": "ステップ 1: 情報をリクエストする",
+      "description": "リクエストヘッダー情報と為替レートを入力します",
+      "validation": {
+        "offerType": "リクエストタイプ",
+        "currency": "通貨",
+        "exchangeRate": "為替レート"
+      },
+      "exchangeRate": {
+        "required": "TRY 以外の通貨の場合は、少なくとも 1 つの為替レートを追加する必要があります"
+      },
+      "currency": {
+        "try": {
+          "info": "TRY を選択した場合、為替レートは必要ありません"
+        }
+      }
+    },
+    "step2": {
+      "title": "ステップ 2: リクエストライン",
+      "description": "製品と価格の情報を追加する",
+      "info": "少なくとも 1 行を追加する必要があります",
+      "validation": {
+        "noLines": "少なくとも 1 行を追加する必要があります",
+        "invalidLines": "すべての行に有効な情報が含まれている必要があります",
+        "allValid": "{{count}} 行が正常に追加されました"
+      }
+    },
+    "step3": {
+      "title": "ステップ 3: 概要と承認",
+      "description": "情報を確認してリクエストを保存します",
+      "header": {
+        "title": "情報のリクエスト"
+      },
+      "lines": {
+        "title": "リクエストライン"
+      },
+      "summary": {
+        "title": "最終的なまとめ"
+      },
+      "approval": {
+        "info": "リクエストが保存されると、自動的に承認プロセスに送信されます。"
+      }
+    }
+  },
+  "loadError": "データのロード中にエラーが発生しました。",
+  "backToDemands": "リクエストに戻る",
+  "untitled": "無題",
+  "sections": {
+    "header": "タイトル情報",
+    "lines": "行",
+    "summary": "概要"
+  },
+  "approval": {
+    "approve": "確認する",
+    "reject": "拒否する",
+    "sending": "送信中...",
+    "sendForApproval": "承認のために送信する",
+    "approveSuccess": "確認プロセスは成功しました。",
+    "approveError": "確認に失敗しました。",
+    "rejectSuccess": "拒否プロセスは成功しました。",
+    "rejectError": "拒否に失敗しました。",
+    "startSuccess": "承認プロセスが開始されました。",
+    "startError": "承認プロセスを開始できませんでした。",
+    "rejectTitle": "リクエストを拒否する",
+    "rejectDescription": "拒否理由を入力します。",
+    "rejectReasonPlaceholder": "拒否理由",
+    "statusFilterLabel": "承認状況",
+    "lockedForNonApprover": "この登録は承認プロセス中です。アクティブな承認ユーザーのみが変更を加えることができます。編集はオフになっています。",
+    "approvedReadOnlyReason": "このリクエストは承認されたため、変更はできません。",
+    "rejectedReadOnlyReason": "このリクエストは拒否されたため、変更はできません。更新する場合は、リストから「修正」を使用してください。",
+    "closedReason": "同じ文書番号を持つ別のレコードが承認されたため、このレコードは閉じられました。変更はできません。",
+    "status": {
+      "notRequired": "ドラフト",
+      "waiting": "待っています",
+      "approved": "承認済み",
+      "rejected": "拒否されました",
+      "closed": "閉店"
+    }
+  },
+  "approvalFlow": {
+    "noData": "確認ステップが見つかりません。",
+    "notStarted": "初期化されていません",
+    "stepCompleted": "ステップが完了しました",
+    "stepInProgress": "ステップは継続します",
+    "stepNotStarted": "私のステップが待っています",
+    "stepRejected": "私の名前は拒否されました",
+    "errorTitle": "エラーが発生しました"
+  },
+  "update": {
+    "success": "リクエストが更新されました。",
+    "successMessage": "リクエストは正常に更新されました。",
+    "error": "リクエストを更新できませんでした。",
+    "errorMessage": "リクエストの更新中にエラーが発生しました。",
+    "invalidCurrency": "無効な通貨です。",
+    "validationError": "フォーム検証エラーが発生しました。"
+  },
+  "revision": {
+    "success": "リビジョンが作成されました。",
+    "error": "リビジョンの作成に失敗しました。"
+  },
+  "waitingApprovals": {
+    "title": "保留中の承認リクエスト",
+    "list": "承認待ちリスト",
+    "noApprovals": "保留中の承認は見つかりませんでした。",
+    "requestId": "リクエスト番号",
+    "description": "説明",
+    "stepOrder": "ステップ",
+    "approvedBy": "承認者",
+    "actionDate": "取引日",
+    "status": "ステータス",
+    "waiting": "待っています"
+  },
+  "quotation": {
+    "notes": {
+      "maxLengthError": "各メモには最大 100 文字を入力できます。チェックしてください。"
+    }
+  },
+  "customerCancel": {
+    "readOnlyReason": "このリクエストはお客様によってキャンセルされたため、変更はできません。",
+    "reasonLabel": "キャンセルの理由",
+    "button": "お客様のキャンセル",
+    "title": "お客様のキャンセル",
+    "description": "このリクエストを顧客によってキャンセルされたものとしてマークしようとしています。",
+    "reasonPlaceholder": "お客様のキャンセル理由を書きます...",
+    "confirmButton": "キャンセル"
+  },
+  "pdfExportTemplate": {
+    "draftWatermark": "それはドラフトです"
+  }
+}

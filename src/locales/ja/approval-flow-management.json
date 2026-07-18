@@ -1,0 +1,103 @@
+{
+  "approvalFlow": {
+    "menu": "承認フロー管理",
+    "description": "承認フローを管理および整理する",
+    "addButton": "新しい承認フローの追加",
+    "table": {
+      "id": "ID",
+      "documentType": "文書の種類",
+      "description": "説明",
+      "isActive": "アクティブ",
+      "createdDate": "作成日",
+      "createdBy": "作成者",
+      "actions": "アクション",
+      "showing": "{{from}}-{{to}} / {{total}} を表示中",
+      "page": "ページ {{current}} / {{total}}",
+      "title": "承認フロー"
+    },
+    "form": {
+      "addTitle": "新しい承認フローの追加",
+      "editTitle": "承認フローの編集",
+      "addDescription": "新しい承認フロー情報を入力します",
+      "editDescription": "承認フロー情報の編集",
+      "documentType": "文書の種類",
+      "selectDocumentType": "ドキュメントの種類を選択してください",
+      "noDocumentTypeSelected": "ドキュメントの種類が選択されていません",
+      "documentTypeRequired": "ドキュメントタイプの選択が必要です",
+      "description": "説明",
+      "descriptionPlaceholder": "説明を入力します (オプション)",
+      "descriptionMaxLength": "説明は最大 200 文字まで可能です",
+      "isActive": "アクティブ",
+      "isActiveDescription": "承認フローのアクティブステータス",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "saving": "保存中..."
+    },
+    "loading": "読み込み中...",
+    "noData": "データなし",
+    "active": "アクティブ",
+    "inactive": "非アクティブ",
+    "previous": "前へ",
+    "next": "次へ",
+    "delete": {
+      "action": "削除",
+      "cancel": "キャンセル",
+      "confirmTitle": "承認フローの削除",
+      "confirmMessage": "この承認フローを削除してもよろしいですか?",
+      "title": "承認フローの削除",
+      "confirm": "この承認フローを削除してもよろしいですか?"
+    },
+    "documentType": {
+      "offer": "オファー",
+      "request": "リクエスト",
+      "order": "注文",
+      "demand": "需要",
+      "quotation": "引用",
+      "purchaseRequest": "購入リクエスト",
+      "purchaseRfq": "見積依頼 (RFQ)",
+      "supplierQuotation": "サプライヤーの見積書",
+      "purchaseOrder": "注文書"
+    },
+    "advancedFilter": {
+      "columnDocumentType": "文書の種類",
+      "columnDescription": "説明",
+      "columnIsActive": "アクティブ",
+      "columnCreatedBy": "作成者"
+    },
+    "messages": {
+      "deleteSuccess": "承認フローが正常に削除されました",
+      "deleteError": "承認フローの削除中にエラーが発生しました"
+    },
+    "steps": "フローステップ",
+    "error": "エラーが発生しました"
+  },
+  "approvalFlowStep": {
+    "title": "フローステップ",
+    "addButton": "ステップの追加",
+    "empty": "まだステップは追加されていません",
+    "unknownRoleGroup": "役割グループなし",
+    "stepDescription": "承認順序: {{order}}",
+    "deleteDialog": {
+      "title": "ステップの削除",
+      "description": "このステップを削除してもよろしいですか?",
+      "confirm": "削除",
+      "cancel": "キャンセル"
+    },
+    "form": {
+      "addTitle": "新しいステップを追加",
+      "editTitle": "ステップの編集",
+      "addDescription": "新しいフローステップを追加",
+      "editDescription": "フローステップ情報の編集",
+      "approvalRoleGroup": "役割グループ",
+      "selectRoleGroup": "役割グループの選択",
+      "noRoleGroupSelected": "役割グループが選択されていません",
+      "approvalRoleGroupIdRequired": "役割グループの選択が必要です",
+      "cancel": "キャンセル",
+      "save": "保存",
+      "saving": "保存中..."
+    },
+    "messages": {
+      "deleteConfirm": "このステップを削除してもよろしいですか?"
+    }
+  }
+}

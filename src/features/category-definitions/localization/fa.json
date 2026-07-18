@@ -1,0 +1,511 @@
+{
+  "categoryDefinitions": {
+    "title": "تعاریف دسته",
+    "description": "از اینجا می توانید مدیریت درخت دسته و سهام مربوط به دسته را برای کاتالوگ های B2B و B2C شروع کنید.",
+    "guidedTitle": "مدیریت ساختار دسته در 3 مرحله",
+    "hierarchyBlueprintTitle": "راه اندازی دسته بندی شرکتی توصیه شده",
+    "hierarchyBlueprintDescription": "اگر درخت دسته بندی را با یک منطق ثابت بسازید، برای کاربر قابل درک تر خواهد بود و تطبیق محصول به آرامی پیش می رود.",
+    "hierarchyExampleLabel": "جریان نمونه",
+    "hierarchyExampleValue": "تلفن ها > تلفن های دکمه ای > آیفون > سری 17 > لیست محصولات",
+    "easyModeTitle": "لازم نیست به این فکر کنید که در اینجا چه کاری انجام دهید",
+    "summaryGuideTitle": "من قدم بعدی درست را به شما نشان می دهم",
+    "createCatalogTitle": "ایجاد کاتالوگ جدید",
+    "createCatalogDescription": "تعریف کاتالوگ جدید برای B2B، B2C یا جریان های سفارشی اضافه کنید.",
+    "editCatalogTitle": "ویرایش کاتالوگ",
+    "editCatalogDescription": "نام، نوع و مرتب سازی کاتالوگ انتخابی را به روز کنید.",
+    "createCategoryTitle": "اضافه کردن دسته",
+    "createCategoryDescription": "دسته بندی جدید زیر {{target}} ایجاد کنید.",
+    "editCategoryTitle": "ویرایش دسته",
+    "editCategoryDescription": "اطلاعات دسته را برای {{target}} به روز کنید.",
+    "createCategoryTarget": "سطح برای اتصال",
+    "deleteCatalogConfirm": "آیا مطمئن هستید که می خواهید کاتالوگ {{name}} را حذف کنید؟",
+    "deleteCategoryConfirm": "آیا مطمئن هستید که می خواهید دسته {{name}} را حذف کنید؟",
+    "deleteStockConfirm": "آیا مطمئن هستید که می خواهید این پیوند سهام را حذف کنید؟",
+    "createRuleTitle": "قانون اضافه کنید",
+    "createRuleDescription": "یک قانون پیوند خودکار برای دسته {{category}} ایجاد کنید.",
+    "editRuleTitle": "ویرایش قانون",
+    "editRuleDescription": "اطلاعات قانون را برای دسته {{category}} به روز کنید.",
+    "deleteRuleConfirm": "آیا مطمئن هستید که می خواهید قانون {{name}} را حذف کنید؟",
+    "noRules": "هنوز قوانینی برای این دسته تعریف نشده است.",
+    "rulePriority": "اولویت {{priority}}",
+    "catalogsTitle": "کاتالوگ ها",
+    "catalogsDescription": "ابتدا کاتالوگی را که می خواهید با آن کار کنید انتخاب کنید.",
+    "catalogDescriptionFallback": "هنوز هیچ توضیحی برای این کاتالوگ وارد نشده است.",
+    "catalogHelperText": "به طور خلاصه: کاتالوگ را در سمت چپ انتخاب کنید، به دسته در وسط بروید، سهام و قوانین را در سمت راست مدیریت کنید.",
+    "treeTitle": "درخت دسته",
+    "treeDescription": "از دسته ای به زیرمجموعه دیگر بروید، مشابه Trendyol و Hepsiburada.",
+    "treeReorderHint": "می توانید با کشیدن و رها کردن دسته ها در همان سطح مرتب سازی کنید.",
+    "chooseCatalogFirst": "ابتدا یک کاتالوگ را از سمت چپ انتخاب کنید. مدیریت دسته بدون انتخاب کاتالوگ شروع نمی شود.",
+    "stocksTitle": "دسته بندی سهام",
+    "stocksDescription": "هنگامی که یک دسته برگ را انتخاب می کنید، سهام مرتبط در آنجا فهرست می شود.",
+    "stocksDescriptionSelected": "سهام مربوط به دسته {{category}}",
+    "stocksGuideTitle": "این رشته چه کاری انجام می دهد؟",
+    "stocksGuideDescription": "در اینجا شما تعیین می کنید که کدام محصولات در دسته بندی انتخابی شما قرار می گیرند. در صورت تمایل می توانید سهام را یکی یکی پیوند دهید.",
+    "stocksHelperText": "منطق آسان: ابتدا دسته را انتخاب کنید، سپس دکمه \"Link Stock\" را فشار دهید، محصول را از لیست کشویی انتخاب کنید.",
+    "favoritesGuideTitle": "علاقه مندی ها چه می کنند؟",
+    "favoritesGuideDescription": "سهام مورد علاقه شما در دسته انتخابی را در یک لیست دسترسی سریع مبتنی بر کاربر نشان می دهد. سهام مورد علاقه با دسته مورد علاقه مخلوط نمی شود.",
+    "favoritesHelperText": "{{count}} سهام مورد علاقه شما در این دسته است. با فشار دادن مجدد نماد قلب می توانید آن را از مورد علاقه حذف کنید.",
+    "rulesGuideTitle": "صفحه قوانین چه کاری انجام می دهد؟",
+    "rulesGuideDescription": "اگر نمی خواهید همان نوع محصولات را یکی یکی پیوند دهید، می توانید قانون را در اینجا تعریف کنید. به عنوان مثال، اگر Code1 = CAM باشد، می توان گفت که باید در این دسته قرار گیرد.",
+    "rulesHelperText": "ابتدا قانون را اضافه کنید. سپس ببینید با «قوانین پیش‌نمایش» چه اتفاقی می‌افتد. اگر درست است، با «اعمال قوانین» به طور خودکار پیوند دهید.",
+    "selectionTitle": "وضعیت انتخابات",
+    "selectionDescription": "می توانید کاتالوگ انتخابی، دسته بندی و سهام مرتبط را در یک نگاه از پانل سمت راست ببینید.",
+    "selectionCatalog": "کاتالوگ",
+    "selectionCategory": "دسته انتخابی",
+    "selectionCurrentLevel": "سطح فعلی شما",
+    "selectionPath": "جاده",
+    "selectionTotalStocks": "سهام گره خورده",
+    "selectionValueEmpty": "هنوز انتخاب نشده است",
+    "nextStepTitle": "مرحله بعدی توصیه می شود",
+    "nextStepChooseCatalog": "ابتدا یک کاتالوگ از پنل سمت چپ انتخاب کنید.",
+    "nextStepBrowseTree": "از دسته اصلی در پانل میانی شروع کنید و به سمت قسمت های فرعی حرکت کنید.",
+    "nextStepSelectLeaf": "یک دسته بندی شدید را برای مشاهده لیست سهام انتخاب کنید.",
+    "nextStepReviewStocks": "سهام مرتبط با دسته انتخابی خود را بررسی کنید و مطابقت صحیح را تأیید کنید.",
+    "stepCatalogTitle": "کاتالوگ را انتخاب کنید",
+    "stepCatalogDescription": "تعیین کنید که آیا در B2B، B2C یا کاتالوگ های خاص کار خواهید کرد.",
+    "stepTreeTitle": "از درخت به سمت بالا حرکت کنید",
+    "stepTreeDescription": "روی دسته اصلی، زیر شاخه و زیرشاخه ها کلیک کنید.",
+    "stepStocksTitle": "سهام را بررسی کنید",
+    "stepStocksDescription": "وقتی دسته پایانی انتخاب شد، سهام متصل و تفکیک کد ERP را در پانل سمت راست ببینید.",
+    "ready": "آماده است",
+    "pending": "در انتظار",
+    "openBranchAction": "باز کردن زیرمجموعه ها",
+    "selectLeafAction": "این دسته را انتخاب کنید",
+    "root": "ریشه",
+    "leaf": "پرواز کن",
+    "branch": "شاخه",
+    "treeLevelLabel": "سطح {{level}}",
+    "noCatalogs": "هنوز کاتالوگ تعریف شده ای وجود ندارد.",
+    "noCategories": "هیچ دسته بندی در این سطح وجود ندارد.",
+    "noStocks": "هیچ سهام مرتبط با این دسته وجود ندارد.",
+    "noFavorites": "هنوز هیچ سهام مورد علاقه ای در این دسته وجود ندارد.",
+    "selectLeafHint": "یک دسته بندی شدید را برای مشاهده سهام انتخاب کنید.",
+    "stockSearchPlaceholder": "جستجو بر اساس کد سهام یا نام سهام ...",
+    "favoriteSearchPlaceholder": "جستجو در موارد دلخواه بر اساس کد سهام یا نام...",
+    "primaryBadge": "دسته اصلی",
+    "tabs": {
+      "summary": "کمک کنید",
+      "stocks": "اضافه کردن سهام",
+      "favorites": "موارد دلخواه",
+      "rules": "قانون اضافه کنید",
+      "tips": "استفاده"
+    },
+    "catalogTypes": {
+      "b2b": "B2B",
+      "b2c": "B2C",
+      "dealer": "فروشنده",
+      "custom": "خصوصی"
+    },
+    "tips": {
+      "catalogTitle": "1. ابتدا کاتالوگ مناسب را انتخاب کنید",
+      "catalogDescription": "حتی اگر در دو طرف B2B و B2C نام دسته‌بندی یکسانی وجود داشته باشد، می‌توان نماهای متفاوتی را در کاتالوگ‌های مختلف ایجاد کرد.",
+      "branchTitle": "2. شعبه برای پیمایش دسته ها است",
+      "branchDescription": "دسته بندی شاخه ها نقطه انتخاب نهایی نیستند، بلکه برای انتقال کاربر به زیرمجموعه صحیح استفاده می شوند.",
+      "leafTitle": "3. سهام را در دسته بندی های شدید بررسی کنید",
+      "leafDescription": "فهرست سهام در دسته بندی افراطی بیشترین معنا را دارد. بنابراین توصیه می شود انتخاب نهایی را در دسته بندی شدید انجام دهید.",
+      "exampleTitle": "4. سلسله مراتب شرکت را ثابت نگه دارید",
+      "exampleDescription": "ساختار پیشنهادی: دسته اصلی > زیر مجموعه > نام تجاری > سری > محصولات. به این ترتیب، تیم هنگام باز کردن رکوردهای جدید از یک زبان استفاده می کند و نتایج جستجو قابل پیش بینی تر است."
+    },
+    "hierarchyStages": {
+      "root": {
+        "title": "دسته اصلی",
+        "description": "این نشان دهنده بالاترین سطح کسب و کار است. مثال: تلفن"
+      },
+      "subcategory": {
+        "title": "زیرمجموعه",
+        "description": "گروه محصول را از هم جدا می کند. مثال: تلفن های دکمه ای"
+      },
+      "brand": {
+        "title": "نام تجاری",
+        "description": "برای خرابی برند یا سازنده استفاده می شود. مثال: آیفون"
+      },
+      "series": {
+        "title": "سری",
+        "description": "خانواده مدل یا تمایز مبتنی بر سریال در اینجا حفظ می شود. مثال: 17 سری"
+      },
+      "products": {
+        "title": "محصولات",
+        "description": "آخرین سطح باید دسته برگ باشد. صحافی سهام باید در اینجا انجام شود."
+      }
+    },
+    "actions": {
+      "newCatalog": "کاتالوگ جدید",
+      "createCatalog": "ایجاد کاتالوگ",
+      "addRootCategory": "اضافه کردن دسته ریشه",
+      "addSubCategory": "اضافه کردن زیر مجموعه",
+      "createCategory": "ایجاد دسته",
+      "uploadCategoryImage": "آپلود تصویر",
+      "uploadingCategoryImage": "در حال بارگذاری تصویر",
+      "removeCategoryImage": "حذف تصویر",
+      "addStock": "لینک سهام",
+      "removeStock": "پیوند را حذف کنید",
+      "addFavorite": "به موارد دلخواه اضافه کنید",
+      "removeFavorite": "حذف از موارد دلخواه",
+      "addRule": "قانون اضافه کنید",
+      "createRule": "ایجاد قانون",
+      "previewRules": "قوانین پیش نمایش",
+      "previewingRules": "آماده سازی پیش نمایش",
+      "applyRules": "اعمال قوانین",
+      "applyingRules": "قوانین اعمال می شود",
+      "importFromRiiStock": "ایجاد از RII_STOK",
+      "previewingStockHierarchy": "خواندن شکست",
+      "refreshStockHierarchyPreview": "بازخوانی پیش نمایش",
+      "applyStockHierarchy": "ایجاد درخت کاتالوگ",
+      "applyingStockHierarchy": "ایجاد درخت کاتالوگ",
+      "addCategoryFavorite": "اضافه کردن دسته به موارد دلخواه",
+      "removeCategoryFavorite": "حذف دسته از موارد دلخواه"
+    },
+    "messages": {
+      "catalogCreateSuccess": "کاتالوگ با موفقیت ایجاد شد.",
+      "catalogCreateError": "کاتالوگ ایجاد نشد.",
+      "catalogUpdateSuccess": "کاتالوگ با موفقیت به روز شد.",
+      "catalogUpdateError": "کاتالوگ به روز نشد.",
+      "catalogDeleteSuccess": "کاتالوگ با موفقیت حذف شد.",
+      "catalogDeleteError": "کاتالوگ را نمی توان حذف کرد.",
+      "rootCategoryCreateSuccess": "دسته ریشه با موفقیت ایجاد شد.",
+      "subCategoryCreateSuccess": "زیرمجموعه با موفقیت ایجاد شد.",
+      "categoryCreateError": "دسته ایجاد نشد.",
+      "categoryUpdateSuccess": "دسته با موفقیت به روز شد.",
+      "categoryUpdateError": "دسته را نمی توان به روز کرد.",
+      "categoryReorderSuccess": "سفارش دسته به روز شد.",
+      "categoryReorderError": "ترتیب دسته را نمی توان به روز کرد.",
+      "categoryDeleteSuccess": "دسته با موفقیت حذف شد.",
+      "categoryDeleteError": "دسته را نمی توان حذف کرد.",
+      "stockAssignSuccess": "سهام با موفقیت به دسته مرتبط شد.",
+      "stockAssignError": "سهام را نمی توان به دسته مرتبط کرد.",
+      "stockUnassignSuccess": "لینک سهام حذف شد",
+      "stockUnassignError": "پیوند سهام حذف نشد.",
+      "favoriteAddSuccess": "سهام به موارد دلخواه اضافه شد.",
+      "favoriteRemoveSuccess": "سهام از موارد دلخواه حذف شد.",
+      "favoriteToggleError": "وضعیت مورد علاقه به روز نمی شود.",
+      "ruleCreateSuccess": "قانون با موفقیت ایجاد شده است.",
+      "ruleCreateError": "قانون ایجاد نشد.",
+      "ruleUpdateSuccess": "این قانون با موفقیت به روز شد.",
+      "ruleUpdateError": "این قانون نمی تواند به روز شود.",
+      "ruleDeleteSuccess": "این قانون با موفقیت حذف شد.",
+      "ruleDeleteError": "این قانون قابل حذف نیست.",
+      "rulePreviewError": "پیش نمایش قانون دریافت نشد.",
+      "ruleApplySuccess": "قوانین با موفقیت اجرا شد.",
+      "ruleApplyError": "قوانین قابل اعمال نبودند.",
+      "stockHierarchyPreviewError": "دریافت پیش‌نمایش تجزیه سهام ممکن نیست.",
+      "stockHierarchyApplySuccess": "یک درخت کاتالوگ از شکست RII_STOK ایجاد شد.",
+      "stockHierarchyApplyError": "درخت کاتالوگ از خرابی RII_STOK ایجاد نشد.",
+      "categoryFavoriteAddSuccess": "دسته به علاقه مندی ها اضافه شد",
+      "categoryFavoriteRemoveSuccess": "دسته از موارد دلخواه حذف شد."
+    },
+    "stockHierarchyImport": {
+      "title": "ایجاد کاتالوگ از تجزیه RII_STOK",
+      "description": "توالی Group Code > Code1 > Code2 > Code3 را به درخت کاتالوگ تبدیل می کند. مانند منطق Trendyol/Sahibinden، کاربر با هر کلیک به یک شکست پایین تر می رود و سهام را در آخرین سطح می بیند.",
+      "options": {
+        "includeCode1": {
+          "title": "شامل سطح کد1",
+          "description": "اولین تفکیک زیر گروه کد را باز می کند. به عنوان مثال: بنزین / گازوئیل."
+        },
+        "includeCode2": {
+          "title": "شامل سطح Code2",
+          "description": "دومین تفکیک تحت کد1 را باز می کند. مثال: دستی / اتوماتیک."
+        },
+        "includeCode3": {
+          "title": "شامل سطح Code3",
+          "description": "سومین شکست تحت Code2 را باز می کند. در سهام خالی، عمیق ترین سطح اشغال شده، دسته افراطی است."
+        },
+        "assignStocks": {
+          "title": "سهام را به آخرین سطح پیوند دهید",
+          "description": "هنگام ایجاد درخت دسته، به طور خودکار سهام را به عمیق ترین تجزیه آن پیوند می دهد."
+        }
+      },
+      "preview": {
+        "sourceStock": "سهام را بخوانید",
+        "category": "کل دسته",
+        "newCategory": "دسته جدید",
+        "newStockAssignment": "لینک سهام جدید",
+        "group": "گروه: {{count}}",
+        "code1": "کد1: {{count}}",
+        "code2": "کد2: {{count}}",
+        "code3": "کد3: {{count}}",
+        "samples": "راه های مثال زدن",
+        "noSamples": "هیچ نمونه تفکیک یافت نشد."
+      }
+    },
+    "rulePreviewSummaryTitle": "خلاصه پیش نمایش قوانین",
+    "rulePreviewSummary": {
+      "matched": "موجودی برای مطابقت: {{count}}",
+      "created": "لینک جدید این خواهد بود: {{count}}",
+      "updated": "لینک به روز رسانی: {{count}}",
+      "skipped": "ثبت محافظت شده دستی: {{count}}"
+    },
+    "rulePreviewListTitle": "پیش نمایش نمونه ها",
+    "rulePreviewListEmpty": "هیچ نمونه منطبقی برای پیش نمایش یافت نشد.",
+    "rulePreviewMatchedRule": "قانون تطبیق: {{rule}} اولویت {{priority}}",
+    "rulePreviewActions": {
+      "create": "لینک جدید",
+      "update": "لینک به روز خواهد شد",
+      "skip": "دست حفظ شده"
+    },
+    "ruleApplySummaryTitle": "خلاصه اجرای قوانین",
+    "ruleApplySummary": {
+      "matched": "سهام منطبق: {{count}}",
+      "created": "لینک جدید: {{count}}",
+      "updated": "لینک به روز شده: {{count}}",
+      "skipped": "ثبت محافظت شده دستی: {{count}}"
+    },
+    "form": {
+      "catalogName": "نام کاتالوگ",
+      "catalogNamePlaceholder": "مثال: کاتالوگ اصلی B2B",
+      "catalogCode": "کد کاتالوگ",
+      "catalogCodePlaceholder": "مثال: B2B_MAIN",
+      "catalogType": "نوع کاتالوگ",
+      "branchCode": "کد شعبه",
+      "branchCodePlaceholder": "اختیاری",
+      "sortOrder": "مرتب سازی بر اساس",
+      "description": "توضیحات",
+      "descriptionPlaceholder": "این تعریف را به طور مختصر توضیح دهید تا سایر مدیران آن را درک کنند.",
+      "categoryName": "نام دسته",
+      "categoryNamePlaceholder": "مثال: سیستم های شیشه ای",
+      "categoryCode": "کد دسته",
+      "categoryCodePlaceholder": "مثال: CAM_SISTEMLERI",
+      "nodeType": "نوع دسته",
+      "nodeTypeBranchHelp": "این شعبه برای پیمایش دسته بندی و باز کردن زیرشاخه ها است. محصولات را مستقیماً در این سطح وصل نکنید.",
+      "nodeTypeLeafHelp": "دسته بندی افراطی نقطه انتخاب نهایی است. نقشه برداری سهام و لیست محصولات باید در این سطح نگه داشته شود.",
+      "visualPreset": "تم بصری",
+      "visualPresetPlaceholder": "موضوع را با جستجو انتخاب کنید",
+      "visualPresetSearchPlaceholder": "جستجو برای تم...",
+      "visualPresetEmpty": "تم مناسب پیدا نشد",
+      "visualPresetHelp": "شما تصاویر را از خارج آپلود نمی کنید. این سیستم بر اساس این انتخاب، نمای دسته بندی خود را تولید می کند.",
+      "categoryImage": "تصویر دسته",
+      "categoryImageHelp": "در صورت تمایل می توانید تصویر خاصی را در سیستم آپلود کنید. اگر آن را آپلود کنید، این تصویر به جای نماد از پیش تعیین شده در کارت دسته استفاده می شود.",
+      "ruleName": "نام قانون",
+      "ruleCode": "کد قانون",
+      "stockAttribute": "منطقه سهام",
+      "operator": "اپراتور",
+      "ruleValue": "ارزش قانون",
+      "ruleValuePlaceholder": "به عنوان مثال: شیشه یا نمایه، لوازم جانبی",
+      "ruleValueDropdownPlaceholder": "از پیش تنظیم های سهام انتخاب کنید",
+      "ruleValueSearchPlaceholder": "جستجو برای تجزیه ERP ...",
+      "ruleValueLoading": "در حال بارگیری مقادیر...",
+      "ruleValueEmpty": "مقدار مناسبی برای این فیلد یافت نشد.",
+      "ruleValueDropdownHelp": "سیستم مقادیر واقعی ERP را در منطقه سهامی که انتخاب کرده اید فهرست می کند. به جای تایپ کردن، بهتر است آن را در اینجا انتخاب کنید.",
+      "ruleValueInListHelp": "شما می توانید بیش از یک مقدار را در عملگر var در لیست انتخاب کنید. بالا را برای افزودن انتخاب کنید، برای حذف روی برچسب کلیک کنید.",
+      "ruleValueInListEmpty": "هنوز ارزش افزوده ای وجود ندارد.",
+      "ruleValueManualHelp": "این اپراتور با متن آزاد کار می کند. قانون شروع، شامل یا پایان را در اینجا تایپ کنید.",
+      "ruleValueTopMatchesTitle": "متداول ترین مقادیر در سیستم",
+      "ruleValueTopMatchesSubtitle": "می توانید کلیک کنید و به سرعت انتخاب کنید",
+      "ruleValueTopMatchesEmpty": "هیچ مقدار برجسته ای برای این فیلد یافت نشد.",
+      "priority": "اولویت"
+    },
+    "visualPreviewTitle": "نمای دسته",
+    "visualPreviewFallback": "پیش نمایش دسته",
+    "visualPresets": {
+      "general": {
+        "label": "ژنرال"
+      },
+      "glass": {
+        "label": "شیشه ای"
+      },
+      "profile": {
+        "label": "نمایه"
+      },
+      "accessory": {
+        "label": "لوازم جانبی"
+      },
+      "service": {
+        "label": "خدمات"
+      },
+      "logistics": {
+        "label": "تدارکات"
+      },
+      "machinery": {
+        "label": "دستگاه"
+      },
+      "electronics": {
+        "label": "الکترونیک"
+      },
+      "security": {
+        "label": "امنیت"
+      },
+      "lighting": {
+        "label": "روشنایی"
+      },
+      "construction": {
+        "label": "ساخت و ساز"
+      },
+      "furniture": {
+        "label": "مبلمان"
+      },
+      "hardware": {
+        "label": "سخت افزار"
+      },
+      "automation": {
+        "label": "اتوماسیون"
+      },
+      "energy": {
+        "label": "انرژی"
+      },
+      "office": {
+        "label": "دفتر"
+      },
+      "textile": {
+        "label": "نساجی"
+      },
+      "chemical": {
+        "label": "شیمیایی"
+      },
+      "outdoor": {
+        "label": "فضای باز"
+      },
+      "cooling": {
+        "label": "خنک کننده"
+      },
+      "heating": {
+        "label": "گرمایش"
+      },
+      "plumbing": {
+        "label": "لوله کشی"
+      },
+      "decoration": {
+        "label": "دکوراسیون"
+      },
+      "packaging": {
+        "label": "بسته بندی"
+      },
+      "automotive": {
+        "label": "خودرو"
+      },
+      "agriculture": {
+        "label": "کشاورزی"
+      },
+      "medical": {
+        "label": "پزشکی"
+      },
+      "pharmacy": {
+        "label": "داروخانه"
+      },
+      "cosmetics": {
+        "label": "لوازم آرایشی"
+      },
+      "food": {
+        "label": "غذا"
+      },
+      "beverage": {
+        "label": "نوشیدنی"
+      },
+      "cleaning": {
+        "label": "تمیز کردن"
+      },
+      "education": {
+        "label": "آموزش و پرورش"
+      },
+      "finance": {
+        "label": "امور مالی"
+      },
+      "insurance": {
+        "label": "بیمه"
+      },
+      "real-estate": {
+        "label": "املاک و مستغلات"
+      },
+      "tourism": {
+        "label": "گردشگری"
+      },
+      "hospitality": {
+        "label": "محل اقامت"
+      },
+      "restaurant": {
+        "label": "رستوران"
+      },
+      "ecommerce": {
+        "label": "تجارت الکترونیک"
+      },
+      "retail": {
+        "label": "خرده فروشی"
+      },
+      "wholesale": {
+        "label": "عمده فروشی"
+      },
+      "manufacturing": {
+        "label": "تولید"
+      },
+      "mining": {
+        "label": "معدن"
+      },
+      "marine": {
+        "label": "دریایی"
+      },
+      "aviation": {
+        "label": "هوانوردی"
+      },
+      "telecom": {
+        "label": "مخابرات"
+      },
+      "software": {
+        "label": "نرم افزار"
+      },
+      "data-center": {
+        "label": "مرکز داده"
+      },
+      "media": {
+        "label": "رسانه ها"
+      },
+      "printing": {
+        "label": "چاپخانه"
+      },
+      "sports": {
+        "label": "ورزش"
+      },
+      "baby-kids": {
+        "label": "نوزاد و کودک"
+      },
+      "pet": {
+        "label": "حیوان خانگی"
+      },
+      "jewelry": {
+        "label": "جواهرات"
+      },
+      "luxury": {
+        "label": "لوکس"
+      },
+      "stationery": {
+        "label": "لوازم التحریر"
+      },
+      "laboratory": {
+        "label": "آزمایشگاه"
+      },
+      "recycling": {
+        "label": "بازیافت"
+      },
+      "defense": {
+        "label": "دفاع"
+      }
+    },
+    "ruleAttributes": {
+      "groupCode": "کد گروه",
+      "groupName": "نام گروه",
+      "code1": "کد 1",
+      "code1Name": "کد 1 نام",
+      "code2": "کد 2",
+      "code2Name": "کد 2 نام",
+      "code3": "کد 3",
+      "code3Name": "کد 3 نام",
+      "code4": "کد 4",
+      "code4Name": "کد 4 نام",
+      "code5": "کد 5",
+      "code5Name": "کد 5 نام",
+      "manufacturerCode": "کد سازنده",
+      "erpStockCode": "کد سهام ERP",
+      "stockName": "نام سهام"
+    },
+    "ruleOperators": {
+      "equals": "برابر است",
+      "contains": "حاوی",
+      "startsWith": "با شروع می شود",
+      "endsWith": "به پایان می رسد",
+      "inList": "در لیست است"
+    },
+    "meta": {
+      "group": "گروه",
+      "code1": "کد 1",
+      "code2": "کد 2",
+      "code3": "کد 3"
+    }
+  }
+}

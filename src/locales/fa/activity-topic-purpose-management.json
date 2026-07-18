@@ -1,0 +1,82 @@
+{
+  "menu": "مدیریت موضوعات مورد علاقه",
+  "description": "موضوعات مورد علاقه را مدیریت و ویرایش کنید",
+  "addButton": "اضافه کردن موضوع جدید",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای یافت نشد",
+  "actions": "اقدامات",
+  "edit": "ویرایش کنید",
+  "deleteButton": "حذف کنید",
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "saving": "در حال ذخیره...",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "advancedFilter": {
+    "columnName": "نام موضوع",
+    "columnDescription": "توضیحات",
+    "columnCreatedBy": "ایجاد شده توسط"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "اضافه کردن موضوع جدید",
+      "editTitle": "ویرایش موضوع",
+      "addDescription": "اطلاعات موضوع جدید را وارد کنید",
+      "editDescription": "ویرایش اطلاعات موضوع",
+      "name": "نام موضوع",
+      "namePlaceholder": "نام موضوع را وارد کنید",
+      "nameRequired": "نام موضوع الزامی است",
+      "nameMaxLength": "نام موضوع حداکثر می تواند 100 کاراکتر باشد",
+      "description": "توضیحات",
+      "descriptionPlaceholder": "توضیحات را وارد کنید (اختیاری)",
+      "descriptionMaxLength": "توضیحات حداکثر می تواند 500 کاراکتر باشد"
+    },
+    "table": {
+      "title": "لیست موضوعات مورد علاقه",
+      "id": "شناسه",
+      "name": "نام موضوع",
+      "description": "توضیحات",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط",
+      "showing": "نمایش {{from}}-{{to}} / {{total}}",
+      "page": "صفحه {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "کل موضوعات",
+      "activeActivityTypes": "موضوعات فعال",
+      "newThisMonth": "جدید این ماه"
+    },
+    "messages": {
+      "createSuccess": "موضوع با موفقیت ایجاد شد",
+      "createError": "موضوع ایجاد نشد",
+      "updateSuccess": "موضوع با موفقیت به روز شد",
+      "updateError": "موضوع به روز نشد",
+      "deleteSuccess": "موضوع با موفقیت حذف شد",
+      "deleteError": "موضوع حذف نشد"
+    },
+    "error": "خطایی رخ داد",
+    "create": "اضافه کردن موضوع جدید",
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای وجود ندارد",
+    "actions": "اقدامات",
+    "cancel": "لغو کنید",
+    "save": "ذخیره کنید",
+    "saving": "در حال ذخیره..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "حذف موضوع",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید {{name}} را حذف کنید؟"
+  },
+  "messages": {
+    "deleteSuccess": "موضوع با موفقیت حذف شد",
+    "deleteError": "موضوع حذف نشد"
+  },
+  "table": {
+    "title": "لیست موضوعات مورد علاقه",
+    "id": "شناسه",
+    "name": "نام موضوع",
+    "description": "توضیحات",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط"
+  }
+}

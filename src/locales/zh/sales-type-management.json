@@ -1,0 +1,35 @@
+{
+  "menu": "销售类型管理",
+  "description": "管理和编辑销售类型",
+  "addButton": "添加新的销售类型",
+  "searchPlaceholder": "搜索销售类型...",
+  "advancedFilter": {
+    "columnName": "名称",
+    "columnCode": "代码",
+    "columnSalesType": "报价类型"
+  },
+  "table": {
+    "title": "销售类型列表",
+    "salesType": "报价类型",
+    "name": "名称",
+    "code": "代码",
+    "createdDate": "创建日期"
+  },
+  "form": {
+    "addTitle": "添加新的销售类型",
+    "editTitle": "编辑销售类型",
+    "addDescription": "创建新的销售类型定义。",
+    "editDescription": "更新现有销售类型定义。",
+    "salesType": "报价类型",
+    "name": "名称",
+    "namePlaceholder": "输入销售类型名称",
+    "code": "代码",
+    "codePlaceholder": "例如。 1 或离岸价",
+    "codeHelp": "它是可选的。当订单转移到 Netsis 时，它会作为出口/交货类型代码（如果有）发送；如果为空，则海外使用默认FOB。",
+    "validation": {
+      "required": "姓名为必填项",
+      "whitespace": "名称不能为空或只有空格",
+      "codeMaxLength": "代码最多可包含 50 个字符"
+    }
+  }
+}

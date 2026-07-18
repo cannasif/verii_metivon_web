@@ -1,0 +1,23 @@
+{
+  "PageTitle": "Ustawienia poczty",
+  "PageDescription": "Skonfiguruj ustawienia serwera SMTP",
+  "Save": "Zapisz",
+  "SavedSuccessfully": "Ustawienia poczty zostały zapisane pomyślnie",
+  "SaveFailed": "Nie udało się zapisać ustawień poczty",
+  "Fields": {
+    "Host": "Nazwa serwera",
+    "Port": "Port połączenia",
+    "EnableSsl": "Włącz protokół SSL",
+    "Username": "Nazwa użytkownika",
+    "Password": "Hasło",
+    "PasswordPlaceholder": "Wprowadź nowe hasło, aby je zmienić",
+    "FromEmail": "Z e-maila",
+    "FromName": "Od imienia",
+    "Timeout": "Limit czasu (s)"
+  },
+  "TestMail": {
+    "Send": "Wyślij e-mail testowy",
+    "Sending": "Trwa wysyłanie testu...",
+    "Success": "E-mail testowy wysłany"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "approvalUserRole": {
+    "menu": "Управление ролями пользователей утверждения",
+    "description": "Управление ролями пользователей утверждения и их организация.",
+    "addButton": "Добавить новую роль",
+    "searchPlaceholder": "Искать...",
+    "refresh": "Обновить",
+    "loading": "Загрузка...",
+    "noData": "Нет данных",
+    "table": {
+      "id": "идентификатор",
+      "userFullName": "Пользователь",
+      "approvalRoleName": "Роль утверждения",
+      "createdDate": "Дата создания",
+      "createdBy": "Создано",
+      "actions": "Действия",
+      "showing": "Показаны {{from}}-{{to}} / {{total}}",
+      "page": "Страница {{current}} / {{total}}",
+      "previous": "Предыдущий",
+      "next": "Далее",
+      "title": "Утверждение ролей пользователей"
+    },
+    "delete": {
+      "title": "Удалить роль",
+      "confirmMessage": "Вы уверены, что хотите удалить эту роль пользователя?",
+      "confirmButton": "Удалить",
+      "cancelButton": "Отмена"
+    },
+    "form": {
+      "editTitle": "Изменить роль пользователя утверждения",
+      "addTitle": "Добавить новую роль пользователя утверждения",
+      "editDescription": "Изменение информации о роли пользователя для утверждения",
+      "addDescription": "Введите новую информацию о роли пользователя для утверждения.",
+      "userId": "Пользователь",
+      "selectUser": "Выберите пользователя",
+      "noUserSelected": "Пользователь не выбран",
+      "approvalRoleId": "Роль утверждения",
+      "selectApprovalRole": "Выберите роль утверждения",
+      "noApprovalRoleSelected": "Роль утверждения не выбрана",
+      "userIdRequired": "Требуется выбор пользователя",
+      "approvalRoleIdRequired": "Требуется выбрать роль утверждения.",
+      "save": "Сохранить",
+      "saving": "Сохранение...",
+      "cancel": "Отмена"
+    },
+    "advancedFilter": {
+      "columnUserFullName": "Пользователь",
+      "columnApprovalRoleName": "Роль утверждения",
+      "columnCreatedBy": "Создано"
+    },
+    "error": "Произошла ошибка"
+  }
+}

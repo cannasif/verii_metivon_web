@@ -1,0 +1,88 @@
+{
+  "menu": "Управление типами файлов",
+  "description": "Управление и систематизация типов файлов",
+  "search": "Искать...",
+  "refresh": "Обновить",
+  "addButton": "Добавить новый тип файла",
+  "loading": "Загрузка...",
+  "noData": "Нет данных",
+  "actions": "Транзакции",
+  "cancel": "Отмена",
+  "save": "Сохранить",
+  "saving": "Запись...",
+  "delete": "Удалить",
+  "deleting": "Удаление...",
+  "deleteConfirmTitle": "Подтверждение удаления",
+  "deleteConfirmDescription": "Вы уверены, что хотите удалить эту запись? Это действие невозможно отменить.",
+  "table": {
+    "title": "Список типов файлов",
+    "id": "идентификатор",
+    "ruleType": "Тип правила",
+    "customerType": "Тип клиента",
+    "salesRep": "Торговый представитель",
+    "serialPrefix": "Серийный префикс",
+    "serialLength": "Длина серии",
+    "createdDate": "Дата создания"
+  },
+  "form": {
+    "addTitle": "Добавить новый тип файла",
+    "editTitle": "Изменить тип файла",
+    "addDescription": "Введите информацию о новом типе файла",
+    "editDescription": "Редактировать информацию о типе файла",
+    "ruleType": {
+      "required": "Необходимо выбрать тип правила"
+    },
+    "selectRuleType": "Выберите тип правила",
+    "customerType": "Тип клиента",
+    "selectCustomerType": "Выберите тип клиента (необязательно)",
+    "searchCustomerType": "Поиск типа клиента...",
+    "noCustomerTypeSelected": "Тип клиента не выбран",
+    "salesRep": "Торговый представитель",
+    "selectSalesRep": "Выберите торгового представителя (необязательно)",
+    "searchSalesRep": "Ищем торгового представителя...",
+    "noSalesRepSelected": "Торговый представитель не выбран",
+    "serialPrefix": {
+      "required": "Требуется префикс серийного номера.",
+      "maxLength": "Префикс серийного номера может содержать до 50 символов."
+    },
+    "serialPrefixPlaceholder": "Введите серийный префикс",
+    "serialLength": {
+      "min": "Длина серии должна быть не менее 1",
+      "max": "Длина серии может достигать 100."
+    },
+    "serialLengthPlaceholder": "Введите длину серии",
+    "serialStart": {
+      "min": "Последовательное начало должно быть не менее 0."
+    },
+    "serialStartPlaceholder": "Введите начальное значение серии",
+    "serialCurrent": {
+      "min": "Последовательный ток должен быть не менее 0."
+    },
+    "serialCurrentPlaceholder": "Введите текущее серийное значение",
+    "serialIncrement": {
+      "min": "Серийный прирост должен быть не менее 1."
+    },
+    "serialIncrementPlaceholder": "Введите значение серийного приращения"
+  },
+  "totalRecords": "Всего записей {{count}}",
+  "advancedFilter": {
+    "columnSerialPrefix": "Серийный префикс",
+    "columnCustomerTypeName": "Тип клиента",
+    "columnSalesRepFullName": "Торговый представитель",
+    "columnRuleType": "Тип правила"
+  },
+  "messages": {
+    "createSuccess": "Тип файла успешно создан",
+    "createError": "Произошла ошибка при создании типа файла",
+    "updateSuccess": "Тип файла успешно обновлен",
+    "updateError": "Произошла ошибка при обновлении типа файла.",
+    "deleteSuccess": "Тип файла успешно удален",
+    "deleteError": "Произошла ошибка при удалении типа файла."
+  },
+  "common": {
+    "delete": "Удалить"
+  },
+  "error": "Не удалось сохранить активность.",
+  "previous": "Предыдущий",
+  "next": "Далее"
+}

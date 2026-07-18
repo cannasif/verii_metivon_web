@@ -1,0 +1,82 @@
+{
+  "menu": "Vergaderbeheer",
+  "description": "Beheer en bewerk vergaderingsdefinities",
+  "addButton": "Nieuwe vergadering toevoegen",
+  "loading": "Laden...",
+  "noData": "Geen gegevens",
+  "actions": "Acties",
+  "edit": "Bewerken",
+  "deleteButton": "Verwijderen",
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opslaan...",
+  "previous": "Vorige",
+  "next": "Volgende",
+  "advancedFilter": {
+    "columnName": "Naam van de vergadering",
+    "columnDescription": "Beschrijving",
+    "columnCreatedBy": "Gemaakt door"
+  },
+  "activityType": {
+    "create": "Nieuwe vergadering toevoegen",
+    "loading": "Laden...",
+    "noData": "Geen gegevens",
+    "actions": "Acties",
+    "cancel": "Annuleer",
+    "save": "Opslaan",
+    "saving": "Opslaan...",
+    "error": "Er is een fout opgetreden",
+    "form": {
+      "addTitle": "Nieuwe vergadering toevoegen",
+      "editTitle": "Vergadering bewerken",
+      "addDescription": "Voer nieuwe vergaderingsgegevens in",
+      "editDescription": "Vergaderinformatie bewerken",
+      "name": "Naam van de vergadering",
+      "namePlaceholder": "Voer de naam van de vergadering in",
+      "nameRequired": "Naam van de vergadering is vereist",
+      "nameMaxLength": "De naam van de vergadering mag maximaal 100 tekens lang zijn",
+      "description": "Beschrijving",
+      "descriptionPlaceholder": "Beschrijving invoeren (optioneel)",
+      "descriptionMaxLength": "De beschrijving mag maximaal 500 tekens bevatten"
+    },
+    "table": {
+      "title": "Vergaderlijst",
+      "id": "Identiteitskaart",
+      "name": "Naam van de vergadering",
+      "description": "Beschrijving",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "showing": "Resultaat {{from}}-{{to}} / {{total}}",
+      "page": "Pagina {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "Totaal aantal vergaderingen",
+      "activeActivityTypes": "Actieve vergaderingen",
+      "newThisMonth": "Nieuw deze maand"
+    },
+    "messages": {
+      "createSuccess": "Vergadering is succesvol aangemaakt",
+      "createError": "Kan vergadering niet maken",
+      "updateSuccess": "Vergadering succesvol bijgewerkt",
+      "updateError": "Kan vergadering niet updaten",
+      "deleteSuccess": "Vergadering succesvol verwijderd",
+      "deleteError": "Kan vergadering niet verwijderen"
+    }
+  },
+  "deleteConfirm": {
+    "confirmTitle": "Vergadering verwijderen",
+    "confirmMessage": "Weet u zeker dat u {{name}} wilt verwijderen?"
+  },
+  "messages": {
+    "deleteSuccess": "Vergadering succesvol verwijderd",
+    "deleteError": "Kan vergadering niet verwijderen"
+  },
+  "table": {
+    "title": "Vergaderlijst",
+    "id": "Identiteitskaart",
+    "name": "Naam van de vergadering",
+    "description": "Beschrijving",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door"
+  }
+}

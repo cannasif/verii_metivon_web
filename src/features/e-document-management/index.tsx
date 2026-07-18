@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{eDocumentConfig}from'@/features/erp-operation-management/configs';export function EDocumentManagementPage(){return <ErpPagedManagementPage config={eDocumentConfig}/>}

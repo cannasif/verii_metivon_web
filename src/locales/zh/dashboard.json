@@ -1,0 +1,73 @@
+{
+  "title": "仪表板",
+  "loading": "加载中...",
+  "greeting": {
+    "morning": "早上好",
+    "afternoon": "美好的一天",
+    "evening": "晚上好"
+  },
+  "refresh": "刷新",
+  "refreshing": "正在更新中...",
+  "refreshed": "数据已更新",
+  "refreshError": "更新失败",
+  "user": "用户",
+  "noSalesData": "尚无销售数据",
+  "noActivities": "还没有活动",
+  "selectFormat": "选择格式",
+  "reportPreparing": "报告正在准备中...",
+  "reportDownloaded": "报告已下载。",
+  "reportError": "无法收到报告。",
+  "stats": {
+    "totalRevenue": "总成交额",
+    "activeOpportunities": "积极的机会",
+    "newLeads": "新候选人",
+    "pendingOrders": "待处理订单"
+  },
+  "salesAnalysis": "销售分析",
+  "targetVsActual": "目标与实现",
+  "latestActivities": "最新活动",
+  "viewAll": "查看全部",
+  "reportDownload": "下载报告",
+  "quickAction": "快速交易",
+  "activityType": {
+    "meeting": "会议",
+    "call": "搜索",
+    "email": "电子邮件",
+    "general": "一般"
+  },
+  "noDate": "没有日期",
+  "unnamedActivity": "匿名活动",
+  "monthsShort": {
+    "jan": "一月",
+    "feb": "二月",
+    "mar": "三月",
+    "apr": "四月",
+    "may": "五月",
+    "jun": "快乐",
+    "jul": "七月",
+    "aug": "八月",
+    "sep": "九月",
+    "oct": "十月",
+    "nov": "肌肉",
+    "dec": "搜索"
+  },
+  "quickStats": {
+    "pendingTasks": "待处理任务",
+    "checkTasks": "检查任务清单",
+    "openQuotations": "公开发售",
+    "reviewQuotations": "查看优惠",
+    "criticalStock": "关键库存",
+    "stockStatus": "查看库存状态"
+  },
+  "sidebar": {
+    "customers": "客户",
+    "customerManagement": "客户管理",
+    "salesManagement": "销售漏斗",
+    "demandCreateWizard": "创建新请求",
+    "quotationCreateWizard": "创建新报价",
+    "orderCreateWizard": "创建新订单",
+    "erpOrderList": "ERP订单列表",
+    "activities": "规划",
+    "activityManagement": "活动管理"
+  }
+}

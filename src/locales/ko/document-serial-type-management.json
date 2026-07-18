@@ -1,0 +1,88 @@
+{
+  "menu": "파일 유형 관리",
+  "description": "파일 형식 관리 및 구성",
+  "search": "검색...",
+  "refresh": "새로고침",
+  "addButton": "새 파일 형식 추가",
+  "loading": "로드 중...",
+  "noData": "데이터 없음",
+  "actions": "거래",
+  "cancel": "취소",
+  "save": "저장",
+  "saving": "녹음 중...",
+  "delete": "삭제",
+  "deleting": "삭제 중...",
+  "deleteConfirmTitle": "삭제 확인",
+  "deleteConfirmDescription": "이 기록을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.",
+  "table": {
+    "title": "파일 형식 목록",
+    "id": "아이디",
+    "ruleType": "규칙 유형",
+    "customerType": "고객 유형",
+    "salesRep": "영업 담당자",
+    "serialPrefix": "일련번호",
+    "serialLength": "시리즈 길이",
+    "createdDate": "생성 날짜"
+  },
+  "form": {
+    "addTitle": "새 파일 형식 추가",
+    "editTitle": "파일 유형 편집",
+    "addDescription": "새 파일 형식 정보 입력",
+    "editDescription": "파일 형식 정보 편집",
+    "ruleType": {
+      "required": "규칙 유형을 선택해야 합니다."
+    },
+    "selectRuleType": "규칙 유형 선택",
+    "customerType": "고객 유형",
+    "selectCustomerType": "고객 유형 선택(선택)",
+    "searchCustomerType": "고객 유형 검색...",
+    "noCustomerTypeSelected": "고객 유형이 선택되지 않았습니다.",
+    "salesRep": "영업 담당자",
+    "selectSalesRep": "영업 담당자 선택(선택)",
+    "searchSalesRep": "영업사원을 구합니다...",
+    "noSalesRepSelected": "선택한 영업 담당자가 없습니다.",
+    "serialPrefix": {
+      "required": "일련번호 접두사가 필요합니다.",
+      "maxLength": "일련번호 접두사는 최대 50자까지 가능합니다."
+    },
+    "serialPrefixPlaceholder": "일련번호를 입력하세요",
+    "serialLength": {
+      "min": "계열 길이는 1 이상이어야 합니다.",
+      "max": "시리즈 길이는 최대 100개까지 가능합니다."
+    },
+    "serialLengthPlaceholder": "시리즈 길이를 입력하세요.",
+    "serialStart": {
+      "min": "직렬 시작은 0 이상이어야 합니다."
+    },
+    "serialStartPlaceholder": "계열 시작 값을 입력하세요.",
+    "serialCurrent": {
+      "min": "직렬 전류는 0 이상이어야 합니다."
+    },
+    "serialCurrentPlaceholder": "현재 일련번호를 입력하세요.",
+    "serialIncrement": {
+      "min": "일련번호 증분은 1 이상이어야 합니다."
+    },
+    "serialIncrementPlaceholder": "일련의 증분값을 입력하세요."
+  },
+  "totalRecords": "총 {{count}} 레코드",
+  "advancedFilter": {
+    "columnSerialPrefix": "일련번호",
+    "columnCustomerTypeName": "고객 유형",
+    "columnSalesRepFullName": "영업 담당자",
+    "columnRuleType": "규칙 유형"
+  },
+  "messages": {
+    "createSuccess": "파일 형식이 성공적으로 생성되었습니다.",
+    "createError": "파일 형식을 생성하는 동안 오류가 발생했습니다.",
+    "updateSuccess": "파일 형식이 업데이트되었습니다.",
+    "updateError": "파일 형식을 업데이트하는 동안 오류가 발생했습니다.",
+    "deleteSuccess": "파일 형식이 삭제되었습니다.",
+    "deleteError": "파일 형식을 삭제하는 동안 오류가 발생했습니다."
+  },
+  "common": {
+    "delete": "삭제"
+  },
+  "error": "활동을 저장할 수 없습니다.",
+  "previous": "이전",
+  "next": "다음"
+}

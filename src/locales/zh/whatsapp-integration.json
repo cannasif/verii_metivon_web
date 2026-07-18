@@ -1,0 +1,148 @@
+{
+  "page": {
+    "connectionTitle": "WhatsApp 集成",
+    "connectionDescription": "Meta 管理 WhatsApp Cloud API 设置、验证 Webhook 连接并发送测试消息。"
+  },
+  "settings": {
+    "title": "连接设置",
+    "configured": "准备好",
+    "notConfigured": "失踪",
+    "enabled": "积极使用集成",
+    "enabledDescription": "当活动时，Webhook 和测试提交将使用这些设置。",
+    "displayName": "显示名称",
+    "graphApiVersion": "图API版本",
+    "phoneNumberId": "电话号码 ID",
+    "businessAccountId": "企业帐户 ID",
+    "verifyToken": "Webhook 验证令牌",
+    "accessToken": "访问令牌",
+    "appSecret": "应用秘密",
+    "keepCurrent": "当前值将保持不变",
+    "save": "保存设置",
+    "saveSuccess": "WhatsApp 设置已保存。",
+    "saveError": "无法保存 WhatsApp 设置。"
+  },
+  "webhook": {
+    "title": "网络钩子",
+    "url": "元 Webhook URL",
+    "lastInbound": "最新的网络钩子",
+    "lastOutbound": "最后发出的消息"
+  },
+  "test": {
+    "title": "测试留言",
+    "phone": "电话",
+    "message": "留言",
+    "defaultMessage": "V3RII CRM WhatsApp 测试消息。",
+    "send": "提交测试",
+    "sendSuccess": "WhatsApp 测试消息已发送。",
+    "sendError": "无法发送 WhatsApp 测试消息。"
+  },
+  "logs": {
+    "title": "WhatsApp 日志",
+    "description": "监控 webhook、测试消息和未来报价流记录。",
+    "tableTitle": "交易记录",
+    "searchPlaceholder": "电话、短信或交易电话...",
+    "errorsOnly": "只是错误",
+    "directionAll": "所有方向",
+    "inbound": "传入",
+    "outbound": "外向的",
+    "success": "成功的",
+    "error": "错误",
+    "empty": "没有找到记录。",
+    "total": "{{count}}寄存器",
+    "columns": {
+      "date": "日期",
+      "direction": "方向",
+      "operation": "交易",
+      "phone": "电话",
+      "message": "留言",
+      "status": "状态"
+    }
+  },
+  "drafts": {
+    "title": "WhatsApp 报价草稿",
+    "description": "通过 WhatsApp 监控客户创建的购物车以进行代理控制。",
+    "tableTitle": "代理控制队列",
+    "searchPlaceholder": "致电、客户或留言...",
+    "empty": "未找到草稿。",
+    "total": "{{count}} 草稿",
+    "customerMessage": "客户留言",
+    "mainLine": "主要产品",
+    "relatedLine": "附属产品",
+    "status": {
+      "WaitingRepresentativeReview": "受代理控制"
+    },
+    "columns": {
+      "createdDate": "日期",
+      "phone": "电话",
+      "customer": "顾客",
+      "status": "状态",
+      "lineCount": "铅笔",
+      "grandTotal": "总计"
+    },
+    "lineColumns": {
+      "code": "代码",
+      "name": "库存",
+      "quantity": "数量",
+      "unitPrice": "单价",
+      "total": "合计",
+      "type": "类型"
+    },
+    "actions": {
+      "title": "代表性投标流程",
+      "description": "将草稿转换为 CRM 提案，并根据需要通过 WhatsApp 以 PDF 形式发送给客户。",
+      "representativeId": "代表ID",
+      "customer": "顾客",
+      "selectCustomer": "选择客户",
+      "paymentType": "支付方式",
+      "selectPaymentType": "选择付款类型",
+      "documentSerial": "文件序列类型",
+      "selectDocumentSerial": "选择文档系列类型",
+      "offerType": "报价类型",
+      "domestic": "国内",
+      "foreign": "国外",
+      "currency": "货币",
+      "offerDate": "报价日期",
+      "deliveryDate": "交货日期",
+      "descriptionField": "内部描述",
+      "customerMessageField": "给客户留言",
+      "sendAfterConvert": "拨打电话后发送 WhatsApp",
+      "attachPdf": "添加PDF",
+      "convertAndSend": "转换为报价并发送",
+      "sendAgain": "重新发送至 WhatsApp",
+      "createdQuotation": "优惠#{{id}}",
+      "loading": "加载中...",
+      "convertSuccess": "WhatsApp 草案已包含在提案流程中。",
+      "convertError": "WhatsApp 草案无法转化为提案。",
+      "sendSuccess": "该报价是通过 WhatsApp 发送的。",
+      "sendError": "该优惠无法通过 WhatsApp 发送。"
+    }
+  },
+  "quotationSend": {
+    "sendSuccess": "该报价通过 WhatsApp 以 PDF 格式发送。",
+    "sendError": "该优惠无法通过 WhatsApp 发送。"
+  },
+  "flow": {
+    "title": "WhatsApp 优惠流程",
+    "description": "为客户实施安全模块计划以通过电话创建报价请求。",
+    "steps": {
+      "inbound": {
+        "title": "1. 消息接收",
+        "text": "通过 webhook 接收来自客户的消息，检查签名并记录原始记录。"
+      },
+      "intent": {
+        "title": "2、意向及选股",
+        "text": "客户根据目录或库存明细进行指导；自由文本不直接翻译成命令。"
+      },
+      "quote": {
+        "title": "3. 提案草案",
+        "text": "选择在 CRM 端作为提案草案打开，并且在没有代表检查的情况下不会创建最终文档。"
+      },
+      "handoff": {
+        "title": "4. 代表批准",
+        "text": "在完成价格、折扣、交货和当前检查后，报价将发送给客户。"
+      }
+    },
+    "nextPhaseTitle": "下一阶段",
+    "nextPhaseText": "此阶段开放基础设施。对话流程、目录选择、提案草案和 WhatsApp 模板提交将在单独的受控阶段添加。"
+  }
+}

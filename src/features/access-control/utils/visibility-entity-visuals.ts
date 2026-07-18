@@ -1,0 +1,111 @@
+import {
+  ClipboardList,
+  Eye,
+  FileText,
+  Package,
+  Building2,
+  Boxes,
+  Warehouse,
+  ArrowLeftRight,
+  Truck,
+  ShoppingCart,
+  PackageCheck,
+  Calculator,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+
+export const VISIBILITY_ENTITY_ICON_MAP: Record<string, LucideIcon> = {
+  BusinessPartner: Building2,
+  Product: Package,
+  Warehouse,
+  Inventory: Boxes,
+  GoodsReceipt: PackageCheck,
+  TransferOrder: ArrowLeftRight,
+  Shipment: Truck,
+  PurchaseOrder: ShoppingCart,
+  SalesOrder: ClipboardList,
+  ImportDossier: FileText,
+  ElectronicDocument: FileText,
+  Accounting: Calculator,
+};
+
+const VISIBILITY_ENTITY_ACCENT_MAP: Record<string, string> = {
+  BusinessPartner: 'violet', Product: 'pink', Warehouse: 'sky', Inventory: 'emerald',
+  GoodsReceipt: 'teal', TransferOrder: 'amber', Shipment: 'orange', PurchaseOrder: 'indigo',
+  SalesOrder: 'rose', ImportDossier: 'amber', ElectronicDocument: 'sky', Accounting: 'emerald',
+};
+
+type EntityAccentClasses = {
+  iconWrap: string;
+  icon: string;
+};
+
+export function getVisibilityEntityAccentClasses(entityType: string): EntityAccentClasses {
+  const accent = VISIBILITY_ENTITY_ACCENT_MAP[entityType] ?? 'pink';
+  const map: Record<string, EntityAccentClasses> = {
+    violet: {
+      iconWrap: 'bg-violet-100 border-violet-100 dark:bg-violet-500/10 dark:border-violet-500/20',
+      icon: 'text-violet-600 dark:text-violet-400',
+    },
+    pink: {
+      iconWrap: 'bg-accent border-primary/15 dark:bg-primary/10 dark:border-primary/20',
+      icon: 'text-primary',
+    },
+    sky: {
+      iconWrap: 'bg-sky-100 border-sky-100 dark:bg-sky-500/10 dark:border-sky-500/20',
+      icon: 'text-sky-600 dark:text-sky-400',
+    },
+    emerald: {
+      iconWrap: 'bg-emerald-100 border-emerald-100 dark:bg-emerald-500/10 dark:border-emerald-500/20',
+      icon: 'text-emerald-600 dark:text-emerald-400',
+    },
+    orange: {
+      iconWrap: 'bg-orange-100 border-orange-100 dark:bg-orange-500/10 dark:border-orange-500/20',
+      icon: 'text-orange-600 dark:text-orange-400',
+    },
+    indigo: {
+      iconWrap: 'bg-indigo-100 border-indigo-100 dark:bg-indigo-500/10 dark:border-indigo-500/20',
+      icon: 'text-indigo-600 dark:text-indigo-400',
+    },
+    amber: {
+      iconWrap: 'bg-amber-100 border-amber-100 dark:bg-amber-500/10 dark:border-amber-500/20',
+      icon: 'text-amber-700 dark:text-amber-300',
+    },
+    rose: {
+      iconWrap: 'bg-accent border-primary/15 dark:bg-primary/10 dark:border-primary/20',
+      icon: 'text-red-600 dark:text-red-400',
+    },
+    teal: {
+      iconWrap: 'bg-teal-100 border-teal-100 dark:bg-teal-500/10 dark:border-teal-500/20',
+      icon: 'text-teal-600 dark:text-teal-400',
+    },
+  };
+  return map[accent];
+}
+
+export function getVisibilityEntityIcon(entityType: string): LucideIcon {
+  return VISIBILITY_ENTITY_ICON_MAP[entityType] ?? Eye;
+}
+
+export function getVisibilityScopeBadgeClassName(scopeType: number | null, isUnassigned = false): string {
+  if (isUnassigned || scopeType == null) {
+    return 'border-slate-200/80 bg-slate-100/90 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400';
+  }
+
+  switch (scopeType) {
+    case 1:
+      return 'border-sky-200/80 bg-sky-50 text-sky-700 dark:border-sky-500/25 dark:bg-sky-500/10 dark:text-sky-300';
+    case 2:
+      return 'border-violet-200/80 bg-violet-50 text-violet-700 dark:border-violet-500/25 dark:bg-violet-500/10 dark:text-violet-300';
+    case 3:
+      return 'border-amber-200/80 bg-amber-50 text-amber-800 dark:border-amber-500/25 dark:bg-amber-500/10 dark:text-amber-200';
+    case 4:
+      return 'border-emerald-200/80 bg-emerald-50 text-emerald-700 dark:border-emerald-500/25 dark:bg-emerald-500/10 dark:text-emerald-300';
+    case 5:
+      return 'border-indigo-200/80 bg-indigo-50 text-indigo-700 dark:border-indigo-500/25 dark:bg-indigo-500/10 dark:text-indigo-300';
+    case 6:
+      return 'border-teal-200/80 bg-teal-50 text-teal-700 dark:border-teal-500/25 dark:bg-teal-500/10 dark:text-teal-300';
+    default:
+      return 'border-slate-200/80 bg-slate-100/90 text-slate-600 dark:border-white/10 dark:bg-white/5 dark:text-slate-400';
+  }
+}

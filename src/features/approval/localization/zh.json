@@ -1,0 +1,85 @@
+{
+  "list": {
+    "title": "待批准",
+    "description": "您可以查看并批准或拒绝分配给您的优惠",
+    "empty": "没有待批准的情况",
+    "error": "加载确认信息时发生错误"
+  },
+  "yes": "是的",
+  "no": "不",
+  "processing": "处理中...",
+  "detail": {
+    "title": "优惠详情",
+    "subtitle": "查看优惠详情并采取行动",
+    "tabs": {
+      "detail": "详情",
+      "history": "过去",
+      "action": "交易"
+    },
+    "notFound": "未找到报价",
+    "quotationInfo": "优惠资讯",
+    "offerNo": "报价编号",
+    "customer": "顾客",
+    "representative": "代表",
+    "currency": "货币",
+    "offerDate": "报价日期",
+    "deliveryDate": "交货日期",
+    "total": "合计",
+    "grandTotal": "总计",
+    "description": "描述",
+    "lines": "报价行",
+    "productCode": "产品代码",
+    "productName": "产品名称",
+    "quantity": "数量",
+    "unitPrice": "单价",
+    "lineTotal": "行总数",
+    "lineGrandTotal": "行总计",
+    "exchangeRates": "汇率",
+    "exchangeRate": "安装",
+    "exchangeRateDate": "汇率日期",
+    "isOfficial": "安装官方"
+  },
+  "actions": {
+    "view": "查看",
+    "approve": "确认",
+    "reject": "拒绝"
+  },
+  "status": {
+    "notRequired": "草案",
+    "waiting": "等待",
+    "approved": "已批准",
+    "rejected": "被拒绝",
+    "closed": "关闭"
+  },
+  "closedReason": "该记录已关闭，因为具有相同报价编号的另一条记录已获得批准。",
+  "statusFilterLabel": "审批情况",
+  "level": {
+    "salesManager": "销售经理",
+    "regionalManager": "区域经理",
+    "finance": "金融",
+    "generalManager": "总经理",
+    "unknown": "未知"
+  },
+  "note": {
+    "label": "注释",
+    "placeholder": "您可以添加批准/拒绝注释（可选）",
+    "maxLength": "备注最多可达 500 个字符"
+  },
+  "approve": {
+    "success": "已批准",
+    "successMessage": "优惠已成功批准",
+    "error": "断言错误",
+    "errorMessage": "批准优惠时出错"
+  },
+  "reject": {
+    "success": "被拒绝",
+    "successMessage": "报价被拒绝",
+    "error": "拒绝错误",
+    "errorMessage": "拒绝报价时发生错误"
+  },
+  "history": {
+    "empty": "没有批准历史",
+    "approvedBy": "批准人"
+  },
+  "assignedTo": "指定用户"
+}

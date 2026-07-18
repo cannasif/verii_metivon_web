@@ -1,0 +1,148 @@
+{
+  "page": {
+    "connectionTitle": "ادغام WhatsApp",
+    "connectionDescription": "تنظیمات واتساپ Cloud API را مدیریت کنید، اتصال وب هوک را تأیید کنید و پیام آزمایشی ارسال کنید."
+  },
+  "settings": {
+    "title": "تنظیمات اتصال",
+    "configured": "آماده است",
+    "notConfigured": "گم شده",
+    "enabled": "از ادغام به طور فعال استفاده کنید",
+    "enabledDescription": "وقتی فعال است، ارسال‌های آزمایشی و وب هوک از این تنظیمات استفاده می‌کنند.",
+    "displayName": "نام نمایشی",
+    "graphApiVersion": "نسخه Graph API",
+    "phoneNumberId": "شناسه شماره تلفن",
+    "businessAccountId": "شناسه حساب تجاری",
+    "verifyToken": "Webhook Verify Token",
+    "accessToken": "رمز دسترسی",
+    "appSecret": "راز برنامه",
+    "keepCurrent": "ارزش فعلی حفظ خواهد شد",
+    "save": "تنظیمات را ذخیره کنید",
+    "saveSuccess": "تنظیمات WhatsApp ذخیره شده است.",
+    "saveError": "تنظیمات WhatsApp ذخیره نشد."
+  },
+  "webhook": {
+    "title": "وب هوک",
+    "url": "URL متا وب هوک",
+    "lastInbound": "جدیدترین وب هوک",
+    "lastOutbound": "آخرین پیام خروجی"
+  },
+  "test": {
+    "title": "پیام تست",
+    "phone": "تلفن",
+    "message": "پیام",
+    "defaultMessage": "پیام تست V3RII CRM WhatsApp.",
+    "send": "ارسال تست",
+    "sendSuccess": "پیام تست واتساپ ارسال شد.",
+    "sendError": "پیام آزمایشی WhatsApp ارسال نشد."
+  },
+  "logs": {
+    "title": "لاگ های واتس اپ",
+    "description": "کنترل وب هوک، پیام آزمایشی و ضبط جریان پیشنهادات آینده.",
+    "tableTitle": "سوابق معاملات",
+    "searchPlaceholder": "تلفن، پیام یا تماس تراکنش...",
+    "errorsOnly": "فقط اشتباهات",
+    "directionAll": "همه جهات",
+    "inbound": "ورودی",
+    "outbound": "خروجی",
+    "success": "موفق",
+    "error": "خطا",
+    "empty": "هیچ سابقه ای پیدا نشد",
+    "total": "ثبت نام {{count}}",
+    "columns": {
+      "date": "تاریخ",
+      "direction": "جهت",
+      "operation": "معامله",
+      "phone": "تلفن",
+      "message": "پیام",
+      "status": "وضعیت"
+    }
+  },
+  "drafts": {
+    "title": "پیش نویس پیشنهادات واتس اپ",
+    "description": "سبدهای ایجاد شده توسط مشتری از طریق واتس اپ را برای کنترل نماینده نظارت کنید.",
+    "tableTitle": "صف کنترل عامل",
+    "searchPlaceholder": "تماس، مشتری یا پیام...",
+    "empty": "پیش نویس پیدا نشد.",
+    "total": "پیش نویس {{count}}",
+    "customerMessage": "پیام مشتری",
+    "mainLine": "محصول اصلی",
+    "relatedLine": "محصول وابسته",
+    "status": {
+      "WaitingRepresentativeReview": "تحت کنترل نماینده"
+    },
+    "columns": {
+      "createdDate": "تاریخ",
+      "phone": "تلفن",
+      "customer": "مشتری",
+      "status": "وضعیت",
+      "lineCount": "مداد",
+      "grandTotal": "کل بزرگ"
+    },
+    "lineColumns": {
+      "code": "کد",
+      "name": "سهام",
+      "quantity": "مقدار",
+      "unitPrice": "قیمت واحد",
+      "total": "مجموع",
+      "type": "تایپ کنید"
+    },
+    "actions": {
+      "title": "فرآیند مناقصه نمایندگی",
+      "description": "پیش نویس را به یک پیشنهاد CRM تبدیل کنید و در صورت تمایل از طریق واتساپ به صورت PDF برای مشتری ارسال کنید.",
+      "representativeId": "شناسه نماینده",
+      "customer": "مشتری",
+      "selectCustomer": "مشتری را انتخاب کنید",
+      "paymentType": "نوع پرداخت",
+      "selectPaymentType": "نوع پرداخت را انتخاب کنید",
+      "documentSerial": "نوع سریال سند",
+      "selectDocumentSerial": "نوع سری سند را انتخاب کنید",
+      "offerType": "نوع پیشنهاد",
+      "domestic": "داخلی",
+      "foreign": "خارج از کشور",
+      "currency": "ارز",
+      "offerDate": "تاریخ پیشنهاد",
+      "deliveryDate": "تاریخ تحویل",
+      "descriptionField": "توضیحات داخلی",
+      "customerMessageField": "پیام به مشتری",
+      "sendAfterConvert": "پس از شماره گیری واتس اپ را ارسال کنید",
+      "attachPdf": "PDF اضافه کنید",
+      "convertAndSend": "تبدیل به پیشنهاد و ارسال",
+      "sendAgain": "ارسال مجدد به واتس اپ",
+      "createdQuotation": "پیشنهاد #{{id}}",
+      "loading": "در حال بارگیری...",
+      "convertSuccess": "پیش نویس WhatsApp در جریان پیشنهاد گنجانده شد.",
+      "convertError": "پیش نویس WhatsApp را نمی توان به یک پیشنهاد تبدیل کرد.",
+      "sendSuccess": "این پیشنهاد از طریق واتس اپ ارسال شد.",
+      "sendError": "پیشنهاد از طریق واتس اپ ارسال نشد."
+    }
+  },
+  "quotationSend": {
+    "sendSuccess": "این پیشنهاد از طریق واتس اپ از طریق پی دی اف ارسال شد.",
+    "sendError": "پیشنهاد از طریق واتس اپ ارسال نشد."
+  },
+  "flow": {
+    "title": "جریان پیشنهاد WhatsApp",
+    "description": "طرح ماژول ایمن برای ایجاد یک درخواست قیمت از طریق تلفن توسط مشتری اجرا می شود.",
+    "steps": {
+      "inbound": {
+        "title": "1. دریافت پیام",
+        "text": "پیام مشتری از طریق وب هوک دریافت می شود، امضا بررسی می شود و رکورد خام ثبت می شود."
+      },
+      "intent": {
+        "title": "2. قصد و انتخاب سهام",
+        "text": "مشتری از کاتالوگ یا تجزیه سهام هدایت می شود. متن آزاد مستقیماً به ترتیب ترجمه نمی شود."
+      },
+      "quote": {
+        "title": "3. پیش نویس پیشنهاد",
+        "text": "انتخاب ها به عنوان پیش نویس پیشنهادی در سمت CRM باز می شوند و سند نهایی بدون بررسی نماینده ایجاد نمی شود."
+      },
+      "handoff": {
+        "title": "4. تایید نماینده",
+        "text": "پس از انجام قیمت، تخفیف، تحویل و چک های جاری، پیشنهاد برای مشتری ارسال می شود."
+      }
+    },
+    "nextPhaseTitle": "فاز بعدی",
+    "nextPhaseText": "این مرحله زیرساخت را باز می کند. جریان مکالمه، انتخاب کاتالوگ، پیش نویس پروپوزال و ارسال الگوی واتساپ در یک مرحله کنترل شده جداگانه اضافه می شود."
+  }
+}

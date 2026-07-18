@@ -1,0 +1,27 @@
+{
+  "title": "Cari Yönetimi",
+  "description": "Müşteri, tedarikçi ve aday cari kartlarını yönetin.",
+  "searchPlaceholder": "Kod, ad, vergi no, e-posta veya telefon ara...",
+  "loading": "Cariler yükleniyor...",
+  "loadError": "Cari kayıtları yüklenemedi.",
+  "empty": "Henüz cari kaydı bulunmuyor.",
+  "active": "Aktif",
+  "passive": "Pasif",
+  "unlimited": "Sınırsız",
+  "pagination": {
+    "summary": "{{total}} kayıt · Sayfa {{page}} / {{pages}}",
+    "previous": "Önceki",
+    "next": "Sonraki"
+  },
+  "columns": {
+    "code": "Cari Kodu",
+    "name": "Cari Adı",
+    "type": "Tip",
+    "payment": "Ödeme Koşulu",
+    "currency": "Para Birimi",
+    "customerGroup": "Cari Grubu",
+    "taxGroup": "Vergi Grubu",
+    "creditLimit": "Kredi Limiti",
+    "status": "Durum"
+  }
+}

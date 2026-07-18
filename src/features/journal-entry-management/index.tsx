@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{journalConfig}from'@/features/erp-operation-management/configs';export function JournalEntryManagementPage(){return <ErpPagedManagementPage config={journalConfig}/>}

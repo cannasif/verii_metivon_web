@@ -1,0 +1,34 @@
+{
+  "title": "صندوق ورودی تضاد",
+  "tableTitle": "سرنخ های مشتری تکراری",
+  "subtitle": "سرنخ های تکراری را بررسی و ادغام کنید",
+  "refresh": "تازه کردن",
+  "searchPlaceholder": "جستجو بر اساس نام مشتری اصلی یا تکراری",
+  "matchType": "نوع مطابقت",
+  "minScore": "حداقل امتیاز",
+  "all": "همه",
+  "masterCustomer": "مشتری اصلی",
+  "duplicateCustomer": "مشتری تکراری",
+  "score": "امتیاز",
+  "actions": "معاملات",
+  "previewMerge": "پیش نمایش ادغام",
+  "merge": "ترکیب کردن",
+  "preferMasterValues": "از مقادیر اصلی استفاده کنید",
+  "confirmMergeTitle": "ادغام را تایید کنید",
+  "confirmMergeDescription": "ثبت نام تکراری در مشتری اصلی ادغام خواهد شد. این عمل قابل بازگشت نیست.",
+  "mergeSuccess": "ادغام با موفقیت انجام شد.",
+  "mergeError": "ادغام انجام نشد. لطفا دوباره امتحان کنید.",
+  "emptyTitle": "بدون درگیری",
+  "emptyDescription": "هیچ سرنخ تکراری برای بررسی وجود ندارد.",
+  "loadErrorTitle": "نصب انجام نشد",
+  "loadErrorDescription": "نامزدهای تکراری بارگیری نشدند. لطفا دوباره امتحان کنید.",
+  "retry": "دوباره امتحان کنید",
+  "TaxNumber": "شماره مالیات",
+  "TcknNumber": "شماره شناسه TR",
+  "CustomerCode": "کد مشتری",
+  "common": {
+    "table": {
+      "showing": "نمایش {{from}}-{{to}} / {{total}}"
+    }
+  }
+}

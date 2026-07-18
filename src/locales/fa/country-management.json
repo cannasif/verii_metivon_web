@@ -1,0 +1,120 @@
+{
+  "countryManagement": {
+    "menu": "مدیریت کشور",
+    "description": "کشورها را مدیریت و تنظیم کنید",
+    "addButton": "اضافه کردن کشور جدید",
+    "searchPlaceholder": "جستجو...",
+    "loading": "در حال بارگیری...",
+    "error": "خطایی رخ داد",
+    "table": {
+      "id": "شناسه",
+      "name": "نام کشور",
+      "code": "کد",
+      "erpCode": "کد ERP",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط",
+      "noData": "داده ای یافت نشد",
+      "title": "فهرست کشور"
+    },
+    "delete": {
+      "confirmTitle": "کشور را حذف کنید",
+      "confirmMessage": "آیا مطمئن هستید که می خواهید کشور {{name}} را حذف کنید؟"
+    },
+    "messages": {
+      "deleteSuccess": "کشور با موفقیت حذف شد",
+      "deleteError": "کشور را نمی توان حذف کرد",
+      "createSuccess": "کشور با موفقیت ایجاد شد",
+      "createError": "کشور ایجاد نشد",
+      "updateSuccess": "کشور با موفقیت به روز شد",
+      "updateError": "کشور را نمی توان به روز کرد"
+    },
+    "form": {
+      "addCountry": "اضافه کردن کشور جدید",
+      "editCountry": "کشور را ویرایش کنید",
+      "addDescription": "اطلاعات کشور جدید را وارد کنید",
+      "editDescription": "ویرایش اطلاعات کشور",
+      "name": "نام کشور",
+      "namePlaceholder": "نام کشور را وارد کنید",
+      "code": "کد کشور",
+      "codePlaceholder": "کد کشور را وارد کنید (به عنوان مثال: TR، ایالات متحده)",
+      "erpCode": "کد ERP",
+      "erpCodePlaceholder": "کد ERP را وارد کنید (اختیاری)",
+      "nameRequired": "نام کشور الزامی است",
+      "nameMaxLength": "نام کشور می تواند حداکثر 100 کاراکتر باشد",
+      "codeMinLength": "کد کشور باید حداقل 2 کاراکتر باشد",
+      "codeMaxLength": "کد کشور می تواند حداکثر 5 کاراکتر باشد",
+      "erpCodeMaxLength": "کد ERP حداکثر می تواند 10 کاراکتر باشد",
+      "cancel": "لغو کنید",
+      "save": "ذخیره کنید",
+      "tabs": {
+        "header": "اطلاعات عمومی"
+      }
+    },
+    "stats": {
+      "totalCountries": "کل کشور",
+      "activeCountries": "کشور فعال",
+      "newThisMonth": "جدید این ماه"
+    }
+  },
+  "menu": "مدیریت کشور",
+  "description": "کشورها را مدیریت و تنظیم کنید",
+  "addButton": "اضافه کردن کشور جدید",
+  "search": "جستجو...",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای یافت نشد",
+  "actions": "معاملات",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "deleteConfirmTitle": "تایید حذف",
+  "cancel": "لغو کنید",
+  "deleting": "در حال حذف...",
+  "delete": {
+    "confirmTitle": "کشور را حذف کنید",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید کشور {{name}} را حذف کنید؟"
+  },
+  "saving": "در حال ضبط ...",
+  "save": "ذخیره کنید",
+  "stats": {
+    "totalCountries": "کل کشور",
+    "activeCountries": "کشور فعال",
+    "newThisMonth": "جدید این ماه"
+  },
+  "table": {
+    "id": "شناسه",
+    "name": "نام کشور",
+    "code": "کد",
+    "erpCode": "کد ERP",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط",
+    "showing": "نمایش {{from}}-{{to}} / {{total}}",
+    "page": "صفحه {{current}} / {{total}}",
+    "noData": "داده ای یافت نشد",
+    "title": "فهرست کشور"
+  },
+  "advancedFilter": {
+    "columnName": "نام کشور",
+    "columnCode": "کد کشور",
+    "columnErpCode": "کد ERP"
+  },
+  "form": {
+    "addCountry": "اضافه کردن کشور جدید",
+    "editCountry": "کشور را ویرایش کنید",
+    "addDescription": "اطلاعات کشور جدید را وارد کنید",
+    "editDescription": "ویرایش اطلاعات کشور",
+    "name": "نام کشور",
+    "namePlaceholder": "نام کشور را وارد کنید",
+    "code": "کد کشور",
+    "codePlaceholder": "کد کشور را وارد کنید (به عنوان مثال: TR، ایالات متحده)",
+    "erpCode": "کد ERP",
+    "erpCodePlaceholder": "کد ERP را وارد کنید (اختیاری)",
+    "nameRequired": "نام کشور الزامی است",
+    "nameMaxLength": "نام کشور می تواند حداکثر 100 کاراکتر باشد",
+    "codeMinLength": "کد کشور باید حداقل 2 کاراکتر باشد",
+    "codeMaxLength": "کد کشور می تواند حداکثر 5 کاراکتر باشد",
+    "erpCodeMaxLength": "کد ERP حداکثر می تواند 10 کاراکتر باشد"
+  },
+  "deleteConfirm": {
+    "confirmMessage": "آیا مطمئن هستید که می خواهید کشور {{name}} را حذف کنید؟"
+  },
+  "searchPlaceholder": "جستجو..."
+}

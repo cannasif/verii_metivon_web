@@ -1,0 +1,88 @@
+{
+  "list": {
+    "title": "Oczekujące zatwierdzenia",
+    "description": "Przeglądaj i zatwierdzaj lub odrzucaj przypisane Ci oferty",
+    "empty": "Brak oczekujących zatwierdzeń",
+    "error": "Wystąpił błąd podczas ładowania zatwierdzeń"
+  },
+  "yes": "Tak",
+  "no": "Nie",
+  "processing": "Przetwarzanie...",
+  "detail": {
+    "title": "Szczegóły oferty",
+    "subtitle": "Wyświetl szczegóły oferty i wykonaj czynności",
+    "tabs": {
+      "detail": "Szczegół",
+      "history": "Historia",
+      "action": "Akcja"
+    },
+    "notFound": "Nie znaleziono cytatu",
+    "quotationInfo": "Informacje o ofercie",
+    "offerNo": "Oferta nr",
+    "customer": "Klient",
+    "representative": "Przedstawiciel",
+    "currency": "Waluta",
+    "offerDate": "Data oferty",
+    "deliveryDate": "Data dostawy",
+    "total": "Razem",
+    "grandTotal": "Wielka suma",
+    "description": "Opis",
+    "lines": "Linie cytatów",
+    "productCode": "Kod produktu",
+    "productName": "Nazwa produktu",
+    "quantity": "Ilość",
+    "unitPrice": "Cena jednostkowa",
+    "lineTotal": "Łączna liczba linii",
+    "lineGrandTotal": "Linia Suma całkowita",
+    "exchangeRates": "Kursy wymiany",
+    "exchangeRate": "Oceń",
+    "exchangeRateDate": "Data stawki",
+    "isOfficial": "Oficjalna stawka"
+  },
+  "actions": {
+    "view": "Zobacz",
+    "approve": "Zatwierdź",
+    "reject": "Odrzuć"
+  },
+  "status": {
+    "notRequired": "Wersja robocza",
+    "waiting": "Oczekiwanie na zatwierdzenie",
+    "approved": "Zatwierdzone",
+    "rejected": "Odrzucony",
+    "closed": "Zamknięte",
+    "customerCancelled": "Anulowane przez klienta",
+    "salespersonClosedForRevision": "Rekord ERP zamknięty przez sprzedawcę w celu sprawdzenia",
+    "supersededByApprovedRevision": "Zamknięto, ponieważ zatwierdzono inną wersję"
+  },
+  "closedReason": "Ten rekord został zamknięty, ponieważ zatwierdzono inny rekord o tym samym numerze oferty.",
+  "statusFilterLabel": "Stan zatwierdzenia",
+  "level": {
+    "salesManager": "Menedżer sprzedaży",
+    "regionalManager": "Menedżer regionalny",
+    "finance": "Finanse",
+    "generalManager": "Dyrektor Generalny",
+    "unknown": "Nieznany"
+  },
+  "note": {
+    "label": "Uwaga",
+    "placeholder": "Możesz dodać notatkę o zatwierdzeniu/odrzuceniu (opcjonalnie)",
+    "maxLength": "Uwaga może mieć maksymalnie 500 znaków"
+  },
+  "approve": {
+    "success": "Zatwierdzone",
+    "successMessage": "Oferta została pomyślnie zatwierdzona",
+    "error": "Błąd zatwierdzenia",
+    "errorMessage": "Wystąpił błąd podczas zatwierdzania oferty"
+  },
+  "reject": {
+    "success": "Odrzucony",
+    "successMessage": "Oferta odrzucona",
+    "error": "Błąd odrzucenia",
+    "errorMessage": "Wystąpił błąd podczas odrzucania oferty"
+  },
+  "history": {
+    "empty": "Brak historii zatwierdzeń",
+    "approvedBy": "Zatwierdzone przez"
+  },
+  "assignedTo": "Przypisany użytkownik"
+}

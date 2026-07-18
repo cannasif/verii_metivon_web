@@ -1,0 +1,85 @@
+{
+  "list": {
+    "title": "تاییدیه های معلق",
+    "description": "شما می توانید پیشنهادات اختصاص داده شده به شما را مشاهده و تایید یا رد کنید",
+    "empty": "هیچ تاییدیه معلقی وجود ندارد",
+    "error": "هنگام بارگیری تأییدیه ها خطایی روی داد"
+  },
+  "yes": "بله",
+  "no": "نه",
+  "processing": "در حال پردازش...",
+  "detail": {
+    "title": "جزئیات پیشنهاد",
+    "subtitle": "جزئیات پیشنهاد را مشاهده کنید و اقدام کنید",
+    "tabs": {
+      "detail": "جزئیات",
+      "history": "گذشته",
+      "action": "معامله"
+    },
+    "notFound": "پیشنهادی پیدا نشد",
+    "quotationInfo": "اطلاعات پیشنهاد",
+    "offerNo": "پیشنهاد شماره",
+    "customer": "مشتری",
+    "representative": "نماینده",
+    "currency": "ارز",
+    "offerDate": "تاریخ پیشنهاد",
+    "deliveryDate": "تاریخ تحویل",
+    "total": "مجموع",
+    "grandTotal": "کل بزرگ",
+    "description": "توضیحات",
+    "lines": "خطوط نقل قول",
+    "productCode": "کد محصول",
+    "productName": "نام محصول",
+    "quantity": "مقدار",
+    "unitPrice": "قیمت واحد",
+    "lineTotal": "مجموع ردیف",
+    "lineGrandTotal": "ردیف بزرگ کل",
+    "exchangeRates": "نرخ ارز",
+    "exchangeRate": "نصب کنید",
+    "exchangeRateDate": "تاریخ نرخ ارز",
+    "isOfficial": "Official را نصب کنید"
+  },
+  "actions": {
+    "view": "مشاهده کنید",
+    "approve": "تایید کنید",
+    "reject": "رد کردن"
+  },
+  "status": {
+    "notRequired": "پیش نویس",
+    "waiting": "در انتظار",
+    "approved": "تصویب شد",
+    "rejected": "رد شد",
+    "closed": "بسته شد"
+  },
+  "closedReason": "این رکورد بسته شد زیرا رکورد دیگری با همان شماره پیشنهاد تایید شد.",
+  "statusFilterLabel": "وضعیت تایید",
+  "level": {
+    "salesManager": "مدیر فروش",
+    "regionalManager": "مدیر منطقه",
+    "finance": "امور مالی",
+    "generalManager": "مدیر کل",
+    "unknown": "ناشناخته"
+  },
+  "note": {
+    "label": "توجه داشته باشید",
+    "placeholder": "می‌توانید یک یادداشت تأیید/رد اضافه کنید (اختیاری)",
+    "maxLength": "یادداشت می تواند حداکثر 500 کاراکتر باشد"
+  },
+  "approve": {
+    "success": "تصویب شد",
+    "successMessage": "پیشنهاد با موفقیت تأیید شد",
+    "error": "خطای ادعا",
+    "errorMessage": "هنگام تأیید پیشنهاد خطایی روی داد"
+  },
+  "reject": {
+    "success": "رد شد",
+    "successMessage": "پیشنهاد رد شد",
+    "error": "خطای رد کردن",
+    "errorMessage": "هنگام رد پیشنهاد خطایی روی داد"
+  },
+  "history": {
+    "empty": "هیچ سابقه تاییدی وجود ندارد",
+    "approvedBy": "تایید شده توسط"
+  },
+  "assignedTo": "کاربر اختصاص داده شده"
+}

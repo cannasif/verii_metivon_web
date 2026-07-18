@@ -1,0 +1,73 @@
+{
+  "title": "داشبورد",
+  "loading": "در حال بارگیری...",
+  "greeting": {
+    "morning": "صبح بخیر",
+    "afternoon": "روز بخیر",
+    "evening": "عصر بخیر"
+  },
+  "refresh": "تازه کردن",
+  "refreshing": "در حال تمدید است...",
+  "refreshed": "داده ها به روز شد",
+  "refreshError": "به روز رسانی انجام نشد",
+  "user": "کاربر",
+  "noSalesData": "هنوز اطلاعات فروش وجود ندارد",
+  "noActivities": "هنوز هیچ فعالیتی وجود ندارد",
+  "selectFormat": "قالب را انتخاب کنید",
+  "reportPreparing": "گزارش در حال تهیه است...",
+  "reportDownloaded": "گزارش دانلود شد",
+  "reportError": "گزارش دریافت نشد.",
+  "stats": {
+    "totalRevenue": "کل گردش مالی",
+    "activeOpportunities": "فرصت های فعال",
+    "newLeads": "نامزدهای جدید",
+    "pendingOrders": "سفارشات در انتظار"
+  },
+  "salesAnalysis": "تجزیه و تحلیل فروش",
+  "targetVsActual": "هدف در مقابل دست آورد",
+  "latestActivities": "آخرین فعالیت ها",
+  "viewAll": "مشاهده همه",
+  "reportDownload": "دانلود گزارش",
+  "quickAction": "تراکنش سریع",
+  "activityType": {
+    "meeting": "جلسه",
+    "call": "جستجو کنید",
+    "email": "ایمیل",
+    "general": "ژنرال"
+  },
+  "noDate": "بدون تاریخ",
+  "unnamedActivity": "فعالیت ناشناس",
+  "monthsShort": {
+    "jan": "ژانویه",
+    "feb": "فوریه",
+    "mar": "مارس",
+    "apr": "آوریل",
+    "may": "می",
+    "jun": "لذت",
+    "jul": "ژوئیه",
+    "aug": "اوت",
+    "sep": "سپتامبر",
+    "oct": "اکتبر",
+    "nov": "ماهیچه",
+    "dec": "جستجو کنید"
+  },
+  "quickStats": {
+    "pendingTasks": "وظایف معلق",
+    "checkTasks": "لیست وظایف را بررسی کنید",
+    "openQuotations": "پیشنهادات را باز کنید",
+    "reviewQuotations": "پیشنهادات را بررسی کنید",
+    "criticalStock": "سهام بحرانی",
+    "stockStatus": "وضعیت سهام را ببینید"
+  },
+  "sidebar": {
+    "customers": "مشتریان",
+    "customerManagement": "مدیریت مشتری",
+    "salesManagement": "قیف فروش",
+    "demandCreateWizard": "درخواست جدید ایجاد کنید",
+    "quotationCreateWizard": "ایجاد پیشنهاد جدید",
+    "orderCreateWizard": "نظم جدید ایجاد کنید",
+    "erpOrderList": "فهرست سفارش ERP",
+    "activities": "برنامه ریزی",
+    "activityManagement": "مدیریت فعالیت"
+  }
+}

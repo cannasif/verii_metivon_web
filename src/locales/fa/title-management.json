@@ -1,0 +1,65 @@
+{
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای یافت نشد",
+  "error": "خطایی رخ داد",
+  "search": "جستجو...",
+  "refresh": "تازه کردن",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "advancedFilter": {
+    "columnTitleName": "نام عنوان",
+    "columnCode": "کد"
+  },
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "saving": "در حال ضبط ...",
+  "delete": {
+    "confirmTitle": "عنوان را حذف کنید",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید عنوان {{titleName}} را حذف کنید؟",
+    "button": "حذف کنید"
+  },
+  "deleting": "در حال حذف...",
+  "actions": "معاملات",
+  "edit": "ویرایش کنید",
+  "header": {
+    "title": "مدیریت عنوان",
+    "description": "در اینجا می توانید تعاریف عنوان را مدیریت کنید."
+  },
+  "table": {
+    "title": "فهرست عنوان",
+    "id": "شناسه",
+    "name": "نام عنوان",
+    "code": "کد",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط کاربر",
+    "showing": "نمایش {{from}}-{{to}} / {{total}}",
+    "page": "صفحه {{current}} / {{total}}"
+  },
+  "form": {
+    "addTitle": "عنوان جدید اضافه کنید",
+    "editTitle": "عنوان را ویرایش کنید",
+    "addDescription": "اطلاعات عنوان جدید را وارد کنید",
+    "editDescription": "ویرایش اطلاعات عنوان",
+    "titleName": "نام عنوان",
+    "titleNamePlaceholder": "نام عنوان را وارد کنید",
+    "titleCode": "کد عنوان",
+    "codePlaceholder": "کد را وارد کنید (اختیاری)",
+    "cancel": "لغو کنید",
+    "save": "ذخیره کنید",
+    "saving": "در حال ضبط ..."
+  },
+  "menu": "مدیریت عنوان",
+  "stats": {
+    "totalTitles": "عنوان کل",
+    "activeTitles": "عنوان فعال",
+    "newThisMonth": "جدید این ماه"
+  },
+  "description": "مدیریت و ویرایش عناوین",
+  "addButton": "عنوان جدید اضافه کنید",
+  "showStats": "نمایش آمار",
+  "hideStats": "مخفی کردن آمار",
+  "messages": {
+    "deleteSuccess": "عنوان با موفقیت حذف شد",
+    "deleteError": "عنوان حذف نشد"
+  }
+}

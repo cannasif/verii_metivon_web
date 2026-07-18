@@ -1,0 +1,138 @@
+{
+  "menu": "Administracja Okręgowa",
+  "description": "Zarządzaj i organizuj dzielnice",
+  "addButton": "Dodaj nową dzielnicę",
+  "showStats": "Pokaż statystyki",
+  "hideStats": "Ukryj statystyki",
+  "listTitle": "Lista dzielnic",
+  "listDescription": "Tutaj możesz zarządzać wszystkimi zarejestrowanymi w systemie dzielnicami.",
+  "loading": "Ładowanie...",
+  "noData": "Nie znaleziono danych",
+  "actions": "Transakcje",
+  "previous": "Poprzedni",
+  "next": "Następny",
+  "cancel": "Anuluj",
+  "delete": {
+    "confirmTitle": "Usuń dzielnicę",
+    "confirmMessage": "Czy na pewno chcesz usunąć dzielnicę {{name}}?",
+    "success": "Dzielnica została pomyślnie usunięta",
+    "error": "Nie można usunąć dzielnicy",
+    "deleting": "Usuwanie...",
+    "action": "Usuń"
+  },
+  "save": "Zapisz",
+  "saving": "Nagrywanie...",
+  "countryManagement": {
+    "error": "Wystąpił błąd"
+  },
+  "table": {
+    "id": "Identyfikator",
+    "name": "Nazwa dzielnicy",
+    "erpCode": "Kod ERP",
+    "postalCode": "Kod pocztowy",
+    "city": "miasto",
+    "cityName": "Nazwa miasta",
+    "status": "Stan",
+    "title": "Lista dzielnic",
+    "createdDate": "Data utworzenia",
+    "createdBy": "Stworzony przez",
+    "showing": "Wyświetlanie {{from}}-{{to}} / {{total}}",
+    "page": "Strona {{current}} / {{total}}"
+  },
+  "form": {
+    "editDistrict": "Edytuj dzielnicę",
+    "addDistrict": "Dodaj nową dzielnicę",
+    "editDescription": "Edytuj informacje o dzielnicy",
+    "addDescription": "Wprowadź nowe informacje o dzielnicy",
+    "name": "Nazwa dzielnicy",
+    "namePlaceholder": "Wpisz nazwę dzielnicy",
+    "city": "miasto",
+    "selectCity": "Wybierz miasto",
+    "searchCity": "Wyszukaj miasto...",
+    "erpCode": "Kod ERP",
+    "erpCodePlaceholder": "Wpisz kod ERP (opcjonalnie)",
+    "postalCode": "Kod pocztowy",
+    "postalCodePlaceholder": "Wpisz kod pocztowy (opcjonalnie)",
+    "nameRequired": "Nazwa dzielnicy jest wymagana",
+    "nameMaxLength": "Nazwa dzielnicy może mieć maksymalnie 100 znaków",
+    "erpCodeMaxLength": "Kod ERP może składać się maksymalnie z 10 znaków",
+    "postalCodeMaxLength": "Kod pocztowy może mieć maksymalnie 20 znaków",
+    "cityRequired": "Wybór miasta jest obowiązkowy"
+  },
+  "stats": {
+    "totalDistricts": "Całkowita dzielnica",
+    "activeDistricts": "Aktywna dzielnica",
+    "newThisMonth": "Nowość w tym miesiącu"
+  },
+  "status": {
+    "inactive": "pasywny",
+    "active": "aktywny"
+  },
+  "messages": {
+    "createSuccess": "Dzielnica została utworzona pomyślnie",
+    "createError": "Nie można utworzyć dzielnicy",
+    "updateSuccess": "Dystrykt został pomyślnie zaktualizowany",
+    "updateError": "Nie udało się zaktualizować okręgu",
+    "deleteSuccess": "Dzielnica została pomyślnie usunięta",
+    "deleteError": "Nie można usunąć dzielnicy"
+  },
+  "districtManagement": {
+    "menu": "Administracja Okręgowa",
+    "description": "Zarządzaj i organizuj dzielnice",
+    "addButton": "Dodaj nową dzielnicę",
+    "loading": "Ładowanie...",
+    "noData": "Nie znaleziono danych",
+    "table": {
+      "id": "Identyfikator",
+      "name": "Nazwa dzielnicy",
+      "erpCode": "Kod ERP",
+      "postalCode": "Kod pocztowy",
+      "city": "miasto",
+      "cityName": "Nazwa miasta",
+      "status": "Stan",
+      "title": "Lista dzielnic"
+    },
+    "delete": {
+      "confirmTitle": "Usuń dzielnicę",
+      "confirmMessage": "Czy na pewno chcesz usunąć dzielnicę {{name}}?",
+      "success": "Dzielnica została pomyślnie usunięta",
+      "error": "Wystąpił błąd podczas usuwania dzielnicy"
+    },
+    "messages": {
+      "createSuccess": "Dzielnica została utworzona pomyślnie",
+      "createError": "Nie można utworzyć dzielnicy",
+      "updateSuccess": "Dystrykt został pomyślnie zaktualizowany",
+      "updateError": "Nie udało się zaktualizować okręgu"
+    },
+    "stats": {
+      "totalDistricts": "Całkowita dzielnica",
+      "activeDistricts": "Aktywna dzielnica",
+      "newThisMonth": "Nowość w tym miesiącu"
+    },
+    "status": {
+      "inactive": "pasywny",
+      "active": "aktywny"
+    },
+    "error": "Wystąpił błąd",
+    "form": {
+      "editDistrict": "Edytuj dzielnicę",
+      "addDistrict": "Dodaj nową dzielnicę",
+      "editDescription": "Edytuj informacje o dzielnicy",
+      "addDescription": "Wprowadź nowe informacje o dzielnicy",
+      "name": "Nazwa dzielnicy",
+      "namePlaceholder": "Wpisz nazwę dzielnicy",
+      "city": "miasto",
+      "selectCity": "Wybierz miasto",
+      "searchCity": "Wyszukaj miasto...",
+      "erpCode": "Kod ERP",
+      "erpCodePlaceholder": "Wpisz kod ERP (opcjonalnie)",
+      "postalCode": "Kod pocztowy",
+      "postalCodePlaceholder": "Wpisz kod pocztowy (opcjonalnie)",
+      "nameRequired": "Nazwa dzielnicy jest wymagana",
+      "nameMaxLength": "Nazwa dzielnicy może mieć maksymalnie 100 znaków",
+      "erpCodeMaxLength": "Kod ERP może składać się maksymalnie z 10 znaków",
+      "postalCodeMaxLength": "Kod pocztowy może mieć maksymalnie 20 znaków",
+      "cityRequired": "Wybór miasta jest obowiązkowy"
+    }
+  }
+}

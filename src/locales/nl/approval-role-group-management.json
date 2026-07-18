@@ -1,0 +1,62 @@
+{
+  "menu": "Goedkeuringsrol Groepsbeheer",
+  "description": "Beheer en organiseer goedkeuringsrolgroepen",
+  "addButton": "Nieuwe groep toevoegen",
+  "refresh": "Vernieuwen",
+  "searchPlaceholder": "Zoeken...",
+  "loading": "Laden...",
+  "noData": "Geen gegevens gevonden",
+  "noDataDescription": "Er zijn geen records gevonden die voldoen aan uw zoekcriteria of er zijn nog geen records toegevoegd.",
+  "table": {
+    "id": "Identiteitskaart",
+    "name": "Groepsnaam",
+    "createdDate": "Aanmaakdatum",
+    "createdBy": "Gemaakt door",
+    "actions": "Acties",
+    "showing": "{{from}}-{{to}} van {{total}}-records weergeven"
+  },
+  "delete": {
+    "confirmTitle": "Bevestiging verwijderen",
+    "confirmMessage": "Deze actie kan niet ongedaan worden gemaakt. Wil je doorgaan?"
+  },
+  "advancedFilter": {
+    "columnName": "Groepsnaam",
+    "columnCreatedBy": "Gemaakt door"
+  },
+  "approvalRoleGroup": {
+    "menu": "Goedkeuringsrol Groepsbeheer",
+    "description": "Beheer en organiseer goedkeuringsrolgroepen",
+    "addButton": "Nieuwe groep toevoegen",
+    "searchPlaceholder": "Zoeken...",
+    "noData": "Geen gegevens gevonden",
+    "table": {
+      "title": "Groepslijst",
+      "id": "Identiteitskaart",
+      "name": "Groepsnaam",
+      "createdDate": "Aanmaakdatum",
+      "createdBy": "Gemaakt door",
+      "actions": "Acties",
+      "showing": "{{from}}-{{to}} van {{total}}-records weergeven"
+    },
+    "delete": {
+      "title": "Bevestiging verwijderen",
+      "confirmMessage": "Weet u zeker dat u {{name}} wilt verwijderen?",
+      "success": "Groep succesvol verwijderd",
+      "error": "Fout bij het verwijderen van de groep"
+    }
+  },
+  "cancel": "Annuleer",
+  "save": "Opslaan",
+  "saving": "Opslaan...",
+  "deleteButton": "Verwijderen",
+  "form": {
+    "editTitle": "Goedkeuringsrolgroep bewerken",
+    "addTitle": "Nieuwe goedkeuringsrolgroep toevoegen",
+    "editDescription": "Bewerk de goedkeuringsrolgroepinformatie",
+    "addDescription": "Voer nieuwe goedkeuringsrolgroepgegevens in",
+    "name": "Groepsnaam",
+    "namePlaceholder": "Groepsnaam invoeren",
+    "nameRequired": "Groepsnaam is vereist",
+    "nameMaxLength": "De groepsnaam mag maximaal 100 tekens lang zijn"
+  }
+}

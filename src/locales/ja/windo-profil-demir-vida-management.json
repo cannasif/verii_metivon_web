@@ -1,0 +1,75 @@
+{
+  "page": {
+    "title": "ウィンドウフォームの定義",
+    "description": "プロジェクト全体の管理ページと互換性のあるページ化されたテーブル構造で、プロファイル、鉄、ネジ、および圧力の記録を管理します。",
+    "documentTitle": "ウィンドウフォームの定義"
+  },
+  "sections": {
+    "profil": {
+      "title": "プロファイルの定義",
+      "description": "選択するプロファイル定義を行単位で管理します。"
+    },
+    "demir": {
+      "title": "鉄を識別する",
+      "description": "選択するアイアンの定義を行ごとに管理します。"
+    },
+    "vida": {
+      "title": "識別ネジ",
+      "description": "選択するネジ定義を行ごとに管理します。"
+    },
+    "baski": {
+      "title": "印刷の定義",
+      "description": "選択する印刷定義を行単位で管理します。"
+    },
+    "koliBaski": {
+      "title": "ボックス印刷の定義",
+      "description": "オファーヘッダーで選択され、Netsis ヘッダーの説明フィールドに送信されるボックス印刷定義を管理します。"
+    }
+  },
+  "table": {
+    "id": "ID",
+    "name": "名前",
+    "profilName": "プロフィール",
+    "createdDate": "創造",
+    "updatedDate": "更新されました",
+    "newRecord": "新規登録",
+    "searchPlaceholder": "定義を検索...",
+    "refresh": "リフレッシュ",
+    "loading": "定義を読み込んでいます...",
+    "empty": "記録が見つかりませんでした。",
+    "actions": "プロセス",
+    "previous": "前へ",
+    "next": "次へ",
+    "pagination": "{{from}}-{{to}} を示すレコードからの合計 {{total}}",
+    "filterName": "名前",
+    "dateDash": "-"
+  },
+  "dialog": {
+    "addNewProfile": "新しいプロフィールを追加",
+    "addNewRebar": "新しい鉄を追加する",
+    "addNewScrew": "新しいネジを追加します",
+    "addNewPrint": "新しいエディションを追加",
+    "addNewKoliBaski": "新しいボックス印刷を追加",
+    "editTitle": "{{section}} を更新する",
+    "addTitle": "{{section}}を追加",
+    "nameLabel": "名前",
+    "profilLabel": "接続されたプロファイル",
+    "profilPlaceholder": "プロファイルの選択",
+    "profilSearchPlaceholder": "プロフィールを検索",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "demirNameLabel": "アイアン名",
+    "demirNamePlaceholder": "綴じ鉄ネーム",
+    "vidaNameLabel": "ネジの名前",
+    "vidaNamePlaceholder": "接続ネジ名"
+  },
+  "validation": {
+    "nameRequired": "名前フィールドは必須です",
+    "profilRequired": "プロファイルの選択は必須です"
+  },
+  "toasts": {
+    "created": "レコード {{section}} が作成されました",
+    "updated": "レコード {{section}} を更新しました",
+    "deleted": "{{section}} レコードが削除されました"
+  }
+}

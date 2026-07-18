@@ -1,0 +1,73 @@
+{
+  "title": "Dashboard",
+  "loading": "Laden...",
+  "greeting": {
+    "morning": "goedemorgen",
+    "afternoon": "Goede dag",
+    "evening": "Goede avond"
+  },
+  "refresh": "Vernieuwen",
+  "refreshing": "Het wordt vernieuwd...",
+  "refreshed": "Gegevens bijgewerkt",
+  "refreshError": "Update mislukt",
+  "user": "Gebruiker",
+  "noSalesData": "Nog geen verkoopgegevens",
+  "noActivities": "Nog geen activiteit",
+  "selectFormat": "Selecteer Formaat",
+  "reportPreparing": "Het rapport wordt voorbereid...",
+  "reportDownloaded": "Het rapport is gedownload.",
+  "reportError": "Het rapport kon niet worden ontvangen.",
+  "stats": {
+    "totalRevenue": "Totale omzet",
+    "activeOpportunities": "Actieve kansen",
+    "newLeads": "Nieuwe kandidaten",
+    "pendingOrders": "Bestellingen in behandeling"
+  },
+  "salesAnalysis": "Verkoopanalyse",
+  "targetVsActual": "Doel versus bereikt",
+  "latestActivities": "Laatste activiteiten",
+  "viewAll": "Bekijk alles",
+  "reportDownload": "Rapport downloaden",
+  "quickAction": "Snelle transactie",
+  "activityType": {
+    "meeting": "vergadering",
+    "call": "Zoeken",
+    "email": "E-mail",
+    "general": "Algemeen"
+  },
+  "noDate": "geen datum",
+  "unnamedActivity": "Anonieme activiteit",
+  "monthsShort": {
+    "jan": "Januari",
+    "feb": "februari",
+    "mar": "Maart",
+    "apr": "april",
+    "may": "Mei",
+    "jun": "plezier",
+    "jul": "juli",
+    "aug": "augustus",
+    "sep": "september",
+    "oct": "okt",
+    "nov": "spier",
+    "dec": "Zoeken"
+  },
+  "quickStats": {
+    "pendingTasks": "Taken in behandeling",
+    "checkTasks": "Controleer de takenlijst",
+    "openQuotations": "Open aanbiedingen",
+    "reviewQuotations": "Bekijk de aanbiedingen",
+    "criticalStock": "Kritieke voorraad",
+    "stockStatus": "Zie voorraadstatus"
+  },
+  "sidebar": {
+    "customers": "Klanten",
+    "customerManagement": "Klantenbeheer",
+    "salesManagement": "Verkooptrechter",
+    "demandCreateWizard": "Nieuw verzoek aanmaken",
+    "quotationCreateWizard": "Nieuwe aanbieding maken",
+    "orderCreateWizard": "Nieuwe bestelling maken",
+    "erpOrderList": "ERP-bestellijst",
+    "activities": "Plannen",
+    "activityManagement": "Activiteitenbeheer"
+  }
+}

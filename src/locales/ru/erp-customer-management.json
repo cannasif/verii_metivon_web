@@ -1,0 +1,85 @@
+{
+  "menu": "ERP-клиент",
+  "description": "Список клиентов из ERP-системы",
+  "loading": "Загрузка...",
+  "noData": "Клиент не найден",
+  "table": {
+    "title": "Список клиентов",
+    "branchCode": "Код филиала",
+    "businessUnitCode": "Код бизнес-единицы",
+    "customerCode": "Код клиента",
+    "customerName": "Имя клиента",
+    "phone": "телефон",
+    "city": "город",
+    "district": "район",
+    "address": "Адрес",
+    "countryCode": "Код страны",
+    "email": "электронная почта",
+    "website": "Веб-сайт",
+    "taxNumber": "Налоговый номер",
+    "taxOffice": "Налоговая инспекция",
+    "tcknNumber": "Идентификационный номер ТР",
+    "visibleColumns": "Видимые столбцы",
+    "editColumns": "Редактировать столбцы"
+  },
+  "filterLabels": {
+    "branchCode": "Код филиала",
+    "customerCode": "Код клиента",
+    "customerName": "Имя клиента",
+    "city": "город",
+    "district": "район",
+    "taxNumber": "Налоговый номер"
+  },
+  "placeholders": {
+    "quickSearch": "Быстрый поиск...",
+    "all": "Все",
+    "codeExample": "Пример: 120...",
+    "nameExample": "Имя клиента...",
+    "cityExample": "Провинция...",
+    "districtExample": "Район...",
+    "taxExample": "Идентификационный номер налогоплательщика/ТР..."
+  },
+  "actions": {
+    "detailedFilter": "Подробный фильтр",
+    "clear": "ясно",
+    "filter": "Фильтр",
+    "all": "ВСЕ",
+    "active": "АКТИВНЫЙ",
+    "passive": "ПАССИВНЫЙ",
+    "apply": "СПИСОК РЕЗУЛЬТАТОВ"
+  },
+  "details": {
+    "title": "Сведения о клиенте",
+    "addressInfo": "Адресная информация"
+  },
+  "common": {
+    "close": "Закрыть",
+    "selectAll": "Выбрать все",
+    "ok": "ОК",
+    "totalRecords": "Общая регистрация"
+  },
+  "advancedFilter": {
+    "title": "Расширенный фильтр",
+    "add": "Добавить фильтр",
+    "column": "столбец",
+    "operator": "оператор",
+    "value": "Значение",
+    "search": "Поиск",
+    "clear": "ясно",
+    "remove": "Удалить",
+    "columnCustomerCode": "Код клиента",
+    "columnCustomerName": "Имя клиента",
+    "columnBranchCode": "Код филиала",
+    "columnCity": "город",
+    "columnDistrict": "район",
+    "columnTaxNumber": "Налоговый номер",
+    "operatorContains": "Содержит",
+    "operatorStartsWith": "Это начинается с",
+    "operatorEndsWith": "заканчивается",
+    "operatorEquals": "равно",
+    "operator>": ">",
+    "operator>=": ">=",
+    "operator<": "<",
+    "operator<=": "<="
+  }
+}

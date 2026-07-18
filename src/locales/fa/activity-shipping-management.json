@@ -1,0 +1,82 @@
+{
+  "menu": "مدیریت حمل و نقل",
+  "description": "تعاریف حمل و نقل را مدیریت و ویرایش کنید",
+  "addButton": "ارسال جدید را اضافه کنید",
+  "loading": "در حال بارگیری...",
+  "noData": "داده ای یافت نشد",
+  "actions": "اقدامات",
+  "edit": "ویرایش کنید",
+  "deleteButton": "حذف کنید",
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "saving": "در حال ذخیره...",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "advancedFilter": {
+    "columnName": "نام حمل و نقل",
+    "columnDescription": "توضیحات",
+    "columnCreatedBy": "ایجاد شده توسط"
+  },
+  "activityType": {
+    "form": {
+      "addTitle": "ارسال جدید را اضافه کنید",
+      "editTitle": "ویرایش حمل و نقل",
+      "addDescription": "اطلاعات حمل و نقل جدید را وارد کنید",
+      "editDescription": "ویرایش اطلاعات حمل و نقل",
+      "name": "نام حمل و نقل",
+      "namePlaceholder": "نام حمل و نقل را وارد کنید",
+      "nameRequired": "نام حمل و نقل الزامی است",
+      "nameMaxLength": "نام حمل و نقل حداکثر می تواند 100 کاراکتر باشد",
+      "description": "توضیحات",
+      "descriptionPlaceholder": "توضیحات را وارد کنید (اختیاری)",
+      "descriptionMaxLength": "توضیحات حداکثر می تواند 500 کاراکتر باشد"
+    },
+    "table": {
+      "title": "لیست حمل و نقل",
+      "id": "شناسه",
+      "name": "نام حمل و نقل",
+      "description": "توضیحات",
+      "createdDate": "تاریخ ایجاد",
+      "createdBy": "ایجاد شده توسط",
+      "showing": "نمایش {{from}}-{{to}} / {{total}}",
+      "page": "صفحه {{current}} / {{total}}"
+    },
+    "stats": {
+      "totalActivityTypes": "کل سوابق حمل و نقل",
+      "activeActivityTypes": "سوابق حمل و نقل فعال",
+      "newThisMonth": "جدید این ماه"
+    },
+    "messages": {
+      "createSuccess": "ارسال با موفقیت ایجاد شد",
+      "createError": "حمل و نقل ایجاد نشد",
+      "updateSuccess": "ارسال با موفقیت به روز شد",
+      "updateError": "حمل و نقل به‌روزرسانی نشد",
+      "deleteSuccess": "ارسال با موفقیت حذف شد",
+      "deleteError": "حمل و نقل حذف نشد"
+    },
+    "error": "خطایی رخ داد",
+    "create": "ارسال جدید را اضافه کنید",
+    "loading": "در حال بارگیری...",
+    "noData": "داده ای یافت نشد",
+    "actions": "اقدامات",
+    "cancel": "لغو کنید",
+    "save": "ذخیره کنید",
+    "saving": "در حال ذخیره..."
+  },
+  "deleteConfirm": {
+    "confirmTitle": "حذف حمل و نقل",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید {{name}} را حذف کنید؟"
+  },
+  "messages": {
+    "deleteSuccess": "ارسال با موفقیت حذف شد",
+    "deleteError": "حمل و نقل حذف نشد"
+  },
+  "table": {
+    "title": "لیست حمل و نقل",
+    "id": "شناسه",
+    "name": "نام حمل و نقل",
+    "description": "توضیحات",
+    "createdDate": "تاریخ ایجاد",
+    "createdBy": "ایجاد شده توسط"
+  }
+}

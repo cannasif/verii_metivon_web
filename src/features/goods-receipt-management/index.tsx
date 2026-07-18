@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{receiptConfig}from'@/features/erp-operation-management/configs';export function GoodsReceiptManagementPage(){return <ErpPagedManagementPage config={receiptConfig}/>}

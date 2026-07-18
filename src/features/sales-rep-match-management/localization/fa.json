@@ -1,0 +1,44 @@
+{
+  "menu": "نماینده فروش مدیریت بازی",
+  "description": "مشاهده، افزودن و حذف کدهای نمایندگی فروش و مطابقت های کاربر.",
+  "addButton": "مسابقه جدید",
+  "searchPlaceholder": "کد نماینده فروش، کاربر یا ایمیل را جستجو کنید",
+  "empty": "هیچ منطبق با نماینده فروش یافت نشد.",
+  "error": "مسابقات نماینده فروش بارگیری نشد.",
+  "deleteConfirmMessage": "جفت شدن {{salesRep}} و {{user}} حذف شود؟",
+  "table": {
+    "title": "لیست مسابقه نماینده فروش",
+    "salesRepCode": "کد نماینده فروش",
+    "salesRepName": "نام نماینده فروش",
+    "userFullName": "کاربر",
+    "username": "نام کاربری",
+    "userEmail": "ایمیل",
+    "createdDate": "تاریخ ایجاد"
+  },
+  "form": {
+    "addTitle": "مسابقه نماینده فروش جدید",
+    "addDescription": "سابقه نماینده فروش را با کاربر مطابقت دهید.",
+    "salesRep": "نماینده فروش",
+    "salesRepPlaceholder": "نماینده فروش را انتخاب کنید",
+    "salesRepSearchPlaceholder": "به دنبال نماینده فروش باشید",
+    "user": "کاربر",
+    "userPlaceholder": "کاربر را انتخاب کنید",
+    "userSearchPlaceholder": "جستجو برای کاربران",
+    "validation": {
+      "salesRepRequired": "انتخاب نماینده فروش الزامی است.",
+      "userRequired": "انتخاب کاربر الزامی است."
+    }
+  },
+  "messages": {
+    "createSuccess": "مطابقت نماینده فروش ایجاد شد.",
+    "createError": "منطبق با نماینده فروش ایجاد نشد.",
+    "deleteSuccess": "مسابقه نماینده فروش حذف شده است.",
+    "deleteError": "مطابقت نماینده فروش حذف نشد."
+  },
+  "advancedFilter": {
+    "columnSalesRepCode": "کد نماینده فروش",
+    "columnSalesRepName": "نام نماینده فروش",
+    "columnUsername": "نام کاربری",
+    "columnEmail": "ایمیل"
+  }
+}

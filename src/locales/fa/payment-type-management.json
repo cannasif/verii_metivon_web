@@ -1,0 +1,67 @@
+{
+  "title": "مدیریت نوع پرداخت",
+  "headerDescription": "مدیریت و ویرایش انواع پرداخت",
+  "create": "نوع پرداخت جدید",
+  "edit": "ویرایش نوع پرداخت",
+  "editDescription": "اطلاعات نوع پرداخت را ویرایش کنید",
+  "createDescription": "اطلاعات نوع پرداخت جدید را وارد کنید",
+  "delete": {
+    "confirmTitle": "حذف نوع پرداخت",
+    "confirmMessage": "آیا مطمئن هستید که می خواهید نوع پرداخت {{name}} را حذف کنید؟ این عمل قابل بازگشت نیست.",
+    "success": "نوع پرداخت با موفقیت حذف شد",
+    "error": "هنگام حذف نوع پرداخت خطایی روی داد"
+  },
+  "deleteTitle": "حذف نوع پرداخت",
+  "name": "نام",
+  "namePlaceholder": "نام نوع پرداخت را وارد کنید",
+  "description": "توضیحات",
+  "descriptionPlaceholder": "توضیحات را وارد کنید (اختیاری)",
+  "createdDate": "تاریخ ایجاد",
+  "updatedDate": "تاریخ به روز رسانی",
+  "actions": "معاملات",
+  "search": "جستجو کنید",
+  "refresh": "تازه کردن",
+  "loading": "در حال بارگیری...",
+  "previous": "قبلی",
+  "next": "بعدی",
+  "advancedFilter": {
+    "columnName": "نام",
+    "columnDescription": "توضیحات"
+  },
+  "cancel": "لغو کنید",
+  "save": "ذخیره کنید",
+  "saving": "در حال ضبط ...",
+  "noData": "داده ای یافت نشد",
+  "error": "خطایی رخ داد",
+  "confirmDelete": "آیا مطمئن هستید که می خواهید این نوع پرداخت را حذف کنید؟",
+  "createSuccess": "نوع پرداخت با موفقیت ایجاد شد",
+  "updateSuccess": "نوع پرداخت با موفقیت به روز شد",
+  "deleteSuccess": "نوع پرداخت با موفقیت حذف شد",
+  "createError": "هنگام ایجاد نوع پرداخت خطایی روی داد",
+  "updateError": "هنگام به‌روزرسانی نوع پرداخت خطایی روی داد",
+  "deleteError": "هنگام حذف نوع پرداخت خطایی روی داد",
+  "table": {
+    "title": "انواع پرداخت",
+    "status": "وضعیت",
+    "id": "شناسه",
+    "name": "نام",
+    "description": "توضیحات",
+    "createdDate": "تاریخ ایجاد",
+    "updatedDate": "تاریخ به روز رسانی",
+    "showing": "نمایش {{from}}-{{to}} / {{total}}",
+    "page": "صفحه {{current}} / {{total}}"
+  },
+  "form": {
+    "name": {
+      "required": "نام الزامی است",
+      "maxLength": "نام می تواند تا 100 کاراکتر باشد"
+    },
+    "description": {
+      "maxLength": "توضیحات می تواند حداکثر 500 کاراکتر باشد"
+    }
+  },
+  "status": {
+    "inactive": "منفعل",
+    "active": "فعال"
+  }
+}

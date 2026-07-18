@@ -1,0 +1,13 @@
+{
+  "buttons": {
+    "back": "Terug",
+    "next": "Volgende",
+    "complete": "Opslaan en ter goedkeuring verzenden"
+  },
+  "validation": {
+    "error": "Validatiefout"
+  },
+  "step": {
+    "unknown": "onbekende stap"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "approvalRole": {
+    "menu": "승인 역할 관리",
+    "description": "승인 역할 관리 및 구성",
+    "addButton": "새 승인 역할 추가",
+    "searchPlaceholder": "검색...",
+    "refresh": "새로고침",
+    "loading": "로드 중...",
+    "noData": "데이터 없음",
+    "table": {
+      "id": "아이디",
+      "approvalRoleGroupName": "역할 그룹",
+      "name": "역할 이름",
+      "maxAmount": "최대 금액",
+      "createdDate": "생성 날짜",
+      "createdBy": "작성자",
+      "actions": "작업",
+      "totalRecords": "총 {{count}} 레코드입니다.",
+      "page": "페이지 {{current}} / {{total}}",
+      "previous": "이전",
+      "next": "다음",
+      "title": "승인 역할"
+    },
+    "delete": {
+      "confirmTitle": "삭제 확인",
+      "confirmMessage": "이 기록을 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.",
+      "cancelButton": "취소",
+      "confirmButton": "삭제",
+      "deleting": "삭제 중..."
+    },
+    "form": {
+      "editTitle": "승인 역할 편집",
+      "addTitle": "새 승인 역할 추가",
+      "editDescription": "승인 역할 세부정보 편집",
+      "addDescription": "새 승인 역할 세부정보 입력",
+      "approvalRoleGroupId": "승인 역할 그룹",
+      "selectApprovalRoleGroup": "승인 역할 그룹 선택",
+      "noApprovalRoleGroupSelected": "선택된 승인 역할 그룹이 없습니다.",
+      "name": "역할 이름",
+      "namePlaceholder": "역할 이름을 입력하세요.",
+      "maxAmount": "최대 금액",
+      "maxAmountPlaceholder": "최대 금액을 입력하세요",
+      "approvalRoleGroupIdRequired": "승인 역할 그룹을 선택해야 합니다.",
+      "nameRequired": "역할 이름은 필수 항목입니다.",
+      "nameMaxLength": "역할 이름은 최대 100자까지 가능합니다.",
+      "maxAmountMin": "최대 금액은 0보다 작을 수 없습니다.",
+      "cancel": "취소",
+      "save": "저장",
+      "saving": "저장 중..."
+    },
+    "advancedFilter": {
+      "columnName": "역할 이름",
+      "columnApprovalRoleGroupName": "역할 그룹",
+      "columnMaxAmount": "최대 금액"
+    },
+    "messages": {
+      "error": "오류가 발생했습니다"
+    }
+  }
+}

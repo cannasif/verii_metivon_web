@@ -1,0 +1,103 @@
+{
+  "approvalFlow": {
+    "menu": "Gerenciamento de Fluxo de Aprovação",
+    "description": "Gerenciar e organizar fluxos de aprovação",
+    "addButton": "Adicionar novo fluxo de aprovação",
+    "table": {
+      "id": "ID",
+      "documentType": "Tipo de documento",
+      "description": "Descrição",
+      "isActive": "Ativo",
+      "createdDate": "Data de criação",
+      "createdBy": "Criado por",
+      "actions": "Ações",
+      "showing": "Mostrando {{from}}-{{to}} / {{total}}",
+      "page": "Página {{current}} / {{total}}",
+      "title": "Fluxos de aprovação"
+    },
+    "form": {
+      "addTitle": "Adicionar novo fluxo de aprovação",
+      "editTitle": "Editar fluxo de aprovação",
+      "addDescription": "Insira novas informações de fluxo de aprovação",
+      "editDescription": "Editar informações do fluxo de aprovação",
+      "documentType": "Tipo de documento",
+      "selectDocumentType": "Selecione o tipo de documento",
+      "noDocumentTypeSelected": "Nenhum tipo de documento selecionado",
+      "documentTypeRequired": "A seleção do tipo de documento é obrigatória",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Insira a descrição (opcional)",
+      "descriptionMaxLength": "A descrição pode ter no máximo 200 caracteres",
+      "isActive": "Ativo",
+      "isActiveDescription": "Status ativo do fluxo de aprovação",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "saving": "Salvando..."
+    },
+    "loading": "Carregando...",
+    "noData": "Sem dados",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "delete": {
+      "action": "Excluir",
+      "cancel": "Cancelar",
+      "confirmTitle": "Excluir fluxo de aprovação",
+      "confirmMessage": "Tem certeza de que deseja excluir este fluxo de aprovação?",
+      "title": "Excluir fluxo de aprovação",
+      "confirm": "Tem certeza de que deseja excluir este fluxo de aprovação?"
+    },
+    "documentType": {
+      "offer": "Oferta",
+      "request": "Solicitação",
+      "order": "Pedido",
+      "demand": "Demanda",
+      "quotation": "Citação",
+      "purchaseRequest": "Solicitação de compra",
+      "purchaseRfq": "Solicitação de Cotação (RFQ)",
+      "supplierQuotation": "Cotação de Fornecedor",
+      "purchaseOrder": "Ordem de compra"
+    },
+    "advancedFilter": {
+      "columnDocumentType": "Tipo de documento",
+      "columnDescription": "Descrição",
+      "columnIsActive": "Ativo",
+      "columnCreatedBy": "Criado por"
+    },
+    "messages": {
+      "deleteSuccess": "Fluxo de aprovação excluído com sucesso",
+      "deleteError": "Ocorreu um erro ao excluir o fluxo de aprovação"
+    },
+    "steps": "Etapas de fluxo",
+    "error": "Ocorreu um erro"
+  },
+  "approvalFlowStep": {
+    "title": "Etapas de fluxo",
+    "addButton": "Adicionar etapa",
+    "empty": "Nenhuma etapa adicionada ainda",
+    "unknownRoleGroup": "Nenhum grupo de funções",
+    "stepDescription": "Ordem de aprovação: {{order}}",
+    "deleteDialog": {
+      "title": "Excluir etapa",
+      "description": "Tem certeza de que deseja excluir esta etapa?",
+      "confirm": "Excluir",
+      "cancel": "Cancelar"
+    },
+    "form": {
+      "addTitle": "Adicionar nova etapa",
+      "editTitle": "Editar etapa",
+      "addDescription": "Adicionar nova etapa de fluxo",
+      "editDescription": "Editar informações da etapa do fluxo",
+      "approvalRoleGroup": "Grupo de funções",
+      "selectRoleGroup": "Selecione o grupo de funções",
+      "noRoleGroupSelected": "Nenhum grupo de funções selecionado",
+      "approvalRoleGroupIdRequired": "A seleção do grupo de funções é obrigatória",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "saving": "Salvando..."
+    },
+    "messages": {
+      "deleteConfirm": "Tem certeza de que deseja excluir esta etapa?"
+    }
+  }
+}

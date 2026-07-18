@@ -1,0 +1,34 @@
+{
+  "title": "競合する受信箱",
+  "tableTitle": "顧客リードの重複",
+  "subtitle": "重複するリードを確認して統合する",
+  "refresh": "リフレッシュ",
+  "searchPlaceholder": "主な顧客名または重複した顧客名で検索する",
+  "matchType": "マッチタイプ",
+  "minScore": "最低スコア",
+  "all": "すべて",
+  "masterCustomer": "主要顧客",
+  "duplicateCustomer": "リピート客",
+  "score": "スコア",
+  "actions": "取引",
+  "previewMerge": "マージのプレビュー",
+  "merge": "組み合わせる",
+  "preferMasterValues": "主要な値を使用する",
+  "confirmMergeTitle": "マージの確認",
+  "confirmMergeDescription": "重複した登録はメインの顧客に統合されます。この操作は元に戻すことができません。",
+  "mergeSuccess": "マージは正常に完了しました。",
+  "mergeError": "マージに失敗しました。もう一度試してください。",
+  "emptyTitle": "衝突はありません",
+  "emptyDescription": "レビューする重複したリードはありません。",
+  "loadErrorTitle": "インストールに失敗しました",
+  "loadErrorDescription": "重複した候補をロードできませんでした。もう一度試してください。",
+  "retry": "もう一度やり直してください",
+  "TaxNumber": "納税者番号",
+  "TcknNumber": "TR ID番号",
+  "CustomerCode": "顧客コード",
+  "common": {
+    "table": {
+      "showing": "{{from}}-{{to}} / {{total}} を表示中"
+    }
+  }
+}

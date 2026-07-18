@@ -1,0 +1,1 @@
+import{ErpPagedManagementPage}from'@/features/erp-operation-management';import{salesConfig}from'@/features/erp-operation-management/configs';export function SalesOrderManagementPage(){return <ErpPagedManagementPage config={salesConfig}/>}

@@ -1,0 +1,62 @@
+{
+  "menu": "审批角色组管理",
+  "description": "管理和组织审批角色组",
+  "addButton": "添加新组",
+  "refresh": "刷新",
+  "searchPlaceholder": "搜索...",
+  "loading": "加载中...",
+  "noData": "没有找到数据",
+  "noDataDescription": "未找到符合您的搜索条件的记录或尚未添加记录。",
+  "table": {
+    "id": "身份证号",
+    "name": "群组名称",
+    "createdDate": "创建日期",
+    "createdBy": "创建者",
+    "actions": "行动",
+    "showing": "显示 {{total}} 记录中的 {{from}}-{{to}}"
+  },
+  "delete": {
+    "confirmTitle": "删除确认",
+    "confirmMessage": "此操作无法撤消。您想继续吗？"
+  },
+  "advancedFilter": {
+    "columnName": "群组名称",
+    "columnCreatedBy": "创建者"
+  },
+  "approvalRoleGroup": {
+    "menu": "审批角色组管理",
+    "description": "管理和组织审批角色组",
+    "addButton": "添加新组",
+    "searchPlaceholder": "搜索...",
+    "noData": "没有找到数据",
+    "table": {
+      "title": "团体名单",
+      "id": "身份证号",
+      "name": "群组名称",
+      "createdDate": "创建日期",
+      "createdBy": "创建者",
+      "actions": "行动",
+      "showing": "显示 {{total}} 记录中的 {{from}}-{{to}}"
+    },
+    "delete": {
+      "title": "删除确认",
+      "confirmMessage": "您确定要删除 {{name}} 吗？",
+      "success": "群组删除成功",
+      "error": "删除群组时出错"
+    }
+  },
+  "cancel": "取消",
+  "save": "保存",
+  "saving": "正在保存...",
+  "deleteButton": "删除",
+  "form": {
+    "editTitle": "编辑批准角色组",
+    "addTitle": "添加新的批准角色组",
+    "editDescription": "编辑审批角色组信息",
+    "addDescription": "输入新的审批角色组信息",
+    "name": "群组名称",
+    "namePlaceholder": "输入群组名称",
+    "nameRequired": "群组名称为必填项",
+    "nameMaxLength": "群组名称最多可包含 100 个字符"
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "page": {
+    "connectionTitle": "WhatsApp 통합",
+    "connectionDescription": "Meta WhatsApp Cloud API 설정을 관리하고, 웹훅 연결을 확인하고, 테스트 메시지를 보냅니다."
+  },
+  "settings": {
+    "title": "연결 설정",
+    "configured": "준비",
+    "notConfigured": "실종",
+    "enabled": "통합을 적극적으로 활용",
+    "enabledDescription": "활성화되면 웹훅 및 테스트 제출에서 이러한 설정을 사용합니다.",
+    "displayName": "표시 이름",
+    "graphApiVersion": "그래프 API 버전",
+    "phoneNumberId": "전화번호ID",
+    "businessAccountId": "비즈니스 계정 ID",
+    "verifyToken": "웹훅 검증 토큰",
+    "accessToken": "액세스 토큰",
+    "appSecret": "앱 비밀",
+    "keepCurrent": "현재 가치가 유지됩니다.",
+    "save": "설정 저장",
+    "saveSuccess": "WhatsApp 설정이 저장되었습니다.",
+    "saveError": "WhatsApp 설정을 저장할 수 없습니다."
+  },
+  "webhook": {
+    "title": "웹훅",
+    "url": "메타 웹훅 URL",
+    "lastInbound": "최신 웹훅",
+    "lastOutbound": "마지막 발신 메시지"
+  },
+  "test": {
+    "title": "테스트 메시지",
+    "phone": "전화",
+    "message": "메시지",
+    "defaultMessage": "V3RII CRM WhatsApp 테스트 메시지.",
+    "send": "테스트 제출",
+    "sendSuccess": "WhatsApp 테스트 메시지가 전송되었습니다.",
+    "sendError": "WhatsApp 테스트 메시지를 보낼 수 없습니다."
+  },
+  "logs": {
+    "title": "WhatsApp 로그",
+    "description": "웹훅, 테스트 메시지 및 향후 제안 흐름 기록을 모니터링합니다.",
+    "tableTitle": "거래기록",
+    "searchPlaceholder": "전화, 메시지 또는 거래 통화...",
+    "errorsOnly": "그냥 실수",
+    "directionAll": "모든 방향",
+    "inbound": "들어오는",
+    "outbound": "나가는",
+    "success": "성공하다",
+    "error": "오류",
+    "empty": "기록을 찾을 수 없습니다.",
+    "total": "{{count}} 레지스터",
+    "columns": {
+      "date": "날짜",
+      "direction": "방향",
+      "operation": "거래",
+      "phone": "전화",
+      "message": "메시지",
+      "status": "상태"
+    }
+  },
+  "drafts": {
+    "title": "WhatsApp 제안 초안",
+    "description": "에이전트 제어를 위해 WhatsApp을 통해 고객이 만든 카트를 모니터링합니다.",
+    "tableTitle": "에이전트 제어 대기열",
+    "searchPlaceholder": "전화, 고객 또는 메시지...",
+    "empty": "초안을 찾을 수 없습니다.",
+    "total": "{{count}} 초안",
+    "customerMessage": "고객 메시지",
+    "mainLine": "주요제품",
+    "relatedLine": "제휴상품",
+    "status": {
+      "WaitingRepresentativeReview": "에이전트 제어 중"
+    },
+    "columns": {
+      "createdDate": "날짜",
+      "phone": "전화",
+      "customer": "고객",
+      "status": "상태",
+      "lineCount": "연필",
+      "grandTotal": "총계"
+    },
+    "lineColumns": {
+      "code": "코드",
+      "name": "주식",
+      "quantity": "수량",
+      "unitPrice": "단가",
+      "total": "합계",
+      "type": "유형"
+    },
+    "actions": {
+      "title": "대표입찰과정",
+      "description": "초안을 CRM 제안으로 변환하고 원하는 경우 WhatsApp을 통해 PDF로 고객에게 보냅니다.",
+      "representativeId": "대표번호",
+      "customer": "고객",
+      "selectCustomer": "고객 선택",
+      "paymentType": "결제 유형",
+      "selectPaymentType": "결제 유형 선택",
+      "documentSerial": "문서 일련 유형",
+      "selectDocumentSerial": "문서 시리즈 유형 선택",
+      "offerType": "혜택 유형",
+      "domestic": "국내",
+      "foreign": "해외에서",
+      "currency": "통화",
+      "offerDate": "제안 날짜",
+      "deliveryDate": "배송일",
+      "descriptionField": "내부 설명",
+      "customerMessageField": "고객에게 보내는 메시지",
+      "sendAfterConvert": "전화를 걸면 WhatsApp 보내기",
+      "attachPdf": "PDF 추가",
+      "convertAndSend": "제안으로 전환하여 전송",
+      "sendAgain": "WhatsApp으로 다시 보내기",
+      "createdQuotation": "제안 #{{id}}",
+      "loading": "로드 중...",
+      "convertSuccess": "WhatsApp 초안이 제안 흐름에 포함되었습니다.",
+      "convertError": "WhatsApp 초안을 제안서로 전환할 수 없습니다.",
+      "sendSuccess": "제안은 WhatsApp을 통해 전송되었습니다.",
+      "sendError": "WhatsApp을 통해 제안을 보낼 수 없습니다."
+    }
+  },
+  "quotationSend": {
+    "sendSuccess": "제안은 PDF를 통해 WhatsApp을 통해 전송되었습니다.",
+    "sendError": "WhatsApp을 통해 제안을 보낼 수 없습니다."
+  },
+  "flow": {
+    "title": "WhatsApp 제안 흐름",
+    "description": "고객이 전화로 견적 요청을 생성할 수 있도록 보안 모듈 계획을 구현합니다.",
+    "steps": {
+      "inbound": {
+        "title": "1. 메시지 수신",
+        "text": "고객의 메시지는 웹훅을 통해 수신되며 서명을 확인하고 원시 기록이 기록됩니다."
+      },
+      "intent": {
+        "title": "2. 투자의향 및 종목선정",
+        "text": "고객은 카탈로그나 재고 분석을 통해 안내됩니다. 자유 텍스트는 순서대로 직접 번역되지 않습니다."
+      },
+      "quote": {
+        "title": "3. 제안서 초안",
+        "text": "선택 항목은 CRM 측에서 초안 제안으로 열리고 담당자가 확인하지 않으면 최종 문서가 생성되지 않습니다."
+      },
+      "handoff": {
+        "title": "4. 대표자 승인",
+        "text": "가격, 할인, 배송 및 현재 확인이 이루어진 후 제안이 고객에게 전송됩니다."
+      }
+    },
+    "nextPhaseTitle": "다음 단계",
+    "nextPhaseText": "이 단계에서는 인프라가 열립니다. 대화 흐름, 카탈로그 선택, 제안서 초안 및 WhatsApp 템플릿 제출은 별도의 제어 단계에서 추가됩니다."
+  }
+}
