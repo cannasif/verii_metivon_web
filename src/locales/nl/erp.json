@@ -771,6 +771,8 @@
       "0": "Zondag",
       "1": "Maandag",
       "6": "Zaterdag"
-    }
+    },
+    "selectCurrency": "Valuta selecteren",
+    "searchCurrency": "Valuta zoeken..."
   }
 }

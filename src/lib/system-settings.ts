@@ -211,8 +211,10 @@ export function formatSystemCurrency(value: number, currencyCode?: string): stri
     if (settings.currencyDisplay === 0) return number;
     const marker = settings.currencyDisplay === 2
       ? currency
-      : (new Intl.NumberFormat(getSystemLocale(), { style: 'currency', currency, currencyDisplay: 'narrowSymbol' })
-          .formatToParts(0).find(part => part.type === 'currency')?.value || currency);
+      : (currency === settings.defaultCurrencyCode && settings.defaultCurrencySymbol
+          ? settings.defaultCurrencySymbol
+          : (new Intl.NumberFormat(getSystemLocale(), { style: 'currency', currency, currencyDisplay: 'narrowSymbol' })
+              .formatToParts(0).find(part => part.type === 'currency')?.value || currency));
     return settings.currencySymbolOnRight ? `${number} ${marker}` : `${marker} ${number}`;
   } catch {
     return fallbackFormat(value, currency);

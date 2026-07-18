@@ -771,6 +771,8 @@
       "0": "Domingo",
       "1": "Segunda-feira",
       "6": "Sábado"
-    }
+    },
+    "selectCurrency": "Selecionar moeda",
+    "searchCurrency": "Pesquisar moedas..."
   }
 }

@@ -13,7 +13,11 @@ export interface SystemSettingsDto {
   roundingMethod?: number;
   useThousandsSeparator?: boolean;
   trimTrailingZeros?: boolean;
+  defaultCurrencyId?: number;
   defaultCurrencyCode?: string;
+  defaultCurrencyName?: string;
+  defaultCurrencySymbol?: string;
+  defaultCurrencyDecimalPlaces?: number;
   currencyDisplay?: number;
   currencySymbolOnRight?: boolean;
   dateFormat?: string;

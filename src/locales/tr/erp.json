@@ -730,6 +730,8 @@
       "0": "Pazar",
       "1": "Pazartesi",
       "6": "Cumartesi"
-    }
+    },
+    "selectCurrency": "Para birimi seçin",
+    "searchCurrency": "Para birimlerinde ara..."
   }
 }

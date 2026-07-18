@@ -771,6 +771,8 @@
       "0": "Niedziela",
       "1": "Poniedziałek",
       "6": "Sobota"
-    }
+    },
+    "selectCurrency": "Wybierz walutę",
+    "searchCurrency": "Szukaj walut..."
   }
 }

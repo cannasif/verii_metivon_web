@@ -730,6 +730,8 @@
       "0": "Sunday",
       "1": "Monday",
       "6": "Saturday"
-    }
+    },
+    "selectCurrency": "Select currency",
+    "searchCurrency": "Search currencies..."
   }
 }

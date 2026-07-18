@@ -771,6 +771,8 @@
       "0": "Dimanche",
       "1": "Lundi",
       "6": "Samedi"
-    }
+    },
+    "selectCurrency": "Sélectionner une devise",
+    "searchCurrency": "Rechercher des devises..."
   }
 }
