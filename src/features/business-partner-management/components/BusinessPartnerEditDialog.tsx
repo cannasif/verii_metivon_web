@@ -1,0 +1,36 @@
+import {useEffect,useState,type FormEvent,type ReactElement}from'react';
+import{useQuery,useQueryClient}from'@tanstack/react-query';
+import{toast}from'sonner';
+import{Button}from'@/components/ui/button';
+import{Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle}from'@/components/ui/dialog';
+import{Input}from'@/components/ui/input';
+import{Label}from'@/components/ui/label';
+import{Textarea}from'@/components/ui/textarea';
+import{ErpLookupCombobox}from'@/features/erp-form-management/ErpLookupCombobox';
+import{businessPartnerApi}from'../api/business-partner-api';
+import type{BusinessPartnerDetail,CreateBusinessPartnerRequest}from'../types/business-partner.types';
+
+export function BusinessPartnerEditDialog({id,open,onOpenChange}:{id:number|null;open:boolean;onOpenChange:(open:boolean)=>void}):ReactElement{
+ const queryClient=useQueryClient();const[saving,setSaving]=useState(false);const[form,setForm]=useState<BusinessPartnerDetail|null>(null);
+ const detail=useQuery({queryKey:['business-partner-detail',id],queryFn:()=>businessPartnerApi.getById(id!),enabled:open&&id!==null});
+ const definitions=useQuery({queryKey:['business-partner-definitions'],queryFn:()=>businessPartnerApi.getDefinitions(),enabled:open});
+ useEffect(()=>{if(detail.data?.data)setForm(detail.data.data)},[detail.data]);
+ const set=<K extends keyof BusinessPartnerDetail>(key:K,value:BusinessPartnerDetail[K])=>setForm(v=>v?{...v,[key]:value}:v);
+ const submit=async(event:FormEvent)=>{event.preventDefault();if(!id||!form)return;const request:CreateBusinessPartnerRequest={...form};try{setSaving(true);await businessPartnerApi.update(id,request);await queryClient.invalidateQueries({queryKey:['business-partners']});toast.success('Cari başarıyla güncellendi.');onOpenChange(false)}catch(error){toast.error(error instanceof Error?error.message:'Cari güncellenemedi.')}finally{setSaving(false)}};
+ const defs=definitions.data?.data;
+ return <Dialog open={open} onOpenChange={onOpenChange}><DialogContent className="lg:max-w-5xl"><DialogHeader><DialogTitle>Cari Kartını Düzenle</DialogTitle><DialogDescription>Cari temel, mali ve iletişim bilgilerini güvenli biçimde güncelleyin.</DialogDescription></DialogHeader>
+  {!form||detail.isLoading?<div className="py-12 text-center text-sm text-muted-foreground">Cari bilgileri yükleniyor...</div>:<form onSubmit={submit} className="space-y-6"><div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+   <Field label="Cari Kodu" required><Input value={form.code} onChange={e=>set('code',e.target.value)} required maxLength={50}/></Field><Field label="Cari Adı" required><Input value={form.name} onChange={e=>set('name',e.target.value)} required maxLength={200}/></Field><Field label="Ticari Unvan"><Input value={form.legalName??''} onChange={e=>set('legalName',e.target.value)} maxLength={250}/></Field>
+   <Field label="Cari Tipi" required><ErpLookupCombobox lookupKey="businesspartnertypes" value={String(form.businessPartnerTypeId)} fallbackOptions={defs?.partnerTypes??[]} placeholder="Cari tipi seçin" searchPlaceholder="Cari tiplerinde ara..." required onChange={v=>v!==''&&set('businessPartnerTypeId',v)}/></Field>
+   <Field label="Cari Grubu"><ErpLookupCombobox lookupKey="customergroups" value={String(form.customerGroupId??'')} fallbackOptions={defs?.customerGroups??[]} placeholder="Cari grubu seçin" searchPlaceholder="Cari gruplarında ara..." onChange={v=>set('customerGroupId',v===''?null:v)}/></Field>
+   <Field label="Ödeme Koşulu" required><ErpLookupCombobox lookupKey="paymentterms" value={String(form.paymentTermId)} fallbackOptions={defs?.paymentTerms??[]} placeholder="Ödeme koşulu seçin" searchPlaceholder="Ödeme koşullarında ara..." required onChange={v=>v!==''&&set('paymentTermId',v)}/></Field>
+   <Field label="Para Birimi" required><ErpLookupCombobox lookupKey="currencies" value={String(form.currencyId)} fallbackOptions={defs?.currencies??[]} placeholder="Para birimi seçin" searchPlaceholder="Para birimlerinde ara..." required onChange={v=>v!==''&&set('currencyId',v)}/></Field>
+   <Field label="Vergi Grubu" required><ErpLookupCombobox lookupKey="taxgroups" value={String(form.taxGroupId)} fallbackOptions={defs?.taxGroups??[]} placeholder="Vergi grubu seçin" searchPlaceholder="Vergi gruplarında ara..." required onChange={v=>v!==''&&set('taxGroupId',v)}/></Field>
+   <Field label="Vergi Dairesi"><Input value={form.taxOffice??''} onChange={e=>set('taxOffice',e.target.value)}/></Field><Field label="Vergi Numarası"><Input value={form.taxNumber??''} onChange={e=>set('taxNumber',e.target.value)}/></Field><Field label="T.C. Kimlik No"><Input value={form.nationalIdentityNumber??''} onChange={e=>set('nationalIdentityNumber',e.target.value)} maxLength={11}/></Field>
+   <Field label="E-posta"><Input value={form.email??''} onChange={e=>set('email',e.target.value)} type="email"/></Field><Field label="Telefon"><Input value={form.phone??''} onChange={e=>set('phone',e.target.value)}/></Field><Field label="Cep Telefonu"><Input value={form.mobilePhone??''} onChange={e=>set('mobilePhone',e.target.value)}/></Field><Field label="Web Sitesi"><Input value={form.website??''} onChange={e=>set('website',e.target.value)} type="url"/></Field>
+   <Field label="Kredi Limiti"><Input value={form.creditLimit} onChange={e=>set('creditLimit',Number(e.target.value))} type="number" min="0" step="0.01" disabled={form.hasUnlimitedCredit}/></Field><label className="flex items-center gap-3 self-end pb-2 text-sm font-medium"><input type="checkbox" checked={form.hasUnlimitedCredit} onChange={e=>set('hasUnlimitedCredit',e.target.checked)} className="size-4"/>Sınırsız kredi</label>
+   <div className="md:col-span-2 lg:col-span-3"><Field label="Notlar"><Textarea value={form.notes??''} onChange={e=>set('notes',e.target.value)} rows={3}/></Field></div>
+  </div><DialogFooter><Button type="button" variant="outline" onClick={()=>onOpenChange(false)}>Vazgeç</Button><Button type="submit" disabled={saving||definitions.isLoading}>{saving?'Kaydediliyor...':'Değişiklikleri Kaydet'}</Button></DialogFooter></form>}
+ </DialogContent></Dialog>;
+}
+function Field({label,required,children}:{label:string;required?:boolean;children:ReactElement}){return <div className="space-y-2"><Label>{label}{required?<span className="text-destructive"> *</span>:null}</Label>{children}</div>}

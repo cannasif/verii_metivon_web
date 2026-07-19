@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowDown, ArrowUp, ArrowUpDown, Plus, Settings2 } from 'lucide-react';
+import { ArrowDown, ArrowUp, ArrowUpDown, Pencil, Plus, Settings2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { UserGroupIcon } from 'hugeicons-react';
@@ -14,6 +14,7 @@ import { businessPartnerApi } from '../api/business-partner-api';
 import { useBusinessPartners } from '../hooks/useBusinessPartners';
 import type { BusinessPartner, BusinessPartnerListQuery } from '../types/business-partner.types';
 import { BusinessPartnerCreateDialog } from './BusinessPartnerCreateDialog';
+import { BusinessPartnerEditDialog } from './BusinessPartnerEditDialog';
 
 type ColumnKey = 'id' | 'code' | 'name' | 'partnerType' | 'customerGroup' | 'paymentTerm' | 'currency' | 'taxGroup' | 'creditLimit' | 'isActive';
 const PAGE_KEY = 'metivon-business-partners';
@@ -25,6 +26,7 @@ export function BusinessPartnerManagementPage() {
   const { t } = useTranslation('business-partner-management');
   const navigate = useNavigate();
   const [createOpen, setCreateOpen] = useState(false);
+  const [editId,setEditId]=useState<number|null>(null);
   const userId = useAuthStore((state) => state.user?.id);
   const defaultPageSize = useSystemSettingsStore((state) => state.settings.defaultPageSize ?? 20);
   const initialPreferences = useMemo(() => loadColumnPreferences(PAGE_KEY, userId, ALL_COLUMN_KEYS), [userId]);
@@ -133,6 +135,7 @@ export function BusinessPartnerManagementPage() {
           refresh: { onRefresh: () => void refetch(), isLoading: isFetching, cooldownSeconds: 0 }
         }}
         columns={columns} visibleColumnKeys={orderedVisible} rows={rows} rowKey={(row) => row.id}
+        showActionsColumn actionsHeaderLabel="İşlemler" renderActionsCell={(row)=><Button size="sm" variant="outline" onClick={()=>setEditId(row.id)}><Pencil/>Düzenle</Button>}
         renderCell={(row, key) => {
           if (key === 'id') return <span className="font-mono text-xs font-semibold">#{row.id}</span>;
           if (key === 'code') return <span className="font-mono text-xs font-semibold text-violet-700 dark:text-violet-300">{row.code}</span>;
@@ -152,5 +155,6 @@ export function BusinessPartnerManagementPage() {
       />
     </div>
     <BusinessPartnerCreateDialog open={createOpen} onOpenChange={setCreateOpen}/>
+    <BusinessPartnerEditDialog id={editId} open={editId!==null} onOpenChange={(next)=>{if(!next)setEditId(null)}}/>
   </div>;
 }
