@@ -136,12 +136,12 @@ export function BusinessPartnerManagementPage() {
   };
   const renderSortIcon = (key: ColumnKey) => sortBy !== key ? <ArrowUpDown className="h-3.5 w-3.5 opacity-40" /> : sortDirection === 'asc' ? <ArrowUp className="h-3.5 w-3.5" /> : <ArrowDown className="h-3.5 w-3.5" />;
 
-  return <div className="min-h-full space-y-5 bg-slate-50/60 p-1 dark:bg-transparent">
+  return <div className="min-h-full min-w-0 space-y-5 bg-slate-50/60 p-1 dark:bg-transparent">
     <section className="relative overflow-hidden rounded-3xl border border-violet-200/60 bg-gradient-to-br from-violet-950 via-slate-950 to-indigo-950 p-6 text-white shadow-xl shadow-violet-950/10 md:p-8">
       <div className="absolute -end-16 -top-24 h-64 w-64 rounded-full bg-violet-500/20 blur-3xl" />
       <div className="relative flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p className="text-xs font-semibold uppercase tracking-[0.24em] text-violet-300">V3RII Metivon</p><h1 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">{t('title')}</h1><p className="mt-2 max-w-2xl text-sm text-slate-300 md:text-base">{t('description')}</p></div><div className="flex flex-wrap items-center gap-3"><Button variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20 hover:text-white" onClick={()=>navigate('/accounts/definitions')}><Settings2/>Cari Tanımları</Button><Button className="bg-white text-violet-950 hover:bg-violet-50" onClick={()=>setCreateOpen(true)}><Plus/>Yeni Cari</Button><div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 backdrop-blur"><UserGroupIcon size={22} className="text-violet-300" /><span className="text-2xl font-semibold tabular-nums">{page?.totalCount ?? 0}</span></div></div></div>
     </section>
-    <div className="overflow-hidden rounded-2xl border bg-card shadow-sm">
+    <div className="min-w-0 overflow-x-auto rounded-2xl border bg-card shadow-sm">
       <DataTableGrid<BusinessPartner, ColumnKey>
         actionBar={{ pageKey: PAGE_KEY, userId, columns: baseColumns, visibleColumns, columnOrder,
           onVisibleColumnsChange: handleColumnState, onColumnOrderChange: handleOrderState,
@@ -154,7 +154,7 @@ export function BusinessPartnerManagementPage() {
           refresh: { onRefresh: () => void refetch(), isLoading: isFetching, cooldownSeconds: 0 }
         }}
         columns={columns} visibleColumnKeys={orderedVisible} rows={rows} rowKey={(row) => row.id}
-        showActionsColumn actionsHeaderLabel="İşlemler" renderActionsCell={(row)=><div className="flex items-center gap-2"><Button size="sm" variant="outline" onClick={()=>setEditId(row.id)}><Pencil/>Düzenle</Button><Button size="sm" variant="destructive" onClick={()=>setDeleteTarget(row)}><Trash2/>Sil</Button></div>}
+        showActionsColumn iconOnlyActions={false} actionsHeaderLabel="İşlemler" renderActionsCell={(row)=><div className="flex w-full items-center justify-end gap-2"><Button size="sm" variant="outline" onClick={()=>setEditId(row.id)}><Pencil/>Düzenle</Button><Button size="sm" variant="destructive" onClick={()=>setDeleteTarget(row)}><Trash2/>Sil</Button></div>}
         renderCell={(row, key) => {
           if (key === 'id') return <span className="font-mono text-xs font-semibold">#{row.id}</span>;
           if (key === 'code') return <span className="font-mono text-xs font-semibold text-violet-700 dark:text-violet-300">{row.code}</span>;

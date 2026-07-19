@@ -18,7 +18,6 @@ import { useAppShellStore } from "@/stores/app-shell-store";
 import { useAuthStore } from "@/stores/auth-store";
 
 export function MetivonLayout(): ReactElement {
-  const { t } = useTranslation("business-partner-management");
   const { t: tc } = useTranslation("common");
   const { t: te } = useTranslation("erp");
   const navigate = useNavigate();
@@ -131,7 +130,7 @@ export function MetivonLayout(): ReactElement {
         >
             <div className="space-y-1">
               <SidebarLink
-                title={t("title")}
+                title={te("nav.accountManagement")}
                 href="/accounts"
                 icon={<UserGroupIcon size={20} />}
                 close={() => setIsMobileSidebarOpen(false)}
