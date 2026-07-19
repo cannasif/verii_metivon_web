@@ -78,6 +78,7 @@
     "tradeDossiers": "Teczki importowe / eksportowe",
     "importDossiers": "Kalkulacja kosztów importu",
     "landedCostTypes": "Rodzaje kosztów importu",
+    "importCostEntry": "Wprowadzanie kosztów importu",
     "businessPartnerParameters": "Parametry partnerów handlowych",
     "inventoryCountParameters": "Parametry inwentaryzacji i korekty",
     "inventoryTraceabilityParameters": "Parametry partii, serii i terminu ważności",

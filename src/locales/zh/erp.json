@@ -78,6 +78,7 @@
     "tradeDossiers": "进出口档案",
     "importDossiers": "进口成本核算",
     "landedCostTypes": "进口费用类型",
+    "importCostEntry": "进口费用录入",
     "businessPartnerParameters": "业务伙伴参数",
     "inventoryCountParameters": "库存盘点与调整参数",
     "inventoryTraceabilityParameters": "批次、序列号和有效期参数",

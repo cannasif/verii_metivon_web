@@ -78,6 +78,7 @@
     "tradeDossiers": "İthalat / İhracat Dosyaları",
     "importDossiers": "İthalat Maliyetlendirme",
     "landedCostTypes": "İthalat Masraf Tanımları",
+    "importCostEntry": "İthalat Masraf Girişi",
     "businessPartnerParameters": "Cari Parametreleri",
     "inventoryCountParameters": "Sayım ve Stok Düzeltme Parametreleri",
     "inventoryTraceabilityParameters": "Lot, Seri ve SKT Parametreleri",

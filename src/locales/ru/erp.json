@@ -78,6 +78,7 @@
     "tradeDossiers": "Досье импорта / экспорта",
     "importDossiers": "Расчёт стоимости импорта",
     "landedCostTypes": "Виды импортных расходов",
+    "importCostEntry": "Ввод импортных расходов",
     "businessPartnerParameters": "Параметры деловых партнёров",
     "inventoryCountParameters": "Параметры инвентаризации и корректировки",
     "inventoryTraceabilityParameters": "Параметры партий, серий и сроков годности",

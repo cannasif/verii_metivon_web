@@ -78,6 +78,7 @@
     "tradeDossiers": "ملفات الاستيراد / التصدير",
     "importDossiers": "احتساب تكلفة الاستيراد",
     "landedCostTypes": "أنواع تكاليف الاستيراد",
+    "importCostEntry": "إدخال مصروفات الاستيراد",
     "businessPartnerParameters": "معلمات الشركاء التجاريين",
     "inventoryCountParameters": "معلمات جرد المخزون وتسويته",
     "inventoryTraceabilityParameters": "معلمات الدفعة والرقم التسلسلي وتاريخ الانتهاء",

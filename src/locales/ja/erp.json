@@ -78,6 +78,7 @@
     "tradeDossiers": "輸出入案件",
     "importDossiers": "輸入原価計算",
     "landedCostTypes": "輸入費用タイプ",
+    "importCostEntry": "輸入費用入力",
     "businessPartnerParameters": "取引先パラメータ",
     "inventoryCountParameters": "棚卸・在庫調整パラメータ",
     "inventoryTraceabilityParameters": "ロット・シリアル・有効期限パラメータ",

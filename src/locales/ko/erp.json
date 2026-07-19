@@ -78,6 +78,7 @@
     "tradeDossiers": "수출입 파일",
     "importDossiers": "수입 원가 계산",
     "landedCostTypes": "수입 비용 유형",
+    "importCostEntry": "수입 비용 입력",
     "businessPartnerParameters": "거래처 매개변수",
     "inventoryCountParameters": "재고 실사 및 조정 매개변수",
     "inventoryTraceabilityParameters": "로트, 일련번호 및 유효기간 매개변수",

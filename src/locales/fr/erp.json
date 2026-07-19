@@ -78,6 +78,7 @@
     "tradeDossiers": "Dossiers d’import / export",
     "importDossiers": "Calcul des coûts d’importation",
     "landedCostTypes": "Types de frais d’importation",
+    "importCostEntry": "Saisie des frais d’importation",
     "businessPartnerParameters": "Paramètres des partenaires commerciaux",
     "inventoryCountParameters": "Paramètres d’inventaire et d’ajustement",
     "inventoryTraceabilityParameters": "Paramètres de lot, série et expiration",

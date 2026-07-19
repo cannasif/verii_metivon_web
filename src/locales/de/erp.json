@@ -78,6 +78,7 @@
     "tradeDossiers": "Import-/Exportakten",
     "importDossiers": "Importkostenrechnung",
     "landedCostTypes": "Importkostenarten",
+    "importCostEntry": "Importkostenerfassung",
     "businessPartnerParameters": "Geschäftspartnerparameter",
     "inventoryCountParameters": "Inventur- und Korrekturparameter",
     "inventoryTraceabilityParameters": "Chargen-, Serien- und Ablaufparameter",

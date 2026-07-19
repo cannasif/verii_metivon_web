@@ -7,18 +7,20 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ErpLookupCombobox } from "@/features/erp-form-management/ErpLookupCombobox";
 type Lookup = { id: number; code: string; name: string };
-type Lookups = { landedCostTypes: Lookup[]; partners: Lookup[] };
+type Lookups = { importDossiers: Lookup[]; landedCostTypes: Lookup[]; partners: Lookup[] };
 type Envelope<T> = { data: T };
 export function ImportDossierCostCreatePage(): ReactElement {
   const { id } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation("erp");
   const [lookups, setLookups] = useState<Lookups>({
+    importDossiers: [],
     landedCostTypes: [],
     partners: [],
   });
   const [busy, setBusy] = useState(false);
   const [form, setForm] = useState({
+    importDossierId: "",
     landedCostTypeId: "",
     amountType: "2",
     allocationMethod: "",
@@ -42,9 +44,11 @@ export function ImportDossierCostCreatePage(): ReactElement {
     setForm((v) => ({ ...v, [key]: value }));
   const submit = async (e: FormEvent) => {
     e.preventDefault();
+    const dossierId = id ?? form.importDossierId;
+    if (!dossierId) return;
     setBusy(true);
     try {
-      await api.post(`/api/import-dossiers/${id}/costs`, {
+      await api.post(`/api/import-dossiers/${dossierId}/costs`, {
         landedCostTypeId: Number(form.landedCostTypeId),
         amountType: Number(form.amountType),
         allocationMethod: form.allocationMethod
@@ -62,7 +66,7 @@ export function ImportDossierCostCreatePage(): ReactElement {
         description: form.description || null,
         manualAllocations: null,
       });
-      navigate(`/import-dossiers/${id}`);
+      navigate(`/import-dossiers/${dossierId}`);
     } finally {
       setBusy(false);
     }
@@ -85,6 +89,25 @@ export function ImportDossierCostCreatePage(): ReactElement {
         onSubmit={submit}
         className="grid grid-cols-1 gap-5 rounded-3xl border bg-card p-6 shadow-sm md:grid-cols-2"
       >
+        {!id ? (
+          <div className="col-span-full">
+            <Label>
+              {t("nav.importDossiers")} <span className="text-destructive">*</span>
+            </Label>
+            <div className="mt-2">
+              <ErpLookupCombobox
+                lookupKey="importDossiers"
+                value={form.importDossierId}
+                fallbackOptions={lookups.importDossiers}
+                placeholder={t("common.select")}
+                searchPlaceholder={t("common.searchPlaceholder")}
+                required
+                invalid={!form.importDossierId}
+                onChange={(value) => set("importDossierId", String(value))}
+              />
+            </div>
+          </div>
+        ) : null}
         <div>
           <Label>{t("nav.landedCostTypes")}</Label>
           <div className="mt-2">
@@ -144,7 +167,7 @@ export function ImportDossierCostCreatePage(): ReactElement {
           <Button
             type="button"
             variant="outline"
-            onClick={() => navigate(`/import-dossiers/${id}`)}
+            onClick={() => navigate(id ? `/import-dossiers/${id}` : "/import-dossiers")}
           >
             {t("common.cancel")}
           </Button>

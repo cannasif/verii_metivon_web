@@ -262,6 +262,7 @@ export function MetivonLayout(): ReactElement {
               <MenuSection title={te("nav.foreignTrade")} open={isTradeOpen} toggle={()=>setIsTradeOpen(v=>!v)}>
                 <SmallSidebarLink title={te("nav.tradeDossiers")} href="/trade-dossiers" close={()=>setIsMobileSidebarOpen(false)}/>
                 <SmallSidebarLink title={te("nav.importDossiers")} href="/import-dossiers" close={()=>setIsMobileSidebarOpen(false)}/>
+                <SmallSidebarLink title={te("nav.importCostEntry")} href="/import-dossiers/costs/new" close={()=>setIsMobileSidebarOpen(false)}/>
                 <SmallSidebarLink title={te("nav.landedCostTypes")} href="/import-dossiers/definitions/cost-types" close={()=>setIsMobileSidebarOpen(false)}/>
               </MenuSection>
               <MenuSection

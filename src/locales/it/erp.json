@@ -78,6 +78,7 @@
     "tradeDossiers": "Fascicoli di importazione / esportazione",
     "importDossiers": "Calcolo dei costi di importazione",
     "landedCostTypes": "Tipi di costo d'importazione",
+    "importCostEntry": "Registrazione costi di importazione",
     "businessPartnerParameters": "Parametri dei partner commerciali",
     "inventoryCountParameters": "Parametri di inventario e rettifica",
     "inventoryTraceabilityParameters": "Parametri di lotto, serie e scadenza",

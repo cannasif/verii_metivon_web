@@ -339,6 +339,7 @@ export function createAppRouter() {
         { path: 'accounting/definitions/inventory-posting-profiles/new', element: <InventoryPostingProfileFormPage /> },
         { path: 'accounting/definitions/inventory-posting-profiles/:id/edit', element: <InventoryPostingProfileFormPage /> },
         { path: 'import-dossiers', element: <ImportDossierManagementPage /> },
+        { path: 'import-dossiers/costs/new', element: <ImportDossierCostCreatePage /> },
         { path: 'import-dossiers/:id', element: <ImportDossierDetailPage /> },
         { path: 'import-dossiers/definitions/cost-types', element: <LandedCostTypeManagementPage /> },
         { path: 'import-dossiers/:id/costs/new', element: <ImportDossierCostCreatePage /> },

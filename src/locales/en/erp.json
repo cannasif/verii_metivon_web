@@ -78,6 +78,7 @@
     "tradeDossiers": "Import / Export Dossiers",
     "importDossiers": "Import Costing",
     "landedCostTypes": "Import Cost Types",
+    "importCostEntry": "Import Cost Entry",
     "businessPartnerParameters": "Business Partner Parameters",
     "inventoryCountParameters": "Inventory Count and Adjustment Parameters",
     "inventoryTraceabilityParameters": "Lot, Serial and Expiry Parameters",

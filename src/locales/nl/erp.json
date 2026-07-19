@@ -78,6 +78,7 @@
     "tradeDossiers": "Import-/exportdossiers",
     "importDossiers": "Importkostencalculatie",
     "landedCostTypes": "Importkostensoorten",
+    "importCostEntry": "Invoer importkosten",
     "businessPartnerParameters": "Parameters voor zakenpartners",
     "inventoryCountParameters": "Parameters voor voorraadtelling en correctie",
     "inventoryTraceabilityParameters": "Parameters voor partij, serie en vervaldatum",
