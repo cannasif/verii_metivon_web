@@ -648,14 +648,18 @@ export const receiptForm: ErpFormConfig = {
     { key: "serialNumbers", label: "Seri Numaraları", type: "serial-entry", quantityField: "acceptedQuantity", span: 2 },
     { key: "notes", label: "Not", type: "text" },
   ],
-  buildRequest: (h, l) => ({
+  buildRequest: (h, l, lookups) => {
+    const purchaseOrderIds = Array.isArray(h.purchaseOrderIds) ? h.purchaseOrderIds.map(Number).filter(Boolean) : [];
+    const selectedPurchaseOrders = (lookups.purchaseOrders ?? []).filter((order) => purchaseOrderIds.includes(order.id));
+    const purchaseOrder = selectedPurchaseOrders[0];
+    return ({
     receiptNumber: s(h.receiptNumber) || null,
     receiptType: n(h.receiptType),
     branchId: n(h.branchId),
-    supplierId: n(h.supplierId) || null,
-    purchaseOrderIds: Array.isArray(h.purchaseOrderIds) ? h.purchaseOrderIds.map(Number).filter(Boolean) : [],
+    supplierId: Number(purchaseOrder?.supplierId ?? h.supplierId) || null,
+    purchaseOrderIds,
     tradeDossierId: n(h.tradeDossierId) || null,
-    warehouseId: n(h.warehouseId),
+    warehouseId: Number(purchaseOrder?.warehouseId ?? h.warehouseId),
     supplierDeliveryNoteNumber: s(h.supplierDeliveryNoteNumber) || null,
     receiptDate: s(h.receiptDate),
     notes: s(h.notes) || null,
@@ -679,7 +683,8 @@ export const receiptForm: ErpFormConfig = {
         .filter(Boolean),
       notes: s(x.notes) || null,
     })),
-  }),
+    });
+  },
 };
 export const salesForm: ErpFormConfig = {
   title: "Yeni Satış Siparişi",

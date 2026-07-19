@@ -284,7 +284,13 @@ function Field({
           <span className="text-sm">{t("common.yes")}</span>
         </label>
       ) : field.type === "multi-select" ? (
-        <ErpLookupMultiSelect lookupKey={field.lookup??`static-${field.key}`} value={Array.isArray(value)?value:[]} fallbackOptions={options} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} required={field.required} invalid={invalid} onChange={onChange}/>
+        <ErpLookupMultiSelect lookupKey={field.lookup??`static-${field.key}`} value={Array.isArray(value)?value:[]} fallbackOptions={options} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} required={field.required} invalid={invalid} onChange={(nextValue)=>{
+          onChange(nextValue);
+          if(field.key==='purchaseOrderIds'){
+            const firstOrder=(lookups.purchaseOrders??[]).find((order)=>nextValue.includes(order.id));
+            if(firstOrder)onPatch({supplierId:Number(firstOrder.supplierId)||'',warehouseId:Number(firstOrder.warehouseId)||''});
+          }
+        }}/>
       ) : field.type === "select" ? (
         <ErpLookupCombobox
           lookupKey={field.lookup ?? `static-${field.key}`}

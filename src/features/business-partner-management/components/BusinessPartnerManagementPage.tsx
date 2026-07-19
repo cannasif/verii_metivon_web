@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowDown, ArrowUp, ArrowUpDown, Pencil, Plus, Settings2 } from 'lucide-react';
+import { ArrowDown, ArrowUp, ArrowUpDown, Pencil, Plus, Settings2, Trash2 } from 'lucide-react';
+import { toast } from 'sonner';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
 import { UserGroupIcon } from 'hugeicons-react';
 import { DataTableGrid, type DataTableGridColumn } from '@/components/shared';
 import { applyFilterRowsClient, rowsToBackendFilters, type FilterColumnConfig, type FilterRow } from '@/lib/advanced-filter-types';
@@ -27,6 +29,8 @@ export function BusinessPartnerManagementPage() {
   const navigate = useNavigate();
   const [createOpen, setCreateOpen] = useState(false);
   const [editId,setEditId]=useState<number|null>(null);
+  const [deleteTarget,setDeleteTarget]=useState<BusinessPartner|null>(null);
+  const [deleting,setDeleting]=useState(false);
   const userId = useAuthStore((state) => state.user?.id);
   const defaultPageSize = useSystemSettingsStore((state) => state.settings.defaultPageSize ?? 20);
   const initialPreferences = useMemo(() => loadColumnPreferences(PAGE_KEY, userId, ALL_COLUMN_KEYS), [userId]);
@@ -115,6 +119,21 @@ export function BusinessPartnerManagementPage() {
     const nextDirection = sortBy === key && sortDirection === 'asc' ? 'desc' : 'asc';
     setSortBy(key as BusinessPartnerListQuery['sortBy']); setSortDirection(nextDirection); setPageNumber(1);
   };
+  const handleDelete = async () => {
+    if (!deleteTarget) return;
+    try {
+      setDeleting(true);
+      const response = await businessPartnerApi.delete(deleteTarget.id);
+      if (!response.success) throw new Error(response.message || 'Cari silinemedi.');
+      await refetch();
+      toast.success('Cari başarıyla silindi.');
+      setDeleteTarget(null);
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Cari silinemedi.');
+    } finally {
+      setDeleting(false);
+    }
+  };
   const renderSortIcon = (key: ColumnKey) => sortBy !== key ? <ArrowUpDown className="h-3.5 w-3.5 opacity-40" /> : sortDirection === 'asc' ? <ArrowUp className="h-3.5 w-3.5" /> : <ArrowDown className="h-3.5 w-3.5" />;
 
   return <div className="min-h-full space-y-5 bg-slate-50/60 p-1 dark:bg-transparent">
@@ -135,7 +154,7 @@ export function BusinessPartnerManagementPage() {
           refresh: { onRefresh: () => void refetch(), isLoading: isFetching, cooldownSeconds: 0 }
         }}
         columns={columns} visibleColumnKeys={orderedVisible} rows={rows} rowKey={(row) => row.id}
-        showActionsColumn actionsHeaderLabel="İşlemler" renderActionsCell={(row)=><Button size="sm" variant="outline" onClick={()=>setEditId(row.id)}><Pencil/>Düzenle</Button>}
+        showActionsColumn actionsHeaderLabel="İşlemler" renderActionsCell={(row)=><div className="flex items-center gap-2"><Button size="sm" variant="outline" onClick={()=>setEditId(row.id)}><Pencil/>Düzenle</Button><Button size="sm" variant="destructive" onClick={()=>setDeleteTarget(row)}><Trash2/>Sil</Button></div>}
         renderCell={(row, key) => {
           if (key === 'id') return <span className="font-mono text-xs font-semibold">#{row.id}</span>;
           if (key === 'code') return <span className="font-mono text-xs font-semibold text-violet-700 dark:text-violet-300">{row.code}</span>;
@@ -156,5 +175,6 @@ export function BusinessPartnerManagementPage() {
     </div>
     <BusinessPartnerCreateDialog open={createOpen} onOpenChange={setCreateOpen}/>
     <BusinessPartnerEditDialog id={editId} open={editId!==null} onOpenChange={(next)=>{if(!next)setEditId(null)}}/>
+    <AlertDialog open={deleteTarget!==null} onOpenChange={(open)=>{if(!open&&!deleting)setDeleteTarget(null)}}><AlertDialogContent><AlertDialogHeader><AlertDialogTitle>Cari silinsin mi?</AlertDialogTitle><AlertDialogDescription>{deleteTarget ? `${deleteTarget.code} · ${deleteTarget.name} cari kaydı silinecek. Bu kayıt listelerde artık görünmeyecek.` : ''}</AlertDialogDescription></AlertDialogHeader><AlertDialogFooter><AlertDialogCancel disabled={deleting}>Vazgeç</AlertDialogCancel><AlertDialogAction disabled={deleting} onClick={(event)=>{event.preventDefault();void handleDelete()}}>{deleting?'Siliniyor...':'Cariyi Sil'}</AlertDialogAction></AlertDialogFooter></AlertDialogContent></AlertDialog>
   </div>;
 }
