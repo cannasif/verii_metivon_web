@@ -535,9 +535,13 @@ export const receiptForm: ErpFormConfig = {
     },
     {
       key: "receiptType",
-      label: "Kabul Tipi (1 Sipariş, 2 Serbest)",
-      type: "number",
-      defaultValue: 1,
+      label: "Kabul Tipi",
+      type: "select",
+      defaultValue: 2,
+      options: [
+        { id: 2, code: "FREE", name: "Serbest Mal Kabul" },
+        { id: 1, code: "PURCHASE_ORDER", name: "Satın Alma Siparişine Bağlı" },
+      ],
       required: true,
     },
     {
@@ -654,7 +658,7 @@ export const receiptForm: ErpFormConfig = {
     const purchaseOrder = selectedPurchaseOrders[0];
     return ({
     receiptNumber: s(h.receiptNumber) || null,
-    receiptType: n(h.receiptType),
+    receiptType: purchaseOrderIds.length > 0 ? n(h.receiptType) : 2,
     branchId: n(h.branchId),
     supplierId: Number(purchaseOrder?.supplierId ?? h.supplierId) || null,
     purchaseOrderIds,
