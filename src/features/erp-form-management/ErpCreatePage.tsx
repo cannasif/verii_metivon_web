@@ -135,8 +135,20 @@ export function ErpCreatePage({
                 onChange={(v) => {
                   const dependentHeaderKeys = config.fields.filter((candidate) => candidate.filterBy === f.key).map((candidate) => candidate.key);
                   const dependentLineKeys = (config.lineFields ?? []).filter((candidate) => candidate.filterBy === f.key).map((candidate) => candidate.key);
-                  setHeader((current) => ({ ...current, [f.key]: v, ...Object.fromEntries(dependentHeaderKeys.map((key) => [key, ""])) }));
-                  if (dependentLineKeys.length > 0) setLines((current) => current.map((line) => ({ ...line, ...Object.fromEntries(dependentLineKeys.map((key) => [key, ""])) })));
+                  const switchedToFreeReceipt = f.key === "receiptType" && Number(v) === 2;
+                  setHeader((current) => ({
+                    ...current,
+                    [f.key]: v,
+                    ...Object.fromEntries(dependentHeaderKeys.map((key) => [key, ""])),
+                    ...(switchedToFreeReceipt ? { purchaseOrderIds: [] } : {}),
+                  }));
+                  if (dependentLineKeys.length > 0 || switchedToFreeReceipt) {
+                    setLines((current) => current.map((line) => ({
+                      ...line,
+                      ...Object.fromEntries(dependentLineKeys.map((key) => [key, ""])),
+                      ...(switchedToFreeReceipt ? { purchaseOrderLineId: "" } : {}),
+                    })));
+                  }
                 }}
                 onPatch={(patch) => setHeader((s) => ({...s,...patch}))}
               />
@@ -246,6 +258,7 @@ function Field({
   const normalizedParentId = Number(parentValue);
   const parentId = Number.isFinite(normalizedParentId) && normalizedParentId > 0 ? normalizedParentId : undefined;
   const hasParentValue = Array.isArray(parentValue) ? parentValue.length > 0 : Boolean(parentId);
+  const disabledForFreeReceipt = Number(values.receiptType) === 2 && (field.key === "purchaseOrderIds" || field.key === "purchaseOrderLineId");
   const selectedWarehouseId = Number(values[field.warehouseField??"warehouseId"]) || Number(lookups.salesOrders?.find(x=>x.id===Number(values.salesOrderId))?.warehouseId) || undefined;
   const selectedBranchId = Number(values[field.branchField??"branchId"]) || Number(lookups.warehouses?.find(x=>x.id===selectedWarehouseId)?.branchId) || undefined;
   return (
@@ -284,7 +297,7 @@ function Field({
           <span className="text-sm">{t("common.yes")}</span>
         </label>
       ) : field.type === "multi-select" ? (
-        <ErpLookupMultiSelect lookupKey={field.lookup??`static-${field.key}`} value={Array.isArray(value)?value:[]} fallbackOptions={options} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} required={field.required} invalid={invalid} onChange={(nextValue)=>{
+        <ErpLookupMultiSelect lookupKey={field.lookup??`static-${field.key}`} value={Array.isArray(value)?value:[]} fallbackOptions={options} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} disabled={disabledForFreeReceipt} required={field.required} invalid={invalid} onChange={(nextValue)=>{
           onChange(nextValue);
           if(field.key==='purchaseOrderIds'){
             const firstOrder=(lookups.purchaseOrders??[]).find((order)=>nextValue.includes(order.id));
@@ -302,7 +315,7 @@ function Field({
           searchPlaceholder={t("common.searchPlaceholder")}
           required={field.required}
           invalid={invalid}
-          disabled={Boolean(field.filterBy && !hasParentValue)}
+          disabled={disabledForFreeReceipt || Boolean(field.filterBy && !hasParentValue)}
           onChange={onChange}
         />
       ) : (
