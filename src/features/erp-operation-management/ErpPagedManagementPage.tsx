@@ -218,6 +218,11 @@ export function ErpPagedManagementPage({
     void executeAction(row, index);
   };
   const visibleActions = config.actions?.filter(isActionAllowed) ?? [];
+  const actionLabel = (action: NonNullable<ErpPageConfig["actions"]>[number], index: number): string => {
+    if (action.kind === "update") return t("common.edit", { defaultValue: action.label });
+    if (action.kind === "delete") return t("common.delete", { defaultValue: action.label });
+    return t(`pages.${config.pageKey}.actions.${index}.label`, { defaultValue: action.label });
+  };
   const confirmationAction = confirmation ? config.actions?.[confirmation.index] : undefined;
   return (
     <div className="space-y-5">
@@ -302,7 +307,7 @@ export function ErpPagedManagementPage({
           <div className="flex justify-end gap-2">
             {config.actions?.map((action, index) => !isActionAllowed(action) || action.visible?.(row) === false ? null : (
               <Button key={`${row.id}:${index}`} size="sm" variant={action.variant ?? "outline"} disabled={pendingAction !== null} onClick={() => runAction(row, index)}>
-                {t(`pages.${config.pageKey}.actions.${index}.label`, { defaultValue: action.label })}
+                {actionLabel(action, index)}
               </Button>
             ))}
           </div>

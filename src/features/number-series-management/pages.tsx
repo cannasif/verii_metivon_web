@@ -106,7 +106,7 @@ export function NumberSeriesManagementPage(): ReactElement {
         {
           label: t("common.delete"),
           kind: "delete",
-          method: "delete",
+          method: "post",
           endpoint: (row) => `/api/number-series/${row.id}/delete`,
           confirm: t("numberSeries.deleteConfirm"),
           variant: "destructive",

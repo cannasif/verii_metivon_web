@@ -7,6 +7,8 @@ export const warehouseForm: ErpFormConfig = {
   title: "Yeni Depo",
   description: "Şubeye bağlı fiziksel veya sanal depo oluşturun.",
   endpoint: "/api/warehouses",
+  detailEndpoint: (id) => `/api/warehouses/${id}`,
+  updateEndpoint: (id) => `/api/warehouses/${id}/update`,
   returnPath: "/warehouses",
   submitLabel: "Depoyu Oluştur",
   fields: [
@@ -63,6 +65,8 @@ export const locationForm: ErpFormConfig = {
   description:
     "Depo içindeki fiziksel adresi ve kapasite sınırlarını tanımlayın.",
   endpoint: "/api/warehouses/locations",
+  detailEndpoint: (id) => `/api/warehouses/locations/${id}`,
+  updateEndpoint: (id) => `/api/warehouses/locations/${id}/update`,
   returnPath: "/warehouses/locations",
   submitLabel: "Lokasyonu Oluştur",
   fields: [

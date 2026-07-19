@@ -1,7 +1,7 @@
-import { useState, type FormEvent, type ReactElement } from "react";
+import { useEffect, useState, type FormEvent, type ReactElement } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, Plus, Trash2 } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { api } from "@/lib/axios";
@@ -31,6 +31,8 @@ export function ErpCreatePage({
   config: ErpFormConfig;
 }): ReactElement {
   const navigate = useNavigate();
+  const { id } = useParams<{ id?: string }>();
+  const editId = id ? Number(id) : null;
   const { t } = useTranslation("erp");
   const lookupQuery = useQuery({
     queryKey: ["erp-lookups"],
@@ -45,6 +47,19 @@ export function ErpCreatePage({
   );
   const [saving, setSaving] = useState(false);
   const [validationAttempted, setValidationAttempted] = useState(false);
+  const detailQuery = useQuery({
+    queryKey: ["erp-form-detail", config.returnPath, editId],
+    queryFn: () => api.get<ApiEnvelope<Record<string, FormValue> & { lines?: Record<string, FormValue>[] }>>(config.detailEndpoint!(editId!)),
+    enabled: editId !== null && Number.isFinite(editId) && Boolean(config.detailEndpoint),
+  });
+  useEffect(() => {
+    const record = detailQuery.data?.data;
+    if (!record) return;
+    setHeader((current) => Object.fromEntries(Object.keys(current).map((key) => [key, record[key] ?? current[key]])));
+    if (config.lineFields && Array.isArray(record.lines)) {
+      setLines(record.lines.map((line) => Object.fromEntries(config.lineFields!.map((field) => [field.key, line[field.key] ?? defaults(config.lineFields!)[field.key]]))));
+    }
+  }, [config.lineFields, detailQuery.data]);
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setValidationAttempted(true);
@@ -62,7 +77,7 @@ export function ErpCreatePage({
     try {
       setSaving(true);
       await api.post(
-        config.endpoint,
+        editId !== null && config.updateEndpoint ? config.updateEndpoint(editId) : config.endpoint,
         config.buildRequest(header, lines, lookups),
       );
       toast.success(t("common.createSuccess"));
@@ -86,7 +101,7 @@ export function ErpCreatePage({
           <ArrowLeft className="h-4 w-4" />
           {t("common.backToList")}
         </button>
-        <h1 className="text-3xl font-semibold">{t(`forms.${config.returnPath}.title`, { defaultValue: config.title })}</h1>
+        <h1 className="text-3xl font-semibold">{t(`forms.${config.returnPath}.${editId !== null ? "editTitle" : "title"}`, { defaultValue: editId !== null ? t("common.edit") : config.title })}</h1>
         <p className="mt-2 text-white/75">{t(`forms.${config.returnPath}.description`, { defaultValue: config.description })}</p>
       </section>
       <form onSubmit={submit} noValidate className="space-y-5">
@@ -177,8 +192,8 @@ export function ErpCreatePage({
           >
             {t("common.cancel")}
           </Button>
-          <Button type="submit" disabled={saving || lookupQuery.isLoading}>
-            {saving ? t("common.saving") : t(`forms.${config.returnPath}.submit`, { defaultValue: config.submitLabel })}
+          <Button type="submit" disabled={saving || lookupQuery.isLoading || detailQuery.isLoading}>
+            {saving ? t("common.saving") : editId !== null ? t("common.edit") : t(`forms.${config.returnPath}.submit`, { defaultValue: config.submitLabel })}
           </Button>
         </div>
       </form>
