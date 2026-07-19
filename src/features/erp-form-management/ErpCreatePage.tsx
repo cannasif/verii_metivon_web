@@ -16,6 +16,7 @@ import { ErpLookupMultiSelect } from "./ErpLookupMultiSelect";
 import { SerialEntryDialog } from "./SerialEntryDialog";
 import { NumberSeriesCombobox } from "./NumberSeriesCombobox";
 import { getBusinessFieldLabel } from "@/lib/erp-field-label";
+import { useAuthStore } from "@/stores/auth-store";
 const today = new Date().toISOString().slice(0, 10);
 const isEmptyRequiredValue = (value: FormValue | undefined) => value === "" || value === null || value === undefined || Array.isArray(value) && value.length === 0;
 const defaults = (fields: FormField[]) =>
@@ -35,6 +36,8 @@ export function ErpCreatePage({
   const { id } = useParams<{ id?: string }>();
   const editId = id ? Number(id) : null;
   const { t } = useTranslation("erp");
+  const activeBranch = useAuthStore((state) => state.branch);
+  const activeBranchId = Number(activeBranch?.id ?? 0) || 0;
   const lookupQuery = useQuery({
     queryKey: ["erp-lookups"],
     queryFn: () => api.get<ApiEnvelope<ErpLookups>>("/api/erp-lookups"),
@@ -56,15 +59,26 @@ export function ErpCreatePage({
   useEffect(() => {
     const record = detailQuery.data?.data;
     if (!record) return;
-    setHeader((current) => Object.fromEntries(Object.keys(current).map((key) => [key, record[key] ?? current[key]])));
+    setHeader((current) => Object.fromEntries(Object.keys(current).map((key) => [key, key === "branchId" && activeBranchId > 0 ? activeBranchId : record[key] ?? current[key]])));
     if (config.lineFields && Array.isArray(record.lines)) {
       setLines(record.lines.map((line) => Object.fromEntries(config.lineFields!.map((field) => [field.key, line[field.key] ?? defaults(config.lineFields!)[field.key]]))));
     }
-  }, [config.lineFields, detailQuery.data]);
+  }, [activeBranchId, config.lineFields, detailQuery.data]);
+  useEffect(() => {
+    if (activeBranchId <= 0 || !config.fields.some((field) => field.key === "branchId")) return;
+    setHeader((current) => current.branchId === activeBranchId ? current : { ...current, branchId: activeBranchId });
+  }, [activeBranchId, config.fields]);
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setValidationAttempted(true);
-    const missingHeader = config.fields.some((field) => field.required && isEmptyRequiredValue(header[field.key]));
+    const scopedHeader = config.fields.some((field) => field.key === "branchId")
+      ? { ...header, branchId: activeBranchId }
+      : header;
+    if (config.fields.some((field) => field.key === "branchId") && activeBranchId <= 0) {
+      toast.error(t("common.activeBranchRequired", { defaultValue: "Aktif şube bilgisi bulunamadı. Lütfen yeniden giriş yapın." }));
+      return;
+    }
+    const missingHeader = config.fields.some((field) => field.required && isEmptyRequiredValue(scopedHeader[field.key]));
     const missingLine = config.lineFields?.some((field) => field.required && lines.some((line) => isEmptyRequiredValue(line[field.key]))) ?? false;
     if (missingHeader || missingLine) {
       toast.error(t("common.requiredFields", { defaultValue: "Zorunlu alanları doldurun." }));
@@ -79,7 +93,7 @@ export function ErpCreatePage({
       setSaving(true);
       await api.post(
         editId !== null && config.updateEndpoint ? config.updateEndpoint(editId) : config.endpoint,
-        config.buildRequest(header, lines, lookups),
+        config.buildRequest(scopedHeader, lines, lookups),
       );
       toast.success(t("common.createSuccess"));
       navigate(config.returnPath);
@@ -217,6 +231,7 @@ function Field({
   invalid: boolean;
 }) {
   const { t, i18n } = useTranslation("erp");
+  const activeBranch = useAuthStore((state) => state.branch);
   const value = values[field.key] ?? "";
   const filterValue=field.filterBy?values[field.filterBy]:undefined;
   const options = (field.options ?? lookups[field.lookup ?? ""] ?? []).filter((x)=>!field.filterBy||!filterValue||(Array.isArray(filterValue)?filterValue.map(String).includes(String(x[field.filterItemKey??field.filterBy])):String(x[field.filterItemKey??field.filterBy])===String(filterValue)));
@@ -231,7 +246,15 @@ function Field({
         {getBusinessFieldLabel(field.key, t(`fields.${field.key}`, { defaultValue: field.label }), i18n.resolvedLanguage ?? i18n.language)}
         {field.required ? <span className="ms-1 font-bold text-destructive" aria-hidden="true">*</span> : null}
       </Label>
-      {field.type === "number-series" ? (
+      {field.key === "branchId" ? (
+        <Input
+          value={activeBranch?.name ?? ""}
+          disabled
+          readOnly
+          aria-invalid={invalid}
+          data-active-branch-id={activeBranch?.id ?? ""}
+        />
+      ) : field.type === "number-series" ? (
         <NumberSeriesCombobox module={field.numberSeriesModule!} reference={field.numberSeriesReference!} branchId={selectedBranchId} warehouseId={selectedWarehouseId} value={String(value)} onChange={onChange} placeholder={t("numberSeries.select",{defaultValue:"Numara serisi seçin"})} invalid={invalid}/>
       ) : field.type === "serial-entry" || field.type === "serial-select" ? (
         <SerialEntryDialog value={String(value)} onChange={onChange} expectedQuantity={field.quantityField?Number(values[field.quantityField]??0):undefined} inventoryOptions={field.type==="serial-select"?(lookups[field.lookup??"inventorySerials"]??[]).filter(x=>!values.productId||String(x.productId)===String(values.productId)):undefined} onGs1Data={field.type==="serial-entry"?(data)=>onPatch({...(data.lotNumber?{lotNumber:data.lotNumber}:{}),...(data.manufactureDate?{manufactureDate:data.manufactureDate}:{}),...(data.expiryDate?{expiryDate:data.expiryDate}:{})}):undefined} invalid={invalid}/>

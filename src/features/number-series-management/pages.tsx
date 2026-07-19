@@ -291,13 +291,17 @@ export function NumberSeriesCreatePage(): ReactElement {
     if (!item) return;
     const assignment = item.assignments?.[0];
     setForm({
-      code:item.code,name:item.name,reference:item.reference,scopeType:item.scopeType,branchId:item.branchId ? String(item.branchId) : "",
+      code:item.code,name:item.name,reference:item.reference,scopeType:item.scopeType,branchId:item.scopeType === 0 ? "" : activeBranch?.id ?? "",
       warehouseId:item.warehouseId ? String(item.warehouseId) : "",format:item.format,resetPeriod:item.resetPeriod,startingNumber:item.startingNumber,
       incrementBy:item.incrementBy,maximumNumber:item.maximumNumber,isGibCompliant:item.isGibCompliant,allowManual:item.allowManual,
       isContinuous:item.isContinuous,reservationTimeoutMinutes:item.reservationTimeoutMinutes,isDefault:item.isDefault,
       priority:item.priority,isActive:item.isActive,channel:assignment?.channel ?? "",scenario:assignment?.scenario ?? "",
     });
-  }, [detailQuery.data]);
+  }, [activeBranch?.id, detailQuery.data]);
+  useEffect(() => {
+    if (!activeBranch?.id || form.scopeType === 0) return;
+    setForm((current) => current.branchId === activeBranch.id ? current : { ...current, branchId: activeBranch.id, warehouseId: "" });
+  }, [activeBranch?.id, form.scopeType]);
   const set = (key: string, value: unknown) =>
     setForm((x) => ({ ...x, [key]: value }));
   const setScopeType = (scopeType: number): void =>
@@ -413,15 +417,10 @@ export function NumberSeriesCreatePage(): ReactElement {
           </select>
         </Field>
       <Field label={f("branchId")}>
-        <ErpLookupCombobox
-          lookupKey="branches"
-          value={form.branchId}
-          fallbackOptions={activeBranch ? [{ id: Number(activeBranch.id), code: activeBranch.code ?? activeBranch.name, name: activeBranch.name }] : []}
-          placeholder={t("common.select")}
-          searchPlaceholder={t("common.searchPlaceholder")}
-          disabled={form.scopeType === 0}
-          required={form.scopeType === 1}
-          onChange={(value) => setForm((current) => ({ ...current, branchId: String(value), warehouseId: "" }))}
+        <Input
+          value={form.scopeType === 0 ? t("numberSeries.scope.Global") : activeBranch?.name ?? ""}
+          disabled
+          readOnly
         />
       </Field>
       <Field label={f("warehouseId")}>

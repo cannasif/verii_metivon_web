@@ -9,7 +9,7 @@ import { getUserFromToken } from '@/utils/jwt';
 import type { LoginRequest, Branch } from '../types/auth';
 import { ACCESS_CONTROL_QUERY_KEYS } from '@/features/access-control/utils/query-keys';
 
-export const useLogin = (branches?: Branch[]) => {
+export const useLogin = (_branches?: Branch[]) => {
   const { t } = useTranslation(['auth', 'common']);
   const navigate = useNavigate();
   const queryClient = useQueryClient();
@@ -22,7 +22,11 @@ export const useLogin = (branches?: Branch[]) => {
         const user = getUserFromToken(response.data.token);
 
         if (user) {
-          const selectedBranch = branches?.find((b) => b.id === variables.branchId) || null;
+          const selectedBranch = {
+            id: String(response.data.branchId),
+            code: response.data.branchCode,
+            name: response.data.branchName,
+          };
           const token = response.data.token;
           const refreshToken = response.data.refreshToken;
           const rememberMe = variables.rememberMe;

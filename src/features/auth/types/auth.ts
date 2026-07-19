@@ -24,10 +24,14 @@ export interface LoginWithSessionResponseDto {
   userId: number;
   sessionId: string;
   rememberMe: boolean;
+  branchId: number;
+  branchCode: string;
+  branchName: string;
 }
 
 export interface RefreshTokenRequest {
   refreshToken: string;
+  branchId?: number;
 }
 
 export type LoginResponse = ApiResponse<LoginWithSessionResponseDto>;

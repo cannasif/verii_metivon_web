@@ -511,7 +511,10 @@ async function refreshAccessToken(): Promise<string | null> {
     refreshPromise = (async () => {
       const response = (await axios.post(
         `${getApiBaseUrl()}/api/auth/refresh-token`,
-        { refreshToken: storedRefreshToken },
+        {
+          refreshToken: storedRefreshToken,
+          branchId: Number(useAuthStore.getState().branch?.id ?? 0) || undefined,
+        },
         {
           headers: {
             'Content-Type': 'application/json',
