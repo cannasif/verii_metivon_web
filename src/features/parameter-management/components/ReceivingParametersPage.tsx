@@ -47,6 +47,7 @@ interface Parameters {
   requireQualityInspection: boolean;
   autoCreateLabels: boolean;
   defaultLabelCopies: number;
+  inventoryCurrencyId: number;
   inventoryCurrencyCode: string;
   preview: string;
 }
@@ -477,13 +478,7 @@ export function ReceivingParametersPage(): ReactElement {
                 defaultValue: "Stok para birimi",
               })}
             >
-              <Input
-                value={form.inventoryCurrencyCode}
-                maxLength={3}
-                onChange={(e) =>
-                  set("inventoryCurrencyCode", e.target.value.toUpperCase())
-                }
-              />
+              <ErpLookupCombobox lookupKey="currencies" value={String(form.inventoryCurrencyId || "")} fallbackOptions={[]} placeholder="Para birimi seçin" searchPlaceholder="Para birimlerinde ara..." onChange={(value) => set("inventoryCurrencyId", Number(value) || 0)} />
             </Field>
           </div>
         </Panel>

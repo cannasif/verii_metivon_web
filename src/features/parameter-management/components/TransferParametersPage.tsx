@@ -46,6 +46,7 @@ interface Parameters {
   requireLotForLotTracked: boolean;
   requireSerialForSerialTracked: boolean;
   defaultInventoryStatusId: number | null;
+  inventoryCurrencyId: number;
   inventoryCurrencyCode: string;
   preview: string;
 }
@@ -464,13 +465,7 @@ export function TransferParametersPage(): ReactElement {
                 defaultValue: "Stok para birimi",
               })}
             >
-              <Input
-                value={form.inventoryCurrencyCode}
-                maxLength={3}
-                onChange={(e) =>
-                  set("inventoryCurrencyCode", e.target.value.toUpperCase())
-                }
-              />
+              <ErpLookupCombobox lookupKey="currencies" value={String(form.inventoryCurrencyId || "")} fallbackOptions={[]} placeholder="Para birimi seçin" searchPlaceholder="Para birimlerinde ara..." onChange={(value) => set("inventoryCurrencyId", Number(value) || 0)} />
             </Field>
           </div>
         </Panel>

@@ -506,10 +506,11 @@ export const accountForm: ErpFormConfig = {
       defaultValue: true,
     },
     {
-      key: "currencyCode",
+      key: "currencyId",
       label: "Para Birimi",
-      type: "text",
-      defaultValue: "TRY",
+      type: "select",
+      lookup: "currencies",
+      required: true,
     },
     { key: "isActive", label: "Aktif", type: "checkbox", defaultValue: true },
   ],
@@ -517,6 +518,7 @@ export const accountForm: ErpFormConfig = {
     ...h,
     accountType: n(h.accountType),
     parentId: n(h.parentId) || null,
+    currencyId: n(h.currencyId),
   }),
 };
 export const receiptForm: ErpFormConfig = {
@@ -901,10 +903,11 @@ export const journalForm: ErpFormConfig = {
     { key: "postingDate", label: "Kayıt Tarihi", type: "date", required: true },
     { key: "description", label: "Açıklama", type: "textarea", span: 2 },
     {
-      key: "currencyCode",
+      key: "currencyId",
       label: "Para Birimi",
-      type: "text",
-      defaultValue: "TRY",
+      type: "select",
+      lookup: "currencies",
+      required: true,
     },
     { key: "exchangeRate", label: "Kur", type: "number", defaultValue: 1 },
   ],
@@ -941,7 +944,7 @@ export const journalForm: ErpFormConfig = {
     sourceId: 0,
     sourceNumber: "MANUAL",
     description: s(h.description) || null,
-    currencyCode: s(h.currencyCode),
+    currencyId: n(h.currencyId),
     exchangeRate: n(h.exchangeRate) || 1,
     lines: l.map((x) => ({
       ledgerAccountId: n(x.ledgerAccountId),
@@ -1009,12 +1012,12 @@ export const tradeDossierForm: ErpFormConfig = {
   {key:"operationType",label:"Operasyon Türü",type:"select",required:true,defaultValue:1,options:[{id:1,code:"DEFINITIVE",name:"Kesin İthalat / İhracat"},{id:2,code:"TEMPORARY",name:"Geçici"},{id:3,code:"INWARD_PROCESSING",name:"Dahilde İşleme"},{id:4,code:"RETURN",name:"İade"},{id:5,code:"RE_EXPORT",name:"Yeniden İhracat"}]},
   {key:"branchId",label:"Şube",type:"select",lookup:"branches",required:true},{key:"businessPartnerId",label:"İlgili Cari",type:"select",lookup:"partners",required:true},
   {key:"customsBrokerId",label:"Gümrük Müşaviri",type:"select",lookup:"partners"},{key:"carrierId",label:"Taşıyıcı",type:"select",lookup:"partners"},
-  {key:"currencyCode",label:"Döviz Kodu",type:"text",defaultValue:"USD",required:true},{key:"incotermCode",label:"Teslim Şekli (Incoterm)",type:"text",defaultValue:"FOB",required:true},
+  {key:"currencyId",label:"Para Birimi",type:"select",lookup:"currencies",required:true},{key:"incotermCode",label:"Teslim Şekli (Incoterm)",type:"text",defaultValue:"FOB",required:true},
   {key:"paymentMethodCode",label:"Ödeme Şekli",type:"text"},{key:"deliveryMethodCode",label:"Taşıma / Teslim Yöntemi",type:"text"},{key:"customsOfficeCode",label:"Gümrük İdaresi Kodu",type:"text"},{key:"bondedWarehouseId",label:"Antrepo / Gümrük Deposu",type:"select",lookup:"warehouses"},
   {key:"transportMode",label:"Taşıma Modu",type:"select",required:true,defaultValue:1,options:[{id:1,code:"ROAD",name:"Karayolu"},{id:2,code:"SEA",name:"Denizyolu"},{id:3,code:"AIR",name:"Havayolu"},{id:4,code:"RAIL",name:"Demiryolu"},{id:5,code:"MULTIMODAL",name:"Multimodal"},{id:6,code:"COURIER",name:"Hızlı Kargo"}]},
   {key:"masterTransportDocumentNumber",label:"Ana Taşıma Belgesi / Konşimento",type:"text"},{key:"houseTransportDocumentNumber",label:"Ara Taşıma Belgesi",type:"text"},{key:"containerNumber",label:"Konteyner Numarası",type:"text"},{key:"vehicleOrVoyageNumber",label:"Plaka / Sefer / Uçuş Numarası",type:"text"},
   {key:"portOfLoadingCode",label:"Yükleme Limanı Kodu",type:"text"},{key:"portOfDischargeCode",label:"Boşaltma Limanı Kodu",type:"text"},{key:"countryOfDispatchCode",label:"Sevk Ülkesi",type:"text"},
   {key:"openDate",label:"Dosya Açılış Tarihi",type:"date",required:true},{key:"estimatedArrivalDate",label:"Tahmini Varış Tarihi",type:"date"},{key:"notes",label:"Açıklama",type:"textarea",span:2}
  ],
- buildRequest:(h)=>({dossierNumber:s(h.dossierNumber),direction:n(h.direction),operationType:n(h.operationType),branchId:n(h.branchId),businessPartnerId:n(h.businessPartnerId),customsBrokerId:n(h.customsBrokerId)||null,carrierId:n(h.carrierId)||null,currencyCode:s(h.currencyCode),incotermCode:s(h.incotermCode),paymentMethodCode:s(h.paymentMethodCode)||null,deliveryMethodCode:s(h.deliveryMethodCode)||null,customsOfficeCode:s(h.customsOfficeCode)||null,bondedWarehouseId:n(h.bondedWarehouseId)||null,transportMode:n(h.transportMode),masterTransportDocumentNumber:s(h.masterTransportDocumentNumber)||null,houseTransportDocumentNumber:s(h.houseTransportDocumentNumber)||null,containerNumber:s(h.containerNumber)||null,vehicleOrVoyageNumber:s(h.vehicleOrVoyageNumber)||null,portOfLoadingCode:s(h.portOfLoadingCode)||null,portOfDischargeCode:s(h.portOfDischargeCode)||null,countryOfDispatchCode:s(h.countryOfDispatchCode)||null,openDate:s(h.openDate),estimatedArrivalDate:date(h.estimatedArrivalDate),notes:s(h.notes)||null})
+ buildRequest:(h)=>({dossierNumber:s(h.dossierNumber),direction:n(h.direction),operationType:n(h.operationType),branchId:n(h.branchId),businessPartnerId:n(h.businessPartnerId),customsBrokerId:n(h.customsBrokerId)||null,carrierId:n(h.carrierId)||null,currencyId:n(h.currencyId),incotermCode:s(h.incotermCode),paymentMethodCode:s(h.paymentMethodCode)||null,deliveryMethodCode:s(h.deliveryMethodCode)||null,customsOfficeCode:s(h.customsOfficeCode)||null,bondedWarehouseId:n(h.bondedWarehouseId)||null,transportMode:n(h.transportMode),masterTransportDocumentNumber:s(h.masterTransportDocumentNumber)||null,houseTransportDocumentNumber:s(h.houseTransportDocumentNumber)||null,containerNumber:s(h.containerNumber)||null,vehicleOrVoyageNumber:s(h.vehicleOrVoyageNumber)||null,portOfLoadingCode:s(h.portOfLoadingCode)||null,portOfDischargeCode:s(h.portOfDischargeCode)||null,countryOfDispatchCode:s(h.countryOfDispatchCode)||null,openDate:s(h.openDate),estimatedArrivalDate:date(h.estimatedArrivalDate),notes:s(h.notes)||null})
 };

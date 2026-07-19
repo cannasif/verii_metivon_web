@@ -31,6 +31,33 @@ if (/currencyCode\s*:\s*["']/.test(landedCostForm) || /<Field\s+k=["']currencyCo
 if (/key:\s*["']currencyCode["'][\s\S]{0,120}type:\s*["']text["']/.test(importDossierConfig) || !/key:\s*["']currencyId["'][\s\S]{0,160}lookup:\s*["']currencies["']/.test(importDossierConfig)) {
   failures.push("import-dossier: para birimi CurrencyId ile currencies lookup'a bağlanmalıdır");
 }
+if (/key:\s*["']currencyCode["'][\s\S]{0,120}type:\s*["']text["']/.test(erpFormConfigs)) {
+  failures.push("ERP formları: para birimi serbest metin olamaz; CurrencyId selector kullanılmalıdır");
+}
+for (const configName of ["accountForm", "journalForm", "importDossierForm", "tradeDossierForm"]) {
+  const start = erpFormConfigs.indexOf(`export const ${configName}`);
+  const end = erpFormConfigs.indexOf("export const ", start + 13);
+  const config = erpFormConfigs.slice(start, end < 0 ? undefined : end);
+  if (start < 0 || !/key:\s*["']currencyId["'][\s\S]{0,160}lookup:\s*["']currencies["']/.test(config)) {
+    failures.push(`${configName}: para birimi CurrencyId ile currencies lookup'a bağlanmalıdır`);
+  }
+}
+const accountingParameters = fs.readFileSync(new URL("../src/features/parameter-management/components/AccountingParametersPage.tsx", import.meta.url), "utf8");
+if (!/defaultCurrencyId:\s*number/.test(accountingParameters) || !/lookupKey=["']currencies["']/.test(accountingParameters) || /set\(["']defaultCurrencyCode["']/.test(accountingParameters)) {
+  failures.push("accounting parameters: varsayılan para birimi CurrencyId selector ile seçilmelidir");
+}
+for (const [fileName, idField, forbiddenSetter] of [
+  ["ReceivingParametersPage.tsx", "inventoryCurrencyId", "inventoryCurrencyCode"],
+  ["TransferParametersPage.tsx", "inventoryCurrencyId", "inventoryCurrencyCode"],
+  ["ShippingParametersPage.tsx", "inventoryCurrencyId", "inventoryCurrencyCode"],
+  ["InventoryCountParametersPage.tsx", "postingCurrencyId", "postingCurrencyCode"],
+  ["EDocumentParametersPage.tsx", "defaultCurrencyId", "defaultCurrencyCode"],
+]) {
+  const page = fs.readFileSync(new URL(`../src/features/parameter-management/components/${fileName}`, import.meta.url), "utf8");
+  if (!new RegExp(`${idField}:\\s*number`).test(page) || !/lookupKey=["']currencies["']/.test(page) || new RegExp(`set\\(["']${forbiddenSetter}["']`).test(page)) {
+    failures.push(`${fileName}: para birimi kodu yazılamaz; CurrencyId selector zorunludur`);
+  }
+}
 const landedCostDynamicFieldKeys = ["invoiceNumber", "invoiceDate", "paymentReference", "paymentDate", "foreignAmount", "description", "originalExchangeRate", "exchangeRate", "exchangeRateDate", "exchangeRateSource"];
 for (const language of ["tr", "en", "de", "fr", "es", "it", "pt", "nl", "pl", "ru", "ar", "fa", "ja", "ko", "zh"]) {
   const target = JSON.parse(fs.readFileSync(new URL(`../src/locales/${language}/erp.json`, import.meta.url), "utf8"));

@@ -38,6 +38,7 @@ type Parameters = {
   journalIncrementBy: number;
   journalMinimumNumber: number;
   journalMaximumNumber: number;
+  defaultCurrencyId: number;
   defaultCurrencyCode: string;
   defaultExchangeRate: number;
   monetaryDecimalPlaces: number;
@@ -306,12 +307,13 @@ export function AccountingParametersPage(): ReactElement {
         <Panel icon={<Coins />} title="Para birimi ve hassasiyet">
           <div className="grid gap-3 sm:grid-cols-2">
             <Field label="Varsayılan para birimi">
-              <Input
-                maxLength={3}
-                value={form.defaultCurrencyCode}
-                onChange={(e) =>
-                  set("defaultCurrencyCode", e.target.value.toUpperCase())
-                }
+              <ErpLookupCombobox
+                lookupKey="currencies"
+                value={String(form.defaultCurrencyId || "")}
+                fallbackOptions={[]}
+                placeholder="Para birimi seçin"
+                searchPlaceholder="Para birimlerinde ara..."
+                onChange={(value) => set("defaultCurrencyId", Number(value) || 0)}
               />
             </Field>
             <Num

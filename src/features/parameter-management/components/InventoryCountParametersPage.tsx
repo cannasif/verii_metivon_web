@@ -51,6 +51,7 @@ type Parameters = {
   autoApproveWithinTolerance: boolean;
   requireApprovalBeforePosting: boolean;
   allowPostingWithoutDifference: boolean;
+  postingCurrencyId: number;
   postingCurrencyCode: string;
   preview: string;
 };
@@ -381,13 +382,7 @@ export function InventoryCountParametersPage(): ReactElement {
               onChange={(v) => set("allowPostingWithoutDifference", v)}
             />
             <Field label="Stok hareketi para birimi">
-              <Input
-                value={form.postingCurrencyCode}
-                maxLength={3}
-                onChange={(e) =>
-                  set("postingCurrencyCode", e.target.value.toUpperCase())
-                }
-              />
+              <ErpLookupCombobox lookupKey="currencies" value={String(form.postingCurrencyId || "")} fallbackOptions={[]} placeholder="Para birimi seçin" searchPlaceholder="Para birimlerinde ara..." onChange={(value) => set("postingCurrencyId", Number(value) || 0)} />
             </Field>
           </div>
         </Panel>
