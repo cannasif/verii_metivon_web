@@ -967,7 +967,7 @@ export const importDossierForm: ErpFormConfig = {
     { key: "tradeDossierId", label: "Bağlı Dış Ticaret Dosyası", type: "select", lookup: "tradedossiers", required: true },
     { key: "branchId", label: "Şube", type: "select", lookup: "branches", required: true },
     { key: "supplierId", label: "Yurt Dışı Tedarikçi", type: "select", lookup: "partners", required: true },
-    { key: "currencyCode", label: "Döviz Kodu", type: "text", defaultValue: "USD", required: true },
+    { key: "currencyId", label: "Para Birimi", type: "select", lookup: "currencies", required: true },
     { key: "incotermCode", label: "Teslim Şekli (Incoterm)", type: "text", defaultValue: "FOB", required: true },
     { key: "openDate", label: "Dosya Açılış Tarihi", type: "date", required: true },
     { key: "estimatedArrivalDate", label: "Tahmini Varış", type: "date" },
@@ -987,7 +987,7 @@ export const importDossierForm: ErpFormConfig = {
     { key: "receiptTransactionId", label: "Mal Kabul Stok Hareketi", type: "select", lookup: "inventoryReceiptTransactions", filterBy: "productId", filterItemKey: "productId" },
   ],
   buildRequest: (h, l) => ({
-    tradeDossierId: n(h.tradeDossierId), dossierNumber: s(h.dossierNumber), branchId: n(h.branchId), supplierId: n(h.supplierId), currencyCode: s(h.currencyCode), incotermCode: s(h.incotermCode), openDate: s(h.openDate), estimatedArrivalDate: date(h.estimatedArrivalDate), transactionExchangeRate: n(h.transactionExchangeRate), customsExchangeRate: n(h.customsExchangeRate), costingExchangeRate: n(h.costingExchangeRate), notes: s(h.notes) || null,
+    tradeDossierId: n(h.tradeDossierId), dossierNumber: s(h.dossierNumber), branchId: n(h.branchId), supplierId: n(h.supplierId), currencyId: n(h.currencyId), incotermCode: s(h.incotermCode), openDate: s(h.openDate), estimatedArrivalDate: date(h.estimatedArrivalDate), transactionExchangeRate: n(h.transactionExchangeRate), customsExchangeRate: n(h.customsExchangeRate), costingExchangeRate: n(h.costingExchangeRate), notes: s(h.notes) || null,
     lines: l.map((x) => ({ purchaseOrderLineId: n(x.purchaseOrderLineId) || null, goodsReceiptLineId: null, productId: n(x.productId), quantity: n(x.quantity), netWeight: s(x.netWeight) === "" ? null : n(x.netWeight), grossWeight: s(x.grossWeight) === "" ? null : n(x.grossWeight), volume: s(x.volume) === "" ? null : n(x.volume), foreignUnitPrice: n(x.foreignUnitPrice), transactionExchangeRate: null, customsExchangeRate: null, costingExchangeRate: null, receiptTransactionId: n(x.receiptTransactionId) || null })),
   }),
 };
