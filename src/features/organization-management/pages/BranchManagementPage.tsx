@@ -28,8 +28,8 @@ export function BranchManagementPage(): ReactElement {
     actions: [
       { label: te('common.edit'), kind: 'update', navigateTo: row => `/settings/branches/${row.id}/edit` },
       {
-        label: te('common.delete'), kind: 'delete', method: 'post',
-        endpoint: row => `/api/branches/${row.id}/delete`,
+        label: te('common.delete'), kind: 'delete', method: 'delete',
+        endpoint: row => `/api/branches/${row.id}`,
         confirm: t('branchManagement.deleteConfirm'), variant: 'destructive',
         visible: row => row.isDefault !== true,
       },

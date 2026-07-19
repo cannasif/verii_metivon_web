@@ -27,7 +27,7 @@ export const documentFieldLabelsApi = {
   },
 
   update: async (data: UpdateDocumentFieldLabelsRequest): Promise<DocumentFieldLabelDto[]> => {
-    const response = await api.post<ApiResponse<DocumentFieldLabelDto[]>>(`${BASE_URL}/update`, data, {
+    const response = await api.put<ApiResponse<DocumentFieldLabelDto[]>>(BASE_URL, data, {
       timeout: 30_000,
     });
     if (response.success === true && response.data) return response.data;

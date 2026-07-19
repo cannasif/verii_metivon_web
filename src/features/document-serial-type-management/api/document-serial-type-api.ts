@@ -67,7 +67,7 @@ export const documentSerialTypeApi = {
   },
 
   delete: async (id: number): Promise<void> => {
-    const response = await api.post<ApiResponse<object>>(`/api/DocumentSerialType/${id}/delete`);
+    const response = await api.delete<ApiResponse<object>>(`/api/DocumentSerialType/${id}`);
     if (!response.success) {
       throw new Error(response.message || 'Dosya tip silinemedi');
     }

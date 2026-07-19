@@ -91,10 +91,12 @@ export function ErpCreatePage({
     }
     try {
       setSaving(true);
-      await api.post(
-        editId !== null && config.updateEndpoint ? config.updateEndpoint(editId) : config.endpoint,
-        config.buildRequest(scopedHeader, lines, lookups),
-      );
+      const request = config.buildRequest(scopedHeader, lines, lookups);
+      if (editId !== null && config.updateEndpoint) {
+        await api.put(config.updateEndpoint(editId), request);
+      } else {
+        await api.post(config.endpoint, request);
+      }
       toast.success(t("common.createSuccess"));
       navigate(config.returnPath);
     } catch (error) {

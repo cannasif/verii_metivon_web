@@ -49,7 +49,7 @@ export const approvalFlowApi = {
   },
 
   update: async (id: number, data: UpdateApprovalFlowDto): Promise<ApprovalFlowDto> => {
-    const response = await api.post<ApiResponse<ApprovalFlowDto>>(`/api/ApprovalFlow/${id}/update`, data);
+    const response = await api.put<ApiResponse<ApprovalFlowDto>>(`/api/ApprovalFlow/${id}`, data);
     if (response.success && response.data) {
       return response.data;
     }
@@ -57,7 +57,7 @@ export const approvalFlowApi = {
   },
 
   delete: async (id: number): Promise<void> => {
-    const response = await api.post<ApiResponse<object>>(`/api/ApprovalFlow/${id}/delete`);
+    const response = await api.delete<ApiResponse<object>>(`/api/ApprovalFlow/${id}`);
     if (!response.success) {
       throw new Error(response.message || 'Onay akışı silinemedi');
     }

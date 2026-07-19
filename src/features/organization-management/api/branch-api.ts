@@ -13,7 +13,7 @@ export const branchApi = {
     return response.data;
   },
   async update(id: number, values: BranchFormValues): Promise<BranchDetail> {
-    const response = await api.post<Envelope<BranchDetail>>(`/api/branches/${id}/update`, values);
+    const response = await api.put<Envelope<BranchDetail>>(`/api/branches/${id}`, values);
     return response.data;
   },
 };

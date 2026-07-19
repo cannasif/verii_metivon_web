@@ -29,7 +29,7 @@ export const warehouseConfig: ErpPageConfig = {
   ],
   actions: [
     { label: "Güncelle", kind: "update", navigateTo: (row) => `/warehouses/${row.id}/edit` },
-    { label: "Sil", kind: "delete", method: "post", endpoint: (row) => `/api/warehouses/${row.id}/delete`, confirm: "Depo kaydı silinsin mi? Bağlı hareketi olan depolar silinemez; pasifleştirilebilir.", variant: "destructive", visible: (row) => row.isDefault !== true },
+    { label: "Sil", kind: "delete", method: "delete", endpoint: (row) => `/api/warehouses/${row.id}`, confirm: "Depo kaydı silinsin mi? Bağlı hareketi olan depolar silinemez; pasifleştirilebilir.", variant: "destructive", visible: (row) => row.isDefault !== true },
   ],
 };
 export const locationConfig: ErpPageConfig = {
@@ -55,7 +55,7 @@ export const locationConfig: ErpPageConfig = {
   ],
   actions: [
     { label: "Güncelle", kind: "update", navigateTo: (row) => `/warehouses/locations/${row.id}/edit` },
-    { label: "Sil", kind: "delete", method: "post", endpoint: (row) => `/api/warehouses/locations/${row.id}/delete`, confirm: "Raf / lokasyon kaydı silinsin mi?", variant: "destructive" },
+    { label: "Sil", kind: "delete", method: "delete", endpoint: (row) => `/api/warehouses/locations/${row.id}`, confirm: "Raf / lokasyon kaydı silinsin mi?", variant: "destructive" },
   ],
 };
 export const balanceConfig: ErpPageConfig = {

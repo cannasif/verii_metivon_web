@@ -8,7 +8,7 @@ export const warehouseForm: ErpFormConfig = {
   description: "Şubeye bağlı fiziksel veya sanal depo oluşturun.",
   endpoint: "/api/warehouses",
   detailEndpoint: (id) => `/api/warehouses/${id}`,
-  updateEndpoint: (id) => `/api/warehouses/${id}/update`,
+  updateEndpoint: (id) => `/api/warehouses/${id}`,
   returnPath: "/warehouses",
   submitLabel: "Depoyu Oluştur",
   fields: [
@@ -66,7 +66,7 @@ export const locationForm: ErpFormConfig = {
     "Depo içindeki fiziksel adresi ve kapasite sınırlarını tanımlayın.",
   endpoint: "/api/warehouses/locations",
   detailEndpoint: (id) => `/api/warehouses/locations/${id}`,
-  updateEndpoint: (id) => `/api/warehouses/locations/${id}/update`,
+  updateEndpoint: (id) => `/api/warehouses/locations/${id}`,
   returnPath: "/warehouses/locations",
   submitLabel: "Lokasyonu Oluştur",
   fields: [
@@ -226,7 +226,7 @@ export const purchaseForm: ErpFormConfig = {
       lookup: "partners",
       required: true,
     },
-    { key: "tradeDossierId", label: "Dış Ticaret Dosyası", type: "select", lookup: "tradeDossiers" },
+    { key: "tradeDossierId", label: "İthalat Dosyası", type: "select", lookup: "importTradeDossiers", filterBy: "supplierId" },
     {
       key: "currencyId",
       label: "Para Birimi",

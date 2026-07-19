@@ -106,8 +106,8 @@ export function NumberSeriesManagementPage(): ReactElement {
         {
           label: t("common.delete"),
           kind: "delete",
-          method: "post",
-          endpoint: (row) => `/api/number-series/${row.id}/delete`,
+          method: "delete",
+          endpoint: (row) => `/api/number-series/${row.id}`,
           confirm: t("numberSeries.deleteConfirm"),
           variant: "destructive",
         },
@@ -329,7 +329,7 @@ export function NumberSeriesCreatePage(): ReactElement {
     e.preventDefault();
     try {
       setSaving(true);
-      await api.post(editId ? `/api/number-series/${editId}/update` : "/api/number-series", {
+      const request = {
         ...form,
         module: d.module,
         branchId: Number(form.branchId) || null,
@@ -353,7 +353,9 @@ export function NumberSeriesCreatePage(): ReactElement {
                 },
               ]
             : [],
-      });
+      };
+      if (editId) await api.put(`/api/number-series/${editId}`, request);
+      else await api.post("/api/number-series", request);
       toast.success(t("numberSeries.saved"));
       navigate(back);
     } catch (error) {
