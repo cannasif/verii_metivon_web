@@ -35,7 +35,7 @@ export function ErpCreatePage({
   const navigate = useNavigate();
   const { id } = useParams<{ id?: string }>();
   const editId = id ? Number(id) : null;
-  const { t } = useTranslation("erp");
+  const { t } = useTranslation(["erp", "common"]);
   const activeBranch = useAuthStore((state) => state.branch);
   const activeBranchId = Number(activeBranch?.id ?? 0) || 0;
   const lookupQuery = useQuery({
@@ -130,7 +130,12 @@ export function ErpCreatePage({
                 values={header}
                 lookups={lookups}
                 invalid={validationAttempted && Boolean(f.required) && isEmptyRequiredValue(header[f.key])}
-                onChange={(v) => setHeader((s) => ({ ...s, [f.key]: v }))}
+                onChange={(v) => {
+                  const dependentHeaderKeys = config.fields.filter((candidate) => candidate.filterBy === f.key).map((candidate) => candidate.key);
+                  const dependentLineKeys = (config.lineFields ?? []).filter((candidate) => candidate.filterBy === f.key).map((candidate) => candidate.key);
+                  setHeader((current) => ({ ...current, [f.key]: v, ...Object.fromEntries(dependentHeaderKeys.map((key) => [key, ""])) }));
+                  if (dependentLineKeys.length > 0) setLines((current) => current.map((line) => ({ ...line, ...Object.fromEntries(dependentLineKeys.map((key) => [key, ""])) })));
+                }}
                 onPatch={(patch) => setHeader((s) => ({...s,...patch}))}
               />
             ))}
@@ -186,7 +191,7 @@ export function ErpCreatePage({
                         onChange={(value) =>
                           setLines((v) =>
                             v.map((x, i) =>
-                              i === index ? { ...x, [f.key]: value } : x,
+                              i === index ? { ...x, [f.key]: value, ...Object.fromEntries(config.lineFields!.filter((candidate) => candidate.filterBy === f.key).map((candidate) => [candidate.key, ""])) } : x,
                             ),
                           )
                         }
@@ -230,13 +235,14 @@ function Field({
   onPatch: (patch: Record<string,FormValue>) => void;
   invalid: boolean;
 }) {
-  const { t, i18n } = useTranslation("erp");
+  const { t, i18n } = useTranslation(["erp", "common"]);
   const activeBranch = useAuthStore((state) => state.branch);
   const value = values[field.key] ?? "";
   const filterValue=field.filterBy?values[field.filterBy]:undefined;
   const options = (field.options ?? lookups[field.lookup ?? ""] ?? []).filter((x)=>!field.filterBy||!filterValue||(Array.isArray(filterValue)?filterValue.map(String).includes(String(x[field.filterItemKey??field.filterBy])):String(x[field.filterItemKey??field.filterBy])===String(filterValue)));
   const parentValue = field.filterBy ? values[field.filterBy] : undefined;
-  const parentId = typeof parentValue === "number" ? parentValue : undefined;
+  const normalizedParentId = Number(parentValue);
+  const parentId = Number.isFinite(normalizedParentId) && normalizedParentId > 0 ? normalizedParentId : undefined;
   const hasParentValue = Array.isArray(parentValue) ? parentValue.length > 0 : Boolean(parentId);
   const selectedWarehouseId = Number(values[field.warehouseField??"warehouseId"]) || Number(lookups.salesOrders?.find(x=>x.id===Number(values.salesOrderId))?.warehouseId) || undefined;
   const selectedBranchId = Number(values[field.branchField??"branchId"]) || Number(lookups.warehouses?.find(x=>x.id===selectedWarehouseId)?.branchId) || undefined;
@@ -245,6 +251,7 @@ function Field({
       <Label>
         {getBusinessFieldLabel(field.key, t(`fields.${field.key}`, { defaultValue: field.label }), i18n.resolvedLanguage ?? i18n.language)}
         {field.required ? <span className="ms-1 font-bold text-destructive" aria-hidden="true">*</span> : null}
+        {!field.required && field.key === "storageLocationId" ? <span className="ms-1 text-xs font-normal text-muted-foreground">({t("common:common.optional")})</span> : null}
       </Label>
       {field.key === "branchId" ? (
         <Input
