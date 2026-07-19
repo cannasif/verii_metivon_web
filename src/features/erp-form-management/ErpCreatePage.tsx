@@ -12,17 +12,18 @@ import { Textarea } from "@/components/ui/textarea";
 import type { ApiEnvelope } from "@/features/erp-operation-management/types";
 import type { ErpFormConfig, ErpLookups, FormField, FormValue } from "./types";
 import { ErpLookupCombobox } from "./ErpLookupCombobox";
+import { ErpLookupMultiSelect } from "./ErpLookupMultiSelect";
 import { SerialEntryDialog } from "./SerialEntryDialog";
 import { NumberSeriesCombobox } from "./NumberSeriesCombobox";
 import { getBusinessFieldLabel } from "@/lib/erp-field-label";
 const today = new Date().toISOString().slice(0, 10);
-const isEmptyRequiredValue = (value: FormValue | undefined) => value === "" || value === null || value === undefined;
+const isEmptyRequiredValue = (value: FormValue | undefined) => value === "" || value === null || value === undefined || Array.isArray(value) && value.length === 0;
 const defaults = (fields: FormField[]) =>
   Object.fromEntries(
     fields.map((f) => [
       f.key,
       f.defaultValue ??
-        (f.type === "checkbox" ? false : f.type === "date" ? today : ""),
+        (f.type === "checkbox" ? false : f.type === "multi-select" ? [] : f.type === "date" ? today : ""),
     ]),
   );
 export function ErpCreatePage({
@@ -217,15 +218,11 @@ function Field({
 }) {
   const { t, i18n } = useTranslation("erp");
   const value = values[field.key] ?? "";
-  const options = (field.options ?? lookups[field.lookup ?? ""] ?? []).filter(
-    (x) =>
-      !field.filterBy ||
-      !values[field.filterBy] ||
-      String(x[field.filterItemKey ?? field.filterBy]) ===
-        String(values[field.filterBy]),
-  );
+  const filterValue=field.filterBy?values[field.filterBy]:undefined;
+  const options = (field.options ?? lookups[field.lookup ?? ""] ?? []).filter((x)=>!field.filterBy||!filterValue||(Array.isArray(filterValue)?filterValue.map(String).includes(String(x[field.filterItemKey??field.filterBy])):String(x[field.filterItemKey??field.filterBy])===String(filterValue)));
   const parentValue = field.filterBy ? values[field.filterBy] : undefined;
   const parentId = typeof parentValue === "number" ? parentValue : undefined;
+  const hasParentValue = Array.isArray(parentValue) ? parentValue.length > 0 : Boolean(parentId);
   const selectedWarehouseId = Number(values[field.warehouseField??"warehouseId"]) || Number(lookups.salesOrders?.find(x=>x.id===Number(values.salesOrderId))?.warehouseId) || undefined;
   const selectedBranchId = Number(values[field.branchField??"branchId"]) || Number(lookups.warehouses?.find(x=>x.id===selectedWarehouseId)?.branchId) || undefined;
   return (
@@ -254,10 +251,12 @@ function Field({
           />
           <span className="text-sm">{t("common.yes")}</span>
         </label>
+      ) : field.type === "multi-select" ? (
+        <ErpLookupMultiSelect lookupKey={field.lookup??`static-${field.key}`} value={Array.isArray(value)?value:[]} fallbackOptions={options} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} required={field.required} invalid={invalid} onChange={onChange}/>
       ) : field.type === "select" ? (
         <ErpLookupCombobox
           lookupKey={field.lookup ?? `static-${field.key}`}
-          staticOnly={Boolean(field.options)}
+          staticOnly={Boolean(field.options) || Array.isArray(filterValue)}
           value={String(value)}
           parentId={parentId}
           fallbackOptions={options}
@@ -265,7 +264,7 @@ function Field({
           searchPlaceholder={t("common.searchPlaceholder")}
           required={field.required}
           invalid={invalid}
-          disabled={Boolean(field.filterBy && !parentId)}
+          disabled={Boolean(field.filterBy && !hasParentValue)}
           onChange={onChange}
         />
       ) : (

@@ -360,6 +360,7 @@
     "productName": "Ürün Ad",
     "providerDocumentId": "Entegratör Belgesi",
     "purchaseOrderId": "Satın Alma Siparişi",
+    "purchaseOrderIds": "Satın Alma Siparişleri",
     "purchaseOrderLineId": "Satın Alma Sipariş Satırı",
     "purchaseOrderNumber": "Satın Alma Sipariş Numarası",
     "quantity": "Miktar",

@@ -212,7 +212,6 @@ export const purchaseForm: ErpFormConfig = {
       label: "Sipariş No (otomatik olabilir)",
       type: "text",
     },
-    { key: "numberSeriesId", label: "Numara Serisi", type: "number-series", numberSeriesModule: "Procurement", numberSeriesReference: "PurchaseOrderNumber", branchField: "branchId", warehouseField: "warehouseId" },
     {
       key: "branchId",
       label: "Şube",
@@ -227,6 +226,7 @@ export const purchaseForm: ErpFormConfig = {
       lookup: "partners",
       required: true,
     },
+    { key: "tradeDossierId", label: "Dış Ticaret Dosyası", type: "select", lookup: "tradeDossiers" },
     {
       key: "currencyId",
       label: "Para Birimi",
@@ -263,10 +263,10 @@ export const purchaseForm: ErpFormConfig = {
   lineFields: [...purchaseLines],
   buildRequest: (h, l) => ({
     orderNumber: s(h.orderNumber) || null,
-    numberSeriesId: n(h.numberSeriesId) || null,
     orderType: 1,
     branchId: n(h.branchId),
     supplierId: n(h.supplierId),
+    tradeDossierId: n(h.tradeDossierId) || null,
     currencyId: n(h.currencyId),
     paymentTermId: n(h.paymentTermId),
     warehouseId: n(h.warehouseId),
@@ -533,7 +533,6 @@ export const receiptForm: ErpFormConfig = {
       label: "Kabul No (otomatik olabilir)",
       type: "text",
     },
-    { key: "numberSeriesId", label: "Numara Serisi", type: "number-series", numberSeriesModule: "Receiving", numberSeriesReference: "GoodsReceiptNumber", branchField: "branchId", warehouseField: "warehouseId" },
     {
       key: "receiptType",
       label: "Kabul Tipi (1 Sipariş, 2 Serbest)",
@@ -555,9 +554,9 @@ export const receiptForm: ErpFormConfig = {
       lookup: "partners",
     },
     {
-      key: "purchaseOrderId",
+      key: "purchaseOrderIds",
       label: "Satın Alma Siparişi",
-      type: "select",
+      type: "multi-select",
       lookup: "purchaseOrders",
     },
     { key: "tradeDossierId", label: "İthalat / Gümrük Dosyası", type: "select", lookup: "tradeDossiers" },
@@ -582,7 +581,7 @@ export const receiptForm: ErpFormConfig = {
       label: "Sipariş Satırı",
       type: "select",
       lookup: "purchaseOrderLines",
-      filterBy: "purchaseOrderId",
+      filterBy: "purchaseOrderIds",
       filterItemKey: "purchaseOrderId",
     },
     {
@@ -651,11 +650,10 @@ export const receiptForm: ErpFormConfig = {
   ],
   buildRequest: (h, l) => ({
     receiptNumber: s(h.receiptNumber) || null,
-    numberSeriesId: n(h.numberSeriesId) || null,
     receiptType: n(h.receiptType),
     branchId: n(h.branchId),
     supplierId: n(h.supplierId) || null,
-    purchaseOrderId: n(h.purchaseOrderId) || null,
+    purchaseOrderIds: Array.isArray(h.purchaseOrderIds) ? h.purchaseOrderIds.map(Number).filter(Boolean) : [],
     tradeDossierId: n(h.tradeDossierId) || null,
     warehouseId: n(h.warehouseId),
     supplierDeliveryNoteNumber: s(h.supplierDeliveryNoteNumber) || null,
