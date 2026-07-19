@@ -1,0 +1,28 @@
+{
+  "branchManagement": {
+    "title": "Gestão de filiais",
+    "eyebrow": "Organização",
+    "description": "Gerencie filiais, área padrão e status ativo.",
+    "new": "Nova filial",
+    "editTitle": "Editar filial",
+    "createTitle": "Nova filial",
+    "formDescription": "Defina as informações e o uso da filial no sistema.",
+    "save": "Salvar filial",
+    "saved": "Filial salva.",
+    "deleteConfirm": "Excluir esta filial? A filial padrão não pode ser excluída.",
+    "fields": {
+      "code": "Código da filial",
+      "name": "Nome da filial",
+      "isDefault": "Filial padrão",
+      "isActive": "Ativa",
+      "createdAt": "Criada em",
+      "updatedAt": "Atualizada em"
+    },
+    "defaultHint": "Selecionada primeiro no login e nas operações padrão.",
+    "activeHint": "Filiais inativas não podem ser selecionadas em novas operações.",
+    "validation": {
+      "codeRequired": "O código da filial é obrigatório.",
+      "nameRequired": "O nome da filial é obrigatório."
+    }
+  }
+}

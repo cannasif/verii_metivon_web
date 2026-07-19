@@ -11,8 +11,9 @@
     "check:runtime-contracts": "node scripts/check-runtime-contracts.mjs",
     "smoke:ui": "node scripts/smoke-ui.mjs",
     "check:frontend-standards": "node scripts/check-frontend-standards.mjs",
+    "check:feature-contracts": "node scripts/check-feature-contracts.mjs",
     "lint": "eslint .",
-    "quality": "npm run lint && npm run check:i18n && npm run check:runtime-contracts && npm run check:frontend-standards && npm run typecheck",
+    "quality": "npm run lint && npm run check:i18n && npm run check:runtime-contracts && npm run check:frontend-standards && npm run check:feature-contracts && npm run typecheck",
     "verify": "npm run quality && npm run smoke:ui",
     "preview": "vite preview",
     "prepare": "husky"

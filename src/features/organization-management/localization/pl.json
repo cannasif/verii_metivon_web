@@ -1,0 +1,28 @@
+{
+  "branchManagement": {
+    "title": "Zarządzanie oddziałami",
+    "eyebrow": "Organizacja",
+    "description": "Zarządzaj oddziałami, domyślnym obszarem i aktywnością.",
+    "new": "Nowy oddział",
+    "editTitle": "Edytuj oddział",
+    "createTitle": "Nowy oddział",
+    "formDescription": "Określ dane oddziału i jego użycie w systemie.",
+    "save": "Zapisz oddział",
+    "saved": "Oddział zapisany.",
+    "deleteConfirm": "Usunąć ten oddział? Oddziału domyślnego nie można usunąć.",
+    "fields": {
+      "code": "Kod oddziału",
+      "name": "Nazwa oddziału",
+      "isDefault": "Oddział domyślny",
+      "isActive": "Aktywny",
+      "createdAt": "Utworzono",
+      "updatedAt": "Zaktualizowano"
+    },
+    "defaultHint": "Wybierany jako pierwszy przy logowaniu i operacjach domyślnych.",
+    "activeHint": "Nieaktywne oddziały nie są dostępne w nowych operacjach.",
+    "validation": {
+      "codeRequired": "Kod oddziału jest wymagany.",
+      "nameRequired": "Nazwa oddziału jest wymagana."
+    }
+  }
+}

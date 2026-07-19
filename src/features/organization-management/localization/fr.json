@@ -1,0 +1,28 @@
+{
+  "branchManagement": {
+    "title": "Gestion des agences",
+    "eyebrow": "Organisation",
+    "description": "Gérez les agences, l’espace par défaut et leur état actif.",
+    "new": "Nouvelle agence",
+    "editTitle": "Modifier l’agence",
+    "createTitle": "Nouvelle agence",
+    "formDescription": "Définissez les informations et l’utilisation système de l’agence.",
+    "save": "Enregistrer l’agence",
+    "saved": "Agence enregistrée.",
+    "deleteConfirm": "Supprimer cette agence ? L’agence par défaut ne peut pas être supprimée.",
+    "fields": {
+      "code": "Code agence",
+      "name": "Nom de l’agence",
+      "isDefault": "Agence par défaut",
+      "isActive": "Active",
+      "createdAt": "Créée le",
+      "updatedAt": "Mise à jour le"
+    },
+    "defaultHint": "Sélectionnée en priorité à la connexion et pour les opérations par défaut.",
+    "activeHint": "Les agences inactives ne sont pas disponibles pour les nouvelles opérations.",
+    "validation": {
+      "codeRequired": "Le code agence est obligatoire.",
+      "nameRequired": "Le nom de l’agence est obligatoire."
+    }
+  }
+}

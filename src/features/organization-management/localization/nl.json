@@ -1,0 +1,28 @@
+{
+  "branchManagement": {
+    "title": "Vestigingsbeheer",
+    "eyebrow": "Organisatie",
+    "description": "Beheer vestigingen, standaardwerkruimte en actieve status.",
+    "new": "Nieuwe vestiging",
+    "editTitle": "Vestiging bewerken",
+    "createTitle": "Nieuwe vestiging",
+    "formDescription": "Definieer vestigingsgegevens en systeembreed gebruik.",
+    "save": "Vestiging opslaan",
+    "saved": "Vestiging opgeslagen.",
+    "deleteConfirm": "Deze vestiging verwijderen? De standaardvestiging kan niet worden verwijderd.",
+    "fields": {
+      "code": "Vestigingscode",
+      "name": "Vestigingsnaam",
+      "isDefault": "Standaardvestiging",
+      "isActive": "Actief",
+      "createdAt": "Aangemaakt op",
+      "updatedAt": "Bijgewerkt op"
+    },
+    "defaultHint": "Wordt eerst gekozen bij aanmelden en standaardbewerkingen.",
+    "activeHint": "Inactieve vestigingen zijn niet beschikbaar voor nieuwe bewerkingen.",
+    "validation": {
+      "codeRequired": "Vestigingscode is verplicht.",
+      "nameRequired": "Vestigingsnaam is verplicht."
+    }
+  }
+}

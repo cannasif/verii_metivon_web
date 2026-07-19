@@ -807,31 +807,5 @@
     },
     "selectCurrency": "통화 선택",
     "searchCurrency": "통화 검색..."
-  },
-  "branchManagement": {
-    "title": "지점 관리",
-    "eyebrow": "조직",
-    "description": "지점, 기본 작업 영역 및 활성 상태를 관리합니다.",
-    "new": "새 지점",
-    "editTitle": "지점 편집",
-    "createTitle": "새 지점",
-    "formDescription": "지점 정보와 시스템 사용 상태를 정의합니다.",
-    "save": "지점 저장",
-    "saved": "지점이 저장되었습니다.",
-    "deleteConfirm": "이 지점을 삭제하시겠습니까? 기본 지점은 삭제할 수 없습니다.",
-    "fields": {
-      "code": "지점 코드",
-      "name": "지점명",
-      "isDefault": "기본 지점",
-      "isActive": "활성",
-      "createdAt": "생성일",
-      "updatedAt": "수정일"
-    },
-    "defaultHint": "로그인과 기본 작업에서 우선 선택됩니다.",
-    "activeHint": "비활성 지점은 새 작업에서 선택할 수 없습니다.",
-    "validation": {
-      "codeRequired": "지점 코드는 필수입니다.",
-      "nameRequired": "지점명은 필수입니다."
-    }
   }
 }

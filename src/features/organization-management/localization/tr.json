@@ -1,0 +1,28 @@
+{
+  "branchManagement": {
+    "title": "Şube Yönetimi",
+    "eyebrow": "Organizasyon",
+    "description": "Şubeleri, varsayılan çalışma alanını ve aktiflik durumlarını yönetin.",
+    "new": "Yeni Şube",
+    "editTitle": "Şubeyi Düzenle",
+    "createTitle": "Yeni Şube",
+    "formDescription": "Şube bilgilerini ve sistem genelindeki kullanım durumunu tanımlayın.",
+    "save": "Şubeyi Kaydet",
+    "saved": "Şube kaydedildi.",
+    "deleteConfirm": "Varsayılan şubeyi silemezsiniz. Bu şubeyi silmek istediğinizden emin misiniz?",
+    "fields": {
+      "code": "Şube kodu",
+      "name": "Şube adı",
+      "isDefault": "Varsayılan şube",
+      "isActive": "Aktif",
+      "createdAt": "Oluşturulma",
+      "updatedAt": "Güncellenme"
+    },
+    "defaultHint": "Girişte ve varsayılan işlemlerde öncelikli seçilir.",
+    "activeHint": "Pasif şubeler yeni işlemlerde seçilemez.",
+    "validation": {
+      "codeRequired": "Şube kodu zorunludur.",
+      "nameRequired": "Şube adı zorunludur."
+    }
+  }
+}

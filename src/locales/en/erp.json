@@ -766,31 +766,5 @@
     },
     "selectCurrency": "Select currency",
     "searchCurrency": "Search currencies..."
-  },
-  "branchManagement": {
-    "title": "Branch Management",
-    "eyebrow": "Organization",
-    "description": "Manage branches, the default workspace and active status.",
-    "new": "New Branch",
-    "editTitle": "Edit Branch",
-    "createTitle": "New Branch",
-    "formDescription": "Define branch information and its system-wide usage status.",
-    "save": "Save Branch",
-    "saved": "Branch saved.",
-    "deleteConfirm": "Are you sure you want to delete this branch? The default branch cannot be deleted.",
-    "fields": {
-      "code": "Branch code",
-      "name": "Branch name",
-      "isDefault": "Default branch",
-      "isActive": "Active",
-      "createdAt": "Created at",
-      "updatedAt": "Updated at"
-    },
-    "defaultHint": "Used first at sign-in and in default operations.",
-    "activeHint": "Inactive branches cannot be selected for new operations.",
-    "validation": {
-      "codeRequired": "Branch code is required.",
-      "nameRequired": "Branch name is required."
-    }
   }
 }

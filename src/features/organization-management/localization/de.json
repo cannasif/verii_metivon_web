@@ -1,0 +1,28 @@
+{
+  "branchManagement": {
+    "title": "Niederlassungsverwaltung",
+    "eyebrow": "Organisation",
+    "description": "Niederlassungen, Standardarbeitsbereich und Aktivstatus verwalten.",
+    "new": "Neue Niederlassung",
+    "editTitle": "Niederlassung bearbeiten",
+    "createTitle": "Neue Niederlassung",
+    "formDescription": "Niederlassungsdaten und systemweite Verwendung festlegen.",
+    "save": "Niederlassung speichern",
+    "saved": "Niederlassung gespeichert.",
+    "deleteConfirm": "Diese Niederlassung wirklich löschen? Die Standardniederlassung kann nicht gelöscht werden.",
+    "fields": {
+      "code": "Niederlassungscode",
+      "name": "Niederlassungsname",
+      "isDefault": "Standardniederlassung",
+      "isActive": "Aktiv",
+      "createdAt": "Erstellt am",
+      "updatedAt": "Aktualisiert am"
+    },
+    "defaultHint": "Wird bei Anmeldung und Standardvorgängen bevorzugt.",
+    "activeHint": "Inaktive Niederlassungen sind für neue Vorgänge nicht wählbar.",
+    "validation": {
+      "codeRequired": "Niederlassungscode ist erforderlich.",
+      "nameRequired": "Niederlassungsname ist erforderlich."
+    }
+  }
+}

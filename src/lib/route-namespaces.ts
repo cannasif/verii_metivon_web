@@ -60,6 +60,7 @@ const ROUTE_NAMESPACE_ENTRIES: Array<{ match: (pathname: string) => boolean; nam
   { match: (pathname) => pathname.startsWith('/settings/integrations/google'), namespaces: ['google-integration'] },
   { match: (pathname) => pathname.startsWith('/settings/integrations/outlook'), namespaces: ['outlook-integration'] },
   { match: (pathname) => pathname.startsWith('/settings/integrations/whatsapp'), namespaces: ['whatsapp-integration'] },
+  { match: (pathname) => pathname.startsWith('/settings/branches'), namespaces: ['organization-management', 'erp'] },
   { match: (pathname) => pathname.startsWith('/hangfire-monitoring'), namespaces: ['hangfire-monitoring'] },
   { match: (pathname) => pathname.startsWith('/powerbi/reports'), namespaces: ['powerbi-viewer'] },
   { match: (pathname) => pathname.startsWith('/profile'), namespaces: ['user-detail-management'] },

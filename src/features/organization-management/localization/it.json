@@ -1,0 +1,28 @@
+{
+  "branchManagement": {
+    "title": "Gestione filiali",
+    "eyebrow": "Organizzazione",
+    "description": "Gestisci filiali, area predefinita e stato attivo.",
+    "new": "Nuova filiale",
+    "editTitle": "Modifica filiale",
+    "createTitle": "Nuova filiale",
+    "formDescription": "Definisci informazioni e utilizzo della filiale nel sistema.",
+    "save": "Salva filiale",
+    "saved": "Filiale salvata.",
+    "deleteConfirm": "Eliminare questa filiale? La filiale predefinita non può essere eliminata.",
+    "fields": {
+      "code": "Codice filiale",
+      "name": "Nome filiale",
+      "isDefault": "Filiale predefinita",
+      "isActive": "Attiva",
+      "createdAt": "Creata il",
+      "updatedAt": "Aggiornata il"
+    },
+    "defaultHint": "Viene selezionata per prima all’accesso e nelle operazioni predefinite.",
+    "activeHint": "Le filiali inattive non sono selezionabili nelle nuove operazioni.",
+    "validation": {
+      "codeRequired": "Il codice filiale è obbligatorio.",
+      "nameRequired": "Il nome filiale è obbligatorio."
+    }
+  }
+}
