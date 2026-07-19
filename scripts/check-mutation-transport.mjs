@@ -13,11 +13,38 @@ function visit(directory) {
     }
     if (!/\.(ts|tsx)$/.test(name) || name === 'http-method-tunnel.ts') continue;
     const source = readFileSync(path, 'utf8');
+    const sourcePath = relative(root, path);
+    const addViolation = (index, reason) => {
+      const line = source.slice(0, index).split(/\r?\n/).length;
+      violations.push(`${sourcePath}:${line} -> ${reason}`);
+    };
+
+    if (sourcePath !== join('lib', 'axios.ts')) {
+      const defaultAxiosImport = /import\s+axios\s+from\s+['"]axios['"]/g;
+      for (const match of source.matchAll(defaultAxiosImport)) {
+        addViolation(match.index, 'shared api client must be used instead of a separate Axios client');
+      }
+    }
+
+    const nativeAxiosMutation = /axios\.(?:put|delete)\s*\(/gi;
+    for (const match of source.matchAll(nativeAxiosMutation)) {
+      addViolation(match.index, 'native axios PUT/DELETE is forbidden');
+    }
+
+    const nativeFetchMutation = /fetch\s*\([\s\S]{0,500}?method\s*:\s*['"](?:PUT|DELETE)['"]/gi;
+    for (const match of source.matchAll(nativeFetchMutation)) {
+      addViolation(match.index, 'fetch PUT/DELETE is forbidden');
+    }
+
+    const nativeMethodEscape = /useNativeHttpMethod/g;
+    for (const match of source.matchAll(nativeMethodEscape)) {
+      addViolation(match.index, 'native HTTP method escape hatch is forbidden');
+    }
+
     const pattern = /api\.post(?:<[^;\n]+?>)?\s*\([\s\S]{0,180}?[`'\"]([^`'\"]*\/(?:update|delete))(?:\?[^`'\"]*)?[`'\"]/gi;
     for (const match of source.matchAll(pattern)) {
       if (/\/bulk-(?:quotation|order|demand)\/update$/i.test(match[1])) continue;
-      const line = source.slice(0, match.index).split(/\r?\n/).length;
-      violations.push(`${relative(root, path)}:${line} -> ${match[1]}`);
+      addViolation(match.index, `${match[1]} must be expressed as api.put/api.delete`);
     }
   }
 }

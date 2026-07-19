@@ -1,7 +1,6 @@
 export interface HttpMethodTunnelInput {
   method?: string;
   url?: string;
-  useNativeHttpMethod?: boolean;
 }
 
 export interface HttpMethodTunnelResult {
@@ -36,10 +35,6 @@ function isPutActionAlreadyInPath(url: string | undefined): boolean {
  */
 export function resolveIisSafeHttpMethod(input: HttpMethodTunnelInput): HttpMethodTunnelResult {
   const originalMethod = (input.method ?? 'get').toLowerCase();
-  if (input.useNativeHttpMethod === true) {
-    return { method: input.method, url: input.url, tunneled: false, originalMethod };
-  }
-
   if (originalMethod === 'put') {
     return {
       method: 'post',

@@ -668,10 +668,6 @@ api.interceptors.response.use(
 );
 
 declare module 'axios' {
-  export interface AxiosRequestConfig {
-    useNativeHttpMethod?: boolean;
-  }
-
   export interface AxiosInstance {
     get<T = unknown>(url: string, config?: import('axios').AxiosRequestConfig): Promise<T>;
     post<T = unknown>(url: string, data?: unknown, config?: import('axios').AxiosRequestConfig): Promise<T>;
