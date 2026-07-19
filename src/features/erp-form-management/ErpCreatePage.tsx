@@ -253,7 +253,17 @@ function Field({
   const activeBranch = useAuthStore((state) => state.branch);
   const value = values[field.key] ?? "";
   const filterValue=field.filterBy?values[field.filterBy]:undefined;
-  const options = (field.options ?? lookups[field.lookup ?? ""] ?? []).filter((x)=>!field.filterBy||!filterValue||(Array.isArray(filterValue)?filterValue.map(String).includes(String(x[field.filterItemKey??field.filterBy])):String(x[field.filterItemKey??field.filterBy])===String(filterValue)));
+  const baseOptions = (field.options ?? lookups[field.lookup ?? ""] ?? []).filter((x)=>!field.filterBy||!filterValue||(Array.isArray(filterValue)?filterValue.map(String).includes(String(x[field.filterItemKey??field.filterBy])):String(x[field.filterItemKey??field.filterBy])===String(filterValue)));
+  const selectedPurchaseOrderIds = Array.isArray(values.purchaseOrderIds) ? values.purchaseOrderIds.map(Number) : [];
+  const anchorPurchaseOrder = field.key === "purchaseOrderIds"
+    ? (lookups.purchaseOrders ?? []).find((order) => selectedPurchaseOrderIds.includes(order.id))
+    : undefined;
+  const options = field.key === "purchaseOrderIds" && anchorPurchaseOrder
+    ? baseOptions.filter((order) =>
+        String(order.supplierId) === String(anchorPurchaseOrder.supplierId)
+        && String(order.warehouseId) === String(anchorPurchaseOrder.warehouseId)
+        && String(order.tradeDossierId ?? "") === String(anchorPurchaseOrder.tradeDossierId ?? ""))
+    : baseOptions;
   const parentValue = field.filterBy ? values[field.filterBy] : undefined;
   const normalizedParentId = Number(parentValue);
   const parentId = Number.isFinite(normalizedParentId) && normalizedParentId > 0 ? normalizedParentId : undefined;
@@ -300,8 +310,13 @@ function Field({
         <ErpLookupMultiSelect lookupKey={field.lookup??`static-${field.key}`} value={Array.isArray(value)?value:[]} fallbackOptions={options} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} disabled={disabledForFreeReceipt} required={field.required} invalid={invalid} onChange={(nextValue)=>{
           onChange(nextValue);
           if(field.key==='purchaseOrderIds'){
-            const firstOrder=(lookups.purchaseOrders??[]).find((order)=>nextValue.includes(order.id));
-            if(firstOrder)onPatch({supplierId:Number(firstOrder.supplierId)||'',warehouseId:Number(firstOrder.warehouseId)||''});
+            const selectedOrders=(lookups.purchaseOrders??[]).filter((order)=>nextValue.includes(order.id));
+            const firstOrder=selectedOrders[0];
+            if(firstOrder)onPatch({
+              supplierId:Number(firstOrder.supplierId)||'',
+              warehouseId:Number(firstOrder.warehouseId)||'',
+              tradeDossierId:Number(firstOrder.tradeDossierId)||values.tradeDossierId||'',
+            });
           }
         }}/>
       ) : field.type === "select" ? (
@@ -316,7 +331,24 @@ function Field({
           required={field.required}
           invalid={invalid}
           disabled={disabledForFreeReceipt || Boolean(field.filterBy && !hasParentValue)}
-          onChange={onChange}
+          onChange={(nextValue) => {
+            onChange(nextValue);
+            if (field.key === "purchaseOrderLineId") {
+              const orderLine = (lookups.purchaseOrderLines ?? []).find((line) => line.id === Number(nextValue));
+              if (orderLine) {
+                const remainingQuantity = Math.max(0, Number(orderLine.remainingQuantity ?? 0));
+                onPatch({
+                  productId: Number(orderLine.productId) || "",
+                  unitId: Number(orderLine.unitId) || "",
+                  expectedQuantity: remainingQuantity,
+                  receivedQuantity: remainingQuantity,
+                  acceptedQuantity: remainingQuantity,
+                  rejectedQuantity: 0,
+                  unitCost: Number(orderLine.unitPrice) || 0,
+                });
+              }
+            }
+          }}
         />
       ) : (
         <Input

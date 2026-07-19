@@ -562,8 +562,10 @@ export const receiptForm: ErpFormConfig = {
       label: "Satın Alma Siparişi",
       type: "multi-select",
       lookup: "purchaseOrders",
+      filterBy: "tradeDossierId",
+      filterItemKey: "tradeDossierId",
     },
-    { key: "tradeDossierId", label: "İthalat / Gümrük Dosyası", type: "select", lookup: "tradeDossiers" },
+    { key: "tradeDossierId", label: "İthalat / Gümrük Dosyası", type: "select", lookup: "importTradeDossiers", filterBy: "supplierId", filterItemKey: "businessPartnerId" },
     {
       key: "warehouseId",
       label: "Depo",
