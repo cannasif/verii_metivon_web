@@ -274,6 +274,11 @@ function Field({
   const disabledForFreeReceipt = Number(values.receiptType) === 2 && (field.key === "purchaseOrderIds" || field.key === "purchaseOrderLineId");
   const selectedWarehouseId = Number(values[field.warehouseField??"warehouseId"]) || Number(lookups.salesOrders?.find(x=>x.id===Number(values.salesOrderId))?.warehouseId) || undefined;
   const selectedBranchId = Number(values[field.branchField??"branchId"]) || Number(lookups.warehouses?.find(x=>x.id===selectedWarehouseId)?.branchId) || undefined;
+  const selectedOrderLine = lookups.salesOrderLines?.find((x) => x.id === Number(values.salesOrderLineId));
+  const serialProductId = Number(values.productId) || Number(selectedOrderLine?.productId) || undefined;
+  const serialOptions = (lookups[field.lookup ?? "inventorySerials"] ?? []).filter((x) =>
+    (!serialProductId || Number(x.productId) === serialProductId)
+    && (!selectedWarehouseId || !x.warehouseId || Number(x.warehouseId) === selectedWarehouseId));
   return (
     <div className={`space-y-2 [&_[aria-invalid=true]]:border-destructive [&_[aria-invalid=true]]:ring-2 [&_[aria-invalid=true]]:ring-destructive/20 ${field.span === 2 ? "md:col-span-2" : ""}`}>
       <Label>
@@ -292,7 +297,7 @@ function Field({
       ) : field.type === "number-series" ? (
         <NumberSeriesCombobox module={field.numberSeriesModule!} reference={field.numberSeriesReference!} branchId={selectedBranchId} warehouseId={selectedWarehouseId} value={String(value)} onChange={onChange} placeholder={t("numberSeries.select",{defaultValue:"Numara serisi seçin"})} invalid={invalid}/>
       ) : field.type === "serial-entry" || field.type === "serial-select" ? (
-        <SerialEntryDialog value={String(value)} onChange={onChange} expectedQuantity={field.quantityField?Number(values[field.quantityField]??0):undefined} inventoryOptions={field.type==="serial-select"?(lookups[field.lookup??"inventorySerials"]??[]).filter(x=>!values.productId||String(x.productId)===String(values.productId)):undefined} onGs1Data={field.type==="serial-entry"?(data)=>onPatch({...(data.lotNumber?{lotNumber:data.lotNumber}:{}),...(data.manufactureDate?{manufactureDate:data.manufactureDate}:{}),...(data.expiryDate?{expiryDate:data.expiryDate}:{})}):undefined} invalid={invalid}/>
+        <SerialEntryDialog value={String(value)} onChange={onChange} expectedQuantity={field.quantityField?Number(values[field.quantityField]??0):undefined} inventoryOptions={field.type==="serial-select"?serialOptions:undefined} onGs1Data={field.type==="serial-entry"?(data)=>onPatch({...(data.lotNumber?{lotNumber:data.lotNumber}:{}),...(data.manufactureDate?{manufactureDate:data.manufactureDate}:{}),...(data.expiryDate?{expiryDate:data.expiryDate}:{})}):undefined} invalid={invalid}/>
       ) : field.type === "textarea" ? (
         <Textarea
           required={field.required}
