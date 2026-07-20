@@ -130,6 +130,9 @@ export const purchaseConfig: ErpPageConfig = {
     { key: "grandTotal", label: "Toplam", format: "money" },
     { key: "status", label: "Durum", format: "status" },
   ],
+  actions: [
+    { label: "Stok Hareketine Aktar", endpoint: (row) => `/api/goods-receipts/${row.id}/post`, confirm: "Bu mal kabul için stok hareketi oluşturulsun mu?", visible: (row) => ["Draft", "Registered"].includes(String(row.status)) },
+  ],
 };
 export const receiptConfig: ErpPageConfig = {
   pageKey: "goods-receipts",
@@ -332,8 +335,6 @@ export const importDossierConfig: ErpPageConfig = {
   description: "Sipariş, mal kabul, ticari fatura ve ithalat masraflarını dosya bazında gerçek stok maliyetine dönüştürün.",
   endpoint: "/api/import-dossiers",
   accent: "cyan",
-  createLabel: "Yeni İthalat Dosyası",
-  createPath: "/import-dossiers/new",
   columns: [
     id,
     { key: "dossierNumber", label: "Dosya No" },
@@ -341,6 +342,10 @@ export const importDossierConfig: ErpPageConfig = {
     { key: "currencyCode", label: "Döviz" },
     { key: "incotermCode", label: "Teslim Şekli" },
     { key: "openDate", label: "Açılış Tarihi", format: "date" },
+    { key: "goodsReceiptNumber", label: "Mal Kabul No" },
+    { key: "receiptDate", label: "Mal Kabul Tarihi", format: "date" },
+    { key: "matchedAt", label: "Eşleme Tarihi", format: "datetime" },
+    { key: "receiptCount", label: "Mal Kabul Sayısı", format: "number" },
     { key: "status", label: "Durum", format: "status" },
     { key: "lineCount", label: "Satır Sayısı", format: "number" },
     { key: "goodsAmount", label: "Mal Bedeli", format: "money" },

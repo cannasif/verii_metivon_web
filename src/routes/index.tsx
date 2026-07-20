@@ -128,7 +128,6 @@ const GoodsReceiptCreatePage = lazyImport(() => import('@/features/erp-form-mana
 const SalesOrderCreatePage = lazyImport(() => import('@/features/erp-form-management'), 'SalesOrderCreatePage');
 const ShipmentCreatePage = lazyImport(() => import('@/features/erp-form-management'), 'ShipmentCreatePage');
 const JournalEntryCreatePage = lazyImport(() => import('@/features/erp-form-management'), 'JournalEntryCreatePage');
-const ImportDossierCreatePage = lazyImport(() => import('@/features/erp-form-management'), 'ImportDossierCreatePage');
 const LandedCostTypeCreatePage = lazyImport(() => import('@/features/erp-form-management'), 'LandedCostTypeCreatePage');
 const TradeDossierCreatePage = lazyImport(() => import('@/features/erp-form-management'), 'TradeDossierCreatePage');
 const DocumentSerialTypeManagementPage = lazyImport(() => import('@/features/document-serial-type-management'), 'DocumentSerialTypeManagementPage');
@@ -359,7 +358,6 @@ export function createAppRouter() {
         { path: 'sales-orders/new', element: <SalesOrderCreatePage /> },
         { path: 'shipments/new', element: <ShipmentCreatePage /> },
         { path: 'accounting/journals/new', element: <JournalEntryCreatePage /> },
-        { path: 'import-dossiers/new', element: <ImportDossierCreatePage /> },
         { path: 'import-dossiers/definitions/cost-types/new', element: <LandedCostTypeCreatePage /> },
         { path: 'stocks/:id', element: <StockDetailPage /> },
         { path: 'document-serial-type-management', element: <DocumentSerialTypeManagementPage /> },
