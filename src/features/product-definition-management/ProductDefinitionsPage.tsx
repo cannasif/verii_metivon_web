@@ -1,5 +1,346 @@
-import{useEffect,useState,type FormEvent,type ReactElement}from'react';import{useQuery}from'@tanstack/react-query';import{ArrowLeft,Pencil,Plus,Trash2}from'lucide-react';import{useNavigate}from'react-router-dom';import{toast}from'sonner';import{Button}from'@/components/ui/button';import{Dialog,DialogContent,DialogDescription,DialogFooter,DialogHeader,DialogTitle}from'@/components/ui/dialog';import{Input}from'@/components/ui/input';import{Label}from'@/components/ui/label';import{Textarea}from'@/components/ui/textarea';import{productApi}from'@/features/product-management/api/product-api';import type{ManagedProductDefinition,ProductDefinitionKind,SaveProductDefinitionRequest}from'@/features/product-management/types/product.types';
-export const productDefinitionKinds:{key:ProductDefinitionKind;label:string}[]=[{key:'categories',label:'Ürün Kategorileri'},{key:'groups',label:'Ürün Grupları'},{key:'brands',label:'Markalar'},{key:'unit-categories',label:'Birim Kategorileri'},{key:'units',label:'Birimler'},{key:'package-types',label:'Paket Tipleri'}];
-export function ProductDefinitionsPage({fixedKind='categories'}:{fixedKind?:ProductDefinitionKind}):ReactElement{const navigate=useNavigate();const[kind,setKind]=useState(fixedKind);const[pageNumber,setPageNumber]=useState(1);const[pageSize,setPageSize]=useState(20);const[search,setSearch]=useState('');const[editing,setEditing]=useState<ManagedProductDefinition|null>(null);const[open,setOpen]=useState(false);const[saving,setSaving]=useState(false);useEffect(()=>{setKind(fixedKind);setPageNumber(1)},[fixedKind]);const q=useQuery({queryKey:['product-definitions-management',kind,pageNumber,pageSize,search],queryFn:()=>productApi.getManagedDefinitions(kind,{pageNumber,pageSize,search,sortBy:'displayOrder',sortDirection:'asc'})});const page=q.data?.data;const rows=page?.items??[];const go=(next:ProductDefinitionKind)=>navigate(`/products/definitions/${next}`);const edit=(row:ManagedProductDefinition)=>{setEditing(row);setOpen(true)};const create=()=>{setEditing(null);setOpen(true)};const submit=async(e:FormEvent<HTMLFormElement>)=>{e.preventDefault();const f=new FormData(e.currentTarget);const nullable=(key:string)=>{const v=String(f.get(key)??'').trim();return v?Number(v):null};const payload:SaveProductDefinitionRequest={code:String(f.get('code')??''),name:String(f.get('name')??''),description:String(f.get('description')??''),isActive:f.get('isActive')==='on',isDefault:f.get('isDefault')==='on',displayOrder:Number(f.get('displayOrder')??0),parentId:nullable('parentId'),website:String(f.get('website')??''),unitCategoryId:nullable('unitCategoryId'),symbol:String(f.get('symbol')??''),decimalPlaces:nullable('decimalPlaces'),conversionFactor:nullable('conversionFactor'),isBaseUnit:f.get('isBaseUnit')==='on',roundingMethod:nullable('roundingMethod'),length:nullable('length'),width:nullable('width'),height:nullable('height'),emptyWeight:nullable('emptyWeight'),dimensionUnitId:nullable('dimensionUnitId'),weightUnitId:nullable('weightUnitId')};try{setSaving(true);if(editing)await productApi.updateDefinition(kind,editing.id,payload);else await productApi.createDefinition(kind,payload);toast.success('Tanım kaydedildi.');setOpen(false);await q.refetch()}catch(error){toast.error(error instanceof Error?error.message:'Tanım kaydedilemedi.')}finally{setSaving(false)}};const del=async(row:ManagedProductDefinition)=>{if(!window.confirm(`${row.name} pasifleştirilsin mi?`))return;try{await productApi.deleteDefinition(kind,row.id);await q.refetch();toast.success('Tanım pasifleştirildi.')}catch(error){toast.error(error instanceof Error?error.message:'İşlem başarısız.')}};const current=productDefinitionKinds.find(x=>x.key===kind)!;return <div className="space-y-5"><section className="rounded-3xl bg-gradient-to-br from-emerald-950 to-cyan-950 p-6 text-white"><button onClick={()=>navigate('/stocks')} className="mb-3 inline-flex items-center gap-2 text-sm text-emerald-200"><ArrowLeft className="h-4 w-4"/>Ürün listesine dön</button><div className="flex items-end justify-between"><div><h1 className="text-3xl font-semibold">Stok / Ürün Tanımları</h1><p className="mt-2 text-slate-300">Ürün kartında kullanılan parametrik ana veriler.</p></div><Button onClick={create}><Plus/>Yeni Tanım</Button></div></section><div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-6">{productDefinitionKinds.map(x=><button key={x.key} onClick={()=>go(x.key)} className={`rounded-xl border p-3 text-start text-sm font-semibold ${x.key===kind?'border-emerald-500 bg-emerald-50 text-emerald-800':'bg-card'}`}>{x.label}</button>)}</div><section className="overflow-hidden rounded-2xl border bg-card"><div className="flex flex-col justify-between gap-3 border-b p-5 sm:flex-row sm:items-center"><div><h2 className="text-lg font-semibold">{current.label}</h2><p className="text-sm text-muted-foreground">Paged tanım yönetimi</p></div><div className="flex gap-2"><Input className="w-64" value={search} onChange={e=>{setSearch(e.target.value);setPageNumber(1)}} placeholder="Kod, ad veya açıklama ara..."/><Button onClick={create}><Plus/>Ekle</Button></div></div><div className="overflow-x-auto"><table className="w-full min-w-[850px] text-sm"><thead className="bg-muted/50"><tr><th className="p-4 text-start">Kayıt ID</th><th className="p-4 text-start">Kod</th><th className="p-4 text-start">Ad</th><th className="p-4 text-start">Açıklama</th><th className="p-4">Sıra</th><th className="p-4">Varsayılan</th><th className="p-4">Durum</th><th className="p-4 text-end">İşlemler</th></tr></thead><tbody>{rows.map(r=><tr key={r.id} className="border-t"><td className="p-4 font-mono font-semibold">#{r.id}</td><td className="p-4 font-mono font-semibold text-emerald-700">{r.code}</td><td className="p-4 font-medium">{r.name}</td><td className="p-4 text-muted-foreground">{r.description||'—'}</td><td className="p-4 text-center">{r.displayOrder}</td><td className="p-4 text-center">{r.isDefault?'Evet':'—'}</td><td className="p-4 text-center">{r.isActive?'Aktif':'Pasif'}</td><td className="p-4"><div className="flex justify-end gap-2"><Button size="icon-sm" variant="outline" aria-label="Düzenle" onClick={()=>edit(r)}><Pencil/></Button><Button size="icon-sm" variant="outline" aria-label="Pasifleştir" disabled={r.isDefault||!r.isActive} onClick={()=>void del(r)}><Trash2/></Button></div></td></tr>)}{!q.isLoading&&!rows.length?<tr><td colSpan={8} className="p-10 text-center">Kayıt bulunamadı.</td></tr>:null}</tbody></table></div><div className="flex items-center justify-between border-t p-4"><div className="flex items-center gap-2"><select className="h-9 rounded-md border bg-background px-2" value={pageSize} onChange={e=>{setPageSize(Number(e.target.value));setPageNumber(1)}}><option>10</option><option>20</option><option>50</option><option>100</option></select><span className="text-sm text-muted-foreground">{page?.totalCount??0} kayıt · Sayfa {page?.pageNumber??1} / {page?.totalPages??0}</span></div><div className="flex gap-2"><Button variant="outline" disabled={!page?.hasPreviousPage} onClick={()=>setPageNumber(v=>Math.max(1,v-1))}>Önceki</Button><Button variant="outline" disabled={!page?.hasNextPage} onClick={()=>setPageNumber(v=>v+1)}>Sonraki</Button></div></div></section><DefinitionForm open={open} onOpenChange={setOpen} kind={kind} item={editing} saving={saving} submit={submit}/></div>}
-function DefinitionForm({open,onOpenChange,kind,item,saving,submit}:{open:boolean;onOpenChange:(v:boolean)=>void;kind:ProductDefinitionKind;item:ManagedProductDefinition|null;saving:boolean;submit:(e:FormEvent<HTMLFormElement>)=>void}){return <Dialog open={open} onOpenChange={onOpenChange}><DialogContent className="lg:max-w-2xl"><DialogHeader><DialogTitle>{item?'Tanımı Düzenle':'Yeni Tanım'}</DialogTitle><DialogDescription>{productDefinitionKinds.find(x=>x.key===kind)?.label}</DialogDescription></DialogHeader><form onSubmit={submit} className="space-y-5"><div className="grid gap-4 sm:grid-cols-2"><F l="Kod"><Input name="code" required defaultValue={item?.code}/></F><F l="Ad"><Input name="name" required defaultValue={item?.name}/></F><F l="Sıra"><Input name="displayOrder" type="number" defaultValue={item?.displayOrder??0}/></F>{kind==='categories'?<F l="Üst Kategori ID"><Input name="parentId" type="number" defaultValue={item?.parentId??''}/></F>:null}{kind==='brands'?<F l="Web Sitesi"><Input name="website" defaultValue={item?.website??''}/></F>:null}{kind==='units'?<><F l="Birim Kategorisi ID"><Input name="unitCategoryId" type="number" required defaultValue={item?.unitCategoryId??''}/></F><F l="Sembol"><Input name="symbol" required defaultValue={item?.symbol??''}/></F><F l="Ondalık Basamak"><Input name="decimalPlaces" type="number" min="0" max="6" defaultValue={item?.decimalPlaces??0}/></F><F l="Dönüşüm Katsayısı"><Input name="conversionFactor" type="number" min="0.000001" step="0.000001" defaultValue={item?.conversionFactor??1}/></F><F l="Yuvarlama"><select name="roundingMethod" className="h-10 rounded-md border bg-background px-3" defaultValue={item?.roundingMethod??0}><option value="0">Yok</option><option value="1">En Yakın</option><option value="2">Yukarı</option><option value="3">Aşağı</option></select></F></>:null}{kind==='package-types'?<><F l="Uzunluk"><Input name="length" type="number" step="0.001" defaultValue={item?.length??''}/></F><F l="Genişlik"><Input name="width" type="number" step="0.001" defaultValue={item?.width??''}/></F><F l="Yükseklik"><Input name="height" type="number" step="0.001" defaultValue={item?.height??''}/></F><F l="Boş Ağırlık"><Input name="emptyWeight" type="number" step="0.001" defaultValue={item?.emptyWeight??''}/></F></>:null}<div className="sm:col-span-2"><F l="Açıklama"><Textarea name="description" defaultValue={item?.description??''}/></F></div></div><div className="flex gap-5"><C n="isActive" l="Aktif" d={item?.isActive??true}/><C n="isDefault" l="Varsayılan" d={item?.isDefault??false}/>{kind==='units'?<C n="isBaseUnit" l="Temel Birim" d={item?.isBaseUnit??false}/>:null}</div><DialogFooter><Button type="button" variant="outline" onClick={()=>onOpenChange(false)}>Vazgeç</Button><Button disabled={saving} type="submit">{saving?'Kaydediliyor...':'Kaydet'}</Button></DialogFooter></form></DialogContent></Dialog>}
-function F({l,children}:{l:string;children:ReactElement}){return <div className="space-y-2"><Label>{l}</Label>{children}</div>}function C({n,l,d}:{n:string;l:string;d:boolean}){return <label className="flex items-center gap-2 text-sm"><input type="checkbox" name={n} defaultChecked={d}/>{l}</label>}
+import { useEffect, useState, type FormEvent, type ReactElement } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { ArrowLeft, Pencil, Plus, Trash2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { productApi } from '@/features/product-management/api/product-api';
+import type { ManagedProductDefinition, ProductDefinitionKind, SaveProductDefinitionRequest } from '@/features/product-management/types/product.types';
+export const productDefinitionKinds: {
+  key: ProductDefinitionKind;
+  label: string;
+}[] = [
+  { key: 'categories', label: 'Ürün Kategorileri' },
+  { key: 'groups', label: 'Ürün Grupları' },
+  { key: 'brands', label: 'Markalar' },
+  { key: 'unit-categories', label: 'Birim Kategorileri' },
+  { key: 'units', label: 'Birimler' },
+  { key: 'package-types', label: 'Paket Tipleri' },
+];
+export function ProductDefinitionsPage({ fixedKind = 'categories' }: { fixedKind?: ProductDefinitionKind }): ReactElement {
+  const navigate = useNavigate();
+  const [kind, setKind] = useState(fixedKind);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [pageSize, setPageSize] = useState(20);
+  const [search, setSearch] = useState('');
+  const [editing, setEditing] = useState<ManagedProductDefinition | null>(null);
+  const [open, setOpen] = useState(false);
+  const [saving, setSaving] = useState(false);
+  useEffect(() => {
+    setKind(fixedKind);
+    setPageNumber(1);
+  }, [fixedKind]);
+  const q = useQuery({
+    queryKey: ['product-definitions-management', kind, pageNumber, pageSize, search],
+    queryFn: () =>
+      productApi.getManagedDefinitions(kind, {
+        pageNumber,
+        pageSize,
+        search,
+        sortBy: 'displayOrder',
+        sortDirection: 'asc',
+      }),
+  });
+  const page = q.data?.data;
+  const rows = page?.items ?? [];
+  const go = (next: ProductDefinitionKind) => navigate(`/products/definitions/${next}`);
+  const edit = (row: ManagedProductDefinition) => {
+    setEditing(row);
+    setOpen(true);
+  };
+  const create = () => {
+    setEditing(null);
+    setOpen(true);
+  };
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const f = new FormData(e.currentTarget);
+    const nullable = (key: string) => {
+      const v = String(f.get(key) ?? '').trim();
+      return v ? Number(v) : null;
+    };
+    const payload: SaveProductDefinitionRequest = {
+      code: String(f.get('code') ?? ''),
+      name: String(f.get('name') ?? ''),
+      description: String(f.get('description') ?? ''),
+      isActive: f.get('isActive') === 'on',
+      isDefault: f.get('isDefault') === 'on',
+      displayOrder: Number(f.get('displayOrder') ?? 0),
+      parentId: nullable('parentId'),
+      website: String(f.get('website') ?? ''),
+      unitCategoryId: nullable('unitCategoryId'),
+      symbol: String(f.get('symbol') ?? ''),
+      decimalPlaces: nullable('decimalPlaces'),
+      conversionFactor: nullable('conversionFactor'),
+      isBaseUnit: f.get('isBaseUnit') === 'on',
+      roundingMethod: nullable('roundingMethod'),
+      length: nullable('length'),
+      width: nullable('width'),
+      height: nullable('height'),
+      emptyWeight: nullable('emptyWeight'),
+      dimensionUnitId: nullable('dimensionUnitId'),
+      weightUnitId: nullable('weightUnitId'),
+    };
+    try {
+      setSaving(true);
+      if (editing) await productApi.updateDefinition(kind, editing.id, payload);
+      else await productApi.createDefinition(kind, payload);
+      toast.success('Tanım kaydedildi.');
+      setOpen(false);
+      await q.refetch();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Tanım kaydedilemedi.');
+    } finally {
+      setSaving(false);
+    }
+  };
+  const del = async (row: ManagedProductDefinition) => {
+    if (!window.confirm(`${row.name} tanımı silinsin mi?`)) return;
+    try {
+      await productApi.deleteDefinition(kind, row.id);
+      await q.refetch();
+      toast.success('Tanım silindi.');
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'İşlem başarısız.');
+    }
+  };
+  const current = productDefinitionKinds.find((x) => x.key === kind)!;
+  return (
+    <div className="space-y-5">
+      <section className="rounded-3xl bg-gradient-to-br from-emerald-950 to-cyan-950 p-6 text-white">
+        <button onClick={() => navigate('/stocks')} className="mb-3 inline-flex items-center gap-2 text-sm text-emerald-200">
+          <ArrowLeft className="h-4 w-4" />
+          Ürün listesine dön
+        </button>
+        <div className="flex items-end justify-between">
+          <div>
+            <h1 className="text-3xl font-semibold">Stok / Ürün Tanımları</h1>
+            <p className="mt-2 text-slate-300">Ürün kartında kullanılan parametrik ana veriler.</p>
+          </div>
+          <Button onClick={create}>
+            <Plus />
+            Yeni Tanım
+          </Button>
+        </div>
+      </section>
+      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-6">
+        {productDefinitionKinds.map((x) => (
+          <button key={x.key} onClick={() => go(x.key)} className={`rounded-xl border p-3 text-start text-sm font-semibold ${x.key === kind ? 'border-emerald-500 bg-emerald-50 text-emerald-800' : 'bg-card'}`}>
+            {x.label}
+          </button>
+        ))}
+      </div>
+      <section className="overflow-hidden rounded-2xl border bg-card">
+        <div className="flex flex-col justify-between gap-3 border-b p-5 sm:flex-row sm:items-center">
+          <div>
+            <h2 className="text-lg font-semibold">{current.label}</h2>
+            <p className="text-sm text-muted-foreground">Paged tanım yönetimi</p>
+          </div>
+          <div className="flex gap-2">
+            <Input
+              className="w-64"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setPageNumber(1);
+              }}
+              placeholder="Kod, ad veya açıklama ara..."
+            />
+            <Button onClick={create}>
+              <Plus />
+              Ekle
+            </Button>
+          </div>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[850px] text-sm">
+            <thead className="bg-muted/50">
+              <tr>
+                <th className="p-4 text-start">Kayıt ID</th>
+                <th className="p-4 text-start">Kod</th>
+                <th className="p-4 text-start">Ad</th>
+                <th className="p-4 text-start">Açıklama</th>
+                <th className="p-4">Sıra</th>
+                <th className="p-4">Varsayılan</th>
+                <th className="p-4">Durum</th>
+                <th className="p-4 text-end">İşlemler</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr key={r.id} className="border-t">
+                  <td className="p-4 font-mono font-semibold">#{r.id}</td>
+                  <td className="p-4 font-mono font-semibold text-emerald-700">{r.code}</td>
+                  <td className="p-4 font-medium">{r.name}</td>
+                  <td className="p-4 text-muted-foreground">{r.description || '—'}</td>
+                  <td className="p-4 text-center">{r.displayOrder}</td>
+                  <td className="p-4 text-center">{r.isDefault ? 'Evet' : '—'}</td>
+                  <td className="p-4 text-center">{r.isActive ? 'Aktif' : 'Pasif'}</td>
+                  <td className="p-4">
+                    <div className="flex justify-end gap-2">
+                      <Button size="icon-sm" variant="outline" aria-label="Düzenle" onClick={() => edit(r)}>
+                        <Pencil />
+                      </Button>
+                      <Button size="icon-sm" variant="outline" aria-label="Sil" disabled={r.isDefault} onClick={() => void del(r)}>
+                        <Trash2 />
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+              {!q.isLoading && !rows.length ? (
+                <tr>
+                  <td colSpan={8} className="p-10 text-center">
+                    Kayıt bulunamadı.
+                  </td>
+                </tr>
+              ) : null}
+            </tbody>
+          </table>
+        </div>
+        <div className="flex items-center justify-between border-t p-4">
+          <div className="flex items-center gap-2">
+            <select
+              className="h-9 rounded-md border bg-background px-2"
+              value={pageSize}
+              onChange={(e) => {
+                setPageSize(Number(e.target.value));
+                setPageNumber(1);
+              }}
+            >
+              <option>10</option>
+              <option>20</option>
+              <option>50</option>
+              <option>100</option>
+            </select>
+            <span className="text-sm text-muted-foreground">
+              {page?.totalCount ?? 0} kayıt · Sayfa {page?.pageNumber ?? 1} / {page?.totalPages ?? 0}
+            </span>
+          </div>
+          <div className="flex gap-2">
+            <Button variant="outline" disabled={!page?.hasPreviousPage} onClick={() => setPageNumber((v) => Math.max(1, v - 1))}>
+              Önceki
+            </Button>
+            <Button variant="outline" disabled={!page?.hasNextPage} onClick={() => setPageNumber((v) => v + 1)}>
+              Sonraki
+            </Button>
+          </div>
+        </div>
+      </section>
+      <DefinitionForm open={open} onOpenChange={setOpen} kind={kind} item={editing} saving={saving} submit={submit} />
+    </div>
+  );
+}
+function DefinitionForm({ open, onOpenChange, kind, item, saving, submit }: { open: boolean; onOpenChange: (v: boolean) => void; kind: ProductDefinitionKind; item: ManagedProductDefinition | null; saving: boolean; submit: (e: FormEvent<HTMLFormElement>) => void }) {
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="lg:max-w-2xl">
+        <DialogHeader>
+          <DialogTitle>{item ? 'Tanımı Düzenle' : 'Yeni Tanım'}</DialogTitle>
+          <DialogDescription>{productDefinitionKinds.find((x) => x.key === kind)?.label}</DialogDescription>
+        </DialogHeader>
+        <form onSubmit={submit} className="space-y-5">
+          <div className="grid gap-4 sm:grid-cols-2">
+            <F l="Kod">
+              <Input name="code" required defaultValue={item?.code} />
+            </F>
+            <F l="Ad">
+              <Input name="name" required defaultValue={item?.name} />
+            </F>
+            <F l="Sıra">
+              <Input name="displayOrder" type="number" defaultValue={item?.displayOrder ?? 0} />
+            </F>
+            {kind === 'categories' ? (
+              <F l="Üst Kategori ID">
+                <Input name="parentId" type="number" defaultValue={item?.parentId ?? ''} />
+              </F>
+            ) : null}
+            {kind === 'brands' ? (
+              <F l="Web Sitesi">
+                <Input name="website" defaultValue={item?.website ?? ''} />
+              </F>
+            ) : null}
+            {kind === 'units' ? (
+              <>
+                <F l="Birim Kategorisi ID">
+                  <Input name="unitCategoryId" type="number" required defaultValue={item?.unitCategoryId ?? ''} />
+                </F>
+                <F l="Sembol">
+                  <Input name="symbol" required defaultValue={item?.symbol ?? ''} />
+                </F>
+                <F l="Ondalık Basamak">
+                  <Input name="decimalPlaces" type="number" min="0" max="6" defaultValue={item?.decimalPlaces ?? 0} />
+                </F>
+                <F l="Dönüşüm Katsayısı">
+                  <Input name="conversionFactor" type="number" min="0.000001" step="0.000001" defaultValue={item?.conversionFactor ?? 1} />
+                </F>
+                <F l="Yuvarlama">
+                  <select name="roundingMethod" className="h-10 rounded-md border bg-background px-3" defaultValue={item?.roundingMethod ?? 0}>
+                    <option value="0">Yok</option>
+                    <option value="1">En Yakın</option>
+                    <option value="2">Yukarı</option>
+                    <option value="3">Aşağı</option>
+                  </select>
+                </F>
+              </>
+            ) : null}
+            {kind === 'package-types' ? (
+              <>
+                <F l="Uzunluk">
+                  <Input name="length" type="number" step="0.001" defaultValue={item?.length ?? ''} />
+                </F>
+                <F l="Genişlik">
+                  <Input name="width" type="number" step="0.001" defaultValue={item?.width ?? ''} />
+                </F>
+                <F l="Yükseklik">
+                  <Input name="height" type="number" step="0.001" defaultValue={item?.height ?? ''} />
+                </F>
+                <F l="Boş Ağırlık">
+                  <Input name="emptyWeight" type="number" step="0.001" defaultValue={item?.emptyWeight ?? ''} />
+                </F>
+              </>
+            ) : null}
+            <div className="sm:col-span-2">
+              <F l="Açıklama">
+                <Textarea name="description" defaultValue={item?.description ?? ''} />
+              </F>
+            </div>
+          </div>
+          <div className="flex gap-5">
+            <C n="isActive" l="Aktif" d={item?.isActive ?? true} />
+            <C n="isDefault" l="Varsayılan" d={item?.isDefault ?? false} />
+            {kind === 'units' ? <C n="isBaseUnit" l="Temel Birim" d={item?.isBaseUnit ?? false} /> : null}
+          </div>
+          <DialogFooter>
+            <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>
+              Vazgeç
+            </Button>
+            <Button disabled={saving} type="submit">
+              {saving ? 'Kaydediliyor...' : 'Kaydet'}
+            </Button>
+          </DialogFooter>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
+}
+function F({ l, children }: { l: string; children: ReactElement }) {
+  return (
+    <div className="space-y-2">
+      <Label>{l}</Label>
+      {children}
+    </div>
+  );
+}
+function C({ n, l, d }: { n: string; l: string; d: boolean }) {
+  return (
+    <label className="flex items-center gap-2 text-sm">
+      <input type="checkbox" name={n} defaultChecked={d} />
+      {l}
+    </label>
+  );
+}

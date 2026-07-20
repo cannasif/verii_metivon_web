@@ -2,13 +2,7 @@ import axios from 'axios';
 import i18n from './i18n';
 import { useAuthStore } from '@/stores/auth-store';
 import { getUserFromToken } from '@/utils/jwt';
-import {
-  loadConfig,
-  getApiUrl,
-  getApiBaseUrl,
-  isCurrentAppPath,
-  resolveAppPath,
-} from './api-config';
+import { loadConfig, getApiUrl, getApiBaseUrl, isCurrentAppPath, resolveAppPath } from './api-config';
 import { publishAiAssistantErrorContext } from '@/features/ai-assistant/lib/ai-assistant-error-context';
 import { resolveIisSafeHttpMethod } from './http-method-tunnel';
 import { resolvePagedPostTransport } from './paged-request-transport';
@@ -37,7 +31,7 @@ function publishApiActivity(): void {
   window.dispatchEvent(
     new CustomEvent('crm-api-activity', {
       detail: { activeCount: activeApiRequestCount },
-    })
+    }),
   );
 }
 
@@ -81,22 +75,11 @@ function isBranchHeaderOptionalUrl(url: string | undefined): boolean {
   if (!url) return false;
 
   const path = url.split('?')[0].toLowerCase();
-  return (
-    path.includes('/api/auth/login') ||
-    path.includes('/api/auth/register') ||
-    path.includes('/api/auth/refresh-token') ||
-    path.includes('/api/auth/request-password-reset') ||
-    path.includes('/api/auth/reset-password') ||
-    path.includes('/api/netsisread/getbranches') ||
-    path.includes('/api/branch')
-  );
+  return path.includes('/api/auth/login') || path.includes('/api/auth/register') || path.includes('/api/auth/refresh-token') || path.includes('/api/auth/request-password-reset') || path.includes('/api/auth/reset-password') || path.includes('/api/netsisread/getbranches') || path.includes('/api/branch');
 }
 
 function normalizeApiEnvelope(payload: unknown): unknown {
-  if (
-    (typeof Blob !== 'undefined' && payload instanceof Blob) ||
-    payload instanceof ArrayBuffer
-  ) {
+  if ((typeof Blob !== 'undefined' && payload instanceof Blob) || payload instanceof ArrayBuffer) {
     return payload;
   }
 
@@ -159,13 +142,7 @@ function convertLocalDateTimeStringToUtc(value: string): string {
 }
 
 function normalizeUtcDateStrings(payload: unknown): unknown {
-  if (
-    payload == null ||
-    typeof payload !== 'object' ||
-    payload instanceof Date ||
-    (typeof Blob !== 'undefined' && payload instanceof Blob) ||
-    payload instanceof ArrayBuffer
-  ) {
+  if (payload == null || typeof payload !== 'object' || payload instanceof Date || (typeof Blob !== 'undefined' && payload instanceof Blob) || payload instanceof ArrayBuffer) {
     if (typeof payload === 'string' && isIsoDateTimeWithoutOffset(payload)) {
       return `${payload}Z`;
     }
@@ -185,13 +162,7 @@ function normalizeUtcDateStrings(payload: unknown): unknown {
 }
 
 function normalizeOutgoingUtcDateStrings(payload: unknown): unknown {
-  if (
-    payload == null ||
-    typeof payload !== 'object' ||
-    payload instanceof Date ||
-    (typeof Blob !== 'undefined' && payload instanceof Blob) ||
-    payload instanceof ArrayBuffer
-  ) {
+  if (payload == null || typeof payload !== 'object' || payload instanceof Date || (typeof Blob !== 'undefined' && payload instanceof Blob) || payload instanceof ArrayBuffer) {
     if (typeof payload === 'string') {
       return convertLocalDateTimeStringToUtc(payload);
     }
@@ -217,29 +188,11 @@ function extractApiErrorMessage(payload: unknown): string | null {
 
   const message = errorPayload.message;
   const exceptionMessage = errorPayload.exceptionMessage;
-  const normalizedMessage =
-    typeof message === 'string'
-      ? message.trim().toLocaleLowerCase('tr-TR')
-      : '';
-  const searchableMessage = normalizedMessage
-    .normalize('NFD')
-    .replace(/\p{M}/gu, '')
-    .replace(/ı/g, 'i')
-    .replace(/ş/g, 's');
-  const isGenericServerMessage =
-    (searchableMessage.includes('sunucu') &&
-      searchableMessage.includes('hata') &&
-      searchableMessage.includes('olustu')) ||
-    normalizedMessage === 'sunucu hatası oluştu.' ||
-    normalizedMessage === 'sunucu hatası oluştu' ||
-    normalizedMessage === 'internal server error occurred.' ||
-    normalizedMessage === 'internal server error occurred';
+  const normalizedMessage = typeof message === 'string' ? message.trim().toLocaleLowerCase('tr-TR') : '';
+  const searchableMessage = normalizedMessage.normalize('NFD').replace(/\p{M}/gu, '').replace(/ı/g, 'i').replace(/ş/g, 's');
+  const isGenericServerMessage = (searchableMessage.includes('sunucu') && searchableMessage.includes('hata') && searchableMessage.includes('olustu')) || normalizedMessage === 'sunucu hatası oluştu.' || normalizedMessage === 'sunucu hatası oluştu' || normalizedMessage === 'internal server error occurred.' || normalizedMessage === 'internal server error occurred';
 
-  if (
-    isGenericServerMessage &&
-    typeof exceptionMessage === 'string' &&
-    exceptionMessage.trim().length > 0
-  ) {
+  if (isGenericServerMessage && typeof exceptionMessage === 'string' && exceptionMessage.trim().length > 0) {
     return exceptionMessage;
   }
 
@@ -281,6 +234,7 @@ function resolveLocalizedApiErrorMessage(payload: unknown, statusCode?: number):
     API_FORBIDDEN: 'forbidden',
     API_NOT_FOUND: 'notFound',
     API_CONFLICT: 'conflict',
+    FISCAL_PERIOD_OVERLAP: 'conflict',
     API_SERVER_ERROR: 'server',
     API_ERROR: 'generic',
   };
@@ -291,10 +245,7 @@ function resolveLocalizedApiErrorMessage(payload: unknown, statusCode?: number):
     404: 'notFound',
     409: 'conflict',
   };
-  const key =
-    (errorCode && keyByCode[errorCode]) ||
-    (statusCode && keyByStatus[statusCode]) ||
-    (statusCode && statusCode >= 500 ? 'server' : 'generic');
+  const key = (errorCode && keyByCode[errorCode]) || (statusCode && keyByStatus[statusCode]) || (statusCode && statusCode >= 500 ? 'server' : 'generic');
 
   return String(
     i18n.t(`common:apiErrors.${key}`, {
@@ -493,12 +444,7 @@ function clearStoredTokens(): void {
 function shouldSkipRefresh(url?: string): boolean {
   if (!url) return false;
 
-  return [
-    '/api/auth/login',
-    '/api/auth/refresh-token',
-    '/api/auth/request-password-reset',
-    '/api/auth/reset-password',
-  ].some((path) => url.includes(path));
+  return ['/api/auth/login', '/api/auth/refresh-token', '/api/auth/request-password-reset', '/api/auth/reset-password'].some((path) => url.includes(path));
 }
 
 async function refreshAccessToken(): Promise<string | null> {
@@ -520,7 +466,7 @@ async function refreshAccessToken(): Promise<string | null> {
             'Content-Type': 'application/json',
             'X-Language': i18n.language || 'tr',
           },
-        }
+        },
       )) as { data: unknown };
 
       const normalized = normalizeApiEnvelope(response.data) as {
@@ -539,13 +485,7 @@ async function refreshAccessToken(): Promise<string | null> {
       const decodedUser = getUserFromToken(normalized.data.token);
       const branch = useAuthStore.getState().branch;
       if (decodedUser) {
-        useAuthStore.getState().setAuth(
-          decodedUser,
-          normalized.data.token,
-          branch,
-          isPersistentSession(),
-          normalized.data.refreshToken ?? storedRefreshToken
-        );
+        useAuthStore.getState().setAuth(decodedUser, normalized.data.token, branch, isPersistentSession(), normalized.data.refreshToken ?? storedRefreshToken);
       } else {
         useAuthStore.setState({ token: normalized.data.token });
       }
@@ -646,9 +586,10 @@ api.interceptors.response.use(
     }
 
     const apiMessage = extractApiErrorMessage(apiError);
+    const apiErrorCode = extractApiErrorCode(apiError);
     const localizedApiMessage = resolveLocalizedApiErrorMessage(apiError, error.response?.status);
     if (localizedApiMessage || apiMessage) {
-      error.message = apiMessage || localizedApiMessage;
+      error.message = apiErrorCode === 'FISCAL_PERIOD_OVERLAP' ? localizedApiMessage || apiMessage : apiMessage || localizedApiMessage;
     }
 
     const requestUrl = originalRequest?.url ?? error.config?.url ?? null;
@@ -664,7 +605,7 @@ api.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  }
+  },
 );
 
 declare module 'axios' {
