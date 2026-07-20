@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "Bu para birimi için güncel kur bulunamadı. Kaydı tamamlamadan önce kur verisini kontrol edin.",
     "exchangeRateLoaded": "Kaynak kur, tarih ve kaynak bilgisiyle otomatik yüklendi.",
     "baseCurrencyRate": "Sistem ana para birimi için kur 1 olarak uygulanır.",
+    "lateCostReopenNotice": "Kesinleştirilmiş dosyaya eklenen bu geç masraf, düzeltme revizyonu olarak kaydedilecek ve dosya yeniden maliyet dağıtımına açılacaktır.",
     "expectedQuantity": "Beklenen Miktar",
     "expectedReceiptDate": "Beklenen Kabul Tarihi",
     "expiryDate": "Son Kullanma Tarihi",

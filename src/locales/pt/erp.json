@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "Não foi encontrada uma taxa atual para esta moeda. Verifique os dados antes de guardar.",
     "exchangeRateLoaded": "A taxa de origem foi carregada automaticamente com data e fonte.",
     "baseCurrencyRate": "A taxa 1 é aplicada à moeda base do sistema.",
+    "lateCostReopenNotice": "Este custo tardio será guardado como uma revisão de ajuste e o dossiê finalizado será reaberto para a distribuição de custos.",
     "expectedQuantity": "Quantidade Esperada",
     "expectedReceiptDate": "Data prevista de recebimento",
     "expiryDate": "Data de validade",

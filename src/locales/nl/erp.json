@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "Er is geen actuele koers voor deze valuta gevonden. Controleer de koersgegevens voor het opslaan.",
     "exchangeRateLoaded": "De bronkoers is automatisch geladen met datum en bron.",
     "baseCurrencyRate": "Voor de basisvaluta van het systeem wordt koers 1 toegepast.",
+    "lateCostReopenNotice": "Deze late kostenpost wordt opgeslagen als een correctierevisie en het afgeronde dossier wordt heropend voor kostenverdeling.",
     "expectedQuantity": "Verwachte hoeveelheid",
     "expectedReceiptDate": "Verwachte ontvangstdatum",
     "expiryDate": "Vervaldatum",

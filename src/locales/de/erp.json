@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "Für diese Währung wurde kein aktueller Kurs gefunden. Prüfen Sie die Kursdaten vor dem Speichern.",
     "exchangeRateLoaded": "Der Quellkurs wurde mit Datum und Quelle automatisch geladen.",
     "baseCurrencyRate": "Für die Systembasiswährung wird der Kurs 1 verwendet.",
+    "lateCostReopenNotice": "Diese nachträgliche Kostenposition wird als Korrekturversion gespeichert und die abgeschlossene Akte erneut zur Kostenverteilung geöffnet.",
     "expectedQuantity": "Erwartete Menge",
     "expectedReceiptDate": "Voraussichtliches Empfangsdatum",
     "expiryDate": "Ablaufdatum",

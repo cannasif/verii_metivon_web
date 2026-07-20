@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "Nie znaleziono aktualnego kursu dla tej waluty. Sprawdź dane przed zapisaniem.",
     "exchangeRateLoaded": "Kurs źródłowy został automatycznie załadowany wraz z datą i źródłem.",
     "baseCurrencyRate": "Dla waluty bazowej systemu stosowany jest kurs 1.",
+    "lateCostReopenNotice": "Ten późny koszt zostanie zapisany jako korekta, a sfinalizowana teczka zostanie ponownie otwarta do alokacji kosztów.",
     "expectedQuantity": "Oczekiwana ilość",
     "expectedReceiptDate": "Oczekiwana data odbioru",
     "expiryDate": "Data ważności",

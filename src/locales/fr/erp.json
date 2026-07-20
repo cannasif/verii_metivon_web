@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "Aucun taux actuel n’a été trouvé pour cette devise. Vérifiez les données avant l’enregistrement.",
     "exchangeRateLoaded": "Le taux source a été chargé automatiquement avec sa date et sa source.",
     "baseCurrencyRate": "Le taux est fixé à 1 pour la devise de base du système.",
+    "lateCostReopenNotice": "Ce coût tardif sera enregistré comme une révision d’ajustement et le dossier finalisé sera rouvert pour la répartition des coûts.",
     "expectedQuantity": "Quantité attendue",
     "expectedReceiptDate": "Date de réception prévue",
     "expiryDate": "Date d'expiration",

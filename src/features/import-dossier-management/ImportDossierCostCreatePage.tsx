@@ -17,6 +17,7 @@ type Envelope<T> = { data: T };
 type ExchangeRateItem = { currencyCode: string; unit: number; forexBuying: number; forexSelling: number | null; instrumentType: "Currency" | "PreciousMetal"; instrumentRateDate: string | null };
 type ExchangeRateSnapshot = { source: string; rateDate: string; retrievedAtUtc: string; isStale: boolean; rates: ExchangeRateItem[] };
 type ApiResponse<T> = { success: boolean; message?: string; data?: T };
+type CostProfileResponse = { costProfile: { status: string } | null };
 type CostForm = {
   landedCostTypeId: string; amountType: string; allocationMethod: string; sourceType: string; supplierId: string;
   invoiceNumber: string; invoiceDate: string; paymentReference: string; paymentDate: string; currencyId: string;
@@ -37,6 +38,7 @@ export function ImportDossierCostCreatePage(): ReactElement {
   const [rateLoading, setRateLoading] = useState(false);
   const [busy, setBusy] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isFinalizedRevision, setIsFinalizedRevision] = useState(false);
   const [form, setForm] = useState<CostForm>({
     landedCostTypeId: "", amountType: "2", allocationMethod: "", sourceType: "1", supplierId: "",
     invoiceNumber: "", invoiceDate: "", paymentReference: "", paymentDate: "", currencyId: "", foreignAmount: "",
@@ -52,10 +54,17 @@ export function ImportDossierCostCreatePage(): ReactElement {
   };
 
   useEffect(() => {
-    void Promise.all([api.get<Envelope<Lookups>>("/api/erp-lookups"), api.get<ApiResponse<ExchangeRateSnapshot>>("/api/exchange-rates/latest")])
-      .then(([lookupResponse, rateResponse]) => {
+    void Promise.all([
+      api.get<Envelope<Lookups>>("/api/erp-lookups"),
+      api.get<ApiResponse<ExchangeRateSnapshot>>("/api/exchange-rates/latest"),
+      api.get<ApiResponse<CostProfileResponse>>(`/api/trade-dossiers/${id}/costs`),
+    ])
+      .then(([lookupResponse, rateResponse, costResponse]) => {
         setLookups(lookupResponse.data);
         if (rateResponse.success && rateResponse.data) setRates(rateResponse.data);
+        const finalizedRevision = costResponse.data?.costProfile?.status === "Finalized";
+        setIsFinalizedRevision(finalizedRevision);
+        setForm((current) => ({ ...current, amountType: finalizedRevision ? "3" : current.amountType }));
         const preferred = lookupResponse.data.currencies.find((x) => x.id === defaultCurrencyId)
           ?? lookupResponse.data.currencies.find((x) => x.isoCode === defaultCurrencyCode);
         if (preferred) {
@@ -67,7 +76,7 @@ export function ImportDossierCostCreatePage(): ReactElement {
           setForm((current) => ({ ...current, currencyId: String(preferred.id), originalExchangeRate: initialRate ? String(initialRate) : "", exchangeRate: initialRate ? String(initialRate) : "", exchangeRateDate: isBase ? new Date().toISOString().slice(0, 10) : (item?.instrumentRateDate ?? snapshot?.rateDate ?? ""), exchangeRateSource: isBase ? "BaseCurrency" : (snapshot?.source ?? "") }));
         }
       });
-  }, [defaultCurrencyCode, defaultCurrencyId]);
+  }, [defaultCurrencyCode, defaultCurrencyId, id]);
 
   const set = (key: string, value: string) => setForm((current) => ({ ...current, [key]: value }));
   const selectedCurrency = useMemo(() => lookups.currencies.find((x) => String(x.id) === form.currencyId), [form.currencyId, lookups.currencies]);
@@ -121,6 +130,7 @@ export function ImportDossierCostCreatePage(): ReactElement {
   const rateMissing = Boolean(form.currencyId && !isBaseCurrency && !form.originalExchangeRate);
   return <div className="mx-auto max-w-5xl space-y-6">
     <section className="metivon-hero rounded-3xl p-7 text-white"><p className="text-xs font-semibold uppercase tracking-[.24em] text-white/70">{t("pages.trade-dossiers.eyebrow")}</p><h1 className="mt-2 text-3xl font-semibold">{t("forms.import-dossier-cost.title")}</h1><p className="mt-2 text-white/75">{t("forms.import-dossier-cost.description")}</p></section>
+    {isFinalizedRevision ? <div className="flex items-center gap-2 rounded-2xl border border-amber-300 bg-amber-50 p-4 text-sm font-medium text-amber-900"><AlertTriangle className="h-4 w-4" />{t("fields.lateCostReopenNotice")}</div> : null}
     <form onSubmit={submit} className="grid grid-cols-1 gap-5 rounded-3xl border bg-card p-6 shadow-sm md:grid-cols-2">
       <LookupField label={t("nav.landedCostTypes")} required invalid={submitted && !form.landedCostTypeId}><ErpLookupCombobox lookupKey="landedCostTypes" value={form.landedCostTypeId} fallbackOptions={lookups.landedCostTypes} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} required invalid={submitted && !form.landedCostTypeId} onChange={(value) => set("landedCostTypeId", String(value))}/></LookupField>
       <div><Label>{t("fields.sourceType")}</Label><select value={form.sourceType} onChange={(e) => set("sourceType", e.target.value)} className="mt-2 h-10 w-full rounded-md border bg-background px-3">{["PurchaseInvoice","PaymentReceipt","BankReceipt","CustomsAssessment","Other"].map((key,index)=><option key={key} value={String(index+1)}>{t(`sourceTypes.${key}`)}</option>)}</select></div>

@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "未找到此币种的当前汇率，请在保存前检查汇率数据。",
     "exchangeRateLoaded": "来源汇率已连同日期和来源自动加载。",
     "baseCurrencyRate": "系统本位币使用汇率1。",
+    "lateCostReopenNotice": "此项后续费用将作为调整修订保存，已最终确认的档案将重新开启以进行成本分摊。",
     "expectedQuantity": "预计数量",
     "expectedReceiptDate": "预计收货日期",
     "expiryDate": "到期日",

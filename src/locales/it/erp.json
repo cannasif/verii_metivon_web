@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "Nessun tasso corrente trovato per questa valuta. Controllare i dati prima di salvare.",
     "exchangeRateLoaded": "Il tasso sorgente è stato caricato automaticamente con data e fonte.",
     "baseCurrencyRate": "Per la valuta base del sistema viene applicato il tasso 1.",
+    "lateCostReopenNotice": "Questo costo tardivo verrà salvato come revisione di rettifica e il dossier finalizzato sarà riaperto per la ripartizione dei costi.",
     "expectedQuantity": "Quantità prevista",
     "expectedReceiptDate": "Data di ricezione prevista",
     "expiryDate": "Data di scadenza",

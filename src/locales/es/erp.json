@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "No se encontró un tipo actual para esta moneda. Compruebe los datos antes de guardar.",
     "exchangeRateLoaded": "El tipo de origen se cargó automáticamente con su fecha y fuente.",
     "baseCurrencyRate": "Para la moneda base del sistema se aplica el tipo 1.",
+    "lateCostReopenNotice": "Este coste tardío se guardará como una revisión de ajuste y el expediente finalizado se reabrirá para la distribución de costes.",
     "expectedQuantity": "Cantidad esperada",
     "expectedReceiptDate": "Fecha prevista de recepción",
     "expiryDate": "Fecha de vencimiento",

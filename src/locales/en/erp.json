@@ -280,6 +280,7 @@
     "exchangeRateUnavailable": "No current rate was found for this currency. Check the rate data before saving.",
     "exchangeRateLoaded": "The source rate was loaded automatically with its date and source.",
     "baseCurrencyRate": "The rate is fixed at 1 for the system base currency.",
+    "lateCostReopenNotice": "This late cost will be saved as an adjustment revision and the finalized dossier will be reopened for cost allocation.",
     "expectedQuantity": "Expected Quantity",
     "expectedReceiptDate": "Expected Receipt Date",
     "expiryDate": "Expiry Date",
