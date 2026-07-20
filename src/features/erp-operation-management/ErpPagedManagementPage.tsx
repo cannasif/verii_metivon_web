@@ -30,6 +30,7 @@ import {
   type FilterRow,
 } from "@/lib/advanced-filter-types";
 import { useCrudPermissions } from "@/features/access-control/hooks/useCrudPermissions";
+import { cn } from "@/lib/utils";
 type Row = Record<string, unknown> & { id: number };
 export function ErpPagedManagementPage({
   config,
@@ -218,14 +219,18 @@ export function ErpPagedManagementPage({
     void executeAction(row, index);
   };
   const visibleActions = config.actions?.filter(isActionAllowed) ?? [];
+  const iconOnlyActions = useMemo(
+    () => (config.actions ?? []).every((action) => action.kind === "update" || action.kind === "delete"),
+    [config.actions],
+  );
   const actionLabel = (action: NonNullable<ErpPageConfig["actions"]>[number], index: number): string => {
     if (action.kind === "update") return t("common.edit", { defaultValue: action.label });
-    if (action.kind === "delete") return t("common.delete", { defaultValue: action.label });
+    if (action.kind === "delete") return t("common.delete.action", { defaultValue: action.label });
     return t(`pages.${config.pageKey}.actions.${index}.label`, { defaultValue: action.label });
   };
-  const actionIcon = (action: NonNullable<ErpPageConfig["actions"]>[number]) => {
+  const renderActionIcon = (action: NonNullable<ErpPageConfig["actions"]>[number]): ReactElement | null => {
     const icon = action.icon ?? (action.kind === "update" ? "edit" : action.kind === "delete" || action.method === "delete" ? "delete" : undefined);
-    return icon === "edit" ? <Pencil className="h-4 w-4" /> : icon === "delete" ? <Trash2 className="h-4 w-4" /> : icon === "open" ? <FolderOpen className="h-4 w-4" /> : null;
+    return icon === "edit" ? <Pencil className="h-4 w-4" aria-hidden="true" /> : icon === "delete" ? <Trash2 className="h-4 w-4" aria-hidden="true" /> : icon === "open" ? <FolderOpen className="h-4 w-4" aria-hidden="true" /> : null;
   };
   const confirmationAction = confirmation ? config.actions?.[confirmation.index] : undefined;
   return (
@@ -306,13 +311,28 @@ export function ErpPagedManagementPage({
         rowKey={(r) => r.id}
         renderCell={render}
         showActionsColumn={visibleActions.length > 0}
+        iconOnlyActions={iconOnlyActions}
         actionsHeaderLabel={t("common.actions")}
         renderActionsCell={(row) => (
           <div className="flex justify-end gap-2">
             {config.actions?.map((action, index) => !isActionAllowed(action) || action.visible?.(row) === false ? null : (
-              <Button key={`${row.id}:${index}`} size="sm" variant={action.variant ?? "outline"} disabled={pendingAction !== null} onClick={() => runAction(row, index)}>
-                {actionIcon(action)}
-                {actionLabel(action, index)}
+              <Button
+                key={`${row.id}:${index}`}
+                size="sm"
+                variant={iconOnlyActions ? "ghost" : (action.variant ?? "outline")}
+                className={cn(
+                  iconOnlyActions && action.kind === "update" &&
+                    "h-8 w-8 text-blue-600 hover:bg-blue-50 hover:text-blue-700 dark:text-blue-400 dark:hover:bg-blue-500/10",
+                  iconOnlyActions && action.kind === "delete" &&
+                    "h-8 w-8 text-red-600 hover:bg-red-50 hover:text-red-700 dark:text-red-400 dark:hover:bg-red-500/10",
+                )}
+                disabled={pendingAction !== null}
+                title={actionLabel(action, index)}
+                aria-label={actionLabel(action, index)}
+                onClick={() => runAction(row, index)}
+              >
+                {renderActionIcon(action)}
+                {!iconOnlyActions ? actionLabel(action, index) : null}
               </Button>
             ))}
           </div>
@@ -370,7 +390,7 @@ export function ErpPagedManagementPage({
                 void executeAction(current.row, current.index).then(() => setConfirmation(null));
               }}
             >
-              {pendingAction !== null ? t("common.deleting") : t("common.delete")}
+              {pendingAction !== null ? t("common.deleting") : t("common.delete.action", { defaultValue: "Sil" })}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

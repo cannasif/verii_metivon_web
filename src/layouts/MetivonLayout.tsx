@@ -103,7 +103,7 @@ export function MetivonLayout(): ReactElement {
 
   const sidebarContent = (mobile = false): ReactElement => (
     <>
-      <div className="metivon-hero mb-8 flex items-start gap-3 rounded-2xl p-5">
+      <div className="metivon-hero mb-4 shrink-0 flex items-start gap-3 rounded-2xl p-5 lg:mb-6">
         <div className="min-w-0 flex-1">
           <div className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">
             V3RII
@@ -125,21 +125,22 @@ export function MetivonLayout(): ReactElement {
         ) : null}
       </div>
 
-      <label className="relative mb-4 block">
-        <Search className="pointer-events-none absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-        <input
-          value={menuSearch}
-          onChange={(event) => handleMenuSearch(event.target.value)}
-          placeholder={te("common.menuSearch")}
-          aria-label={te("common.menuSearch")}
-          className="metivon-panel-muted metivon-focus h-10 w-full rounded-xl border ps-10 pe-3 text-sm outline-none transition"
-        />
-      </label>
+      <div className="metivon-app-sidebar-scroll min-h-0 flex-1 overflow-y-auto overscroll-y-contain">
+        <label className="relative mb-4 block">
+          <Search className="pointer-events-none absolute start-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+          <input
+            value={menuSearch}
+            onChange={(event) => handleMenuSearch(event.target.value)}
+            placeholder={te("common.menuSearch")}
+            aria-label={te("common.menuSearch")}
+            className="metivon-panel-muted metivon-focus h-10 w-full rounded-xl border ps-10 pe-3 text-sm outline-none transition"
+          />
+        </label>
 
-      <nav
-        className="min-h-0 flex-1 space-y-2 overflow-y-auto pe-1"
-        aria-label={tc("sidebar.navigation", { defaultValue: "Ana menü" })}
-      >
+        <nav
+          className="metivon-app-sidebar-nav space-y-2"
+          aria-label={tc("sidebar.navigation", { defaultValue: "Ana menü" })}
+        >
         <SidebarLink
           title={tc("sidebar.dashboard")}
           href="/"
@@ -469,17 +470,18 @@ export function MetivonLayout(): ReactElement {
               close={() => setIsMobileSidebarOpen(false)}
             />
         </MenuSection>
-      </nav>
+        </nav>
 
-      <div className="mt-auto rounded-xl border border-slate-200 p-3 text-xs text-slate-500 dark:border-white/10 dark:text-slate-400">
-        {branchDisplayName}
+        <div className="mt-4 rounded-xl border border-slate-200 p-3 text-xs text-slate-500 dark:border-white/10 dark:text-slate-400">
+          {branchDisplayName}
+        </div>
       </div>
     </>
   );
 
   return (
-    <div className="metivon-shell metivon-app-shell flex min-h-dvh">
-      <aside className="metivon-panel metivon-app-sidebar hidden w-72 shrink-0 border-e p-5 lg:flex lg:flex-col">
+    <div className="metivon-shell metivon-app-shell flex h-dvh max-h-dvh overflow-hidden">
+      <aside className="metivon-panel metivon-app-sidebar hidden h-dvh max-h-dvh w-72 shrink-0 overflow-hidden border-e p-5 lg:flex lg:flex-col">
         {sidebarContent()}
       </aside>
 
@@ -491,14 +493,14 @@ export function MetivonLayout(): ReactElement {
             className="absolute inset-0 bg-slate-950/55 backdrop-blur-sm"
             onClick={() => setIsMobileSidebarOpen(false)}
           />
-          <aside className="metivon-panel absolute inset-y-0 start-0 flex w-[min(20rem,88vw)] flex-col border-e p-5 shadow-2xl">
+          <aside className="metivon-panel absolute inset-y-0 start-0 flex h-dvh max-h-dvh w-[min(20rem,88vw)] flex-col overflow-hidden border-e p-5 shadow-2xl">
             {sidebarContent(true)}
           </aside>
         </div>
       ) : null}
 
-      <div className="flex min-w-0 flex-1 flex-col">
-        <header className="metivon-panel metivon-app-header flex h-18 items-center justify-between border-b px-4 backdrop-blur-xl md:px-7">
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden">
+        <header className="metivon-panel metivon-app-header flex h-18 shrink-0 items-center justify-between border-b px-4 backdrop-blur-xl md:px-7">
           <div className="flex min-w-0 items-center gap-3">
             <button
               type="button"

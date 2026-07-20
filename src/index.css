@@ -1254,6 +1254,59 @@ input[type="number"].allow-native-number-spinners {
   .metivon-shell :is(.bg-card, .bg-background) {
     border-color: var(--crm-app-border);
   }
+
+  .metivon-app-sidebar-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    margin-inline: -1.25rem;
+    padding-inline: 1rem;
+    scrollbar-width: 1px;
+    scrollbar-color: oklch(0.704 0.04 256.788 / 0.28) transparent;
+  }
+
+  .metivon-app-sidebar-scroll::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  .metivon-app-sidebar-scroll::-webkit-scrollbar-track {
+    margin-block: 0;
+    background: transparent;
+  }
+
+  .metivon-app-sidebar-scroll::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background-color: oklch(0.704 0.04 256.788 / 0.28);
+    transition: background-color 0.2s ease;
+  }
+
+  .metivon-app-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: oklch(0.704 0.04 256.788 / 0.45);
+  }
+
+  .dark .metivon-app-sidebar-scroll {
+    scrollbar-color: oklch(0.551 0.027 264.364 / 0.32) transparent;
+  }
+
+  .dark .metivon-app-sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: oklch(0.551 0.027 264.364 / 0.32);
+  }
+
+  .dark .metivon-app-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: oklch(0.551 0.027 264.364 / 0.5);
+  }
+
+  @media (min-width: 1024px) {
+    .metivon-app-sidebar {
+      flex-direction: column;
+      height: 100dvh;
+      max-height: 100dvh;
+      overflow: hidden;
+    }
+  }
 }
 
 /* Extended Metivon theme collection: 30 production-ready choices. */
@@ -1361,14 +1414,14 @@ input[type="number"].allow-native-number-spinners {
   html[data-interface-layout='retro'] .metivon-app-content > * { border-width: 2px; }
 
   html[data-interface-layout='space'] .metivon-app-shell { gap: 1rem; padding: 1rem; }
-  html[data-interface-layout='space'] .metivon-app-sidebar { width: 19rem; height: calc(100dvh - 2rem); border: 1px solid var(--crm-brand-ring); border-radius: 1.75rem; box-shadow: 0 24px 70px -35px var(--crm-brand-shadow); }
+  html[data-interface-layout='space'] .metivon-app-sidebar { width: 19rem; height: calc(100dvh - 2rem); max-height: calc(100dvh - 2rem); overflow: hidden; border: 1px solid var(--crm-brand-ring); border-radius: 1.75rem; box-shadow: 0 24px 70px -35px var(--crm-brand-shadow); }
   html[data-interface-layout='space'] .metivon-app-header { margin: 0 0 1rem; border: 1px solid var(--crm-app-border); border-radius: 1.5rem; }
   html[data-interface-layout='space'] .metivon-app-content { padding: 0; }
 
   html[data-interface-layout='glass'] .metivon-app-shell { gap: .75rem; padding: .75rem; background-image: var(--crm-brand-gradient-soft); }
   html[data-interface-layout='glass'] .metivon-app-sidebar,
   html[data-interface-layout='glass'] .metivon-app-header { border: 1px solid color-mix(in srgb,var(--crm-brand-primary) 22%,transparent); border-radius: 1.5rem; background: color-mix(in srgb,var(--crm-app-panel) 78%,transparent); backdrop-filter: blur(22px); box-shadow: 0 20px 55px -35px var(--crm-brand-shadow); }
-  html[data-interface-layout='glass'] .metivon-app-sidebar { width: 18rem; height: calc(100dvh - 1.5rem); }
+  html[data-interface-layout='glass'] .metivon-app-sidebar { width: 18rem; height: calc(100dvh - 1.5rem); max-height: calc(100dvh - 1.5rem); overflow: hidden; }
   html[data-interface-layout='glass'] .metivon-app-content { padding: .75rem 0 0; }
 
   html[data-interface-layout='terminal'] .metivon-app-shell { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: -.02em; }
@@ -1384,8 +1437,9 @@ input[type="number"].allow-native-number-spinners {
 
   html[data-interface-layout='dock'] .metivon-app-shell { padding-bottom: 6.5rem; }
   html[data-interface-layout='dock'] .metivon-app-sidebar { position: fixed; z-index: 40; inset-inline: 1rem; bottom: 1rem; width: auto; height: 5rem; padding: .5rem; border: 1px solid var(--crm-brand-ring); border-radius: 1.5rem; box-shadow: 0 22px 60px -25px var(--crm-brand-shadow); }
-  html[data-interface-layout='dock'] .metivon-app-sidebar > :not(nav) { display: none; }
-  html[data-interface-layout='dock'] .metivon-app-sidebar nav { display: flex; flex-direction: row; overflow-x: auto; align-items: stretch; gap: .4rem; }
+  html[data-interface-layout='dock'] .metivon-app-sidebar > :not(.metivon-app-sidebar-scroll) { display: none; }
+  html[data-interface-layout='dock'] .metivon-app-sidebar .metivon-app-sidebar-scroll,
+  html[data-interface-layout='dock'] .metivon-app-sidebar nav { display: flex; flex-direction: row; overflow-x: auto; align-items: stretch; gap: .4rem; margin-inline: 0; }
   html[data-interface-layout='dock'] .metivon-app-sidebar nav > * { min-width: 8.5rem; height: 100%; }
   html[data-interface-layout='dock'] .metivon-app-header { position: sticky; top: 0; z-index: 30; }
 
@@ -1405,13 +1459,20 @@ input[type="number"].allow-native-number-spinners {
     gap: 0 !important;
     padding: 0 !important;
     padding-bottom: 0 !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
   }
 
   html[data-interface-layout] .metivon-app-sidebar {
     position: static !important;
     inset: auto !important;
     width: 18rem !important;
-    height: auto !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
     padding: 1.25rem !important;
     border-radius: 0 !important;
     border-width: 0 1px 0 0 !important;
@@ -1440,12 +1501,21 @@ input[type="number"].allow-native-number-spinners {
     padding: 1.75rem !important;
   }
 
-  html[data-interface-layout] .metivon-app-sidebar > :not(nav) { display: revert !important; }
-  html[data-interface-layout] .metivon-app-sidebar nav {
+  html[data-interface-layout] .metivon-app-sidebar > :not(.metivon-app-sidebar-scroll) { display: revert !important; }
+  html[data-interface-layout] .metivon-app-sidebar .metivon-app-sidebar-scroll {
     display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    overflow-x: visible !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+  html[data-interface-layout] .metivon-app-sidebar nav {
+    display: block !important;
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
   }
   html[data-interface-layout] .metivon-app-sidebar nav > * {
     min-width: 0 !important;
