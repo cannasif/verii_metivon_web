@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent, type ReactElement } from 'react';
+import { useCallback, useEffect, useState, type FormEvent, type ReactElement } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { api } from '@/lib/axios';
@@ -15,7 +15,7 @@ const documentTypes=['CustomsDeclaration','CommercialInvoice','FreightDocument',
 
 export function ImportDossierDetailPage():ReactElement{
  const{id}=useParams();const{t}=useTranslation('erp');const[data,setData]=useState<Detail|null>(null);const[activeTab,setActiveTab]=useState<'detail'|'costs'|'documents'>('detail');const[busy,setBusy]=useState(false);const[file,setFile]=useState<File|null>(null);const[documentType,setDocumentType]=useState('CustomsDeclaration');const[documentNumber,setDocumentNumber]=useState('');const[customs,setCustoms]=useState({number:'',date:'',exchangeRate:'1',actualArrivalDate:''});
- const load=async()=>{const response=await api.get<Envelope<Detail>>(`/api/import-dossiers/${id}`);setData(response.data);};useEffect(()=>{void load();},[id]);
+ const load=useCallback(async()=>{const response=await api.get<Envelope<Detail>>(`/api/import-dossiers/${id}`);setData(response.data);},[id]);useEffect(()=>{void load();},[load]);
  const upload=async(e:FormEvent)=>{e.preventDefault();if(!file)return;setBusy(true);try{const form=new FormData();form.append('documentType',String(documentTypes.indexOf(documentType)+1));form.append('documentNumber',documentNumber);form.append('file',file);await api.post(`/api/import-dossiers/${id}/documents`,form);setFile(null);setDocumentNumber('');await load();}finally{setBusy(false);}};
  const saveCustoms=async(e:FormEvent)=>{e.preventDefault();setBusy(true);try{await api.put(`/api/import-dossiers/${id}/customs-declaration`,{number:customs.number,date:customs.date,exchangeRate:parseSystemNumber(customs.exchangeRate),actualArrivalDate:customs.actualArrivalDate||null});await load();}finally{setBusy(false);}};
  if(!data)return <div className="p-8">{t('common.loading')}</div>;

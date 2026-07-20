@@ -4,44 +4,11 @@ import { CircleDollarSign, RefreshCw, Search, TriangleAlert } from "lucide-react
 import { useTranslation } from "react-i18next";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Input } from "@/components/ui/input";
-import { api } from "@/lib/axios";
 import { formatSystemDate, formatSystemDateTime, formatSystemExchangeRate } from "@/lib/system-settings";
-import type { ApiResponse } from "@/types/api";
-
-interface ExchangeRateItem {
-  currencyCode: string;
-  unit: number;
-  forexBuying: number;
-  forexSelling: number | null;
-  banknoteBuying: number | null;
-  banknoteSelling: number | null;
-  instrumentType: "Currency" | "PreciousMetal";
-  displayName: string | null;
-  instrumentRateDate: string | null;
-}
-
-interface ExchangeRateSnapshot {
-  source: string;
-  rateDate: string;
-  retrievedAtUtc: string;
-  isStale: boolean;
-  rates: ExchangeRateItem[];
-}
+import { EXCHANGE_RATE_QUERY_KEY, getLatestExchangeRates } from "../exchange-rate-api";
 
 const HEADER_CURRENCIES = ["USD", "EUR", "GBP"] as const;
 const FIFTEEN_MINUTES = 15 * 60 * 1000;
-
-const EXCHANGE_RATE_QUERY_KEY = ["exchange-rates", "latest"] as const;
-
-async function getLatestExchangeRates(forceRefresh = false): Promise<ExchangeRateSnapshot> {
-  const response = await api.get<ApiResponse<ExchangeRateSnapshot>>("/api/exchange-rates/latest", {
-    params: forceRefresh ? { forceRefresh: true } : undefined,
-  });
-  if (!response.success || !response.data) {
-    throw new Error(response.message || "Exchange rates could not be loaded.");
-  }
-  return response.data;
-}
 
 export function ExchangeRateHeader(): ReactElement {
   const { t, i18n } = useTranslation(["exchange-rates", "common"]);

@@ -181,7 +181,7 @@ const cellClass = 'px-3 py-2.5';
 
 export function CustomerQuotationsTab({ customerId, customerCode, customerName }: CustomerRelatedTabProps): ReactElement {
   const { t, i18n } = useTranslation(['customer360', 'common']);
-  const tc = (key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts });
+  const tc = useCallback((key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts }), [t]);
   const navigate = useNavigate();
   const [pageNumber, setPageNumber] = useState(1);
   const [isExporting, setIsExporting] = useState(false);
@@ -283,7 +283,7 @@ export function CustomerQuotationsTab({ customerId, customerCode, customerName }
 
 export function CustomerOrdersTab({ customerId, customerCode, customerName }: CustomerRelatedTabProps): ReactElement {
   const { t, i18n } = useTranslation(['customer360', 'common']);
-  const tc = (key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts });
+  const tc = useCallback((key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts }), [t]);
   const navigate = useNavigate();
   const [pageNumber, setPageNumber] = useState(1);
   const [isExporting, setIsExporting] = useState(false);
@@ -401,7 +401,7 @@ export function CustomerActivitiesTab({
   onOpenActivity: (activityId: number) => void;
 }): ReactElement {
   const { t, i18n } = useTranslation(['customer360', 'common']);
-  const tc = (key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts });
+  const tc = useCallback((key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts }), [t]);
   const [pageNumber, setPageNumber] = useState(1);
   const [isExporting, setIsExporting] = useState(false);
   const exportColumns = useMemo(() => buildActivityExportColumns(tc), [tc]);

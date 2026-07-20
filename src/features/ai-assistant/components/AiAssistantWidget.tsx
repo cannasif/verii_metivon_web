@@ -1232,14 +1232,14 @@ export function AiAssistantWidget(): ReactElement | null {
     clearSelectedAttachment();
   };
 
-  const closeVoiceSession = (): void => {
+  const closeVoiceSession = useCallback((): void => {
     stopListening();
     stopSpeaking();
     setIsVoiceSessionOpen(false);
     setVoiceOutputEnabled(false);
     setAwaitingVoiceContinue(false);
     setVoiceStatusMessage(null);
-  };
+  }, [stopListening, stopSpeaking]);
 
   const openVoiceSession = (): void => {
     setIsVoiceSessionOpen(true);
@@ -1379,7 +1379,7 @@ export function AiAssistantWidget(): ReactElement | null {
     setIsDockDialogOpen(true);
   };
 
-  const closeWidget = (): void => {
+  const closeWidget = useCallback((): void => {
     closeVoiceSession();
     const widgetElement = widgetContainerRef.current;
     const panelSize = readWidgetPanelSize(widgetElement);
@@ -1409,7 +1409,7 @@ export function AiAssistantWidget(): ReactElement | null {
     setIsExpanded(false);
     setIsActionsMenuOpen(false);
     setIsOpen(false);
-  };
+  }, [closeVoiceSession, widgetPosition]);
 
   useEffect(() => {
     if (!isOpen || isDragging || isDockDialogOpen) {
@@ -1439,7 +1439,7 @@ export function AiAssistantWidget(): ReactElement | null {
 
     document.addEventListener('pointerdown', handlePointerDown);
     return () => document.removeEventListener('pointerdown', handlePointerDown);
-  }, [isOpen, isDragging, isDockDialogOpen]);
+  }, [isOpen, isDragging, isDockDialogOpen, closeWidget]);
 
   const copyAssistantMessage = async (message: AiAssistantChatMessage): Promise<void> => {
     await copyTextToClipboard(message.content);

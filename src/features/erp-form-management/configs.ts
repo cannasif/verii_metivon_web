@@ -207,6 +207,7 @@ export const purchaseForm: ErpFormConfig = {
   description: "Tedarikçi, depo, teslimat ve ürün satırlarını tanımlayın.",
   endpoint: "/api/purchase-orders",
   returnPath: "/purchase-orders",
+  currencyRateBinding: { currencyField: "currencyId", rateField: "exchangeRate", rateSide: "selling" },
   submitLabel: "Siparişi Oluştur",
   fields: [
     {
@@ -258,7 +259,7 @@ export const purchaseForm: ErpFormConfig = {
       key: "exchangeRate",
       label: "Kur",
       type: "number",
-      defaultValue: 1,
+      required: true,
       step: "0.0001",
     },
   ],

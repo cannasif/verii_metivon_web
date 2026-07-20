@@ -16,7 +16,9 @@ import { ErpLookupMultiSelect } from './ErpLookupMultiSelect';
 import { SerialEntryDialog } from './SerialEntryDialog';
 import { NumberSeriesCombobox } from './NumberSeriesCombobox';
 import { getBusinessFieldLabel } from '@/lib/erp-field-label';
+import { getSystemCurrency } from '@/lib/system-settings';
 import { useAuthStore } from '@/stores/auth-store';
+import { EXCHANGE_RATE_QUERY_KEY, getLatestExchangeRates, resolveDocumentExchangeRate } from '@/features/exchange-rates/exchange-rate-api';
 const today = new Date().toISOString().slice(0, 10);
 const isEmptyRequiredValue = (value: FormValue | undefined) => value === '' || value === null || value === undefined || (Array.isArray(value) && value.length === 0);
 const defaults = (fields: FormField[]) => Object.fromEntries(fields.map((f) => [f.key, f.defaultValue ?? (f.type === 'checkbox' ? false : f.type === 'multi-select' ? [] : f.type === 'date' ? today : '')]));
@@ -31,6 +33,12 @@ export function ErpCreatePage({ config }: { config: ErpFormConfig }): ReactEleme
   const lookupQuery = useQuery({
     queryKey: ['erp-lookups'],
     queryFn: () => api.get<ApiEnvelope<ErpLookups>>('/api/erp-lookups'),
+  });
+  const exchangeRateQuery = useQuery({
+    queryKey: EXCHANGE_RATE_QUERY_KEY,
+    queryFn: () => getLatestExchangeRates(),
+    enabled: Boolean(config.currencyRateBinding),
+    staleTime: 10 * 60 * 1000,
   });
   const lookups = lookupQuery.data?.data ?? {};
   const [header, setHeader] = useState<Record<string, FormValue>>(() => defaults(config.fields));
@@ -55,6 +63,17 @@ export function ErpCreatePage({ config }: { config: ErpFormConfig }): ReactEleme
     if (activeBranchId <= 0 || !config.fields.some((field) => field.key === 'branchId')) return;
     setHeader((current) => (current.branchId === activeBranchId ? current : { ...current, branchId: activeBranchId }));
   }, [activeBranchId, config.fields]);
+  useEffect(() => {
+    const binding = config.currencyRateBinding;
+    if (!binding) return;
+    setHeader((current) => {
+      if (!isEmptyRequiredValue(current[binding.rateField])) return current;
+      const currency = (lookupQuery.data?.data.currencies ?? []).find((item) => item.id === Number(current[binding.currencyField]));
+      const currencyCode = String(currency?.isoCode ?? currency?.code ?? '');
+      const rate = resolveDocumentExchangeRate(exchangeRateQuery.data, currencyCode, getSystemCurrency(), binding.rateSide);
+      return rate === null ? current : { ...current, [binding.rateField]: rate };
+    });
+  }, [config.currencyRateBinding, exchangeRateQuery.data, lookupQuery.data]);
   const submit = async (e: FormEvent) => {
     e.preventDefault();
     setValidationAttempted(true);
@@ -134,9 +153,18 @@ export function ErpCreatePage({ config }: { config: ErpFormConfig }): ReactEleme
                   const dependentHeaderKeys = config.fields.filter((candidate) => candidate.filterBy === f.key).map((candidate) => candidate.key);
                   const dependentLineKeys = (config.lineFields ?? []).filter((candidate) => candidate.filterBy === f.key).map((candidate) => candidate.key);
                   const switchedToFreeReceipt = f.key === 'receiptType' && Number(v) === 2;
+                  const binding = config.currencyRateBinding;
+                  const selectedCurrency = binding && f.key === binding.currencyField
+                    ? (lookups.currencies ?? []).find((item) => item.id === Number(v))
+                    : undefined;
+                  const currencyCode = String(selectedCurrency?.isoCode ?? selectedCurrency?.code ?? '');
+                  const automaticRate = binding && f.key === binding.currencyField
+                    ? resolveDocumentExchangeRate(exchangeRateQuery.data, currencyCode, getSystemCurrency(), binding.rateSide)
+                    : null;
                   setHeader((current) => ({
                     ...current,
                     [f.key]: v,
+                    ...(binding && f.key === binding.currencyField ? { [binding.rateField]: automaticRate ?? '' } : {}),
                     ...Object.fromEntries(dependentHeaderKeys.map((key) => [key, ''])),
                     ...(switchedToFreeReceipt ? { purchaseOrderIds: [] } : {}),
                   }));

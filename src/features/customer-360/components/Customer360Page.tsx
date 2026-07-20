@@ -375,7 +375,7 @@ function ScoreRow({
 
 function RevenueQualityPanel({ quality }: { quality: RevenueQualityDto | null | undefined }): ReactElement {
   const { t } = useTranslation('customer360');
-  const tc = (key: string, opts?: Record<string, unknown>) => t(key, opts);
+  const tc = useCallback((key: string, opts?: Record<string, unknown>) => t(key, opts), [t]);
   return (
     <Card className={MODERN_CARD_CLASS}>
       <CardHeader>
@@ -441,7 +441,7 @@ function CohortRetentionPanel({
   customerCode?: string | null;
 }): ReactElement {
   const { t } = useTranslation('customer360');
-  const tc = (key: string, opts?: Record<string, unknown>) => t(key, opts);
+  const tc = useCallback((key: string, opts?: Record<string, unknown>) => t(key, opts), [t]);
   const [isExporting, setIsExporting] = useState(false);
   const first = rows?.[0];
   const exportColumns = useMemo(() => buildCohortExportColumns(tc), [tc]);
@@ -512,7 +512,7 @@ function RecommendedActionsPanel({
   onExecute: (row: RecommendedActionDto) => void;
 }): ReactElement {
   const { t } = useTranslation(['customer360', 'common']);
-  const tc = (key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts });
+  const tc = useCallback((key: string, opts?: Record<string, unknown>) => t(key, { ns: 'customer360', ...opts }), [t]);
   return (
     <Card className={MODERN_CARD_CLASS}>
       <CardHeader>
