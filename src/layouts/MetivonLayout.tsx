@@ -1,4 +1,4 @@
-import { useState, type ReactElement } from "react";
+import { useEffect, useState, type ReactElement } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { ChevronDown, Search } from "lucide-react";
 import { useTranslation } from "react-i18next";
@@ -66,16 +66,40 @@ export function MetivonLayout(): ReactElement {
   const handleMenuSearch = (value: string): void => {
     setMenuSearch(value);
     const normalized = value.trim().toLocaleLowerCase("tr-TR");
-    requestAnimationFrame(() => {
-      document
-        .querySelectorAll<HTMLElement>("[data-sidebar-title]")
-        .forEach((element) => {
-          const title =
-            element.dataset.sidebarTitle?.toLocaleLowerCase("tr-TR") ?? "";
-          element.hidden = normalized.length > 0 && !title.includes(normalized);
-        });
-    });
+    if (normalized.length > 0) {
+      setIsAccountsOpen(true);
+      setIsAccountDefinitionsOpen(true);
+      setIsProductsOpen(true);
+      setIsProductDefinitionsOpen(true);
+      setIsWarehouseOpen(true);
+      setIsProcurementOpen(true);
+      setIsTradeOpen(true);
+      setIsSalesOpen(true);
+      setIsFinanceOpen(true);
+      setIsAccountingDefinitionsOpen(true);
+      setIsSystemOpen(true);
+    }
   };
+  useEffect(() => {
+    const normalized = menuSearch.trim().toLocaleLowerCase("tr-TR");
+    document.querySelectorAll<HTMLElement>("[data-sidebar-title]").forEach((element) => {
+      const title = element.dataset.sidebarTitle?.toLocaleLowerCase("tr-TR") ?? "";
+      element.hidden = normalized.length > 0 && !title.includes(normalized);
+    });
+  }, [
+    menuSearch,
+    isAccountsOpen,
+    isAccountDefinitionsOpen,
+    isProductsOpen,
+    isProductDefinitionsOpen,
+    isWarehouseOpen,
+    isProcurementOpen,
+    isTradeOpen,
+    isSalesOpen,
+    isFinanceOpen,
+    isAccountingDefinitionsOpen,
+    isSystemOpen,
+  ]);
 
   const sidebarContent = (mobile = false): ReactElement => (
     <>
@@ -144,6 +168,7 @@ export function MetivonLayout(): ReactElement {
                 end
               />
               <button
+                data-sidebar-title={te("nav.accountDefinitions")}
                 type="button"
                 onClick={() => setIsAccountDefinitionsOpen((value) => !value)}
                 aria-expanded={isAccountDefinitionsOpen}
@@ -160,6 +185,7 @@ export function MetivonLayout(): ReactElement {
                   {definitionLinks.map((item) => (
                     <NavLink
                       key={item.type}
+                      data-sidebar-title={item.title}
                       to={`/accounts/definitions/${item.type}`}
                       onClick={() => setIsMobileSidebarOpen(false)}
                       className={({ isActive }) =>
@@ -187,6 +213,7 @@ export function MetivonLayout(): ReactElement {
                 end
               />
               <button
+                data-sidebar-title={te("nav.stockDefinitions")}
                 type="button"
                 onClick={() => setIsProductDefinitionsOpen((value) => !value)}
                 aria-expanded={isProductDefinitionsOpen}
@@ -203,6 +230,7 @@ export function MetivonLayout(): ReactElement {
                   {productDefinitionLinks.map((item) => (
                     <NavLink
                       key={item.type}
+                      data-sidebar-title={item.title}
                       to={`/products/definitions/${item.type}`}
                       onClick={() => setIsMobileSidebarOpen(false)}
                       className={({ isActive }) =>

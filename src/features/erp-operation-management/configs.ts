@@ -332,7 +332,7 @@ export const importDossierConfig: ErpPageConfig = {
   pageKey: "import-dossiers",
   title: "İthalat Dosyaları",
   eyebrow: "İthalat Maliyetlendirme",
-  description: "Sipariş, mal kabul, ticari fatura ve ithalat masraflarını dosya bazında gerçek stok maliyetine dönüştürün.",
+  description: "Mal kabul sırasında otomatik açılan ithalat dosyalarına navlun, gümrük ve diğer maliyetleri ekleyip stok maliyetine dağıtın.",
   endpoint: "/api/import-dossiers",
   accent: "cyan",
   columns: [

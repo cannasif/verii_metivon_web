@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type FormEvent, type ReactElement } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useQueryClient } from "@tanstack/react-query";
 import { AlertTriangle, BadgeCheck, RefreshCw } from "lucide-react";
 import { api } from "@/lib/axios";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,7 @@ type ApiResponse<T> = { success: boolean; message?: string; data?: T };
 const emptyLookups: Lookups = { importDossiers: [], landedCostTypes: [], partners: [], currencies: [] };
 
 export function ImportDossierCostCreatePage(): ReactElement {
+  const queryClient = useQueryClient();
   const { id } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation(["erp", "common"]);
@@ -105,6 +107,7 @@ export function ImportDossierCostCreatePage(): ReactElement {
         exchangeRate: Number(form.exchangeRate), exchangeRateDate: form.exchangeRateDate || null, exchangeRateSource: form.exchangeRateSource || null,
         description: form.description || null, manualAllocations: null,
       });
+      await queryClient.invalidateQueries({ queryKey: ["import-dossiers"] });
       navigate(`/import-dossiers/${dossierId}`);
     } finally { setBusy(false); }
   };

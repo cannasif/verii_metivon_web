@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent, type ReactElement } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { ArrowLeft, Plus, Trash2 } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -33,6 +33,7 @@ export function ErpCreatePage({
   config: ErpFormConfig;
 }): ReactElement {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
   const { id } = useParams<{ id?: string }>();
   const editId = id ? Number(id) : null;
   const { t } = useTranslation(["erp", "common"]);
@@ -97,6 +98,7 @@ export function ErpCreatePage({
       } else {
         await api.post(config.endpoint, request);
       }
+      await queryClient.invalidateQueries({ refetchType: "all" });
       toast.success(t("common.createSuccess"));
       navigate(config.returnPath);
     } catch (error) {
