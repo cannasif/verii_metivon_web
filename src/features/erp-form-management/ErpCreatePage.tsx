@@ -56,6 +56,7 @@ export function ErpCreatePage({
     queryKey: ["erp-form-detail", config.returnPath, editId],
     queryFn: () => api.get<ApiEnvelope<Record<string, FormValue> & { lines?: Record<string, FormValue>[] }>>(config.detailEndpoint!(editId!)),
     enabled: editId !== null && Number.isFinite(editId) && Boolean(config.detailEndpoint),
+    refetchOnMount: "always",
   });
   useEffect(() => {
     const record = detailQuery.data?.data;
@@ -99,7 +100,7 @@ export function ErpCreatePage({
         await api.post(config.endpoint, request);
       }
       await queryClient.invalidateQueries({ refetchType: "all" });
-      toast.success(t("common.createSuccess"));
+      toast.success(editId !== null ? t("common.updateSuccess", { defaultValue: "Kayıt başarıyla güncellendi." }) : t("common.createSuccess"));
       navigate(config.returnPath);
     } catch (error) {
       toast.error(

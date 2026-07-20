@@ -1,1 +1,1 @@
-export {ProductManagementPage} from './components/ProductManagementPage';
+export {ProductManagementPage} from './components/ProductManagementPageV2';

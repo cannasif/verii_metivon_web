@@ -648,7 +648,7 @@ api.interceptors.response.use(
     const apiMessage = extractApiErrorMessage(apiError);
     const localizedApiMessage = resolveLocalizedApiErrorMessage(apiError, error.response?.status);
     if (localizedApiMessage || apiMessage) {
-      error.message = localizedApiMessage || apiMessage;
+      error.message = apiMessage || localizedApiMessage;
     }
 
     const requestUrl = originalRequest?.url ?? error.config?.url ?? null;

@@ -201,6 +201,8 @@ const purchaseLines = [
   { key: "description", label: "Açıklama", type: "text" },
 ] as const;
 export const purchaseForm: ErpFormConfig = {
+  detailEndpoint: (id) => `/api/purchase-orders/${id}`,
+  updateEndpoint: (id) => `/api/purchase-orders/${id}`,
   title: "Yeni Satın Alma Siparişi",
   description: "Tedarikçi, depo, teslimat ve ürün satırlarını tanımlayın.",
   endpoint: "/api/purchase-orders",
@@ -291,6 +293,8 @@ export const purchaseForm: ErpFormConfig = {
   }),
 };
 export const transferForm: ErpFormConfig = {
+  detailEndpoint: (id) => `/api/transfer-orders/${id}`,
+  updateEndpoint: (id) => `/api/transfer-orders/${id}`,
   title: "Yeni Depo Transferi",
   description:
     "Kaynak ve hedef depo arasında iki aşamalı transfer emri oluşturun.",
@@ -401,6 +405,8 @@ export const transferForm: ErpFormConfig = {
   }),
 };
 export const countForm: ErpFormConfig = {
+  detailEndpoint: (id) => `/api/inventory-counts/${id}`,
+  updateEndpoint: (id) => `/api/inventory-counts/${id}`,
   title: "Yeni Stok Sayımı",
   description:
     "Depo veya raf bazında sistem miktarlarını dondurarak sayım başlatın.",
@@ -443,6 +449,8 @@ export const countForm: ErpFormConfig = {
   }),
 };
 export const priceListForm: ErpFormConfig = {
+  detailEndpoint: (id) => `/api/pricing/price-lists/${id}`,
+  updateEndpoint: (id) => `/api/pricing/price-lists/${id}`,
   title: "Yeni Fiyat Listesi",
   description: "Geçerlilik tarihi, para birimi ve öncelik tanımlayın.",
   endpoint: "/api/pricing/price-lists",
@@ -481,6 +489,8 @@ export const accountForm: ErpFormConfig = {
   title: "Yeni Muhasebe Hesabı",
   description: "Hesap planına kayıt yapılabilir bir hesap ekleyin.",
   endpoint: "/api/accounting/accounts",
+  detailEndpoint: (id) => `/api/accounting/accounts/${id}`,
+  updateEndpoint: (id) => `/api/accounting/accounts/${id}`,
   returnPath: "/accounting/accounts",
   submitLabel: "Hesabı Oluştur",
   fields: [
@@ -522,6 +532,8 @@ export const accountForm: ErpFormConfig = {
   }),
 };
 export const receiptForm: ErpFormConfig = {
+  detailEndpoint: (id) => `/api/goods-receipts/${id}`,
+  updateEndpoint: (id) => `/api/goods-receipts/${id}`,
   title: "Yeni Mal Kabul",
   description: "Satın alma siparişine bağlı veya serbest mal kabul oluşturun.",
   endpoint: "/api/goods-receipts",
@@ -693,6 +705,8 @@ export const receiptForm: ErpFormConfig = {
   },
 };
 export const salesForm: ErpFormConfig = {
+  detailEndpoint: (id) => `/api/sales-orders/${id}`,
+  updateEndpoint: (id) => `/api/sales-orders/${id}`,
   title: "Yeni Satış Siparişi",
   description:
     "Müşteri, teslimat, fiyat ve rezervasyon boyutlarıyla satış siparişi oluşturun.",
@@ -832,6 +846,8 @@ export const salesForm: ErpFormConfig = {
   },
 };
 export const shipmentForm: ErpFormConfig = {
+  detailEndpoint: (id) => `/api/shipments/${id}`,
+  updateEndpoint: (id) => `/api/shipments/${id}`,
   title: "Yeni Sevk",
   description: "Rezerve satış siparişinden sevk satırları oluşturun.",
   endpoint: "/api/shipments",
@@ -1005,6 +1021,8 @@ export const importDossierForm: ErpFormConfig = {
 };
 export const landedCostTypeForm: ErpFormConfig = {
   title: "Yeni İthalat Masraf Türü", description: "Varsayılan dağıtım anahtarını ve muhasebe hesaplarını belirleyin.", endpoint: "/api/import-dossiers/cost-types", returnPath: "/import-dossiers/definitions/cost-types", submitLabel: "Masraf Türünü Oluştur",
+  detailEndpoint:(id)=>`/api/import-dossiers/cost-types/${id}`,
+  updateEndpoint:(id)=>`/api/import-dossiers/cost-types/${id}`,
   fields: [
     {key:"code",label:"Masraf Kodu",type:"text",required:true},{key:"name",label:"Masraf Adı",type:"text",required:true},{key:"description",label:"Açıklama",type:"textarea",span:2},
     {key:"defaultAllocationMethod",label:"Dağıtım Yöntemi (1:Tutar, 2:Miktar, 3:Ağırlık, 4:Hacim, 5:Eşit, 6:Manuel)",type:"number",defaultValue:1,required:true},

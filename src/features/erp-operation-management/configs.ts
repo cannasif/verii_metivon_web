@@ -131,7 +131,8 @@ export const purchaseConfig: ErpPageConfig = {
     { key: "status", label: "Durum", format: "status" },
   ],
   actions: [
-    { label: "Stok Hareketine Aktar", endpoint: (row) => `/api/goods-receipts/${row.id}/post`, confirm: "Bu mal kabul için stok hareketi oluşturulsun mu?", visible: (row) => ["Draft", "Registered"].includes(String(row.status)) },
+    {label:"Düzenle",kind:"update",navigateTo:(row)=>`/purchase-orders/${row.id}/edit`,visible:(row)=>String(row.status)==="Draft"},
+    {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/purchase-orders/${row.id}`,confirm:"Taslak satın alma siparişi kalıcı olarak silinsin mi?",variant:"destructive",visible:(row)=>String(row.status)==="Draft"},
   ],
 };
 export const receiptConfig: ErpPageConfig = {
@@ -155,6 +156,10 @@ export const receiptConfig: ErpPageConfig = {
     { key: "status", label: "Durum", format: "status" },
   ],
 };
+receiptConfig.actions = [
+  {label:"Düzenle",kind:"update",navigateTo:(row)=>`/goods-receipts/${row.id}/edit`,visible:(row)=>["Draft","Registered"].includes(String(row.status))},
+  {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/goods-receipts/${row.id}`,confirm:"Stok hareketi oluşmamış mal kabul kalıcı olarak silinsin mi?",variant:"destructive",visible:(row)=>["Draft","Registered"].includes(String(row.status))},
+];
 export const transferConfig: ErpPageConfig = {
   pageKey: "transfer-orders",
   title: "Depolar Arası Transfer",
@@ -175,6 +180,10 @@ export const transferConfig: ErpPageConfig = {
     { key: "status", label: "Durum", format: "status" },
   ],
 };
+transferConfig.actions = [
+  {label:"Düzenle",kind:"update",navigateTo:(row)=>`/transfer-orders/${row.id}/edit`,visible:(row)=>String(row.status)==="Draft"},
+  {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/transfer-orders/${row.id}`,confirm:"Taslak transfer kalıcı olarak silinsin mi?",variant:"destructive",visible:(row)=>String(row.status)==="Draft"},
+];
 export const salesConfig: ErpPageConfig = {
   pageKey: "sales-orders",
   title: "Satış Siparişleri",
@@ -198,6 +207,10 @@ export const salesConfig: ErpPageConfig = {
     { key: "status", label: "Durum", format: "status" },
   ],
 };
+salesConfig.actions = [
+  {label:"Düzenle",kind:"update",navigateTo:(row)=>`/sales-orders/${row.id}/edit`,visible:(row)=>String(row.status)==="Draft"},
+  {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/sales-orders/${row.id}`,confirm:"Taslak satış siparişi kalıcı olarak silinsin mi?",variant:"destructive",visible:(row)=>String(row.status)==="Draft"},
+];
 export const priceConfig: ErpPageConfig = {
   pageKey: "price-lists",
   title: "Fiyatlandırma ve İskonto",
@@ -220,6 +233,11 @@ export const priceConfig: ErpPageConfig = {
     { key: "isActive", label: "Durum", format: "boolean" },
   ],
 };
+// Price list master data is editable; referenced/default lists are protected by the API.
+priceConfig.actions = [
+  {label:"Düzenle",kind:"update",navigateTo:(row)=>`/pricing/price-lists/${row.id}/edit`},
+  {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/pricing/price-lists/${row.id}`,confirm:"Fiyat listesi kalıcı olarak silinsin mi? Satırı veya kullanımı olan liste silinemez.",variant:"destructive"},
+];
 export const shipmentConfig: ErpPageConfig = {
   pageKey: "shipments",
   title: "Sevk ve İrsaliye",
@@ -242,6 +260,10 @@ export const shipmentConfig: ErpPageConfig = {
     { key: "deliveryNoteStatus", label: "İrsaliye Durumu", format: "status" },
   ],
 };
+shipmentConfig.actions = [
+  {label:"Düzenle",kind:"update",navigateTo:(row)=>`/shipments/${row.id}/edit`,visible:(row)=>String(row.status)==="Draft"},
+  {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/shipments/${row.id}`,confirm:"Taslak sevk kaydı kalıcı olarak silinsin mi?",variant:"destructive",visible:(row)=>String(row.status)==="Draft"},
+];
 export const countConfig: ErpPageConfig = {
   pageKey: "inventory-counts",
   title: "Sayım ve Stok Düzeltme",
@@ -263,6 +285,11 @@ export const countConfig: ErpPageConfig = {
     { key: "status", label: "Durum", format: "status" },
   ],
 };
+// Count documents can only be changed while they are drafts.
+countConfig.actions = [
+  {label:"Düzenle",kind:"update",navigateTo:(row)=>`/inventory-counts/${row.id}/edit`,visible:(row)=>String(row.status)==="Draft"},
+  {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/inventory-counts/${row.id}`,confirm:"Taslak sayım kalıcı olarak silinsin mi?",variant:"destructive",visible:(row)=>String(row.status)==="Draft"},
+];
 export const eDocumentConfig: ErpPageConfig = {
   pageKey: "e-documents",
   title: "E-İrsaliye / E-Fatura",
@@ -303,6 +330,10 @@ export const accountConfig: ErpPageConfig = {
     { key: "allowPosting", label: "Kayıt İzni", format: "boolean" },
     { key: "currencyCode", label: "Para Birimi" },
     { key: "isActive", label: "Durum", format: "boolean" },
+  ],
+  actions: [
+    {label:"Düzenle",kind:"update",navigateTo:(row)=>`/accounting/accounts/${row.id}/edit`},
+    {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/accounting/accounts/${row.id}`,confirm:"Muhasebe hesabı kalıcı olarak silinsin mi? Hareketi olan hesaplar silinemez.",variant:"destructive"},
   ],
 };
 export const journalConfig: ErpPageConfig = {
@@ -368,12 +399,16 @@ export const landedCostTypeConfig: ErpPageConfig = {
   accent: "cyan",
   createLabel: "Yeni Masraf Türü",
   createPath: "/import-dossiers/definitions/cost-types/new",
-  columns: [id,{key:"code",label:"Kod"},{key:"name",label:"Ad"},{key:"allocationMethod",label:"Dağıtım Anahtarı",format:"status"},{key:"includeInCustomsValue",label:"Gümrük Kıymetine Dahil",format:"boolean"},{key:"capitalizeToInventory",label:"Stok Maliyetine Ekle",format:"boolean"},{key:"clearingAccountId",label:"Mahsup Hesabı ID",format:"id"},{key:"varianceAccountId",label:"Fark Hesabı ID",format:"id"},{key:"isDefault",label:"Varsayılan",format:"boolean"},{key:"isActive",label:"Aktif",format:"boolean"}],
+  columns: [id,{key:"code",label:"Kod"},{key:"name",label:"Ad"},{key:"allocationMethod",label:"Dağıtım Anahtarı",format:"status"},{key:"includeInCustomsValue",label:"Gümrük Kıymetine Dahil",format:"boolean"},{key:"capitalizeToInventory",label:"Stok Maliyetine Ekle",format:"boolean"},{key:"clearingAccountId",label:"Mahsup Hesabı",format:"id"},{key:"varianceAccountId",label:"Fark Hesabı",format:"id"},{key:"isDefault",label:"Varsayılan",format:"boolean"},{key:"isActive",label:"Aktif",format:"boolean"}],
+  actions: [
+    {label:"Düzenle",kind:"update",navigateTo:(row)=>`/import-dossiers/definitions/cost-types/${row.id}/edit`},
+    {label:"Sil",kind:"delete",method:"delete",endpoint:(row)=>`/api/import-dossiers/cost-types/${row.id}`,confirm:"Masraf türü kalıcı olarak silinsin mi?",variant:"destructive"},
+  ],
 };
 export const tradeDossierConfig: ErpPageConfig = {
   pageKey: "trade-dossiers", title: "Dış Ticaret Dosyaları", eyebrow: "İthalat ve İhracat Operasyonları",
   description: "Siparişten gümrük çıkışına kadar beyanname, antrepo, belge, mal kabul ve sevkiyat bağlantılarını tek dosyada izleyin.",
   endpoint: "/api/trade-dossiers", accent: "cyan", createLabel: "Yeni Dış Ticaret Dosyası", createPath: "/trade-dossiers/new",
   columns: [id,{key:"dossierNumber",label:"Dosya No"},{key:"direction",label:"Yön",format:"status"},{key:"operationType",label:"İşlem Türü",format:"status"},{key:"businessPartner",label:"İlgili Cari"},{key:"currencyCode",label:"Döviz"},{key:"incotermCode",label:"Teslim Şekli"},{key:"openDate",label:"Açılış",format:"date"},{key:"estimatedArrivalDate",label:"Tahmini Varış",format:"date"},{key:"status",label:"Gümrük Durumu",format:"status"},{key:"declarationCount",label:"Beyanname",format:"number"},{key:"linkedDocumentCount",label:"Bağlı Belge",format:"number"},{key:"customsWaitingHours",label:"Bekleme (saat)",format:"number"}],
-  actions:[{label:"Dosya Kokpiti",navigateTo:(row)=>`/trade-dossiers/${row.id}`}]
+  actions:[{label:"Dosyayı Aç",icon:"open",navigateTo:(row)=>`/trade-dossiers/${row.id}`}]
 };

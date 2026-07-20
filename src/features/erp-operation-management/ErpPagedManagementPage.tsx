@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, type ReactElement } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowDown, ArrowUp, ArrowUpDown, Plus } from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, FolderOpen, Pencil, Plus, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { api } from "@/lib/axios";
@@ -223,6 +223,10 @@ export function ErpPagedManagementPage({
     if (action.kind === "delete") return t("common.delete", { defaultValue: action.label });
     return t(`pages.${config.pageKey}.actions.${index}.label`, { defaultValue: action.label });
   };
+  const actionIcon = (action: NonNullable<ErpPageConfig["actions"]>[number]) => {
+    const icon = action.icon ?? (action.kind === "update" ? "edit" : action.kind === "delete" || action.method === "delete" ? "delete" : undefined);
+    return icon === "edit" ? <Pencil className="h-4 w-4" /> : icon === "delete" ? <Trash2 className="h-4 w-4" /> : icon === "open" ? <FolderOpen className="h-4 w-4" /> : null;
+  };
   const confirmationAction = confirmation ? config.actions?.[confirmation.index] : undefined;
   return (
     <div className="space-y-5">
@@ -307,6 +311,7 @@ export function ErpPagedManagementPage({
           <div className="flex justify-end gap-2">
             {config.actions?.map((action, index) => !isActionAllowed(action) || action.visible?.(row) === false ? null : (
               <Button key={`${row.id}:${index}`} size="sm" variant={action.variant ?? "outline"} disabled={pendingAction !== null} onClick={() => runAction(row, index)}>
+                {actionIcon(action)}
                 {actionLabel(action, index)}
               </Button>
             ))}
