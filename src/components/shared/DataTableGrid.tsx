@@ -1,4 +1,4 @@
-import { type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent, type ReactElement, type ReactNode, useRef, useState, useEffect, useCallback, useMemo } from 'react';
+import { type MouseEvent as ReactMouseEvent, type PointerEvent as ReactPointerEvent, type ReactElement, type ReactNode, isValidElement, useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown, GripVertical, Loader2 } from 'lucide-react';
 import { DndContext, closestCenter, KeyboardSensor, MouseSensor, TouchSensor, useSensor, useSensors, type DragCancelEvent, type DragEndEvent, type DragStartEvent } from '@dnd-kit/core';
@@ -71,17 +71,25 @@ interface DataTableGridProps<TRow, TKey extends string> {
 
 const MIN_COL_WIDTH = 60;
 const DEFAULT_COL_WIDTH = 150;
+const MAX_AUTO_COL_WIDTH = 300;
+const COLUMN_WIDTH_BUFFER = 16;
 const ACTIONS_COL_WIDTH = 84;
-const HEADER_BASE_CHROME = 28;
-const HEADER_DRAG_CHROME = 34;
-const HEADER_SORT_CHROME = 22;
-const HEADER_RESIZE_CHROME = 12;
+const ACTIONS_WIDE_COL_WIDTH = 196;
+const CELL_CONTENT_PADDING = 20;
+const BADGE_HORIZONTAL_PADDING = 24;
+const CONTENT_WIDTH_SAMPLE_SIZE = 30;
+const HEADER_BASE_CHROME = 20;
+const HEADER_DRAG_CHROME = 32;
+const HEADER_SORT_CHROME = 32;
+const HEADER_RESIZE_CHROME = 10;
 
 let headerMeasureContext: CanvasRenderingContext2D | null | undefined;
 
-function measureHeaderLabelWidth(label: string): number {
+function measureTextWidth(text: string, font: string): number {
+  if (!text) return 0;
+
   if (typeof document === 'undefined') {
-    return Math.ceil(label.length * 9);
+    return Math.ceil(text.length * 9);
   }
 
   if (headerMeasureContext === undefined) {
@@ -90,12 +98,151 @@ function measureHeaderLabelWidth(label: string): number {
   }
 
   if (!headerMeasureContext) {
-    return Math.ceil(label.length * 9);
+    return Math.ceil(text.length * 9);
   }
 
-  // Approximate TableHead typography (sm / medium).
-  headerMeasureContext.font = '500 14px ui-sans-serif, system-ui, sans-serif';
-  return Math.ceil(headerMeasureContext.measureText(label).width);
+  headerMeasureContext.font = font;
+  return Math.ceil(headerMeasureContext.measureText(text).width);
+}
+
+function measureHeaderLabelWidth(label: string): number {
+  return measureTextWidth(label, '500 14px ui-sans-serif, system-ui, sans-serif');
+}
+
+function measureCellTextWidth(text: string, options?: { mono?: boolean; small?: boolean }): number {
+  if (options?.mono) {
+    return measureTextWidth(text, '600 12px ui-monospace, SFMono-Regular, Menlo, monospace');
+  }
+
+  if (options?.small) {
+    return measureTextWidth(text, '500 12px ui-sans-serif, system-ui, sans-serif');
+  }
+
+  return measureTextWidth(text, '400 14px ui-sans-serif, system-ui, sans-serif');
+}
+
+function extractMeasurableText(node: ReactNode): string {
+  if (node == null || typeof node === 'boolean') return '';
+  if (typeof node === 'string' || typeof node === 'number') return String(node);
+  if (Array.isArray(node)) {
+    return node.map(extractMeasurableText).filter(Boolean).join(' ').trim();
+  }
+  if (!isValidElement(node)) return '';
+
+  const props = node.props as {
+    children?: ReactNode;
+    title?: string;
+    'aria-label'?: string;
+  };
+
+  const attrText = props.title ?? props['aria-label'];
+  if (attrText) return attrText;
+
+  if (props.children != null) {
+    return extractMeasurableText(props.children);
+  }
+
+  return '';
+}
+
+function getElementClassName(node: ReactNode): string {
+  if (!isValidElement(node)) return '';
+  const props = node.props as { className?: string };
+  return props.className ?? '';
+}
+
+function estimateRenderedCellWidth(node: ReactNode, text: string): number {
+  const className = getElementClassName(node);
+  const mono = className.includes('font-mono');
+  const small = className.includes('text-xs');
+  const badge = className.includes('rounded-full');
+
+  const textWidth = measureCellTextWidth(text, { mono, small });
+  return textWidth + CELL_CONTENT_PADDING + (badge ? BADGE_HORIZONTAL_PADDING : 0);
+}
+
+function estimateRawCellTextWidth(key: string, value: unknown): number {
+  if (value == null) return 0;
+
+  let text: string | undefined;
+  if (typeof value === 'string') {
+    text = value;
+  } else if (typeof value === 'number' || typeof value === 'boolean') {
+    text = String(value);
+  }
+
+  if (!text) return 0;
+  if (key.toLowerCase() === 'id') {
+    text = `#${text}`;
+  }
+
+  return measureCellTextWidth(text, { mono: key.toLowerCase() === 'id' || key.toLowerCase() === 'code' });
+}
+
+function estimateColumnContentWidth<TRow, TKey extends string>(
+  key: TKey,
+  rows: TRow[],
+  renderCell: (row: TRow, columnKey: TKey, columnWidth?: number) => ReactNode
+): number {
+  let max = 0;
+
+  for (const row of rows.slice(0, CONTENT_WIDTH_SAMPLE_SIZE)) {
+    const rendered = renderCell(row, key);
+    const renderedText = extractMeasurableText(rendered).trim();
+    if (renderedText) {
+      max = Math.max(max, estimateRenderedCellWidth(rendered, renderedText));
+      continue;
+    }
+
+    const record = row as Record<string, unknown>;
+    if (key in record) {
+      max = Math.max(max, estimateRawCellTextWidth(key, record[key]) + CELL_CONTENT_PADDING);
+    }
+  }
+
+  return max;
+}
+
+function collectTextSegments(node: ReactNode): string[] {
+  if (node == null || typeof node === 'boolean') return [];
+  if (typeof node === 'string' || typeof node === 'number') {
+    const text = String(node).trim();
+    return text ? [text] : [];
+  }
+  if (Array.isArray(node)) {
+    return node.flatMap(collectTextSegments);
+  }
+  if (!isValidElement(node)) return [];
+
+  const props = node.props as { children?: ReactNode };
+  if (props.children == null) return [];
+  return collectTextSegments(props.children);
+}
+
+function estimateActionsColumnContentWidth<TRow>(
+  rows: TRow[],
+  renderActionsCell?: (row: TRow) => ReactNode
+): number {
+  if (!renderActionsCell || rows.length === 0) return 0;
+
+  const BUTTON_HORIZONTAL_CHROME = 48;
+  const BUTTON_GAP = 8;
+
+  let max = 0;
+  for (const row of rows.slice(0, CONTENT_WIDTH_SAMPLE_SIZE)) {
+    const rendered = renderActionsCell(row);
+    const segments = collectTextSegments(rendered).filter(Boolean);
+    if (segments.length === 0) continue;
+
+    const width =
+      segments.reduce((sum, text) => sum + measureCellTextWidth(text) + BUTTON_HORIZONTAL_CHROME, 0) +
+      Math.max(0, segments.length - 1) * BUTTON_GAP +
+      CELL_CONTENT_PADDING;
+
+    max = Math.max(max, width);
+  }
+
+  return max;
 }
 
 function estimateHeaderColumnWidth(
@@ -111,11 +258,72 @@ function estimateHeaderColumnWidth(
   );
 }
 
+function resolveNaturalColumnWidth(
+  headerWidth: number,
+  contentWidth: number,
+  manualWidth?: number
+): number {
+  const bufferedWidth = Math.max(headerWidth, contentWidth, MIN_COL_WIDTH) + COLUMN_WIDTH_BUFFER;
+
+  if (manualWidth !== undefined) {
+    return Math.max(manualWidth, bufferedWidth);
+  }
+
+  return clampAutoColumnWidth(bufferedWidth);
+}
+
+function clampAutoColumnWidth(width: number): number {
+  return Math.min(Math.max(width, MIN_COL_WIDTH), MAX_AUTO_COL_WIDTH);
+}
+
+function buildColumnWidthStyle(
+  widthPx: number,
+  options: { manualWidth?: number; clipOverflow?: boolean }
+): React.CSSProperties {
+  const resolvedWidth = options.manualWidth ?? widthPx;
+
+  return {
+    width: `${resolvedWidth}px`,
+    minWidth: `${resolvedWidth}px`,
+    maxWidth: `${resolvedWidth}px`,
+    ...(options.clipOverflow !== false ? { overflow: 'hidden' as const } : {}),
+  };
+}
+
+function distributeColumnWidths(
+  widths: Record<string, number>,
+  keys: string[],
+  targetTotal: number
+): Record<string, number> {
+  const currentTotal = keys.reduce((sum, key) => sum + (widths[key] ?? MIN_COL_WIDTH), 0);
+  if (currentTotal <= 0 || targetTotal <= currentTotal) {
+    return widths;
+  }
+
+  const extra = targetTotal - currentTotal;
+  const next: Record<string, number> = { ...widths };
+  let assignedExtra = 0;
+
+  keys.forEach((key, index) => {
+    const base = widths[key] ?? MIN_COL_WIDTH;
+    if (index === keys.length - 1) {
+      next[key] = base + (extra - assignedExtra);
+      return;
+    }
+
+    const share = Math.floor((extra * base) / currentTotal);
+    assignedExtra += share;
+    next[key] = base + share;
+  });
+
+  return next;
+}
+
 function isInteractiveTarget(target: EventTarget | null): boolean {
   if (!(target instanceof Element)) return false;
   return Boolean(
     target.closest(
-      'button, a, input, select, textarea, label, [role="button"], [data-no-drag-scroll="true"], [data-skip-row-double-click]'
+      'button, a, input, select, textarea, label, [role="button"], [data-no-drag-scroll="true"]'
     )
   );
 }
@@ -129,6 +337,7 @@ function SortableTableHead<TKey extends string>({
   centerColumnHeaders,
   enableDragAndDrop,
   width,
+  minWidth,
   onResizeStart,
   onTouchStart,
   isResizing,
@@ -142,6 +351,7 @@ function SortableTableHead<TKey extends string>({
   centerColumnHeaders?: boolean;
   enableDragAndDrop?: boolean;
   width?: number;
+  minWidth?: number;
   onResizeStart?: (e: React.MouseEvent, key: TKey) => void;
   onTouchStart?: (e: React.TouchEvent, key: TKey) => void;
   isResizing?: boolean;
@@ -172,8 +382,9 @@ function SortableTableHead<TKey extends string>({
 
   const cellStyle: React.CSSProperties = {
     position: 'relative' as const,
-    width: width !== undefined ? `${width}px` : undefined,
-    minWidth: width !== undefined ? `${width}px` : undefined,
+    ...buildColumnWidthStyle(minWidth ?? width ?? DEFAULT_COL_WIDTH, {
+      manualWidth: width,
+    }),
     // Keep th in flow so transforms never inflate table/scroll width.
     zIndex: isDragging ? 10 : (isResizing ? 5 : 'auto'),
   };
@@ -211,11 +422,11 @@ function SortableTableHead<TKey extends string>({
         centerColumnHeaders && 'text-center',
         column?.headClassName,
         isDragging && 'bg-slate-100/80 dark:bg-white/10',
-        'select-none'
+        'select-none overflow-hidden max-w-0'
       )}
     >
       <div ref={headInnerRef} style={innerStyle} className={cn(isDragging && 'rounded-md bg-slate-100 shadow-md dark:bg-slate-900')}>
-      <div className={cn("flex items-center gap-1 w-full crm-pe-2", centerColumnHeaders ? "justify-center" : "justify-start")}>
+      <div className={cn("flex items-center gap-1 w-full min-w-0 overflow-hidden crm-pe-2", centerColumnHeaders ? "justify-center" : "justify-start")}>
         {isDraggable && (
           <div
             {...attributes}
@@ -233,17 +444,17 @@ function SortableTableHead<TKey extends string>({
             size="sm"
             onClick={() => onSort?.(columnKey)}
             className={cn(
-              'h-7 hover:bg-transparent shrink-0',
+              'h-7 min-w-0 max-w-full hover:bg-transparent shrink',
               centerColumnHeaders
                 ? 'inline-flex min-h-7 flex-nowrap items-center justify-center gap-1 px-1'
                 : 'px-1 crm-text-start justify-start'
             )}
           >
-            {headerLabelNode}
-            {renderSortIcon?.(columnKey)}
+            <span className="min-w-0 truncate">{headerLabelNode}</span>
+            <span className="shrink-0">{renderSortIcon?.(columnKey)}</span>
           </Button>
         ) : (
-          <span className={cn("px-1 shrink-0 whitespace-nowrap", centerColumnHeaders ? "text-center block w-full" : "crm-text-start")}>
+          <span className={cn("px-1 min-w-0 truncate", centerColumnHeaders ? "text-center block w-full" : "crm-text-start")}>
             {headerLabelNode}
           </span>
         )}
@@ -366,7 +577,7 @@ export function DataTableGrid<TRow, TKey extends string>({
     }
 
     const startWidth = snapshotWidths[key] ?? (columnWidths[key] ?? DEFAULT_COL_WIDTH);
-    setColumnWidths(prev => ({ ...prev, ...snapshotWidths }));
+    setColumnWidths((prev) => ({ ...prev, [key]: startWidth }));
     if (currentActionsWidth !== null) {
       setActionsColumnWidth(currentActionsWidth);
     }
@@ -425,6 +636,21 @@ export function DataTableGrid<TRow, TKey extends string>({
   const lastRowClickRef = useRef<{ key: string | number; timestamp: number } | null>(null);
   const suppressNativeDoubleClickUntilRef = useRef(0);
   const tableScrollRef = useRef<HTMLDivElement | null>(null);
+  const [scrollContainerWidth, setScrollContainerWidth] = useState(0);
+
+  useEffect(() => {
+    const container = tableScrollRef.current;
+    if (!container) return;
+
+    const updateWidth = () => {
+      setScrollContainerWidth(container.clientWidth);
+    };
+
+    updateWidth();
+    const observer = new ResizeObserver(updateWidth);
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
   const columnDragPointerXRef = useRef<number | null>(null);
   const columnDragScrollRafRef = useRef<number | null>(null);
   const columnDragMaxScrollLeftRef = useRef(0);
@@ -645,7 +871,7 @@ export function DataTableGrid<TRow, TKey extends string>({
   };
 
   const colSpan = localVisibleColumnKeys.length + (showActionsColumn ? 1 : 0) || 1;
-  const resolvedColumnWidths = useMemo(() => {
+  const naturalColumnWidths = useMemo(() => {
     const widths: Record<string, number> = {};
     for (const key of localVisibleColumnKeys) {
       const column = columns.find((item) => item.key === key);
@@ -658,17 +884,13 @@ export function DataTableGrid<TRow, TKey extends string>({
         sortable,
         resizable: enableColumnResize,
       });
+      const contentMinWidth = estimateColumnContentWidth(key, rows, renderCell);
 
-      // Manual resize wins; otherwise widen enough for the header chrome + label.
-      if (columnWidths[key] !== undefined) {
-        widths[key] = Math.max(columnWidths[key], headerMinWidth, MIN_COL_WIDTH);
-      } else {
-        widths[key] = Math.max(
-          column?.defaultWidth ?? DEFAULT_COL_WIDTH,
-          headerMinWidth,
-          MIN_COL_WIDTH
-        );
-      }
+      widths[key] = resolveNaturalColumnWidth(
+        headerMinWidth,
+        contentMinWidth,
+        columnWidths[key]
+      );
     }
     return widths;
   }, [
@@ -678,10 +900,16 @@ export function DataTableGrid<TRow, TKey extends string>({
     enableColumnResize,
     localVisibleColumnKeys,
     onSort,
+    renderCell,
+    rows,
   ]);
-  const resolvedActionsWidth = showActionsColumn
+  const naturalActionsWidth = showActionsColumn
     ? Math.max(
-        actionsColumnWidth ?? (iconOnlyActions ? ACTIONS_COL_WIDTH : 280),
+        actionsColumnWidth ??
+          Math.max(
+            iconOnlyActions ? ACTIONS_COL_WIDTH : ACTIONS_WIDE_COL_WIDTH,
+            estimateActionsColumnContentWidth(rows, renderActionsCell)
+          ),
         estimateHeaderColumnWidth(resolvedActionsHeaderLabel || 'İşlemler', {
           draggable: false,
           sortable: false,
@@ -690,12 +918,52 @@ export function DataTableGrid<TRow, TKey extends string>({
       )
     : 0;
   const useFixedColumnLayout = enableColumnResize;
-  const tablePixelWidth = useFixedColumnLayout
+  const naturalTableWidth = useFixedColumnLayout
     ? localVisibleColumnKeys.reduce(
-        (sum, key) => sum + (resolvedColumnWidths[key] ?? DEFAULT_COL_WIDTH),
-        showActionsColumn ? resolvedActionsWidth : 0
+        (sum, key) => sum + (naturalColumnWidths[key] ?? MIN_COL_WIDTH),
+        showActionsColumn ? naturalActionsWidth : 0
       )
     : undefined;
+  const shouldStretchColumns = Boolean(
+    useFixedColumnLayout &&
+      naturalTableWidth !== undefined &&
+      scrollContainerWidth > 0 &&
+      naturalTableWidth < scrollContainerWidth
+  );
+  const displayColumnWidths = useMemo(() => {
+    if (!shouldStretchColumns || naturalTableWidth === undefined) {
+      return naturalColumnWidths;
+    }
+
+    const targetTotal = Math.max(
+      scrollContainerWidth,
+      naturalTableWidth
+    );
+    const stretchableTotal = targetTotal - (showActionsColumn ? naturalActionsWidth : 0);
+    return distributeColumnWidths(
+      naturalColumnWidths,
+      localVisibleColumnKeys,
+      stretchableTotal
+    );
+  }, [
+    localVisibleColumnKeys,
+    naturalActionsWidth,
+    naturalColumnWidths,
+    naturalTableWidth,
+    scrollContainerWidth,
+    shouldStretchColumns,
+    showActionsColumn,
+  ]);
+  const displayActionsWidth = naturalActionsWidth;
+  const tablePixelWidth = useFixedColumnLayout
+    ? shouldStretchColumns
+      ? scrollContainerWidth
+      : naturalTableWidth
+    : undefined;
+  const isManuallySizedColumn = useCallback(
+    (key: string) => columnWidths[key] !== undefined,
+    [columnWidths]
+  );
 
   return (
     <div data-responsive-grid className="flex min-w-0 w-full max-w-full flex-col gap-2">
@@ -712,7 +980,7 @@ export function DataTableGrid<TRow, TKey extends string>({
         <div
           ref={tableScrollRef}
           className={cn(
-            'relative rounded-md border overflow-x-auto w-full min-w-0 *:data-[slot=table-container]:overflow-visible',
+            'relative overflow-x-auto w-full min-w-0',
             resizingKey
               ? 'cursor-col-resize select-none'
               : isDragging
@@ -734,14 +1002,15 @@ export function DataTableGrid<TRow, TKey extends string>({
           autoScroll={false}
         >
           <Table
+            containerClassName="w-full overflow-visible"
             className={cn(
-              minTableWidthClassName,
+              !useFixedColumnLayout && minTableWidthClassName,
               useFixedColumnLayout && 'table-fixed',
               '[&_th]:border-e [&_td]:border-e [&_th]:border-slate-200/80 [&_td]:border-slate-200/80 dark:[&_th]:border-white/10 dark:[&_td]:border-white/10 [&_th:last-child]:border-e-0 [&_td:last-child]:border-e-0'
             )}
             style={
               tablePixelWidth !== undefined
-                ? { width: '100%', minWidth: tablePixelWidth }
+                ? { width: tablePixelWidth, minWidth: tablePixelWidth, maxWidth: tablePixelWidth }
                 : undefined
             }
           >
@@ -750,17 +1019,17 @@ export function DataTableGrid<TRow, TKey extends string>({
                 {localVisibleColumnKeys.map((key) => (
                   <col
                     key={key}
-                    style={{
-                      width: `${resolvedColumnWidths[key] ?? DEFAULT_COL_WIDTH}px`,
-                      minWidth: `${resolvedColumnWidths[key] ?? DEFAULT_COL_WIDTH}px`,
-                    }}
+                    style={buildColumnWidthStyle(displayColumnWidths[key] ?? MIN_COL_WIDTH, {
+                      manualWidth: isManuallySizedColumn(key) ? columnWidths[key] : undefined,
+                    })}
                   />
                 ))}
                 {showActionsColumn && (
-                  <col style={{
-                    width: `${resolvedActionsWidth}px`,
-                    minWidth: `${resolvedActionsWidth}px`
-                  }} />
+                  <col
+                    style={buildColumnWidthStyle(displayActionsWidth, {
+                      manualWidth: actionsColumnWidth ?? undefined,
+                    })}
+                  />
                 )}
               </colgroup>
             )}
@@ -776,8 +1045,9 @@ export function DataTableGrid<TRow, TKey extends string>({
                     const column = columns.find((item) => item.key === key);
                     const sortable = Boolean(onSort && column?.sortable !== false);
                     const colWidth = useFixedColumnLayout
-                      ? resolvedColumnWidths[key]
+                      ? displayColumnWidths[key]
                       : columnWidths[key];
+                    const manualWidth = isManuallySizedColumn(key) ? columnWidths[key] : undefined;
                     return (
                       <SortableTableHead
                         key={key}
@@ -791,7 +1061,8 @@ export function DataTableGrid<TRow, TKey extends string>({
                         onResizeStart={enableColumnResize ? handleResizeStart : undefined}
                         onTouchStart={enableColumnResize ? handleTouchStart : undefined}
                         isResizing={resizingKey === key}
-                        width={colWidth}
+                        width={manualWidth}
+                        minWidth={colWidth}
                         dragBoundRightPx={showActionsColumn ? columnDragBoundRightPx : null}
                       />
                     );
@@ -806,10 +1077,9 @@ export function DataTableGrid<TRow, TKey extends string>({
                     )}
                     style={
                       useFixedColumnLayout
-                        ? {
-                            width: `${resolvedActionsWidth}px`,
-                            minWidth: `${resolvedActionsWidth}px`,
-                          }
+                        ? buildColumnWidthStyle(displayActionsWidth, {
+                            manualWidth: actionsColumnWidth ?? undefined,
+                          })
                         : undefined
                     }
                   >
@@ -871,23 +1141,27 @@ export function DataTableGrid<TRow, TKey extends string>({
                       {localVisibleColumnKeys.map((key) => {
                         const column = columns.find((item) => item.key === key);
                         const colWidth = useFixedColumnLayout
-                          ? resolvedColumnWidths[key]
+                          ? displayColumnWidths[key]
                           : columnWidths[key];
+                        const manualWidth = isManuallySizedColumn(key) ? columnWidths[key] : undefined;
                         return (
                           <TableCell
                             key={`${rowKey(row)}-${key}`}
-                            className={cn(column?.cellClassName, colWidth !== undefined && 'max-w-0')}
+                            className={cn(column?.cellClassName, useFixedColumnLayout && 'max-w-0 overflow-hidden')}
                             style={
-                              colWidth !== undefined
-                                ? { width: `${colWidth}px`, maxWidth: `${colWidth}px`, overflow: 'hidden' }
+                              useFixedColumnLayout && colWidth !== undefined
+                                ? buildColumnWidthStyle(colWidth, {
+                                    manualWidth,
+                                  })
                                 : undefined
                             }
                           >
                             <div className={cn(
                               'min-w-0',
-                              colWidth !== undefined && 'overflow-hidden truncate [&>div]:min-w-0 [&>div]:overflow-hidden [&_span]:truncate [&_span]:min-w-0'
+                              useFixedColumnLayout &&
+                              'overflow-hidden truncate [&>div]:min-w-0 [&>div]:overflow-hidden [&>div]:truncate [&_span]:truncate [&_span]:min-w-0'
                             )}>
-                              {renderCell(row, key, colWidth)}
+                              {renderCell(row, key, manualWidth ?? colWidth)}
                             </div>
                           </TableCell>
                         );
@@ -899,9 +1173,15 @@ export function DataTableGrid<TRow, TKey extends string>({
                             iconOnlyActions &&
                             '[&_button]:h-8 [&_button]:w-8 [&_button]:p-0 [&_button]:min-w-8 [&_button]:text-[0px] [&_button]:leading-none [&_button_svg]:h-4 [&_button_svg]:w-4 [&_button_svg]:mx-auto [&_button_svg]:shrink-0 [&_button_span]:hidden'
                           )}
+                          style={
+                            useFixedColumnLayout
+                              ? buildColumnWidthStyle(displayActionsWidth, {
+                                  manualWidth: actionsColumnWidth ?? undefined,
+                                })
+                              : undefined
+                          }
                           onClick={(event) => event.stopPropagation()}
                           onDoubleClick={(event) => event.stopPropagation()}
-                          data-no-drag-scroll="true"
                           data-skip-row-double-click="true"
                         >
                           {renderActionsCell?.(row)}

@@ -70,9 +70,46 @@ const definitions: Record<string, Definition> = {
 const basePath = (path: string) => path.replace(/\/(?:new|usages|\d+\/edit)$/, "");
 const resolve = (path: string) =>
   definitions[basePath(path)] ?? definitions["/goods-receipts/number-series"];
+
+const NUMBER_SERIES_FIELD_LABELS: Record<string, string> = {
+  code: "Seri Kodu",
+  name: "Seri Adı",
+  reference: "Belge Referansı",
+  scopeType: "Kapsam",
+  branchId: "Şube",
+  warehouseId: "Depo",
+  format: "Format",
+  resetPeriod: "Sıfırlama",
+  startingNumber: "Başlangıç Numarası",
+  incrementBy: "Artış Miktarı",
+  maximumNumber: "Maksimum Numara",
+  reservationTimeoutMinutes: "Rezervasyon Süresi (dk)",
+  priority: "Öncelik",
+  channel: "Kanal",
+  scenario: "Senaryo",
+  isGibCompliant: "GİB Uyumlu",
+  allowManual: "Manuel Numaraya İzin Ver",
+  isContinuous: "Kesintisiz Numaralandırma",
+  isDefault: "Varsayılan",
+  isActive: "Aktif",
+  seriesCode: "Seri Kodu",
+  documentNumber: "Belge Numarası",
+  documentType: "Belge Türü",
+  periodKey: "Dönem",
+  sequenceNumber: "Sayaç",
+  status: "Durum",
+  documentId: "Belge Kayıt ID",
+  reservedAt: "Ayrılma Zamanı",
+  reservationExpiresAt: "Rezervasyon Bitişi",
+  usedAt: "Kullanım Zamanı",
+  cancelledAt: "İptal Zamanı",
+  recycledAt: "Geri Alınma Zamanı",
+  cancellationReason: "İptal Nedeni",
+};
+
 const c = (
   key: string,
-  label: string,
+  label: string = NUMBER_SERIES_FIELD_LABELS[key] ?? key,
   extra: Partial<ErpColumn> = {},
 ): ErpColumn => ({
   key,
@@ -366,7 +403,8 @@ export function NumberSeriesCreatePage(): ReactElement {
       setSaving(false);
     }
   };
-  const f = (key: string) => t(`numberSeries.fields.${key}`);
+  const f = (key: string) =>
+    t(`numberSeries.fields.${key}`, { defaultValue: NUMBER_SERIES_FIELD_LABELS[key] });
   return (
     <div className="mx-auto max-w-5xl space-y-5">
       <section className="metivon-hero rounded-3xl p-6">
