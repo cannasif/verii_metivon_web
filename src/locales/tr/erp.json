@@ -291,6 +291,7 @@
     "fromWarehouse": "Kaynak Depo",
     "fromWarehouseId": "Kaynak Depo",
     "goodsAmount": "Mal Bedeli",
+    "goodsAmountLocal": "Yerel Mal Bedeli",
     "grandTotal": "Genel Toplam",
     "grossWeight": "Brüt Ağırlık",
     "gtipCode": "GTİP Kodu",

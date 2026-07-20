@@ -291,6 +291,7 @@
     "fromWarehouse": "창고에서",
     "fromWarehouseId": "창고 ID에서",
     "goodsAmount": "상품 금액",
+    "goodsAmountLocal": "현지 통화 상품 금액",
     "grandTotal": "총계",
     "grossWeight": "총중량",
     "gtipCode": "gtip Code",

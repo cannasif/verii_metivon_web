@@ -172,7 +172,10 @@ export function ErpPagedManagementPage({
       );
     if (value == null || value === "") return "—";
     if (col?.format === "boolean") return value ? t("common.yes") : t("common.no");
-    if (col?.format === "money") return formatSystemCurrency(Number(value));
+    if (col?.format === "money") {
+      const rowCurrency = col.currencyKey ? row[col.currencyKey] : undefined;
+      return formatSystemCurrency(Number(value), typeof rowCurrency === "string" ? rowCurrency : undefined);
+    }
     if (col?.format === "number") return formatSystemAmount(Number(value));
     if (col?.format === "date") return formatSystemDate(String(value));
     if (col?.format === "datetime") return formatSystemDateTime(String(value));

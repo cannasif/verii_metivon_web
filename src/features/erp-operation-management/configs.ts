@@ -104,8 +104,9 @@ export const transactionConfig: ErpPageConfig = {
     { key: "lotNumber", label: "Lot" },
     { key: "serialNumber", label: "Seri" },
     { key: "quantity", label: "Miktar", format: "number" },
-    { key: "unitCost", label: "Birim Maliyet", format: "money" },
-    { key: "totalCost", label: "Toplam Maliyet", format: "money" },
+    { key: "currencyCode", label: "Para Birimi" },
+    { key: "unitCost", label: "Birim Maliyet", format: "money", currencyKey: "currencyCode" },
+    { key: "totalCost", label: "Toplam Maliyet", format: "money", currencyKey: "currencyCode" },
   ],
 };
 export const purchaseConfig: ErpPageConfig = {
@@ -127,7 +128,7 @@ export const purchaseConfig: ErpPageConfig = {
     { key: "orderDate", label: "Sipariş Tarihi", format: "date" },
     { key: "deliveryDate", label: "Teslim Tarihi", format: "date" },
     { key: "currency", label: "Para Birimi" },
-    { key: "grandTotal", label: "Toplam", format: "money" },
+    { key: "grandTotal", label: "Toplam", format: "money", currencyKey: "currency" },
     { key: "status", label: "Durum", format: "status" },
   ],
   actions: [
@@ -203,7 +204,7 @@ export const salesConfig: ErpPageConfig = {
     { key: "orderDate", label: "Sipariş Tarihi", format: "date" },
     { key: "shipmentDate", label: "Sevk Tarihi", format: "date" },
     { key: "currency", label: "Para Birimi" },
-    { key: "grandTotal", label: "Toplam", format: "money" },
+    { key: "grandTotal", label: "Toplam", format: "money", currencyKey: "currency" },
     { key: "status", label: "Durum", format: "status" },
   ],
 };
@@ -354,8 +355,8 @@ export const journalConfig: ErpPageConfig = {
     { key: "sourceNumber", label: "Kaynak No" },
     { key: "description", label: "Açıklama" },
     { key: "currencyCode", label: "Para Birimi" },
-    { key: "debit", label: "Borç", format: "money" },
-    { key: "credit", label: "Alacak", format: "money" },
+    { key: "debit", label: "Borç", format: "money", currencyKey: "currencyCode" },
+    { key: "credit", label: "Alacak", format: "money", currencyKey: "currencyCode" },
     { key: "status", label: "Durum", format: "status" },
   ],
 };
@@ -379,7 +380,8 @@ export const importDossierConfig: ErpPageConfig = {
     { key: "receiptCount", label: "Mal Kabul Sayısı", format: "number" },
     { key: "status", label: "Durum", format: "status" },
     { key: "lineCount", label: "Satır Sayısı", format: "number" },
-    { key: "goodsAmount", label: "Mal Bedeli", format: "money" },
+    { key: "goodsAmount", label: "Döviz Mal Bedeli", format: "money", currencyKey: "currencyCode" },
+    { key: "goodsAmountLocal", label: "Yerel Mal Bedeli", format: "money" },
     { key: "landedCostAmount", label: "İthalat Masrafı", format: "money" },
     { key: "finalAmount", label: "Gerçek Maliyet", format: "money" },
   ],

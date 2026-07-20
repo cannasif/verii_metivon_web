@@ -291,6 +291,7 @@
     "fromWarehouse": "倉庫から",
     "fromWarehouseId": "倉庫IDから",
     "goodsAmount": "商品金額",
+    "goodsAmountLocal": "現地通貨の商品金額",
     "grandTotal": "総計",
     "grossWeight": "総重量",
     "gtipCode": "gtip Code",

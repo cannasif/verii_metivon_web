@@ -1,5 +1,5 @@
 export interface PagedResult<T>{items:T[];pageNumber:number;pageSize:number;totalCount:number;totalPages:number;hasPreviousPage:boolean;hasNextPage:boolean}
 export interface ApiEnvelope<T>{success:boolean;message:string;data:T;errors?:string[];statusCode:number}
-export interface ErpColumn{key:string;label:string;translationKey?:string;statusPrefix?:string;width?:number;sortable?:boolean;format?:'id'|'date'|'datetime'|'money'|'number'|'status'|'boolean'}
+export interface ErpColumn{key:string;label:string;translationKey?:string;statusPrefix?:string;currencyKey?:string;width?:number;sortable?:boolean;format?:'id'|'date'|'datetime'|'money'|'number'|'status'|'boolean'}
 export interface ErpRowAction{label:string;kind?:'update'|'delete'|'custom';icon?:'edit'|'delete'|'open';endpoint?:(row:Record<string,unknown>&{id:number})=>string;method?:'post'|'delete';navigateTo?:(row:Record<string,unknown>&{id:number})=>string;body?:(row:Record<string,unknown>&{id:number})=>unknown;visible?:(row:Record<string,unknown>&{id:number})=>boolean;confirm?:string;variant?:'default'|'outline'|'destructive'}
 export interface ErpPageConfig{pageKey:string;title:string;eyebrow:string;description:string;endpoint:string;queryMethod?:'get'|'post';columns:ErpColumn[];accent:'emerald'|'violet'|'cyan'|'amber'|'rose';createLabel?:string;createPath?:string;actions?:ErpRowAction[]}
