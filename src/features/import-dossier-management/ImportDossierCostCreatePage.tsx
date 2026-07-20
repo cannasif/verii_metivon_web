@@ -12,13 +12,13 @@ import { useSystemSettingsStore } from "@/stores/system-settings-store";
 
 type Lookup = { id: number; code: string; name: string };
 type CurrencyLookup = Lookup & { isoCode: string; symbol: string; decimalPlaces: number };
-type Lookups = { importDossiers: Lookup[]; landedCostTypes: Lookup[]; partners: Lookup[]; currencies: CurrencyLookup[] };
+type Lookups = { landedCostTypes: Lookup[]; partners: Lookup[]; currencies: CurrencyLookup[] };
 type Envelope<T> = { data: T };
 type ExchangeRateItem = { currencyCode: string; unit: number; forexBuying: number; forexSelling: number | null; instrumentType: "Currency" | "PreciousMetal"; instrumentRateDate: string | null };
 type ExchangeRateSnapshot = { source: string; rateDate: string; retrievedAtUtc: string; isStale: boolean; rates: ExchangeRateItem[] };
 type ApiResponse<T> = { success: boolean; message?: string; data?: T };
 
-const emptyLookups: Lookups = { importDossiers: [], landedCostTypes: [], partners: [], currencies: [] };
+const emptyLookups: Lookups = { landedCostTypes: [], partners: [], currencies: [] };
 
 export function ImportDossierCostCreatePage(): ReactElement {
   const queryClient = useQueryClient();
@@ -33,7 +33,7 @@ export function ImportDossierCostCreatePage(): ReactElement {
   const [busy, setBusy] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
-    importDossierId: "", landedCostTypeId: "", amountType: "2", allocationMethod: "", sourceType: "1", supplierId: "",
+    landedCostTypeId: "", amountType: "2", allocationMethod: "", sourceType: "1", supplierId: "",
     invoiceNumber: "", invoiceDate: "", paymentReference: "", paymentDate: "", currencyId: "", foreignAmount: "",
     originalExchangeRate: "", exchangeRate: "", exchangeRateDate: "", exchangeRateSource: "", description: "",
   });
@@ -95,11 +95,11 @@ export function ImportDossierCostCreatePage(): ReactElement {
   const submit = async (event: FormEvent) => {
     event.preventDefault();
     setSubmitted(true);
-    const dossierId = id ?? form.importDossierId;
-    if (!dossierId || !form.landedCostTypeId || !form.currencyId || !form.foreignAmount || !form.originalExchangeRate || !form.exchangeRate) return;
+    const tradeDossierId = id;
+    if (!tradeDossierId || !form.landedCostTypeId || !form.currencyId || !form.foreignAmount || !form.originalExchangeRate || !form.exchangeRate) return;
     setBusy(true);
     try {
-      await api.post(`/api/import-dossiers/${dossierId}/costs`, {
+      await api.post(`/api/trade-dossiers/${tradeDossierId}/costs`, {
         landedCostTypeId: Number(form.landedCostTypeId), amountType: Number(form.amountType), allocationMethod: form.allocationMethod ? Number(form.allocationMethod) : null,
         sourceType: Number(form.sourceType), supplierId: form.supplierId ? Number(form.supplierId) : null, invoiceNumber: form.invoiceNumber || null,
         invoiceDate: form.invoiceDate || null, paymentReference: form.paymentReference || null, paymentDate: form.paymentDate || null,
@@ -107,17 +107,16 @@ export function ImportDossierCostCreatePage(): ReactElement {
         exchangeRate: Number(form.exchangeRate), exchangeRateDate: form.exchangeRateDate || null, exchangeRateSource: form.exchangeRateSource || null,
         description: form.description || null, manualAllocations: null,
       });
-      await queryClient.invalidateQueries({ queryKey: ["import-dossiers"] });
-      navigate(`/import-dossiers/${dossierId}`);
+      await queryClient.invalidateQueries({ queryKey: ["trade-dossiers"] });
+      navigate(`/trade-dossiers/${tradeDossierId}`);
     } finally { setBusy(false); }
   };
 
   const invoice = form.sourceType === "1";
   const rateMissing = Boolean(form.currencyId && !isBaseCurrency && !form.originalExchangeRate);
   return <div className="mx-auto max-w-5xl space-y-6">
-    <section className="metivon-hero rounded-3xl p-7 text-white"><p className="text-xs font-semibold uppercase tracking-[.24em] text-white/70">{t("pages.import-dossiers.eyebrow")}</p><h1 className="mt-2 text-3xl font-semibold">{t("forms.import-dossier-cost.title")}</h1><p className="mt-2 text-white/75">{t("forms.import-dossier-cost.description")}</p></section>
+    <section className="metivon-hero rounded-3xl p-7 text-white"><p className="text-xs font-semibold uppercase tracking-[.24em] text-white/70">{t("pages.trade-dossiers.eyebrow")}</p><h1 className="mt-2 text-3xl font-semibold">{t("forms.import-dossier-cost.title")}</h1><p className="mt-2 text-white/75">{t("forms.import-dossier-cost.description")}</p></section>
     <form onSubmit={submit} className="grid grid-cols-1 gap-5 rounded-3xl border bg-card p-6 shadow-sm md:grid-cols-2">
-      {!id && <LookupField label={t("nav.importDossiers")} required invalid={submitted && !form.importDossierId}><ErpLookupCombobox lookupKey="importDossiers" value={form.importDossierId} fallbackOptions={lookups.importDossiers} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} required invalid={submitted && !form.importDossierId} onChange={(value) => set("importDossierId", String(value))}/></LookupField>}
       <LookupField label={t("nav.landedCostTypes")} required invalid={submitted && !form.landedCostTypeId}><ErpLookupCombobox lookupKey="landedCostTypes" value={form.landedCostTypeId} fallbackOptions={lookups.landedCostTypes} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} required invalid={submitted && !form.landedCostTypeId} onChange={(value) => set("landedCostTypeId", String(value))}/></LookupField>
       <div><Label>{t("fields.sourceType")}</Label><select value={form.sourceType} onChange={(e) => set("sourceType", e.target.value)} className="mt-2 h-10 w-full rounded-md border bg-background px-3">{["PurchaseInvoice","PaymentReceipt","BankReceipt","CustomsAssessment","Other"].map((key,index)=><option key={key} value={String(index+1)}>{t(`sourceTypes.${key}`)}</option>)}</select></div>
       <LookupField label={t("fields.supplierId")}><ErpLookupCombobox lookupKey="partners" value={form.supplierId} fallbackOptions={lookups.partners} placeholder={t("common.select")} searchPlaceholder={t("common.searchPlaceholder")} onChange={(value) => set("supplierId", String(value))}/></LookupField>
@@ -129,10 +128,10 @@ export function ImportDossierCostCreatePage(): ReactElement {
         {rateMissing ? <p className="mt-3 flex items-center gap-2 text-sm text-destructive"><AlertTriangle className="h-4 w-4"/>{t("fields.exchangeRateUnavailable")}</p> : form.originalExchangeRate ? <p className="mt-3 flex items-center gap-2 text-sm text-emerald-600"><BadgeCheck className="h-4 w-4"/>{t(isBaseCurrency?"fields.baseCurrencyRate":"fields.exchangeRateLoaded")}</p> : null}
       </div>
       <Field k="description" className="md:col-span-2"/>
-      <div className="col-span-full flex justify-end gap-3"><Button type="button" variant="outline" onClick={() => navigate(id ? `/import-dossiers/${id}` : "/import-dossiers")}>{t("common.cancel")}</Button><Button disabled={busy}>{busy ? t("common.saving") : t("forms.import-dossier-cost.submit")}</Button></div>
+      <div className="col-span-full flex justify-end gap-3"><Button type="button" variant="outline" onClick={() => navigate(id ? `/trade-dossiers/${id}` : "/trade-dossiers")}>{t("common.cancel")}</Button><Button disabled={busy}>{busy ? t("common.saving") : t("forms.import-dossier-cost.submit")}</Button></div>
     </form>
   </div>;
 
-  function LookupField({label,required,invalid,children}:{label:string;required?:boolean;invalid?:boolean;children:ReactElement}) { return <div className={!id&&label===t("nav.importDossiers")?"md:col-span-2":""}><Label className={invalid?"text-destructive":undefined}>{label}{required&&<span className="text-destructive"> *</span>}</Label><div className="mt-2">{children}</div></div>; }
+  function LookupField({label,required,invalid,children}:{label:string;required?:boolean;invalid?:boolean;children:ReactElement}) { return <div><Label className={invalid?"text-destructive":undefined}>{label}{required&&<span className="text-destructive"> *</span>}</Label><div className="mt-2">{children}</div></div>; }
   function Field({k,type="text",required=false,readOnly=false,className="",displayValue}:{k:keyof typeof form;type?:string;required?:boolean;readOnly?:boolean;className?:string;displayValue?:string}) { const invalid=submitted&&required&&!form[k]; return <div className={className}><Label className={invalid?"text-destructive":undefined}>{t(`fields.${k}`)}{required&&<span className="text-destructive"> *</span>}</Label><Input className={`mt-2 ${invalid?"border-destructive ring-1 ring-destructive":""}`} type={type} step={type==="number"?"0.000001":undefined} required={required} readOnly={readOnly} value={displayValue??form[k]} onChange={(e)=>set(k,e.target.value)}/></div>; }
 }

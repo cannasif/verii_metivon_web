@@ -111,10 +111,8 @@ const FiscalPeriodManagementPage = lazyImport(() => import('@/features/accountin
 const FiscalPeriodFormPage = lazyImport(() => import('@/features/accounting-definition-management'), 'FiscalPeriodFormPage');
 const InventoryPostingProfileManagementPage = lazyImport(() => import('@/features/accounting-definition-management'), 'InventoryPostingProfileManagementPage');
 const InventoryPostingProfileFormPage = lazyImport(() => import('@/features/accounting-definition-management'), 'InventoryPostingProfileFormPage');
-const ImportDossierManagementPage = lazyImport(() => import('@/features/import-dossier-management'), 'ImportDossierManagementPage');
 const LandedCostTypeManagementPage = lazyImport(() => import('@/features/import-dossier-management'), 'LandedCostTypeManagementPage');
 const ImportDossierCostCreatePage = lazyImport(() => import('@/features/import-dossier-management'), 'ImportDossierCostCreatePage');
-const ImportDossierDetailPage = lazyImport(() => import('@/features/import-dossier-management'), 'ImportDossierDetailPage');
 const TradeDossierManagementPage = lazyImport(() => import('@/features/import-dossier-management'), 'TradeDossierManagementPage');
 const TradeDossierDetailPage = lazyImport(() => import('@/features/import-dossier-management'), 'TradeDossierDetailPage');
 const WarehouseCreatePage = lazyImport(() => import('@/features/erp-form-management'), 'WarehouseCreatePage');
@@ -337,11 +335,12 @@ export function createAppRouter() {
         { path: 'accounting/definitions/inventory-posting-profiles', element: <InventoryPostingProfileManagementPage /> },
         { path: 'accounting/definitions/inventory-posting-profiles/new', element: <InventoryPostingProfileFormPage /> },
         { path: 'accounting/definitions/inventory-posting-profiles/:id/edit', element: <InventoryPostingProfileFormPage /> },
-        { path: 'import-dossiers', element: <ImportDossierManagementPage /> },
-        { path: 'import-dossiers/costs/new', element: <ImportDossierCostCreatePage /> },
-        { path: 'import-dossiers/:id', element: <ImportDossierDetailPage /> },
+        { path: 'import-dossiers', element: <Navigate to="/trade-dossiers" replace /> },
+        { path: 'import-dossiers/costs/new', element: <Navigate to="/trade-dossiers" replace /> },
+        { path: 'import-dossiers/:id', element: <Navigate to="/trade-dossiers" replace /> },
         { path: 'import-dossiers/definitions/cost-types', element: <LandedCostTypeManagementPage /> },
-        { path: 'import-dossiers/:id/costs/new', element: <ImportDossierCostCreatePage /> },
+        { path: 'import-dossiers/:id/costs/new', element: <Navigate to="/trade-dossiers" replace /> },
+        { path: 'trade-dossiers/:id/costs/new', element: <ImportDossierCostCreatePage /> },
         { path: 'trade-dossiers', element: <TradeDossierManagementPage /> },
         { path: 'trade-dossiers/new', element: <TradeDossierCreatePage /> },
         { path: 'trade-dossiers/:id', element: <TradeDossierDetailPage /> },

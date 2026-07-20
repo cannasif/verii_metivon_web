@@ -70,6 +70,7 @@ export const ROUTE_PERMISSION_MAP: Record<string, string> = {
   '/import-dossiers/definitions/cost-types': 'landed-costs.cost-types.view',
   '/trade-dossiers': 'trade-operations.trade-dossiers.view',
   '/trade-dossiers/new': 'trade-operations.trade-dossiers.create',
+  '/trade-dossiers/:id/costs/new': 'trade-operations.trade-dossiers.update',
 
   '/demands': 'sales.demands.view',
   '/demands/create': 'sales.demands.create',
@@ -276,6 +277,7 @@ export const PATH_TO_PERMISSION_PATTERNS: Array<{ pattern: RegExp; permission: s
   { pattern: /^\/import-dossiers\/definitions\/cost-types(\/|$)/, permission: 'landed-costs.cost-types.view' },
   { pattern: /^\/import-dossiers(\/|$)/, permission: 'landed-costs.import-dossiers.view' },
   { pattern: /^\/trade-dossiers\/new(\/|$)/, permission: 'trade-operations.trade-dossiers.create' },
+  { pattern: /^\/trade-dossiers\/\d+\/costs\/new(\/|$)/, permission: 'trade-operations.trade-dossiers.update' },
   { pattern: /^\/trade-dossiers(\/|$)/, permission: 'trade-operations.trade-dossiers.view' },
 
   { pattern: /^\/demands\/create(\/|$)/, permission: 'sales.demands.create' },
